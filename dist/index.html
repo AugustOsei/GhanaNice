@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GhanaNice — discover Ghana's best places and the local makers worth knowing, region by region.">
+  <meta name="theme-color" content="#0b2d2a">
+  <title>GhanaNice — Find your Ghana</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f2b705'/%3E%3Cpath d='M32 9l5.6 14.8 15.8.8-12.3 9.9 4.1 15.3L32 41.2 18.8 50l4.1-15.3-12.3-9.9 15.8-.8z' fill='%230b2d2a'/%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="assets/ghana-black-star-square.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="hero-shell" id="home">
+    <div class="hero-frame">
+      <img class="hero-image" src="assets/ghana-black-star-square.jpg" alt="Black Star Square in Accra at golden hour" width="1672" height="940">
+      <div class="hero-wash" aria-hidden="true"></div>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="GhanaNice home">
+          <span class="brand-star" aria-hidden="true">★</span>
+          <span>Ghana<span>Nice</span></span>
+        </a>
+        <button class="menu-button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+        <div class="nav-links" id="nav-links">
+          <a href="#places">Places</a>
+          <a href="#makers">Makers</a>
+          <a href="#regions">Regions</a>
+          <a class="nav-cta" href="#submit">List your business</a>
+        </div>
+      </nav>
+
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><i></i> Your guide, region by region</span>
+        <h1>Find your<br><em>Ghana.</em></h1>
+        <p>The places worth going. The local makers worth knowing. One thoughtful guide for your next chapter in Ghana.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#regions">Explore by region <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#submit">Add a local gem <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <div class="hero-rail" aria-label="What you can discover">
+        <span>16 regions</span><span>Curated places</span><span>Local makers</span>
+        <a href="#story" aria-label="Scroll to discover">Scroll <b aria-hidden="true">↓</b></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro section" id="story">
+      <div class="section-kicker reveal">A better way in</div>
+      <div class="intro-grid">
+        <h2 class="reveal">Not a checklist.<br><em>A way to arrive.</em></h2>
+        <div class="intro-copy reveal">
+          <p>GhanaNice is for the curious returner, the first-time visitor, and anyone building a life here. Go beyond the obvious with grounded recommendations and businesses made in Ghana.</p>
+          <a class="arrow-link" href="#places">See what’s worth the stop <span>↗</span></a>
+        </div>
+      </div>
+      <div class="pillars">
+        <article class="pillar pillar-places reveal" id="places">
+          <div class="pillar-num">01</div>
+          <div>
+            <span class="mini-label">Go somewhere</span>
+            <h3>Places &amp;<br>experiences</h3>
+            <p>Landscapes, neighbourhoods, heritage and the simple things you can do any day.</p>
+          </div>
+          <span class="pillar-mark" aria-hidden="true">⌁</span>
+        </article>
+        <article class="pillar pillar-makers reveal" id="makers">
+          <div class="pillar-num">02</div>
+          <div>
+            <span class="mini-label">Know someone</span>
+            <h3>Local makers<br>&amp; businesses</h3>
+            <p>Food, fashion and the people making good things, discovered through their work.</p>
+          </div>
+          <span class="pillar-mark starburst" aria-hidden="true">✦</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="regions section" id="regions">
+      <div class="region-heading reveal">
+        <div>
+          <span class="section-kicker light">Pick a direction</span>
+          <h2>There’s more<br>than <em>Accra.</em></h2>
+        </div>
+        <p>Choose a region and get a feel for what pulls you there—from coastline and forest to craft, food and history.</p>
+      </div>
+
+      <div class="region-explorer reveal">
+        <div class="region-control">
+          <label for="region-select">Where are you headed?</label>
+          <div class="select-wrap">
+            <span aria-hidden="true">⌕</span>
+            <select id="region-select">
+              <option value="greater-accra">Greater Accra</option>
+              <option value="central">Central</option>
+              <option value="ashanti">Ashanti</option>
+              <option value="volta">Volta</option>
+              <option value="eastern">Eastern</option>
+              <option value="western">Western</option>
+              <option value="western-north">Western North</option>
+              <option value="oti">Oti</option>
+              <option value="bono">Bono</option>
+              <option value="bono-east">Bono East</option>
+              <option value="ahafo">Ahafo</option>
+              <option value="northern">Northern</option>
+              <option value="savannah">Savannah</option>
+              <option value="north-east">North East</option>
+              <option value="upper-east">Upper East</option>
+              <option value="upper-west">Upper West</option>
+            </select>
+          </div>
+          <div class="region-story" aria-live="polite">
+            <span id="region-count">Region 01 / 16</span>
+            <h3 id="region-name">Greater Accra</h3>
+            <p id="region-copy">Ghana’s most kinetic corner: coastal history, creative studios, late-night food and neighbourhoods that change block by block.</p>
+            <button class="button button-gold" type="button">Explore Greater Accra <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <svg class="ghana-map" viewBox="0 0 390 510" role="img" aria-labelledby="map-title map-desc">
+            <title id="map-title">Illustrated map of Ghana’s sixteen regions</title>
+            <desc id="map-desc">Select a region on the map to read its introduction.</desc>
+            <g class="map-shape">
+              <path data-region="upper-west" d="M94 31 L168 18 L189 78 L158 119 L94 104 L76 65 Z"/>
+              <path data-region="upper-east" d="M189 30 L276 48 L300 91 L255 119 L196 82 Z"/>
+              <path data-region="north-east" d="M191 85 L255 121 L258 171 L208 183 L164 135 Z"/>
+              <path data-region="savannah" d="M85 108 L158 121 L204 183 L180 237 L104 238 L63 173 Z"/>
+              <path data-region="northern" d="M209 186 L259 174 L305 216 L275 272 L201 245 L183 230 Z"/>
+              <path data-region="bono-east" d="M178 240 L229 260 L219 312 L169 325 L140 281 Z"/>
+              <path data-region="bono" d="M99 241 L139 244 L164 321 L115 346 L80 307 Z"/>
+              <path data-region="ahafo" d="M118 347 L167 325 L187 359 L156 394 L111 383 Z"/>
+              <path data-region="oti" d="M276 273 L307 218 L333 276 L307 353 L272 345 Z"/>
+              <path data-region="ashanti" d="M171 328 L220 314 L264 352 L235 405 L171 394 L153 365 Z"/>
+              <path data-region="eastern" d="M237 405 L266 351 L306 356 L319 412 L280 435 Z"/>
+              <path data-region="volta" d="M310 354 L336 286 L350 357 L328 449 L294 459 L281 437 L322 412 Z"/>
+              <path data-region="western-north" d="M79 310 L115 350 L107 389 L64 393 L48 348 Z"/>
+              <path data-region="western" d="M62 396 L108 394 L146 432 L122 476 L54 466 L30 425 Z"/>
+              <path data-region="central" d="M148 398 L234 408 L251 448 L195 475 L125 476 L145 433 Z"/>
+              <path class="active" data-region="greater-accra" d="M253 414 L281 438 L294 461 L251 465 L213 477 L248 450 Z"/>
+            </g>
+            <path class="coast-line" d="M31 472 Q144 502 294 466"/>
+          </svg>
+          <div class="map-note"><span></span> Select a region</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discover section">
+      <div class="discover-top reveal">
+        <div>
+          <span class="section-kicker">Start somewhere good</span>
+          <h2>A few places<br>to begin.</h2>
+        </div>
+        <div class="filter-tabs" role="tablist" aria-label="Discovery type">
+          <button class="active" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button role="tab" aria-selected="false" data-filter="place">Places</button>
+          <button role="tab" aria-selected="false" data-filter="maker">Makers</button>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <article class="place-card photo-card reveal" data-type="place">
+          <div class="card-image card-blackstar"><span class="card-chip">Greater Accra</span><span class="big-index">01</span></div>
+          <div class="card-body"><span>History · Landmark</span><h3>Black Star Square</h3><p>Accra’s monumental gathering place, facing the Gulf of Guinea.</p></div>
+        </article>
+        <article class="place-card graphic-card yellow-card reveal" data-type="maker">
+          <div class="graphic-motif" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="card-body"><span>Textiles · Ashanti</span><h3>The hands behind the cloth</h3><p>Meet makers keeping Ghanaian pattern, colour and craft moving forward.</p></div>
+        </article>
+        <article class="place-card graphic-card green-card reveal" data-type="place">
+          <div class="forest-lines" aria-hidden="true"></div>
+          <div class="card-body"><span>Nature · Central</span><h3>Above the Kakum canopy</h3><p>Seven suspension bridges carry you over a living rainforest.</p></div>
+        </article>
+        <article class="place-card graphic-card red-card reveal" data-type="maker">
+          <div class="plate-mark" aria-hidden="true">◉</div>
+          <div class="card-body"><span>Food · Nationwide</span><h3>Made for the table</h3><p>Small-batch shito, cacao and pantry staples worth bringing home.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="submit section" id="submit">
+      <div class="submit-panel reveal">
+        <div class="submit-copy">
+          <span class="section-kicker light">Know a local gem?</span>
+          <h2>One link.<br><em>We’ll do the rest.</em></h2>
+          <p>Send a business name and social or Maps link. GhanaNice turns the basics into a polished listing for review.</p>
+          <ol>
+            <li><span>1</span> Share the essentials</li>
+            <li><span>2</span> We structure the story</li>
+            <li><span>3</span> You approve the listing</li>
+          </ol>
+        </div>
+        <form class="submit-form" id="listing-form">
+          <div class="form-head"><span>Business submission</span><i>About 30 seconds</i></div>
+          <label>Business name<input name="business" autocomplete="organization" placeholder="e.g. Ama’s Studio" required></label>
+          <label>Instagram, TikTok or Maps link<input name="link" type="url" placeholder="https://" required></label>
+          <label>Your email<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+          <button class="button button-gold form-button" type="submit">Build my draft <span aria-hidden="true">✦</span></button>
+          <p class="form-note" id="form-note">No long forms. Nothing is published without review.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#home"><span class="brand-star">★</span><span>Ghana<span>Nice</span></span></a>
+    <p>Discover Ghana’s best places and the local makers worth knowing, region by region.</p>
+    <div><a href="#places">Places</a><a href="#makers">Makers</a><a href="#regions">Regions</a><a href="#submit">Submit</a></div>
+    <small>Made with care for Ghana. <span id="year"></span></small>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
