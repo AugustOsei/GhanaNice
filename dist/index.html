@@ -3,28 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="GhanaNice — sixteen regions, local stories, remarkable places and the people building Ghana now.">
-  <meta name="theme-color" content="#ede8dc">
-  <title>GhanaNice — Ghana, in full</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f4c430'/%3E%3Cpath d='M32 9l5.6 14.8 15.8.8-12.3 9.9 4.1 15.3L32 41.2 18.8 50l4.1-15.3-12.3-9.9 15.8-.8z' fill='%2310100f'/%3E%3C/svg%3E">
+  <meta name="description" content="GhanaNice is a people-powered guide to good places, food, craft and experiences across Ghana's sixteen regions.">
+  <meta name="theme-color" content="#f1eee5">
+  <title>GhanaNice — Good places across Ghana</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f5c842'/%3E%3Cpath d='M32 9l5.6 14.8 15.8.8-12.3 9.9 4.1 15.3L32 41.2 18.8 50l4.1-15.3-12.3-9.9 15.8-.8z' fill='%2310100f'/%3E%3C/svg%3E">
   <link rel="preload" as="video" href="assets/real/independence-arch-loop.mp4" type="video/mp4">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to the story</a>
-  <div class="grain" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to the places</a>
 
   <header class="hero" id="home">
     <nav class="nav" aria-label="Primary navigation">
-      <a class="wordmark" href="#home" aria-label="GhanaNice home"><span>Ghana</span><b>Nice</b><i>★</i></a>
-      <p class="nav-place"><span>05°33′N</span> Accra, Ghana</p>
-      <div class="nav-links" id="nav-links"><a href="#regions">16 regions</a><a href="#footfall">Where Ghana went</a><a href="#footer">Add a signal</a></div>
+      <a class="wordmark" href="#home" aria-label="GhanaNice home">Ghana<span>Nice</span><i>★</i></a>
+      <p class="nav-place">Made for Ghana <span>05°33′N</span></p>
+      <div class="nav-links" id="nav-links">
+        <a href="#regions">Explore regions</a>
+        <a href="#most-visited">Most visited</a>
+        <a class="nav-share" href="#share">Share a nice place</a>
+      </div>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><b class="sr-only">Menu</b></button>
     </nav>
 
     <div class="hero-stage">
-      <div class="hero-place" aria-hidden="true"><span>01° 11′ W</span><span>05° 33′ N</span><span>ACCRA / GHANA</span></div>
-      <div class="hero-window is-sequencing" id="hero-window" aria-label="Eight scenes from Ghana settling on Independence Arch">
+      <div class="hero-window is-sequencing" id="hero-window" aria-label="Scenes from across Ghana settling on Independence Arch in Accra">
         <video id="hero-video" muted loop playsinline poster="assets/real/independence-arch-illustrated.png">
           <source src="assets/real/independence-arch-loop.webm" type="video/webm">
           <source src="assets/real/independence-arch-loop.mp4" type="video/mp4">
@@ -37,55 +39,123 @@
           <span class="map-scene" style="--image:url('assets/real/larabanga-mosque.jpg')"></span>
           <span class="map-scene" style="--image:url('assets/real/kakum-walkway.jpg')"></span>
           <span class="map-scene" style="--image:url('assets/real/independence-arch-storm.jpg')"></span>
-          <span class="map-scene map-final" style="--image:url('assets/real/independence-arch-illustrated.png')"></span>
+          <span class="map-scene" style="--image:url('assets/real/independence-arch-illustrated.png')"></span>
         </div>
-        <div class="hero-wash"></div>
-        <span class="hero-window-label">Independence Arch<br>Greater Accra</span>
+        <div class="hero-shade" aria-hidden="true"></div>
       </div>
-      <div class="sequence-ledger" id="sequence-ledger" aria-live="polite"><span>ARRIVING</span><b id="sequence-count">01 / 08</b><i></i><em id="sequence-name">JAMESTOWN</em></div>
-      <button class="sequence-skip" id="sequence-skip" type="button">Settle on Accra ↘</button>
-      <div class="hero-intro"><p class="hero-kicker">Not a postcard. A whole country.</p><h1>Ghana,<br><em>in full.</em></h1><p class="hero-copy">Places worth the journey. Flavours, makers and local stories worth staying for.</p><a href="#regions">Turn the country over <i>↓</i></a></div>
-      <p class="hero-scroll"><span>Scroll to enter</span><b>01 / 03</b></p>
+
+      <div class="spin-status" id="spin-status" aria-live="polite">
+        <span>Spinning through Ghana</span><i></i><b id="sequence-name">Jamestown</b><em id="sequence-count">01 / 08</em>
+      </div>
+      <button class="sequence-skip" id="sequence-skip" type="button">Skip the spin</button>
+
+      <div class="hero-intro">
+        <h1><span>Ghana is</span><strong>nice.</strong></h1>
+        <div class="hero-intro-note">
+          <p>Not only the landmarks. The food spots, workshops, trails, coastlines and people you tell a friend about when you get home.</p>
+          <a href="#regions">Find your way in <span>↓</span></a>
+        </div>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="regions" id="regions" aria-label="Explore Ghana's sixteen regions">
+    <section class="regions" id="regions" aria-labelledby="regions-heading">
       <div class="regions-sticky">
-        <div class="regions-title"><span>THE SIXTEEN</span><p>Scroll the field.<br>Open any region.</p></div>
-        <div class="region-rail" id="region-rail" aria-label="Region postcards"></div>
-        <p class="rail-instruction"><span>SCROLL</span><i></i><b>SELECT A POSTCARD</b></p>
+        <div class="regions-title">
+          <div><p>Ghana, region by region</p><h2 id="regions-heading">Pick a postcard.</h2></div>
+          <p>Sixteen regions, each with its own pace.<br>Scroll to spread the deck. Pick one to look closer.</p>
+        </div>
+        <div class="region-rail" id="region-rail" aria-label="Postcards from Ghana's sixteen regions"></div>
+        <p class="rail-instruction"><span>Keep scrolling</span><i></i><b>Then pick a postcard</b></p>
 
-        <article class="region-reader" id="region-reader" aria-live="polite" aria-label="Selected region">
-          <button class="reader-close" id="reader-close" type="button" aria-label="Return to all regions">All regions ×</button>
-          <div class="reader-copy"><p id="reader-index">01 / 16</p><h2 id="reader-title">Greater<br>Accra</h2><p id="reader-intro"></p><dl><div><dt>Signal</dt><dd id="reader-signal"></dd></div><div><dt>Know this</dt><dd id="reader-fact"></dd></div></dl><a id="reader-link" href="#footer">Continue into this region <span>↗</span></a></div>
-          <div class="region-view"><figure class="region-view-main"><img id="reader-image-main" src="assets/real/jamestown-lighthouse.jpg" alt=""><figcaption id="reader-caption">Field view / Greater Accra</figcaption></figure><figure class="region-view-slip"><img id="reader-image-side" src="assets/real/accra-seamstress.jpg" alt=""><figcaption>People / work / place</figcaption></figure></div>
+        <article class="region-reader" id="region-reader" aria-hidden="true" aria-labelledby="reader-title">
+          <button class="reader-close" id="reader-close" type="button" aria-label="Close region details">Back to the deck ×</button>
+          <div class="reader-copy">
+            <p class="reader-region" id="reader-region">Greater Accra Region</p>
+            <h2 id="reader-title">Greater Accra</h2>
+            <p class="reader-intro" id="reader-intro"></p>
+            <div class="reader-facts">
+              <div><span>Capital</span><p id="reader-capital"></p></div>
+              <div><span>Go for</span><p id="reader-known"></p></div>
+              <div><span>Fun fact</span><p id="reader-fact"></p></div>
+            </div>
+            <a id="reader-link" href="#share">See more from this region <span>↘</span></a>
+          </div>
+          <div class="reader-gallery">
+            <figure class="reader-main"><img id="reader-image-main" src="assets/real/jamestown-lighthouse.jpg" alt=""><figcaption id="reader-caption"></figcaption></figure>
+            <figure class="reader-side"><img id="reader-image-side" src="assets/real/accra-seamstress.jpg" alt=""><figcaption id="reader-caption-side"></figcaption></figure>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="footfall" id="footfall" aria-label="Ghana's most visited attractions in 2024">
-      <div class="footfall-sticky">
-        <div class="footfall-orbit" aria-hidden="true"><span>1.324M</span><i>TOTAL VISITS / TOP TEN</i></div>
-        <div class="footfall-head"><p>THE 2024 VISITOR FLOW</p><h2>Where<br>Ghana <em>went.</em></h2><small>Latest complete nationwide ranking, published by the Ghana Tourism Authority in 2025.</small></div>
-        <ol class="ranking" id="ranking">
-          <li style="--share:100;--tone:#d94731"><span>01</span><b>Kwame Nkrumah Memorial Park</b><i>333,233</i><em></em></li>
-          <li style="--share:55.1;--tone:#f1c63c"><span>02</span><b>Kakum National Park</b><i>183,757</i><em></em></li>
-          <li style="--share:46.6;--tone:#197450"><span>03</span><b>Bunso Arboretum</b><i>155,149</i><em></em></li>
-          <li style="--share:40.2;--tone:#a892e8"><span>04</span><b>Kumasi Zoo</b><i>133,954</i><em></em></li>
-          <li style="--share:36.1;--tone:#e16a4f"><span>05</span><b>Cape Coast Castle</b><i>120,242</i><em></em></li>
-          <li style="--share:31.8;--tone:#ead59d"><span>06</span><b>Manhyia Palace Museum</b><i>106,100</i><em></em></li>
-          <li style="--share:26.3;--tone:#d94731"><span>07</span><b>Elmina Castle</b><i>87,691</i><em></em></li>
-          <li style="--share:25.2;--tone:#f1c63c"><span>08</span><b>Accra Zoo</b><i>83,953</i><em></em></li>
-          <li style="--share:20.4;--tone:#197450"><span>09</span><b>Shai Hills Resource Reserve</b><i>67,881</i><em></em></li>
-          <li style="--share:15.7;--tone:#a892e8"><span>10</span><b>Aburi Botanical Gardens</b><i>52,330</i><em></em></li>
-        </ol>
-        <p class="footfall-source">VISITS, NOT UNIQUE VISITORS · SOURCE: <a href="https://ghana.travel/wp-content/uploads/2025/07/FINAL-2024-tourism-report-final.pdf" target="_blank" rel="noopener">GHANA TOURISM REPORT 2024 ↗</a></p>
+    <section class="most-visited" id="most-visited" aria-labelledby="visited-heading">
+      <div class="visited-heading">
+        <h2 id="visited-heading">The most visited<br><em>places in Ghana.</em></h2>
+        <div><strong>2024</strong><p>Ten attractions that welcomed the country’s biggest recorded crowds.</p></div>
+      </div>
+      <ol class="visit-grid" aria-label="Ghana's ten most visited attractions in 2024">
+        <li class="visit-card visit-card-feature"><span>01</span><strong>333,233</strong><h3>Kwame Nkrumah Memorial Park</h3><p>Accra</p></li>
+        <li class="visit-card visit-card-feature"><span>02</span><strong>183,757</strong><h3>Kakum National Park</h3><p>Central Region</p></li>
+        <li class="visit-card visit-card-feature"><span>03</span><strong>155,149</strong><h3>Bunso Arboretum</h3><p>Eastern Region</p></li>
+        <li class="visit-card visit-card-feature"><span>04</span><strong>133,954</strong><h3>Kumasi Zoo</h3><p>Ashanti Region</p></li>
+        <li class="visit-card"><span>05</span><strong>120,242</strong><h3>Cape Coast Castle</h3></li>
+        <li class="visit-card"><span>06</span><strong>106,100</strong><h3>Manhyia Palace Museum</h3></li>
+        <li class="visit-card"><span>07</span><strong>87,691</strong><h3>Elmina Castle</h3></li>
+        <li class="visit-card"><span>08</span><strong>83,953</strong><h3>Accra Zoo</h3></li>
+        <li class="visit-card"><span>09</span><strong>67,881</strong><h3>Shai Hills Resource Reserve</h3></li>
+        <li class="visit-card"><span>10</span><strong>52,330</strong><h3>Aburi Botanical Gardens</h3></li>
+      </ol>
+      <p class="visit-source">Visits, not unique visitors. Source: <a href="https://ghana.travel/wp-content/uploads/2025/07/FINAL-2024-tourism-report-final.pdf" target="_blank" rel="noopener">Ghana Tourism Report 2024 ↗</a></p>
+    </section>
+
+    <section class="community" id="share" aria-labelledby="share-heading">
+      <div class="community-intro">
+        <h2 id="share-heading">Places people<br><em>say are nice.</em></h2>
+        <p>Not a definitive list. A growing one. Tap the heart when you agree—or put us onto somewhere we should know.</p>
+      </div>
+      <div class="community-wall" aria-label="A growing wall of places people find nice">
+        <article class="place-tile place-photo" style="--image:url('assets/real/wli-falls.jpg')"><span>Volta <i class="kind">Place</i></span><h3>Wli Falls</h3><button class="nice-button" type="button" data-count="128" aria-pressed="false">♡ <b>128</b> found it nice</button></article>
+        <article class="place-tile place-photo" style="--image:url('assets/real/kakum-walkway.jpg')"><span>Central <i class="kind">Place</i></span><h3>Kakum National Park</h3><button class="nice-button" type="button" data-count="94" aria-pressed="false">♡ <b>94</b> found it nice</button></article>
+        <article class="place-tile place-photo" style="--image:url('assets/real/accra-seamstress.jpg')"><span>Greater Accra <i class="kind is-business">Local business</i></span><h3>Made in Accra</h3><button class="nice-button" type="button" data-count="76" aria-pressed="false">♡ <b>76</b> found it nice</button></article>
+        <a class="place-tile place-tip-trigger" href="#tip"><span>Know somewhere good?</span><strong>Put us on ↘</strong></a>
+        <article class="place-tile place-photo" style="--image:url('assets/real/larabanga-mosque.jpg')"><span>Savannah <i class="kind">Place</i></span><h3>Larabanga Mosque</h3><button class="nice-button" type="button" data-count="61" aria-pressed="false">♡ <b>61</b> found it nice</button></article>
+        <article class="place-tile place-photo" style="--image:url('assets/real/cape-coast-castle.jpg')"><span>Central <i class="kind">Place</i></span><h3>Cape Coast Castle</h3><button class="nice-button" type="button" data-count="110" aria-pressed="false">♡ <b>110</b> found it nice</button></article>
+        <a class="place-tile place-empty" href="#tip"><span>Restaurant, trail, workshop, beach, barbershop…</span><i>There is room.</i></a>
+        <article class="place-tile place-photo" style="--image:url('assets/real/jamestown-lighthouse.jpg')"><span>Greater Accra <i class="kind">Place</i></span><h3>Jamestown</h3><button class="nice-button" type="button" data-count="83" aria-pressed="false">♡ <b>83</b> found it nice</button></article>
+      </div>
+
+      <div class="tip-panel" id="tip">
+        <div class="tip-copy">
+          <p>You give us the lead.<br>We’ll do the digging.</p>
+          <h2>Leave<br>GhanaNice<br>a tip.</h2>
+        </div>
+        <form class="tip-form" id="place-form">
+          <p class="tip-sentence">I found <label><span class="sr-only">Place or business name</span><input name="place" type="text" placeholder="a good spot" required></label> around <label><span class="sr-only">Website, map link or location</span><input name="location" type="text" placeholder="the town" required></label>.</p>
+          <details>
+            <summary>Add the useful details</summary>
+            <label><span>Is it a place or a business?</span><select name="kind"><option value="Place">A place to visit</option><option value="Local business">A local business</option></select></label>
+            <label><span>Region, if you know it</span><select name="region"><option value="">We can work it out</option></select></label>
+            <label><span>What made it nice?</span><textarea name="note" rows="2" placeholder="Food? People? Craft? The view?"></textarea></label>
+          </details>
+          <button type="submit">Send the tip <span>↗</span></button>
+          <p class="form-note">Preview only: your tip is saved in this browser so you can see it appear, and goes no further.</p>
+          <p class="form-status" id="form-status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer id="footer"><a class="wordmark footer-mark" href="#home"><span>Ghana</span><b>Nice</b><i>★</i></a><p>Know the workshop, food spot, trail or gathering the lists keep missing?</p><a class="footer-call" href="mailto:hello@ghananice.com">Put it on the map <span>↗</span></a><details><summary>Photography and data</summary><p>Documentary photography via Wikimedia Commons. Independence Arch artwork is animated with Higgsfield. Attraction figures are from the Ghana Tourism Authority’s 2024 Tourism Report, published in 2025.</p></details><small>© <span id="year"></span> GhanaNice / Built to arrive differently.</small></footer>
-  <script src="app.js" defer></script>
+  <footer>
+    <a class="wordmark footer-mark" href="#home">Ghana<span>Nice</span><i>★</i></a>
+    <p>Good places are better when they’re shared.</p>
+    <div><a href="#regions">Explore all regions</a><a href="#share">Share a place</a></div>
+    <details><summary>Photography and data</summary><p>Every regional photograph shows a named place inside that region and is used under a Creative Commons licence or as public domain, with the photographer credited per image in the project’s <a href="assets/CREDITS.md">credits file</a>. The Independence Arch sequence is animated from a still photograph. Visitor figures come from the Ghana Tourism Authority’s 2024 Tourism Report, published in 2025.</p></details>
+    <small>© <span id="year"></span> GhanaNice · Made to help people find the good stuff.</small>
+  </footer>
+
+  <script src="data.js?v=1"></script>
+  <script src="app.js?v=10" defer></script>
 </body>
 </html>

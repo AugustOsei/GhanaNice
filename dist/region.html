@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Places worth visiting, local businesses and community recommendations from one of Ghana's sixteen regions.">
+  <meta name="theme-color" content="#f1eee5">
+  <title>A region — GhanaNice</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f5c842'/%3E%3Cpath d='M32 9l5.6 14.8 15.8.8-12.3 9.9 4.1 15.3L32 41.2 18.8 50l4.1-15.3-12.3-9.9 15.8-.8z' fill='%2310100f'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=13">
+</head>
+<body class="region-page">
+  <a class="skip-link" href="#region-main">Skip to the places</a>
+
+  <nav class="nav is-over-image" aria-label="Primary navigation">
+    <a class="wordmark" href="index.html#home" aria-label="GhanaNice home">Ghana<span>Nice</span><i>★</i></a>
+    <p class="nav-place">Made for Ghana <span>05°33′N</span></p>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html#regions">All regions</a>
+      <a href="index.html#most-visited">Most visited</a>
+      <a class="nav-share" href="#region-tip">Share a nice place</a>
+    </div>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><b class="sr-only">Menu</b></button>
+  </nav>
+
+  <header class="region-hero">
+    <img id="region-hero-image" src="" alt="">
+    <div class="region-hero-copy">
+      <a class="region-back" href="index.html#regions">← Back to the deck</a>
+      <p class="region-eyebrow" id="region-eyebrow"></p>
+      <h1 id="region-name"></h1>
+      <p class="region-intro" id="region-intro"></p>
+    </div>
+    <p class="region-hero-caption" id="region-hero-caption"></p>
+  </header>
+
+  <main id="region-main">
+    <section class="region-facts" aria-label="Regional facts">
+      <div><span>Capital</span><p id="fact-capital"></p></div>
+      <div><span>Go for</span><p id="fact-known"></p></div>
+      <div><span>Good to know</span><p id="fact-fact"></p></div>
+    </section>
+
+    <section class="region-block" id="visit" aria-labelledby="visit-heading">
+      <div class="region-block-head">
+        <h2 id="visit-heading">Worth the trip.</h2>
+        <p>Places in this region people keep coming back to. Not a ranking — a starting point.</p>
+      </div>
+      <ul class="visit-list" id="visit-list"></ul>
+    </section>
+
+    <section class="region-block" id="businesses" aria-labelledby="business-heading">
+      <div class="region-block-head">
+        <h2 id="business-heading">Local businesses.</h2>
+        <p>Workshops, kitchens, studios, salons, stalls. The places that make a region worth staying in.</p>
+      </div>
+      <ul class="visit-list" id="business-list"></ul>
+      <p class="region-empty" id="business-empty" hidden>No businesses listed here yet. If you know one worth knowing — a restaurant, a tailor, a barber, a guesthouse — <a href="#region-tip">put us on</a>.</p>
+    </section>
+
+    <section class="region-block" id="community" aria-labelledby="community-heading">
+      <div class="region-block-head">
+        <h2 id="community-heading">People say<br><em>these are nice.</em></h2>
+        <p>Places added by people reading this site.</p>
+      </div>
+      <div class="community-wall region-wall" id="region-wall"></div>
+      <p class="region-empty" id="community-empty">Nothing here yet for this region. Be the first to put us on to somewhere good.</p>
+    </section>
+
+    <section class="tip-panel" id="region-tip">
+      <div class="tip-copy">
+        <p>You give us the lead.<br>We’ll do the digging.</p>
+        <h2 id="tip-heading">Leave<br>GhanaNice<br>a tip.</h2>
+      </div>
+      <form class="tip-form" id="region-form">
+        <p class="tip-sentence">I found <label><span class="sr-only">Place or business name</span><input name="place" type="text" placeholder="a good spot" required></label> around <label><span class="sr-only">Town, website or map link</span><input name="location" type="text" placeholder="the town" required></label>.</p>
+        <details>
+          <summary>Add the useful details</summary>
+          <label><span>Is it a place or a business?</span><select name="kind"><option value="Place">A place to visit</option><option value="Local business">A local business</option></select></label>
+          <label><span>Region</span><select name="region" id="region-select"></select></label>
+          <label><span>What made it nice?</span><textarea name="note" rows="2" placeholder="Food? People? Craft? The view?"></textarea></label>
+        </details>
+        <button type="submit">Send the tip <span>↗</span></button>
+        <p class="form-note">Preview only: your tip is saved in this browser so you can see it appear, and goes no further.</p>
+        <p class="form-status" id="region-form-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <nav class="region-next" aria-label="Other regions">
+      <p>Keep going</p>
+      <div id="region-next-links"></div>
+    </nav>
+  </main>
+
+  <footer>
+    <a class="wordmark footer-mark" href="index.html#home">Ghana<span>Nice</span><i>★</i></a>
+    <p>Good places are better when they’re shared.</p>
+    <div><a href="index.html#regions">Explore all regions</a><a href="#region-tip">Share a place</a></div>
+    <details><summary>Photography and data</summary><p>Every regional photograph shows a named place inside that region and is used under a Creative Commons licence or as public domain, with the photographer credited per image in the project’s <a href="assets/CREDITS.md">credits file</a>.</p></details>
+    <small>© <span id="year"></span> GhanaNice · Made to help people find the good stuff.</small>
+  </footer>
+
+  <script src="data.js?v=1"></script>
+  <script src="region.js?v=1" defer></script>
+</body>
+</html>
