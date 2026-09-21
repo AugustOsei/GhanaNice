@@ -13,6 +13,19 @@ function el(tag, className, text) {
 }
 
 document.title = `${region.name} — GhanaNice`;
+/* Stopgap until each region has its own static page: give crawlers that run JS a
+   per-region canonical URL and description. */
+const pageUrl = `https://www.ghananice.com/region.html?r=${region.slug}`;
+const pageDescription = `${region.name} Region, Ghana: ${region.intro}`;
+function setHead(selector, create, attr, value) {
+  let node = document.head.querySelector(selector);
+  if (!node) { node = create(); document.head.append(node); }
+  node.setAttribute(attr, value);
+}
+setHead('link[rel="canonical"]', () => Object.assign(document.createElement('link'), { rel: 'canonical' }), 'href', pageUrl);
+setHead('meta[name="description"]', () => Object.assign(document.createElement('meta'), { name: 'description' }), 'content', pageDescription);
+setHead('meta[property="og:url"]', () => { const m = document.createElement('meta'); m.setAttribute('property', 'og:url'); return m; }, 'content', pageUrl);
+setHead('meta[property="og:title"]', () => { const m = document.createElement('meta'); m.setAttribute('property', 'og:title'); return m; }, 'content', `${region.name} — GhanaNice`);
 document.querySelector('#region-eyebrow').textContent = `${region.name} Region`;
 document.querySelector('#region-name').textContent = region.name;
 document.querySelector('#region-intro').textContent = region.intro;
