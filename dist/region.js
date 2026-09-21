@@ -4,6 +4,9 @@ const tips = window.GhanaTips;
 const slug = new URLSearchParams(location.search).get('r');
 const region = regions.find(r => r.slug === slug) || regions[0];
 
+/* The photos in assets/real/ ship with smaller WebP copies (tools/media/resize_local.py). */
+const sized = (src, width) => src.replace(/\.(jpe?g|png)$/, `-${width}.webp`);
+
 /* Text from the data file and from submitted tips is inserted as textContent, never HTML. */
 function el(tag, className, text) {
   const node = document.createElement(tag);
@@ -40,7 +43,8 @@ const leadSlug = window.GHANA_MEDIA?.leads?.[region.slug];
 const leadPhoto = leadSlug && window.GHANA_MEDIA.photos[leadSlug];
 const heroShot = leadPhoto ? leadPhoto.caption : region.shot;
 const heroCredit = leadPhoto || window.GHANA_MEDIA?.local?.[region.image];
-heroImage.src = leadPhoto ? leadPhoto.src : region.image;
+heroImage.fetchPriority = 'high';
+heroImage.src = leadPhoto ? leadPhoto.src : sized(region.image, 1200);
 heroImage.alt = heroShot;
 document.querySelector('#region-hero-caption').textContent = heroCredit ? `${heroShot} · Photo: ${heroCredit.author}` : heroShot;
 
@@ -68,13 +72,13 @@ function creditLine(photo, prefix = 'Photo: ') {
 /* The photographs already in the project are credited in CREDITS.md; media.js carries them too. */
 function localPhoto(src) {
   const credit = media.local?.[src];
-  return credit ? { src, small: src, ...credit } : null;
+  return credit ? { src, small: sized(src, 800), ...credit } : null;
 }
 
 /* A card only carries a photograph when we actually have one of that specific place. */
 function placeCard(item) {
   const info = media.places[`${region.slug}|${item.name}`] || {};
-  const photo = item.image ? (localPhoto(item.image) || { src: item.image, small: item.image }) : media.photos[info.photo];
+  const photo = item.image ? (localPhoto(item.image) || { src: item.image, small: sized(item.image, 800) }) : media.photos[info.photo];
   const li = el('li', photo ? 'visit-item has-image' : 'visit-item');
   if (photo) {
     const figure = el('figure', 'visit-image');
@@ -182,6 +186,14 @@ lightbox.querySelector('.lightbox-next').addEventListener('click', () => showLig
 lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
 addEventListener('keydown', event => {
   if (lightbox.hidden) return;
+  /* Keep Tab inside the open viewer instead of wandering into the page behind it. */
+  if (event.key === 'Tab') {
+    const stops = [...lightbox.querySelectorAll('button, a[href]')];
+    const first = stops[0], last = stops[stops.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    else if (!lightbox.contains(document.activeElement)) { event.preventDefault(); first.focus(); }
+  }
   if (event.key === 'Escape') closeLightbox();
   if (event.key === 'ArrowLeft') showLightbox(lightboxIndex - 1);
   if (event.key === 'ArrowRight') showLightbox(lightboxIndex + 1);
@@ -339,6 +351,10 @@ menu?.addEventListener('click', () => {
   menu.setAttribute('aria-expanded', String(!open));
   navLinks.classList.toggle('open', !open);
 });
+navLinks?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  menu?.setAttribute('aria-expanded', 'false');
+  navLinks.classList.remove('open');
+}));
 
 /* The nav is light-on-dark over the hero photograph and dark-on-paper past it. */
 const heroEl = document.querySelector('.region-hero');

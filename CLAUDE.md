@@ -6,7 +6,9 @@ A people-powered guide to good places across Ghana's 16 regions, "for locals and
 - Plain static site: HTML, CSS and vanilla JS. No framework, no build. **Everything deployed lives in `dist/`.**
 - Live at **https://www.ghananice.com** (apex `ghananice.com` 308-redirects to www). Deployed on Vercel from `main` (auto-deploys on push). `vercel.json` sets `outputDirectory: "dist"`. Without it Vercel served the repo root and returned 404.
 - Local preview: `.claude/launch.json` → `python3 -m http.server 4173 --directory dist`.
-- Cache-busting is manual: bump `?v=N` on the `<link>` / `<script>` tags in `index.html` and `region.html` when changing CSS or JS.
+- Cache-busting is manual: bump `?v=N` on the `<link>` / `<script>` tags in `index.html` and `region.html` (and `credits.html`/`404.html` for CSS) when changing CSS or JS. `vercel.json` caches CSS/JS for a day and `/assets/` for 30 days, so give a changed photo a new filename rather than overwriting it.
+- Photos in `assets/real/` have `-400/-800/-1200.webp` copies made by `tools/media/resize_local.py` (cards, tiles, heroes). Pages use the copies; the lightbox and CREDITS.md use the originals. Re-run it after adding a photo there.
+- `dist/credits.html` is generated from `assets/CREDITS.md` by `tools/media/build_credits.py`. Re-run after editing the credits.
 
 | File | What it is |
 |---|---|

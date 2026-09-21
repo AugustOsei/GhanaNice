@@ -3,6 +3,9 @@ const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const regions = window.GHANA_REGIONS;
 const tipStore = window.GhanaTips;
 
+/* The photos in assets/real/ ship with smaller WebP copies (tools/media/resize_local.py). */
+const sized = (src, width) => src.replace(/\.(jpe?g|png)$/, `-${width}.webp`);
+
 const menu = document.querySelector('.menu-button');
 const navLinks = document.querySelector('.nav-links');
 menu?.addEventListener('click', () => {
@@ -68,7 +71,8 @@ function finishSequence(skip = false) {
     spinStatus.setAttribute('aria-hidden', 'true');
     sequenceSkip.classList.add('is-hidden');
     sequenceSkip.disabled = true;
-    if (!heroVideo) return revealVideo();
+    /* Reduced motion keeps the still arch (the poster) instead of a looping video. */
+    if (!heroVideo || reduced) return revealVideo();
     try { heroVideo.currentTime = 0; } catch {}
     heroVideo.play().then(revealVideo, revealVideo);
   }, settleTime);
@@ -77,7 +81,7 @@ function finishSequence(skip = false) {
 /* Browsers pause or drop offscreen video. Resume it whenever the hero comes back. */
 if (heroVideo && 'IntersectionObserver' in window) {
   new IntersectionObserver(entries => {
-    if (!sequenceFinished || !entries[0].isIntersecting) return;
+    if (reduced || !sequenceFinished || !entries[0].isIntersecting) return;
     if (heroVideo.paused) heroVideo.play().catch(() => {});
   }).observe(heroWindow);
 }
@@ -128,27 +132,21 @@ function maskCoverSize() {
   return innerHeight * factor * 1.04;
 }
 
+let lastHeroKey = '';
 function renderHero() {
   let heroUsesLightNav = false;
   if (!reduced && hero && heroStage) {
     const heroRect = hero.getBoundingClientRect();
     const travel = Math.max(1, hero.offsetHeight - innerHeight);
     const progress = clamp(-heroRect.top / travel);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const start = innerWidth < 680 ? innerWidth * .58 : Math.min(innerWidth * .29, 430);
-    const cover = maskCoverSize();
-    /* Same pacing as before (full cover about three-quarters of the way in), but once the
-       outline covers the screen the mask is removed rather than grown to 4–6000px. A mask
-       that large exceeds the GPU texture limit on big retina displays, and Chrome then
-       drops the video layer and paints the window's navy background in its place. */
-    const size = mix(start, cover / .73, eased);
-    const covered = size >= cover;
-    heroWindow.classList.toggle('is-unmasked', covered);
-    heroStage.style.setProperty('--mask-size', `${Math.min(size, cover).toFixed(1)}px`);
-    const reveal = clamp((progress - .42) / .24);
-    heroStage.style.setProperty('--copy-opacity', reveal.toFixed(3));
-    heroStage.style.setProperty('--copy-y', `${(1 - reveal) * 34}px`);
     heroUsesLightNav = progress > .13 && heroRect.bottom > 76;
+    /* Past the hero the values stop changing, so skip restyling the masked stage on every
+       scroll frame further down the page. */
+    const key = `${progress.toFixed(4)}|${innerWidth}x${innerHeight}`;
+    if (key !== lastHeroKey) {
+      lastHeroKey = key;
+      paintHero(progress);
+    }
   }
   const darkSectionUnderNav = darkSections.some(section => {
     const rect = section.getBoundingClientRect();
@@ -156,6 +154,23 @@ function renderHero() {
   });
   siteNav?.classList.toggle('is-over-image', heroUsesLightNav || darkSectionUnderNav);
   frameRequested = false;
+}
+
+function paintHero(progress) {
+  const eased = 1 - Math.pow(1 - progress, 3);
+  const start = innerWidth < 680 ? innerWidth * .58 : Math.min(innerWidth * .29, 430);
+  const cover = maskCoverSize();
+  /* Same pacing as before (full cover about three-quarters of the way in), but once the
+     outline covers the screen the mask is removed rather than grown to 4–6000px. A mask
+     that large exceeds the GPU texture limit on big retina displays, and Chrome then
+     drops the video layer and paints the window's navy background in its place. */
+  const size = mix(start, cover / .73, eased);
+  const covered = size >= cover;
+  heroWindow.classList.toggle('is-unmasked', covered);
+  heroStage.style.setProperty('--mask-size', `${Math.min(size, cover).toFixed(1)}px`);
+  const reveal = clamp((progress - .42) / .24);
+  heroStage.style.setProperty('--copy-opacity', reveal.toFixed(3));
+  heroStage.style.setProperty('--copy-y', `${(1 - reveal) * 34}px`);
 }
 
 addEventListener('scroll', () => {
@@ -183,7 +198,7 @@ regions.forEach((region, index) => {
   const card = document.createElement('button');
   card.className = 'region-card has-image';
   card.type = 'button';
-  card.style.setProperty('--image', `url('${region.image}')`);
+  card.style.setProperty('--image', `url('${sized(region.image, 400)}')`);
   card.style.setProperty('--tone', regionTones[index]);
   card.innerHTML = `<span class="card-no">${String(index + 1).padStart(2, '0')}</span><strong class="card-name">${region.name}</strong><small class="card-note">${region.known}</small><i class="card-arrow">↘</i>`;
   card.setAttribute('aria-label', `Explore ${region.name} Region`);
@@ -211,7 +226,17 @@ regions.forEach((region, index) => {
    one postcard out of a fanned deck. Positions come from the layout's own --x/--y values. */
 let liftedCard = null;
 let lastPointerType = '';
-function liftCard(target) {
+/* Cards follow the scroll directly. The long transform glide is only switched on for a
+   moment when a card is lifted, opened or put back; left on, every scroll frame restarted
+   it and the deck trailed behind the finger on phones. */
+let glideTimer;
+function glide() {
+  regionRail.classList.add('is-gliding');
+  clearTimeout(glideTimer);
+  glideTimer = setTimeout(() => regionRail.classList.remove('is-gliding'), 900);
+}
+function liftCard(target, animate = true) {
+  if (animate && target !== liftedCard) glide();
   if (selectedRegion !== null) target = null;
   liftedCard = target;
   regionRail.classList.toggle('has-lift', !!target);
@@ -284,7 +309,7 @@ function layoutRegionCards(progress) {
     card.style.setProperty('--r', mix((index % 2 ? 1 : -1) * 6, ((index * 7) % 9) - 4, eased).toFixed(2));
     card.style.zIndex = String(index + 1);
   });
-  if (liftedCard) liftCard(liftedCard);
+  if (liftedCard) liftCard(liftedCard, false);
 }
 
 function layoutRegionStack(activeIndex) {
@@ -322,6 +347,7 @@ function openRegion(index, trigger) {
   const region = regions[index];
   selectedRegion = index;
   lastRegionTrigger = trigger;
+  glide();
   liftCard(null);
   pinRegionStage();
   regionCards.forEach((card, cardIndex) => card.classList.toggle('is-selected', cardIndex === index));
@@ -335,13 +361,13 @@ function openRegion(index, trigger) {
   document.querySelector('#reader-fact').textContent = region.fact;
   const mainImage = document.querySelector('#reader-image-main');
   const sideImage = document.querySelector('#reader-image-side');
-  mainImage.src = region.image;
+  mainImage.src = sized(region.image, 1200);
   mainImage.alt = region.shot;
   document.querySelector('#reader-caption').textContent = region.shot;
   /* No second photograph is better than the same photograph twice. */
   const sideFigure = sideImage.closest('figure');
   if (region.side) {
-    sideImage.src = region.side;
+    sideImage.src = sized(region.side, 800);
     sideImage.alt = region.shot2;
     document.querySelector('#reader-caption-side').textContent = region.shot2;
     sideFigure.hidden = false;
@@ -361,6 +387,8 @@ function openRegion(index, trigger) {
 function closeReader(restoreFocus = true) {
   if (!reader.classList.contains('is-open')) return;
   selectedRegion = null;
+  lastRegionKey = ''; /* the stack rewrote every card's z-index: lay the deck out again */
+  glide();
   reader.classList.remove('is-open');
   reader.setAttribute('aria-hidden', 'true');
   regionSection.classList.remove('has-selection');
@@ -376,8 +404,10 @@ addEventListener('keydown', event => {
 });
 
 let regionFrameRequested = false;
+let lastRegionKey = '';
 function renderRegions() {
   if (!regionSection) return;
+  regionFrameRequested = false;
   if (selectedRegion !== null) {
     /* A viewport-pinned panel must not be left hovering over a different section. */
     const rect = regionSection.getBoundingClientRect();
@@ -387,9 +417,12 @@ function renderRegions() {
   else {
     const travel = Math.max(1, regionSection.offsetHeight - innerHeight);
     const progress = clamp(-regionSection.getBoundingClientRect().top / travel);
+    /* Before and after the section the deck is parked: skip rewriting 16 cards per frame. */
+    const key = `${progress.toFixed(4)}|${innerWidth}x${innerHeight}`;
+    if (key === lastRegionKey) return;
+    lastRegionKey = key;
     layoutRegionCards(progress);
   }
-  regionFrameRequested = false;
 }
 addEventListener('scroll', () => {
   if (!regionFrameRequested) {
@@ -485,7 +518,9 @@ document.querySelectorAll('.flip-card').forEach(card => {
     const flipped = card.classList.toggle('is-flipped');
     toggle.setAttribute('aria-pressed', String(flipped));
     toggle.setAttribute('aria-label', flipped ? `Show visitor numbers for ${name}` : `Show a photo of ${name}`);
-    card.querySelector('.flip-back').setAttribute('aria-hidden', String(!flipped));
+    const back = card.querySelector('.flip-back');
+    back.setAttribute('aria-hidden', String(!flipped));
+    back.inert = !flipped;
   };
   toggle.addEventListener('click', event => { event.stopPropagation(); flip(); });
   card.addEventListener('click', event => { if (!event.target.closest('a')) flip(); });
