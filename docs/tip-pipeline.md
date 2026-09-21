@@ -18,42 +18,56 @@ region page ──GET ?region=slug──▶ [4 Directory webhook] ─▶ publish
 
 ## 1. Intake — `tipEndpoint`
 
-`POST` with `Content-Type: application/json`. The site sends:
+`POST` as `multipart/form-data` (sent by `dist/tip-form.js`, via `GhanaTips.submit` in `dist/data.js`):
+
+- `tip`: a JSON string, below.
+- `photo1`, `photo2`, `photo3`: optional JPEGs, already shrunk in the browser to at most
+  1600px on the long side (typically 150–350 KB each). The browser re-encodes them, so they
+  carry no EXIF data (no GPS position). At most three.
 
 ```json
 {
   "id": "b0b8c246-040d-4331-a49f-a3092e903442",
   "submittedAt": "2026-09-21T15:37:54.568Z",
   "place": "Buka Restaurant",
-  "location": "Osu, Accra",
-  "kind": "Local business",
-  "regionSlug": "greater-accra",
-  "regionName": "Greater Accra",
+  "town": "",
+  "mapsLink": "",
+  "placeId": "ChIJ…",
+  "placeAddress": "10th Lane, Osu, Accra",
+  "placeTypes": ["restaurant", "food"],
+  "regionSlug": "",
   "note": "Great jollof",
-  "photoUrl": "https://drive.google.com/…",
+  "photoCount": 1,
   "photoConsent": true,
-  "submitter": { "name": "Ama Mensah", "email": "ama@example.com", "credit": true },
+  "submitter": { "name": "Ama Mensah", "email": "ama@example.com" },
+  "turnstileToken": "",
   "source": "index.html",
-  "pageUrl": "https://…/index.html",
+  "pageUrl": "https://www.ghananice.com/#tip",
   "website": ""
 }
 ```
 
-- `kind` is `"Place"` or `"Local business"`. `regionSlug` can be empty ("we can work it out").
-- `location` is free text: a town, a Google Maps link or a website.
-- `photoUrl` is an optional link to a photo the sender took (Drive, Dropbox, Instagram…). Only use it when `photoConsent` is true, and credit the sender by name. Download and re-host it at review time; don't hot-link.
+- **Only the place is required.** It arrives in one of three shapes:
+  - picked from Google's suggestions: `placeId` (plus `placeAddress`, `placeTypes`) is set and `town` is empty. Use `placeId` directly for the lookup.
+  - pasted Google Maps link: `mapsLink` is set and `place` is empty. Resolve the link (follow the redirect) to a place.
+  - typed by hand: `place` and `town` are set, `placeId` is empty. Use Text Search.
+- `regionSlug` is the region page the tip was sent from (empty on the home page). Treat it as a hint; the looked-up address wins.
+- `photoConsent` is true only when photos were attached and the sender ticked "I took these photos". Photos without it must not be published.
+- `submitter.name` and `submitter.email` are both optional when Turnstile is on (`turnstileSiteKey` in `config.js`); without Turnstile the form requires the email. Credit the sender by first name when a name is given.
+- `turnstileToken`: when Turnstile is configured, verify it (`POST https://challenges.cloudflare.com/turnstile/v0/siteverify` with the secret and the token) and drop the tip if it fails.
 - `website` is a honeypot. If it is not empty, answer `200` and drop the tip.
 - `id` is made in the browser. Use it as the record key, so a double-submit doesn't create two rows.
 - Answer `2xx` once the tip is stored. Any other status makes the form show "didn't go through".
 - CORS: the webhook must allow the site's origin (n8n Webhook node → Options → Allowed Origins).
+- The browser keeps its own copy (no email, a small thumbnail) to show on the walls as "Waiting for review".
 
 Steps in the workflow:
 
 1. **Webhook** (POST, respond via *Respond to Webhook*).
-2. **Validate**: place, location, name and a well-formed email are present. Lower-case the email and cap text lengths.
-3. **Store** the row with `status = received`. Anything works: n8n Data Tables, Google Sheets, Airtable or Supabase. Keep the email in its own column. It is never returned to the site.
+2. **Validate**: a place is present in one of the three shapes, the email (if any) is well formed, the Turnstile token passes, at most three photos. Cap text lengths.
+3. **Store** the row with `status = received` (Google Sheet) and the photos in a private Google Drive folder named by `id`. Keep the email in its own column. It is never returned to the site.
 4. **Respond** `200 {"ok": true}`.
-5. **Thank-you email** (Gmail / SMTP / Resend node) to `submitter.email`: thank them by first name, name the place, say it'll be checked and listed in its region.
+5. **Thank-you email** (Gmail) to `submitter.email`, if given: thank them by first name, name the place, say it'll be checked and listed in its region.
 
 ## 2. Enrich
 
@@ -61,9 +75,9 @@ Runs straight after intake (or on a schedule over `received` rows).
 
 1. **Google Places API (New) → Text Search**:
    `POST https://places.googleapis.com/v1/places:searchText`
-   body `{"textQuery": "<place>, <location>, Ghana", "regionCode": "GH"}`,
+   body `{"textQuery": "<place>, <town>, Ghana", "regionCode": "GH"}`,
    header `X-Goog-FieldMask: places.id,places.displayName,places.formattedAddress,places.location,places.rating,places.userRatingCount,places.googleMapsUri,places.websiteUri,places.addressComponents,places.photos`.
-   If `location` is a Google Maps link, pull the place name or coordinates out of it first.
+   Skip this when `placeId` is set (use Place Details on it instead). For a `mapsLink`, resolve the link to a place first.
 2. **Pick the match.** Take the top result only if its name looks like `place`. Otherwise mark the row `needs_review` and don't guess.
 3. **Work out the region.** If `regionSlug` is empty, map the result's `administrative_area_level_1` onto the 16 slugs in `dist/data.js`.
 4. **Photo (optional).** Places photos need your API key on every request, so don't put the raw photo URL on the site. Either skip photos, or download one and re-host it (with its `authorAttributions`, which Google requires you to show).

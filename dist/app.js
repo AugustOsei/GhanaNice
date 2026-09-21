@@ -1,7 +1,6 @@
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const regions = window.GHANA_REGIONS;
-const tipStore = window.GhanaTips;
 
 /* The photos in assets/real/ ship with smaller WebP copies (tools/media/resize_local.py). */
 const sized = (src, width) => src.replace(/\.(jpe?g|png)$/, `-${width}.webp`);
@@ -445,49 +444,10 @@ function wireNiceButton(button) {
 }
 document.querySelectorAll('.nice-button').forEach(wireNiceButton);
 
-const regionSelect = document.querySelector('[name="region"]');
-regions.forEach(region => {
-  const option = document.createElement('option');
-  option.value = region.slug;
-  option.textContent = region.name;
-  regionSelect?.append(option);
-});
-
-const placeForm = document.querySelector('#place-form');
-const formStatus = document.querySelector('#form-status');
+/* A tip sent from the form (tip-form.js) goes straight onto the wall, marked as waiting. */
 const communityWall = document.querySelector('.community-wall');
-tipStore.labelForms();
-placeForm?.addEventListener('submit', async event => {
-  event.preventDefault();
-  const tip = tipStore.fromForm(placeForm);
-  const { place, location, kind } = tip;
-  const matched = regions.find(region => region.slug === tip.regionSlug);
-  if (!place) return;
-
-  const submitButton = placeForm.querySelector('button[type="submit"]');
-  submitButton.disabled = true;
-  formStatus.textContent = 'Sending…';
-  let result;
-  try {
-    result = await tipStore.submit(tip);
-  } catch {
-    formStatus.textContent = 'That didn’t go through. Check your connection and try again — nothing was lost.';
-    submitButton.disabled = false;
-    return;
-  }
-  submitButton.disabled = false;
-  const saved = result.ok;
-
-  const tile = document.createElement('article');
-  tile.className = 'place-tile';
-  const regionLabel = document.createElement('span');
-  regionLabel.textContent = matched ? matched.name : (location || 'Region to confirm');
-  const chip = document.createElement('i');
-  chip.className = kind === 'Local business' ? 'kind is-business' : 'kind';
-  chip.textContent = kind;
-  regionLabel.append(' ', chip);
-  const title = document.createElement('h3');
-  title.textContent = place;
+document.addEventListener('ghananice:tip', event => {
+  const tile = window.GhanaTipTile(event.detail.tip);
   const niceButton = document.createElement('button');
   niceButton.className = 'nice-button';
   niceButton.type = 'button';
@@ -495,16 +455,8 @@ placeForm?.addEventListener('submit', async event => {
   niceButton.setAttribute('aria-pressed', 'true');
   niceButton.append(document.createTextNode('♥ '), Object.assign(document.createElement('b'), { textContent: '1' }), document.createTextNode(' found it nice'));
   wireNiceButton(niceButton);
-  tile.append(regionLabel, title, niceButton);
+  tile.append(niceButton);
   communityWall.prepend(tile);
-
-  const firstName = tip.submitter.name.split(/\s+/)[0];
-  formStatus.textContent = result.live
-    ? `Thanks, ${firstName} — “${place}” is in. Check ${tip.submitter.email} for a note from us; we’ll add it to the ${matched ? matched.name : 'right'} region once we’ve looked it up.`
-    : matched && saved
-      ? `Thanks, ${firstName} — “${place}” is on the wall, and on the ${matched.name} page (in this browser).`
-      : `Thanks, ${firstName} — “${place}” has been added to this preview.`;
-  placeForm.reset();
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();

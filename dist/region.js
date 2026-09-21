@@ -222,11 +222,14 @@ const communityEmpty = document.querySelector('#community-empty');
 let published = [];
 
 function tipTile(tip, pending) {
-  const photo = !pending && /^https:\/\//.test(tip.photoUrl || '') && tip.photoUrl;
+  /* Published tips carry a hosted photo; this browser's own pending tips a small thumbnail. */
+  const photo = pending
+    ? /^data:image\/jpeg;base64,/.test(tip.thumb || '') && tip.thumb
+    : /^https:\/\//.test(tip.photoUrl || '') && tip.photoUrl;
   const tile = el('article', photo ? 'place-tile place-photo' : 'place-tile');
-  if (photo) tile.style.setProperty('--image', `url("${encodeURI(tip.photoUrl)}")`);
+  if (photo) tile.style.setProperty('--image', `url("${encodeURI(photo)}")`);
   const label = el('span', null, tip.location || tip.address || region.name);
-  label.append(el('i', tip.kind === 'Local business' ? 'kind is-business' : 'kind', tip.kind || 'Place'));
+  if (tip.kind || !pending) label.append(el('i', tip.kind === 'Local business' ? 'kind is-business' : 'kind', tip.kind || 'Place'));
   if (pending) label.append(el('i', 'kind is-pending', 'Waiting for review'));
   tile.append(label, el('h3', null, tip.place));
   if (tip.rating) {
@@ -286,54 +289,10 @@ tips.directory(region.slug)
   .then(items => { published = items.filter(item => item && item.place); renderWall(); })
   .catch(() => {});
 
-const regionSelect = document.querySelector('#region-select');
-regions.forEach(r => {
-  const option = el('option', null, r.name);
-  option.value = r.slug;
-  if (r.slug === region.slug) option.selected = true;
-  regionSelect.append(option);
-});
-
-const form = document.querySelector('#region-form');
-const status = document.querySelector('#region-form-status');
-tips.labelForms();
-form.addEventListener('submit', async event => {
-  event.preventDefault();
-  const tip = tips.fromForm(form, region.slug);
-  const { place } = tip;
-  if (!place) return;
-  const chosen = tip.regionSlug;
-  const button = form.querySelector('button[type="submit"]');
-  button.disabled = true;
-  status.textContent = 'Sending…';
-  let result;
-  try {
-    result = await tips.submit(tip);
-  } catch {
-    status.textContent = 'That didn’t go through. Check your connection and try again — nothing was lost.';
-    button.disabled = false;
-    return;
-  }
-  button.disabled = false;
-  form.reset();
-  regionSelect.value = region.slug;
-  const firstName = tip.submitter.name.split(/\s+/)[0];
-  const name = (regions.find(r => r.slug === chosen) || region).name;
-  if (result.live) {
-    if (chosen === region.slug) renderWall();
-    status.textContent = `Thanks, ${firstName} — “${place}” is in. Check your inbox for a note from us; it joins the ${name} directory once we’ve looked it up.`;
-    return;
-  }
-  if (!result.ok) {
-    status.textContent = 'Could not save — this browser is blocking local storage.';
-    return;
-  }
-  if (chosen === region.slug) {
-    renderWall();
-    status.textContent = `Thanks, ${firstName} — “${place}” is on the wall below (in this browser).`;
-  } else {
-    status.textContent = `Thanks, ${firstName} — “${place}” was added to ${name} (in this browser).`;
-  }
+/* The tip form (tip-form.js) files tips from this page under this region. */
+document.querySelector('[data-tip-form]').dataset.region = region.slug;
+document.addEventListener('ghananice:tip', event => {
+  if (event.detail.tip.regionSlug === region.slug) renderWall();
 });
 
 const nextLinks = document.querySelector('#region-next-links');
@@ -359,8 +318,8 @@ navLinks?.querySelectorAll('a').forEach(link => link.addEventListener('click', (
 /* The nav is light-on-dark over the hero photograph and dark-on-paper past it. */
 const heroEl = document.querySelector('.region-hero');
 const navEl = document.querySelector('.nav');
-addEventListener('scroll', () => {
-  navEl.classList.toggle('is-over-image', heroEl.getBoundingClientRect().bottom > 76);
-}, { passive: true });
+const syncNav = () => navEl.classList.toggle('is-over-image', heroEl.getBoundingClientRect().bottom > 76);
+addEventListener('scroll', syncNav, { passive: true });
+syncNav(); /* the page can open part-way down, e.g. on #region-tip */
 
 document.querySelector('#year').textContent = new Date().getFullYear();

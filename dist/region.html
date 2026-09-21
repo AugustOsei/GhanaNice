@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Ghana is nice. Central Accra from above.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="styles.css?v=19">
+  <link rel="stylesheet" href="styles.css?v=20">
 </head>
 <body class="region-page">
   <a class="skip-link" href="#region-main">Skip to the places</a>
@@ -110,27 +110,7 @@
         <p>You give us the lead.<br>We’ll do the digging.</p>
         <h2 id="tip-heading">Leave<br>GhanaNice<br>a tip.</h2>
       </div>
-      <form class="tip-form" id="region-form">
-        <p class="tip-sentence">I found <label><span class="sr-only">Place or business name</span><input name="place" type="text" placeholder="a good spot" required></label> around <label><span class="sr-only">Town, website or map link</span><input name="location" type="text" placeholder="the town" required></label>.</p>
-        <details>
-          <summary>Add the useful details</summary>
-          <label><span>Is it a place or a business?</span><select name="kind"><option value="Place">A place to visit</option><option value="Local business">A local business</option></select></label>
-          <label><span>Region</span><select name="region" id="region-select"></select></label>
-          <label><span>What made it nice?</span><textarea name="note" rows="2" placeholder="Food? People? Craft? The view?"></textarea></label>
-          <label><span>A photo you took (link)</span><input name="photoUrl" type="url" placeholder="Google Drive, Dropbox, Instagram…"></label>
-          <label class="tip-credit"><input name="photoConsent" type="checkbox" value="yes"> I took this photo and GhanaNice may show it, credited to me</label>
-        </details>
-        <fieldset class="tip-from">
-          <legend>Who’s it from?</legend>
-          <label><span>Your name</span><input name="name" type="text" autocomplete="name" placeholder="Ama Mensah" required></label>
-          <label><span>Your email</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
-          <label class="tip-credit"><input name="credit" type="checkbox" value="yes" checked> Credit me by first name when it’s listed</label>
-          <label class="tip-trap" aria-hidden="true"><span>Leave this empty</span><input name="website" type="text" tabindex="-1" autocomplete="off"></label>
-        </fieldset>
-        <button type="submit">Send the tip <span>↗</span></button>
-        <p class="form-note" data-tip-note>We’ll email you a thank-you and let you know when it’s listed. Your email is never shown on the site.</p>
-        <p class="form-status" id="region-form-status" aria-live="polite"></p>
-      </form>
+      <form class="tip-form" id="region-form" data-tip-form aria-labelledby="tip-heading"></form>
     </section>
 
     <nav class="region-next" aria-label="Other regions">
@@ -163,10 +143,11 @@
     </div>
   </footer>
 
-  <script src="config.js?v=1"></script>
-  <script src="data.js?v=3"></script>
+  <script src="config.js?v=2"></script>
+  <script src="data.js?v=4"></script>
   <script src="media.js?v=3"></script>
-  <script src="region.js?v=6" defer></script>
+  <script src="region.js?v=8" defer></script>
+  <script src="tip-form.js?v=1" defer></script>
   <script src="footer.js?v=1" defer></script>
 </body>
 </html>

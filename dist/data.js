@@ -247,10 +247,10 @@ window.GHANA_REGIONS = [
   }
 ];
 
-/* Tips go to the n8n intake webhook when one is configured (config.js), which thanks the
-   sender by email, enriches the place and publishes it to its region's directory.
-   A copy is always kept in this browser — without the email address — so the sender sees
-   their tip on the wall straight away while it waits for review. */
+/* Tips go to the n8n intake webhook when one is configured (config.js): n8n thanks the
+   sender, looks the place up, and sends it to August for approval. A copy is always kept in
+   this browser (no email, one small thumbnail) so the sender sees their tip straight away,
+   marked as waiting for review. The form itself lives in tip-form.js. */
 window.GhanaTips = {
   KEY: 'ghananice:tips:v1',
   config() {
@@ -259,48 +259,16 @@ window.GhanaTips = {
   isLive() {
     return !!this.config().tipEndpoint;
   },
-  /* Reads the shared tip form fields on either page into the payload n8n expects. */
-  fromForm(form, fallbackRegion) {
-    const data = new FormData(form);
-    const text = name => String(data.get(name) || '').trim();
-    const regions = window.GHANA_REGIONS || [];
-    const regionSlug = text('region') || fallbackRegion || '';
-    const region = regions.find(r => r.slug === regionSlug);
-    return {
-      id: crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`,
-      submittedAt: new Date().toISOString(),
-      place: text('place'),
-      location: text('location'),
-      kind: text('kind') || 'Place',
-      regionSlug,
-      regionName: region?.name || '',
-      note: text('note'),
-      /* A link to a photo the sender took, used only with their say-so and credited to them. */
-      photoUrl: /^https?:\/\//.test(text('photoUrl')) ? text('photoUrl') : '',
-      photoConsent: data.get('photoConsent') === 'yes',
-      submitter: {
-        name: text('name'),
-        email: text('email').toLowerCase(),
-        credit: data.get('credit') === 'yes'
-      },
-      source: location.pathname.split('/').pop() || 'index.html',
-      pageUrl: location.href,
-      /* Honeypot: people never see this field, form-filling bots do. */
-      website: text('website')
-    };
-  },
-  async submit(tip) {
-    const { submitter, website, ...rest } = tip;
-    const localCopy = { ...rest, submitterName: submitter.credit ? submitter.name.split(/\s+/)[0] : '', status: 'pending' };
-    if (website) return { ok: true, live: false };
-    if (!this.isLive()) {
-      return { ok: this.add(localCopy), live: false };
-    }
-    const response = await fetch(this.config().tipEndpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(tip)
-    });
+  /* Sends one tip as multipart form data: the JSON in a `tip` field, and up to three
+     already-shrunk JPEGs as photo1…photo3. See docs/tip-pipeline.md. */
+  async submit(tip, photos = [], localCopy = {}) {
+    /* Honeypot: people never see this field, form-filling bots do. Pretend it worked. */
+    if (tip.website) return { ok: true, live: this.isLive() };
+    if (!this.isLive()) return { ok: this.add(localCopy), live: false };
+    const body = new FormData();
+    body.append('tip', JSON.stringify(tip));
+    photos.forEach((photo, index) => body.append(`photo${index + 1}`, photo, `photo-${index + 1}.jpg`));
+    const response = await fetch(this.config().tipEndpoint, { method: 'POST', body });
     if (!response.ok) throw new Error(`Tip endpoint answered ${response.status}`);
     this.add(localCopy);
     return { ok: true, live: true };
@@ -320,21 +288,15 @@ window.GhanaTips = {
     try { return JSON.parse(localStorage.getItem(this.KEY) || '[]'); }
     catch { return []; }
   },
-  /* Says plainly on the form when nothing leaves the browser. */
-  labelForms() {
-    if (this.isLive()) return;
-    document.querySelectorAll('[data-tip-note]').forEach(note => {
-      note.textContent = 'Preview mode: tips aren’t being sent anywhere yet. Yours is saved in this browser only, so you can see it appear.';
-    });
-  },
   forRegion(slug) {
     return this.all().filter(tip => tip.regionSlug === slug);
   },
   add(tip) {
     try {
-      const tips = this.all();
+      const tips = this.all().filter(item => item.id !== tip.id);
       tips.unshift({ ...tip, at: Date.now() });
-      localStorage.setItem(this.KEY, JSON.stringify(tips.slice(0, 200)));
+      /* Thumbnails make each entry ~20 KB, so keep the list well inside the storage quota. */
+      localStorage.setItem(this.KEY, JSON.stringify(tips.slice(0, 60)));
       return true;
     } catch { return false; }
   }

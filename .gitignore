@@ -3,3 +3,5 @@
 tools/media/venv/
 tools/media/thumbs/
 tools/media/info.json
+.env.local
+.env*.local
