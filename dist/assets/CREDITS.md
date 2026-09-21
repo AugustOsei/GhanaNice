@@ -217,3 +217,10 @@ Picked by hand from Wikimedia Commons in September 2026: each photo was checked 
 | `photos/mv-nkrumah.webp` | Front View of Kwame Nkrumah's Mausoleum and Memorial in Accra Ghana, May 2008 (most visited) | Emkamau | https://commons.wikimedia.org/wiki/File:Front_View_of_Kwame_Nkrumah%27s_Mausoleum_and_Memorial_in_Accra_Ghana,_May_2008.jpg | CC BY-SA 4.0 |
 
 Creative Commons license text: https://creativecommons.org/licenses/
+
+## Site icons and share image
+
+| Asset | Subject | Creator | Source | License |
+|---|---|---|---|---|
+| `favicon.*`, `apple-touch-icon.png`, `icon-*.png` | GhanaNice star mark | GhanaNice | — | Project use |
+| `og-image.jpg` | "Ghana is nice." over central Accra (adaptation of `photos/a-drone-footage-of-accra-central-ghana.webp`) | Amanor kwaku; lettering by GhanaNice | https://commons.wikimedia.org/wiki/File:A_drone_footage_of_Accra_central,_Ghana.jpg | CC BY-SA 4.0 |
