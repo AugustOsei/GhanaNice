@@ -1,2 +1,5 @@
 .DS_Store
 .claude/settings.local.json
+tools/media/venv/
+tools/media/thumbs/
+tools/media/info.json

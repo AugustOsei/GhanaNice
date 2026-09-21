@@ -1,0 +1,19 @@
+greater-accra|Kwame Nkrumah Memorial Park|https://visitghana.com/kwame-nkrumah-memorial-park/
+central|Cape Coast Castle|https://visitghana.com/cape-coast-castle/
+central|Kakum National Park|https://visitghana.com/kakum-national-park/
+central|Elmina Castle|https://visitghana.com/elmina-castle/
+central|Assin Manso Ancestral Slave River|https://visitghana.com/assin-manso-slave-river/
+volta|Wli Falls|https://visitghana.com/wli-waterfalls/
+volta|Tafi Atome Monkey Sanctuary|https://visitghana.com/tafi-atome-monkey-sanctuary/
+savannah|Mole National Park|https://visitghana.com/mole-national-park/
+savannah|Larabanga Mosque|https://visitghana.com/larabanga-mosque/
+western|Nzulezu|https://visitghana.com/nzulezu-stilt-village/
+western|Fort San Antonio, Axim|https://visitghana.com/fort-st-anthony/
+ashanti|Manhyia Palace Museum|https://visitghana.com/manhyia-palace-museum/
+ashanti|Lake Bosomtwe|https://visitghana.com/lake-bosomtwe/
+eastern|Boti Falls|https://visitghana.com/boti-falls/
+eastern|Bunso Arboretum|https://visitghana.com/bunso-eco-park/
+oti|Kyabobo National Park|https://visitghana.com/kyabobo-national-park/
+bono-east|Kintampo Waterfalls|https://visitghana.com/kintampo-waterfalls/
+bono-east|Fuller Falls|https://visitghana.com/fuller-falls/
+western-north|Bia National Park|https://visitghana.com/bia-national-park/

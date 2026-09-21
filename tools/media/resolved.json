@@ -1,0 +1,1495 @@
+{
+ "greater-accra|Jamestown": {
+  "title": "Jamestown/Usshertown, Accra",
+  "qid": "Q6146177",
+  "pageimage": "Jamestown_Light_House,_Accra.jpg",
+  "desc": "Suburb of Accra",
+  "missing": false,
+  "image": [
+   "James Town Beach.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Jamestown (Accra)"
+  ],
+  "coord": []
+ },
+ "greater-accra|Kwame Nkrumah Memorial Park": {
+  "title": "Kwame Nkrumah Memorial Park",
+  "qid": "Q13848097",
+  "pageimage": "Kwame_Nkrumah_Memorial_Park.jpg",
+  "desc": "Building, park and museum in Ghana",
+  "missing": false,
+  "image": [
+   "Kwame nkrumah grave accra ghana.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Kwame Nkrumah Memorial Park and Mausoleum"
+  ],
+  "coord": [
+   {
+    "latitude": 5.54444,
+    "longitude": -0.202778,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "greater-accra|Makola Market": {
+  "title": "Makola, Ghana",
+  "qid": "Q15622915",
+  "pageimage": "A_woman_from_Ghana_selling_water.jpg",
+  "desc": "Town",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [],
+  "coord": [
+   {
+    "latitude": 5.54772,
+    "longitude": -0.206842,
+    "altitude": null,
+    "precision": 0.009025427710137,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "greater-accra|Labadi Beach": {
+  "title": "Labadi Beach",
+  "qid": "Q6466698",
+  "pageimage": "Solnedgang_p\u00e5_Labadi_beach.jpg",
+  "desc": "Beach in Labadi, Ghana",
+  "missing": false,
+  "image": [
+   "Labadi beach.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Labadi"
+  ],
+  "coord": [
+   {
+    "latitude": 5.56242,
+    "longitude": -0.13943,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "greater-accra|Osu": {
+  "title": "Osu, Accra",
+  "qid": "Q1752686",
+  "pageimage": "Osu_marker.jpg",
+  "desc": "Suburb of Accra, Ghana",
+  "missing": false,
+  "image": [
+   "Kona bar at Osu Oxford street.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Osu (Greater Accra)"
+  ],
+  "coord": [
+   {
+    "latitude": 5.55389,
+    "longitude": -0.175,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "greater-accra|Arts Centre for National Culture": {
+  "title": "National Cultural Centre",
+  "qid": "Q6972011",
+  "pageimage": null,
+  "desc": "Topics referred to by the same term",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [],
+  "coord": []
+ },
+ "central|Cape Coast Castle": {
+  "title": "Cape Coast Castle",
+  "qid": "Q1254826",
+  "pageimage": "Cape_Coast_Castle,_Cape_Coast,_Ghana.JPG",
+  "desc": "Former fortified colonial trading post in Ghana",
+  "missing": false,
+  "image": [
+   "Cape Coast Castle, Cape Coast, Ghana.JPG",
+   "Cape coast castle II.JPG"
+  ],
+  "website": [
+   "http://ghana-net.com/cape_coast_castle_museum.aspx"
+  ],
+  "commonscat": [
+   "Cape Coast Castle"
+  ],
+  "coord": [
+   {
+    "latitude": 5.1035833333333,
+    "longitude": -1.24125,
+    "altitude": null,
+    "precision": 2.7777777777778e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "central|Kakum National Park": {
+  "title": "Kakum National Park",
+  "qid": "Q568693",
+  "pageimage": "Kakum.jpg",
+  "desc": "National park in Ghana",
+  "missing": false,
+  "image": [
+   "Kakum.jpg",
+   "Canopy walkway in Kakum National Park 4.jpg",
+   "KAKUM-NATIONAL-PARK-4.jpg",
+   "Kakum National Park Canopy Walkway(short walkway with sky view).jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Kakum National Park"
+  ],
+  "coord": [
+   {
+    "latitude": 5.353611111111111,
+    "longitude": -1.3833333333333333,
+    "altitude": null,
+    "precision": 0.0002777777777777778,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "central|Elmina Castle": {
+  "title": "Elmina Castle",
+  "qid": "Q55264655",
+  "pageimage": "Elmina_Castle_-_Ghana.jpg",
+  "desc": "Fort and former trading post in Elmina, Ghana",
+  "missing": false,
+  "image": [
+   "Castle of St. George\u2019s 03.JPG",
+   "Elmina Castle - Ghana.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Elmina Castle"
+  ],
+  "coord": [
+   {
+    "latitude": 5.08274,
+    "longitude": -1.348211,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 5.08275,
+    "longitude": -1.34807,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "central|Assin Manso Ancestral Slave River": {
+  "title": "Assin Manso Slave River Site",
+  "qid": "Q107313455",
+  "pageimage": "An_Adventurous_Trip.jpg",
+  "desc": "River",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [],
+  "coord": [
+   {
+    "latitude": 5.5240368,
+    "longitude": -1.1685361,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "central|Hans Cottage Botel": null,
+ "volta|Wli Falls": {
+  "title": "Wli waterfalls",
+  "qid": "Q15560122",
+  "pageimage": "Wli_Lower_Fall-4.jpg",
+  "desc": "Waterfall in Ghana",
+  "missing": false,
+  "image": [
+   "Wli Lower Fall-4.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Wli waterfalls"
+  ],
+  "coord": [
+   {
+    "latitude": 7.105833333333333,
+    "longitude": 0.6088888888888888,
+    "altitude": null,
+    "precision": 0.045265282196393,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "volta|Mount Afadja": {
+  "title": "Mount Afadja",
+  "qid": "Q635179",
+  "pageimage": "Mountain_Afadja.jpg",
+  "desc": "Mountain in Ghana",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [
+   "Mount Afadjato"
+  ],
+  "coord": [
+   {
+    "latitude": 7.1444444444444,
+    "longitude": 0.355,
+    "altitude": null,
+    "precision": 0.00027777777777778,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 7.0214,
+    "longitude": 0.56597,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "volta|Tafi Atome Monkey Sanctuary": {
+  "title": "Tafi Atome Monkey Sanctuary",
+  "qid": "Q65059567",
+  "pageimage": "Tafi_Atome_Monkey_Sanctuary.jpg",
+  "desc": "Monkey Sanctuary in Ghana",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [
+   "Tafi Atome Monkey Sanctuary"
+  ],
+  "coord": []
+ },
+ "volta|Amedzofe": {
+  "title": "Amedzofe, Ghana",
+  "qid": "Q460713",
+  "pageimage": "Amedzofe_BlickVomGemi_1892_300dpi.jpg",
+  "desc": "Place in Volta Region, Ghana",
+  "missing": false,
+  "image": [
+   "Amedzofe Town Facing the mountain Gemi.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Amedzofe"
+  ],
+  "coord": [
+   {
+    "latitude": 6.84573,
+    "longitude": 0.436536,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 6.84531,
+    "longitude": 0.4335,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "volta|Keta Lagoon": {
+  "title": "Keta Lagoon",
+  "qid": "Q16733712",
+  "pageimage": "The_National_Archives_UK_-_CO_1069-34-127-2-001.jpg",
+  "desc": "Lagoon in Volta Region, Ghana",
+  "missing": false,
+  "image": [
+   "Shores of Keta Lagoon.JPG"
+  ],
+  "website": [],
+  "commonscat": [
+   "Keta Lagoon"
+  ],
+  "coord": [
+   {
+    "latitude": 5.8879,
+    "longitude": 0.8267,
+    "altitude": null,
+    "precision": 0.0090307947704604,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 5.93416,
+    "longitude": 0.92441,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "savannah|Mole National Park": {
+  "title": "Mole National Park",
+  "qid": "Q1585600",
+  "pageimage": "Elefant_Ghana.jpg",
+  "desc": "Wildlife refuge in Ghana",
+  "missing": false,
+  "image": [
+   "Mole National Park Mo 24.08.JPG"
+  ],
+  "website": [],
+  "commonscat": [
+   "Mole National Park"
+  ],
+  "coord": [
+   {
+    "latitude": 9.7,
+    "longitude": -1.83333333,
+    "altitude": null,
+    "precision": 0.016666666666667,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 9.36844,
+    "longitude": -2.09352,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "savannah|Larabanga Mosque": {
+  "title": "Larabanga Mosque",
+  "qid": "Q490898",
+  "pageimage": "Larabanga_Mosque_Ghana.jpg",
+  "desc": "Mosque in Savannah Region, Ghana",
+  "missing": false,
+  "image": [
+   "Larabanga Mosque Ghana.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Larabanga Mosque"
+  ],
+  "coord": [
+   {
+    "latitude": 9.2166,
+    "longitude": -1.8666,
+    "altitude": null,
+    "precision": 0.016666666666667,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "savannah|Mognori Eco Village": null,
+ "savannah|Salaga": {
+  "title": "Salaga",
+  "qid": "Q995578",
+  "pageimage": "Salaga_Slave_Tree_-_panoramio.jpg",
+  "desc": "Town in Savannah Region, Ghana",
+  "missing": false,
+  "image": [
+   "Ghana20064 (5348903606).jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Salaga"
+  ],
+  "coord": [
+   {
+    "latitude": 8.5517111111111,
+    "longitude": -0.51964722222222,
+    "altitude": null,
+    "precision": 0.00027777777777778,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 8.55083,
+    "longitude": -0.51875,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "western|Nzulezu": {
+  "title": "Nzulezo",
+  "qid": "Q924568",
+  "pageimage": "Nzulezo1.jpg",
+  "desc": "Village in Western region, Ghana",
+  "missing": false,
+  "image": [
+   "Nzulezo stilt village.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Nzulezo"
+  ],
+  "coord": [
+   {
+    "latitude": 5.02056,
+    "longitude": -2.59778,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "western|Busua Beach": {
+  "title": "Busua",
+  "qid": "Q1017789",
+  "pageimage": null,
+  "desc": "Town in Western Region, Ghana",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [],
+  "coord": [
+   {
+    "latitude": 4.807888888888889,
+    "longitude": -1.9378888888888888,
+    "altitude": null,
+    "precision": 2.777777777777778e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 4.80649,
+    "longitude": -1.93913,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "western|Cape Three Points": {
+  "title": "Cape Three Points",
+  "qid": "Q1261417",
+  "pageimage": null,
+  "desc": "Peninsula forming the southernmost tip of Ghana",
+  "missing": false,
+  "image": [
+   "Cape Three Points Lighthouse 1875.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Cape Three Points"
+  ],
+  "coord": [
+   {
+    "latitude": 4.75008611,
+    "longitude": -2.08805,
+    "altitude": null,
+    "precision": 2.77777777778e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 4.73933,
+    "longitude": -2.09185,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "western|Fort San Antonio, Axim": {
+  "title": "Fort San Antonio Abad",
+  "qid": "Q5471974",
+  "pageimage": "Fort_of_San_Antonio_Abad_-_back_entrance_2.JPG",
+  "desc": "Fortification in Manila, Philippines",
+  "missing": false,
+  "image": [
+   "Fort of San Antonio Abad - back entrance 2.JPG"
+  ],
+  "website": [],
+  "commonscat": [
+   "Fort San Antonio Abad"
+  ],
+  "coord": [
+   {
+    "latitude": 14.56263889,
+    "longitude": 120.98683333,
+    "altitude": null,
+    "precision": 2.777777777778e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "western|Ankasa Conservation Area": {
+  "title": "Ankasa Conservation Area",
+  "qid": "Q4765996",
+  "pageimage": "Ankasa_Conservation_1.jpg",
+  "desc": "Park located in Western Region, Ghana",
+  "missing": false,
+  "image": [
+   "Ankasa Conservation 1.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Ankasa Conservation Area"
+  ],
+  "coord": [
+   {
+    "latitude": 5.283333333333333,
+    "longitude": -2.65,
+    "altitude": null,
+    "precision": 0.0002777777777777778,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "ashanti|Manhyia Palace Museum": {
+  "title": "Manhyia Palace",
+  "qid": "Q6749385",
+  "pageimage": "Manhyia_Palace_Museum.jpg",
+  "desc": "Palace in Kumasi, Ashanti Region, Ghana",
+  "missing": false,
+  "image": [
+   "Manhyia Palace Museum.jpg"
+  ],
+  "website": [
+   "https://manhyiapalacemuseum.org/"
+  ],
+  "commonscat": [
+   "Manhyia Palace"
+  ],
+  "coord": [
+   {
+    "latitude": 6.70348,
+    "longitude": -1.61579,
+    "altitude": null,
+    "precision": -1e-07,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "ashanti|Kejetia Market": {
+  "title": "Kejetia Market",
+  "qid": "Q6385318",
+  "pageimage": "Kumasi.jpg",
+  "desc": "Marketplace in Ashanti Region, Ghana",
+  "missing": false,
+  "image": [
+   "Kumasi.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Kejetia Market (Kumasi)"
+  ],
+  "coord": [
+   {
+    "latitude": 6.6986388888889,
+    "longitude": -1.6191388888889,
+    "altitude": null,
+    "precision": 2.7777777777778e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "ashanti|The Great Hall, KNUST": {
+  "title": "Kwame Nkrumah University of Science and Technology",
+  "qid": "Q1654025",
+  "pageimage": "Independent_Hall-_Kwame_Nkrumah_University_of_Science_and_Technology.jpg",
+  "desc": "Public university in Ghana",
+  "missing": false,
+  "image": [
+   "KNUST main entrance with Kwame Nkrumah Memorial Park.jpg"
+  ],
+  "website": [
+   "https://www.knust.edu.gh/"
+  ],
+  "commonscat": [
+   "Kwame Nkrumah University of Science and Technology"
+  ],
+  "coord": [
+   {
+    "latitude": 6.684903,
+    "longitude": -1.570514,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 6.67868,
+    "longitude": -1.56063,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "ashanti|Lake Bosomtwe": {
+  "title": "Lake Bosumtwi",
+  "qid": "Q894613",
+  "pageimage": "An_Explosive_Beginning_for_Lake_Bosumtwi_(154739_-_151229_lrg).jpg",
+  "desc": "Crater lake in Ghana",
+  "missing": false,
+  "image": [
+   "Bosumtwi Worldwind SW.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Lake Bosumtwi"
+  ],
+  "coord": [
+   {
+    "latitude": 6.5055,
+    "longitude": -1.40891,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "ashanti|Bonwire": {
+  "title": "Bonwire",
+  "qid": "Q4942679",
+  "pageimage": "Kenteweaving.jpg",
+  "desc": "Village in Ashanti Region, Ghana",
+  "missing": false,
+  "image": [
+   "Bonwire man weaving.jpg",
+   "Kente 54.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Bonwire"
+  ],
+  "coord": [
+   {
+    "latitude": 6.78333,
+    "longitude": -1.46667,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "ashanti|Ntonso": {
+  "title": "Ntonso",
+  "qid": "Q19978151",
+  "pageimage": null,
+  "desc": "Urban area in Ashanti Region, Ghana",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [
+   "Ntonso"
+  ],
+  "coord": [
+   {
+    "latitude": 6.83333,
+    "longitude": -1.51667,
+    "altitude": null,
+    "precision": 0.090474215407036,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "eastern|Aburi Botanical Gardens": {
+  "title": "Aburi Botanical Gardens",
+  "qid": "Q4055198",
+  "pageimage": "Aburi_garden_2.jpg",
+  "desc": "Garden in Aburi, Ghana",
+  "missing": false,
+  "image": [
+   "Aburi Palms Ghana.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Aburi Botanical Gardens"
+  ],
+  "coord": [
+   {
+    "latitude": 5.8666666666667,
+    "longitude": -0.18333333333333,
+    "altitude": null,
+    "precision": 0.016666666666667,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "eastern|Akosombo Dam": {
+  "title": "Akosombo Dam",
+  "qid": "Q1282314",
+  "pageimage": "Akosombo_Dam_from_the_Volta_Hotel.JPG",
+  "desc": "Dam in Ghana",
+  "missing": false,
+  "image": [
+   "Akosombo Dam.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Akosombo Dam"
+  ],
+  "coord": [
+   {
+    "latitude": 6.299722,
+    "longitude": 0.059444,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 6.29892,
+    "longitude": 0.05854,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "eastern|Boti Falls": {
+  "title": "Boti Falls",
+  "qid": "Q16845075",
+  "pageimage": "Boti_Falls,_Eastern_Region.JPG",
+  "desc": "Pair of waterfalls in Ghana",
+  "missing": false,
+  "image": [
+   "Boti.png",
+   "Boti Falls, Ghana.jpg",
+   "BOTI FALLS, GHANA.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Boti Falls"
+  ],
+  "coord": [
+   {
+    "latitude": 6.16472197,
+    "longitude": -0.2013889,
+    "altitude": null,
+    "precision": 0.0090354021081215,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "eastern|Umbrella Rock": {
+  "title": "Umbrella Rock (Ghana)",
+  "qid": null,
+  "pageimage": null,
+  "desc": null,
+  "missing": true
+ },
+ "eastern|Bunso Arboretum": {
+  "title": "Bunso Eco Park",
+  "qid": "Q117789949",
+  "pageimage": "Bonsu_Eco_Park.jpg",
+  "desc": "Park in Ghana",
+  "missing": false,
+  "image": [
+   "Bonsu Eco Park.jpg"
+  ],
+  "website": [
+   "https://www.bunsoecopark.net/"
+  ],
+  "commonscat": [],
+  "coord": [
+   {
+    "latitude": 6.2683333333333335,
+    "longitude": -0.4608333333333333,
+    "altitude": null,
+    "precision": 0.0002777777777777778,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "northern|Central Mosque, Tamale": {
+  "title": "Tamale Central Mosque",
+  "qid": null,
+  "pageimage": null,
+  "desc": null,
+  "missing": true
+ },
+ "northern|Tamale Central Market": {
+  "title": "Tamale",
+  "qid": "Q1147853",
+  "pageimage": "Tamale_Oaxaque\u00f1o.jpg",
+  "desc": "Traditional Mesoamerican dish",
+  "missing": false,
+  "image": [
+   "Tamale Oaxaque\u00f1o.jpg",
+   "Tamales Mexicanos sweet corn tamales 01.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Tamales"
+  ],
+  "coord": []
+ },
+ "northern|Gbewaa Palace, Yendi": {
+  "title": "Gbewaa Palace",
+  "qid": "Q65119413",
+  "pageimage": "Gbewaa_palace_in_Yendi.jpg",
+  "desc": "Royal home of the king of Dagbon kingdom",
+  "missing": false,
+  "image": [
+   "Gbewaa palace in Yendi.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Gbewaa palace"
+  ],
+  "coord": [
+   {
+    "latitude": 9.44292,
+    "longitude": -0.00143,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "northern|Daboya": {
+  "title": "Daboia",
+  "qid": "Q3011594",
+  "pageimage": "Russellsviper_sal.jpg",
+  "desc": "Genus of snakes",
+  "missing": false,
+  "image": [
+   "20090613 Daboia russelii Russells Viper Kettenviper Pune.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Daboia"
+  ],
+  "coord": []
+ },
+ "upper-east|Paga Crocodile Pond": {
+  "title": "Paga Crocodile Pond",
+  "qid": "Q17110216",
+  "pageimage": "Friendly_Paga_Crocodile_I.jpg",
+  "desc": "Pond area in northern Ghana, known for crocodiles",
+  "missing": false,
+  "image": [
+   "Friendly Paga Crocodile I.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Paga Crocodile Pond"
+  ],
+  "coord": [
+   {
+    "latitude": 10.985115,
+    "longitude": -1.109279,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "upper-east|Bolgatanga Market": {
+  "title": "Bolgatanga",
+  "qid": "Q4939409",
+  "pageimage": "Bolgatanga_Montage.jpg",
+  "desc": "Town in Upper East Region, Ghana",
+  "missing": false,
+  "image": [
+   "Bolgatanga Montage.jpg"
+  ],
+  "website": [
+   "https://bolma.gov.gh/"
+  ],
+  "commonscat": [
+   "Bolgatanga"
+  ],
+  "coord": [
+   {
+    "latitude": 10.785555555556,
+    "longitude": -0.85138888888889,
+    "altitude": null,
+    "precision": 0.00027777777777778,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 10.78556,
+    "longitude": -0.85139,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "upper-east|Sirigu": {
+  "title": "Sirigu",
+  "qid": "Q99911731",
+  "pageimage": null,
+  "desc": "Surname list",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [
+   "Sirigu (surname)"
+  ],
+  "coord": []
+ },
+ "upper-east|Tongo Hills and Tengzug": {
+  "title": "Tongo Hills",
+  "qid": "Q81095550",
+  "pageimage": "Tongo_Hills.jpg",
+  "desc": null,
+  "missing": false,
+  "image": [
+   "Tongo Hills.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Tongo Hills"
+  ],
+  "coord": [
+   {
+    "latitude": 10.6798,
+    "longitude": -0.8143,
+    "altitude": null,
+    "precision": 0.0001,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 10.68839,
+    "longitude": -0.81102,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "upper-east|Navrongo Cathedral": {
+  "title": "Our Lady of Seven Sorrows Cathedral, Navrongo",
+  "qid": null,
+  "pageimage": null,
+  "desc": null,
+  "missing": true
+ },
+ "upper-west|Wa Naa's Palace": {
+  "title": "Wa Naa's Palace",
+  "qid": "Q98400098",
+  "pageimage": "Palace_Pillas_(2).jpg",
+  "desc": "Palace in Wa, Upper West Region of Ghana",
+  "missing": false,
+  "image": [
+   "Palace Pillas (2).jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Wa Naa Palace"
+  ],
+  "coord": [
+   {
+    "latitude": 10.0637,
+    "longitude": -2.5005,
+    "altitude": null,
+    "precision": 1e-08,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "upper-west|Wechiau Community Hippo Sanctuary": {
+  "title": "Wechiau Community Hippo Sanctuary",
+  "qid": "Q28223342",
+  "pageimage": null,
+  "desc": "Tourism attraction project in Wechiau, Ghana",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [],
+  "coord": []
+ },
+ "upper-west|Gwollu Defence Wall": {
+  "title": "Gwollu",
+  "qid": "Q5623710",
+  "pageimage": null,
+  "desc": "District Capital in Upper West Region, Ghana",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [
+   "Gwollu"
+  ],
+  "coord": [
+   {
+    "latitude": 10.9811,
+    "longitude": -2.22111,
+    "altitude": null,
+    "precision": 0.0001,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "upper-west|Nandom": {
+  "title": "Nandom",
+  "qid": "Q6963368",
+  "pageimage": null,
+  "desc": "Town in Upper West Region, Ghana",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [],
+  "coord": [
+   {
+    "latitude": 10.85,
+    "longitude": -2.75,
+    "altitude": null,
+    "precision": 0.01,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 10.85204,
+    "longitude": -2.76129,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "north-east|Nalerigu": {
+  "title": "Nalerigu",
+  "qid": "Q6960867",
+  "pageimage": "An_old_church_at_Nalerigu.jpg",
+  "desc": "Capital town of North East Region, Ghana",
+  "missing": false,
+  "image": [
+   "Nalerigu dam.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Nalerigu"
+  ],
+  "coord": [
+   {
+    "latitude": 10.5333,
+    "longitude": -0.366667,
+    "altitude": null,
+    "precision": 0.0001,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 10.52726,
+    "longitude": -0.36982,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "north-east|Naa Jaringa Wall, Gambaga": {
+  "title": "Gambaga",
+  "qid": "Q1765279",
+  "pageimage": "IMG-20190115-WA0049.jpg",
+  "desc": "District Capital in Northern Region, Ghana",
+  "missing": false,
+  "image": [
+   "A peak from behind the Gambaga witches camp.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Gambaga"
+  ],
+  "coord": [
+   {
+    "latitude": 10.5306,
+    "longitude": -0.442222,
+    "altitude": null,
+    "precision": 0.0001,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 10.5322,
+    "longitude": -0.43783,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "north-east|Gambaga Escarpment": {
+  "title": "Gambaga Escarpment",
+  "qid": null,
+  "pageimage": null,
+  "desc": null,
+  "missing": true
+ },
+ "north-east|Nakpanduri": {
+  "title": "Nakpanduri",
+  "qid": "Q6960701",
+  "pageimage": "Nakpanduri_cliffs.jpg",
+  "desc": "Village in Northern Region, Ghana",
+  "missing": false,
+  "image": [
+   "Nakpanduri cliffs.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Nakpanduri"
+  ],
+  "coord": [
+   {
+    "latitude": 10.6328,
+    "longitude": -0.182778,
+    "altitude": null,
+    "precision": 0.0001,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 10.63195,
+    "longitude": -0.18191,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "oti|Lake Volta at Dambai": {
+  "title": "Dambai",
+  "qid": "Q5212077",
+  "pageimage": "Vehicles_and_people_awaiting_the_arrival_of_the_ferry_to_travel_across_river_Oti_at_Dambai.jpg",
+  "desc": "City in Oti Region, Ghana",
+  "missing": false,
+  "image": [
+   "Dambai Old Town.JPG"
+  ],
+  "website": [],
+  "commonscat": [
+   "Dambai (Ghana)"
+  ],
+  "coord": [
+   {
+    "latitude": 8.06889,
+    "longitude": 0.179167,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 8.06616,
+    "longitude": 0.17947,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "oti|Kyabobo National Park": {
+  "title": "Kyabobo National Park",
+  "qid": "Q1638856",
+  "pageimage": "Hiking_at_Kyabobo_National_Park.jpg",
+  "desc": "National park and tourist site in the Oti region of Ghana",
+  "missing": false,
+  "image": [
+   "Small Waterfall at Kyabobo National Park.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Kyabobo National Park"
+  ],
+  "coord": [
+   {
+    "latitude": 8.41666667,
+    "longitude": 0.61666667,
+    "altitude": null,
+    "precision": 0.016666666666667,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 8.41667,
+    "longitude": 0.61667,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "oti|Nkwanta": {
+  "title": "Nkwanta",
+  "qid": "Q15045830",
+  "pageimage": null,
+  "desc": "District Capital in Oti Region, Ghana",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [],
+  "coord": [
+   {
+    "latitude": 8.26667,
+    "longitude": 0.516667,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 8.26138,
+    "longitude": 0.52436,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "bono|Boabeng-Fiema Monkey Sanctuary": {
+  "title": "Boabeng-Fiema Monkey Sanctuary",
+  "qid": "Q997322",
+  "pageimage": "Koczkodan_liberyjski.jpg",
+  "desc": "Monkey sanctuary in Bono East Region, Ghana",
+  "missing": false,
+  "image": [
+   "Koczkodan liberyjski.jpg"
+  ],
+  "website": [
+   "https://www.boabengfms.org"
+  ],
+  "commonscat": [
+   "Boabeng-Fiema Monkey Sanctuary"
+  ],
+  "coord": [
+   {
+    "latitude": 7.7191,
+    "longitude": -1.6934,
+    "altitude": null,
+    "precision": 0.0001,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "bono|Sunyani": {
+  "title": "Sunyani",
+  "qid": "Q406037",
+  "pageimage": "Cocoa_House_in_Sunyani.jpg",
+  "desc": "City in Bono Region, Ghana",
+  "missing": false,
+  "image": [
+   "Cocoa House in Sunyani.jpg"
+  ],
+  "website": [
+   "http://www.sma.gov.gh/"
+  ],
+  "commonscat": [
+   "Sunyani"
+  ],
+  "coord": [
+   {
+    "latitude": 7.3333333333333,
+    "longitude": -2.3333333333333,
+    "altitude": null,
+    "precision": 0.016666666666667,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 7.33991,
+    "longitude": -2.32676,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "bono|Bui National Park": {
+  "title": "Bui National Park",
+  "qid": "Q1002702",
+  "pageimage": "Bui_National_Park_2009.jpg",
+  "desc": "National park in Ghana",
+  "missing": false,
+  "image": [
+   "Bui National Park 2009.jpg",
+   "Mountain beside Bui Lake.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Bui National Park"
+  ],
+  "coord": [
+   {
+    "latitude": 8.29983,
+    "longitude": -2.36275,
+    "altitude": null,
+    "precision": 2.77777777778e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "bono-east|Kintampo Waterfalls": {
+  "title": "Kintampo waterfalls",
+  "qid": "Q6414333",
+  "pageimage": "Kintempo_Water_Falls_II.jpg",
+  "desc": "Waterfall in Kintampo, Ghana",
+  "missing": false,
+  "image": [
+   "Kintempo Water Falls II.jpg",
+   "Top view of Kintampo waterfalls.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Kintampo Waterfalls"
+  ],
+  "coord": [
+   {
+    "latitude": 8.08965278,
+    "longitude": -1.69738889,
+    "altitude": null,
+    "precision": 2.77777777778e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "bono-east|Techiman Market": {
+  "title": "Techiman",
+  "qid": "Q964069",
+  "pageimage": null,
+  "desc": "City in Bono East Region, Ghana",
+  "missing": false,
+  "image": [
+   "Techiman Senior High School.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Techiman, Ghana"
+  ],
+  "coord": [
+   {
+    "latitude": 7.59054,
+    "longitude": -1.93947,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "bono-east|Fuller Falls": {
+  "title": "Fuller Falls",
+  "qid": null,
+  "pageimage": null,
+  "desc": null,
+  "missing": true
+ },
+ "bono-east|Buoyem Caves": {
+  "title": "Buoyem",
+  "qid": "Q4998020",
+  "pageimage": null,
+  "desc": "Place in Bono East Region, Ghana",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [],
+  "coord": [
+   {
+    "latitude": 7.66667,
+    "longitude": -1.96667,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 7.66984,
+    "longitude": -1.962,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "ahafo|Goaso": {
+  "title": "Goaso",
+  "qid": "Q5575256",
+  "pageimage": "Goaso_Ahafo_Regional_capital_Round_About.jpg",
+  "desc": "Capital of Ahafo Region, Ghana",
+  "missing": false,
+  "image": [
+   "Goaso Ahafo Regional capital Round About.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Goaso"
+  ],
+  "coord": [
+   {
+    "latitude": 6.8,
+    "longitude": -2.51667,
+    "altitude": null,
+    "precision": 0.1,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "ahafo|Mim": {
+  "title": "Mim, Ahafo",
+  "qid": "Q108179352",
+  "pageimage": "Mim_skyline2.jpg",
+  "desc": "City in Ahafo region, Ghana",
+  "missing": false,
+  "image": [
+   "Baobabentrepreneur (20).jpg",
+   "Districts of the Ahafo Region (2019).png"
+  ],
+  "website": [],
+  "commonscat": [
+   "Mim (Ahafo)"
+  ],
+  "coord": []
+ },
+ "ahafo|Kenyasi": {
+  "title": "Kenyasi",
+  "qid": "Q6392909",
+  "pageimage": null,
+  "desc": "Town in Ahafo Region, Ghana",
+  "missing": false,
+  "image": [],
+  "website": [],
+  "commonscat": [],
+  "coord": [
+   {
+    "latitude": 6.98333,
+    "longitude": -2.38333,
+    "altitude": null,
+    "precision": 1e-05,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   },
+   {
+    "latitude": 6.98213,
+    "longitude": -2.38823,
+    "altitude": null,
+    "precision": 1e-06,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "western-north|Bia National Park": {
+  "title": "Bia National Park",
+  "qid": "Q855195",
+  "pageimage": "Bia_National_Park_Ecosystem.jpg",
+  "desc": "National park in Ghana",
+  "missing": false,
+  "image": [
+   "Bia National Park.jpg"
+  ],
+  "website": [],
+  "commonscat": [
+   "Bia National Park"
+  ],
+  "coord": [
+   {
+    "latitude": 6.083333333333333,
+    "longitude": -3.1,
+    "altitude": null,
+    "precision": 0.016666666666666666,
+    "globe": "http://www.wikidata.org/entity/Q2"
+   }
+  ]
+ },
+ "western-north|Sefwi Wiawso": {
+  "title": "Sefwi Wiawso",
+  "qid": null,
+  "pageimage": null,
+  "desc": null,
+  "missing": true
+ },
+ "western-north|Cocoa country": null
+}

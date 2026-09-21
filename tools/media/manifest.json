@@ -1,0 +1,2605 @@
+{
+ "cards": {
+  "greater-accra|Jamestown": "James Town Beach.jpg",
+  "greater-accra|Kwame Nkrumah Memorial Park": "Ghana accra.jpg",
+  "greater-accra|Makola Market": "Street Outside Makola Market, Accra, Ghana.JPG",
+  "greater-accra|Labadi Beach": "Solnedgang p\u00e5 Labadi beach.jpg",
+  "greater-accra|Osu": "Audience watching live band music at kona bar.jpg",
+  "central|Kakum National Park": "Canopy walk of kakum national park (2).jpg",
+  "central|Elmina Castle": "Elmina Castle - Ghana.jpg",
+  "central|Hans Cottage Botel": "Scenery at Hans Cottage Botel - Near Cape Coast - Ghana (4737835257).jpg",
+  "volta|Mount Afadja": "A view from the summit.jpg",
+  "volta|Tafi Atome Monkey Sanctuary": "Tafi Atome Monkey Sanctuary.jpg",
+  "volta|Amedzofe": "A view of amedzope town from mounitain gemi.jpg",
+  "volta|Keta Lagoon": "Shores of Keta Lagoon.JPG",
+  "savannah|Mognori Eco Village": "Mognori eco village 1.jpg",
+  "savannah|Salaga": "Salaga Slave Tree - panoramio.jpg",
+  "western|Cape Three Points": "DSC01739 (15318781703).jpg",
+  "western|Ankasa Conservation Area": "Ankasa Conservation 1.jpg",
+  "ashanti|Manhyia Palace Museum": "Manhyia Palace Museum.jpg",
+  "ashanti|Kejetia Market": "Kejetia-Markt.jpg",
+  "ashanti|Lake Bosomtwe": "Just beautiful Lake Bosomtwe.jpg",
+  "ashanti|Bonwire": "Bonwire man weaving.jpg",
+  "ashanti|Ntonso": "Adinkra printing.jpg",
+  "eastern|Aburi Botanical Gardens": "Aburi garden 2.jpg",
+  "eastern|Boti Falls": "Boti Falls, Eastern Region.JPG",
+  "eastern|Umbrella Rock": "Umbrella Rock at Boti Falls 2.jpg",
+  "northern|Tamale Central Market": "Tamale Market, Ghana.jpg",
+  "northern|Gbewaa Palace, Yendi": "Gbewaa palace in Yendi.jpg",
+  "upper-east|Sirigu": "Monument to Kofi Annan inside of the Sirigu Women's Pottery Association (Upper East Region, Ghana 2019).jpg",
+  "upper-east|Tongo Hills and Tengzug": "Tongo Hills.jpg",
+  "upper-east|Navrongo Cathedral": "Old Navrongo Catholic Cathedral.jpg",
+  "upper-west|Gwollu Defence Wall": "Gwollu Slave Trade Defence Wall in Upper East Region of Ghana 01.jpg",
+  "north-east|Gambaga Escarpment": "Side view of the Gambaga escarpment in northeast of Ghana 07.jpg",
+  "north-east|Nakpanduri": "Nakpanduri cliffs.jpg",
+  "oti|Kyabobo National Park": "A Path Through the kyabobo Hills.jpg",
+  "bono|Bui National Park": "Mountain beside Bui Lake.jpg",
+  "bono-east|Buoyem Caves": "Rocks in Buoyem.jpg",
+  "ahafo|Mim": "Mim lake1.jpg",
+  "western-north|Sefwi Wiawso": "Goaso to Kumasi.jpg",
+  "western-north|Cocoa country": "20151118-OSEC-UNK-2935 (23904959686).jpg",
+  "upper-west|Wechiau Community Hippo Sanctuary": "The Wechiau Hippopotamus Sanctuary.jpg"
+ },
+ "gallery": {
+  "greater-accra": [
+   "A drone footage of Accra central, Ghana.jpg",
+   "The Aerial View of Accra, the capital town of Ghana.jpg",
+   "Airport City, Accra Ghana.jpg",
+   "National Mosque of Ghana exterior night view.jpg",
+   "Accra Skyline.jpg",
+   "Accra Airport city.jpg",
+   "Airportcityaccra.jpg",
+   "Freedom Square, Accra, Ghana.JPG",
+   "Aerial view of Borla beach Accra.jpg",
+   "Cleaning Fish (22101127385).jpg",
+   "A trader at Makola Market.jpg",
+   "Makola Market, Accra, Ghana.jpg",
+   "Kwame Nkrumah Memorial Park.jpg",
+   "Fishermen in Jamestown, Accra 01.jpg"
+  ],
+  "central": [
+   "A daytime view of Cape Coast Castle.jpg",
+   "Cape Coast Castle, Cape Coast, Ghana.JPG",
+   "Canopy walk of kakum national park (1).jpg",
+   "Au\u00dfenmauer Elmina PSt B002.jpg",
+   "View over Town from Fort Victoria - Cape Coast - Ghana (4737799143).jpg",
+   "Fishing Day at shores of Elmina.jpg",
+   "Ghana-elmina-harbor-flickr-crosby cj-PRECLEARED.jpg",
+   "Elmina harbor (3557881841).jpg",
+   "Canopy walkway in Kakum National Park 2.jpg",
+   "Boats at Elmina Port.JPG"
+  ],
+  "volta": [
+   "A glimpse at the Fall (Wli).jpg",
+   "Amedzofe & Mt Gemi.jpg",
+   "A View from the Summit.jpg",
+   "A view of the Keta Lagoon at Sunset.jpg",
+   "Wli Falls Ghana.jpg",
+   "Beautiful Landscape view on the Afadjato Mountain in Ghana.jpg",
+   "Landscape view on the Afadjato Mountain.jpg"
+  ],
+  "savannah": [
+   "Elefant Ghana.jpg",
+   "A pair of Bohor Reedbucks.jpg",
+   "A beautiful giant rock standing like a mountain in the savanna region.jpg",
+   "A view of the entrance Larabanga mosque.jpg",
+   "Larabanga Mosque Ghana.jpg",
+   "Mole National Park, West Gonja (P1100403).jpg",
+   "Mole National Park, Mole Village (P1100345-Pano-2).jpg",
+   "Mole National Park, West Gonja (P1100486).jpg",
+   "Larabanga Mosque05.jpg",
+   "Banda Nkwanta Mosque 3.jpg"
+  ],
+  "western": [
+   "A house built on water.jpg",
+   "A far view of bamboo houses on water.jpg",
+   "Surfers Surfing at Busua Beach in Western region, Ghana.jpg",
+   "Busua Beach Western Region2.jpg",
+   "Cape Three Points Lighthouse 1875.jpg",
+   "Nzulezo village 5.jpg",
+   "Nzulezo village 4.jpg",
+   "Nzulezo 11 - Ghana.jpg",
+   "Young Men with Pirogues in Harbour - Near Busua - Ghana (4738454856).jpg",
+   "Drying fish Takoradi 2011 B002a.jpg",
+   "Busua Beach on rainy day 01.jpg",
+   "Residential houses in Secondi Takoradi \u0320 2.jpg"
+  ],
+  "ashanti": [
+   "View over Kejetia Market - Largest in West Africa - Kumasi - Ghana - 01 (4755555789).jpg",
+   "Kronum Kumasi 2018-11-08 (130246).jpg",
+   "Image of 2024 Bonwire Kente Festival 13.jpg",
+   "Kumasi Market.jpg",
+   "Kente Kumasi 2010-06-30.jpg",
+   "Breathtaking afternoon at Lake Bosomtwe.jpg",
+   "Modern market hall of Kejetia market.jpg",
+   "Lake Bosumtwi2, Ghana.jpg",
+   "Lake Bosumtwi1, Ghana.jpg",
+   "Tano Offin Forest Reserve Asante Region.jpg"
+  ],
+  "eastern": [
+   "Adomi Bridge at Atimpoku.JPG",
+   "Aburi Botanical Garden 8.jpg",
+   "Akosombo Dam is spilling water, Ghana.JPG",
+   "Akosombo Dam from the Volta Hotel.JPG",
+   "Boti Falls, Ghana.jpg",
+   "Umbrella Rock at Boti Falls.jpg",
+   "Spillway of Akosombo dam.jpg",
+   "Volta, Asuogyaman (P1090981).jpg",
+   "Akosombo landscape located in Ghana\u2018s Eastern region.jpg",
+   "Ghana Aburi Botanical gardens (1).jpg"
+  ],
+  "northern": [
+   "Tamale central Mosque.jpg",
+   "Market in Tamale Northern Ghana.jpg",
+   "Road, Tamale.jpg",
+   "Yendi, Ghana.JPG",
+   "Maison traditionnelle Yendi, Ghana.JPG",
+   "Mud and thatch house.JPG",
+   "A Dried Tree in the Savanna Lands in Northern Ghana.jpg"
+  ],
+  "upper-east": [
+   "A Young Ghanaian Basketry Craftman.jpg",
+   "An old settlements at Tongo hills.jpg",
+   "A TRIP TO PAGA.jpg",
+   "Kofi Annan statue at Sirigu pottery and art.jpg",
+   "Interior of the Cathedral Basilica of Our Lady of Seven Sorrows (Navrongo, Ghana 2019).jpg",
+   "Sumbrungu Painted Building in Bolgatanga, northern Ghana.jpg",
+   "Basket Vendor and Donkey Cart - Bolgatanga - Ghana (4776541473).jpg",
+   "Baskets and Vendors at Roadside - Bolgatanga - Ghana (4776523805).jpg",
+   "Sunset in Bolgatanga.jpg",
+   "Paga Crocodile Restaurant.jpg",
+   "Tongo hills 002.jpg"
+  ],
+  "upper-west": [
+   "Palace Pillas (2).jpg",
+   "A traditional Home for the Wa Naa.jpg",
+   "WaGhana.jpg",
+   "Wa Market - panoramio.jpg",
+   "A woman from Wa.png",
+   "Black pots from the Upper West Region of Ghana.jpg",
+   "The Wechiau Hippopotamus Sanctuary.jpg"
+  ],
+  "north-east": [
+   "Nalerigu dam.jpg",
+   "A peak from behind the Gambaga witches camp.jpg",
+   "Nakpanduri village center.jpg",
+   "Nakpanduri sunset.jpg",
+   "Nakpanduri cliffs1.jpg",
+   "The White Volta 03.jpg"
+  ],
+  "oti": [
+   "Local canoe transportation service at Dambai.jpg",
+   "Vehicles and people awaiting the arrival of the ferry to travel across river Oti at Dambai.jpg",
+   "Small Waterfall at Kyabobo National Park.jpg",
+   "Beautiful mountain in kyabobo.jpg"
+  ],
+  "bono": [
+   "Koczkodan liberyjski.jpg",
+   "Sunyani Township.jpg",
+   "A mountain at the shore of Bui reservoir.jpg",
+   "ADULT BLACK AND WHITE COLOBUS MONKEYS.jpg"
+  ],
+  "bono-east": [
+   "A landscape view of the famous Kintampo waterfall in Ghana1.jpg",
+   "Top view of Kintampo waterfalls.jpg",
+   "Kintempo Water Falls II.jpg",
+   "Stage one of the Kintampo Waterfall in Ghana.jpg",
+   "A landscape view of the famous Kintampo waterfall in Ghana.jpg",
+   "Techiman Hollyfamily Roundabout.jpg",
+   "Presbyterian Church in 1960 Ghana.jpg",
+   "Canopy walkway of Kintampo Waterfalls.jpg",
+   "Volta Lake at Yeji.jpg"
+  ],
+  "ahafo": [
+   "Baobabentrepreneur (20).jpg",
+   "Goaso Ahafo Regional capital Round About.jpg"
+  ],
+  "western-north": [
+   "Bia National Park.jpg",
+   "Bia National Park, and a rice farm.jpg",
+   "Molly Ann Matteson Ghana Photo.jpg"
+  ]
+ },
+ "meta": {
+  "\"Mourners at Nandom in Ghana.jpeg\".jpg": {
+   "artist": "Just Arts",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%22Mourners_at_Nandom_in_Ghana.jpeg%22.jpg",
+   "w": 4160,
+   "h": 3120,
+   "desc": "The picture shows a group of mourners at Nandom, in Ghana circling around the dead persons as they mourn."
+  },
+  "20151118-OSEC-UNK-2935 (23904959686).jpg": {
+   "artist": "USDAgov",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "page": "https://commons.wikimedia.org/wiki/File:20151118-OSEC-UNK-2935_(23904959686).jpg",
+   "w": 4033,
+   "h": 2689,
+   "desc": "Ripe Cocoa pods during Agriculture Deputy Secretary Krysta Harden's tour of the World Cocoa Foundation (WCF) African Cocoa Initiative farm in Ghana on Nov. 16, 2015. USDA photo.",
+   "slug": "20151118-osec-unk-2935-23904959686",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "A Dried Tree in the Savanna Lands in Northern Ghana.jpg": {
+   "artist": "Sheihu Salawatia",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_Dried_Tree_in_the_Savanna_Lands_in_Northern_Ghana.jpg",
+   "w": 1080,
+   "h": 795,
+   "desc": "A Dried Tree in the Savanna Lands in Northern Ghana",
+   "slug": "a-dried-tree-in-the-savanna-lands-in-northern-ghana",
+   "size": [
+    1080,
+    795
+   ]
+  },
+  "A Path Through the kyabobo Hills.jpg": {
+   "artist": "Suglo20",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_Path_Through_the_kyabobo_Hills.jpg",
+   "w": 6240,
+   "h": 4160,
+   "desc": "A tropical rain forest with an amazing view of the sky",
+   "slug": "a-path-through-the-kyabobo-hills",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "A TRIP TO PAGA.jpg": {
+   "artist": "Ratty666",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_TRIP_TO_PAGA.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "PAGA is a village is the upper east region of Ghana, West Africa. The place house a pond that is full of crocodiles, when a visitor wants to have a picture with a crocodile, they just have to buy a hen for the crocodile ",
+   "slug": "a-trip-to-paga",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "A View from the Summit.jpg": {
+   "artist": "Blaq dynamite",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_View_from_the_Summit.jpg",
+   "w": 5184,
+   "h": 3456,
+   "desc": "A View from the Summit.",
+   "slug": "a-view-from-the-summit",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "A Young Ghanaian Basketry Craftman.jpg": {
+   "artist": "Tahiru Rajab",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_Young_Ghanaian_Basketry_Craftman.jpg",
+   "w": 6500,
+   "h": 8667,
+   "desc": "A Young Ghanaian Basketry Craftman Stretching A Vegetable Tanne Leather at the Bolgatanga Craft Market",
+   "slug": "a-young-ghanaian-basketry-craftman",
+   "size": [
+    1200,
+    1600
+   ]
+  },
+  "A beautiful giant rock standing like a mountain in the savanna region.jpg": {
+   "artist": "Mykojo",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_beautiful_giant_rock_standing_like_a_mountain_in_the_savanna_region.jpg",
+   "w": 3024,
+   "h": 4032,
+   "desc": "",
+   "slug": "a-beautiful-giant-rock-standing-like-a-mountain-in-the-savan",
+   "size": [
+    1200,
+    1600
+   ]
+  },
+  "A daytime view of Cape Coast Castle.jpg": {
+   "artist": "Kwameghana(Bright Kwame Ayisi)",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_daytime_view_of_Cape_Coast_Castle.jpg",
+   "w": 6036,
+   "h": 4020,
+   "desc": "Cape Coast Castle, located on the southern coast of Ghana, is a historical fortress that played a significant role in the trans-Atlantic slave trade.",
+   "slug": "a-daytime-view-of-cape-coast-castle",
+   "size": [
+    1600,
+    1066
+   ]
+  },
+  "A drone footage of Accra central, Ghana.jpg": {
+   "artist": "Amanor kwaku",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_drone_footage_of_Accra_central,_Ghana.jpg",
+   "w": 960,
+   "h": 579,
+   "desc": "Scenic view of central Accra, Ghana",
+   "slug": "a-drone-footage-of-accra-central-ghana",
+   "size": [
+    960,
+    579
+   ]
+  },
+  "A far view of bamboo houses on water.jpg": {
+   "artist": "Kwameghana",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_far_view_of_bamboo_houses_on_water.jpg",
+   "w": 6036,
+   "h": 4020,
+   "desc": "This is an image with the theme \"Home + Habitat in Africa\" from:",
+   "slug": "a-far-view-of-bamboo-houses-on-water",
+   "size": [
+    1600,
+    1066
+   ]
+  },
+  "A glimpse at the Fall (Wli).jpg": {
+   "artist": "Blaq dynamite",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_glimpse_at_the_Fall_(Wli).jpg",
+   "w": 3456,
+   "h": 5184,
+   "desc": "A glimpse at the Fall.",
+   "slug": "a-glimpse-at-the-fall-wli",
+   "size": [
+    1067,
+    1600
+   ]
+  },
+  "A house built on water.jpg": {
+   "artist": "Kwameghana",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_house_built_on_water.jpg",
+   "w": 5689,
+   "h": 3862,
+   "desc": "This is an image with the theme \"Home + Habitat in Africa\" from:",
+   "slug": "a-house-built-on-water",
+   "size": [
+    1600,
+    1086
+   ]
+  },
+  "A landscape view of the famous Kintampo waterfall in Ghana.jpg": {
+   "artist": "Treysam",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_landscape_view_of_the_famous_Kintampo_waterfall_in_Ghana.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "A landscape view of the famous Kintampo waterfall in Ghana",
+   "slug": "a-landscape-view-of-the-famous-kintampo-waterfall-in-ghana",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "A landscape view of the famous Kintampo waterfall in Ghana1.jpg": {
+   "artist": "Treysam",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_landscape_view_of_the_famous_Kintampo_waterfall_in_Ghana1.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "A landscape view of the famous Kintampo waterfall third stage of the fall",
+   "slug": "a-landscape-view-of-the-famous-kintampo-waterfall-in-ghana1",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "A mountain at the shore of Bui reservoir.jpg": {
+   "artist": "Knowledge and philosophy",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_mountain_at_the_shore_of_Bui_reservoir.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "A mountain at the shore of Bui reservoir in Bui National Park",
+   "slug": "a-mountain-at-the-shore-of-bui-reservoir",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "A pair of Bohor Reedbucks.jpg": {
+   "artist": "Kradolferp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_pair_of_Bohor_Reedbucks.jpg",
+   "w": 2400,
+   "h": 1597,
+   "desc": "Bohor Reedbucks at the National Mole Park",
+   "slug": "a-pair-of-bohor-reedbucks",
+   "size": [
+    1600,
+    1065
+   ]
+  },
+  "A peak from behind the Gambaga witches camp.jpg": {
+   "artist": "Salifu Memunatu",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_peak_from_behind_the_Gambaga_witches_camp.jpg",
+   "w": 4000,
+   "h": 4000,
+   "desc": "A peak from behind the Gambaga witches camp.",
+   "slug": "a-peak-from-behind-the-gambaga-witches-camp",
+   "size": [
+    1600,
+    1600
+   ]
+  },
+  "A picture of a part of the faculty of agriculture, knust.jpg": {
+   "artist": "David Nii Quaye",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_picture_of_a_part_of_the_faculty_of_agriculture,_knust.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "A picture of a part of the faculty of agriculture, knust"
+  },
+  "A trader at Makola Market.jpg": {
+   "artist": "Vrinda Khushu",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_trader_at_Makola_Market.jpg",
+   "w": 2048,
+   "h": 1152,
+   "desc": "A trader waiting for her customer at Makola Market",
+   "slug": "a-trader-at-makola-market",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  "A traditional Home for the Wa Naa.jpg": {
+   "artist": "Moiko Happy",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_traditional_Home_for_the_Wa_Naa.jpg",
+   "w": 3024,
+   "h": 4032,
+   "desc": "A beautiful traditional home of the Wa Naa",
+   "slug": "a-traditional-home-for-the-wa-naa",
+   "size": [
+    1200,
+    1600
+   ]
+  },
+  "A view from the summit.jpg": {
+   "artist": "Blaq dynamite",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_view_from_the_summit.jpg",
+   "w": 5184,
+   "h": 3456,
+   "desc": "A view from the summit.",
+   "slug": "a-view-from-the-summit",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "A view of amedzope town from mounitain gemi.jpg": {
+   "artist": "Jones Anlimah",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_view_of_amedzope_town_from_mounitain_gemi.jpg",
+   "w": 3238,
+   "h": 2000,
+   "desc": "A view of the Amedzope township",
+   "slug": "a-view-of-amedzope-town-from-mounitain-gemi",
+   "size": [
+    1600,
+    988
+   ]
+  },
+  "A view of the Keta Lagoon at Sunset.jpg": {
+   "artist": "Thug4Christ",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_view_of_the_Keta_Lagoon_at_Sunset.jpg",
+   "w": 2448,
+   "h": 3264,
+   "desc": "A beautiful view of the Keta Lagoon at Sunset. This picture was taken at Kedzi, in the Keta Municipal of the Volta Region of Ghana.",
+   "slug": "a-view-of-the-keta-lagoon-at-sunset",
+   "size": [
+    1200,
+    1600
+   ]
+  },
+  "A view of the entrance Larabanga mosque.jpg": {
+   "artist": "Danieljatuat",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_view_of_the_entrance_Larabanga_mosque.jpg",
+   "w": 1700,
+   "h": 1133,
+   "desc": "A view of the entrance Larabanga mosque",
+   "slug": "a-view-of-the-entrance-larabanga-mosque",
+   "size": [
+    1600,
+    1066
+   ]
+  },
+  "A woman from Wa.png": {
+   "artist": "Isaac Gyamfi Assumeng",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:A_woman_from_Wa.png",
+   "w": 3750,
+   "h": 2500,
+   "desc": "An old woman sitting outside her home in a suburb of Wa",
+   "slug": "a-woman-from-wa",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "ADULT BLACK AND WHITE COLOBUS MONKEYS.jpg": {
+   "artist": "MUDA7533",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:ADULT_BLACK_AND_WHITE_COLOBUS_MONKEYS.jpg",
+   "w": 3000,
+   "h": 4000,
+   "desc": "THIS BREED OF MONKEYS ARE FOUND IN THE BONO REGION OF GHANA AND PRECISELY LOCATED IN THE FORREST OF BOABENG -FIEMA TOWN. THIS TYPE OF MONKEYS ARE NOT HUMAN FRIENDLY AND WILL NOT COME VERY CLOSE TO A HUAMAN, WHICH IS WHY ",
+   "slug": "adult-black-and-white-colobus-monkeys",
+   "size": [
+    1200,
+    1600
+   ]
+  },
+  "Aburi Botanical Garden 8.jpg": {
+   "artist": "Malibu xoxo",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Aburi_Botanical_Garden_8.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "",
+   "slug": "aburi-botanical-garden-8",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Aburi garden 2.jpg": {
+   "artist": "Lionel Scheepmans",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Aburi_garden_2.jpg",
+   "w": 4608,
+   "h": 3456,
+   "desc": "Aburi garden",
+   "slug": "aburi-garden-2",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Accra Airport city.jpg": {
+   "artist": "Esthee2010",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Accra_Airport_city.jpg",
+   "w": 5184,
+   "h": 3456,
+   "desc": "Accra Airport city development tour",
+   "slug": "accra-airport-city",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Accra Skyline.jpg": {
+   "artist": "Synth85",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Accra_Skyline.jpg",
+   "w": 5184,
+   "h": 3456,
+   "desc": "Accra, Ghana",
+   "slug": "accra-skyline",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Adinkra printing.jpg": {
+   "artist": "ZSM",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Adinkra_printing.jpg",
+   "w": 3648,
+   "h": 2432,
+   "desc": "A master craftsman is printing traditional Adinkra symbols using natural dye extracted from tree bark and calabash stamps to make a bedspread in the craft village of Ntonso in the Ashanti Region,Ghana.",
+   "slug": "adinkra-printing",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Adomi Bridge at Atimpoku.JPG": {
+   "artist": "Danigarcia3k",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Adomi_Bridge_at_Atimpoku.JPG",
+   "w": 2583,
+   "h": 1632,
+   "desc": "The Adomi Bridge is located at Atimpoku in the Eastern Region of Ghana over the Volta Lake. It serves as the main passage route for travellers to the Volta regional capital, Ho. This suspension bridge was built in 1957 a",
+   "slug": "adomi-bridge-at-atimpoku",
+   "size": [
+    1600,
+    1011
+   ]
+  },
+  "Aerial view of Borla beach Accra.jpg": {
+   "artist": "Penwills",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Borla_beach_Accra.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "Landscape view of Accra's Borla beach located in Ghana",
+   "slug": "aerial-view-of-borla-beach-accra",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Airport City, Accra Ghana.jpg": {
+   "artist": "Fanti Salms",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Airport_City,_Accra_Ghana.jpg",
+   "w": 5664,
+   "h": 4248,
+   "desc": "Airport City Accra",
+   "slug": "airport-city-accra-ghana",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Airportcityaccra.jpg": {
+   "artist": "Sean MENDIS",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Airportcityaccra.jpg",
+   "w": 3512,
+   "h": 2637,
+   "desc": "Airport City Accra",
+   "slug": "airportcityaccra",
+   "size": [
+    1600,
+    1202
+   ]
+  },
+  "Akosombo Dam from the Volta Hotel.JPG": {
+   "artist": "SandisterTei",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Akosombo_Dam_from_the_Volta_Hotel.JPG",
+   "w": 3648,
+   "h": 2736,
+   "desc": "Akosombo Dam as seen from Volta Hotel",
+   "slug": "akosombo-dam-from-the-volta-hotel",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Akosombo Dam is spilling water, Ghana.JPG": {
+   "artist": "ZSM",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Akosombo_Dam_is_spilling_water,_Ghana.JPG",
+   "w": 3648,
+   "h": 2432,
+   "desc": "Akosombo Dam on the Volta river in Ghana is spilling water through six floodgates because of the all time high water level in the dam.",
+   "slug": "akosombo-dam-is-spilling-water-ghana",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Akosombo landscape located in Ghana\u2018s Eastern region.jpg": {
+   "artist": "Williams Penuku",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Akosombo_landscape_located_in_Ghana%E2%80%98s_Eastern_region.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "Located in Ghana\u2018s Eastern region, not too far from the Volta region, is the small town of Akosombo. Still deeply rooted in nature, this peaceful enclave is only two hours from Accra and definitely worth checking out.",
+   "slug": "akosombo-landscape-located-in-ghanas-eastern-region",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Amedzofe & Mt Gemi.jpg": {
+   "artist": "Kradolferp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Amedzofe_%26_Mt_Gemi.jpg",
+   "w": 5636,
+   "h": 3018,
+   "desc": "Amedzofe, is the highest habitable place in Ghana at more than 600 meters, is perched at the foot of Mt. Gemi",
+   "slug": "amedzofe-mt-gemi",
+   "size": [
+    1600,
+    857
+   ]
+  },
+  "An old settlements at Tongo hills.jpg": {
+   "artist": "Shahadusadik",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:An_old_settlements_at_Tongo_hills.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "These are old settlements found In Tongo.",
+   "slug": "an-old-settlements-at-tongo-hills",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Audience watching live band music at kona bar.jpg": {
+   "artist": "Warmglow",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Audience_watching_live_band_music_at_kona_bar.jpg",
+   "w": 5664,
+   "h": 4248,
+   "desc": "Exciting moments at Kona bar",
+   "slug": "audience-watching-live-band-music-at-kona-bar",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Au\u00dfenmauer Elmina PSt B002.jpg": {
+   "artist": "David Stanley (on Flickr)",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Au%C3%9Fenmauer_Elmina_PSt_B002.jpg",
+   "w": 1024,
+   "h": 768,
+   "desc": "The outer wall of Fort S\u00e3o Jorge da Mina (Elmina).",
+   "slug": "auenmauer-elmina-pst-b002",
+   "size": [
+    1024,
+    768
+   ]
+  },
+  "Banda Nkwanta Mosque 3.jpg": {
+   "artist": "Goldenwabbit",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Banda_Nkwanta_Mosque_3.jpg",
+   "w": 5270,
+   "h": 2962,
+   "desc": "",
+   "slug": "banda-nkwanta-mosque-3",
+   "size": [
+    1600,
+    899
+   ]
+  },
+  "Baobabentrepreneur (20).jpg": {
+   "artist": "Yayasark",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Baobabentrepreneur_(20).jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "Mim Cashew & Agric Prod",
+   "slug": "baobabentrepreneur-20",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Basket Vendor and Donkey Cart - Bolgatanga - Ghana (4776541473).jpg": {
+   "artist": "Adam Jones from Kelowna, BC, Canada",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Basket_Vendor_and_Donkey_Cart_-_Bolgatanga_-_Ghana_(4776541473).jpg",
+   "w": 2304,
+   "h": 3456,
+   "desc": "Basket Vendor and Donkey Cart - Bolgatanga - Ghana",
+   "slug": "basket-vendor-and-donkey-cart-bolgatanga-ghana-4776541473",
+   "size": [
+    1067,
+    1600
+   ]
+  },
+  "Baskets and Vendors at Roadside - Bolgatanga - Ghana (4776523805).jpg": {
+   "artist": "Adam Jones from Kelowna, BC, Canada",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Baskets_and_Vendors_at_Roadside_-_Bolgatanga_-_Ghana_(4776523805).jpg",
+   "w": 2304,
+   "h": 3456,
+   "desc": "Baskets and Vendors at Roadside - Bolgatanga - Ghana",
+   "slug": "baskets-and-vendors-at-roadside-bolgatanga-ghana-4776523805",
+   "size": [
+    1067,
+    1600
+   ]
+  },
+  "Beautiful Landscape view on the Afadjato Mountain in Ghana.jpg": {
+   "artist": "Treysam",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Beautiful_Landscape_view_on_the_Afadjato_Mountain_in_Ghana.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "Beautiful Landscape view on the Afadjato Mountain in Ghana",
+   "slug": "beautiful-landscape-view-on-the-afadjato-mountain-in-ghana",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Beautiful mountain in kyabobo.jpg": {
+   "artist": "Suglo20",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Beautiful_mountain_in_kyabobo.jpg",
+   "w": 6240,
+   "h": 4160,
+   "desc": "tropical forest with yellow-flowered trees and tall palms in the foreground.",
+   "slug": "beautiful-mountain-in-kyabobo",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Bia National Park, and a rice farm.jpg": {
+   "artist": "AmarAfshin",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bia_National_Park,_and_a_rice_farm.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "This is a file of Ghanaian Natural Heritage with ID:",
+   "slug": "bia-national-park-and-a-rice-farm",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Bia National Park.jpg": {
+   "artist": "AmarAfshin",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bia_National_Park.jpg",
+   "w": 2048,
+   "h": 1536,
+   "desc": "This file represent thriving forests restoration program by ECOM Ghana",
+   "slug": "bia-national-park",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Black pots from the Upper West Region of Ghana.jpg": {
+   "artist": "Alhassan Mohammed Awal",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Black_pots_from_the_Upper_West_Region_of_Ghana.jpg",
+   "w": 1280,
+   "h": 960,
+   "desc": "Pots design beautifully by fire in black colour that is predominantly found in the Waala Kingdom (Upper West Region of Ghana)",
+   "slug": "black-pots-from-the-upper-west-region-of-ghana",
+   "size": [
+    1280,
+    960
+   ]
+  },
+  "Boats at Elmina Port.JPG": {
+   "artist": "Benggriff",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Boats_at_Elmina_Port.JPG",
+   "w": 5184,
+   "h": 3456,
+   "desc": "Boats at Elmina Port, Ghana",
+   "slug": "boats-at-elmina-port",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Bonwire man weaving.jpg": {
+   "artist": "Sadads",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bonwire_man_weaving.jpg",
+   "w": 4656,
+   "h": 3492,
+   "desc": "Man doing traditional Kente cloth weaving",
+   "slug": "bonwire-man-weaving",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Boti Falls, Eastern Region.JPG": {
+   "artist": "magwanwagwan",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Boti_Falls,_Eastern_Region.JPG",
+   "w": 4032,
+   "h": 3024,
+   "desc": "",
+   "slug": "boti-falls-eastern-region",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Boti Falls, Ghana.jpg": {
+   "artist": "Newfoundlandguy",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File:Boti_Falls,_Ghana.jpg",
+   "w": 1600,
+   "h": 1200,
+   "desc": "The twin falls descend into a ravine",
+   "slug": "boti-falls-ghana",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Breathtaking afternoon at Lake Bosomtwe.jpg": {
+   "artist": "Kradolferp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Breathtaking_afternoon_at_Lake_Bosomtwe.jpg",
+   "w": 7360,
+   "h": 2986,
+   "desc": "A sunset made by nature's artists",
+   "slug": "breathtaking-afternoon-at-lake-bosomtwe",
+   "size": [
+    1600,
+    649
+   ]
+  },
+  "Brong Ahafo Region - Ghana.jpg": {
+   "artist": "Kofi Adzamli",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Brong_Ahafo_Region_-_Ghana.jpg",
+   "w": 2592,
+   "h": 1936,
+   "desc": "This is an image from"
+  },
+  "Busua Beach Western Region2.jpg": {
+   "artist": "aripeskoe2",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Busua_Beach_Western_Region2.jpg",
+   "w": 1024,
+   "h": 768,
+   "desc": "Strand bei Busua, Western Region, Ghana.",
+   "slug": "busua-beach-western-region2",
+   "size": [
+    1024,
+    768
+   ]
+  },
+  "Busua Beach on rainy day 01.jpg": {
+   "artist": "Tom Lubbe",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Busua_Beach_on_rainy_day_01.jpg",
+   "w": 4128,
+   "h": 2322,
+   "desc": "This is a file of Ghanaian Natural Heritage with ID:",
+   "slug": "busua-beach-on-rainy-day-01",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  "Canopy walk of kakum national park (1).jpg": {
+   "artist": "Jones Anlimah",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Canopy_walk_of_kakum_national_park_(1).jpg",
+   "w": 3300,
+   "h": 2200,
+   "desc": "A view of the canopy walk way at Kakum National Park",
+   "slug": "canopy-walk-of-kakum-national-park-1",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Canopy walk of kakum national park (2).jpg": {
+   "artist": "Jones Anlimah",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Canopy_walk_of_kakum_national_park_(2).jpg",
+   "w": 3300,
+   "h": 2200,
+   "desc": "",
+   "slug": "canopy-walk-of-kakum-national-park-2",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Canopy walkway in Kakum National Park 2.jpg": {
+   "artist": "daSupremo",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Canopy_walkway_in_Kakum_National_Park_2.jpg",
+   "w": 1600,
+   "h": 1200,
+   "desc": "Canopy walkway in Kakum National Park",
+   "slug": "canopy-walkway-in-kakum-national-park-2",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Canopy walkway of Kintampo Waterfalls.jpg": {
+   "artist": "Knowledge and philosophy",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Canopy_walkway_of_Kintampo_Waterfalls.jpg",
+   "w": 2560,
+   "h": 1706,
+   "desc": "Nice view of canopy walkway at Kintampo waterfalls",
+   "slug": "canopy-walkway-of-kintampo-waterfalls",
+   "size": [
+    1600,
+    1066
+   ]
+  },
+  "Cape Coast Castle, Cape Coast, Ghana.JPG": {
+   "artist": "Rjruiziii",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cape_Coast_Castle,_Cape_Coast,_Ghana.JPG",
+   "w": 1600,
+   "h": 1201,
+   "desc": "Cape Coast Castle, Cape Coast, Ghana",
+   "slug": "cape-coast-castle-cape-coast-ghana",
+   "size": [
+    1600,
+    1201
+   ]
+  },
+  "Cape Three Points Lighthouse 1875.jpg": {
+   "artist": "Friedmut Abel",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cape_Three_Points_Lighthouse_1875.jpg",
+   "w": 3968,
+   "h": 2976,
+   "desc": "Cape Three Points and ruin of the first lighthouse built in 1875 in Ghana.",
+   "slug": "cape-three-points-lighthouse-1875",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Cleaning Fish (22101127385).jpg": {
+   "artist": "David Stanley from Nanaimo, Canada",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cleaning_Fish_(22101127385).jpg",
+   "w": 1024,
+   "h": 768,
+   "desc": "Ga women cleaning fish for smoking at Jamestown in Accra, Ghana.",
+   "slug": "cleaning-fish-22101127385",
+   "size": [
+    1024,
+    768
+   ]
+  },
+  "DSC01739 (15318781703).jpg": {
+   "artist": "Tini Maier",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:DSC01739_(15318781703).jpg",
+   "w": 4896,
+   "h": 3672,
+   "desc": "Lighthouse - Cape Three Points Village, Ghana",
+   "slug": "dsc01739-15318781703",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Drying fish Takoradi 2011 B002a.jpg": {
+   "artist": "Susan Quinn / USAID Africa",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "page": "https://commons.wikimedia.org/wiki/File:Drying_fish_Takoradi_2011_B002a.jpg",
+   "w": 3264,
+   "h": 2448,
+   "desc": "Original caption: \"Women drying fish in Takoradi, Ghana\"",
+   "slug": "drying-fish-takoradi-2011-b002a",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Elefant Ghana.jpg": {
+   "artist": "Stig Nygaard",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Elefant_Ghana.jpg",
+   "w": 2560,
+   "h": 1920,
+   "desc": "Elephant in Mole National Park, Ghana",
+   "slug": "elefant-ghana",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Elmina Castle - Ghana.jpg": {
+   "artist": "Damien Halleux Radermecker",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Elmina_Castle_-_Ghana.jpg",
+   "w": 6300,
+   "h": 4200,
+   "desc": "Elmina Castle also known as St. George of the Mine Castle in Ghana.",
+   "slug": "elmina-castle-ghana",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Elmina harbor (3557881841).jpg": {
+   "artist": "Francisco Anzola",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Elmina_harbor_(3557881841).jpg",
+   "w": 4390,
+   "h": 3240,
+   "desc": "Elmina harbor",
+   "slug": "elmina-harbor-3557881841",
+   "size": [
+    1600,
+    1181
+   ]
+  },
+  "Fishermen in Jamestown, Accra 01.jpg": {
+   "artist": "Angela L. Rak",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Fishermen_in_Jamestown,_Accra_01.jpg",
+   "w": 5152,
+   "h": 3864,
+   "desc": "This is an image of \"African people at work\" from",
+   "slug": "fishermen-in-jamestown-accra-01",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Fishing Day at shores of Elmina.jpg": {
+   "artist": "Isaac Ayensu",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Fishing_Day_at_shores_of_Elmina.jpg",
+   "w": 5353,
+   "h": 3436,
+   "desc": "Boats returning from fishing",
+   "slug": "fishing-day-at-shores-of-elmina",
+   "size": [
+    1600,
+    1027
+   ]
+  },
+  "Freedom Square, Accra, Ghana.JPG": {
+   "artist": "RyansWorld",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Freedom_Square,_Accra,_Ghana.JPG",
+   "w": 1600,
+   "h": 1003,
+   "desc": "Parks",
+   "slug": "freedom-square-accra-ghana",
+   "size": [
+    1600,
+    1003
+   ]
+  },
+  "GH Damongo Road1.jpg": {
+   "artist": "Enschiner",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:GH_Damongo_Road1.jpg",
+   "w": 2592,
+   "h": 1944,
+   "desc": "Direction to Fufulso"
+  },
+  "Gbewaa palace in Yendi.jpg": {
+   "artist": "Shahadusadik",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Gbewaa_palace_in_Yendi.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "This is the Palace of Yaa Naa, the paramount chief of Dagbo\u014b",
+   "slug": "gbewaa-palace-in-yendi",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Ghana Aburi Botanical gardens (1).jpg": {
+   "artist": "Erik Kristensen",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ghana_Aburi_Botanical_gardens_(1).jpg",
+   "w": 1600,
+   "h": 1200,
+   "desc": "A tree in Aburi Botanical gardensGregory the Tree",
+   "slug": "ghana-aburi-botanical-gardens-1",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Ghana accra.jpg": {
+   "artist": "Retlaw Snellac Photography",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ghana_accra.jpg",
+   "w": 1200,
+   "h": 900,
+   "desc": "City of Accra. In the background is the Nkrumah Mausoleum. Nkrumah was Ghana's first president.",
+   "slug": "ghana-accra",
+   "size": [
+    1200,
+    900
+   ]
+  },
+  "Ghana-elmina-harbor-flickr-crosby cj-PRECLEARED.jpg": {
+   "artist": "travelinsider",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ghana-elmina-harbor-flickr-crosby_cj-PRECLEARED.jpg",
+   "w": 2048,
+   "h": 1356,
+   "desc": "Ghana-elmina-harbor",
+   "slug": "ghana-elmina-harbor-flickr-crosby-cj-precleared",
+   "size": [
+    1600,
+    1059
+   ]
+  },
+  "Goaso Ahafo Regional capital Round About.jpg": {
+   "artist": "Emmanuel Yeboah Asiama",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Goaso_Ahafo_Regional_capital_Round_About.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "Goaso Ahafo regional capital of Ghana under construction",
+   "slug": "goaso-ahafo-regional-capital-round-about",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Goaso to Kumasi.jpg": {
+   "artist": "Fredfok",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Goaso_to_Kumasi.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "Tepa-Goaso Road near Wiawso, Western North Region",
+   "slug": "goaso-to-kumasi",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Gwollu Slave Trade Defence Wall in Upper East Region of Ghana 01.jpg": {
+   "artist": "Sir Amugi",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Gwollu_Slave_Trade_Defence_Wall_in_Upper_East_Region_of_Ghana_01.jpg",
+   "w": 1080,
+   "h": 810,
+   "desc": "70km north of Wa (Upper West region of Ghana), Gwollu has another poignant reminder of the ancient slave routes that led through this region. The wall was built in the 19th century by Gwollu Koro Limann as a defence agai",
+   "slug": "gwollu-slave-trade-defence-wall-in-upper-east-region-of-ghan",
+   "size": [
+    1080,
+    810
+   ]
+  },
+  "Image of 2024 Bonwire Kente Festival 13.jpg": {
+   "artist": "Baah Badu Kurfass 1",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Image_of_2024_Bonwire_Kente_Festival_13.jpg",
+   "w": 2016,
+   "h": 1512,
+   "desc": "Demonstrating vibrant colors and rich tradition as we celebrate the beauty of KENTE.",
+   "slug": "image-of-2024-bonwire-kente-festival-13",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Interior of the Cathedral Basilica of Our Lady of Seven Sorrows (Navrongo, Ghana 2019).jpg": {
+   "artist": "Sucram Yef",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Interior_of_the_Cathedral_Basilica_of_Our_Lady_of_Seven_Sorrows_(Navrongo,_Ghana_2019).jpg",
+   "w": 5184,
+   "h": 3888,
+   "desc": "en.wikipedia.org/wiki/Cathedral_Basilica_of_Our_Lady_of_S... Orig. filename: \"DSC06689.JPG\"",
+   "slug": "interior-of-the-cathedral-basilica-of-our-lady-of-seven-sorr",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "James Town Beach.jpg": {
+   "artist": "Fkoku",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:James_Town_Beach.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "James Town Beach",
+   "slug": "james-town-beach",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Just beautiful Lake Bosomtwe.jpg": {
+   "artist": "Kradolferp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Just_beautiful_Lake_Bosomtwe.jpg",
+   "w": 7360,
+   "h": 4912,
+   "desc": "Breathtaking reflection",
+   "slug": "just-beautiful-lake-bosomtwe",
+   "size": [
+    1600,
+    1068
+   ]
+  },
+  "Kejetia-Markt.jpg": {
+   "artist": "Afus199620",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File:Kejetia-Markt.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "Blick auf den Kejetia-Markt",
+   "slug": "kejetia-markt",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Kente Kumasi 2010-06-30.jpg": {
+   "artist": "Adam Jones",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kente_Kumasi_2010-06-30.jpg",
+   "w": 3456,
+   "h": 2304,
+   "desc": "Original caption: \"Kente (Batik) Cloth in Market - Kumasi - Ghana\" Ankara textiles (Batik textiles) (no Kente) on the Kejetia Market in Kumasi, Ashanti Region, Ghana",
+   "slug": "kente-kumasi-2010-06-30",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Kintempo Water Falls II.jpg": {
+   "artist": "Sean Moran",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kintempo_Water_Falls_II.jpg",
+   "w": 2848,
+   "h": 4288,
+   "desc": "Kintempo Water Falls II",
+   "slug": "kintempo-water-falls-ii",
+   "size": [
+    1063,
+    1600
+   ]
+  },
+  "Kliens Valley.jpg": {
+   "artist": "Bobmarleyfocus",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kliens_Valley.jpg",
+   "w": 4208,
+   "h": 3120,
+   "desc": "An area view of a spring sited in Kenyasi in the Ashanti Region of Ghana"
+  },
+  "Koczkodan liberyjski.jpg": {
+   "artist": "Nero2022",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Koczkodan_liberyjski.jpg",
+   "w": 4656,
+   "h": 3492,
+   "desc": "Koczkodan liberyjski",
+   "slug": "koczkodan-liberyjski",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Kofi Annan statue at Sirigu pottery and art.jpg": {
+   "artist": "Issahiddris",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kofi_Annan_statue_at_Sirigu_pottery_and_art.jpg",
+   "w": 2976,
+   "h": 3968,
+   "desc": "This is an image with the theme \"Home + Habitat in Africa\" from:",
+   "slug": "kofi-annan-statue-at-sirigu-pottery-and-art",
+   "size": [
+    1200,
+    1600
+   ]
+  },
+  "Kronum Kumasi 2018-11-08 (130246).jpg": {
+   "artist": "Maven Egote",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kronum_Kumasi_2018-11-08_(130246).jpg",
+   "w": 4608,
+   "h": 3456,
+   "desc": "Beautiful sky of Kronum in Kumasi, Ghana.",
+   "slug": "kronum-kumasi-2018-11-08-130246",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Kumasi Market.jpg": {
+   "artist": "Lattitude Canada",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kumasi_Market.jpg",
+   "w": 2048,
+   "h": 1536,
+   "desc": "Kumasi Market",
+   "slug": "kumasi-market",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Kwame Nkrumah Memorial Park.jpg": {
+   "artist": "Erik B. Anderson",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kwame_Nkrumah_Memorial_Park.jpg",
+   "w": 961,
+   "h": 671,
+   "desc": "I took this photo of Kwame Nkrumah Memorial Park in 1995, while visiting as a college student from West Chester University of Pennsylvania. Our guide told us it was meant to look like a tree stump to signify \"A big tree ",
+   "slug": "kwame-nkrumah-memorial-park",
+   "size": [
+    961,
+    671
+   ]
+  },
+  "Lake Bosumtwi1, Ghana.jpg": {
+   "artist": "Stig Nygaard from Copenhagen, Denmark",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lake_Bosumtwi1,_Ghana.jpg",
+   "w": 2560,
+   "h": 1680,
+   "desc": "Lake Bosumtwi, Ghana",
+   "slug": "lake-bosumtwi1-ghana",
+   "size": [
+    1600,
+    1050
+   ]
+  },
+  "Lake Bosumtwi2, Ghana.jpg": {
+   "artist": "Stig Nygaard from Copenhagen, Denmark",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lake_Bosumtwi2,_Ghana.jpg",
+   "w": 2560,
+   "h": 1920,
+   "desc": "View from the hotel located at Lake Bosumtwi. The lake is in a big crater created by a meteor. I had no idea we were this close to the lake.",
+   "slug": "lake-bosumtwi2-ghana",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Landscape view on the Afadjato Mountain.jpg": {
+   "artist": "Treysam",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Landscape_view_on_the_Afadjato_Mountain.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "Landscape view on the Afadjato Mountain",
+   "slug": "landscape-view-on-the-afadjato-mountain",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Larabanga Mosque Ghana.jpg": {
+   "artist": "Sathyan Velumani",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Larabanga_Mosque_Ghana.jpg",
+   "w": 2194,
+   "h": 1457,
+   "desc": "This is a photo of Ghana's material cultural heritage number",
+   "slug": "larabanga-mosque-ghana",
+   "size": [
+    1600,
+    1063
+   ]
+  },
+  "Larabanga Mosque05.jpg": {
+   "artist": "Haruna Mohammed",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "page": "https://commons.wikimedia.org/wiki/File:Larabanga_Mosque05.jpg",
+   "w": 1600,
+   "h": 1200,
+   "desc": "The Famous Larabanga Mosque The Larabanga mosque is one of the oldest mosques in West Africa and is the oldest mosque in Ghana. Story of the Larabanga Mosque After Ndewura Jakpa died, and Ibrahim decided to remain in the",
+   "slug": "larabanga-mosque05",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Local canoe transportation service at Dambai.jpg": {
+   "artist": "Mykojo",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Local_canoe_transportation_service_at_Dambai.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "",
+   "slug": "local-canoe-transportation-service-at-dambai",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Maison traditionnelle Yendi, Ghana.JPG": {
+   "artist": "Rtevels",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Maison_traditionnelle_Yendi,_Ghana.JPG",
+   "w": 3264,
+   "h": 2448,
+   "desc": "Traditional house in Yendi city centre, Northern Region, Ghana",
+   "slug": "maison-traditionnelle-yendi-ghana",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Makola Market, Accra, Ghana.jpg": {
+   "artist": "Nii Adama Armah",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Makola_Market,_Accra,_Ghana.jpg",
+   "w": 1080,
+   "h": 608,
+   "desc": "Makola Market, Accra, Ghana",
+   "slug": "makola-market-accra-ghana",
+   "size": [
+    1080,
+    608
+   ]
+  },
+  "Manhyia Palace Museum.jpg": {
+   "artist": "Nkansahrexford",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Manhyia_Palace_Museum.jpg",
+   "w": 720,
+   "h": 480,
+   "desc": "Manhyia palace in Kumasi, Asanteman",
+   "slug": "manhyia-palace-museum",
+   "size": [
+    720,
+    480
+   ]
+  },
+  "Market in Tamale Northern Ghana.jpg": {
+   "artist": "Ibn Shiraz",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Market_in_Tamale_Northern_Ghana.jpg",
+   "w": 4928,
+   "h": 3264,
+   "desc": "Market in Tamale Northern Ghana",
+   "slug": "market-in-tamale-northern-ghana",
+   "size": [
+    1600,
+    1060
+   ]
+  },
+  "Methodist church ghana.jpg": {
+   "artist": "Goldenwabbit",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Methodist_church_ghana.jpg",
+   "w": 4444,
+   "h": 2497,
+   "desc": "Ntique Building Methodist church"
+  },
+  "Mim lake1.jpg": {
+   "artist": "Boadu Emma",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mim_lake1.jpg",
+   "w": 4592,
+   "h": 2016,
+   "desc": "Mim Lake",
+   "slug": "mim-lake1",
+   "size": [
+    1600,
+    703
+   ]
+  },
+  "Modern market hall of Kejetia market.jpg": {
+   "artist": "Afus199620",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File:Modern_market_hall_of_Kejetia_market.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "New market building of Kejetia market In Kumasi",
+   "slug": "modern-market-hall-of-kejetia-market",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Mognori eco village 1.jpg": {
+   "artist": "Shahadusadik",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mognori_eco_village_1.jpg",
+   "w": 1040,
+   "h": 780,
+   "desc": "Dagbani Wikimedians at Mognori eco village For wiki Loves Earth 2021 photo walks in Ghana.",
+   "slug": "mognori-eco-village-1",
+   "size": [
+    1040,
+    780
+   ]
+  },
+  "Mole National Park, Mole Village (P1100345-Pano-2).jpg": {
+   "artist": "Matti Blume",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File:Mole_National_Park,_Mole_Village_(P1100345-Pano-2).jpg",
+   "w": 8121,
+   "h": 4781,
+   "desc": "NOTE: This image is a panorama of Mole National Park consisting of multiple frames that were merged or stitched in Lightroom using a cylindric projection. As a result, this image necessarily underwent some form of digita",
+   "slug": "mole-national-park-mole-village-p1100345-pano-2",
+   "size": [
+    1600,
+    942
+   ]
+  },
+  "Mole National Park, West Gonja (P1100403).jpg": {
+   "artist": "Matti Blume",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File:Mole_National_Park,_West_Gonja_(P1100403).jpg",
+   "w": 4608,
+   "h": 3456,
+   "desc": "Three elephants bathing in Mole National Park, Northern Ghana",
+   "slug": "mole-national-park-west-gonja-p1100403",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Mole National Park, West Gonja (P1100486).jpg": {
+   "artist": "Matti Blume",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File:Mole_National_Park,_West_Gonja_(P1100486).jpg",
+   "w": 4608,
+   "h": 3456,
+   "desc": "Warthog in Mole National Park",
+   "slug": "mole-national-park-west-gonja-p1100486",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Molly Ann Matteson Ghana Photo.jpg": {
+   "artist": "Molly Ann Matteosn",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Molly_Ann_Matteson_Ghana_Photo.jpg",
+   "w": 960,
+   "h": 532,
+   "desc": "An evening motorcycle riding lesson for Sakina by her husband, Malik in a remote village in the Sefwi region of Ghana. Akua and Ama, two local children chase the moto as it moves across the village field.",
+   "slug": "molly-ann-matteson-ghana-photo",
+   "size": [
+    960,
+    532
+   ]
+  },
+  "Monument to Kofi Annan inside of the Sirigu Women's Pottery Association (Upper East Region, Ghana 2019).jpg": {
+   "artist": "Sucram Yef",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Monument_to_Kofi_Annan_inside_of_the_Sirigu_Women%27s_Pottery_Association_(Upper_East_Region,_Ghana_2019).jpg",
+   "w": 5184,
+   "h": 3888,
+   "desc": "Orig. filename: \"DSC06451.JPG\"",
+   "slug": "monument-to-kofi-annan-inside-of-the-sirigu-women-s-pottery-",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Mountain beside Bui Lake.jpg": {
+   "artist": "Knowledge and philosophy",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mountain_beside_Bui_Lake.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "A nice mountain view from the Bui Lake",
+   "slug": "mountain-beside-bui-lake",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Mud and thatch house.JPG": {
+   "artist": "ZSM",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Mud_and_thatch_house.JPG",
+   "w": 1340,
+   "h": 893,
+   "desc": "Traditional round mud and thatch houses forming a family compound in Northern Ghana, near Tamale.",
+   "slug": "mud-and-thatch-house",
+   "size": [
+    1280,
+    853
+   ]
+  },
+  "Nakpanduri cliffs.jpg": {
+   "artist": "Hugues",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nakpanduri_cliffs.jpg",
+   "w": 2592,
+   "h": 1944,
+   "desc": "Cliffs near Nakpanduri, Ghana.",
+   "slug": "nakpanduri-cliffs",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Nakpanduri cliffs1.jpg": {
+   "artist": "Hugues",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nakpanduri_cliffs1.jpg",
+   "w": 2592,
+   "h": 1944,
+   "desc": "Cliffs near Nakpanduri, Ghana.",
+   "slug": "nakpanduri-cliffs1",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Nakpanduri sunset.jpg": {
+   "artist": "Hugues",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nakpanduri_sunset.jpg",
+   "w": 2592,
+   "h": 1944,
+   "desc": "Sunset near Nakpanduri, Ghana",
+   "slug": "nakpanduri-sunset",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Nakpanduri village center.jpg": {
+   "artist": "Hugues , c.hug",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nakpanduri_village_center.jpg",
+   "w": 2592,
+   "h": 1944,
+   "desc": "Village center of Nakpanduri, Northern Ghana",
+   "slug": "nakpanduri-village-center",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Nalerigu dam.jpg": {
+   "artist": "Wumbeidoo",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nalerigu_dam.jpg",
+   "w": 4160,
+   "h": 3120,
+   "desc": "Mogli",
+   "slug": "nalerigu-dam",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "National Mosque of Ghana exterior night view.jpg": {
+   "artist": "Warmglow",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:National_Mosque_of_Ghana_exterior_night_view.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "Night photo of the national mosque of Ghana",
+   "slug": "national-mosque-of-ghana-exterior-night-view",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Nzulezo 11 - Ghana.jpg": {
+   "artist": "Joy Agyepong",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nzulezo_11_-_Ghana.jpg",
+   "w": 6032,
+   "h": 4012,
+   "desc": "An image of a town and its landscape on water in the western part of Ghana.",
+   "slug": "nzulezo-11-ghana",
+   "size": [
+    1600,
+    1064
+   ]
+  },
+  "Nzulezo village 4.jpg": {
+   "artist": "KwesiRaul",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nzulezo_village_4.jpg",
+   "w": 6240,
+   "h": 4160,
+   "desc": "This is an image with the theme \"Home + Habitat in Africa\" from:",
+   "slug": "nzulezo-village-4",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Nzulezo village 5.jpg": {
+   "artist": "KwesiRaul",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nzulezo_village_5.jpg",
+   "w": 6240,
+   "h": 4160,
+   "desc": "This is an image with the theme \"Home + Habitat in Africa\" from:",
+   "slug": "nzulezo-village-5",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Old Navrongo Catholic Cathedral.jpg": {
+   "artist": "Kwameghana",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_Navrongo_Catholic_Cathedral.jpg",
+   "w": 5714,
+   "h": 3828,
+   "desc": "This is a photo of Ghana's material cultural heritage number",
+   "slug": "old-navrongo-catholic-cathedral",
+   "size": [
+    1600,
+    1072
+   ]
+  },
+  "Our building structures.jpg": {
+   "artist": "Jamiyu019",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Our_building_structures.jpg",
+   "w": 3936,
+   "h": 2624,
+   "desc": "This is an image with the theme \"Play\" from: Ghana"
+  },
+  "Paga Crocodile Restaurant.jpg": {
+   "artist": "Dieu-Donn\u00e9 Gameli",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Paga_Crocodile_Restaurant.jpg",
+   "w": 2048,
+   "h": 1536,
+   "desc": "Paga crocodile restaurant is very close to the crocodile pond and is a good place for food while \"tripping\" around Paga.",
+   "slug": "paga-crocodile-restaurant",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Palace Pillas (2).jpg": {
+   "artist": "DeanClericuzio",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Palace_Pillas_(2).jpg",
+   "w": 2304,
+   "h": 1536,
+   "desc": "This is a photo of Ghana's material cultural heritage number",
+   "slug": "palace-pillas-2",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Places1-1200x674.jpg": {
+   "artist": "Amoat7",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Places1-1200x674.jpg",
+   "w": 1200,
+   "h": 674,
+   "desc": "DCIM\\100MEDIA"
+  },
+  "Presbyterian Church in 1960 Ghana.jpg": {
+   "artist": "Amuzujoe",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Presbyterian_Church_in_1960_Ghana.jpg",
+   "w": 6016,
+   "h": 4016,
+   "desc": "Presbyterian church blessed in the year 1960 in Ghana around on the Techiman road",
+   "slug": "presbyterian-church-in-1960-ghana",
+   "size": [
+    1600,
+    1068
+   ]
+  },
+  "Residential houses in Secondi Takoradi \u0320 2.jpg": {
+   "artist": "Kwameghana",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Residential_houses_in_Secondi_Takoradi_%CC%A0_2.jpg",
+   "w": 5911,
+   "h": 3798,
+   "desc": "This is an image with the theme \"Home + Habitat in Africa\" from:",
+   "slug": "residential-houses-in-secondi-takoradi-2",
+   "size": [
+    1600,
+    1028
+   ]
+  },
+  "Road, Tamale.jpg": {
+   "artist": "ARC - The Alliance of Religions and Conservation",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Road,_Tamale.jpg",
+   "w": 4000,
+   "h": 3000,
+   "desc": "Road in Tamale, Northern Region.",
+   "slug": "road-tamale",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Rocks in Buoyem.jpg": {
+   "artist": "Muniruwoods",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Rocks_in_Buoyem.jpg",
+   "w": 5472,
+   "h": 3078,
+   "desc": "This is a photo of a natural African rock found in Buoyem Bono East Region",
+   "slug": "rocks-in-buoyem",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  "Salaga Slave Tree - panoramio.jpg": {
+   "artist": "Gonzo Gooner",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Salaga_Slave_Tree_-_panoramio.jpg",
+   "w": 2592,
+   "h": 1944,
+   "desc": "Salaga Slave Tree",
+   "slug": "salaga-slave-tree-panoramio",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Scenery at Hans Cottage Botel - Near Cape Coast - Ghana (4737835257).jpg": {
+   "artist": "Adam Jones from Kelowna, BC, Canada",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Scenery_at_Hans_Cottage_Botel_-_Near_Cape_Coast_-_Ghana_(4737835257).jpg",
+   "w": 3456,
+   "h": 2304,
+   "desc": "Scenery at Hans Cottage Botel - Near Cape Coast - Ghana",
+   "slug": "scenery-at-hans-cottage-botel-near-cape-coast-ghana-47378352",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Shores of Keta Lagoon.JPG": {
+   "artist": "Akiwumi",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Shores_of_Keta_Lagoon.JPG",
+   "w": 4288,
+   "h": 3216,
+   "desc": "Keta Lagoon tourist centres are at Kedzikope and Keta",
+   "slug": "shores-of-keta-lagoon",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Side view of the Gambaga escarpment in northeast of Ghana 07.jpg": {
+   "artist": "Sir Amugi",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Side_view_of_the_Gambaga_escarpment_in_northeast_of_Ghana_07.jpg",
+   "w": 3024,
+   "h": 4032,
+   "desc": "Side view of the Gambaga escarpment in northeast of Ghana",
+   "slug": "side-view-of-the-gambaga-escarpment-in-northeast-of-ghana-07",
+   "size": [
+    1200,
+    1600
+   ]
+  },
+  "Small Waterfall at Kyabobo National Park.jpg": {
+   "artist": "Sean Moran",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Small_Waterfall_at_Kyabobo_National_Park.jpg",
+   "w": 2848,
+   "h": 4288,
+   "desc": "",
+   "slug": "small-waterfall-at-kyabobo-national-park",
+   "size": [
+    1063,
+    1600
+   ]
+  },
+  "Solnedgang p\u00e5 Labadi beach.jpg": {
+   "artist": "Stig Nygaard from Copenhagen, Denmark",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Solnedgang_p%C3%A5_Labadi_beach.jpg",
+   "w": 2592,
+   "h": 1944,
+   "desc": "Beach at sunset in Accra GhanaSolnedgang p\u00e5 Labadi beach",
+   "slug": "solnedgang-pa-labadi-beach",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Spillway of Akosombo dam.jpg": {
+   "artist": "ZSM",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Spillway_of_Akosombo_dam.jpg",
+   "w": 3648,
+   "h": 2432,
+   "desc": "One of two spillways of Akosombo dam with 6 floodgates in Ghana",
+   "slug": "spillway-of-akosombo-dam",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Stage one of the Kintampo Waterfall in Ghana.jpg": {
+   "artist": "Treysam",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Stage_one_of_the_Kintampo_Waterfall_in_Ghana.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "Stage one of the Kintampo Waterfall in Ghana.",
+   "slug": "stage-one-of-the-kintampo-waterfall-in-ghana",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Street Outside Makola Market, Accra, Ghana.JPG": {
+   "artist": "Benggriff",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Street_Outside_Makola_Market,_Accra,_Ghana.JPG",
+   "w": 5184,
+   "h": 3456,
+   "desc": "Street Outside Makola Market, Accra, Ghana",
+   "slug": "street-outside-makola-market-accra-ghana",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Strommasten Ankasa WR 2014 B003.jpg": {
+   "artist": "Francesco Veronesi",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Strommasten_Ankasa_WR_2014_B003.jpg",
+   "w": 1140,
+   "h": 851,
+   "desc": "Electricity pylons, which run through the Ankasa Conservation Area (near Mpataba, Western Region, Ghana)"
+  },
+  "Sumbrungu Painted Building in Bolgatanga, northern Ghana.jpg": {
+   "artist": "Founderstories",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sumbrungu_Painted_Building_in_Bolgatanga,_northern_Ghana.jpg",
+   "w": 1536,
+   "h": 2048,
+   "desc": "A black and white geometric pattern has been painted on the outside of this small structure in Bolgatanga, a town in northern Ghana, close to the border with Burkina Faso.",
+   "slug": "sumbrungu-painted-building-in-bolgatanga-northern-ghana",
+   "size": [
+    1200,
+    1600
+   ]
+  },
+  "Sunset in Bolgatanga.jpg": {
+   "artist": "Mark Kwasi Ahumah Smith",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sunset_in_Bolgatanga.jpg",
+   "w": 5184,
+   "h": 3456,
+   "desc": "Enjoy the sunset in Bolgatanga",
+   "slug": "sunset-in-bolgatanga",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Sunyani Township.jpg": {
+   "artist": "Gyanford",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sunyani_Township.jpg",
+   "w": 4608,
+   "h": 3456,
+   "desc": "Sunyani Township from Cocoa House roundabout to SNNIT roundabout.",
+   "slug": "sunyani-township",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Surfers Surfing at Busua Beach in Western region, Ghana.jpg": {
+   "artist": "Michal Vogt",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Surfers_Surfing_at_Busua_Beach_in_Western_region,_Ghana.jpg",
+   "w": 1024,
+   "h": 768,
+   "desc": "Surfers Surfing at Busua Beach in Western region, Ghana.",
+   "slug": "surfers-surfing-at-busua-beach-in-western-region-ghana",
+   "size": [
+    1024,
+    768
+   ]
+  },
+  "Tafi Atome Monkey Sanctuary.jpg": {
+   "artist": "Selorm18",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tafi_Atome_Monkey_Sanctuary.jpg",
+   "w": 1173,
+   "h": 1142,
+   "desc": "Mona Monkey in Tafi Atome Monkey Sanctuary, Ghana.",
+   "slug": "tafi-atome-monkey-sanctuary",
+   "size": [
+    1173,
+    1142
+   ]
+  },
+  "Tamale Market, Ghana.jpg": {
+   "artist": "Ibn Shiraz",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tamale_Market,_Ghana.jpg",
+   "w": 4928,
+   "h": 3264,
+   "desc": "Tamale Market, Ghana",
+   "slug": "tamale-market-ghana",
+   "size": [
+    1600,
+    1060
+   ]
+  },
+  "Tamale central Mosque.jpg": {
+   "artist": "Samaru Samaru",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tamale_central_Mosque.jpg",
+   "w": 3840,
+   "h": 2160,
+   "desc": "One of the biggest Mosque in Tamale",
+   "slug": "tamale-central-mosque",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  "Tano Offin Forest Reserve Asante Region.jpg": {
+   "artist": "Ellis Lomotey",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tano_Offin_Forest_Reserve_Asante_Region.jpg",
+   "w": 5184,
+   "h": 3456,
+   "desc": "Tano Offin Forest Reserve situated between Kumasi\u2013Wiowso\u2013Tepa and Kumasi\u2013Bibiani roads Atwima District of the Ashanti Region.",
+   "slug": "tano-offin-forest-reserve-asante-region",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Tano Offin Forest Reserve.jpg": {
+   "artist": "Ellis Lomotey",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tano_Offin_Forest_Reserve.jpg",
+   "w": 5184,
+   "h": 3456,
+   "desc": "Tano Offin Forest Reserve situated between Kumasi\u2013Wiowso\u2013Tepa and Kumasi\u2013Bibiani roads Atwima District of the Ashanti Region."
+  },
+  "Techiman Hollyfamily Roundabout.jpg": {
+   "artist": "Muniruwoods",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Techiman_Hollyfamily_Roundabout.jpg",
+   "w": 5472,
+   "h": 3078,
+   "desc": "Techiman Hollyfamily Roundabout",
+   "slug": "techiman-hollyfamily-roundabout",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  "The Aerial View of Accra, the capital town of Ghana.jpg": {
+   "artist": "JOSEPH WEMAKOR",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Aerial_View_of_Accra,_the_capital_town_of_Ghana.jpg",
+   "w": 1040,
+   "h": 780,
+   "desc": "I took this picture standing on a tall building just to see the beauty of Accra, the capital town of my beloved country, Ghana",
+   "slug": "the-aerial-view-of-accra-the-capital-town-of-ghana",
+   "size": [
+    1040,
+    780
+   ]
+  },
+  "The Wechiau Hippopotamus Sanctuary.jpg": {
+   "artist": "Kradolferp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:The_Wechiau_Hippopotamus_Sanctuary.jpg",
+   "w": 2400,
+   "h": 1446,
+   "desc": "The sanctuary stretches along 40 km of the eastern bank of the Black Volta River",
+   "slug": "the-wechiau-hippopotamus-sanctuary",
+   "size": [
+    1600,
+    964
+   ]
+  },
+  "The White Volta 03.jpg": {
+   "artist": "Tahiru Rajab",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:The_White_Volta_03.jpg",
+   "w": 4160,
+   "h": 3120,
+   "desc": "The White Volta Inside Gambaga Escarpment In The North East Region Of Ghana",
+   "slug": "the-white-volta-03",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Tongo Hills.jpg": {
+   "artist": "Uridl01",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tongo_Hills.jpg",
+   "w": 4618,
+   "h": 3464,
+   "desc": "Tongo Hills from the West Side",
+   "slug": "tongo-hills",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Tongo hills 002.jpg": {
+   "artist": "Shahadusadik",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tongo_hills_002.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "This is a a beautiful view at Tongo hills",
+   "slug": "tongo-hills-002",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Top view of Kintampo waterfalls.jpg": {
+   "artist": "Knowledge and philosophy",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Top_view_of_Kintampo_waterfalls.jpg",
+   "w": 2560,
+   "h": 1828,
+   "desc": "A drone like view of Kintampo waterfalls",
+   "slug": "top-view-of-kintampo-waterfalls",
+   "size": [
+    1600,
+    1143
+   ]
+  },
+  "Umbrella Rock at Boti Falls 2.jpg": {
+   "artist": "Nkansahrexford",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Umbrella_Rock_at_Boti_Falls_2.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "The Umbrella Rock, Boti Falls",
+   "slug": "umbrella-rock-at-boti-falls-2",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Umbrella Rock at Boti Falls.jpg": {
+   "artist": "Nkansahrexford",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Umbrella_Rock_at_Boti_Falls.jpg",
+   "w": 6000,
+   "h": 4000,
+   "desc": "The Umbrella Rock at the Boti Waterfalls",
+   "slug": "umbrella-rock-at-boti-falls",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Vehicles and people awaiting the arrival of the ferry to travel across river Oti at Dambai.jpg": {
+   "artist": "Mykojo",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Vehicles_and_people_awaiting_the_arrival_of_the_ferry_to_travel_across_river_Oti_at_Dambai.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "",
+   "slug": "vehicles-and-people-awaiting-the-arrival-of-the-ferry-to-tra",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "View over Kejetia Market - Largest in West Africa - Kumasi - Ghana - 01 (4755555789).jpg": {
+   "artist": "Adam Jones from Kelowna, BC, Canada",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:View_over_Kejetia_Market_-_Largest_in_West_Africa_-_Kumasi_-_Ghana_-_01_(4755555789).jpg",
+   "w": 3456,
+   "h": 2304,
+   "desc": "View over Kejetia Market - Largest in West Africa - Kumasi - Ghana - 01",
+   "slug": "view-over-kejetia-market-largest-in-west-africa-kumasi-ghana",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "View over Town from Fort Victoria - Cape Coast - Ghana (4737799143).jpg": {
+   "artist": "Adam Jones from Kelowna, BC, Canada",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:View_over_Town_from_Fort_Victoria_-_Cape_Coast_-_Ghana_(4737799143).jpg",
+   "w": 3456,
+   "h": 2304,
+   "desc": "View over Town from Fort Victoria - Cape Coast - Ghana",
+   "slug": "view-over-town-from-fort-victoria-cape-coast-ghana-473779914",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Volta Lake at Yeji.jpg": {
+   "artist": "Shellback Richan",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Volta_Lake_at_Yeji.jpg",
+   "w": 4096,
+   "h": 3072,
+   "desc": "Volta Lake at Yeji in the Pru East District of the Bono East Region.",
+   "slug": "volta-lake-at-yeji",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Volta, Asuogyaman (P1090981).jpg": {
+   "artist": "Matti Blume",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File:Volta,_Asuogyaman_(P1090981).jpg",
+   "w": 4608,
+   "h": 3456,
+   "desc": "View from Adomi Bridge",
+   "slug": "volta-asuogyaman-p1090981",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Wa Market - panoramio.jpg": {
+   "artist": "Rogier Want",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wa_Market_-_panoramio.jpg",
+   "w": 3264,
+   "h": 2448,
+   "desc": "Wa Market",
+   "slug": "wa-market-panoramio",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "WaGhana.jpg": {
+   "artist": "Francis Irving Francis Irving",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "page": "https://commons.wikimedia.org/wiki/File:WaGhana.jpg",
+   "w": 1280,
+   "h": 960,
+   "desc": "View of Wa in Upper West Region of Ghana, taken from mosque tower",
+   "slug": "waghana",
+   "size": [
+    960,
+    720
+   ]
+  },
+  "Washerwomen Ghana.jpg": {
+   "artist": "John Mauremootoo from Bristol, UK",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Washerwomen_Ghana.jpg",
+   "w": 3488,
+   "h": 2616,
+   "desc": "Group of ladies walking back to their village along the Oti Arm of the Volta River, Ghana"
+  },
+  "Wli Falls Ghana.jpg": {
+   "artist": "Mike Norton",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Wli_Falls_Ghana.jpg",
+   "w": 3072,
+   "h": 4608,
+   "desc": "Ghana",
+   "slug": "wli-falls-ghana",
+   "size": [
+    1067,
+    1600
+   ]
+  },
+  "Yendi, Ghana.JPG": {
+   "artist": "Rtevels",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Yendi,_Ghana.JPG",
+   "w": 3264,
+   "h": 2448,
+   "desc": "This picture is a view of the Bimbila-Gushiegu road taken in the centre of the city of Yendi (Northern Region, Ghana).",
+   "slug": "yendi-ghana",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Young Men with Pirogues in Harbour - Near Busua - Ghana (4738454856).jpg": {
+   "artist": "Adam Jones from Kelowna, BC, Canada",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Young_Men_with_Pirogues_in_Harbour_-_Near_Busua_-_Ghana_(4738454856).jpg",
+   "w": 3456,
+   "h": 2304,
+   "desc": "Young Men with Pirogues in Harbour - Near Busua - Ghana",
+   "slug": "young-men-with-pirogues-in-harbour-near-busua-ghana-47384548",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  "Ankasa Conservation 1.jpg": {
+   "artist": "SAgbley",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Ankasa_Conservation_1.jpg",
+   "w": 6032,
+   "h": 4012,
+   "desc": "Ankasa Conservation Aerial view",
+   "slug": "ankasa-conservation-1",
+   "size": [
+    1600,
+    1064
+   ]
+  }
+ },
+ "leads": {
+  "greater-accra": "A drone footage of Accra central, Ghana.jpg",
+  "ashanti": "View over Kejetia Market - Largest in West Africa - Kumasi - Ghana - 01 (4755555789).jpg",
+  "eastern": "Adomi Bridge at Atimpoku.JPG"
+ }
+}

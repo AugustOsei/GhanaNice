@@ -1994,6 +1994,76 @@ window.GHANA_MEDIA = {
   ]
  },
  "places": {
+  "ahafo|Goaso": {
+   "wiki": "https://en.wikipedia.org/wiki/Goaso"
+  },
+  "ahafo|Kenyasi": {
+   "wiki": "https://en.wikipedia.org/wiki/Kenyasi"
+  },
+  "ahafo|Mim": {
+   "photo": "mim-lake1",
+   "wiki": "https://en.wikipedia.org/wiki/Mim%2C_Ahafo"
+  },
+  "ashanti|Bonwire": {
+   "photo": "bonwire-man-weaving",
+   "wiki": "https://en.wikipedia.org/wiki/Bonwire"
+  },
+  "ashanti|Kejetia Market": {
+   "photo": "kejetia-markt",
+   "wiki": "https://en.wikipedia.org/wiki/Kejetia_Market"
+  },
+  "ashanti|Lake Bosomtwe": {
+   "photo": "just-beautiful-lake-bosomtwe",
+   "wiki": "https://en.wikipedia.org/wiki/Lake_Bosumtwi",
+   "guide": "https://visitghana.com/lake-bosomtwe/"
+  },
+  "ashanti|Manhyia Palace Museum": {
+   "photo": "manhyia-palace-museum",
+   "wiki": "https://en.wikipedia.org/wiki/Manhyia_Palace",
+   "guide": "https://visitghana.com/manhyia-palace-museum/",
+   "site": "https://manhyiapalacemuseum.org/"
+  },
+  "ashanti|Ntonso": {
+   "photo": "adinkra-printing",
+   "wiki": "https://en.wikipedia.org/wiki/Ntonso"
+  },
+  "ashanti|The Great Hall, KNUST": {
+   "wiki": "https://en.wikipedia.org/wiki/Kwame_Nkrumah_University_of_Science_and_Technology",
+   "site": "https://www.knust.edu.gh/"
+  },
+  "bono-east|Buoyem Caves": {
+   "photo": "rocks-in-buoyem",
+   "wiki": "https://en.wikipedia.org/wiki/Buoyem"
+  },
+  "bono-east|Fuller Falls": {
+   "guide": "https://visitghana.com/fuller-falls/"
+  },
+  "bono-east|Kintampo Waterfalls": {
+   "wiki": "https://en.wikipedia.org/wiki/Kintampo_waterfalls",
+   "guide": "https://visitghana.com/kintampo-waterfalls/"
+  },
+  "bono-east|Techiman Market": {
+   "wiki": "https://en.wikipedia.org/wiki/Techiman"
+  },
+  "bono|Boabeng-Fiema Monkey Sanctuary": {
+   "wiki": "https://en.wikipedia.org/wiki/Boabeng-Fiema_Monkey_Sanctuary",
+   "site": "https://www.boabengfms.org/"
+  },
+  "bono|Bui National Park": {
+   "photo": "mountain-beside-bui-lake",
+   "wiki": "https://en.wikipedia.org/wiki/Bui_National_Park"
+  },
+  "bono|Sunyani": {
+   "wiki": "https://en.wikipedia.org/wiki/Sunyani"
+  },
+  "central|Assin Manso Ancestral Slave River": {
+   "wiki": "https://en.wikipedia.org/wiki/Assin_Manso_Slave_River_Site",
+   "guide": "https://visitghana.com/assin-manso-slave-river/"
+  },
+  "central|Cape Coast Castle": {
+   "wiki": "https://en.wikipedia.org/wiki/Cape_Coast_Castle",
+   "guide": "https://visitghana.com/cape-coast-castle/"
+  },
   "central|Elmina Castle": {
    "photo": "elmina-castle-ghana",
    "wiki": "https://en.wikipedia.org/wiki/Elmina_Castle",
@@ -2002,49 +2072,93 @@ window.GHANA_MEDIA = {
   "central|Hans Cottage Botel": {
    "photo": "scenery-at-hans-cottage-botel-near-cape-coast-ghana-47378352"
   },
-  "upper-west|Wa Naa's Palace": {
-   "wiki": "https://en.wikipedia.org/wiki/Wa_Naa%27s_Palace"
+  "central|Kakum National Park": {
+   "photo": "canopy-walk-of-kakum-national-park-2",
+   "wiki": "https://en.wikipedia.org/wiki/Kakum_National_Park",
+   "guide": "https://visitghana.com/kakum-national-park/"
   },
-  "upper-east|Paga Crocodile Pond": {
-   "wiki": "https://en.wikipedia.org/wiki/Paga_Crocodile_Pond"
+  "eastern|Aburi Botanical Gardens": {
+   "photo": "aburi-garden-2",
+   "wiki": "https://en.wikipedia.org/wiki/Aburi_Botanical_Gardens"
   },
-  "ahafo|Mim": {
-   "photo": "mim-lake1",
-   "wiki": "https://en.wikipedia.org/wiki/Mim%2C_Ahafo"
-  },
-  "north-east|Nakpanduri": {
-   "photo": "nakpanduri-cliffs",
-   "wiki": "https://en.wikipedia.org/wiki/Nakpanduri"
-  },
-  "volta|Wli Falls": {
-   "wiki": "https://en.wikipedia.org/wiki/Wli_waterfalls",
-   "guide": "https://visitghana.com/wli-waterfalls/"
-  },
-  "savannah|Mognori Eco Village": {
-   "photo": "mognori-eco-village-1"
+  "eastern|Akosombo Dam": {
+   "wiki": "https://en.wikipedia.org/wiki/Akosombo_Dam"
   },
   "eastern|Boti Falls": {
    "photo": "boti-falls-eastern-region",
    "wiki": "https://en.wikipedia.org/wiki/Boti_Falls",
    "guide": "https://visitghana.com/boti-falls/"
   },
-  "upper-east|Sirigu": {
-   "photo": "monument-to-kofi-annan-inside-of-the-sirigu-women-s-pottery-"
+  "eastern|Bunso Arboretum": {
+   "wiki": "https://en.wikipedia.org/wiki/Bunso_Eco_Park",
+   "guide": "https://visitghana.com/bunso-eco-park/"
+  },
+  "eastern|Umbrella Rock": {
+   "photo": "umbrella-rock-at-boti-falls-2"
+  },
+  "greater-accra|Jamestown": {
+   "photo": "james-town-beach",
+   "wiki": "https://en.wikipedia.org/wiki/Jamestown/Usshertown%2C_Accra"
+  },
+  "greater-accra|Kwame Nkrumah Memorial Park": {
+   "photo": "ghana-accra",
+   "wiki": "https://en.wikipedia.org/wiki/Kwame_Nkrumah_Memorial_Park",
+   "guide": "https://visitghana.com/kwame-nkrumah-memorial-park/"
   },
   "greater-accra|Labadi Beach": {
    "photo": "solnedgang-pa-labadi-beach",
    "wiki": "https://en.wikipedia.org/wiki/Labadi_Beach"
   },
-  "western|Busua Beach": {
-   "wiki": "https://en.wikipedia.org/wiki/Busua"
+  "greater-accra|Makola Market": {
+   "photo": "street-outside-makola-market-accra-ghana",
+   "wiki": "https://en.wikipedia.org/wiki/Makola%2C_Ghana"
   },
-  "eastern|Bunso Arboretum": {
-   "wiki": "https://en.wikipedia.org/wiki/Bunso_Eco_Park",
-   "guide": "https://visitghana.com/bunso-eco-park/"
+  "greater-accra|Osu": {
+   "photo": "audience-watching-live-band-music-at-kona-bar",
+   "wiki": "https://en.wikipedia.org/wiki/Osu%2C_Accra"
   },
-  "western|Cape Three Points": {
-   "photo": "dsc01739-15318781703",
-   "wiki": "https://en.wikipedia.org/wiki/Cape_Three_Points"
+  "north-east|Gambaga Escarpment": {
+   "photo": "side-view-of-the-gambaga-escarpment-in-northeast-of-ghana-07"
+  },
+  "north-east|Naa Jaringa Wall, Gambaga": {
+   "wiki": "https://en.wikipedia.org/wiki/Gambaga"
+  },
+  "north-east|Nakpanduri": {
+   "photo": "nakpanduri-cliffs",
+   "wiki": "https://en.wikipedia.org/wiki/Nakpanduri"
+  },
+  "north-east|Nalerigu": {
+   "wiki": "https://en.wikipedia.org/wiki/Nalerigu"
+  },
+  "northern|Gbewaa Palace, Yendi": {
+   "photo": "gbewaa-palace-in-yendi",
+   "wiki": "https://en.wikipedia.org/wiki/Gbewaa_Palace"
+  },
+  "northern|Tamale Central Market": {
+   "photo": "tamale-market-ghana"
+  },
+  "oti|Kyabobo National Park": {
+   "photo": "a-path-through-the-kyabobo-hills",
+   "wiki": "https://en.wikipedia.org/wiki/Kyabobo_National_Park",
+   "guide": "https://visitghana.com/kyabobo-national-park/"
+  },
+  "oti|Lake Volta at Dambai": {
+   "wiki": "https://en.wikipedia.org/wiki/Dambai"
+  },
+  "oti|Nkwanta": {
+   "wiki": "https://en.wikipedia.org/wiki/Nkwanta"
+  },
+  "savannah|Larabanga Mosque": {
+   "wiki": "https://en.wikipedia.org/wiki/Larabanga_Mosque",
+   "guide": "https://visitghana.com/larabanga-mosque/"
+  },
+  "savannah|Mognori Eco Village": {
+   "photo": "mognori-eco-village-1"
+  },
+  "savannah|Mole National Park": {
+   "wiki": "https://en.wikipedia.org/wiki/Mole_National_Park",
+   "guide": "https://visitghana.com/mole-national-park/",
+   "site": "https://www.molenationalpark.org/"
   },
   "savannah|Salaga": {
    "photo": "salaga-slave-tree-panoramio",
@@ -2053,80 +2167,54 @@ window.GHANA_MEDIA = {
   "upper-east|Navrongo Cathedral": {
    "photo": "old-navrongo-catholic-cathedral"
   },
-  "ashanti|Ntonso": {
-   "photo": "adinkra-printing",
-   "wiki": "https://en.wikipedia.org/wiki/Ntonso"
+  "upper-east|Paga Crocodile Pond": {
+   "wiki": "https://en.wikipedia.org/wiki/Paga_Crocodile_Pond"
   },
-  "bono|Sunyani": {
-   "wiki": "https://en.wikipedia.org/wiki/Sunyani"
+  "upper-east|Sirigu": {
+   "photo": "monument-to-kofi-annan-inside-of-the-sirigu-women-s-pottery-"
   },
-  "savannah|Larabanga Mosque": {
-   "wiki": "https://en.wikipedia.org/wiki/Larabanga_Mosque",
-   "guide": "https://visitghana.com/larabanga-mosque/"
-  },
-  "volta|Keta Lagoon": {
-   "photo": "shores-of-keta-lagoon",
-   "wiki": "https://en.wikipedia.org/wiki/Keta_Lagoon"
-  },
-  "volta|Amedzofe": {
-   "photo": "a-view-of-amedzope-town-from-mounitain-gemi",
-   "wiki": "https://en.wikipedia.org/wiki/Amedzofe%2C_Ghana"
-  },
-  "western|Ankasa Conservation Area": {
-   "photo": "ankasa-conservation-1",
-   "wiki": "https://en.wikipedia.org/wiki/Ankasa_Conservation_Area"
-  },
-  "eastern|Akosombo Dam": {
-   "wiki": "https://en.wikipedia.org/wiki/Akosombo_Dam"
-  },
-  "oti|Lake Volta at Dambai": {
-   "wiki": "https://en.wikipedia.org/wiki/Dambai"
-  },
-  "north-east|Nalerigu": {
-   "wiki": "https://en.wikipedia.org/wiki/Nalerigu"
-  },
-  "north-east|Naa Jaringa Wall, Gambaga": {
-   "wiki": "https://en.wikipedia.org/wiki/Gambaga"
-  },
-  "western-north|Bia National Park": {
-   "wiki": "https://en.wikipedia.org/wiki/Bia_National_Park",
-   "guide": "https://visitghana.com/bia-national-park/"
+  "upper-east|Tongo Hills and Tengzug": {
+   "photo": "tongo-hills",
+   "wiki": "https://en.wikipedia.org/wiki/Tongo_Hills"
   },
   "upper-west|Gwollu Defence Wall": {
    "photo": "gwollu-slave-trade-defence-wall-in-upper-east-region-of-ghan",
    "wiki": "https://en.wikipedia.org/wiki/Gwollu"
   },
-  "ashanti|Kejetia Market": {
-   "photo": "kejetia-markt",
-   "wiki": "https://en.wikipedia.org/wiki/Kejetia_Market"
+  "upper-west|Nandom": {
+   "wiki": "https://en.wikipedia.org/wiki/Nandom"
   },
-  "eastern|Aburi Botanical Gardens": {
-   "photo": "aburi-garden-2",
-   "wiki": "https://en.wikipedia.org/wiki/Aburi_Botanical_Gardens"
+  "upper-west|Wa Naa's Palace": {
+   "wiki": "https://en.wikipedia.org/wiki/Wa_Naa%27s_Palace"
   },
-  "bono|Bui National Park": {
-   "photo": "mountain-beside-bui-lake",
-   "wiki": "https://en.wikipedia.org/wiki/Bui_National_Park"
+  "upper-west|Wechiau Community Hippo Sanctuary": {
+   "photo": "the-wechiau-hippopotamus-sanctuary",
+   "wiki": "https://en.wikipedia.org/wiki/Wechiau_Community_Hippo_Sanctuary"
   },
-  "greater-accra|Jamestown": {
-   "photo": "james-town-beach",
-   "wiki": "https://en.wikipedia.org/wiki/Jamestown/Usshertown%2C_Accra"
+  "volta|Amedzofe": {
+   "photo": "a-view-of-amedzope-town-from-mounitain-gemi",
+   "wiki": "https://en.wikipedia.org/wiki/Amedzofe%2C_Ghana"
   },
-  "north-east|Gambaga Escarpment": {
-   "photo": "side-view-of-the-gambaga-escarpment-in-northeast-of-ghana-07"
+  "volta|Keta Lagoon": {
+   "photo": "shores-of-keta-lagoon",
+   "wiki": "https://en.wikipedia.org/wiki/Keta_Lagoon"
+  },
+  "volta|Mount Afadja": {
+   "photo": "a-view-from-the-summit",
+   "wiki": "https://en.wikipedia.org/wiki/Mount_Afadja"
   },
   "volta|Tafi Atome Monkey Sanctuary": {
    "photo": "tafi-atome-monkey-sanctuary",
    "wiki": "https://en.wikipedia.org/wiki/Tafi_Atome_Monkey_Sanctuary",
    "guide": "https://visitghana.com/tafi-atome-monkey-sanctuary/"
   },
-  "bono|Boabeng-Fiema Monkey Sanctuary": {
-   "wiki": "https://en.wikipedia.org/wiki/Boabeng-Fiema_Monkey_Sanctuary",
-   "site": "https://www.boabengfms.org/"
+  "volta|Wli Falls": {
+   "wiki": "https://en.wikipedia.org/wiki/Wli_waterfalls",
+   "guide": "https://visitghana.com/wli-waterfalls/"
   },
-  "central|Cape Coast Castle": {
-   "wiki": "https://en.wikipedia.org/wiki/Cape_Coast_Castle",
-   "guide": "https://visitghana.com/cape-coast-castle/"
+  "western-north|Bia National Park": {
+   "wiki": "https://en.wikipedia.org/wiki/Bia_National_Park",
+   "guide": "https://visitghana.com/bia-national-park/"
   },
   "western-north|Cocoa country": {
    "photo": "20151118-osec-unk-2935-23904959686"
@@ -2134,112 +2222,24 @@ window.GHANA_MEDIA = {
   "western-north|Sefwi Wiawso": {
    "photo": "goaso-to-kumasi"
   },
-  "greater-accra|Osu": {
-   "photo": "audience-watching-live-band-music-at-kona-bar",
-   "wiki": "https://en.wikipedia.org/wiki/Osu%2C_Accra"
+  "western|Ankasa Conservation Area": {
+   "photo": "ankasa-conservation-1",
+   "wiki": "https://en.wikipedia.org/wiki/Ankasa_Conservation_Area"
   },
-  "bono-east|Kintampo Waterfalls": {
-   "wiki": "https://en.wikipedia.org/wiki/Kintampo_waterfalls",
-   "guide": "https://visitghana.com/kintampo-waterfalls/"
+  "western|Busua Beach": {
+   "wiki": "https://en.wikipedia.org/wiki/Busua"
   },
-  "ashanti|Manhyia Palace Museum": {
-   "photo": "manhyia-palace-museum",
-   "wiki": "https://en.wikipedia.org/wiki/Manhyia_Palace",
-   "guide": "https://visitghana.com/manhyia-palace-museum/",
-   "site": "https://manhyiapalacemuseum.org/"
-  },
-  "bono-east|Fuller Falls": {
-   "guide": "https://visitghana.com/fuller-falls/"
-  },
-  "ashanti|The Great Hall, KNUST": {
-   "wiki": "https://en.wikipedia.org/wiki/Kwame_Nkrumah_University_of_Science_and_Technology",
-   "site": "https://www.knust.edu.gh/"
-  },
-  "greater-accra|Makola Market": {
-   "photo": "street-outside-makola-market-accra-ghana",
-   "wiki": "https://en.wikipedia.org/wiki/Makola%2C_Ghana"
-  },
-  "northern|Gbewaa Palace, Yendi": {
-   "photo": "gbewaa-palace-in-yendi",
-   "wiki": "https://en.wikipedia.org/wiki/Gbewaa_Palace"
-  },
-  "bono-east|Techiman Market": {
-   "wiki": "https://en.wikipedia.org/wiki/Techiman"
-  },
-  "northern|Tamale Central Market": {
-   "photo": "tamale-market-ghana"
-  },
-  "ahafo|Kenyasi": {
-   "wiki": "https://en.wikipedia.org/wiki/Kenyasi"
-  },
-  "upper-east|Tongo Hills and Tengzug": {
-   "photo": "tongo-hills",
-   "wiki": "https://en.wikipedia.org/wiki/Tongo_Hills"
-  },
-  "upper-west|Wechiau Community Hippo Sanctuary": {
-   "photo": "the-wechiau-hippopotamus-sanctuary",
-   "wiki": "https://en.wikipedia.org/wiki/Wechiau_Community_Hippo_Sanctuary"
-  },
-  "central|Kakum National Park": {
-   "photo": "canopy-walk-of-kakum-national-park-2",
-   "wiki": "https://en.wikipedia.org/wiki/Kakum_National_Park",
-   "guide": "https://visitghana.com/kakum-national-park/"
-  },
-  "central|Assin Manso Ancestral Slave River": {
-   "wiki": "https://en.wikipedia.org/wiki/Assin_Manso_Slave_River_Site",
-   "guide": "https://visitghana.com/assin-manso-slave-river/"
-  },
-  "savannah|Mole National Park": {
-   "wiki": "https://en.wikipedia.org/wiki/Mole_National_Park",
-   "guide": "https://visitghana.com/mole-national-park/",
-   "site": "https://www.molenationalpark.org/"
-  },
-  "ahafo|Goaso": {
-   "wiki": "https://en.wikipedia.org/wiki/Goaso"
-  },
-  "upper-west|Nandom": {
-   "wiki": "https://en.wikipedia.org/wiki/Nandom"
-  },
-  "ashanti|Bonwire": {
-   "photo": "bonwire-man-weaving",
-   "wiki": "https://en.wikipedia.org/wiki/Bonwire"
-  },
-  "bono-east|Buoyem Caves": {
-   "photo": "rocks-in-buoyem",
-   "wiki": "https://en.wikipedia.org/wiki/Buoyem"
-  },
-  "western|Nzulezu": {
-   "wiki": "https://en.wikipedia.org/wiki/Nzulezo",
-   "guide": "https://visitghana.com/nzulezu-stilt-village/"
-  },
-  "greater-accra|Kwame Nkrumah Memorial Park": {
-   "photo": "ghana-accra",
-   "wiki": "https://en.wikipedia.org/wiki/Kwame_Nkrumah_Memorial_Park",
-   "guide": "https://visitghana.com/kwame-nkrumah-memorial-park/"
-  },
-  "eastern|Umbrella Rock": {
-   "photo": "umbrella-rock-at-boti-falls-2"
-  },
-  "volta|Mount Afadja": {
-   "photo": "a-view-from-the-summit",
-   "wiki": "https://en.wikipedia.org/wiki/Mount_Afadja"
-  },
-  "oti|Kyabobo National Park": {
-   "photo": "a-path-through-the-kyabobo-hills",
-   "wiki": "https://en.wikipedia.org/wiki/Kyabobo_National_Park",
-   "guide": "https://visitghana.com/kyabobo-national-park/"
-  },
-  "oti|Nkwanta": {
-   "wiki": "https://en.wikipedia.org/wiki/Nkwanta"
-  },
-  "ashanti|Lake Bosomtwe": {
-   "photo": "just-beautiful-lake-bosomtwe",
-   "wiki": "https://en.wikipedia.org/wiki/Lake_Bosumtwi",
-   "guide": "https://visitghana.com/lake-bosomtwe/"
+  "western|Cape Three Points": {
+   "photo": "dsc01739-15318781703",
+   "wiki": "https://en.wikipedia.org/wiki/Cape_Three_Points"
   },
   "western|Fort San Antonio, Axim": {
    "wiki": "https://en.wikipedia.org/wiki/Fort_Saint_Anthony",
    "guide": "https://visitghana.com/fort-st-anthony/"
+  },
+  "western|Nzulezu": {
+   "wiki": "https://en.wikipedia.org/wiki/Nzulezo",
+   "guide": "https://visitghana.com/nzulezu-stilt-village/"
   }
  },
  "local": {

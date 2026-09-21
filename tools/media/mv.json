@@ -1,0 +1,50 @@
+{
+ "kumasi-zoo": {
+  "file": "A picture of a camel at the kumasi zoo.jpg",
+  "author": "David Nii Quaye",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:A_picture_of_a_camel_at_the_kumasi_zoo.jpg",
+  "desc": "A camel"
+ },
+ "accra-zoo": {
+  "file": "A lion in an enclosure at the Achimota Zoo.jpg",
+  "author": "Mawuenam Abla Senunyeme",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:A_lion_in_an_enclosure_at_the_Achimota_Zoo.jpg",
+  "desc": "A beautiful lion, kept at an enclosure at the Achimota Zoo"
+ },
+ "shai-hills": {
+  "file": "Shai Hills, Shai-Osudoku (P1100106).jpg",
+  "author": "Matti Blume",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Shai_Hills,_Shai-Osudoku_(P1100106).jpg",
+  "desc": "Shai Hills Resource Reserve"
+ },
+ "bunso": {
+  "file": "Bunso Canopy walkway.jpg",
+  "author": "Roland Darko",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bunso_Canopy_walkway.jpg",
+  "desc": "This is an image from"
+ },
+ "manhyia": {
+  "file": "Manhyia Palace Museum (Kumasi, Ghana 2017).jpg",
+  "author": "Dan Sloan",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Manhyia_Palace_Museum_(Kumasi,_Ghana_2017).jpg",
+  "desc": "Manhyia Palace Museum built by the British to be the King's residence after the British had destroyed the original palace in the Third Anglo-Ashanti W"
+ },
+ "nkrumah": {
+  "file": "Front View of Kwame Nkrumah's Mausoleum and Memorial in Accra Ghana, May 2008.jpg",
+  "author": "Emkamau",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Front_View_of_Kwame_Nkrumah%27s_Mausoleum_and_Memorial_in_Accra_Ghana,_May_2008.jpg",
+  "desc": "Front View of Kwame Nkrumah's Mausoleum and Memorial in Accra Ghana, May 2008"
+ }
+}
