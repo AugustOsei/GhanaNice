@@ -247,13 +247,85 @@ window.GHANA_REGIONS = [
   }
 ];
 
-/* Submitted tips live in this browser only. Both the landing page and the region pages
-   read and write the same key, so a place you add shows up on its region's page. */
+/* Tips go to the n8n intake webhook when one is configured (config.js), which thanks the
+   sender by email, enriches the place and publishes it to its region's directory.
+   A copy is always kept in this browser — without the email address — so the sender sees
+   their tip on the wall straight away while it waits for review. */
 window.GhanaTips = {
   KEY: 'ghananice:tips:v1',
+  config() {
+    return window.GHANANICE_CONFIG || {};
+  },
+  isLive() {
+    return !!this.config().tipEndpoint;
+  },
+  /* Reads the shared tip form fields on either page into the payload n8n expects. */
+  fromForm(form, fallbackRegion) {
+    const data = new FormData(form);
+    const text = name => String(data.get(name) || '').trim();
+    const regions = window.GHANA_REGIONS || [];
+    const regionSlug = text('region') || fallbackRegion || '';
+    const region = regions.find(r => r.slug === regionSlug);
+    return {
+      id: crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`,
+      submittedAt: new Date().toISOString(),
+      place: text('place'),
+      location: text('location'),
+      kind: text('kind') || 'Place',
+      regionSlug,
+      regionName: region?.name || '',
+      note: text('note'),
+      /* A link to a photo the sender took, used only with their say-so and credited to them. */
+      photoUrl: /^https?:\/\//.test(text('photoUrl')) ? text('photoUrl') : '',
+      photoConsent: data.get('photoConsent') === 'yes',
+      submitter: {
+        name: text('name'),
+        email: text('email').toLowerCase(),
+        credit: data.get('credit') === 'yes'
+      },
+      source: location.pathname.split('/').pop() || 'index.html',
+      pageUrl: location.href,
+      /* Honeypot: people never see this field, form-filling bots do. */
+      website: text('website')
+    };
+  },
+  async submit(tip) {
+    const { submitter, website, ...rest } = tip;
+    const localCopy = { ...rest, submitterName: submitter.credit ? submitter.name.split(/\s+/)[0] : '', status: 'pending' };
+    if (website) return { ok: true, live: false };
+    if (!this.isLive()) {
+      return { ok: this.add(localCopy), live: false };
+    }
+    const response = await fetch(this.config().tipEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(tip)
+    });
+    if (!response.ok) throw new Error(`Tip endpoint answered ${response.status}`);
+    this.add(localCopy);
+    return { ok: true, live: true };
+  },
+  /* Published directory entries for one region, or [] when no directory is configured. */
+  async directory(slug) {
+    const endpoint = this.config().directoryEndpoint;
+    if (!endpoint) return [];
+    const url = new URL(endpoint, location.href);
+    url.searchParams.set('region', slug);
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`Directory endpoint answered ${response.status}`);
+    const body = await response.json();
+    return Array.isArray(body) ? body : (body.items || []);
+  },
   all() {
     try { return JSON.parse(localStorage.getItem(this.KEY) || '[]'); }
     catch { return []; }
+  },
+  /* Says plainly on the form when nothing leaves the browser. */
+  labelForms() {
+    if (this.isLive()) return;
+    document.querySelectorAll('[data-tip-note]').forEach(note => {
+      note.textContent = 'Preview mode: tips aren’t being sent anywhere yet. Yours is saved in this browser only, so you can see it appear.';
+    });
   },
   forRegion(slug) {
     return this.all().filter(tip => tip.regionSlug === slug);

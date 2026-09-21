@@ -7,14 +7,14 @@
   <meta name="theme-color" content="#f1eee5">
   <title>A region — GhanaNice</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f5c842'/%3E%3Cpath d='M32 9l5.6 14.8 15.8.8-12.3 9.9 4.1 15.3L32 41.2 18.8 50l4.1-15.3-12.3-9.9 15.8-.8z' fill='%2310100f'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="stylesheet" href="styles.css?v=18">
 </head>
 <body class="region-page">
   <a class="skip-link" href="#region-main">Skip to the places</a>
 
   <nav class="nav is-over-image" aria-label="Primary navigation">
     <a class="wordmark" href="index.html#home" aria-label="GhanaNice home">Ghana<span>Nice</span><i>★</i></a>
-    <p class="nav-place">Made for Ghana <span>05°33′N</span></p>
+    <p class="nav-place">For locals and visitors alike <span>05°33′N</span></p>
     <div class="nav-links" id="nav-links">
       <a href="index.html#regions">All regions</a>
       <a href="index.html#most-visited">Most visited</a>
@@ -26,7 +26,7 @@
   <header class="region-hero">
     <img id="region-hero-image" src="" alt="">
     <div class="region-hero-copy">
-      <a class="region-back" href="index.html#regions">← Back to the deck</a>
+      <a class="region-back" href="index.html#regions">← All 16 regions</a>
       <p class="region-eyebrow" id="region-eyebrow"></p>
       <h1 id="region-name"></h1>
       <p class="region-intro" id="region-intro"></p>
@@ -40,6 +40,32 @@
       <div><span>Go for</span><p id="fact-known"></p></div>
       <div><span>Good to know</span><p id="fact-fact"></p></div>
     </section>
+
+    <section class="region-block region-gallery" id="gallery" aria-labelledby="gallery-heading">
+      <div class="region-block-head">
+        <h2 id="gallery-heading">See it<br><em id="gallery-region">for yourself.</em></h2>
+        <p>Real places in this region, photographed by the people who were there. Every photo is credited. Tap one to see it large. <a href="#region-tip">Got a better one? Share it.</a></p>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+      <details class="gallery-credits">
+        <summary>Photo credits &amp; licences</summary>
+        <ol id="gallery-credits"></ol>
+      </details>
+    </section>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+      <button class="lightbox-close" type="button" data-close aria-label="Close photo">Close ×</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous photo">←</button>
+      <figure>
+        <img id="lightbox-image" alt="">
+        <figcaption>
+          <strong id="lightbox-caption"></strong>
+          <span id="lightbox-credit"></span>
+          <em id="lightbox-count"></em>
+        </figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next photo">→</button>
+    </div>
 
     <section class="region-block" id="visit" aria-labelledby="visit-heading">
       <div class="region-block-head">
@@ -79,9 +105,18 @@
           <label><span>Is it a place or a business?</span><select name="kind"><option value="Place">A place to visit</option><option value="Local business">A local business</option></select></label>
           <label><span>Region</span><select name="region" id="region-select"></select></label>
           <label><span>What made it nice?</span><textarea name="note" rows="2" placeholder="Food? People? Craft? The view?"></textarea></label>
+          <label><span>A photo you took (link)</span><input name="photoUrl" type="url" placeholder="Google Drive, Dropbox, Instagram…"></label>
+          <label class="tip-credit"><input name="photoConsent" type="checkbox" value="yes"> I took this photo and GhanaNice may show it, credited to me</label>
         </details>
+        <fieldset class="tip-from">
+          <legend>Who’s it from?</legend>
+          <label><span>Your name</span><input name="name" type="text" autocomplete="name" placeholder="Ama Mensah" required></label>
+          <label><span>Your email</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+          <label class="tip-credit"><input name="credit" type="checkbox" value="yes" checked> Credit me by first name when it’s listed</label>
+          <label class="tip-trap" aria-hidden="true"><span>Leave this empty</span><input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+        </fieldset>
         <button type="submit">Send the tip <span>↗</span></button>
-        <p class="form-note">Preview only: your tip is saved in this browser so you can see it appear, and goes no further.</p>
+        <p class="form-note" data-tip-note>We’ll email you a thank-you and let you know when it’s listed. Your email is never shown on the site.</p>
         <p class="form-status" id="region-form-status" aria-live="polite"></p>
       </form>
     </section>
@@ -92,15 +127,34 @@
     </nav>
   </main>
 
-  <footer>
-    <a class="wordmark footer-mark" href="index.html#home">Ghana<span>Nice</span><i>★</i></a>
-    <p>Good places are better when they’re shared.</p>
-    <div><a href="index.html#regions">Explore all regions</a><a href="#region-tip">Share a place</a></div>
-    <details><summary>Photography and data</summary><p>Every regional photograph shows a named place inside that region and is used under a Creative Commons licence or as public domain, with the photographer credited per image in the project’s <a href="assets/CREDITS.md">credits file</a>.</p></details>
-    <small>© <span id="year"></span> GhanaNice · Made to help people find the good stuff.</small>
+  <footer class="site-footer">
+    <div class="footer-scene" aria-hidden="true">
+      <img src="assets/footer/volta-engraving.webp" srcset="assets/footer/volta-engraving-1200.webp 1200w, assets/footer/volta-engraving.webp 2400w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      <canvas class="footer-water"></canvas>
+    </div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="wordmark footer-mark" href="index.html#home">Ghana<span>Nice</span><i>★</i></a>
+        <p>Good places are better when they’re shared.</p>
+        <p class="footer-maker">Made by <a href="https://www.linkedin.com/in/augustineosei/" target="_blank" rel="noopener">Augustine Osei</a>. Follow along as I build and write about AI on <a href="https://www.theaugustdispatch.com" target="_blank" rel="noopener">The August Dispatch ↗</a></p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <div><h2>Explore</h2><ul><li><a href="index.html#regions">All 16 regions</a></li><li><a href="index.html#most-visited">Most visited</a></li><li><a href="index.html#share">Places people love</a></li><li><a href="index.html#tip">Share a place</a></li></ul></div>
+        <div><h2>The south</h2><ul><li><a href="region.html?r=greater-accra">Greater Accra</a></li><li><a href="region.html?r=central">Central</a></li><li><a href="region.html?r=western">Western</a></li><li><a href="region.html?r=western-north">Western North</a></li><li><a href="region.html?r=volta">Volta</a></li><li><a href="region.html?r=eastern">Eastern</a></li><li><a href="region.html?r=ashanti">Ashanti</a></li><li><a href="region.html?r=ahafo">Ahafo</a></li></ul></div>
+        <div><h2>The middle &amp; north</h2><ul><li><a href="region.html?r=bono">Bono</a></li><li><a href="region.html?r=bono-east">Bono East</a></li><li><a href="region.html?r=oti">Oti</a></li><li><a href="region.html?r=northern">Northern</a></li><li><a href="region.html?r=savannah">Savannah</a></li><li><a href="region.html?r=north-east">North East</a></li><li><a href="region.html?r=upper-east">Upper East</a></li><li><a href="region.html?r=upper-west">Upper West</a></li></ul></div>
+        <div><h2>About</h2><ul><li><a href="index.html#tip">How tips work</a></li><li><a href="assets/CREDITS.md">Photo credits</a></li><li><a href="https://www.graphic.com.gh/news/general-news/ghana-news-1-31-million-international-tourists-visit-ghana-in-2025-tourism-generates-4-34bn.html" target="_blank" rel="noopener">2025 tourism figures ↗</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <small>© <span id="year"></span> GhanaNice · Made by <a href="https://www.linkedin.com/in/augustineosei/" target="_blank" rel="noopener">Augustine Osei</a></small>
+      <small>The Volta, engraved from a photograph by Celestinesucess · CC BY-SA 4.0</small>
+    </div>
   </footer>
 
-  <script src="data.js?v=1"></script>
-  <script src="region.js?v=1" defer></script>
+  <script src="config.js?v=1"></script>
+  <script src="data.js?v=3"></script>
+  <script src="media.js?v=3"></script>
+  <script src="region.js?v=4" defer></script>
+  <script src="footer.js?v=1" defer></script>
 </body>
 </html>

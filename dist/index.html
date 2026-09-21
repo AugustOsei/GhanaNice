@@ -8,7 +8,7 @@
   <title>GhanaNice — Good places across Ghana</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f5c842'/%3E%3Cpath d='M32 9l5.6 14.8 15.8.8-12.3 9.9 4.1 15.3L32 41.2 18.8 50l4.1-15.3-12.3-9.9 15.8-.8z' fill='%2310100f'/%3E%3C/svg%3E">
   <link rel="preload" as="video" href="assets/real/independence-arch-loop.mp4" type="video/mp4">
-  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="stylesheet" href="styles.css?v=18">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the places</a>
@@ -16,7 +16,7 @@
   <header class="hero" id="home">
     <nav class="nav" aria-label="Primary navigation">
       <a class="wordmark" href="#home" aria-label="GhanaNice home">Ghana<span>Nice</span><i>★</i></a>
-      <p class="nav-place">Made for Ghana <span>05°33′N</span></p>
+      <p class="nav-place">For locals and visitors alike <span>05°33′N</span></p>
       <div class="nav-links" id="nav-links">
         <a href="#regions">Explore regions</a>
         <a href="#most-visited">Most visited</a>
@@ -38,21 +38,20 @@
           <span class="map-scene" style="--image:url('assets/real/accra-seamstress.jpg')"></span>
           <span class="map-scene" style="--image:url('assets/real/larabanga-mosque.jpg')"></span>
           <span class="map-scene" style="--image:url('assets/real/kakum-walkway.jpg')"></span>
-          <span class="map-scene" style="--image:url('assets/real/independence-arch-storm.jpg')"></span>
           <span class="map-scene" style="--image:url('assets/real/independence-arch-illustrated.png')"></span>
         </div>
         <div class="hero-shade" aria-hidden="true"></div>
       </div>
 
       <div class="spin-status" id="spin-status" aria-live="polite">
-        <span>Spinning through Ghana</span><i></i><b id="sequence-name">Jamestown</b><em id="sequence-count">01 / 08</em>
+        <span>Spinning through Ghana</span><i></i><b id="sequence-name">Jamestown</b><em id="sequence-count">01 / 07</em>
       </div>
       <button class="sequence-skip" id="sequence-skip" type="button">Skip the spin</button>
 
       <div class="hero-intro">
         <h1><span>Ghana is</span><strong>nice.</strong></h1>
         <div class="hero-intro-note">
-          <p>Not only the landmarks. The food spots, workshops, trails, coastlines and people you tell a friend about when you get home.</p>
+          <p>Akwaaba — welcome. Explore Ghana’s sixteen regions, from the coast to the savanna: places worth the trip, photos from people who’ve been, and the spots locals love. Found somewhere good? Add it.</p>
           <a href="#regions">Find your way in <span>↓</span></a>
         </div>
       </div>
@@ -63,14 +62,14 @@
     <section class="regions" id="regions" aria-labelledby="regions-heading">
       <div class="regions-sticky">
         <div class="regions-title">
-          <div><p>Ghana, region by region</p><h2 id="regions-heading">Pick a postcard.</h2></div>
-          <p>Sixteen regions, each with its own pace.<br>Scroll to spread the deck. Pick one to look closer.</p>
+          <div><p>Ghana has 16 regions</p><h2 id="regions-heading">Pick a region.</h2></div>
+          <p>Each card is one of Ghana’s sixteen regions. Open one to explore its places, its people and the local businesses worth knowing.</p>
         </div>
-        <div class="region-rail" id="region-rail" aria-label="Postcards from Ghana's sixteen regions"></div>
-        <p class="rail-instruction"><span>Keep scrolling</span><i></i><b>Then pick a postcard</b></p>
+        <div class="region-rail" id="region-rail" aria-label="Ghana's sixteen regions"></div>
+        <p class="rail-instruction"><span>Keep scrolling</span><i></i><b id="rail-hint">Then pick a region to explore</b></p>
 
         <article class="region-reader" id="region-reader" aria-hidden="true" aria-labelledby="reader-title">
-          <button class="reader-close" id="reader-close" type="button" aria-label="Close region details">Back to the deck ×</button>
+          <button class="reader-close" id="reader-close" type="button" aria-label="Close region details">All regions ×</button>
           <div class="reader-copy">
             <p class="reader-region" id="reader-region">Greater Accra Region</p>
             <h2 id="reader-title">Greater Accra</h2>
@@ -93,21 +92,81 @@
     <section class="most-visited" id="most-visited" aria-labelledby="visited-heading">
       <div class="visited-heading">
         <h2 id="visited-heading">The most visited<br><em>places in Ghana.</em></h2>
-        <div><strong>2024</strong><p>Ten attractions that welcomed the country’s biggest recorded crowds.</p></div>
+        <div><strong>2025</strong><p>Ten attractions that drew the country’s biggest recorded crowds last year. Tap a card to see the place.</p></div>
       </div>
-      <ol class="visit-grid" aria-label="Ghana's ten most visited attractions in 2024">
-        <li class="visit-card visit-card-feature"><span>01</span><strong>333,233</strong><h3>Kwame Nkrumah Memorial Park</h3><p>Accra</p></li>
-        <li class="visit-card visit-card-feature"><span>02</span><strong>183,757</strong><h3>Kakum National Park</h3><p>Central Region</p></li>
-        <li class="visit-card visit-card-feature"><span>03</span><strong>155,149</strong><h3>Bunso Arboretum</h3><p>Eastern Region</p></li>
-        <li class="visit-card visit-card-feature"><span>04</span><strong>133,954</strong><h3>Kumasi Zoo</h3><p>Ashanti Region</p></li>
-        <li class="visit-card"><span>05</span><strong>120,242</strong><h3>Cape Coast Castle</h3></li>
-        <li class="visit-card"><span>06</span><strong>106,100</strong><h3>Manhyia Palace Museum</h3></li>
-        <li class="visit-card"><span>07</span><strong>87,691</strong><h3>Elmina Castle</h3></li>
-        <li class="visit-card"><span>08</span><strong>83,953</strong><h3>Accra Zoo</h3></li>
-        <li class="visit-card"><span>09</span><strong>67,881</strong><h3>Shai Hills Resource Reserve</h3></li>
-        <li class="visit-card"><span>10</span><strong>52,330</strong><h3>Aburi Botanical Gardens</h3></li>
+      <ol class="visit-grid" aria-label="Ghana's ten most visited attractions in 2025">
+        <li class="visit-card visit-card-feature flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><span>01</span><strong>302,523</strong><h3>Kwame Nkrumah Memorial Park</h3><p>Accra, Greater Accra</p><i class="flip-hint">Tap to see it ↻</i></div>
+            <figure class="flip-back" aria-hidden="true"><img src="assets/photos/mv-nkrumah.webp" alt="The Nkrumah Mausoleum" loading="lazy"><figcaption><b>The Nkrumah Mausoleum</b><span class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Front_View_of_Kwame_Nkrumah%27s_Mausoleum_and_Memorial_in_Accra_Ghana,_May_2008.jpg" target="_blank" rel="noopener">Emkamau</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener license">CC BY-SA 4.0</a></span></figcaption></figure>
+          </div>
+          <button class="flip-toggle" type="button" aria-pressed="false" aria-label="Show a photo of Kwame Nkrumah Memorial Park">↻</button>
+        </li>
+        <li class="visit-card visit-card-feature flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><span>02</span><strong>203,222</strong><h3>Kakum National Park</h3><p>Central Region</p><i class="flip-hint">Tap to see it ↻</i></div>
+            <figure class="flip-back" aria-hidden="true"><img src="assets/real/kakum-walkway.jpg" alt="The canopy walkway at Kakum" loading="lazy"><figcaption><b>The canopy walkway at Kakum</b><span class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Kakum_National_Park_Hanging_Bridge_Canopy_Walkway.jpg" target="_blank" rel="noopener">Philip Nalangan</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener license">CC BY 4.0</a></span></figcaption></figure>
+          </div>
+          <button class="flip-toggle" type="button" aria-pressed="false" aria-label="Show a photo of Kakum National Park">↻</button>
+        </li>
+        <li class="visit-card visit-card-feature flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><span>03</span><strong>149,319</strong><h3>Bunso Arboretum</h3><p>Eastern Region</p><i class="flip-hint">Tap to see it ↻</i></div>
+            <figure class="flip-back" aria-hidden="true"><img src="assets/photos/mv-bunso.webp" alt="The canopy walkway at Bunso" loading="lazy"><figcaption><b>The canopy walkway at Bunso</b><span class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Bunso_Canopy_walkway.jpg" target="_blank" rel="noopener">Roland Darko</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener license">CC BY-SA 4.0</a></span></figcaption></figure>
+          </div>
+          <button class="flip-toggle" type="button" aria-pressed="false" aria-label="Show a photo of Bunso Arboretum">↻</button>
+        </li>
+        <li class="visit-card visit-card-feature flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><span>04</span><strong>141,523</strong><h3>Cape Coast Castle</h3><p>Central Region</p><i class="flip-hint">Tap to see it ↻</i></div>
+            <figure class="flip-back" aria-hidden="true"><img src="assets/real/cape-coast-castle.jpg" alt="Cape Coast Castle" loading="lazy"><figcaption><b>Cape Coast Castle</b><span class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Cape_Coast_Castle_,_Central_Ghana.jpg" target="_blank" rel="noopener">Jasmine Sackey-Addo</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener license">CC BY-SA 4.0</a></span></figcaption></figure>
+          </div>
+          <button class="flip-toggle" type="button" aria-pressed="false" aria-label="Show a photo of Cape Coast Castle">↻</button>
+        </li>
+        <li class="visit-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><span>05</span><strong>120,328</strong><h3>Manhyia Palace Museum</h3><p>Kumasi, Ashanti</p><i class="flip-hint">Tap to see it ↻</i></div>
+            <figure class="flip-back" aria-hidden="true"><img src="assets/photos/mv-manhyia.webp" alt="Manhyia Palace Museum" loading="lazy"><figcaption><b>Manhyia Palace Museum</b><span class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Manhyia_Palace_Museum_(Kumasi,_Ghana_2017).jpg" target="_blank" rel="noopener">Dan Sloan</a> · <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener license">CC BY-SA 2.0</a></span></figcaption></figure>
+          </div>
+          <button class="flip-toggle" type="button" aria-pressed="false" aria-label="Show a photo of Manhyia Palace Museum">↻</button>
+        </li>
+        <li class="visit-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><span>06</span><strong class="is-rank-only">Top ten</strong><h3>Kumasi Zoo</h3><p>Kumasi, Ashanti</p><i class="flip-hint">Tap to see it ↻</i></div>
+            <figure class="flip-back" aria-hidden="true"><img src="assets/photos/mv-kumasi-zoo.webp" alt="A camel at Kumasi Zoo" loading="lazy"><figcaption><b>A camel at Kumasi Zoo</b><span class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:A_picture_of_a_camel_at_the_kumasi_zoo.jpg" target="_blank" rel="noopener">David Nii Quaye</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener license">CC BY-SA 4.0</a></span></figcaption></figure>
+          </div>
+          <button class="flip-toggle" type="button" aria-pressed="false" aria-label="Show a photo of Kumasi Zoo">↻</button>
+        </li>
+        <li class="visit-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><span>07</span><strong class="is-rank-only">Top ten</strong><h3>Accra Zoo</h3><p>Achimota, Greater Accra</p><i class="flip-hint">Tap to see it ↻</i></div>
+            <figure class="flip-back" aria-hidden="true"><img src="assets/photos/mv-accra-zoo.webp" alt="A lion at the Accra Zoo, Achimota" loading="lazy"><figcaption><b>A lion at the Accra Zoo, Achimota</b><span class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:A_lion_in_an_enclosure_at_the_Achimota_Zoo.jpg" target="_blank" rel="noopener">Mawuenam Abla Senunyeme</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener license">CC BY-SA 4.0</a></span></figcaption></figure>
+          </div>
+          <button class="flip-toggle" type="button" aria-pressed="false" aria-label="Show a photo of Accra Zoo">↻</button>
+        </li>
+        <li class="visit-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><span>08</span><strong class="is-rank-only">Top ten</strong><h3>Elmina Castle</h3><p>Central Region</p><i class="flip-hint">Tap to see it ↻</i></div>
+            <figure class="flip-back" aria-hidden="true"><img src="assets/photos/elmina-castle-ghana-800.webp" alt="Elmina Castle" loading="lazy"><figcaption><b>Elmina Castle</b><span class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Elmina_Castle_-_Ghana.jpg" target="_blank" rel="noopener">Damien Halleux Radermecker</a> · <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener license">CC BY-SA 2.0</a></span></figcaption></figure>
+          </div>
+          <button class="flip-toggle" type="button" aria-pressed="false" aria-label="Show a photo of Elmina Castle">↻</button>
+        </li>
+        <li class="visit-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><span>09</span><strong class="is-rank-only">Top ten</strong><h3>Shai Hills Resource Reserve</h3><p>Greater Accra</p><i class="flip-hint">Tap to see it ↻</i></div>
+            <figure class="flip-back" aria-hidden="true"><img src="assets/photos/mv-shai-hills.webp" alt="A zebra at Shai Hills" loading="lazy"><figcaption><b>A zebra at Shai Hills</b><span class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Shai_Hills,_Shai-Osudoku_(P1100106).jpg" target="_blank" rel="noopener">Matti Blume</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" rel="noopener license">CC BY-SA 4.0</a></span></figcaption></figure>
+          </div>
+          <button class="flip-toggle" type="button" aria-pressed="false" aria-label="Show a photo of Shai Hills Resource Reserve">↻</button>
+        </li>
+        <li class="visit-card flip-card">
+          <div class="flip-inner">
+            <div class="flip-front"><span>10</span><strong class="is-rank-only">Top ten</strong><h3>Aburi Botanical Gardens</h3><p>Eastern Region</p><i class="flip-hint">Tap to see it ↻</i></div>
+            <figure class="flip-back" aria-hidden="true"><img src="assets/real/regions/eastern-aburi.jpg" alt="Aburi Botanical Gardens" loading="lazy"><figcaption><b>Aburi Botanical Gardens</b><span class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Botanical_Gardens,_Aburi_(P1090818).jpg" target="_blank" rel="noopener">Matti Blume</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener license">CC BY-SA 4.0</a></span></figcaption></figure>
+          </div>
+          <button class="flip-toggle" type="button" aria-pressed="false" aria-label="Show a photo of Aburi Botanical Gardens">↻</button>
+        </li>
       </ol>
-      <p class="visit-source">Visits, not unique visitors. Source: <a href="https://ghana.travel/wp-content/uploads/2025/07/FINAL-2024-tourism-report-final.pdf" target="_blank" rel="noopener">Ghana Tourism Report 2024 ↗</a></p>
+      <p class="visit-source">Visits, not unique visitors. Together the ten drew 1,377,588 visits, 77% of all domestic tourism visits. The published summary gives figures for the top five only; 6–10 are shown in rank order. Source: Ghana Tourism Authority, 2025 Tourism Report, as reported by <a href="https://www.graphic.com.gh/news/general-news/ghana-news-1-31-million-international-tourists-visit-ghana-in-2025-tourism-generates-4-34bn.html" target="_blank" rel="noopener">Graphic Online ↗</a> and <a href="https://thechronicle.com.gh/top-10-most-visited-tourist-sites-in-ghana-in-2025/" target="_blank" rel="noopener">The Chronicle ↗</a></p>
     </section>
 
     <section class="community" id="share" aria-labelledby="share-heading">
@@ -122,7 +181,7 @@
         <a class="place-tile place-tip-trigger" href="#tip"><span>Know somewhere good?</span><strong>Put us on ↘</strong></a>
         <article class="place-tile place-photo" style="--image:url('assets/real/larabanga-mosque.jpg')"><span>Savannah <i class="kind">Place</i></span><h3>Larabanga Mosque</h3><button class="nice-button" type="button" data-count="61" aria-pressed="false">♡ <b>61</b> found it nice</button></article>
         <article class="place-tile place-photo" style="--image:url('assets/real/cape-coast-castle.jpg')"><span>Central <i class="kind">Place</i></span><h3>Cape Coast Castle</h3><button class="nice-button" type="button" data-count="110" aria-pressed="false">♡ <b>110</b> found it nice</button></article>
-        <a class="place-tile place-empty" href="#tip"><span>Restaurant, trail, workshop, beach, barbershop…</span><i>There is room.</i></a>
+        <article class="place-tile place-photo" style="--image:url('assets/photos/boti-falls-ghana-800.webp')"><span>Eastern <i class="kind">Place</i></span><h3>Boti Falls</h3><button class="nice-button" type="button" data-count="72" aria-pressed="false">♡ <b>72</b> found it nice</button></article>
         <article class="place-tile place-photo" style="--image:url('assets/real/jamestown-lighthouse.jpg')"><span>Greater Accra <i class="kind">Place</i></span><h3>Jamestown</h3><button class="nice-button" type="button" data-count="83" aria-pressed="false">♡ <b>83</b> found it nice</button></article>
       </div>
 
@@ -138,24 +197,51 @@
             <label><span>Is it a place or a business?</span><select name="kind"><option value="Place">A place to visit</option><option value="Local business">A local business</option></select></label>
             <label><span>Region, if you know it</span><select name="region"><option value="">We can work it out</option></select></label>
             <label><span>What made it nice?</span><textarea name="note" rows="2" placeholder="Food? People? Craft? The view?"></textarea></label>
+            <label><span>A photo you took (link)</span><input name="photoUrl" type="url" placeholder="Google Drive, Dropbox, Instagram…"></label>
+            <label class="tip-credit"><input name="photoConsent" type="checkbox" value="yes"> I took this photo and GhanaNice may show it, credited to me</label>
           </details>
+          <fieldset class="tip-from">
+            <legend>Who’s it from?</legend>
+            <label><span>Your name</span><input name="name" type="text" autocomplete="name" placeholder="Ama Mensah" required></label>
+            <label><span>Your email</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+            <label class="tip-credit"><input name="credit" type="checkbox" value="yes" checked> Credit me by first name when it’s listed</label>
+            <label class="tip-trap" aria-hidden="true"><span>Leave this empty</span><input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+          </fieldset>
           <button type="submit">Send the tip <span>↗</span></button>
-          <p class="form-note">Preview only: your tip is saved in this browser so you can see it appear, and goes no further.</p>
+          <p class="form-note" data-tip-note>We’ll email you a thank-you and let you know when it’s listed. Your email is never shown on the site.</p>
           <p class="form-status" id="form-status" aria-live="polite"></p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer>
-    <a class="wordmark footer-mark" href="#home">Ghana<span>Nice</span><i>★</i></a>
-    <p>Good places are better when they’re shared.</p>
-    <div><a href="#regions">Explore all regions</a><a href="#share">Share a place</a></div>
-    <details><summary>Photography and data</summary><p>Every regional photograph shows a named place inside that region and is used under a Creative Commons licence or as public domain, with the photographer credited per image in the project’s <a href="assets/CREDITS.md">credits file</a>. The Independence Arch sequence is animated from a still photograph. Visitor figures come from the Ghana Tourism Authority’s 2024 Tourism Report, published in 2025.</p></details>
-    <small>© <span id="year"></span> GhanaNice · Made to help people find the good stuff.</small>
+  <footer class="site-footer">
+    <div class="footer-scene" aria-hidden="true">
+      <img src="assets/footer/volta-engraving.webp" srcset="assets/footer/volta-engraving-1200.webp 1200w, assets/footer/volta-engraving.webp 2400w" sizes="100vw" alt="" loading="lazy" decoding="async">
+      <canvas class="footer-water"></canvas>
+    </div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="wordmark footer-mark" href="#home">Ghana<span>Nice</span><i>★</i></a>
+        <p>Good places are better when they’re shared.</p>
+        <p class="footer-maker">Made by <a href="https://www.linkedin.com/in/augustineosei/" target="_blank" rel="noopener">Augustine Osei</a>. Follow along as I build and write about AI on <a href="https://www.theaugustdispatch.com" target="_blank" rel="noopener">The August Dispatch ↗</a></p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <div><h2>Explore</h2><ul><li><a href="#regions">All 16 regions</a></li><li><a href="#most-visited">Most visited</a></li><li><a href="#share">Places people love</a></li><li><a href="#tip">Share a place</a></li></ul></div>
+        <div><h2>The south</h2><ul><li><a href="region.html?r=greater-accra">Greater Accra</a></li><li><a href="region.html?r=central">Central</a></li><li><a href="region.html?r=western">Western</a></li><li><a href="region.html?r=western-north">Western North</a></li><li><a href="region.html?r=volta">Volta</a></li><li><a href="region.html?r=eastern">Eastern</a></li><li><a href="region.html?r=ashanti">Ashanti</a></li><li><a href="region.html?r=ahafo">Ahafo</a></li></ul></div>
+        <div><h2>The middle &amp; north</h2><ul><li><a href="region.html?r=bono">Bono</a></li><li><a href="region.html?r=bono-east">Bono East</a></li><li><a href="region.html?r=oti">Oti</a></li><li><a href="region.html?r=northern">Northern</a></li><li><a href="region.html?r=savannah">Savannah</a></li><li><a href="region.html?r=north-east">North East</a></li><li><a href="region.html?r=upper-east">Upper East</a></li><li><a href="region.html?r=upper-west">Upper West</a></li></ul></div>
+        <div><h2>About</h2><ul><li><a href="#tip">How tips work</a></li><li><a href="assets/CREDITS.md">Photo credits</a></li><li><a href="https://www.graphic.com.gh/news/general-news/ghana-news-1-31-million-international-tourists-visit-ghana-in-2025-tourism-generates-4-34bn.html" target="_blank" rel="noopener">2025 tourism figures ↗</a></li></ul></div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <small>© <span id="year"></span> GhanaNice · Made by <a href="https://www.linkedin.com/in/augustineosei/" target="_blank" rel="noopener">Augustine Osei</a></small>
+      <small>The Volta, engraved from a photograph by Celestinesucess · CC BY-SA 4.0</small>
+    </div>
   </footer>
 
-  <script src="data.js?v=1"></script>
-  <script src="app.js?v=10" defer></script>
+  <script src="config.js?v=1"></script>
+  <script src="data.js?v=3"></script>
+  <script src="app.js?v=12" defer></script>
+  <script src="footer.js?v=1" defer></script>
 </body>
 </html>

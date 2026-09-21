@@ -23,8 +23,11 @@ const sequenceCount = document.querySelector('#sequence-count');
 const sequenceName = document.querySelector('#sequence-name');
 const spinStatus = document.querySelector('#spin-status');
 const sequenceSkip = document.querySelector('#sequence-skip');
-const sceneNames = ['Jamestown', 'Wli Falls', 'Cape Coast', 'Made in Accra', 'Larabanga', 'Kakum', 'Accra after rain', 'Independence Arch'];
-const spinOrder = [2, 5, 1, 4, 0, 6, 3, 1, 5, 0, 4, 2, 6, 3, 5, 6, 7];
+/* The arch appears exactly once, as the final scene. The old reel also carried a storm-lit
+   copy of the same photograph, so it looked like the last image landed twice. */
+const sceneNames = ['Jamestown', 'Wli Falls', 'Cape Coast', 'Made in Accra', 'Larabanga', 'Kakum', 'Independence Arch'];
+const FINAL_SCENE = sceneNames.length - 1;
+const spinOrder = [2, 5, 1, 4, 0, 3, 1, 5, 0, 4, 2, 3, 5, 0, 2, 4, FINAL_SCENE];
 const spinHolds = [72, 58, 50, 48, 50, 54, 60, 68, 78, 92, 112, 140, 180, 230, 300, 390, 520];
 let spinStep = 0;
 let activeScene = 0;
@@ -43,8 +46,15 @@ function showScene(index, duration = 120) {
   incoming?.classList.add('is-active');
   setTimeout(() => outgoing?.classList.remove('is-leaving'), duration + 40);
   activeScene = index;
-  sequenceCount.textContent = `${String(index + 1).padStart(2, '0')} / 08`;
+  sequenceCount.textContent = `${String(index + 1).padStart(2, '0')} / ${String(sceneNames.length).padStart(2, '0')}`;
   sequenceName.textContent = sceneNames[index];
+}
+
+/* The video's first frame is the final still, so it is started from frame 0 and only
+   revealed once it is actually playing: the hand-off is invisible instead of a jump cut. */
+function revealVideo() {
+  heroWindow.classList.remove('is-sequencing');
+  heroWindow.classList.add('is-settled');
 }
 
 function finishSequence(skip = false) {
@@ -52,16 +62,24 @@ function finishSequence(skip = false) {
   sequenceFinished = true;
   clearTimeout(sceneTimer);
   const settleTime = skip ? 140 : 460;
-  showScene(7, settleTime);
+  showScene(FINAL_SCENE, settleTime);
   setTimeout(() => {
-    heroWindow.classList.remove('is-sequencing');
-    heroWindow.classList.add('is-settled');
     spinStatus.classList.add('is-hidden');
     spinStatus.setAttribute('aria-hidden', 'true');
     sequenceSkip.classList.add('is-hidden');
     sequenceSkip.disabled = true;
-    heroVideo?.play().catch(() => {});
+    if (!heroVideo) return revealVideo();
+    try { heroVideo.currentTime = 0; } catch {}
+    heroVideo.play().then(revealVideo, revealVideo);
   }, settleTime);
+}
+
+/* Browsers pause or drop offscreen video. Resume it whenever the hero comes back. */
+if (heroVideo && 'IntersectionObserver' in window) {
+  new IntersectionObserver(entries => {
+    if (!sequenceFinished || !entries[0].isIntersecting) return;
+    if (heroVideo.paused) heroVideo.play().catch(() => {});
+  }).observe(heroWindow);
 }
 
 function playSequence() {
@@ -76,16 +94,13 @@ function playSequence() {
 }
 
 if (reduced) finishSequence(true);
-else {
-  heroVideo?.play().catch(() => {});
-  sceneTimer = setTimeout(playSequence, 140);
-}
+else sceneTimer = setTimeout(playSequence, 140);
 sequenceSkip?.addEventListener('click', () => finishSequence(true));
 
 const hero = document.querySelector('.hero');
 const heroStage = document.querySelector('.hero-stage');
 const siteNav = document.querySelector('.nav');
-const darkSections = [...document.querySelectorAll('.regions, .most-visited, footer')];
+const darkSections = [...document.querySelectorAll('.regions, .most-visited')];
 let frameRequested = false;
 
 function clamp(number, min = 0, max = 1) {
@@ -96,6 +111,23 @@ function mix(start, end, progress) {
   return start + (end - start) * progress;
 }
 
+/* How wide the Ghana silhouette must be before it covers the whole viewport, as a multiple
+   of viewport height, by aspect ratio. Measured from the outline in ghana-mask.svg. */
+const MASK_COVER = [[.46, .96], [.6, 1.06], [.8, 1.41], [1, 1.59], [1.33, 2.11], [1.6, 2.54], [1.78, 2.79], [2, 3.07], [2.4, 3.64]];
+function maskCoverSize() {
+  const aspect = innerWidth / innerHeight;
+  let factor = MASK_COVER[MASK_COVER.length - 1][1] * aspect / MASK_COVER[MASK_COVER.length - 1][0];
+  for (let i = 0; i < MASK_COVER.length; i++) {
+    const [a, f] = MASK_COVER[i];
+    if (aspect <= a) {
+      const [pa, pf] = MASK_COVER[i - 1] || [0, f];
+      factor = i ? mix(pf, f, (aspect - pa) / (a - pa)) : f;
+      break;
+    }
+  }
+  return innerHeight * factor * 1.04;
+}
+
 function renderHero() {
   let heroUsesLightNav = false;
   if (!reduced && hero && heroStage) {
@@ -104,8 +136,15 @@ function renderHero() {
     const progress = clamp(-heroRect.top / travel);
     const eased = 1 - Math.pow(1 - progress, 3);
     const start = innerWidth < 680 ? innerWidth * .58 : Math.min(innerWidth * .29, 430);
-    const end = Math.max(innerWidth, innerHeight) * 2.2;
-    heroStage.style.setProperty('--mask-size', `${mix(start, end, eased).toFixed(1)}px`);
+    const cover = maskCoverSize();
+    /* Same pacing as before (full cover about three-quarters of the way in), but once the
+       outline covers the screen the mask is removed rather than grown to 4–6000px. A mask
+       that large exceeds the GPU texture limit on big retina displays, and Chrome then
+       drops the video layer and paints the window's navy background in its place. */
+    const size = mix(start, cover / .73, eased);
+    const covered = size >= cover;
+    heroWindow.classList.toggle('is-unmasked', covered);
+    heroStage.style.setProperty('--mask-size', `${Math.min(size, cover).toFixed(1)}px`);
     const reveal = clamp((progress - .42) / .24);
     heroStage.style.setProperty('--copy-opacity', reveal.toFixed(3));
     heroStage.style.setProperty('--copy-y', `${(1 - reveal) * 34}px`);
@@ -147,11 +186,63 @@ regions.forEach((region, index) => {
   card.style.setProperty('--image', `url('${region.image}')`);
   card.style.setProperty('--tone', regionTones[index]);
   card.innerHTML = `<span class="card-no">${String(index + 1).padStart(2, '0')}</span><strong class="card-name">${region.name}</strong><small class="card-note">${region.known}</small><i class="card-arrow">↘</i>`;
-  card.setAttribute('aria-label', `Explore ${region.name}`);
-  card.addEventListener('click', () => openRegion(index, card));
+  card.setAttribute('aria-label', `Explore ${region.name} Region`);
+  card.addEventListener('pointerdown', event => { lastPointerType = event.pointerType; });
+  card.addEventListener('click', event => {
+    /* On touch the cards overlap and there is no hover, so the first tap lifts a card out of
+       the deck to show its name and the second opens it. Mouse and keyboard open at once. */
+    const touch = lastPointerType === 'touch' || lastPointerType === 'pen';
+    lastPointerType = '';
+    if (touch && event.detail !== 0 && liftedCard !== card && selectedRegion === null) {
+      liftCard(card);
+      return;
+    }
+    openRegion(index, card);
+  });
+  card.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse') liftCard(card); });
+  card.addEventListener('pointerleave', event => { if (event.pointerType === 'mouse' && liftedCard === card) liftCard(null); });
+  card.addEventListener('focus', () => { if (card.matches(':focus-visible')) liftCard(card); });
+  card.addEventListener('blur', () => { if (liftedCard === card) liftCard(null); });
   regionRail.append(card);
   regionCards.push(card);
 });
+
+/* Lifting a card brings it to the front and nudges the cards around it aside, like pulling
+   one postcard out of a fanned deck. Positions come from the layout's own --x/--y values. */
+let liftedCard = null;
+let lastPointerType = '';
+function liftCard(target) {
+  if (selectedRegion !== null) target = null;
+  liftedCard = target;
+  regionRail.classList.toggle('has-lift', !!target);
+  const { cardHeight } = regionMetrics();
+  const reach = cardHeight * 1.35;
+  const tx = target ? Number(target.style.getPropertyValue('--x')) : 0;
+  const ty = target ? Number(target.style.getPropertyValue('--y')) : 0;
+  regionCards.forEach(card => {
+    card.classList.toggle('is-lifted', card === target);
+    let px = 0, py = 0;
+    if (target && card !== target) {
+      const dx = Number(card.style.getPropertyValue('--x')) - tx;
+      const dy = Number(card.style.getPropertyValue('--y')) - ty;
+      const distance = Math.hypot(dx, dy) || 1;
+      if (distance < reach) {
+        const push = (1 - distance / reach) * cardHeight * .32;
+        px = dx / distance * push;
+        py = dy / distance * push;
+      }
+    }
+    card.style.setProperty('--push-x', `${px.toFixed(1)}px`);
+    card.style.setProperty('--push-y', `${py.toFixed(1)}px`);
+  });
+}
+/* A tap anywhere outside the deck puts a lifted card back. */
+document.addEventListener('pointerdown', event => {
+  if (liftedCard && !event.target.closest?.('.region-card')) liftCard(null);
+});
+if (matchMedia('(hover: none)').matches) {
+  document.querySelector('#rail-hint').textContent = 'Tap to lift a region · tap again to open';
+}
 
 /* Every dimension is derived from the viewport so the spread deck always fits inside it.
    The previous fixed 139px column gap pushed 8 of 16 cards off a 375px screen. */
@@ -193,6 +284,7 @@ function layoutRegionCards(progress) {
     card.style.setProperty('--r', mix((index % 2 ? 1 : -1) * 6, ((index * 7) % 9) - 4, eased).toFixed(2));
     card.style.zIndex = String(index + 1);
   });
+  if (liftedCard) liftCard(liftedCard);
 }
 
 function layoutRegionStack(activeIndex) {
@@ -230,6 +322,7 @@ function openRegion(index, trigger) {
   const region = regions[index];
   selectedRegion = index;
   lastRegionTrigger = trigger;
+  liftCard(null);
   pinRegionStage();
   regionCards.forEach((card, cardIndex) => card.classList.toggle('is-selected', cardIndex === index));
   regionSection.classList.add('has-selection');
@@ -330,19 +423,27 @@ regions.forEach(region => {
 const placeForm = document.querySelector('#place-form');
 const formStatus = document.querySelector('#form-status');
 const communityWall = document.querySelector('.community-wall');
-placeForm?.addEventListener('submit', event => {
+tipStore.labelForms();
+placeForm?.addEventListener('submit', async event => {
   event.preventDefault();
-  const data = new FormData(placeForm);
-  const place = String(data.get('place') || '').trim();
-  const location = String(data.get('location') || '').trim();
-  const note = String(data.get('note') || '').trim();
-  const kind = String(data.get('kind') || 'Place');
-  const slug = String(data.get('region') || '');
-  const matched = regions.find(region => region.slug === slug);
+  const tip = tipStore.fromForm(placeForm);
+  const { place, location, kind } = tip;
+  const matched = regions.find(region => region.slug === tip.regionSlug);
   if (!place) return;
 
-  /* Saved to this browser so it also appears on that region's own page. */
-  const saved = tipStore.add({ place, location, note, kind, regionSlug: slug, regionName: matched?.name || '' });
+  const submitButton = placeForm.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  formStatus.textContent = 'Sending…';
+  let result;
+  try {
+    result = await tipStore.submit(tip);
+  } catch {
+    formStatus.textContent = 'That didn’t go through. Check your connection and try again — nothing was lost.';
+    submitButton.disabled = false;
+    return;
+  }
+  submitButton.disabled = false;
+  const saved = result.ok;
 
   const tile = document.createElement('article');
   tile.className = 'place-tile';
@@ -364,10 +465,28 @@ placeForm?.addEventListener('submit', event => {
   tile.append(regionLabel, title, niceButton);
   communityWall.prepend(tile);
 
-  formStatus.textContent = matched && saved
-    ? `Thanks — “${place}” is on the wall, and on the ${matched.name} page.`
-    : `Thanks — “${place}” has been added to this preview.`;
+  const firstName = tip.submitter.name.split(/\s+/)[0];
+  formStatus.textContent = result.live
+    ? `Thanks, ${firstName} — “${place}” is in. Check ${tip.submitter.email} for a note from us; we’ll add it to the ${matched ? matched.name : 'right'} region once we’ve looked it up.`
+    : matched && saved
+      ? `Thanks, ${firstName} — “${place}” is on the wall, and on the ${matched.name} page (in this browser).`
+      : `Thanks, ${firstName} — “${place}” has been added to this preview.`;
   placeForm.reset();
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+/* Most-visited flip cards: tap the card (or its ↻ button) to turn it over. Links on the back
+   still work, and the button keeps it keyboard- and screen-reader-operable. */
+document.querySelectorAll('.flip-card').forEach(card => {
+  const toggle = card.querySelector('.flip-toggle');
+  const name = card.querySelector('h3')?.textContent || 'this place';
+  const flip = () => {
+    const flipped = card.classList.toggle('is-flipped');
+    toggle.setAttribute('aria-pressed', String(flipped));
+    toggle.setAttribute('aria-label', flipped ? `Show visitor numbers for ${name}` : `Show a photo of ${name}`);
+    card.querySelector('.flip-back').setAttribute('aria-hidden', String(!flipped));
+  };
+  toggle.addEventListener('click', event => { event.stopPropagation(); flip(); });
+  card.addEventListener('click', event => { if (!event.target.closest('a')) flip(); });
+});
