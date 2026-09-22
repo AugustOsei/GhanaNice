@@ -221,24 +221,32 @@ const communityEmpty = document.querySelector('#community-empty');
    alongside them, marked as waiting for review, until they come back published. */
 let published = [];
 
+/* A published listing's own photo (committed under assets/listings/), else a hosted URL. */
+function listingPhoto(tip) {
+  const small = tip.photos?.[0]?.small || '';
+  if (/^assets\/listings\/[\w-]+\/[\w-]+\.jpg$/.test(small)) return small;
+  return /^https:\/\//.test(tip.photoUrl || '') && tip.photoUrl;
+}
+
 function tipTile(tip, pending) {
   /* Published tips carry a hosted photo; this browser's own pending tips a small thumbnail. */
   const photo = pending
     ? /^data:image\/jpeg;base64,/.test(tip.thumb || '') && tip.thumb
-    : /^https:\/\//.test(tip.photoUrl || '') && tip.photoUrl;
+    : listingPhoto(tip);
   const tile = el('article', photo ? 'place-tile place-photo' : 'place-tile');
   if (photo) tile.style.setProperty('--image', `url("${encodeURI(photo)}")`);
-  const label = el('span', null, tip.location || tip.address || region.name);
-  if (tip.kind || !pending) label.append(el('i', tip.kind === 'Local business' ? 'kind is-business' : 'kind', tip.kind || 'Place'));
+  const label = el('span', null, tip.area || tip.location || tip.address || region.name);
+  if (tip.category || tip.kind || !pending) label.append(el('i', tip.kind === 'Local business' ? 'kind is-business' : 'kind', tip.category || tip.kind || 'Place'));
   if (pending) label.append(el('i', 'kind is-pending', 'Waiting for review'));
   tile.append(label, el('h3', null, tip.place));
   if (tip.rating) {
-    const count = tip.reviewCount ? ` · ${Number(tip.reviewCount).toLocaleString()} Google reviews` : '';
-    tile.append(el('p', 'tile-rating', `★ ${Number(tip.rating).toFixed(1)}${count}`));
+    /* Google's terms: ratings shown without a Google map must say they come from Google. */
+    const count = tip.reviewCount ? ` · ${Number(tip.reviewCount).toLocaleString()} reviews` : '';
+    tile.append(el('p', 'tile-rating', `★ ${Number(tip.rating).toFixed(1)} on Google${count}`));
   }
   if (tip.note) tile.append(el('p', 'tile-note', tip.note));
   if (tip.submitterName) tile.append(el('p', 'tile-credit', `Suggested by ${tip.submitterName}`));
-  const links = [['mapsUrl', 'Map'], ['website', 'Website']].filter(([key]) => /^https?:\/\//.test(tip[key] || ''));
+  const links = [['mapsUrl', 'Map'], ['website', 'Website'], ['phoneUrl', 'Call']].filter(([key]) => /^(https?:\/\/|tel:\+?[\d ]+$)/.test(tip[key] || ''));
   if (links.length) {
     const row = el('p', 'tile-links');
     links.forEach(([key, text]) => {

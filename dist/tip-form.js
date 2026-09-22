@@ -53,9 +53,11 @@
         canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
         return canvas;
       };
-      const blob = await new Promise(resolve => draw(MAX_SIDE).toBlob(resolve, 'image/jpeg', .82));
-      if (!blob) throw new Error('encode');
-      return { blob, url: URL.createObjectURL(blob), thumb: draw(360).toDataURL('image/jpeg', .7) };
+      const encode = side => new Promise(resolve => draw(side).toBlob(resolve, 'image/jpeg', .82));
+      /* The full photo for the lightbox and an 800px copy for cards, so n8n needn't resize. */
+      const [blob, small] = await Promise.all([encode(MAX_SIDE), encode(800)]);
+      if (!blob || !small) throw new Error('encode');
+      return { blob, small, url: URL.createObjectURL(blob), thumb: draw(360).toDataURL('image/jpeg', .7) };
     } finally {
       URL.revokeObjectURL(source);
     }
@@ -329,7 +331,7 @@
       status.textContent = photos.length ? 'Sending your tip and photos…' : 'Sending…';
       let result;
       try {
-        result = await tips.submit(tip, photos.map(photo => photo.blob), localCopy);
+        result = await tips.submit(tip, photos.map(({ blob, small }) => ({ blob, small })), localCopy);
       } catch {
         status.textContent = 'That didn’t go through. Check your connection and try again. Nothing was lost.';
         submit.disabled = false;

@@ -260,23 +260,33 @@ window.GhanaTips = {
     return !!this.config().tipEndpoint;
   },
   /* Sends one tip as multipart form data: the JSON in a `tip` field, and up to three
-     already-shrunk JPEGs as photo1…photo3. See docs/tip-pipeline.md. */
+     already-shrunk JPEGs as photo1…photo3 (1600px) with photo1_small… (800px).
+     See docs/tip-pipeline.md. */
   async submit(tip, photos = [], localCopy = {}) {
     /* Honeypot: people never see this field, form-filling bots do. Pretend it worked. */
     if (tip.website) return { ok: true, live: this.isLive() };
     if (!this.isLive()) return { ok: this.add(localCopy), live: false };
     const body = new FormData();
     body.append('tip', JSON.stringify(tip));
-    photos.forEach((photo, index) => body.append(`photo${index + 1}`, photo, `photo-${index + 1}.jpg`));
+    photos.forEach(({ blob, small }, index) => {
+      body.append(`photo${index + 1}`, blob, `photo-${index + 1}.jpg`);
+      if (small) body.append(`photo${index + 1}_small`, small, `photo-${index + 1}-800.jpg`);
+    });
     const response = await fetch(this.config().tipEndpoint, { method: 'POST', body });
     if (!response.ok) throw new Error(`Tip endpoint answered ${response.status}`);
     this.add(localCopy);
     return { ok: true, live: true };
   },
-  /* Published directory entries for one region, or [] when no directory is configured. */
+  /* Published listings for one region. Approved tips are committed by n8n to
+     data/listings.json and deployed with the site; a directoryEndpoint overrides that. */
   async directory(slug) {
     const endpoint = this.config().directoryEndpoint;
-    if (!endpoint) return [];
+    if (!endpoint) {
+      const response = await fetch('data/listings.json', { cache: 'no-cache' });
+      if (!response.ok) return [];
+      const body = await response.json();
+      return (body.listings || []).filter(item => item.regionSlug === slug);
+    }
     const url = new URL(endpoint, location.href);
     url.searchParams.set('region', slug);
     const response = await fetch(url);
