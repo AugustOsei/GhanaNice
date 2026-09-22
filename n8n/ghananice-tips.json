@@ -525,7 +525,8 @@
      "id": "XSli9zjeTSRhQNLt",
      "name": "Gmail account"
     }
-   }
+   },
+   "onError": "continueRegularOutput"
   },
   {
    "id": "gn-20",
@@ -585,7 +586,8 @@
      "id": "XSli9zjeTSRhQNLt",
      "name": "Gmail account"
     }
-   }
+   },
+   "onError": "continueRegularOutput"
   },
   {
    "id": "gn-22",
@@ -985,7 +987,8 @@
      "id": "XSli9zjeTSRhQNLt",
      "name": "Gmail account"
     }
-   }
+   },
+   "onError": "continueRegularOutput"
   },
   {
    "id": "gn-38",

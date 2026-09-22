@@ -5,3 +5,4 @@ tools/media/thumbs/
 tools/media/info.json
 .env.local
 .env*.local
+__pycache__/

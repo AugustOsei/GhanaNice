@@ -88,8 +88,10 @@ def gmail(name, x, y, to, subject, html, attachments=None):
     options = {'appendAttribution': False, 'senderName': 'GhanaNice'}
     if attachments:
         options['attachmentsUi'] = {'attachmentsBinary': [{'property': attachments}]}
+    # A failed courtesy email must not stop the tip reaching the approval step.
     return add(name, 'n8n-nodes-base.gmail', 2.1, x, y, {
-        'sendTo': to, 'subject': subject, 'emailType': 'html', 'message': html, 'options': options}, credentials=CRED['gmail'])
+        'sendTo': to, 'subject': subject, 'emailType': 'html', 'message': html, 'options': options},
+        credentials=CRED['gmail'], onError='continueRegularOutput')
 
 
 R = "$('Prepare review').first().json"
