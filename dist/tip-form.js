@@ -85,11 +85,9 @@
       <fieldset class="tip-basics">
         <legend class="sr-only">About the place</legend>
         <label class="tip-question">
-          <span class="tip-step" aria-hidden="true">01</span>
           <span class="tip-answer"><span class="tip-question-title">What did you find?</span><input name="kind" type="text" placeholder="A restaurant, beach, gallery…" maxlength="80" required></span>
         </label>
         <div class="tip-question tip-identity">
-          <span class="tip-step" aria-hidden="true">02</span>
           <div class="tip-answer tip-where">
             <label class="tip-place"><span class="tip-question-title">What’s it called?</span><input name="place" type="text" placeholder="e.g. Buka Restaurant" autocomplete="off" maxlength="200" required role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="${id}-list" aria-describedby="${id}-hint"></label>
             <ul class="tip-suggest" id="${id}-list" role="listbox" aria-label="Places found on Google" hidden></ul>
@@ -100,7 +98,6 @@
           </div>
         </div>
         <label class="tip-question tip-location">
-          <span class="tip-step" aria-hidden="true">03</span>
           <span class="tip-answer"><span class="tip-question-title">Where is it?</span><input name="town" type="text" placeholder="e.g. Osu, Accra" maxlength="80" required></span>
         </label>
       </fieldset>

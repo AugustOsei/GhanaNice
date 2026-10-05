@@ -382,10 +382,8 @@ img, video { display: block; max-width: 100%; }
 
 /* Tip form (tip-form.js): three direct opening questions, then photos and context. */
 .tip-form [hidden], .tip-done [hidden] { display: none !important; }
-.tip-basics { margin: 0; padding: 0; border: 0; }
-.tip-question { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 18px; margin: 0; padding: 20px 0 24px; border-top: 1px solid rgba(17,17,15,.45); cursor: text; }
-.tip-question:first-of-type { border-top-width: 2px; }
-.tip-step { padding-top: 5px; font-size: .6rem; font-weight: 800; letter-spacing: .12em; }
+.tip-basics { display: grid; gap: clamp(32px, 4vw, 48px); margin: 0; padding: 0; border: 0; }
+.tip-question { display: block; min-width: 0; margin: 0; padding: 0; border: 0; cursor: text; }
 .tip-answer { display: grid; min-width: 0; }
 .tip-question-title { display: block; margin-bottom: 9px; font-size: .66rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .tip-answer > input, .tip-place input, .tip-map input { width: 100%; min-width: 0; border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: transparent; padding: 0 0 7px; outline: 0; color: var(--red); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.45rem, 2.2vw, 2.3rem); line-height: 1.15; }
@@ -403,7 +401,7 @@ img, video { display: block; max-width: 100%; }
 .tip-pin { width: 9px; height: 9px; border-radius: 50%; background: var(--green); }
 .tip-change, .tip-again { border: 0; border-bottom: 1px solid; background: none; padding: 0 0 3px; color: inherit; cursor: pointer; font-size: .6rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .tip-hint { margin: 12px 0 0; color: #55554f; font-size: .72rem; line-height: 1.45; }
-.tip-map { display: grid; gap: 7px; margin-top: 20px; padding-top: 18px; border-top: 1px dashed rgba(17,17,15,.35); cursor: text; }
+.tip-map { display: grid; gap: 7px; margin-top: 24px; cursor: text; }
 .tip-map > span { font-size: .62rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .tip-map input { font-size: 1rem; }
 .tip-map-note { margin: 9px 0 0; color: var(--green); font-size: .72rem; font-weight: 800; line-height: 1.4; }
@@ -480,7 +478,7 @@ img, video { display: block; max-width: 100%; }
   .community-intro h2 { font-size: 16vw; }
   .tip-copy, .tip-form { padding: 32px 22px; }
   .tip-copy h2 { font-size: 18vw; }
-  .tip-question { grid-template-columns: 30px minmax(0, 1fr); gap: 10px; padding-block: 17px 20px; }
+  .tip-basics { gap: 30px; }
   .tip-answer > input, .tip-place input { font-size: 1.35rem; }
   .tip-from { grid-template-columns: 1fr; }
 }
