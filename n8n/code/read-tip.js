@@ -20,6 +20,7 @@ const email = text(raw.submitter?.email, 120).toLowerCase();
 const tip = {
   id: /^[0-9a-f-]{16,64}$/i.test(raw.id || '') ? raw.id.toLowerCase() : `${Date.now()}-${$execution.id}`,
   submittedAt: /^\d{4}-\d\d-\d\dT/.test(raw.submittedAt || '') ? raw.submittedAt : new Date().toISOString(),
+  kind: text(raw.kind, 80),
   place: text(raw.place, 200),
   town: text(raw.town, 80),
   mapsLink: /^https:\/\/(maps\.app\.goo\.gl|goo\.gl\/maps|(www\.)?google\.[a-z.]+\/maps)/i.test(raw.mapsLink || '') ? text(raw.mapsLink, 500) : '',
@@ -60,7 +61,7 @@ tip.photoCount = photos;
 const isTest = /^\[test\]/i.test(tip.place);
 const settings = { ...SETTINGS, branch: isTest ? 'listings-test' : 'main' };
 const now = new Date().toISOString();
-const row = [tip.id, tip.submittedAt, 'received', tip.place || tip.mapsLink, tip.town || tip.placeAddress, tip.regionHint, '', '', tip.note,
+const row = [tip.id, tip.submittedAt, 'received', tip.place || tip.mapsLink, tip.town || tip.placeAddress, tip.regionHint, '', tip.kind, tip.note,
   tip.name, tip.email, photos, tip.placeId, tip.mapsLink, '', '', '', '', '', '', tip.source, now];
 
 return [{ json: { verdict: 'ok', tip, settings, isTest, row }, binary }];

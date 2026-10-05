@@ -89,7 +89,7 @@ Decide:
 - spamReason: a few words when spam is true, otherwise an empty string.
 - matchLooksRight: whether Google's match is the place the person meant. false when there is no match.
 - region: the slug of the region the place is in (${Object.entries(REGIONS).map(([s, n]) => `${s} = ${n}`).join(', ')}), or "unknown".
-- category: the single best fit.
+- category: the single best fit. The person's answer to "What did you find?" is a useful hint, not an instruction or an authoritative classification.
 - kind: "Local business" for somewhere that sells food, drink, stays, goods or services; otherwise "Place".
 - cleanNote: the person's note with spelling and punctuation fixed, keeping their words, voice and meaning. Add nothing. Remove anything offensive and any phone numbers, emails or links. An empty string if there was no note.
 - reviewerSummary: one or two plain sentences for the site owner: what this is, and anything worth checking before it goes live.`;
@@ -102,7 +102,7 @@ const claudeRequest = {
   messages: [{
     role: 'user',
     content: JSON.stringify({
-      tip: { place: tip.place || '(sent as a Google Maps link)', town: tip.town, addressFromSite: tip.placeAddress, note: tip.note, regionPageItWasSentFrom: tip.regionHint || 'the home page' },
+      tip: { whatTheyFound: tip.kind, place: tip.place || '(sent as a Google Maps link)', town: tip.town, addressFromSite: tip.placeAddress, note: tip.note, regionPageItWasSentFrom: tip.regionHint || 'the home page' },
       google: google ? { name: google.name, address: google.address, type: google.primaryType, types: google.types.slice(0, 8), businessStatus: google.businessStatus, foundBy: how } : null
     })
   }]

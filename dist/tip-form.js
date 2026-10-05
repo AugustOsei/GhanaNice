@@ -1,8 +1,8 @@
 /* The tip form, shared by the landing page and every region page.
-   Only the place is required. Picking it from Google's suggestions gives n8n an exact place
-   ID (so the town, region and category are worked out for the sender); anything not on
-   Google is typed as a name and a town. Up to three photos are shrunk in the browser before
-   sending, which also drops their EXIF data, GPS position included. */
+   The opening questions ask what kind of place it is, its name and where it is. A Google Maps
+   link can stand in for the last two answers. Picking a Google suggestion gives n8n an exact
+   place ID. Up to three photos are shrunk in the browser before sending, which also drops
+   their EXIF data, GPS position included. */
 (() => {
   const forms = [...document.querySelectorAll('[data-tip-form]')];
   const tips = window.GhanaTips;
@@ -79,15 +79,31 @@
   forms.forEach((form, formIndex) => {
     const id = `tip${formIndex}`;
     const hint = config.placesKey
-      ? 'Start typing and pick it from the list. Not on Google? Type the name and the town.'
-      : 'Type the name and the town, or paste a Google Maps link.';
+      ? 'Start typing, then pick the right place from the list.'
+      : 'Use the place’s everyday name — the one someone would search for.';
     form.innerHTML = `
-      <div class="tip-where">
-        <p class="tip-sentence">I found <label class="tip-place"><span class="sr-only">Place or business name</span><input name="place" type="text" placeholder="a good spot" autocomplete="off" maxlength="200" required role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="${id}-list" aria-describedby="${id}-hint"></label><span class="tip-around"> around <label><span class="sr-only">Town or area</span><input name="town" type="text" placeholder="the town" maxlength="80" required></label></span>.</p>
-        <ul class="tip-suggest" id="${id}-list" role="listbox" aria-label="Places found on Google" hidden></ul>
-        <p class="tip-picked" hidden><span class="tip-pin" aria-hidden="true"></span><span class="tip-picked-text"></span><button type="button" class="tip-change">Change</button></p>
-        <p class="tip-hint" id="${id}-hint">${hint}</p>
-      </div>
+      <fieldset class="tip-basics">
+        <legend class="sr-only">About the place</legend>
+        <label class="tip-question">
+          <span class="tip-step" aria-hidden="true">01</span>
+          <span class="tip-answer"><span class="tip-question-title">What did you find?</span><input name="kind" type="text" placeholder="A restaurant, beach, gallery…" maxlength="80" required></span>
+        </label>
+        <div class="tip-question tip-identity">
+          <span class="tip-step" aria-hidden="true">02</span>
+          <div class="tip-answer tip-where">
+            <label class="tip-place"><span class="tip-question-title">What’s it called?</span><input name="place" type="text" placeholder="e.g. Buka Restaurant" autocomplete="off" maxlength="200" required role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="${id}-list" aria-describedby="${id}-hint"></label>
+            <ul class="tip-suggest" id="${id}-list" role="listbox" aria-label="Places found on Google" hidden></ul>
+            <p class="tip-picked" hidden><span class="tip-pin" aria-hidden="true"></span><span class="tip-picked-text"></span><button type="button" class="tip-change">Change</button></p>
+            <p class="tip-hint" id="${id}-hint">${hint}</p>
+            <label class="tip-map"><span>Or paste a Google Maps link</span><input name="mapsLink" type="url" placeholder="https://maps.app.goo.gl/…" inputmode="url" autocomplete="url" maxlength="500"></label>
+            <p class="tip-map-note" hidden>Got the link — you can leave the name and location blank.</p>
+          </div>
+        </div>
+        <label class="tip-question tip-location">
+          <span class="tip-step" aria-hidden="true">03</span>
+          <span class="tip-answer"><span class="tip-question-title">Where is it?</span><input name="town" type="text" placeholder="e.g. Osu, Accra" maxlength="80" required></span>
+        </label>
+      </fieldset>
       <div class="tip-photos">
         <p class="tip-label">Photos you took <em>Optional, up to ${MAX_PHOTOS}</em></p>
         <div class="tip-thumbs">
@@ -113,7 +129,8 @@
     const q = selector => form.querySelector(selector);
     const placeInput = q('[name="place"]');
     const townInput = q('[name="town"]');
-    const around = q('.tip-around');
+    const mapsInput = q('[name="mapsLink"]');
+    const mapNote = q('.tip-map-note');
     const list = q('.tip-suggest');
     const picked = q('.tip-picked');
     const fileInput = q('input[type="file"]');
@@ -134,9 +151,11 @@
 
     /* ---- Where: Google suggestions, a pasted Maps link, or a name and a town ---- */
     function syncPlace() {
-      const needsTown = !choice && !isUrl(placeInput.value);
-      around.hidden = !needsTown;
+      const hasLink = isUrl(mapsInput.value);
+      const needsTown = !choice && !hasLink;
+      placeInput.required = !hasLink;
       townInput.required = needsTown;
+      mapNote.hidden = !hasLink;
       picked.hidden = !choice;
       if (choice) q('.tip-picked-text').textContent = choice.secondary ? `${choice.secondary} · on Google Maps` : 'On Google Maps';
     }
@@ -211,11 +230,29 @@
 
     placeInput.addEventListener('input', () => {
       choice = null;
-      syncPlace();
       clearTimeout(timer);
       const text = placeInput.value.trim();
+      /* Keep old muscle memory working: a link pasted into the name field moves to the
+         clearly labelled Maps field instead of being accepted invisibly as a name. */
+      if (isUrl(text)) {
+        mapsInput.value = text;
+        placeInput.value = '';
+        closeList();
+        syncPlace();
+        return;
+      }
+      syncPlace();
       if (!config.placesKey || text.length < 3 || isUrl(text)) return closeList();
       timer = setTimeout(() => suggest(text), 250);
+    });
+    mapsInput.addEventListener('input', () => {
+      /* A direct Maps link is the alternative to a Places suggestion, never a second
+         identity for the same submission. */
+      if (mapsInput.value.trim()) {
+        choice = null;
+        closeList();
+      }
+      syncPlace();
     });
     placeInput.addEventListener('keydown', event => {
       if (list.hidden) return;
@@ -294,13 +331,14 @@
       const data = new FormData(form);
       const text = name => String(data.get(name) || '').trim();
       const place = text('place');
-      const mapsLink = isUrl(place) ? place : '';
+      const mapsLink = isUrl(text('mapsLink')) ? text('mapsLink') : '';
       const name = text('name');
       const tip = {
         id: uuid(),
         submittedAt: new Date().toISOString(),
+        kind: text('kind'),
         place: mapsLink ? '' : place,
-        town: text('town'),
+        town: mapsLink || choice ? '' : text('town'),
         mapsLink,
         placeId: choice?.placeId || '',
         placeAddress: choice?.secondary || '',
@@ -320,6 +358,7 @@
         submittedAt: tip.submittedAt,
         place: tip.place || 'Your Google Maps pin',
         location: tip.placeAddress || tip.town,
+        category: tip.kind,
         regionSlug: tip.regionSlug,
         note: tip.note,
         submitterName: name.split(/\s+/)[0] || '',

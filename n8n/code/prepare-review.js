@@ -60,6 +60,7 @@ const detailsHtml = `
   <p style="margin:0 0 14px;color:#555">${esc(category)} · ${esc(kind)} · ${esc(REGIONS[region] || 'Region unknown')}${listing.area ? ' · ' + esc(listing.area) : ''}</p>
   ${ai?.reviewerSummary ? `<p style="margin:0 0 14px"><i>${esc(ai.reviewerSummary)}</i></p>` : ''}
   <table style="border-collapse:collapse">
+    ${line('What they found', esc(tip.kind))}
     ${line('Their words', esc(tip.note))}
     ${line('As listed', note !== tip.note ? esc(note) : '')}
     ${line('From', esc([tip.name, tip.email].filter(Boolean).join(' · ')) || 'No name or email')}
@@ -77,6 +78,7 @@ const detailsHtml = `
 // The approval email is plain text (n8n puts it in its own template above the buttons).
 const approvalText = [
   `${listing.place} (${category}, ${REGIONS[region] || 'region unknown'})`,
+  tip.kind ? `They described it as: ${tip.kind}` : '',
   ai?.spam ? `Looks like spam: ${ai.spamReason}` : '',
   note ? `“${note}”` : '',
   g ? `Google: ${g.address}` : 'Not found on Google.',

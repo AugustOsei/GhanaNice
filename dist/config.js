@@ -3,7 +3,7 @@
 window.GHANANICE_CONFIG = {
   /* n8n webhook, POST multipart: receives one tip plus up to three photos.
      Blank = preview mode: tips are kept in this browser only. */
-  tipEndpoint: '',
+  tipEndpoint: 'https://n8n.augustwheel.com/webhook/ghananice-tip',
   /* n8n webhook, GET ?region=<slug>: the published tips for that region. */
   directoryEndpoint: '',
   /* Browser key for Google place suggestions in the tip form. Restrict it in Google Cloud to

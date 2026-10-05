@@ -1,8 +1,9 @@
 # Tip pipeline (n8n)
 
-What happens after someone presses **Send the tip**. The site side is built; the n8n side is
-still to be set up. Until `dist/config.js` has both URLs, the site runs in preview mode:
-tips stay in the visitor's browser, and the form says so.
+What happens after someone presses **Send the tip**. The active `GhanaNice — Tips` n8n
+workflow receives the form, enriches it, asks for review and publishes approved listings.
+If `dist/config.js` has no `tipEndpoint`, the site falls back to preview mode: tips stay in
+the visitor's browser, and the form says so.
 
 ```
 site form ──POST──▶ [1 Intake webhook] ─▶ store as "received" ─▶ thank-you email
@@ -29,6 +30,7 @@ region page ──GET ?region=slug──▶ [4 Directory webhook] ─▶ publish
 {
   "id": "b0b8c246-040d-4331-a49f-a3092e903442",
   "submittedAt": "2026-09-21T15:37:54.568Z",
+  "kind": "Restaurant",
   "place": "Buka Restaurant",
   "town": "",
   "mapsLink": "",
@@ -47,7 +49,7 @@ region page ──GET ?region=slug──▶ [4 Directory webhook] ─▶ publish
 }
 ```
 
-- **Only the place is required.** It arrives in one of three shapes:
+- **The kind of place is always required.** Its identity arrives in one of three shapes:
   - picked from Google's suggestions: `placeId` (plus `placeAddress`, `placeTypes`) is set and `town` is empty. Use `placeId` directly for the lookup.
   - pasted Google Maps link: `mapsLink` is set and `place` is empty. Resolve the link (follow the redirect) to a place.
   - typed by hand: `place` and `town` are set, `placeId` is empty. Use Text Search.
@@ -64,7 +66,7 @@ region page ──GET ?region=slug──▶ [4 Directory webhook] ─▶ publish
 Steps in the workflow:
 
 1. **Webhook** (POST, respond via *Respond to Webhook*).
-2. **Validate**: a place is present in one of the three shapes, the email (if any) is well formed, the Turnstile token passes, at most three photos. Cap text lengths.
+2. **Validate**: `kind` is present, a place is present in one of the three shapes, the email (if any) is well formed, the Turnstile token passes, and there are at most three photos. Cap text lengths.
 3. **Store** the row with `status = received` (Google Sheet) and the photos in a private Google Drive folder named by `id`. Keep the email in its own column. It is never returned to the site.
 4. **Respond** `200 {"ok": true}`.
 5. **Thank-you email** (Gmail) to `submitter.email`, if given: thank them by first name, name the place, say it'll be checked and listed in its region.
@@ -132,7 +134,7 @@ Allow the site's origin for CORS here too.
 ```js
 // dist/config.js
 window.GHANANICE_CONFIG = {
-  tipEndpoint: 'https://<your-n8n>/webhook/ghananice-tip',
-  directoryEndpoint: 'https://<your-n8n>/webhook/ghananice-directory'
+  tipEndpoint: 'https://n8n.augustwheel.com/webhook/ghananice-tip',
+  directoryEndpoint: '' // approved tips are published to dist/data/listings.json
 };
 ```

@@ -20,7 +20,7 @@ A people-powered guide to good places across Ghana's 16 regions, "for locals and
 | `dist/footer.js` | WebGL water animation over the engraved Volta footer |
 | `dist/assets/CREDITS.md` | Credits for every image. Keep it complete |
 | `docs/design-guideline.md` | Voice, visual and content rules. Read before changing UI or copy |
-| `docs/tip-pipeline.md` | Contract for the (not yet built) n8n tip intake, enrichment and directory |
+| `docs/tip-pipeline.md` | Contract for the active n8n tip intake, enrichment, review and publishing workflow |
 
 ## Rules
 - Imagery must show real named places in the region it's filed under. Credit every photo (author, licence, source). Generated media may change atmosphere but must not invent landmarks.
@@ -30,7 +30,7 @@ A people-powered guide to good places across Ghana's 16 regions, "for locals and
 
 ## Open items (as of 2026-09-21)
 - Share tags use absolute `https://www.ghananice.com/og-image.jpg`. The home page has a canonical link. `robots.txt` and `sitemap.xml` (home + 16 `region.html?r=` URLs) are in `dist/`. Submit the sitemap in Google Search Console.
-- n8n pipeline not built. See `docs/tip-pipeline.md`. The "found it nice" counts on the landing wall are placeholders.
+- The n8n tip pipeline is active. See `docs/tip-pipeline.md`. The "found it nice" counts on the landing wall are placeholders.
 - Most-visited ranks 6–10 have no published 2025 figures yet (only the top five were reported). Replace when the full GTA 2025 report is online.
 - 9 places still lack photos: Arts Centre, Assin Manso, Fort San Antonio (Axim), Bunso, Daboya, Nandom, Nkwanta, Fuller Falls, Kenyasi. Ahafo, Oti, Bono and Western North galleries are thin (3–5 photos).
 - `dist/assets/real/independence-arch-storm.jpg` is no longer used.
