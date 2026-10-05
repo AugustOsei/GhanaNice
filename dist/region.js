@@ -2,7 +2,10 @@ const regions = window.GHANA_REGIONS || [];
 const tips = window.GhanaTips;
 
 const slug = new URLSearchParams(location.search).get('r');
-const region = regions.find(r => r.slug === slug) || regions[0];
+const matchedRegion = regions.find(r => r.slug === slug);
+/* A mistyped or incomplete region URL must not quietly impersonate Greater Accra. */
+if (!matchedRegion) location.replace('404.html');
+const region = matchedRegion || regions[0];
 
 /* The photos in assets/real/ ship with smaller WebP copies (tools/media/resize_local.py). */
 const sized = (src, width) => src.replace(/\.(jpe?g|png)$/, `-${width}.webp`);
@@ -133,7 +136,8 @@ galleryPhotos.forEach((photo, index) => {
   const img = el('img');
   img.src = photo.small;
   img.alt = photo.caption;
-  img.loading = index < 3 ? 'eager' : 'lazy';
+  /* The gallery begins below the hero and facts; none of it should compete with the LCP. */
+  img.loading = 'lazy';
   img.decoding = 'async';
   const label = el('span', 'gallery-label');
   label.append(el('b', null, photo.caption), el('small', null, `by ${photo.author}`));
@@ -327,7 +331,15 @@ navLinks?.querySelectorAll('a').forEach(link => link.addEventListener('click', (
 const heroEl = document.querySelector('.region-hero');
 const navEl = document.querySelector('.nav');
 const syncNav = () => navEl.classList.toggle('is-over-image', heroEl.getBoundingClientRect().bottom > 76);
-addEventListener('scroll', syncNav, { passive: true });
+let navFrame = false;
+addEventListener('scroll', () => {
+  if (navFrame) return;
+  navFrame = true;
+  requestAnimationFrame(() => {
+    syncNav();
+    navFrame = false;
+  });
+}, { passive: true });
 syncNav(); /* the page can open part-way down, e.g. on #region-tip */
 
 document.querySelector('#year').textContent = new Date().getFullYear();

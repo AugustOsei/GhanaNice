@@ -7,8 +7,21 @@
   const canvas = scene?.querySelector('.footer-water');
   if (!scene || !canvas) return;
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const gl = canvas.getContext('webgl', { alpha: false, antialias: false, premultipliedAlpha: false });
-  if (!gl) return;
+
+  /* A WebGL context consumes GPU resources even before it draws. Create it only when the
+     footer approaches the viewport so it cannot compete with the opening hero. */
+  let started = false;
+  const starter = new IntersectionObserver(entries => {
+    if (started || !entries[0].isIntersecting) return;
+    started = true;
+    starter.disconnect();
+    initialise();
+  }, { rootMargin: '300px 0px' });
+  starter.observe(scene);
+
+  function initialise() {
+    const gl = canvas.getContext('webgl', { alpha: false, antialias: false, premultipliedAlpha: false });
+    if (!gl) return;
 
   const vertex = `
     attribute vec2 aPos;
@@ -146,5 +159,6 @@
     }).catch(() => {});
   }, { rootMargin: '300px 0px' }).observe(scene);
 
-  addEventListener('resize', () => { if (loaded) resize(); });
+    addEventListener('resize', () => { if (loaded) resize(); });
+  }
 })();

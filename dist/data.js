@@ -247,6 +247,16 @@ window.GHANA_REGIONS = [
   }
 ];
 
+async function fetchWithTimeout(input, init = {}, timeout = 30000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeout);
+  try {
+    return await fetch(input, { ...init, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 /* Tips go to the n8n intake webhook when one is configured (config.js): n8n thanks the
    sender, looks the place up, and sends it to August for approval. A copy is always kept in
    this browser (no email, one small thumbnail) so the sender sees their tip straight away,
@@ -272,7 +282,7 @@ window.GhanaTips = {
       body.append(`photo${index + 1}`, blob, `photo-${index + 1}.jpg`);
       if (small) body.append(`photo${index + 1}_small`, small, `photo-${index + 1}-800.jpg`);
     });
-    const response = await fetch(this.config().tipEndpoint, { method: 'POST', body });
+    const response = await fetchWithTimeout(this.config().tipEndpoint, { method: 'POST', body });
     if (!response.ok) throw new Error(`Tip endpoint answered ${response.status}`);
     this.add(localCopy);
     return { ok: true, live: true };
@@ -282,14 +292,14 @@ window.GhanaTips = {
   async directory(slug) {
     const endpoint = this.config().directoryEndpoint;
     if (!endpoint) {
-      const response = await fetch('data/listings.json', { cache: 'no-cache' });
+      const response = await fetchWithTimeout('data/listings.json', { cache: 'no-cache' }, 12000);
       if (!response.ok) return [];
       const body = await response.json();
       return (body.listings || []).filter(item => item.regionSlug === slug);
     }
     const url = new URL(endpoint, location.href);
     url.searchParams.set('region', slug);
-    const response = await fetch(url);
+    const response = await fetchWithTimeout(url, {}, 12000);
     if (!response.ok) throw new Error(`Directory endpoint answered ${response.status}`);
     const body = await response.json();
     return Array.isArray(body) ? body : (body.items || []);

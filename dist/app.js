@@ -25,6 +25,7 @@ const sequenceCount = document.querySelector('#sequence-count');
 const sequenceName = document.querySelector('#sequence-name');
 const spinStatus = document.querySelector('#spin-status');
 const sequenceSkip = document.querySelector('#sequence-skip');
+const sequenceAnnouncement = document.querySelector('#sequence-announcement');
 /* The arch appears exactly once, as the final scene. The old reel also carried a storm-lit
    copy of the same photograph, so it looked like the last image landed twice. */
 const sceneNames = ['Jamestown', 'Wli Falls', 'Cape Coast', 'Made in Accra', 'Larabanga', 'Kakum', 'Independence Arch'];
@@ -55,6 +56,7 @@ function showScene(index, duration = 120) {
 /* The video's first frame is the final still, so it is started from frame 0 and only
    revealed once it is actually playing: the hand-off is invisible instead of a jump cut. */
 function revealVideo() {
+  if (heroWindow.classList.contains('is-settled')) return;
   heroWindow.classList.remove('is-sequencing');
   heroWindow.classList.add('is-settled');
 }
@@ -70,20 +72,46 @@ function finishSequence(skip = false) {
     spinStatus.setAttribute('aria-hidden', 'true');
     sequenceSkip.classList.add('is-hidden');
     sequenceSkip.disabled = true;
+    sequenceAnnouncement.textContent = 'Showing Independence Arch in Accra.';
     /* Reduced motion keeps the still arch (the poster) instead of a looping video. */
     if (!heroVideo || reduced) return revealVideo();
     try { heroVideo.currentTime = 0; } catch {}
-    heroVideo.play().then(revealVideo, revealVideo);
+    /* play() can remain pending while a browser waits for media data. Never let that keep
+       the reel stuck: the poster and window background are the same final frame. */
+    const fallback = setTimeout(revealVideo, 900);
+    try {
+      const playback = heroVideo.play();
+      if (playback?.then) playback.then(() => {
+        clearTimeout(fallback);
+        revealVideo();
+      }, () => {
+        clearTimeout(fallback);
+        revealVideo();
+      });
+      else revealVideo();
+    } catch {
+      clearTimeout(fallback);
+      revealVideo();
+    }
   }, settleTime);
 }
 
-/* Browsers pause or drop offscreen video. Resume it whenever the hero comes back. */
+/* Pause the loop offscreen instead of relying on each browser's battery-saving policy. */
+let heroVisible = true;
 if (heroVideo && 'IntersectionObserver' in window) {
   new IntersectionObserver(entries => {
-    if (reduced || !sequenceFinished || !entries[0].isIntersecting) return;
+    heroVisible = entries[0].isIntersecting;
+    if (!heroVisible) {
+      heroVideo.pause();
+      return;
+    }
+    if (reduced || !sequenceFinished) return;
     if (heroVideo.paused) heroVideo.play().catch(() => {});
   }).observe(heroWindow);
 }
+heroVideo?.addEventListener('canplay', () => {
+  if (!reduced && sequenceFinished && heroVisible && heroVideo.paused) heroVideo.play().catch(() => {});
+});
 
 function playSequence() {
   if (spinStep >= spinOrder.length) {
@@ -157,7 +185,9 @@ function renderHero() {
 
 function paintHero(progress) {
   const eased = 1 - Math.pow(1 - progress, 3);
-  const start = innerWidth < 680 ? innerWidth * .58 : Math.min(innerWidth * .29, 430);
+  /* Keep the opening silhouette compact and jewel-like; it still expands to the same
+     full-screen endpoint as the visitor scrolls. */
+  const start = innerWidth < 680 ? innerWidth * .406 : Math.min(innerWidth * .203, 301);
   const cover = maskCoverSize();
   /* Same pacing as before (full cover about three-quarters of the way in), but once the
      outline covers the screen the mask is removed rather than grown to 4–6000px. A mask
@@ -181,6 +211,42 @@ addEventListener('scroll', () => {
 addEventListener('resize', renderHero);
 renderHero();
 
+/* Chrome and mobile Safari can discard composited mask layers while a tab is suspended.
+   The cached hero key then prevents the same scroll position from being painted again on
+   return. Reapply the current state on tab restore/wake, and finish a reel whose timers
+   were frozen in the background. The .1px mask-size nudge is visually imperceptible but
+   makes the browser rebuild the mask layer instead of reusing a discarded texture. */
+let heroRefreshFrame = 0;
+function restoreHeroAfterPause() {
+  if (document.hidden) {
+    heroVideo?.pause();
+    return;
+  }
+  if (!reduced && !sequenceFinished) finishSequence(true);
+  lastHeroKey = '';
+  renderHero();
+  if (!reduced && !heroWindow.classList.contains('is-unmasked')) {
+    heroWindow.classList.remove('is-mask-refreshing');
+    void heroWindow.offsetWidth;
+    heroWindow.classList.add('is-mask-refreshing');
+    cancelAnimationFrame(heroRefreshFrame);
+    heroRefreshFrame = requestAnimationFrame(() => heroWindow.classList.remove('is-mask-refreshing'));
+  }
+  if (!reduced && sequenceFinished && heroVisible && heroVideo?.paused) heroVideo.play().catch(() => {});
+}
+
+document.addEventListener('visibilitychange', restoreHeroAfterPause);
+addEventListener('pageshow', event => {
+  if (event.persisted) restoreHeroAfterPause();
+});
+const heroOpenedAt = Date.now();
+addEventListener('focus', () => {
+  /* Ignore the window's initial focus event; later focus events cover laptop wake and
+     browser restores that do not emit a visibility change. */
+  if (Date.now() - heroOpenedAt > 4000) restoreHeroAfterPause();
+});
+document.addEventListener('resume', restoreHeroAfterPause);
+
 /* The postcard rail travels, spreads into a field, then stacks vertically on selection. */
 const regionSection = document.querySelector('.regions');
 const regionSticky = document.querySelector('.regions-sticky');
@@ -188,6 +254,12 @@ const regionRail = document.querySelector('#region-rail');
 const reader = document.querySelector('#region-reader');
 const readerClose = document.querySelector('#reader-close');
 const readerLink = document.querySelector('#reader-link');
+const readerBackground = [
+  hero,
+  ...document.querySelectorAll('main > :not(#regions)'),
+  document.querySelector('.site-footer'),
+  ...[...regionSticky.children].filter(child => child !== reader)
+].filter(Boolean);
 const regionTones = ['#df4a32', '#f5c842', '#176a4b', '#ad9ae8', '#e58b65', '#e8d1a4', '#df4a32', '#f5c842', '#176a4b', '#ad9ae8', '#df4a32', '#6bb68d', '#e8d1a4', '#f5c842', '#176a4b', '#df4a32'];
 let regionCards = [];
 let selectedRegion = null;
@@ -342,6 +414,11 @@ function pinRegionStage() {
   if (Math.abs(target - scrollY) > 1) scrollTo(0, target);
 }
 
+function setReaderModal(open) {
+  document.body.classList.toggle('has-reader', open);
+  readerBackground.forEach(node => { node.inert = open; });
+}
+
 function openRegion(index, trigger) {
   const region = regions[index];
   selectedRegion = index;
@@ -376,10 +453,10 @@ function openRegion(index, trigger) {
   }
   sideFigure.parentElement.classList.toggle('is-single', !region.side);
   readerLink.href = `region.html?r=${region.slug}`;
-  readerLink.textContent = `Places worth visiting in ${region.name} `;
-  readerLink.append(Object.assign(document.createElement('span'), { textContent: '↘' }));
+  readerLink.setAttribute('aria-label', `Open the full ${region.name} Region page`);
   reader.classList.add('is-open');
   reader.setAttribute('aria-hidden', 'false');
+  setReaderModal(true);
   readerClose.focus({ preventScroll: true });
 }
 
@@ -392,6 +469,7 @@ function closeReader(restoreFocus = true) {
   reader.setAttribute('aria-hidden', 'true');
   regionSection.classList.remove('has-selection');
   regionCards.forEach(card => card.classList.remove('is-selected'));
+  setReaderModal(false);
   renderRegions();
   if (restoreFocus) lastRegionTrigger?.focus({ preventScroll: true });
 }
@@ -399,6 +477,13 @@ function closeReader(restoreFocus = true) {
 readerClose?.addEventListener('click', () => closeReader());
 readerLink?.addEventListener('click', () => closeReader(false));
 addEventListener('keydown', event => {
+  if (event.key === 'Tab' && reader.classList.contains('is-open')) {
+    const stops = [...reader.querySelectorAll('a[href], button:not([disabled])')];
+    const first = stops[0], last = stops[stops.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    else if (!reader.contains(document.activeElement)) { event.preventDefault(); first.focus(); }
+  }
   if (event.key === 'Escape') closeReader();
 });
 

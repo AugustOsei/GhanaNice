@@ -75,10 +75,10 @@
         throw new Error('encode-budget');
       };
       /* The full photo for the lightbox and an 800px copy for cards, so n8n needn't resize. */
-      const [blob, small] = await Promise.all([
-        encodeWithin(MAX_SIDE, MAX_PHOTO_BYTES),
-        encodeWithin(800, MAX_SMALL_BYTES)
-      ]);
+      /* Encode in sequence: two simultaneous canvases can double the memory spike from a
+         high-resolution phone photo and cause mobile browsers to discard the page. */
+      const blob = await encodeWithin(MAX_SIDE, MAX_PHOTO_BYTES);
+      const small = await encodeWithin(800, MAX_SMALL_BYTES);
       if (!blob || !small) throw new Error('encode');
       return { blob, small, url: URL.createObjectURL(blob), thumb: draw(360).toDataURL('image/jpeg', .7) };
     } finally {
@@ -125,7 +125,7 @@
         </label>
       </fieldset>
       <div class="tip-photos">
-        <p class="tip-label">Photos you took <em>Optional, up to ${MAX_PHOTOS}</em></p>
+        <p class="tip-label">Photos you took — up to ${MAX_PHOTOS} <em>Optional</em></p>
         <div class="tip-thumbs">
           <label class="tip-add"><input type="file" accept="image/*" multiple class="sr-only"><b>+</b><span>Add photos</span></label>
         </div>

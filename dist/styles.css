@@ -13,6 +13,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: auto; background: var(--ink); }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; overflow-x: hidden; }
+body.has-reader { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
 button, input, textarea, select { color: inherit; font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -45,19 +46,20 @@ img, video { display: block; max-width: 100%; }
 
 /* The map starts small, expands to the full screen, then carries the brand statement. */
 .hero { position: relative; height: 190svh; background: var(--paper); }
-.hero-stage { position: sticky; top: 0; height: 100svh; overflow: hidden; --mask-size: min(29vw, 430px); --copy-opacity: 0; --copy-y: 30px; }
+.hero-stage { position: sticky; top: 0; height: 100svh; overflow: hidden; --mask-size: min(20.3vw, 301px); --copy-opacity: 0; --copy-y: 30px; }
 /* The still arch sits behind the video, so if a browser ever drops the video layer the
    visitor sees the same frame rather than a flat navy block. */
 .hero-window { position: absolute; inset: 0; overflow: hidden; background: #173b4e url('assets/real/independence-arch-illustrated-1200.webp') center / cover; mask: url('assets/maps/ghana-mask.svg') center / var(--mask-size) auto no-repeat; -webkit-mask: url('assets/maps/ghana-mask.svg') center / var(--mask-size) auto no-repeat; }
+.hero-window.is-mask-refreshing { mask-size: calc(var(--mask-size) + .1px) auto; -webkit-mask-size: calc(var(--mask-size) + .1px) auto; }
 .hero-window.is-unmasked { mask: none; -webkit-mask: none; }
 .hero-window video, .map-scene { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero-window video { opacity: 1; transform: scale(1.015); }
 .hero-window.is-sequencing video { opacity: 0; }
-.map-reel { position: absolute; inset: 0; z-index: 2; overflow: hidden; opacity: 1; transition: opacity .45s ease; }
-.hero-window.is-settled .map-reel { opacity: 0; }
-.map-scene { z-index: 1; background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.17)), var(--image) center / cover; opacity: 1; transform: translateY(-108%) scale(1.04); filter: blur(3px) saturate(1.1); transition: transform var(--slot-duration, 100ms) cubic-bezier(.18,.72,.24,1), filter var(--slot-duration, 100ms) ease; will-change: transform, filter; }
-.map-scene.is-active { z-index: 3; transform: translateY(0) scale(1); filter: blur(0) saturate(1.06); }
-.map-scene.is-leaving { z-index: 2; transform: translateY(108%) scale(1.04); filter: blur(3px) saturate(1.1); }
+.map-reel { position: absolute; inset: 0; z-index: 2; overflow: hidden; opacity: 1; visibility: visible; transition: opacity .45s ease, visibility 0s; }
+.hero-window.is-settled .map-reel { opacity: 0; visibility: hidden; transition: opacity .45s ease, visibility 0s .45s; }
+.map-scene { z-index: 1; background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.17)), var(--image) center / cover; opacity: 1; transform: translateY(-108%) scale(1.04); filter: blur(3px) saturate(1.1); transition: transform var(--slot-duration, 100ms) cubic-bezier(.18,.72,.24,1), filter var(--slot-duration, 100ms) ease; }
+.map-scene.is-active { z-index: 3; transform: translateY(0) scale(1); filter: blur(0) saturate(1.06); will-change: transform, filter; }
+.map-scene.is-leaving { z-index: 2; transform: translateY(108%) scale(1.04); filter: blur(3px) saturate(1.1); will-change: transform, filter; }
 .hero-shade { position: absolute; z-index: 4; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.03) 30%, rgba(0,0,0,.64)); pointer-events: none; }
 .spin-status { position: absolute; z-index: 8; left: 50%; top: calc(50% + min(17.7vw, 262px)); width: min(560px, 76vw); transform: translateX(-50%); display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 14px; font-size: .58rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; transition: opacity .25s; }
 .spin-status i { height: 1px; background: var(--line); }
@@ -115,8 +117,8 @@ img, video { display: block; max-width: 100%; }
 .reader-facts div + div { padding-left: 18px; border-left: 1px solid var(--line); }
 .reader-facts span { font-size: .58rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
 .reader-facts p { margin: 10px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: .95rem; line-height: 1.4; }
-.reader-copy > a { display: flex; justify-content: space-between; border: 2px solid; padding: 16px; font-size: .64rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; transition: background .2s, color .2s; }
-.reader-copy > a:hover { background: var(--ink); color: var(--white); }
+.reader-open { position: absolute; z-index: 4; top: 18px; left: 20px; display: flex; align-items: center; gap: 12px; border: 1px solid; padding: 9px 11px; background: var(--paper); font-size: .6rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; transition: background .2s, color .2s; }
+.reader-open:hover, .reader-open:focus-visible { background: var(--ink); color: var(--white); }
 
 /* Visitor numbers — modular cards replace the previous flying list. */
 .most-visited { padding: 130px clamp(20px, 4vw, 64px) 70px; background: #090909; color: var(--white); }
@@ -225,7 +227,7 @@ img, video { display: block; max-width: 100%; }
   .menu-button { display: block; width: 34px; border: 0; background: transparent; padding: 4px; color: inherit; }
   .menu-button span { display: block; height: 1px; margin: 7px 0; background: currentColor; }
   .hero { height: 170svh; }
-  .hero-stage { --mask-size: 58vw; }
+  .hero-stage { --mask-size: 40.6vw; }
   .spin-status { top: calc(50% + 34vw); width: 82vw; grid-template-columns: auto 1fr auto; }
   .spin-status b { display: none; }
   .sequence-skip { bottom: 25px; }
@@ -333,7 +335,6 @@ img, video { display: block; max-width: 100%; }
 .reader-facts div { padding: 13px 0 15px; }
 .reader-facts div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
 .reader-facts p { margin-top: 7px; }
-.reader-copy > a { padding: 14px 0; border-width: 1px; }
 .reader-gallery { align-self: center; min-height: 0; height: min(69vh, 650px); }
 .reader-main { inset: 0 13% 0 0; display: flex; flex-direction: column; }
 .reader-main img { flex: 1 1 auto; min-height: 0; }
