@@ -23,8 +23,10 @@ region page ──GET ?region=slug──▶ [4 Directory webhook] ─▶ publish
 
 - `tip`: a JSON string, below.
 - `photo1`, `photo2`, `photo3`: optional JPEGs, already shrunk in the browser to at most
-  1600px on the long side (typically 150–350 KB each). The browser re-encodes them, so they
-  carry no EXIF data (no GPS position). At most three.
+  1600px on the long side and 210 KB each. Their `photoN_small` card copies are at most 800px
+  and 60 KB each, keeping all six files for a three-photo tip below nginx's 1 MB request
+  limit. The browser re-encodes them, so they carry no EXIF data (no GPS position). At most
+  three.
 
 ```json
 {

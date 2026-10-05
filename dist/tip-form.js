@@ -11,6 +11,10 @@
   const MAX_PHOTOS = 3;
   const MAX_SIDE = 1600;
   const MAX_FILE = 40 * 1024 * 1024;
+  /* nginx currently accepts a 1 MB request. Six files are sent for three photos (a full and
+     card copy of each), so keep their combined worst case comfortably below that ceiling. */
+  const MAX_PHOTO_BYTES = 210 * 1024;
+  const MAX_SMALL_BYTES = 60 * 1024;
   const emailOptional = !!config.turnstileSiteKey;
 
   const uuid = () => (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
@@ -53,9 +57,28 @@
         canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
         return canvas;
       };
-      const encode = side => new Promise(resolve => draw(side).toBlob(resolve, 'image/jpeg', .82));
+      const jpeg = (canvas, quality) => new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', quality));
+      const encodeWithin = async (side, maxBytes) => {
+        let targetSide = side;
+        const minSide = side > 800 ? 640 : 320;
+        /* Lower JPEG quality first, then dimensions. Even highly detailed phone photos end
+           within the byte budget; ordinary photos usually keep the full target dimensions. */
+        while (targetSide >= minSide) {
+          const canvas = draw(targetSide);
+          for (const quality of [.78, .64, .52, .42, .34]) {
+            const blob = await jpeg(canvas, quality);
+            if (!blob || blob.size <= maxBytes) return blob;
+          }
+          if (targetSide === minSide) break;
+          targetSide = Math.max(minSide, Math.round(targetSide * .8));
+        }
+        throw new Error('encode-budget');
+      };
       /* The full photo for the lightbox and an 800px copy for cards, so n8n needn't resize. */
-      const [blob, small] = await Promise.all([encode(MAX_SIDE), encode(800)]);
+      const [blob, small] = await Promise.all([
+        encodeWithin(MAX_SIDE, MAX_PHOTO_BYTES),
+        encodeWithin(800, MAX_SMALL_BYTES)
+      ]);
       if (!blob || !small) throw new Error('encode');
       return { blob, small, url: URL.createObjectURL(blob), thumb: draw(360).toDataURL('image/jpeg', .7) };
     } finally {
@@ -369,7 +392,7 @@
       try {
         result = await tips.submit(tip, photos.map(({ blob, small }) => ({ blob, small })), localCopy);
       } catch {
-        status.textContent = 'That didn’t go through. Check your connection and try again. Nothing was lost.';
+        status.textContent = 'That didn’t go through. Check your connection and try again. If you added photos, try fewer at once. Nothing was lost.';
         submit.disabled = false;
         return;
       } finally {
