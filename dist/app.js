@@ -1,3 +1,10 @@
+/* A browser refresh normally restores the previous scroll offset. On the homepage that
+   can restart the image reel after the Ghana silhouette has already expanded full-screen.
+   Start true home loads at the top, but preserve deliberate deep links such as #regions. */
+const startsAtHome = !location.hash || location.hash === '#home';
+if ('scrollRestoration' in history) history.scrollRestoration = startsAtHome ? 'manual' : 'auto';
+if (startsAtHome) scrollTo(0, 0);
+
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const regions = window.GHANA_REGIONS;
@@ -237,7 +244,17 @@ function restoreHeroAfterPause() {
 
 document.addEventListener('visibilitychange', restoreHeroAfterPause);
 addEventListener('pageshow', event => {
-  if (event.persisted) restoreHeroAfterPause();
+  if (event.persisted) {
+    restoreHeroAfterPause();
+  } else if (startsAtHome) {
+    /* Scroll restoration is applied late by some browsers, so enforce the home position
+       once more after the page is shown and repaint the mask from that position. */
+    requestAnimationFrame(() => {
+      scrollTo(0, 0);
+      lastHeroKey = '';
+      renderHero();
+    });
+  }
 });
 const heroOpenedAt = Date.now();
 addEventListener('focus', () => {

@@ -81,7 +81,7 @@ const htmlExpectations = {
   'dist/index.html': [
     'styles.css?v=26',
     'data.js?v=5',
-    'app.js?v=18',
+    'app.js?v=19',
     'tip-form.js?v=5',
     'footer.js?v=2',
     'id="hero-video"',
