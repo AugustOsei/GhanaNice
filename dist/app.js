@@ -39,25 +39,19 @@ const sceneNames = ['Jamestown', 'Wli Falls', 'Cape Coast', 'Made in Accra', 'La
 const FINAL_SCENE = sceneNames.length - 1;
 const spinOrder = [2, 5, 1, 4, 0, 3, 1, 5, 0, 4, 2, 3, 5, 0, 2, 4, FINAL_SCENE];
 const spinHolds = [72, 58, 50, 48, 50, 54, 60, 68, 78, 92, 112, 140, 180, 230, 300, 390, 520];
-let spinStep = 0;
-let activeScene = 0;
-let sceneTimer;
+let reelAnimations = [];
 let sequenceFinished = false;
 
-function showScene(index, duration = 120) {
-  if (index === activeScene) return;
-  const outgoing = scenes[activeScene];
-  const incoming = scenes[index];
-  outgoing?.style.setProperty('--slot-duration', `${duration}ms`);
-  incoming?.style.setProperty('--slot-duration', `${duration}ms`);
-  outgoing?.classList.remove('is-active');
-  outgoing?.classList.add('is-leaving');
-  incoming?.classList.remove('is-leaving');
-  incoming?.classList.add('is-active');
-  setTimeout(() => outgoing?.classList.remove('is-leaving'), duration + 40);
-  activeScene = index;
+function labelScene(index) {
   sequenceCount.textContent = `${String(index + 1).padStart(2, '0')} / ${String(sceneNames.length).padStart(2, '0')}`;
   sequenceName.textContent = sceneNames[index];
+}
+
+function landOnFinalScene() {
+  scenes.forEach((scene, index) => scene.classList.toggle('is-active', index === FINAL_SCENE));
+  reelAnimations.forEach(animation => animation.cancel());
+  reelAnimations = [];
+  labelScene(FINAL_SCENE);
 }
 
 /* The video's first frame is the final still, so it is started from frame 0 and only
@@ -71,9 +65,8 @@ function revealVideo() {
 function finishSequence(skip = false) {
   if (sequenceFinished) return;
   sequenceFinished = true;
-  clearTimeout(sceneTimer);
+  landOnFinalScene();
   const settleTime = skip ? 140 : 460;
-  showScene(FINAL_SCENE, settleTime);
   setTimeout(() => {
     spinStatus.classList.add('is-hidden');
     spinStatus.setAttribute('aria-hidden', 'true');
@@ -120,19 +113,61 @@ heroVideo?.addEventListener('canplay', () => {
   if (!reduced && sequenceFinished && heroVisible && heroVideo.paused) heroVideo.play().catch(() => {});
 });
 
-function playSequence() {
-  if (spinStep >= spinOrder.length) {
-    finishSequence();
-    return;
-  }
-  const hold = spinHolds[spinStep];
-  showScene(spinOrder[spinStep], Math.max(48, hold * .78));
-  spinStep += 1;
-  sceneTimer = setTimeout(playSequence, hold);
+/* The whole reel is one keyframe timeline per photo, all started together. Every step slides
+   the incoming photo down from above while the outgoing one leaves below in lockstep, so
+   the two always meet edge to edge. Photos return to the top while they are out of view. */
+const SLOT_EASE = 'cubic-bezier(.18,.72,.24,1)';
+const spinStarts = spinHolds.map((hold, step) => spinHolds.slice(0, step).reduce((sum, value) => sum + value, 0));
+const spinTotal = spinStarts[spinStarts.length - 1] + spinHolds[spinHolds.length - 1];
+
+function sceneKeyframes(scene) {
+  const at = (time, y, easing = 'linear') => ({ offset: Math.min(1, time / spinTotal), transform: `translateY(${y}%)`, easing });
+  let y = scene === 0 ? 0 : -100;
+  const frames = [at(0, y)];
+  spinOrder.forEach((incoming, step) => {
+    const outgoing = step ? spinOrder[step - 1] : 0;
+    const start = spinStarts[step];
+    const end = start + Math.min(spinHolds[step], Math.max(48, spinHolds[step] * .78));
+    if (incoming === scene) {
+      frames.push(at(start, -100, SLOT_EASE), at(end, 0));
+      y = 0;
+    } else if (outgoing === scene) {
+      frames.push(at(start, 0, SLOT_EASE), at(end, 100), at(end, -100));
+      y = -100;
+    }
+  });
+  frames.push(at(spinTotal, y));
+  return frames;
 }
 
-if (reduced) finishSequence(true);
-else sceneTimer = setTimeout(playSequence, 140);
+function playSequence() {
+  if (sequenceFinished) return;
+  reelAnimations = scenes.map((scene, index) => scene.animate(sceneKeyframes(index), { duration: spinTotal, fill: 'forwards' }));
+  const clock = reelAnimations[0];
+  clock.finished.then(() => finishSequence(), () => {});
+  let shownStep = -1;
+  (function followReel() {
+    if (sequenceFinished) return;
+    const step = spinStarts.findLastIndex(start => start <= (clock.currentTime || 0));
+    if (step !== shownStep) {
+      shownStep = step;
+      labelScene(spinOrder[step]);
+    }
+    requestAnimationFrame(followReel);
+  })();
+}
+
+/* Start only once every photo is downloaded and decoded, so no step lands on an empty or
+   half-decoded frame. A visitor on a very slow connection goes straight to the arch. */
+if (reduced || !scenes[0]?.animate) finishSequence(true);
+else {
+  const decoded = Promise.all(scenes.map(scene => scene.decode().catch(() => {})));
+  const tooSlow = new Promise(resolve => setTimeout(resolve, 3000, 'slow'));
+  Promise.race([decoded, tooSlow]).then(result => {
+    if (result === 'slow') finishSequence(true);
+    else requestAnimationFrame(() => requestAnimationFrame(playSequence));
+  });
+}
 sequenceSkip?.addEventListener('click', () => finishSequence(true));
 
 const hero = document.querySelector('.hero');

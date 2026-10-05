@@ -21,9 +21,9 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Ghana is nice. Central Accra from above.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" as="image" href="assets/maps/ghana-mask.svg">
+  <link rel="preload" as="image" href="assets/maps/ghana-mask.svg" crossorigin>
   <link rel="preload" as="image" href="assets/real/jamestown-lighthouse-800.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=26">
+  <link rel="stylesheet" href="styles.css?v=27">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the places</a>
@@ -47,13 +47,13 @@
           <source src="assets/real/independence-arch-loop.mp4" type="video/mp4">
         </video>
         <div class="map-reel" id="map-reel" aria-hidden="true">
-          <span class="map-scene is-active" style="--image:url('assets/real/jamestown-lighthouse-800.webp')"></span>
-          <span class="map-scene" style="--image:url('assets/real/wli-falls-800.webp')"></span>
-          <span class="map-scene" style="--image:url('assets/real/cape-coast-castle-800.webp')"></span>
-          <span class="map-scene" style="--image:url('assets/real/accra-seamstress-800.webp')"></span>
-          <span class="map-scene" style="--image:url('assets/real/larabanga-mosque-800.webp')"></span>
-          <span class="map-scene" style="--image:url('assets/real/kakum-walkway-800.webp')"></span>
-          <span class="map-scene" style="--image:url('assets/real/independence-arch-illustrated-1200.webp')"></span>
+          <img class="map-scene is-active" src="assets/real/jamestown-lighthouse-800.webp" alt="" decoding="async" fetchpriority="high">
+          <img class="map-scene" src="assets/real/wli-falls-800.webp" alt="" decoding="async">
+          <img class="map-scene" src="assets/real/cape-coast-castle-800.webp" alt="" decoding="async">
+          <img class="map-scene" src="assets/real/accra-seamstress-800.webp" alt="" decoding="async">
+          <img class="map-scene" src="assets/real/larabanga-mosque-800.webp" alt="" decoding="async">
+          <img class="map-scene" src="assets/real/kakum-walkway-800.webp" alt="" decoding="async">
+          <img class="map-scene" src="assets/real/independence-arch-illustrated-1200.webp" alt="" decoding="async">
         </div>
         <div class="hero-shade" aria-hidden="true"></div>
       </div>
@@ -237,7 +237,7 @@
 
   <script src="config.js?v=3"></script>
   <script src="data.js?v=5"></script>
-  <script src="app.js?v=19" defer></script>
+  <script src="app.js?v=20" defer></script>
   <script src="tip-form.js?v=5" defer></script>
   <script src="footer.js?v=2" defer></script>
 </body>
