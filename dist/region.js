@@ -212,11 +212,6 @@ lightbox.addEventListener('touchend', event => {
   touchStartX = null;
 });
 
-const businessList = document.querySelector('#business-list');
-const businessEmpty = document.querySelector('#business-empty');
-if (region.businesses.length) region.businesses.forEach(item => businessList.append(placeCard(item)));
-else businessEmpty.hidden = false;
-
 /* Community wall: real submissions for this region, read back out of this browser. */
 const wall = document.querySelector('#region-wall');
 const communityEmpty = document.querySelector('#community-empty');

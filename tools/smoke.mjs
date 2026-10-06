@@ -80,7 +80,7 @@ regions?.forEach((region, index) => {
 const htmlExpectations = {
   'dist/index.html': [
     'styles.css?v=29',
-    'data.js?v=5',
+    'data.js?v=6',
     'app.js?v=22',
     'tip-form.js?v=5',
     'footer.js?v=2',
@@ -89,8 +89,8 @@ const htmlExpectations = {
   ],
   'dist/region.html': [
     'styles.css?v=29',
-    'data.js?v=5',
-    'region.js?v=9',
+    'data.js?v=6',
+    'region.js?v=10',
     'tip-form.js?v=5',
     'footer.js?v=2',
   ],

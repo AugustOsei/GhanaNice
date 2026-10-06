@@ -13,7 +13,7 @@ A people-powered guide to good places across Ghana's 16 regions, "for locals and
 | File | What it is |
 |---|---|
 | `dist/index.html` + `app.js` | Landing page: masked-map hero reel → video, region card deck (scroll-driven, lift/two-tap), 2025 most-visited flip cards, community wall, tip form |
-| `dist/region.html` + `region.js` | One template for all regions (`?r=<slug>`): hero, facts, photo mosaic + lightbox, place cards with links, businesses, community wall, tip form |
+| `dist/region.html` + `region.js` | One template for all regions (`?r=<slug>`): hero, facts, photo mosaic + lightbox, place cards with links, community wall (approved tips, including businesses), tip form |
 | `dist/data.js` | `GHANA_REGIONS` (copy, places) and `GhanaTips` (tip storage and submission) |
 | `dist/media.js` | **Generated** by `tools/media/build_media.py`. Don't hand-edit |
 | `dist/config.js` | `tipEndpoint` / `directoryEndpoint` for n8n (blank = preview mode, tips stay in the browser) |

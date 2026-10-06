@@ -1,7 +1,7 @@
 /* Shared region data for the landing page and the per-region pages.
    `shot`/`shot2` describe exactly what is in each photograph — they become alt text and
-   on-page captions. `visit` lists real, named places inside the region. `businesses` is
-   deliberately only populated where we have a documented one: the wall is meant to fill up
+   on-page captions. `visit` lists real, named places inside the region. Businesses are
+   not listed here: they come from approved tips (data/listings.json), so the wall fills up
    with real submissions, not with invented shops. */
 window.GHANA_REGIONS = [
   {
@@ -18,9 +18,6 @@ window.GHANA_REGIONS = [
       { name: 'Labadi Beach', note: "Accra's busiest stretch of sand, liveliest at the weekend." },
       { name: 'Osu', note: 'Food, bars and late-night Accra around Oxford Street.' },
       { name: 'Arts Centre for National Culture', note: 'Carving, kente and craft stalls near the sea.' }
-    ],
-    businesses: [
-      { name: 'Made in Accra', note: 'A seamstress taking measurements in her Alajo workshop.', image: 'assets/real/accra-seamstress.jpg' }
     ]
   },
   {
@@ -36,8 +33,7 @@ window.GHANA_REGIONS = [
       { name: 'Elmina Castle', note: 'Begun in 1482, the oldest European-built structure in sub-Saharan Africa.' },
       { name: 'Assin Manso Ancestral Slave River', note: 'The last bathing place before the coast, now a site of return.' },
       { name: 'Hans Cottage Botel', note: 'Crocodiles and birdlife a short drive from Cape Coast.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'volta', name: 'Volta', capital: 'Ho',
@@ -51,8 +47,7 @@ window.GHANA_REGIONS = [
       { name: 'Tafi Atome Monkey Sanctuary', note: 'Mona monkeys living alongside the village that protects them.' },
       { name: 'Amedzofe', note: 'One of Ghana’s highest settlements, with the Ote waterfall below it.' },
       { name: 'Keta Lagoon', note: 'Sandbars, salt and birds between the lagoon and the sea.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'savannah', name: 'Savannah', capital: 'Damongo',
@@ -66,8 +61,7 @@ window.GHANA_REGIONS = [
       { name: 'Larabanga Mosque', note: 'Sudanese-style mud and stick architecture, among the oldest in the country.', image: 'assets/real/larabanga-mosque.jpg' },
       { name: 'Mognori Eco Village', note: 'Canoe safaris and village stays on the edge of Mole.' },
       { name: 'Salaga', note: 'A town carrying a heavy history as a trading and slave-market centre.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'western', name: 'Western', capital: 'Sekondi-Takoradi',
@@ -82,8 +76,7 @@ window.GHANA_REGIONS = [
       { name: 'Cape Three Points', note: 'The southernmost point of Ghana, with a lighthouse and forest reserve.' },
       { name: 'Fort San Antonio, Axim', note: 'A Portuguese fort of 1515, above the sea.' },
       { name: 'Ankasa Conservation Area', note: 'Dense rainforest in the far southwest.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'ashanti', name: 'Ashanti', capital: 'Kumasi',
@@ -98,8 +91,7 @@ window.GHANA_REGIONS = [
       { name: 'Lake Bosomtwe', note: 'A meteorite crater lake ringed by villages.' },
       { name: 'Bonwire', note: 'The kente weaving village.' },
       { name: 'Ntonso', note: 'Adinkra cloth, stamped by hand.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'eastern', name: 'Eastern', capital: 'Koforidua',
@@ -114,8 +106,7 @@ window.GHANA_REGIONS = [
       { name: 'Boti Falls', note: 'Twin falls, fullest in the rainy season.' },
       { name: 'Umbrella Rock', note: 'A mushroom-shaped rock formation on the walk near Boti.' },
       { name: 'Bunso Arboretum', note: 'Forest, birds and a canopy walkway.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'northern', name: 'Northern', capital: 'Tamale',
@@ -128,8 +119,7 @@ window.GHANA_REGIONS = [
       { name: 'Tamale Central Market', note: 'Smocks, shea butter and northern produce.' },
       { name: 'Gbewaa Palace, Yendi', note: 'The seat of the Dagbon kingdom.' },
       { name: 'Daboya', note: 'Known for smock weaving and for salt.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'upper-east', name: 'Upper East', capital: 'Bolgatanga',
@@ -144,8 +134,7 @@ window.GHANA_REGIONS = [
       { name: 'Sirigu', note: 'Painted compound walls, and a women’s pottery and art collective.' },
       { name: 'Tongo Hills and Tengzug', note: 'Rock formations and a long-standing shrine.' },
       { name: 'Navrongo Cathedral', note: 'An earth-built cathedral with painted interior walls.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'upper-west', name: 'Upper West', capital: 'Wa',
@@ -158,8 +147,7 @@ window.GHANA_REGIONS = [
       { name: 'Wechiau Community Hippo Sanctuary', note: 'Hippos on the Black Volta, run by the communities along it.' },
       { name: 'Gwollu Defence Wall', note: 'A wall built to resist slave raiders.' },
       { name: 'Nandom', note: 'Known for its cathedral and its harvest festival.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'north-east', name: 'North East', capital: 'Nalerigu',
@@ -173,8 +161,7 @@ window.GHANA_REGIONS = [
       { name: 'Naa Jaringa Wall, Gambaga', note: 'What survives of the defensive wall around old Gambaga.', image: 'assets/real/regions/north-east-gambaga.jpg' },
       { name: 'Gambaga Escarpment', note: 'A long ridge with views out over the plains.' },
       { name: 'Nakpanduri', note: 'Escarpment views at the eastern edge of the region.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'oti', name: 'Oti', capital: 'Dambai',
@@ -186,8 +173,7 @@ window.GHANA_REGIONS = [
       { name: 'Lake Volta at Dambai', note: 'The ferry crossing, and the working life of the lake.', image: 'assets/real/regions/oti-lake-volta.jpg' },
       { name: 'Kyabobo National Park', note: 'Hills, forest and wildlife near the Togo border.' },
       { name: 'Nkwanta', note: 'A base for walking in the Kyabobo hills.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'bono', name: 'Bono', capital: 'Sunyani',
@@ -200,8 +186,7 @@ window.GHANA_REGIONS = [
       { name: 'Boabeng-Fiema Monkey Sanctuary', note: 'Mona and colobus monkeys protected by the villages around them.', image: 'assets/real/regions/bono-boabeng-fiema.jpg' },
       { name: 'Sunyani', note: 'A green regional capital with a steady pace.', image: 'assets/real/regions/bono-sunyani-cocoa-house.jpg' },
       { name: 'Bui National Park', note: 'Forest, the Black Volta and hippos.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'bono-east', name: 'Bono East', capital: 'Techiman',
@@ -215,8 +200,7 @@ window.GHANA_REGIONS = [
       { name: 'Techiman Market', note: 'One of the biggest produce markets in the country.', image: 'assets/real/regions/bono-east-techiman.jpg' },
       { name: 'Fuller Falls', note: 'A quieter waterfall near Kintampo.' },
       { name: 'Buoyem Caves', note: 'Bat caves and rock formations.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'ahafo', name: 'Ahafo', capital: 'Goaso',
@@ -229,8 +213,7 @@ window.GHANA_REGIONS = [
       { name: 'Goaso', note: 'The regional capital, in the middle of cocoa country.', image: 'assets/real/regions/ahafo-goaso.jpg' },
       { name: 'Mim', note: 'A timber and cocoa town.' },
       { name: 'Kenyasi', note: 'A growing town in the Asutifi district.' }
-    ],
-    businesses: []
+    ]
   },
   {
     slug: 'western-north', name: 'Western North', capital: 'Sefwi Wiawso',
@@ -242,8 +225,7 @@ window.GHANA_REGIONS = [
       { name: 'Bia National Park', note: 'Forest reserve and national park in the far west.', image: 'assets/real/regions/western-north-bia.jpg' },
       { name: 'Sefwi Wiawso', note: 'The regional capital, above the cocoa country.' },
       { name: 'Cocoa country', note: "Some of Ghana's most productive cocoa farmland." }
-    ],
-    businesses: []
+    ]
   }
 ];
 
