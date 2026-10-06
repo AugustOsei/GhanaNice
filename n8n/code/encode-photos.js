@@ -1,7 +1,8 @@
-// Approved: turn the photos (carried on this item from "Read tip") into base64 for GitHub.
+// Turn the photos (carried on this item from "Read tip") into base64 for GitHub.
+// This runs before the approval wait: once the workflow has paused, n8n can no longer read
+// the uploaded files, but the base64 kept in this node's output survives the wait.
 // Paths: dist/assets/listings/<id>/<n>.jpg (1600px) and <n>-800.jpg (cards).
-const review = $('Prepare review').first().json;
-const id = review.listing.id;
+const id = $('Read tip').first().json.tip.id;
 const item = $input.first();
 const files = [];
 const photos = [];

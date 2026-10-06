@@ -111,6 +111,10 @@ http('Log received', 3, 0, 'POST', f"={SHEETS}/values/Tips!A1:append", 'sheets',
      query=[('valueInputOption', 'RAW'), ('insertDataOption', 'INSERT_ROWS')])
 add('Answer: received', 'n8n-nodes-base.respondToWebhook', 1.1, 4, 0, {'respondWith': 'json', 'responseBody': '={ "ok": true }', 'options': {}})
 
+# --- Keep the photos: encoded now, because they cannot be read after the approval wait ------
+add('Carry photos', 'n8n-nodes-base.code', 2, 4.5, -1, {'jsCode': "// Put the photos from the original tip back on the item so the next step can read them.\nreturn [{ json: {}, binary: $('Read tip').first().binary || {} }];"})
+code('Encode photos', 'encode-photos.js', 5, -1)
+
 # --- Look it up ---------------------------------------------------------------------------
 code('Plan lookup', 'plan-lookup.js', 5, 0)
 branch('Picked on the site?', 6, 0, "$json.mode === 'details'")
@@ -149,8 +153,6 @@ add('Ask August to approve', 'n8n-nodes-base.gmail', 2.1, 18, 0, {
 branch('Approved?', 19, 0, '$json.data?.approved === true')
 
 # --- Publish: one commit with the photos and the updated listings file ----------------------
-add('Carry photos', 'n8n-nodes-base.code', 2, 20, -1, {'jsCode': "// Put the photos from the original tip back on the item so the next step can read them.\nreturn [{ json: {}, binary: $('Read tip').first().binary || {} }];"})
-code('Encode photos', 'encode-photos.js', 21, -1)
 http('Git ref', 22, -1, 'GET', f"={REPO}/git/ref/heads/{BRANCH}", 'github')
 http('Git commit', 23, -1, 'GET', f"={REPO}/git/commits/{{{{ $json.object.sha }}}}", 'github')
 http('Current listings', 24, -1, 'GET', f"={REPO}/contents/dist/data/listings.json", 'github', query=[('ref', '=' + BRANCH)], never_error=True)
@@ -170,15 +172,15 @@ http('Log rejected', 20, 1, 'POST', f"={SHEETS}/values:batchUpdate", 'sheets', o
 
 for a, b, *out in [
     ('Tip from the site', 'Read tip'), ('Read tip', 'Valid tip?'), ('Valid tip?', 'Log received'), ('Valid tip?', 'Answer: not accepted', 1),
-    ('Log received', 'Answer: received'), ('Answer: received', 'Plan lookup'), ('Plan lookup', 'Picked on the site?'),
+    ('Log received', 'Answer: received'), ('Answer: received', 'Carry photos'), ('Carry photos', 'Encode photos'), ('Encode photos', 'Plan lookup'), ('Plan lookup', 'Picked on the site?'),
     ('Picked on the site?', 'Place details'), ('Picked on the site?', 'Maps link?', 1),
     ('Maps link?', 'Open Maps link'), ('Maps link?', 'Place search', 1), ('Open Maps link', 'Read Maps link'), ('Read Maps link', 'Place search'),
     ('Place details', 'Pick match'), ('Place search', 'Pick match'), ('Pick match', 'Claude check'), ('Claude check', 'Prepare review'),
     ('Prepare review', 'Log for review'), ('Prepare review', 'Has photos?'),
     ('Has photos?', 'Email August the photos'), ('Has photos?', 'Has an email?', 1), ('Email August the photos', 'Has an email?'),
     ('Has an email?', 'Thank the sender'), ('Has an email?', 'Ask August to approve', 1), ('Thank the sender', 'Ask August to approve'),
-    ('Ask August to approve', 'Approved?'), ('Approved?', 'Carry photos'), ('Approved?', 'Log rejected', 1),
-    ('Carry photos', 'Encode photos'), ('Encode photos', 'Git ref'), ('Git ref', 'Git commit'), ('Git commit', 'Current listings'),
+    ('Ask August to approve', 'Approved?'), ('Approved?', 'Git ref'), ('Approved?', 'Log rejected', 1),
+    ('Git ref', 'Git commit'), ('Git commit', 'Current listings'),
     ('Current listings', 'Make blobs'), ('Make blobs', 'Upload blobs'), ('Upload blobs', 'Make tree'), ('Make tree', 'Create tree'),
     ('Create tree', 'Create commit'), ('Create commit', 'Move branch'), ('Move branch', 'Log published'),
     ('Log published', 'Sender left an email?'), ('Sender left an email?', 'Tell the sender it’s live'),

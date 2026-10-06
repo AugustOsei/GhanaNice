@@ -140,6 +140,32 @@
   },
   {
    "id": "gn-7",
+   "name": "Carry photos",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1080.0,
+    -180
+   ],
+   "parameters": {
+    "jsCode": "// Put the photos from the original tip back on the item so the next step can read them.\nreturn [{ json: {}, binary: $('Read tip').first().binary || {} }];"
+   }
+  },
+  {
+   "id": "gn-8",
+   "name": "Encode photos",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1200,
+    -180
+   ],
+   "parameters": {
+    "jsCode": "// Turn the photos (carried on this item from \"Read tip\") into base64 for GitHub.\n// This runs before the approval wait: once the workflow has paused, n8n can no longer read\n// the uploaded files, but the base64 kept in this node's output survives the wait.\n// Paths: dist/assets/listings/<id>/<n>.jpg (1600px) and <n>-800.jpg (cards).\nconst id = $('Read tip').first().json.tip.id;\nconst item = $input.first();\nconst files = [];\nconst photos = [];\nfor (const n of [1, 2, 3]) {\n  if (!item.binary?.[`photo${n}`]) continue;\n  const base = `assets/listings/${id}/${n}`;\n  files.push({ path: `dist/${base}.jpg`, content: (await this.helpers.getBinaryDataBuffer(0, `photo${n}`)).toString('base64') });\n  let small = `${base}.jpg`;\n  if (item.binary[`photo${n}_small`]) {\n    files.push({ path: `dist/${base}-800.jpg`, content: (await this.helpers.getBinaryDataBuffer(0, `photo${n}_small`)).toString('base64') });\n    small = `${base}-800.jpg`;\n  }\n  photos.push({ src: `${base}.jpg`, small });\n}\nreturn [{ json: { files, photos } }];\n"
+   }
+  },
+  {
+   "id": "gn-9",
    "name": "Plan lookup",
    "type": "n8n-nodes-base.code",
    "typeVersion": 2,
@@ -152,7 +178,7 @@
    }
   },
   {
-   "id": "gn-8",
+   "id": "gn-10",
    "name": "Picked on the site?",
    "type": "n8n-nodes-base.if",
    "typeVersion": 2.2,
@@ -170,7 +196,7 @@
      },
      "conditions": [
       {
-       "id": "c7",
+       "id": "c9",
        "leftValue": "={{ $json.mode === 'details' }}",
        "rightValue": "",
        "operator": {
@@ -186,7 +212,7 @@
    }
   },
   {
-   "id": "gn-9",
+   "id": "gn-11",
    "name": "Place details",
    "type": "n8n-nodes-base.httpRequest",
    "typeVersion": 4.2,
@@ -237,7 +263,7 @@
    }
   },
   {
-   "id": "gn-10",
+   "id": "gn-12",
    "name": "Maps link?",
    "type": "n8n-nodes-base.if",
    "typeVersion": 2.2,
@@ -255,7 +281,7 @@
      },
      "conditions": [
       {
-       "id": "c9",
+       "id": "c11",
        "leftValue": "={{ $json.mode === 'link' }}",
        "rightValue": "",
        "operator": {
@@ -271,7 +297,7 @@
    }
   },
   {
-   "id": "gn-11",
+   "id": "gn-13",
    "name": "Open Maps link",
    "type": "n8n-nodes-base.httpRequest",
    "typeVersion": 4.2,
@@ -299,7 +325,7 @@
    }
   },
   {
-   "id": "gn-12",
+   "id": "gn-14",
    "name": "Read Maps link",
    "type": "n8n-nodes-base.code",
    "typeVersion": 2,
@@ -312,7 +338,7 @@
    }
   },
   {
-   "id": "gn-13",
+   "id": "gn-15",
    "name": "Place search",
    "type": "n8n-nodes-base.httpRequest",
    "typeVersion": 4.2,
@@ -353,7 +379,7 @@
    }
   },
   {
-   "id": "gn-14",
+   "id": "gn-16",
    "name": "Pick match",
    "type": "n8n-nodes-base.code",
    "typeVersion": 2,
@@ -366,7 +392,7 @@
    }
   },
   {
-   "id": "gn-15",
+   "id": "gn-17",
    "name": "Claude check",
    "type": "n8n-nodes-base.httpRequest",
    "typeVersion": 4.2,
@@ -412,7 +438,7 @@
    }
   },
   {
-   "id": "gn-16",
+   "id": "gn-18",
    "name": "Prepare review",
    "type": "n8n-nodes-base.code",
    "typeVersion": 2,
@@ -425,7 +451,7 @@
    }
   },
   {
-   "id": "gn-17",
+   "id": "gn-19",
    "name": "Log for review",
    "type": "n8n-nodes-base.httpRequest",
    "typeVersion": 4.2,
@@ -461,7 +487,7 @@
    "onError": "continueRegularOutput"
   },
   {
-   "id": "gn-18",
+   "id": "gn-20",
    "name": "Has photos?",
    "type": "n8n-nodes-base.if",
    "typeVersion": 2.2,
@@ -479,7 +505,7 @@
      },
      "conditions": [
       {
-       "id": "c17",
+       "id": "c19",
        "leftValue": "={{ $json.hasPhotos }}",
        "rightValue": "",
        "operator": {
@@ -495,7 +521,7 @@
    }
   },
   {
-   "id": "gn-19",
+   "id": "gn-21",
    "name": "Email August the photos",
    "type": "n8n-nodes-base.gmail",
    "typeVersion": 2.1,
@@ -529,7 +555,7 @@
    "onError": "continueRegularOutput"
   },
   {
-   "id": "gn-20",
+   "id": "gn-22",
    "name": "Has an email?",
    "type": "n8n-nodes-base.if",
    "typeVersion": 2.2,
@@ -547,7 +573,7 @@
      },
      "conditions": [
       {
-       "id": "c19",
+       "id": "c21",
        "leftValue": "={{ !!$('Prepare review').first().json.email }}",
        "rightValue": "",
        "operator": {
@@ -563,7 +589,7 @@
    }
   },
   {
-   "id": "gn-21",
+   "id": "gn-23",
    "name": "Thank the sender",
    "type": "n8n-nodes-base.gmail",
    "typeVersion": 2.1,
@@ -590,7 +616,7 @@
    "onError": "continueRegularOutput"
   },
   {
-   "id": "gn-22",
+   "id": "gn-24",
    "name": "Ask August to approve",
    "type": "n8n-nodes-base.gmail",
    "typeVersion": 2.1,
@@ -629,7 +655,7 @@
    "webhookId": "6f4c1f2e-9a51-4c7e-8a8e-0000000000a2"
   },
   {
-   "id": "gn-23",
+   "id": "gn-25",
    "name": "Approved?",
    "type": "n8n-nodes-base.if",
    "typeVersion": 2.2,
@@ -647,7 +673,7 @@
      },
      "conditions": [
       {
-       "id": "c22",
+       "id": "c24",
        "leftValue": "={{ $json.data?.approved === true }}",
        "rightValue": "",
        "operator": {
@@ -660,32 +686,6 @@
      "combinator": "and"
     },
     "options": {}
-   }
-  },
-  {
-   "id": "gn-24",
-   "name": "Carry photos",
-   "type": "n8n-nodes-base.code",
-   "typeVersion": 2,
-   "position": [
-    4800,
-    -180
-   ],
-   "parameters": {
-    "jsCode": "// Put the photos from the original tip back on the item so the next step can read them.\nreturn [{ json: {}, binary: $('Read tip').first().binary || {} }];"
-   }
-  },
-  {
-   "id": "gn-25",
-   "name": "Encode photos",
-   "type": "n8n-nodes-base.code",
-   "typeVersion": 2,
-   "position": [
-    5040,
-    -180
-   ],
-   "parameters": {
-    "jsCode": "// Approved: turn the photos (carried on this item from \"Read tip\") into base64 for GitHub.\n// Paths: dist/assets/listings/<id>/<n>.jpg (1600px) and <n>-800.jpg (cards).\nconst review = $('Prepare review').first().json;\nconst id = review.listing.id;\nconst item = $input.first();\nconst files = [];\nconst photos = [];\nfor (const n of [1, 2, 3]) {\n  if (!item.binary?.[`photo${n}`]) continue;\n  const base = `assets/listings/${id}/${n}`;\n  files.push({ path: `dist/${base}.jpg`, content: (await this.helpers.getBinaryDataBuffer(0, `photo${n}`)).toString('base64') });\n  let small = `${base}.jpg`;\n  if (item.binary[`photo${n}_small`]) {\n    files.push({ path: `dist/${base}-800.jpg`, content: (await this.helpers.getBinaryDataBuffer(0, `photo${n}_small`)).toString('base64') });\n    small = `${base}-800.jpg`;\n  }\n  photos.push({ src: `${base}.jpg`, small });\n}\nreturn [{ json: { files, photos } }];\n"
    }
   },
   {
@@ -1074,6 +1074,28 @@
    "main": [
     [
      {
+      "node": "Carry photos",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Carry photos": {
+   "main": [
+    [
+     {
+      "node": "Encode photos",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Encode photos": {
+   "main": [
+    [
+     {
       "node": "Plan lookup",
       "type": "main",
       "index": 0
@@ -1283,7 +1305,7 @@
    "main": [
     [
      {
-      "node": "Carry photos",
+      "node": "Git ref",
       "type": "main",
       "index": 0
      }
@@ -1291,28 +1313,6 @@
     [
      {
       "node": "Log rejected",
-      "type": "main",
-      "index": 0
-     }
-    ]
-   ]
-  },
-  "Carry photos": {
-   "main": [
-    [
-     {
-      "node": "Encode photos",
-      "type": "main",
-      "index": 0
-     }
-    ]
-   ]
-  },
-  "Encode photos": {
-   "main": [
-    [
-     {
-      "node": "Git ref",
       "type": "main",
       "index": 0
      }
