@@ -121,8 +121,16 @@ img, video { display: block; max-width: 100%; }
 .reader-facts div + div { padding-left: 18px; border-left: 1px solid var(--line); }
 .reader-facts span { font-size: .58rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
 .reader-facts p { margin: 10px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: .95rem; line-height: 1.4; }
-.reader-open { position: absolute; z-index: 4; top: 18px; left: 20px; display: flex; align-items: center; gap: 12px; border: 1px solid; padding: 9px 11px; background: var(--paper); font-size: .6rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; transition: background .2s, color .2s; }
+/* The way into the full region page sits in the reading flow, right under the intro, as
+   the one filled button on the panel. */
+.reader-open { display: inline-flex; align-items: center; gap: 16px; margin-top: 26px; border: 1px solid var(--ink); padding: 15px 20px; background: var(--yellow); color: var(--ink); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; transition: background .2s, color .2s; }
+.reader-open i { font-style: normal; font-size: 1rem; line-height: 1; transition: transform .25s var(--ease); }
 .reader-open:hover, .reader-open:focus-visible { background: var(--ink); color: var(--white); }
+.reader-open:hover i, .reader-open:focus-visible i { transform: translateX(5px); }
+/* The photos open the region too. The button above is the one link for keyboards and
+   screen readers, so these stay out of the tab order. */
+.reader-photo-link { position: absolute; z-index: 1; inset: 0; cursor: pointer; }
+.reader-more { margin: 11px 0 0; color: #55554f; font-size: .6rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
 
 /* Visitor numbers — modular cards replace the previous flying list. */
 .most-visited { padding: 130px clamp(20px, 4vw, 64px) 70px; background: #090909; color: var(--white); }
@@ -328,7 +336,7 @@ img, video { display: block; max-width: 100%; }
 
 /* Fixed, not absolute: an absolute panel is carried off-screen by the sticky stage as it
    unsticks at the end of the section, taking the close button with it. */
-.regions .region-reader { position: fixed; z-index: 20; left: 27%; right: 2.5vw; top: 86px; bottom: 26px; display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(28px, 3.6vw, 62px); padding: clamp(30px, 3.4vw, 58px); overflow: hidden; background: var(--paper); color: var(--ink); visibility: hidden; opacity: 0; pointer-events: none; clip-path: inset(0 0 0 100%); transform: none; transition: clip-path .75s var(--ease), opacity .2s, visibility 0s .75s; }
+.regions .region-reader { position: fixed; z-index: 20; left: 27%; right: 2.5vw; top: 86px; bottom: 26px; display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(28px, 3.6vw, 62px); padding: clamp(30px, 3.4vw, 58px); overflow: hidden auto; background: var(--paper); color: var(--ink); visibility: hidden; opacity: 0; pointer-events: none; clip-path: inset(0 0 0 100%); transform: none; transition: clip-path .75s var(--ease), opacity .2s, visibility 0s .75s; }
 .regions .region-reader.is-open { visibility: visible; opacity: 1; pointer-events: auto; clip-path: inset(0); transition-delay: 0s; }
 .reader-close { top: 18px; right: 20px; }
 .reader-copy { align-self: center; min-width: 0; }

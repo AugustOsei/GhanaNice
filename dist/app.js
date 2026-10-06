@@ -306,6 +306,7 @@ const regionRail = document.querySelector('#region-rail');
 const reader = document.querySelector('#region-reader');
 const readerClose = document.querySelector('#reader-close');
 const readerLink = document.querySelector('#reader-link');
+const readerPhotoLinks = [...document.querySelectorAll('.reader-photo-link')];
 const readerBackground = [
   hero,
   ...document.querySelectorAll('main > :not(#regions)'),
@@ -505,7 +506,10 @@ function openRegion(index, trigger) {
   }
   sideFigure.parentElement.classList.toggle('is-single', !region.side);
   readerLink.href = `region.html?r=${region.slug}`;
-  readerLink.setAttribute('aria-label', `Open the full ${region.name} Region page`);
+  readerPhotoLinks.forEach(link => { link.href = readerLink.href; });
+  document.querySelector('#reader-link-label').textContent = `Explore ${region.name}`;
+  const places = region.visit?.length || 0;
+  document.querySelector('#reader-more').textContent = places ? `${places} places to visit, plus more photos` : 'More photos on the full page';
   reader.classList.add('is-open');
   reader.setAttribute('aria-hidden', 'false');
   setReaderModal(true);
@@ -528,9 +532,10 @@ function closeReader(restoreFocus = true) {
 
 readerClose?.addEventListener('click', () => closeReader());
 readerLink?.addEventListener('click', () => closeReader(false));
+readerPhotoLinks.forEach(link => link.addEventListener('click', () => closeReader(false)));
 addEventListener('keydown', event => {
   if (event.key === 'Tab' && reader.classList.contains('is-open')) {
-    const stops = [...reader.querySelectorAll('a[href], button:not([disabled])')];
+    const stops = [...reader.querySelectorAll('a[href]:not([tabindex="-1"]), button:not([disabled])')];
     const first = stops[0], last = stops[stops.length - 1];
     if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }

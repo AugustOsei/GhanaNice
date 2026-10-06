@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" as="image" href="assets/maps/ghana-mask.svg" crossorigin>
   <link rel="preload" as="image" href="assets/real/jamestown-lighthouse-800.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=27">
+  <link rel="stylesheet" href="styles.css?v=29">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-07N1MXC0Q9"></script>
   <script>
@@ -94,11 +94,12 @@
 
         <article class="region-reader" id="region-reader" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="reader-title">
           <button class="reader-close" id="reader-close" type="button" aria-label="Close region details">All regions ×</button>
-          <a class="reader-open" id="reader-link" href="region.html">Open region <span>↗</span></a>
           <div class="reader-copy">
             <p class="reader-region" id="reader-region">Greater Accra Region</p>
             <h2 id="reader-title">Greater Accra</h2>
             <p class="reader-intro" id="reader-intro"></p>
+            <a class="reader-open" id="reader-link" href="region.html"><span id="reader-link-label">Explore this region</span><i aria-hidden="true">→</i></a>
+            <p class="reader-more" id="reader-more"></p>
             <div class="reader-facts">
               <div><span>Capital</span><p id="reader-capital"></p></div>
               <div><span>Go for</span><p id="reader-known"></p></div>
@@ -106,8 +107,8 @@
             </div>
           </div>
           <div class="reader-gallery">
-            <figure class="reader-main"><img id="reader-image-main" alt=""><figcaption id="reader-caption"></figcaption></figure>
-            <figure class="reader-side"><img id="reader-image-side" alt=""><figcaption id="reader-caption-side"></figcaption></figure>
+            <figure class="reader-main"><a class="reader-photo-link" href="region.html" tabindex="-1" aria-hidden="true"></a><img id="reader-image-main" alt=""><figcaption id="reader-caption"></figcaption></figure>
+            <figure class="reader-side"><a class="reader-photo-link" href="region.html" tabindex="-1" aria-hidden="true"></a><img id="reader-image-side" alt=""><figcaption id="reader-caption-side"></figcaption></figure>
           </div>
         </article>
       </div>
@@ -245,7 +246,7 @@
 
   <script src="config.js?v=3"></script>
   <script src="data.js?v=5"></script>
-  <script src="app.js?v=20" defer></script>
+  <script src="app.js?v=22" defer></script>
   <script src="tip-form.js?v=5" defer></script>
   <script src="footer.js?v=2" defer></script>
 </body>

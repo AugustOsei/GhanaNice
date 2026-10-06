@@ -79,23 +79,23 @@ regions?.forEach((region, index) => {
 
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=27',
+    'styles.css?v=29',
     'data.js?v=5',
-    'app.js?v=20',
+    'app.js?v=22',
     'tip-form.js?v=5',
     'footer.js?v=2',
     'id="hero-video"',
     'id="region-reader" role="dialog"',
   ],
   'dist/region.html': [
-    'styles.css?v=27',
+    'styles.css?v=29',
     'data.js?v=5',
     'region.js?v=9',
     'tip-form.js?v=5',
     'footer.js?v=2',
   ],
-  'dist/credits.html': ['styles.css?v=27'],
-  'dist/404.html': ['styles.css?v=27'],
+  'dist/credits.html': ['styles.css?v=29'],
+  'dist/404.html': ['styles.css?v=29'],
 };
 
 Object.entries(htmlExpectations).forEach(([file, expectations]) => {
