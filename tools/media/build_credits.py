@@ -52,6 +52,14 @@ page = f'''<!doctype html>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="canonical" href="https://www.ghananice.com/credits.html">
   <link rel="stylesheet" href="styles.css?v=27">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-07N1MXC0Q9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-07N1MXC0Q9');
+  </script>
 </head>
 <body class="doc-page">
   <nav class="nav" aria-label="Primary navigation">
