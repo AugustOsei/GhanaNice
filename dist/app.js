@@ -2,6 +2,9 @@
    can restart the image reel after the Ghana silhouette has already expanded full-screen.
    Start true home loads at the top, but preserve deliberate deep links such as #regions. */
 const startsAtHome = !location.hash || location.hash === '#home';
+/* Once the visitor has touched, wheeled or keyed the page, its scroll position is theirs. */
+let visitorHasMoved = false;
+['touchstart', 'wheel', 'keydown', 'pointerdown'].forEach(type => addEventListener(type, () => { visitorHasMoved = true; }, { passive: true, capture: true }));
 if ('scrollRestoration' in history) history.scrollRestoration = startsAtHome ? 'manual' : 'auto';
 if (startsAtHome) scrollTo(0, 0);
 
@@ -209,6 +212,9 @@ function renderHero() {
     const travel = Math.max(1, hero.offsetHeight - innerHeight);
     const progress = clamp(-heroRect.top / travel);
     heroUsesLightNav = progress > .13 && heroRect.bottom > 76;
+    /* A visitor who scrolls on during the spin has stopped watching it. Land on the arch
+       now, or the reel keeps flicking through photos full-screen as the outline opens. */
+    if (!sequenceFinished && progress > .03) finishSequence(true);
     /* Past the hero the values stop changing, so skip restyling the masked stage on every
        scroll frame further down the page. */
     const key = `${progress.toFixed(4)}|${innerWidth}x${innerHeight}`;
@@ -283,9 +289,10 @@ addEventListener('pageshow', event => {
     restoreHeroAfterPause();
   } else if (startsAtHome) {
     /* Scroll restoration is applied late by some browsers, so enforce the home position
-       once more after the page is shown and repaint the mask from that position. */
+       once more after the page is shown and repaint the mask from that position. On a slow
+       load this fires seconds in, so leave a visitor who is already scrolling alone. */
     requestAnimationFrame(() => {
-      scrollTo(0, 0);
+      if (!visitorHasMoved) scrollTo(0, 0);
       lastHeroKey = '';
       renderHero();
     });
@@ -413,24 +420,35 @@ function regionMetrics() {
   return { mobile, columns, rows, cardWidth, cardHeight, gapX, gapY };
 }
 
+/* The line of cards travels with the scroll, but the spread into a grid is a timed move
+   that starts once the visitor is far enough in, and then holds for the rest of the
+   section. Tied to the finger, a hurried flick crossed the whole spread in a frame or two
+   and the cards appeared to jump. The gap between the two thresholds stops the deck
+   flapping when someone rests right on the line. */
+const SPREAD_AT = .4;
+const GATHER_AT = .32;
+let deckSpread = false;
+
 function layoutRegionCards(progress) {
   const { mobile, columns, rows, cardWidth, gapX, gapY } = regionMetrics();
   const lineGap = cardWidth * 1.08;
-  const settle = clamp((progress - .55) / .35);
-  const eased = 1 - Math.pow(1 - settle, 3);
+  const spread = deckSpread ? progress > GATHER_AT : progress >= SPREAD_AT;
+  if (spread !== deckSpread) {
+    deckSpread = spread;
+    glide();
+  }
   const sweep = mix(innerWidth * .92, -innerWidth * .52, clamp(progress / .55));
   regionRail.style.setProperty('--card-w', `${cardWidth.toFixed(1)}px`);
 
   regionCards.forEach((card, index) => {
-    const lineX = (index - 7.5) * lineGap + sweep;
-    const lineY = Math.sin(index * 1.7) * 24;
     const column = index % columns;
     const row = Math.floor(index / columns);
-    const gridX = (column - (columns - 1) / 2) * gapX;
-    const gridY = (row - (rows - 1) / 2) * gapY + (mobile ? 34 : 70);
-    card.style.setProperty('--x', mix(lineX, gridX, eased).toFixed(1));
-    card.style.setProperty('--y', mix(lineY, gridY, eased).toFixed(1));
-    card.style.setProperty('--r', mix((index % 2 ? 1 : -1) * 6, ((index * 7) % 9) - 4, eased).toFixed(2));
+    const x = spread ? (column - (columns - 1) / 2) * gapX : (index - 7.5) * lineGap + sweep;
+    const y = spread ? (row - (rows - 1) / 2) * gapY + (mobile ? 34 : 70) : Math.sin(index * 1.7) * 24;
+    const r = spread ? ((index * 7) % 9) - 4 : (index % 2 ? 1 : -1) * 6;
+    card.style.setProperty('--x', x.toFixed(1));
+    card.style.setProperty('--y', y.toFixed(1));
+    card.style.setProperty('--r', r.toFixed(2));
     card.style.zIndex = String(index + 1);
   });
   if (liftedCard) liftCard(liftedCard, false);
