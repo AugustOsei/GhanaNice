@@ -1,4 +1,25 @@
 {
- "updated": null,
- "listings": []
+ "updated": "2026-10-05T21:22:28.577Z",
+ "listings": [
+  {
+   "id": "88fcbd6c-2e80-4042-83eb-60aafe446a76",
+   "place": "Twists & Locs Salon - Labone",
+   "kind": "Local business",
+   "category": "Shop & craft",
+   "regionSlug": "greater-accra",
+   "area": "Kpeshie, Accra",
+   "note": "Skilled professional stylists, spacious and welcoming spaces.",
+   "submitterName": "",
+   "placeId": "ChIJqYGGu3eQ3w8RfuFo9B6LmpI",
+   "mapsUrl": "https://maps.google.com/?cid=10563908841016713598&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "https://www.twistsnlocs.com/",
+   "phoneUrl": "tel:+233265131585",
+   "rating": 4.1,
+   "reviewCount": 215,
+   "googleCheckedAt": "2026-10-05",
+   "photos": [],
+   "photoCredit": "",
+   "publishedAt": "2026-10-05T21:22:28.577Z"
+  }
+ ]
 }
