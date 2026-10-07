@@ -318,7 +318,7 @@ const readerBackground = [
   hero,
   ...document.querySelectorAll('main > :not(#regions)'),
   document.querySelector('.site-footer'),
-  ...[...regionSticky.children].filter(child => child !== reader)
+  ...[...regionSticky.children].filter(child => child !== reader && child !== regionRail)
 ].filter(Boolean);
 const regionTones = ['#df4a32', '#f5c842', '#176a4b', '#ad9ae8', '#e58b65', '#e8d1a4', '#df4a32', '#f5c842', '#176a4b', '#ad9ae8', '#df4a32', '#6bb68d', '#e8d1a4', '#f5c842', '#176a4b', '#df4a32'];
 let regionCards = [];
@@ -333,6 +333,8 @@ regions.forEach((region, index) => {
   card.style.setProperty('--tone', regionTones[index]);
   card.innerHTML = `<span class="card-no">${String(index + 1).padStart(2, '0')}</span><strong class="card-name">${region.name}</strong><small class="card-note">${region.known}</small><i class="card-arrow">↘</i>`;
   card.setAttribute('aria-label', `Explore ${region.name} Region`);
+  card.setAttribute('aria-controls', 'region-reader');
+  card.setAttribute('aria-pressed', 'false');
   card.addEventListener('pointerdown', event => { lastPointerType = event.pointerType; });
   card.addEventListener('click', event => {
     /* On touch the cards overlap and there is no hover, so the first tap lifts a card out of
@@ -465,6 +467,7 @@ function layoutRegionStack(activeIndex) {
     card.style.setProperty('--stack-y', (offset * gap + 34).toFixed(1));
     card.style.setProperty('--stack-r', (offset * .22).toFixed(2));
     card.style.setProperty('--stack-scale', mobile ? '.46' : '.54');
+    card.style.setProperty('--stack-hover-scale', mobile ? '.52' : '.61');
     card.style.zIndex = String(card.classList.contains('is-selected') ? 40 : 18 - Math.abs(offset));
   });
 }
@@ -492,12 +495,19 @@ function setReaderModal(open) {
 
 function openRegion(index, trigger) {
   const region = regions[index];
+  const switchingRegion = selectedRegion !== null;
   selectedRegion = index;
   lastRegionTrigger = trigger;
   glide();
   liftCard(null);
   pinRegionStage();
-  regionCards.forEach((card, cardIndex) => card.classList.toggle('is-selected', cardIndex === index));
+  regionCards.forEach((card, cardIndex) => {
+    const selected = cardIndex === index;
+    card.classList.toggle('is-selected', selected);
+    card.setAttribute('aria-pressed', String(selected));
+    card.setAttribute('aria-label', `${selected ? 'Selected' : 'Preview'} ${regions[cardIndex].name} Region`);
+  });
+  regionRail.setAttribute('aria-label', `Regions. ${region.name} is selected; choose another region to update the preview.`);
   regionSection.classList.add('has-selection');
   layoutRegionStack(index);
   document.querySelector('#reader-region').textContent = `${region.name} Region`;
@@ -531,7 +541,9 @@ function openRegion(index, trigger) {
   reader.classList.add('is-open');
   reader.setAttribute('aria-hidden', 'false');
   setReaderModal(true);
-  readerClose.focus({ preventScroll: true });
+  /* Keep focus on the side index when it is used to switch regions. The first opening
+     moves to the reader so keyboard users encounter its controls and content. */
+  if (!switchingRegion) readerClose.focus({ preventScroll: true });
 }
 
 function closeReader(restoreFocus = true) {
@@ -542,7 +554,12 @@ function closeReader(restoreFocus = true) {
   reader.classList.remove('is-open');
   reader.setAttribute('aria-hidden', 'true');
   regionSection.classList.remove('has-selection');
-  regionCards.forEach(card => card.classList.remove('is-selected'));
+  regionCards.forEach((card, index) => {
+    card.classList.remove('is-selected');
+    card.setAttribute('aria-pressed', 'false');
+    card.setAttribute('aria-label', `Explore ${regions[index].name} Region`);
+  });
+  regionRail.setAttribute('aria-label', "Ghana's sixteen regions");
   setReaderModal(false);
   renderRegions();
   if (restoreFocus) lastRegionTrigger?.focus({ preventScroll: true });
@@ -552,12 +569,23 @@ readerClose?.addEventListener('click', () => closeReader());
 readerLink?.addEventListener('click', () => closeReader(false));
 readerPhotoLinks.forEach(link => link.addEventListener('click', () => closeReader(false)));
 addEventListener('keydown', event => {
+  const focusedCard = document.activeElement?.closest?.('.region-card');
+  if (selectedRegion !== null && focusedCard && (event.key === 'ArrowUp' || event.key === 'ArrowDown')) {
+    event.preventDefault();
+    const current = regionCards.indexOf(focusedCard);
+    const step = event.key === 'ArrowDown' ? 1 : -1;
+    const next = (current + step + regionCards.length) % regionCards.length;
+    regionCards[next].focus({ preventScroll: true });
+    openRegion(next, regionCards[next]);
+    return;
+  }
   if (event.key === 'Tab' && reader.classList.contains('is-open')) {
-    const stops = [...reader.querySelectorAll('a[href]:not([tabindex="-1"]), button:not([disabled])')];
+    /* The side cards and reader form one keyboard-contained region browser. */
+    const stops = [...regionCards, ...reader.querySelectorAll('a[href]:not([tabindex="-1"]), button:not([disabled])')];
     const first = stops[0], last = stops[stops.length - 1];
     if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
-    else if (!reader.contains(document.activeElement)) { event.preventDefault(); first.focus(); }
+    else if (!reader.contains(document.activeElement) && !regionRail.contains(document.activeElement)) { event.preventDefault(); first.focus(); }
   }
   if (event.key === 'Escape') closeReader();
 });

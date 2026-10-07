@@ -331,6 +331,8 @@ img, video { display: block; max-width: 100%; }
 .regions.has-selection .regions-title { opacity: .06; transform: translateY(-28px); }
 .regions.has-selection .rail-instruction { opacity: 0; }
 .regions.has-selection .region-card { opacity: .56; filter: grayscale(.9) blur(1.4px) brightness(.72); transform: translate(-50%,-50%) translate3d(calc(var(--stack-x) * 1px), calc(var(--stack-y) * 1px), 0) rotate(calc(var(--stack-r) * 1deg)) scale(var(--stack-scale)); }
+.regions.has-selection .region-card:not(.is-selected):hover,
+.regions.has-selection .region-card:not(.is-selected):focus-visible { z-index: 39 !important; opacity: .94; filter: grayscale(.25) brightness(.92) saturate(1.05); transform: translate(-50%,-50%) translate3d(calc(var(--stack-x) * 1px + 8px), calc(var(--stack-y) * 1px), 20px) rotate(0) scale(var(--stack-hover-scale)); }
 .regions.has-selection .region-card.is-selected { z-index: 40 !important; opacity: 1; filter: saturate(1.18); transform: translate(-50%,-50%) translate3d(calc(var(--stack-x) * 1px), calc(var(--stack-y) * 1px), 32px) rotate(-2deg) scale(1.08); }
 .regions.has-selection .region-card.is-selected::before { border-color: var(--yellow); border-width: 2px; }
 
