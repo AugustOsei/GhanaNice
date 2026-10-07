@@ -404,6 +404,17 @@ if (matchMedia('(hover: none)').matches) {
 
 /* Every dimension is derived from the viewport so the spread deck always fits inside it.
    The previous fixed 139px column gap pushed 8 of 16 cards off a 375px screen. */
+/* Heights come from the sticky stage (100svh), not innerHeight. On phones innerHeight grows
+   and shrinks as the address bar hides and returns mid-scroll, which re-spaced the rows and
+   made the field jump; the stage keeps one height through all of that. */
+let stageHeight = 0;
+let regionTravel = 1;
+function measureRegionStage() {
+  if (!regionSection || !regionSticky) return;
+  stageHeight = regionSticky.offsetHeight;
+  regionTravel = Math.max(1, regionSection.offsetHeight - stageHeight);
+}
+
 function regionMetrics() {
   const mobile = innerWidth < 680;
   const columns = mobile ? 4 : 8;
@@ -415,10 +426,10 @@ function regionMetrics() {
   const cardHeight = cardWidth / .71;
   const gapX = mobile ? cardWidth + 4 : Math.min(165, innerWidth * .123);
   /* On phones the title and the scroll hint each need room above and below the field. */
-  const band = innerHeight - 300;
+  const band = stageHeight - 300;
   const gapY = mobile
     ? Math.max(84, Math.min(124, (band - cardHeight) / Math.max(1, rows - 1)))
-    : Math.min(250, innerHeight * .34);
+    : Math.min(250, stageHeight * .34);
   return { mobile, columns, rows, cardWidth, cardHeight, gapX, gapY };
 }
 
@@ -426,10 +437,30 @@ function regionMetrics() {
    that starts once the visitor is far enough in, and then holds for the rest of the
    section. Tied to the finger, a hurried flick crossed the whole spread in a frame or two
    and the cards appeared to jump. The gap between the two thresholds stops the deck
-   flapping when someone rests right on the line. */
+   flapping when someone rests right on the line.
+   The move is blended here, frame by frame, rather than with a CSS transition: the line
+   keeps travelling with the scroll while it gathers, and a transition chasing that moving
+   target lagged behind the finger and then snapped into place when it was switched off. */
 const SPREAD_AT = .4;
 const GATHER_AT = .32;
+const SPREAD_MS = 820;
 let deckSpread = false;
+let spreadBlend = 0; /* 0 = line, 1 = field */
+let spreadFrom = 0;
+let spreadStart = 0;
+let spreadFrame = 0;
+
+function easeSpread(t) {
+  return 1 - Math.pow(1 - t, 4);
+}
+
+function stepSpread(now) {
+  const t = reduced ? 1 : clamp((now - spreadStart) / SPREAD_MS);
+  spreadBlend = mix(spreadFrom, deckSpread ? 1 : 0, easeSpread(t));
+  spreadFrame = t < 1 ? requestAnimationFrame(stepSpread) : 0;
+  lastRegionKey = '';
+  renderRegions();
+}
 
 function layoutRegionCards(progress) {
   const { mobile, columns, rows, cardWidth, gapX, gapY } = regionMetrics();
@@ -437,17 +468,21 @@ function layoutRegionCards(progress) {
   const spread = deckSpread ? progress > GATHER_AT : progress >= SPREAD_AT;
   if (spread !== deckSpread) {
     deckSpread = spread;
-    glide();
+    spreadFrom = spreadBlend;
+    spreadStart = performance.now();
+    if (reduced) spreadBlend = spread ? 1 : 0;
+    else if (!spreadFrame) spreadFrame = requestAnimationFrame(stepSpread);
   }
+  const blend = spreadBlend;
   const sweep = mix(innerWidth * .92, -innerWidth * .52, clamp(progress / .55));
   regionRail.style.setProperty('--card-w', `${cardWidth.toFixed(1)}px`);
 
   regionCards.forEach((card, index) => {
     const column = index % columns;
     const row = Math.floor(index / columns);
-    const x = spread ? (column - (columns - 1) / 2) * gapX : (index - 7.5) * lineGap + sweep;
-    const y = spread ? (row - (rows - 1) / 2) * gapY + (mobile ? 34 : 56) : Math.sin(index * 1.7) * 24;
-    const r = spread ? ((index * 7) % 9) - 4 : (index % 2 ? 1 : -1) * 6;
+    const x = mix((index - 7.5) * lineGap + sweep, (column - (columns - 1) / 2) * gapX, blend);
+    const y = mix(Math.sin(index * 1.7) * 24, (row - (rows - 1) / 2) * gapY + (mobile ? 34 : 56), blend);
+    const r = mix((index % 2 ? 1 : -1) * 6, ((index * 7) % 9) - 4, blend);
     card.style.setProperty('--x', x.toFixed(1));
     card.style.setProperty('--y', y.toFixed(1));
     card.style.setProperty('--r', r.toFixed(2));
@@ -602,10 +637,9 @@ function renderRegions() {
     else layoutRegionStack(selectedRegion);
   }
   else {
-    const travel = Math.max(1, regionSection.offsetHeight - innerHeight);
-    const progress = clamp(-regionSection.getBoundingClientRect().top / travel);
+    const progress = clamp(-regionSection.getBoundingClientRect().top / regionTravel);
     /* Before and after the section the deck is parked: skip rewriting 16 cards per frame. */
-    const key = `${progress.toFixed(4)}|${innerWidth}x${innerHeight}`;
+    const key = `${progress.toFixed(4)}|${innerWidth}x${stageHeight}`;
     if (key === lastRegionKey) return;
     lastRegionKey = key;
     layoutRegionCards(progress);
@@ -617,7 +651,11 @@ addEventListener('scroll', () => {
     regionFrameRequested = true;
   }
 }, { passive: true });
-addEventListener('resize', renderRegions);
+addEventListener('resize', () => {
+  measureRegionStage();
+  renderRegions();
+});
+measureRegionStage();
 renderRegions();
 
 /* Prototype niceness meter. Votes remain local to this preview. */
