@@ -446,7 +446,7 @@ function layoutRegionCards(progress) {
     const column = index % columns;
     const row = Math.floor(index / columns);
     const x = spread ? (column - (columns - 1) / 2) * gapX : (index - 7.5) * lineGap + sweep;
-    const y = spread ? (row - (rows - 1) / 2) * gapY + (mobile ? 34 : 70) : Math.sin(index * 1.7) * 24;
+    const y = spread ? (row - (rows - 1) / 2) * gapY + (mobile ? 34 : 56) : Math.sin(index * 1.7) * 24;
     const r = spread ? ((index * 7) % 9) - 4 : (index % 2 ? 1 : -1) * 6;
     card.style.setProperty('--x', x.toFixed(1));
     card.style.setProperty('--y', y.toFixed(1));

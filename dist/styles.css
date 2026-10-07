@@ -327,6 +327,11 @@ img, video { display: block; max-width: 100%; }
 .rail-instruction { position: absolute; z-index: 8; left: 4vw; right: 4vw; bottom: 26px; display: flex; align-items: center; gap: 18px; margin: 0; font-size: .57rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; transition: opacity .3s; }
 .rail-instruction i { height: 1px; flex: 1; background: rgba(255,255,255,.35); }
 .rail-instruction b { color: var(--yellow); }
+/* Wide, short browser windows need the instruction to use the spare lower gutter instead
+   of sharing the last postcard row's visual edge. Phones keep the larger thumb-safe inset. */
+@media (min-width: 681px) {
+  .rail-instruction { bottom: 10px; }
+}
 
 .regions.has-selection .regions-title { opacity: .06; transform: translateY(-28px); }
 .regions.has-selection .rail-instruction { opacity: 0; }
