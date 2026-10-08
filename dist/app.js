@@ -363,10 +363,12 @@ let lastPointerType = '';
    moment when a card is lifted, opened or put back; left on, every scroll frame restarted
    it and the deck trailed behind the finger on phones. */
 let glideTimer;
-function glide() {
+function glide(restack = false) {
   regionRail.classList.add('is-gliding');
+  /* Opening and closing the preview also moves every card to a new place. */
+  if (restack) regionRail.classList.add('is-restacking');
   clearTimeout(glideTimer);
-  glideTimer = setTimeout(() => regionRail.classList.remove('is-gliding'), 900);
+  glideTimer = setTimeout(() => regionRail.classList.remove('is-gliding', 'is-restacking'), 900);
 }
 function liftCard(target, animate = true) {
   if (animate && target !== liftedCard) glide();
@@ -533,7 +535,7 @@ function openRegion(index, trigger) {
   const switchingRegion = selectedRegion !== null;
   selectedRegion = index;
   lastRegionTrigger = trigger;
-  glide();
+  glide(true);
   liftCard(null);
   pinRegionStage();
   regionCards.forEach((card, cardIndex) => {
@@ -585,7 +587,7 @@ function closeReader(restoreFocus = true) {
   if (!reader.classList.contains('is-open')) return;
   selectedRegion = null;
   lastRegionKey = ''; /* the stack rewrote every card's z-index: lay the deck out again */
-  glide();
+  glide(true);
   reader.classList.remove('is-open');
   reader.setAttribute('aria-hidden', 'true');
   regionSection.classList.remove('has-selection');
