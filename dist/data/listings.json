@@ -1,6 +1,35 @@
 {
- "updated": "2026-10-05T21:22:28.577Z",
+ "updated": "2026-10-10T11:35:20.372Z",
  "listings": [
+  {
+   "id": "95113a43-a774-4931-88c7-ea9b34b5bd3e",
+   "place": "Sikada",
+   "kind": "Local business",
+   "category": "Eat & drink",
+   "regionSlug": "greater-accra",
+   "area": "Osu Klottey, Accra",
+   "note": "The food",
+   "submitterName": "Kwesi",
+   "placeId": "ChIJe69kC9Sb3w8Ro7piPc0xvDQ",
+   "mapsUrl": "https://maps.google.com/?cid=3799966943161793187&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "",
+   "phoneUrl": "tel:+233557058107",
+   "rating": 4.6,
+   "reviewCount": 120,
+   "googleCheckedAt": "2026-10-10",
+   "photos": [
+    {
+     "src": "assets/listings/95113a43-a774-4931-88c7-ea9b34b5bd3e/1.jpg",
+     "small": "assets/listings/95113a43-a774-4931-88c7-ea9b34b5bd3e/1-800.jpg"
+    },
+    {
+     "src": "assets/listings/95113a43-a774-4931-88c7-ea9b34b5bd3e/2.jpg",
+     "small": "assets/listings/95113a43-a774-4931-88c7-ea9b34b5bd3e/2-800.jpg"
+    }
+   ],
+   "photoCredit": "Kwesi",
+   "publishedAt": "2026-10-10T11:35:20.372Z"
+  },
   {
    "id": "88fcbd6c-2e80-4042-83eb-60aafe446a76",
    "place": "Twists & Locs Salon - Labone",
