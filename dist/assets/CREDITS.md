@@ -11,6 +11,8 @@ All listed location and maker images depict real places or people in Ghana. Crop
 | `real/wli-falls.jpg` | Wli Falls, Volta Region | Mike Norton | https://commons.wikimedia.org/wiki/File:Wli_Falls_Ghana.jpg | CC BY 2.0 |
 | `real/accra-seamstress.jpg` | Seamstress taking measurements in Alajo, Accra | Angela L. Rak | https://commons.wikimedia.org/wiki/File:Seamstress_taking_measurements_in_Alajo,_Accra.jpg | CC BY-SA 4.0 |
 | `real/independence-arch-storm.jpg`, `real/independence-arch-illustrated.png` and loop video | Independence Arch, Accra | User-supplied base photograph; GhanaNice weather treatment | supplied in project conversation | Project use |
+| `real/hero-cape-coast-castle-*` | Cape Coast Castle, Central Region; generated atmosphere and motion based on a real photograph | Kwameghana (Bright Kwame Ayisi); GhanaNice visual treatment | https://commons.wikimedia.org/wiki/File:A_daytime_view_of_Cape_Coast_Castle.jpg | CC BY 4.0 |
+| `real/hero-larabanga-mosque-*` | Larabanga Mosque, Savannah Region; generated atmosphere and motion based on a real photograph | ZSM; GhanaNice visual treatment | https://commons.wikimedia.org/wiki/File:Larabanga_Mosque,_Ghana.jpg | CC BY-SA 4.0 (adaptation shared under the same licence) |
 | `footer/volta-engraving*.webp`, `footer/volta-water-mask.png` | The Volta, engraved (blue line-engraving treatment of `real/regions/oti-lake-volta.jpg`) | Celestinesucess; engraving by GhanaNice | https://commons.wikimedia.org/wiki/File:Boat_on_the_Lake_Volta.jpg | CC BY-SA 4.0 (adaptation shared under the same licence) |
 
 ## Regional photography

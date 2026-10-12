@@ -47,8 +47,8 @@ img, video { display: block; max-width: 100%; }
 /* The map starts small, expands to the full screen, then carries the brand statement. */
 .hero { position: relative; height: 190svh; background: var(--paper); }
 .hero-stage { position: sticky; top: 0; height: 100svh; overflow: hidden; --mask-size: min(20.3vw, 301px); --copy-opacity: 0; --copy-y: 30px; }
-/* The still arch sits behind the video, so if a browser ever drops the video layer the
-   visitor sees the same frame rather than a flat navy block. */
+/* The Arch is the no-JavaScript fallback. JavaScript swaps this background for the chosen
+   destination poster, so a dropped video layer never flashes a flat navy block. */
 .hero-window { position: absolute; inset: 0; overflow: hidden; background: #173b4e url('assets/real/independence-arch-illustrated-1200.webp') center / cover; mask: url('assets/maps/ghana-mask.svg') center / var(--mask-size) auto no-repeat; -webkit-mask: url('assets/maps/ghana-mask.svg') center / var(--mask-size) auto no-repeat; }
 .hero-window.is-mask-refreshing { mask-size: calc(var(--mask-size) + .1px) auto; -webkit-mask-size: calc(var(--mask-size) + .1px) auto; }
 .hero-window.is-unmasked { mask: none; -webkit-mask: none; }
@@ -76,6 +76,8 @@ img, video { display: block; max-width: 100%; }
 .hero-intro h1 span, .hero-intro h1 strong { display: block; }
 .hero-intro h1 strong { color: var(--yellow); font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 400; }
 .hero-intro-note { max-width: 390px; padding-bottom: 9px; }
+.hero-intro-note .hero-destination { display: flex; align-items: center; gap: 11px; margin-bottom: 17px; font-family: Arial, Helvetica, sans-serif; font-size: .59rem; font-weight: 800; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; }
+.hero-destination::before { content: ''; flex: 0 0 28px; height: 2px; background: var(--yellow); }
 .hero-intro-note p { margin: 0 0 28px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1rem, 1.35vw, 1.28rem); line-height: 1.45; }
 .hero-intro-note a { display: flex; justify-content: space-between; border-block: 1px solid rgba(255,255,255,.72); padding: 14px 0; font-size: .67rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 

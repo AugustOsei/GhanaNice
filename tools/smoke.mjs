@@ -39,6 +39,13 @@ scriptFiles.forEach((file) => {
   }
 });
 
+const appSource = read('dist/app.js');
+const heroAssets = [...appSource.matchAll(/^\s+(?:poster|webm|mp4): '([^']+)'/gm)].map((match) => match[1]);
+check(heroAssets.length === 9, `Expected 9 hero destination assets, found ${heroAssets.length}`);
+heroAssets.forEach((asset) => {
+  check(fs.existsSync(path.join(dist, asset)), `Hero destination references missing asset: ${asset}`);
+});
+
 const dataSource = read('dist/data.js');
 const sandbox = { window: {} };
 vm.runInNewContext(dataSource, sandbox, { filename: 'data.js' });
@@ -79,23 +86,23 @@ regions?.forEach((region, index) => {
 
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=33',
+    'styles.css?v=35',
     'data.js?v=6',
-    'app.js?v=27',
+    'app.js?v=29',
     'tip-form.js?v=5',
     'footer.js?v=2',
     'id="hero-video"',
     'id="region-reader" role="dialog"',
   ],
   'dist/region.html': [
-    'styles.css?v=33',
+    'styles.css?v=35',
     'data.js?v=6',
     'region.js?v=10',
     'tip-form.js?v=5',
     'footer.js?v=2',
   ],
-  'dist/credits.html': ['styles.css?v=33'],
-  'dist/404.html': ['styles.css?v=33'],
+  'dist/credits.html': ['styles.css?v=35'],
+  'dist/404.html': ['styles.css?v=35'],
 };
 
 Object.entries(htmlExpectations).forEach(([file, expectations]) => {

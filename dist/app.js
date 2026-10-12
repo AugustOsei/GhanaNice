@@ -30,15 +30,78 @@ navLinks?.querySelectorAll('a').forEach(link => link.addEventListener('click', (
 /* A vertical reel: fast changes first, then increasingly long holds before it settles. */
 const heroWindow = document.querySelector('#hero-window');
 const heroVideo = document.querySelector('#hero-video');
+const heroDestinationCaption = document.querySelector('#hero-destination');
 const scenes = [...document.querySelectorAll('.map-scene')];
 const sequenceCount = document.querySelector('#sequence-count');
 const sequenceName = document.querySelector('#sequence-name');
 const spinStatus = document.querySelector('#spin-status');
 const sequenceSkip = document.querySelector('#sequence-skip');
 const sequenceAnnouncement = document.querySelector('#sequence-announcement');
-/* The arch appears exactly once, as the final scene. The old reel also carried a storm-lit
-   copy of the same photograph, so it looked like the last image landed twice. */
-const sceneNames = ['Jamestown', 'Wli Falls', 'Cape Coast', 'Made in Accra', 'Larabanga', 'Kakum', 'Independence Arch'];
+
+/* Each page load settles on one of three landmark loops. Avoid the destination shown on the
+   previous load in this tab, so refreshing changes the ending instead of merely having a
+   chance to. If storage is unavailable, the equal random choice still works. */
+const heroDestinations = [
+  {
+    key: 'independence-arch',
+    name: 'Independence Arch',
+    place: 'Independence Arch in Accra',
+    caption: 'Independence Arch · Accra',
+    poster: 'assets/real/independence-arch-illustrated-1200.webp',
+    webm: 'assets/real/independence-arch-loop.webm',
+    mp4: 'assets/real/independence-arch-loop.mp4',
+  },
+  {
+    key: 'cape-coast-castle',
+    name: 'Cape Coast Castle',
+    place: 'Cape Coast Castle in the Central Region',
+    caption: 'Cape Coast Castle · Central Region',
+    poster: 'assets/real/hero-cape-coast-castle-poster-v1.jpg',
+    webm: 'assets/real/hero-cape-coast-castle-v1.webm',
+    mp4: 'assets/real/hero-cape-coast-castle-v1.mp4',
+  },
+  {
+    key: 'larabanga-mosque',
+    name: 'Larabanga Mosque',
+    place: 'Larabanga Mosque in the Savannah Region',
+    caption: 'Larabanga Mosque · Savannah Region',
+    poster: 'assets/real/hero-larabanga-mosque-poster-v1.jpg',
+    webm: 'assets/real/hero-larabanga-mosque-v1.webm',
+    mp4: 'assets/real/hero-larabanga-mosque-v1.mp4',
+  },
+];
+
+function chooseHeroDestination() {
+  let previous = '';
+  try { previous = sessionStorage.getItem('ghanaNiceHeroDestination') || ''; } catch {}
+  const choices = heroDestinations.filter(destination => destination.key !== previous);
+  const destination = choices[Math.floor(Math.random() * choices.length)] || heroDestinations[0];
+  try { sessionStorage.setItem('ghanaNiceHeroDestination', destination.key); } catch {}
+  return destination;
+}
+
+const heroDestination = chooseHeroDestination();
+const finalScene = scenes.at(-1);
+if (heroWindow && heroVideo && finalScene) {
+  heroWindow.setAttribute('aria-label', `Scenes from across Ghana settling on ${heroDestination.place}`);
+  heroWindow.style.backgroundImage = `url('${heroDestination.poster}')`;
+  heroVideo.poster = heroDestination.poster;
+  heroVideo.replaceChildren(...[
+    ['video/webm', heroDestination.webm],
+    ['video/mp4', heroDestination.mp4],
+  ].map(([type, src]) => {
+    const source = document.createElement('source');
+    source.type = type;
+    source.src = src;
+    return source;
+  }));
+  heroVideo.load();
+  finalScene.src = heroDestination.poster;
+  if (heroDestinationCaption) heroDestinationCaption.textContent = heroDestination.caption;
+}
+
+/* The chosen landmark appears exactly once, as the final scene. */
+const sceneNames = ['Jamestown', 'Wli Falls', 'Cape Coast', 'Made in Accra', 'Larabanga', 'Kakum', heroDestination.name];
 const FINAL_SCENE = sceneNames.length - 1;
 const spinOrder = [2, 5, 1, 4, 0, 3, 1, 5, 0, 4, 2, 3, 5, 0, 2, 4, FINAL_SCENE];
 const spinHolds = [72, 58, 50, 48, 50, 54, 60, 68, 78, 92, 112, 140, 180, 230, 300, 390, 520];
@@ -75,8 +138,8 @@ function finishSequence(skip = false) {
     spinStatus.setAttribute('aria-hidden', 'true');
     sequenceSkip.classList.add('is-hidden');
     sequenceSkip.disabled = true;
-    sequenceAnnouncement.textContent = 'Showing Independence Arch in Accra.';
-    /* Reduced motion keeps the still arch (the poster) instead of a looping video. */
+    sequenceAnnouncement.textContent = `Showing ${heroDestination.place}.`;
+    /* Reduced motion keeps the chosen landmark's poster instead of a looping video. */
     if (!heroVideo || reduced) return revealVideo();
     try { heroVideo.currentTime = 0; } catch {}
     /* play() can remain pending while a browser waits for media data. Never let that keep
@@ -161,7 +224,7 @@ function playSequence() {
 }
 
 /* Start only once every photo is downloaded and decoded, so no step lands on an empty or
-   half-decoded frame. A visitor on a very slow connection goes straight to the arch. */
+   half-decoded frame. A visitor on a very slow connection goes straight to the destination. */
 if (reduced || !scenes[0]?.animate) finishSequence(true);
 else {
   const decoded = Promise.all(scenes.map(scene => scene.decode().catch(() => {})));
@@ -212,8 +275,8 @@ function renderHero() {
     const travel = Math.max(1, hero.offsetHeight - innerHeight);
     const progress = clamp(-heroRect.top / travel);
     heroUsesLightNav = progress > .13 && heroRect.bottom > 76;
-    /* A visitor who scrolls on during the spin has stopped watching it. Land on the arch
-       now, or the reel keeps flicking through photos full-screen as the outline opens. */
+    /* A visitor who scrolls on during the spin has stopped watching it. Land on the chosen
+       destination now, or the reel keeps flicking through photos as the outline opens. */
     if (!sequenceFinished && progress > .03) finishSequence(true);
     /* Past the hero the values stop changing, so skip restyling the masked stage on every
        scroll frame further down the page. */
