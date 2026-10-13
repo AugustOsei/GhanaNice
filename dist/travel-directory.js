@@ -558,6 +558,13 @@ serviceForm?.addEventListener('submit', async event => {
 
 applyFilters();
 
+/* The home page links here with ?category=tours|transport|stay: open already filtered. */
+const requestedCategory = new URLSearchParams(location.search).get('category');
+if (requestedCategory && requestedCategory !== 'all' && categoryNames[requestedCategory]) {
+  setCategory(requestedCategory);
+  requestAnimationFrame(() => document.querySelector('#directory')?.scrollIntoView({ block: 'start' }));
+}
+
 const requestedBusiness = new URLSearchParams(location.search).get('business');
 if (requestedBusiness) {
   const requestedService = services.find(service => service.id === requestedBusiness);

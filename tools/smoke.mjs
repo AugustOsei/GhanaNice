@@ -119,7 +119,7 @@ regions?.forEach((region, index) => {
 
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=35',
+    'styles.css?v=36',
     'data.js?v=6',
     'app.js?v=29',
     'tip-form.js?v=5',
@@ -128,20 +128,20 @@ const htmlExpectations = {
     'id="region-reader" role="dialog"',
   ],
   'dist/region.html': [
-    'styles.css?v=35',
+    'styles.css?v=36',
     'data.js?v=6',
     'region.js?v=10',
     'tip-form.js?v=5',
     'footer.js?v=2',
   ],
-  'dist/credits.html': ['styles.css?v=35'],
-  'dist/404.html': ['styles.css?v=35'],
+  'dist/credits.html': ['styles.css?v=36'],
+  'dist/404.html': ['styles.css?v=36'],
   'dist/travel-directory.html': [
-    'styles.css?v=35',
-    'travel-directory.css?v=15',
+    'styles.css?v=36',
+    'travel-directory.css?v=16',
     'config.js?v=5',
     'travel-directory-data.js?v=4',
-    'travel-directory.js?v=16',
+    'travel-directory.js?v=17',
     'footer.js?v=2',
     'id="featured-count"',
     'id="featured-page"',

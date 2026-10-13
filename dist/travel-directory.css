@@ -5,7 +5,7 @@
 .travel-hero { position: relative; min-height: 560px; display: grid; grid-template-columns: 1fr; align-items: end; overflow: hidden; padding: 136px clamp(20px, 5vw, 80px) clamp(44px, 5vw, 68px); background: var(--ink); color: var(--white); }
 .travel-hero-grid { position: absolute; inset: 76px 0 0 52%; border-left: 1px solid rgba(255,255,255,.12); background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 52px 52px; mask-image: linear-gradient(135deg, #000, transparent 74%); }
 .travel-hero-copy { position: relative; z-index: 1; }
-.travel-kicker, .travel-section-head > div > p, .directory-heading > div > p, .listing-section-heading > div > p, .directory-method > div > p, .service-submit-copy > p:first-child { margin: 0; font-size: .62rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.travel-kicker, .travel-section-head > div > p, .directory-heading > div > p, .listing-section-heading > div > p, .service-submit-copy > p:first-child { margin: 0; font-size: .62rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 .travel-kicker { display: flex; align-items: center; gap: 12px; margin-bottom: clamp(30px, 5vw, 62px); }
 .travel-kicker::before { content: ''; width: 34px; height: 3px; background: var(--red); }
 .travel-hero h1 { max-width: 900px; margin: 0; font-size: clamp(4.6rem, 9vw, 9.7rem); line-height: .79; letter-spacing: -.09em; }
@@ -35,7 +35,7 @@
 /* Illustrated category controls */
 .travel-needs { padding: clamp(48px, 6vw, 84px) clamp(20px, 5vw, 80px) clamp(52px, 6vw, 88px); }
 .travel-section-head { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(260px, .55fr); gap: 7vw; align-items: end; margin-bottom: clamp(26px, 3.4vw, 44px); }
-.travel-section-head h2, .directory-heading h2, .directory-method h2, .service-submit-copy h2 { margin: 12px 0 0; font-size: clamp(3.1rem, 6vw, 7rem); line-height: .88; letter-spacing: -.075em; }
+.travel-section-head h2, .directory-heading h2, .service-submit-copy h2 { margin: 12px 0 0; font-size: clamp(3.1rem, 6vw, 7rem); line-height: .88; letter-spacing: -.075em; }
 .travel-section-head > p, .directory-heading > p { max-width: 480px; margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.02rem; line-height: 1.5; }
 .need-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--ink); background: var(--ink); gap: 1px; }
 .need-card { --card-bg: var(--paper); display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto auto auto; gap: 12px; border: 0; padding: clamp(20px, 2.2vw, 30px); background: var(--card-bg); color: var(--ink); text-align: left; cursor: pointer; transition: transform .24s var(--ease), background .24s, color .24s; }
@@ -150,15 +150,11 @@
 
 @keyframes featured-enter { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
-/* Method and application retain the editorial rhythm, but use much less display type. */
-.directory-method { display: grid; grid-template-columns: .75fr 1.25fr; gap: 8vw; padding: clamp(78px, 10vw, 145px) clamp(20px, 6vw, 94px); background: var(--yellow); }
-.directory-method h2 { max-width: 640px; font-size: clamp(2.9rem, 5vw, 6rem); }
-.directory-method ol { margin: 0; padding: 0; list-style: none; border-top: 2px solid; }
-.directory-method li { display: grid; grid-template-columns: 48px .8fr 1fr; gap: 20px; padding: 23px 0; border-bottom: 1px solid rgba(17,17,15,.45); }
-.directory-method li span { font-size: .58rem; font-weight: 800; }
-.directory-method li strong { font-size: 1rem; }
-.directory-method li p { margin: 0; font-family: Georgia, 'Times New Roman', serif; line-height: 1.45; }
-.method-note { grid-column: 2; margin: 8px 0 0; max-width: 690px; font-size: .59rem; font-weight: 800; line-height: 1.5; letter-spacing: .06em; text-transform: uppercase; }
+/* What "checked" means is a short note, not a section of its own: one line on the check and
+   one on its limits, in a slim band between the list and the form. */
+.directory-method { display: grid; grid-template-columns: minmax(150px, .32fr) 1fr 1fr; gap: clamp(20px, 4vw, 56px); align-items: start; padding: clamp(30px, 4vw, 46px) clamp(20px, 5vw, 80px); background: var(--yellow); scroll-margin-top: 76px; }
+.directory-method h2 { margin: 3px 0 0; font-size: .62rem; font-weight: 800; letter-spacing: .13em; line-height: 1.4; text-transform: uppercase; }
+.directory-method p { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: .95rem; line-height: 1.5; }
 .service-submit { display: grid; grid-template-columns: .75fr 1.25fr; background: #d9d0f6; }
 .service-submit-copy { padding: clamp(70px, 8vw, 120px) clamp(20px, 6vw, 90px); }
 .service-submit-copy h2 { margin-top: 30px; font-size: clamp(3.2rem, 5.7vw, 7rem); }
@@ -246,10 +242,8 @@
   .profile-gallery { gap: 5px; }
   .profile-copy h2 { font-size: clamp(3rem, 15vw, 5.2rem); }
   .directory-method, .service-submit { grid-template-columns: 1fr; }
+  .directory-method { gap: 12px; }
   .directory-method, .service-submit-copy, .service-form { padding-inline: 18px; }
-  .directory-method ol, .method-note { grid-column: 1; }
-  .directory-method li { grid-template-columns: 36px 1fr; }
-  .directory-method li p { grid-column: 2; }
   .service-form { grid-template-columns: 1fr; }
   .service-form > label:nth-child(even):not(.service-consent), .service-form > label.service-form-wide { grid-column: 1; padding-left: 0; border-left: 0; }
   .listing-plan { grid-template-columns: 1fr; }
