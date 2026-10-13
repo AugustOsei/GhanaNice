@@ -1,6 +1,39 @@
 {
- "updated": "2026-10-10T11:35:20.372Z",
+ "updated": "2026-10-13T10:13:33.591Z",
  "listings": [
+  {
+   "id": "a4437986-8355-4945-9f92-a3d26a21a816",
+   "place": "Abol cafe Ghana",
+   "kind": "Local business",
+   "category": "Eat & drink",
+   "regionSlug": "greater-accra",
+   "area": "Kpeshie, Accra",
+   "note": "",
+   "submitterName": "Kwesi",
+   "placeId": "ChIJ_V5k2_6b3w8RGtSwZbVbHgY",
+   "mapsUrl": "https://maps.google.com/?cid=440890648182182938&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "website": "",
+   "phoneUrl": "tel:+233256809977",
+   "rating": 4.4,
+   "reviewCount": 26,
+   "googleCheckedAt": "2026-10-13",
+   "photos": [
+    {
+     "src": "assets/listings/a4437986-8355-4945-9f92-a3d26a21a816/1.jpg",
+     "small": "assets/listings/a4437986-8355-4945-9f92-a3d26a21a816/1-800.jpg"
+    },
+    {
+     "src": "assets/listings/a4437986-8355-4945-9f92-a3d26a21a816/2.jpg",
+     "small": "assets/listings/a4437986-8355-4945-9f92-a3d26a21a816/2-800.jpg"
+    },
+    {
+     "src": "assets/listings/a4437986-8355-4945-9f92-a3d26a21a816/3.jpg",
+     "small": "assets/listings/a4437986-8355-4945-9f92-a3d26a21a816/3-800.jpg"
+    }
+   ],
+   "photoCredit": "Kwesi",
+   "publishedAt": "2026-10-13T10:13:33.591Z"
+  },
   {
    "id": "95113a43-a774-4931-88c7-ea9b34b5bd3e",
    "place": "Sikada",
