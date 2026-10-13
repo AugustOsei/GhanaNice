@@ -6,6 +6,8 @@ window.GHANANICE_CONFIG = {
   tipEndpoint: 'https://n8n.augustwheel.com/webhook/ghananice-tip',
   /* n8n webhook, GET ?region=<slug>: the published tips for that region. */
   directoryEndpoint: '',
+  /* Business directory intake, POST JSON. Blank = drafts stay in the visitor's browser. */
+  serviceSubmissionEndpoint: 'https://n8n.augustwheel.com/webhook/ghananice-service',
   /* Browser key for Google place suggestions in the tip form. Restrict it in Google Cloud to
      the Places API (New) and to ghananice.com. Blank = a plain name + town form. */
   placesKey: '',

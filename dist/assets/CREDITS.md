@@ -15,6 +15,19 @@ All listed location and maker images depict real places or people in Ghana. Crop
 | `real/hero-larabanga-mosque-*` | Larabanga Mosque, Savannah Region; generated atmosphere and motion based on a real photograph | ZSM; GhanaNice visual treatment | https://commons.wikimedia.org/wiki/File:Larabanga_Mosque,_Ghana.jpg | CC BY-SA 4.0 (adaptation shared under the same licence) |
 | `footer/volta-engraving*.webp`, `footer/volta-water-mask.png` | The Volta, engraved (blue line-engraving treatment of `real/regions/oti-lake-volta.jpg`) | Celestinesucess; engraving by GhanaNice | https://commons.wikimedia.org/wiki/File:Boat_on_the_Lake_Volta.jpg | CC BY-SA 4.0 (adaptation shared under the same licence) |
 
+## Travel directory featured profiles
+
+These photographs depict the named businesses. A future paid featured profile must use media
+supplied by the business with permission for GhanaNice to display it, or separately licensed
+media documented here.
+
+| Asset | Subject | Creator | Source | License |
+|---|---|---|---|---|
+| `real/stc-coach-featured.jpg` | An Intercity STC coach at the STC yard in Accra | Masssly | https://commons.wikimedia.org/wiki/File:STC_coach.jpg | CC BY-SA 4.0 |
+| `real/stc-yard-featured.jpg` | Passengers boarding coaches at the Intercity STC yard in Accra | Blaise Daniel Korley Ahumah | https://commons.wikimedia.org/wiki/File:ISTC_TRANSPORT_YARD_by_Blaise_Daniel_Korley_Ahumah.jpg | CC BY-SA 4.0 |
+| `real/zaina-pool-chairs-featured.jpg` | Poolside chairs at Zaina Lodge in Mole National Park | Danieljatuat | https://commons.wikimedia.org/wiki/File:Poolside_chairs_at_Zaina_Lodge_in_Mole_National_Park.jpg | CC BY-SA 4.0 |
+| `real/zaina-table-chair-featured.jpg` | A table and chair at Zaina Lodge in Mole National Park | Danieljatuat | https://commons.wikimedia.org/wiki/File:A_table_and_chair_at_Zaina_Lodge_in_Mole_National_Park.jpg | CC BY-SA 4.0 |
+
 ## Regional photography
 
 One photograph per region, each depicting a named place inside that region. Where a region has only one verified photograph, the site shows one image rather than repeating it.

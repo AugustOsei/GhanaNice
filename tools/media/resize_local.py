@@ -7,7 +7,7 @@ The originals stay (the lightbox and CREDITS.md point at them). Next to each one
 Run from anywhere: python3 tools/media/resize_local.py
 """
 import os
-from PIL import Image
+from PIL import Image, ImageOps
 
 REAL = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'dist', 'assets', 'real')
 WIDTHS = (400, 800, 1200)
@@ -17,7 +17,9 @@ for folder in (REAL, os.path.join(REAL, 'regions')):
         stem, ext = os.path.splitext(name)
         if ext.lower() not in ('.jpg', '.jpeg', '.png') or stem.endswith('-storm'):
             continue
-        image = Image.open(os.path.join(folder, name)).convert('RGB')
+        # Bake camera orientation into the pixels before stripping EXIF in the WebP copy.
+        # Without this, portrait-tagged phone photos can appear sideways in browsers.
+        image = ImageOps.exif_transpose(Image.open(os.path.join(folder, name))).convert('RGB')
         for width in WIDTHS:
             copy = image if image.width <= width else image.resize((width, round(image.height * width / image.width)), Image.LANCZOS)
             out = os.path.join(folder, f'{stem}-{width}.webp')

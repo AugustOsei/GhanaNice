@@ -1,0 +1,1006 @@
+{
+ "name": "GhanaNice — Travel services",
+ "nodes": [
+  {
+   "id": "gns-1",
+   "name": "Service from the site",
+   "type": "n8n-nodes-base.webhook",
+   "typeVersion": 2,
+   "position": [
+    0,
+    0
+   ],
+   "parameters": {
+    "httpMethod": "POST",
+    "path": "ghananice-service",
+    "responseMode": "responseNode",
+    "options": {
+     "allowedOrigins": "https://www.ghananice.com,https://ghananice.com,http://localhost:4173,http://127.0.0.1:4173"
+    }
+   },
+   "webhookId": "7f5d2a3f-3e41-4d62-9a72-1000000000a1"
+  },
+  {
+   "id": "gns-2",
+   "name": "Read service",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    240,
+    0
+   ],
+   "parameters": {
+    "jsCode": "// Validate and normalize a travel-directory submission. Nothing here makes the business\n// \"trusted\": it only rejects malformed intake and prepares a conservative standard listing.\nconst SETTINGS = {\n  reviewTo: 'augustministry@gmail.com',\n  site: 'https://www.ghananice.com',\n  sheetId: '1Af866rDXLZ1mnnHHVvqQ63HL9cs9CYYab2a6JBsdMq0',\n  branch: 'main'\n};\nconst CATEGORIES = {\n  tours: 'Tours & guides',\n  transport: 'Getting around',\n  stay: 'Places to stay'\n};\nconst REGIONS = {\n  'greater-accra': 'Greater Accra', central: 'Central', volta: 'Volta', savannah: 'Savannah', western: 'Western',\n  ashanti: 'Ashanti', eastern: 'Eastern', northern: 'Northern', 'upper-east': 'Upper East', 'upper-west': 'Upper West',\n  'north-east': 'North East', oti: 'Oti', bono: 'Bono', 'bono-east': 'Bono East', ahafo: 'Ahafo', 'western-north': 'Western North'\n};\n\nconst input = $input.first();\nconst raw = input.json.body && typeof input.json.body === 'object' ? input.json.body : input.json;\nconst text = (value, max) => String(value ?? '').replace(/\\s+/g, ' ').trim().slice(0, max);\nif (text(raw.companyFax, 100)) return [{ json: { verdict: 'drop', reason: 'honeypot' } }];\n\nconst email = text(raw.email, 180).toLowerCase();\nlet website = text(raw.website, 500);\ntry {\n  const parsed = new URL(website);\n  const privateHost = /^(localhost|127\\.|10\\.|192\\.168\\.|172\\.(1[6-9]|2\\d|3[01])\\.)/i.test(parsed.hostname);\n  website = parsed.protocol === 'https:' && !privateHost ? parsed.href : '';\n} catch { website = ''; }\n\nconst businessName = text(raw.businessName, 100);\nconst category = CATEGORIES[raw.category] ? raw.category : '';\nconst primaryRegion = REGIONS[raw.primaryRegion] ? raw.primaryRegion : '';\nconst listingType = raw.listingType === 'featured' ? 'featured' : 'standard';\nconst idSeed = /^[0-9a-f-]{16,64}$/i.test(raw.id || '') ? raw.id.toLowerCase() : `${Date.now()}-${$execution.id}`;\nconst slug = businessName.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 54) || 'service';\nconst listingId = `${slug}-${idSeed.replace(/[^a-z0-9]/g, '').slice(0, 8)}`;\nconst submittedAt = /^\\d{4}-\\d\\d-\\d\\dT/.test(raw.submittedAt || '') ? raw.submittedAt : new Date().toISOString();\n\nconst service = {\n  id: idSeed,\n  listingId,\n  submittedAt,\n  businessName,\n  category,\n  categoryLabel: CATEGORIES[category] || '',\n  primaryRegion,\n  regionName: REGIONS[primaryRegion] || '',\n  baseLocation: text(raw.baseLocation, 100),\n  coverage: text(raw.coverage, 180),\n  description: text(raw.description, 600),\n  website,\n  listingType,\n  featuredInterest: listingType === 'featured',\n  contactName: text(raw.contactName, 100),\n  email: /^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/.test(email) ? email : '',\n  phone: text(raw.phone, 40),\n  consent: raw.consent === true,\n  source: text(raw.source, 60),\n  pageUrl: text(raw.pageUrl, 400)\n};\n\nlet reason = '';\nif (service.businessName.length < 2) reason = 'A business name is required.';\nelse if (!service.category) reason = 'Choose a supported service category.';\nelse if (!service.primaryRegion) reason = 'Choose the primary region.';\nelse if (service.baseLocation.length < 2) reason = 'A base location is required.';\nelse if (!service.website) reason = 'A public HTTPS website or social media page is required.';\nelse if (service.coverage.length < 2) reason = 'Service coverage is required.';\nelse if (service.description.length < 30) reason = 'The description is too short.';\nelse if (service.contactName.length < 2) reason = 'A contact name is required.';\nelse if (!service.email) reason = 'A valid email is required.';\nelse if (!service.consent) reason = 'The representative confirmation is required.';\nif (reason) return [{ json: { verdict: 'invalid', reason } }];\n\nconst checked = new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'Africa/Accra' }).format(new Date()).replace(',', '');\nconst listing = {\n  id: listingId,\n  name: service.businessName,\n  category: service.category,\n  categoryLabel: service.categoryLabel,\n  base: service.baseLocation,\n  regions: [service.primaryRegion],\n  coverage: service.coverage,\n  description: service.description,\n  goodFor: [],\n  website: service.website,\n  checked,\n  featured: false\n};\n\nconst now = new Date().toISOString();\nconst row = [service.id, service.submittedAt, 'received', service.businessName, service.category, service.primaryRegion,\n  service.baseLocation, service.coverage, service.description, service.website, service.contactName, service.email,\n  service.phone, service.listingType, '', '', service.source, now, '', '', service.listingId];\n\nreturn [{ json: { verdict: 'ok', service, listing, settings: SETTINGS, row } }];\n"
+   }
+  },
+  {
+   "id": "gns-3",
+   "name": "Valid service?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    480,
+    0
+   ],
+   "parameters": {
+    "conditions": {
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose",
+      "version": 2
+     },
+     "conditions": [
+      {
+       "id": "c2",
+       "leftValue": "={{ $json.verdict === 'ok' }}",
+       "rightValue": "",
+       "operator": {
+        "type": "boolean",
+        "operation": "true",
+        "singleValue": true
+       }
+      }
+     ],
+     "combinator": "and"
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "gns-4",
+   "name": "Answer: not accepted",
+   "type": "n8n-nodes-base.respondToWebhook",
+   "typeVersion": 1.1,
+   "position": [
+    720,
+    180
+   ],
+   "parameters": {
+    "respondWith": "json",
+    "responseBody": "={{ JSON.stringify($json.verdict === 'drop' ? { ok: true } : { ok: false, error: $json.reason }) }}",
+    "options": {
+     "responseCode": "={{ $json.verdict === 'drop' ? 200 : 400 }}"
+    }
+   }
+  },
+  {
+   "id": "gns-5",
+   "name": "Log received",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    720,
+    0
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://sheets.googleapis.com/v4/spreadsheets/1Af866rDXLZ1mnnHHVvqQ63HL9cs9CYYab2a6JBsdMq0/values/Services!A1:append",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "googleSheetsOAuth2Api",
+    "sendQuery": true,
+    "queryParameters": {
+     "parameters": [
+      {
+       "name": "valueInputOption",
+       "value": "RAW"
+      },
+      {
+       "name": "insertDataOption",
+       "value": "INSERT_ROWS"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ values: [$json.row] }) }}"
+   },
+   "credentials": {
+    "googleSheetsOAuth2Api": {
+     "id": "zkOuPwkfg7PMvFPO",
+     "name": "Google Sheets account"
+    }
+   }
+  },
+  {
+   "id": "gns-6",
+   "name": "Answer: received",
+   "type": "n8n-nodes-base.respondToWebhook",
+   "typeVersion": 1.1,
+   "position": [
+    960,
+    0
+   ],
+   "parameters": {
+    "respondWith": "json",
+    "responseBody": "={ \"ok\": true }",
+    "options": {}
+   }
+  },
+  {
+   "id": "gns-7",
+   "name": "Current published services",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1200,
+    0
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/contents/dist/data/service-submissions.json",
+    "options": {
+     "response": {
+      "response": {
+       "neverError": true
+      }
+     }
+    },
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendQuery": true,
+    "queryParameters": {
+     "parameters": [
+      {
+       "name": "ref",
+       "value": "main"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gns-8",
+   "name": "Prepare review",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1440,
+    0
+   ],
+   "parameters": {
+    "jsCode": "// Prepare the owner approval and submitter emails, including a duplicate warning from the\n// currently published service-submissions file. Approval publishes a standard listing only;\n// a featured upgrade still requires a personal pricing, duration and media-rights agreement.\nconst read = $('Read service').first().json;\nconst { service, listing, settings } = read;\nlet published = [];\ntry {\n  const encoded = $('Current published services').first().json.content || '';\n  published = JSON.parse(Buffer.from(encoded, 'base64').toString('utf8')).services || [];\n} catch { published = []; }\n\n// Two businesses can share instagram.com or facebook.com, so a social page is identified by\n// its host and page name; an ordinary website is identified by its host alone.\nconst SOCIAL_HOSTS = ['instagram.com', 'facebook.com', 'fb.com', 'tiktok.com', 'x.com', 'twitter.com', 'youtube.com', 'linktr.ee', 'wa.me'];\nconst linkKey = value => {\n  try {\n    const url = new URL(value);\n    const host = url.hostname.replace(/^(www|m|web)\\./, '').toLowerCase();\n    if (!SOCIAL_HOSTS.includes(host)) return host;\n    return `${host}/${url.pathname.replace(/^\\/+|\\/+$/g, '').toLowerCase()}`;\n  } catch { return ''; }\n};\nconst duplicate = published.find(item => item.name?.toLowerCase() === listing.name.toLowerCase() || (linkKey(item.website) && linkKey(item.website) === linkKey(listing.website)));\nconst firstName = service.contactName.split(/\\s+/)[0] || '';\nconst esc = value => String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;');\nconst link = value => `<a href=\"${esc(value)}\">${esc(value)}</a>`;\nconst wrap = body => `<div style=\"font-family:Georgia,serif;font-size:16px;line-height:1.55;color:#11110f;max-width:560px\">${body}<p style=\"margin-top:28px\">August<br><span style=\"font-family:Arial,sans-serif;font-size:12px;color:#666\">GhanaNice · <a href=\"${settings.site}\">ghananice.com</a></span></p></div>`;\nconst featuredNote = service.featuredInterest\n  ? 'They are interested in featured placement. Contact them personally to agree pricing, duration and image permissions. Approving here publishes the standard listing; the featured upgrade remains manual.'\n  : 'They requested a standard listing.';\nconst duplicateNote = duplicate ? `Possible duplicate: “${duplicate.name}” is already published at ${duplicate.website}.` : 'No matching name or link is already in the submitted-services file.';\n\nconst approvalText = [\n  `${service.businessName} — ${service.categoryLabel}`,\n  `${service.baseLocation}, ${service.regionName}`,\n  service.description,\n  `Coverage: ${service.coverage}`,\n  `Link (website or social page): ${service.website}`,\n  `Contact: ${service.contactName} · ${service.email}${service.phone ? ' · ' + service.phone : ''}`,\n  featuredNote,\n  duplicateNote,\n  'Before approving, confirm the website or social page belongs to the business, the service is relevant to travel in Ghana, the location/category/claims match its public information, and the representative can be contacted. Approval publishes only the standard listing.'\n].join('\\n\\n');\n\nconst hello = firstName ? `Hi ${esc(firstName)},` : 'Hello,';\nconst thanksHtml = wrap(`<p>${hello}</p><p>Thank you for submitting <b>${esc(service.businessName)}</b> to the GhanaNice travel directory. We’ll check the business, its website or social media page and the details you supplied before anything is published.</p>${service.featuredInterest ? '<p>You also expressed interest in featured placement. I’ll contact you personally about pricing, duration and suitable images; selecting it on the form does not commit you to anything.</p>' : ''}<p>We’ll email you after the review.</p>`);\nconst liveUrl = `${settings.site}/travel-directory.html?business=${encodeURIComponent(listing.id)}#service-${encodeURIComponent(listing.id)}`;\nconst liveHtml = wrap(`<p>${hello}</p><p><b>${esc(service.businessName)}</b> is now listed in the GhanaNice travel directory.</p><p><a href=\"${liveUrl}\">View the listing</a></p>${service.featuredInterest ? '<p>Your standard listing is live. I’ll follow up separately about the optional featured placement.</p>' : ''}`);\nconst rejectedHtml = wrap(`<p>${hello}</p><p>Thank you for submitting <b>${esc(service.businessName)}</b>. We couldn’t add it to the GhanaNice directory after reviewing the public information supplied.</p><p>You can reply with an updated website or social media page, or corrected details, if something has changed.</p>`);\n\nconst range = $('Log received').first().json.updates?.updatedRange || '';\nconst rowNumber = Number((range.match(/![A-Z]+(\\d+)/) || [])[1]) || null;\nconst checks = duplicate ? `possible duplicate: ${duplicate.name}` : 'manual checks pending';\nconst now = new Date().toISOString();\nconst row = [...read.row];\nrow[2] = service.featuredInterest ? 'featured interest: waiting for review' : 'waiting for review';\nrow[14] = checks;\nrow[17] = now;\n\nreturn [{ json: {\n  service, listing, settings, row, rowNumber, approvalText, thanksHtml, liveHtml, rejectedHtml,\n  email: service.email,\n  subjectThanks: `We received ${service.businessName} for GhanaNice`,\n  subjectApproval: `${service.featuredInterest ? '[Featured interest] ' : ''}Approve “${service.businessName}” for GhanaNice?`,\n  subjectLive: `${service.businessName} is on GhanaNice`,\n  subjectRejected: `About your GhanaNice directory submission`,\n  liveUrl\n} }];\n"
+   }
+  },
+  {
+   "id": "gns-9",
+   "name": "Log for review",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1680,
+    -180
+   ],
+   "parameters": {
+    "method": "PUT",
+    "url": "=https://sheets.googleapis.com/v4/spreadsheets/1Af866rDXLZ1mnnHHVvqQ63HL9cs9CYYab2a6JBsdMq0/values/Services!A{{ $json.rowNumber }}:U{{ $json.rowNumber }}",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "googleSheetsOAuth2Api",
+    "sendQuery": true,
+    "queryParameters": {
+     "parameters": [
+      {
+       "name": "valueInputOption",
+       "value": "RAW"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ values: [$json.row] }) }}"
+   },
+   "credentials": {
+    "googleSheetsOAuth2Api": {
+     "id": "zkOuPwkfg7PMvFPO",
+     "name": "Google Sheets account"
+    }
+   },
+   "onError": "continueRegularOutput"
+  },
+  {
+   "id": "gns-10",
+   "name": "Thank the sender",
+   "type": "n8n-nodes-base.gmail",
+   "typeVersion": 2.1,
+   "position": [
+    1680,
+    0
+   ],
+   "parameters": {
+    "sendTo": "={{ $('Prepare review').first().json.email }}",
+    "subject": "={{ $('Prepare review').first().json.subjectThanks }}",
+    "emailType": "html",
+    "message": "={{ $('Prepare review').first().json.thanksHtml }}",
+    "options": {
+     "appendAttribution": false,
+     "senderName": "GhanaNice"
+    }
+   },
+   "credentials": {
+    "gmailOAuth2": {
+     "id": "XSli9zjeTSRhQNLt",
+     "name": "Gmail account"
+    }
+   },
+   "onError": "continueRegularOutput"
+  },
+  {
+   "id": "gns-11",
+   "name": "Ask August to approve",
+   "type": "n8n-nodes-base.gmail",
+   "typeVersion": 2.1,
+   "position": [
+    1920,
+    0
+   ],
+   "parameters": {
+    "operation": "sendAndWait",
+    "sendTo": "={{ $('Prepare review').first().json.settings.reviewTo }}",
+    "subject": "={{ $('Prepare review').first().json.subjectApproval }}",
+    "message": "={{ $('Prepare review').first().json.approvalText }}",
+    "approvalOptions": {
+     "values": {
+      "approvalType": "double",
+      "approveLabel": "Approve standard listing",
+      "disapproveLabel": "Reject"
+     }
+    },
+    "options": {
+     "limitWaitTime": {
+      "values": {
+       "limitType": "afterTimeInterval",
+       "resumeAmount": 30,
+       "resumeUnit": "days"
+      }
+     }
+    }
+   },
+   "credentials": {
+    "gmailOAuth2": {
+     "id": "XSli9zjeTSRhQNLt",
+     "name": "Gmail account"
+    }
+   },
+   "webhookId": "7f5d2a3f-3e41-4d62-9a72-1000000000a2"
+  },
+  {
+   "id": "gns-12",
+   "name": "Approved?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    2160,
+    0
+   ],
+   "parameters": {
+    "conditions": {
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose",
+      "version": 2
+     },
+     "conditions": [
+      {
+       "id": "c11",
+       "leftValue": "={{ $json.data?.approved === true }}",
+       "rightValue": "",
+       "operator": {
+        "type": "boolean",
+        "operation": "true",
+        "singleValue": true
+       }
+      }
+     ],
+     "combinator": "and"
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "gns-13",
+   "name": "Git ref",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    2640,
+    -180
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/git/ref/heads/main",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gns-14",
+   "name": "Git commit",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    2880,
+    -180
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "=https://api.github.com/repos/AugustOsei/GhanaNice/git/commits/{{ $json.object.sha }}",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gns-15",
+   "name": "Current service file",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    3120,
+    -180
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/contents/dist/data/service-submissions.json",
+    "options": {
+     "response": {
+      "response": {
+       "neverError": true
+      }
+     }
+    },
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendQuery": true,
+    "queryParameters": {
+     "parameters": [
+      {
+       "name": "ref",
+       "value": "main"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gns-16",
+   "name": "Build service file",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    3360,
+    -180
+   ],
+   "parameters": {
+    "jsCode": "// Add the approved standard listing to the JSON file read by the directory. Re-read the file\n// after the approval wait so concurrent approvals cannot overwrite one another.\nconst review = $('Prepare review').first().json;\nconst current = $input.first().json;\nlet body = { services: [] };\ntry { body = JSON.parse(Buffer.from(current.content || '', 'base64').toString('utf8')); } catch { body = { services: [] }; }\nif (!Array.isArray(body.services)) body.services = [];\n\n// Two businesses can share instagram.com or facebook.com, so a social page is identified by\n// its host and page name; an ordinary website is identified by its host alone.\nconst SOCIAL_HOSTS = ['instagram.com', 'facebook.com', 'fb.com', 'tiktok.com', 'x.com', 'twitter.com', 'youtube.com', 'linktr.ee', 'wa.me'];\nconst linkKey = value => {\n  try {\n    const url = new URL(value);\n    const host = url.hostname.replace(/^(www|m|web)\\./, '').toLowerCase();\n    if (!SOCIAL_HOSTS.includes(host)) return host;\n    return `${host}/${url.pathname.replace(/^\\/+|\\/+$/g, '').toLowerCase()}`;\n  } catch { return ''; }\n};\nconst exists = body.services.some(item => item.id === review.listing.id || (linkKey(item.website) && linkKey(item.website) === linkKey(review.listing.website)));\nif (!exists) body.services.push(review.listing);\nbody.updatedAt = new Date().toISOString();\n\nreturn [{ json: {\n  path: 'dist/data/service-submissions.json',\n  content: Buffer.from(JSON.stringify(body, null, 2) + '\\n').toString('base64'),\n  baseTree: $('Git commit').first().json.tree.sha,\n  head: $('Git ref').first().json.object.sha,\n  alreadyPublished: exists,\n  message: `Add travel service: ${review.listing.name}\\n\\nApproved through the GhanaNice service intake.`\n} }];\n"
+   }
+  },
+  {
+   "id": "gns-17",
+   "name": "Already published?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    3600,
+    -180
+   ],
+   "parameters": {
+    "conditions": {
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose",
+      "version": 2
+     },
+     "conditions": [
+      {
+       "id": "c16",
+       "leftValue": "={{ $json.alreadyPublished === true }}",
+       "rightValue": "",
+       "operator": {
+        "type": "boolean",
+        "operation": "true",
+        "singleValue": true
+       }
+      }
+     ],
+     "combinator": "and"
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "gns-18",
+   "name": "Upload blob",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    3840,
+    -360
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/git/blobs",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ content: $json.content, encoding: \"base64\" }) }}"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gns-19",
+   "name": "Make tree",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    4080,
+    -360
+   ],
+   "parameters": {
+    "jsCode": "const built = $('Build service file').first().json; return [{ json: { baseTree: built.baseTree, head: built.head, message: built.message, tree: [{ path: built.path, mode: '100644', type: 'blob', sha: $json.sha }] } }];"
+   }
+  },
+  {
+   "id": "gns-20",
+   "name": "Create tree",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    4320,
+    -360
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/git/trees",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ base_tree: $json.baseTree, tree: $json.tree }) }}"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gns-21",
+   "name": "Create commit",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    4560,
+    -360
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/git/commits",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ message: $('Make tree').first().json.message, tree: $json.sha, parents: [$('Make tree').first().json.head] }) }}"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gns-22",
+   "name": "Move branch",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    4800,
+    -360
+   ],
+   "parameters": {
+    "method": "PATCH",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/git/refs/heads/main",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ sha: $json.sha }) }}"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gns-23",
+   "name": "Log published",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    5040,
+    -180
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://sheets.googleapis.com/v4/spreadsheets/1Af866rDXLZ1mnnHHVvqQ63HL9cs9CYYab2a6JBsdMq0/values:batchUpdate",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "googleSheetsOAuth2Api",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ valueInputOption: 'RAW', data: [{ range: 'Services!C' + $('Prepare review').first().json.rowNumber, values: [['published']] }, { range: 'Services!R' + $('Prepare review').first().json.rowNumber + ':T' + $('Prepare review').first().json.rowNumber, values: [[[new Date().toISOString(), new Date().toISOString(), 'approved']]] }] }) }}"
+   },
+   "credentials": {
+    "googleSheetsOAuth2Api": {
+     "id": "zkOuPwkfg7PMvFPO",
+     "name": "Google Sheets account"
+    }
+   },
+   "onError": "continueRegularOutput"
+  },
+  {
+   "id": "gns-24",
+   "name": "Tell the sender it is live",
+   "type": "n8n-nodes-base.gmail",
+   "typeVersion": 2.1,
+   "position": [
+    5280,
+    -180
+   ],
+   "parameters": {
+    "sendTo": "={{ $('Prepare review').first().json.email }}",
+    "subject": "={{ $('Prepare review').first().json.subjectLive }}",
+    "emailType": "html",
+    "message": "={{ $('Prepare review').first().json.liveHtml }}",
+    "options": {
+     "appendAttribution": false,
+     "senderName": "GhanaNice"
+    }
+   },
+   "credentials": {
+    "gmailOAuth2": {
+     "id": "XSli9zjeTSRhQNLt",
+     "name": "Gmail account"
+    }
+   },
+   "onError": "continueRegularOutput"
+  },
+  {
+   "id": "gns-25",
+   "name": "Log closed",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    2400,
+    180
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://sheets.googleapis.com/v4/spreadsheets/1Af866rDXLZ1mnnHHVvqQ63HL9cs9CYYab2a6JBsdMq0/values:batchUpdate",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "googleSheetsOAuth2Api",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ valueInputOption: 'RAW', data: [{ range: 'Services!C' + $('Prepare review').first().json.rowNumber, values: [[$json.data?.approved === false ? 'rejected' : 'expired: no answer in 30 days']] }, { range: 'Services!R' + $('Prepare review').first().json.rowNumber + ':T' + $('Prepare review').first().json.rowNumber, values: [[[new Date().toISOString(), '', $json.data?.approved === false ? 'rejected' : 'expired']]] }] }) }}"
+   },
+   "credentials": {
+    "googleSheetsOAuth2Api": {
+     "id": "zkOuPwkfg7PMvFPO",
+     "name": "Google Sheets account"
+    }
+   },
+   "onError": "continueRegularOutput"
+  },
+  {
+   "id": "gns-26",
+   "name": "Explicitly rejected?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    2640,
+    180
+   ],
+   "parameters": {
+    "conditions": {
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose",
+      "version": 2
+     },
+     "conditions": [
+      {
+       "id": "c25",
+       "leftValue": "={{ $json.data?.approved === false }}",
+       "rightValue": "",
+       "operator": {
+        "type": "boolean",
+        "operation": "true",
+        "singleValue": true
+       }
+      }
+     ],
+     "combinator": "and"
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "gns-27",
+   "name": "Tell the sender it was not selected",
+   "type": "n8n-nodes-base.gmail",
+   "typeVersion": 2.1,
+   "position": [
+    2880,
+    180
+   ],
+   "parameters": {
+    "sendTo": "={{ $('Prepare review').first().json.email }}",
+    "subject": "={{ $('Prepare review').first().json.subjectRejected }}",
+    "emailType": "html",
+    "message": "={{ $('Prepare review').first().json.rejectedHtml }}",
+    "options": {
+     "appendAttribution": false,
+     "senderName": "GhanaNice"
+    }
+   },
+   "credentials": {
+    "gmailOAuth2": {
+     "id": "XSli9zjeTSRhQNLt",
+     "name": "Gmail account"
+    }
+   },
+   "onError": "continueRegularOutput"
+  }
+ ],
+ "connections": {
+  "Service from the site": {
+   "main": [
+    [
+     {
+      "node": "Read service",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Read service": {
+   "main": [
+    [
+     {
+      "node": "Valid service?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Valid service?": {
+   "main": [
+    [
+     {
+      "node": "Log received",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Answer: not accepted",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Log received": {
+   "main": [
+    [
+     {
+      "node": "Answer: received",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Answer: received": {
+   "main": [
+    [
+     {
+      "node": "Current published services",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Current published services": {
+   "main": [
+    [
+     {
+      "node": "Prepare review",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Prepare review": {
+   "main": [
+    [
+     {
+      "node": "Log for review",
+      "type": "main",
+      "index": 0
+     },
+     {
+      "node": "Thank the sender",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Thank the sender": {
+   "main": [
+    [
+     {
+      "node": "Ask August to approve",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Ask August to approve": {
+   "main": [
+    [
+     {
+      "node": "Approved?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Approved?": {
+   "main": [
+    [
+     {
+      "node": "Git ref",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Explicitly rejected?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Git ref": {
+   "main": [
+    [
+     {
+      "node": "Git commit",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Git commit": {
+   "main": [
+    [
+     {
+      "node": "Current service file",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Current service file": {
+   "main": [
+    [
+     {
+      "node": "Build service file",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Build service file": {
+   "main": [
+    [
+     {
+      "node": "Already published?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Already published?": {
+   "main": [
+    [
+     {
+      "node": "Log published",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Upload blob",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Upload blob": {
+   "main": [
+    [
+     {
+      "node": "Make tree",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Make tree": {
+   "main": [
+    [
+     {
+      "node": "Create tree",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Create tree": {
+   "main": [
+    [
+     {
+      "node": "Create commit",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Create commit": {
+   "main": [
+    [
+     {
+      "node": "Move branch",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Move branch": {
+   "main": [
+    [
+     {
+      "node": "Log published",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Log published": {
+   "main": [
+    [
+     {
+      "node": "Tell the sender it is live",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Explicitly rejected?": {
+   "main": [
+    [
+     {
+      "node": "Log closed",
+      "type": "main",
+      "index": 0
+     },
+     {
+      "node": "Tell the sender it was not selected",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Log closed",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "settings": {
+  "executionOrder": "v1",
+  "saveDataErrorExecution": "all",
+  "saveDataSuccessExecution": "all"
+ }
+}

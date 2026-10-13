@@ -46,6 +46,39 @@ heroAssets.forEach((asset) => {
   check(fs.existsSync(path.join(dist, asset)), `Hero destination references missing asset: ${asset}`);
 });
 
+const travelDataSource = read('dist/travel-directory-data.js');
+const travelSandbox = { window: {} };
+vm.runInNewContext(travelDataSource, travelSandbox, { filename: 'travel-directory-data.js' });
+const travelServices = travelSandbox.window.GHANA_TRAVEL_SERVICES;
+check(Array.isArray(travelServices), 'travel-directory-data.js must expose window.GHANA_TRAVEL_SERVICES');
+check(travelServices?.length >= 9, `Expected at least 9 travel services, found ${travelServices?.length ?? 0}`);
+travelServices?.forEach((service, index) => {
+  const label = service?.name || `travel service ${index + 1}`;
+  check(Boolean(service?.id), `${label} has no id`);
+  check(Boolean(service?.category), `${label} has no category`);
+  check(/^https:\/\//.test(service?.website || ''), `${label} does not have an HTTPS website or social page link`);
+  check(Array.isArray(service?.regions) && service.regions.length > 0, `${label} has no service regions`);
+  if (service?.featured) {
+    check(Array.isArray(service?.media) && service.media.length > 0, `${label} is featured but has no media`);
+    service.media?.forEach((item) => {
+      const asset = String(item?.src || '').split('?')[0];
+      check(Boolean(item?.alt), `${label} has featured media without alt text`);
+      check(Boolean(item?.credit) && /^https:\/\//.test(item?.source || ''), `${label} has uncredited featured media`);
+      check(fs.existsSync(path.join(dist, asset)), `${label} references missing featured media: ${asset}`);
+    });
+  }
+});
+
+const submittedServices = JSON.parse(read('dist/data/service-submissions.json'));
+check(Array.isArray(submittedServices.services), 'service-submissions.json must contain a services array');
+submittedServices.services?.forEach((service, index) => {
+  const label = service?.name || `submitted travel service ${index + 1}`;
+  check(Boolean(service?.id), `${label} has no id`);
+  check(['tours', 'transport', 'stay'].includes(service?.category), `${label} has an unsupported category`);
+  check(/^https:\/\//.test(service?.website || ''), `${label} does not have an HTTPS website or social page link`);
+  check(service?.featured === false, `${label} must enter the directory as a standard listing`);
+});
+
 const dataSource = read('dist/data.js');
 const sandbox = { window: {} };
 vm.runInNewContext(dataSource, sandbox, { filename: 'data.js' });
@@ -103,6 +136,24 @@ const htmlExpectations = {
   ],
   'dist/credits.html': ['styles.css?v=35'],
   'dist/404.html': ['styles.css?v=35'],
+  'dist/travel-directory.html': [
+    'styles.css?v=35',
+    'travel-directory.css?v=15',
+    'config.js?v=5',
+    'travel-directory-data.js?v=4',
+    'travel-directory.js?v=16',
+    'footer.js?v=2',
+    'id="featured-count"',
+    'id="featured-page"',
+    'id="featured-prev"',
+    'id="featured-next"',
+    'id="prime-grid"',
+    'id="service-list"',
+    'id="service-form"',
+    'name="primaryRegion"',
+    'name="listingType" value="featured"',
+    'Phone or WhatsApp',
+  ],
 };
 
 Object.entries(htmlExpectations).forEach(([file, expectations]) => {
