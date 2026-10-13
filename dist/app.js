@@ -369,7 +369,7 @@ addEventListener('focus', () => {
 });
 document.addEventListener('resume', restoreHeroAfterPause);
 
-/* The postcard rail travels, spreads into a field, then stacks vertically on selection. */
+/* The regions sit in a field of postcards, then stack vertically on selection. */
 const regionSection = document.querySelector('.regions');
 const regionSticky = document.querySelector('.regions-sticky');
 const regionRail = document.querySelector('#region-rail');
@@ -473,11 +473,9 @@ if (matchMedia('(hover: none)').matches) {
    and shrinks as the address bar hides and returns mid-scroll, which re-spaced the rows and
    made the field jump; the stage keeps one height through all of that. */
 let stageHeight = 0;
-let regionTravel = 1;
 function measureRegionStage() {
   if (!regionSection || !regionSticky) return;
   stageHeight = regionSticky.offsetHeight;
-  regionTravel = Math.max(1, regionSection.offsetHeight - stageHeight);
 }
 
 function regionMetrics() {
@@ -498,56 +496,19 @@ function regionMetrics() {
   return { mobile, columns, rows, cardWidth, cardHeight, gapX, gapY };
 }
 
-/* The line of cards travels with the scroll, but the spread into a grid is a timed move
-   that starts once the visitor is far enough in, and then holds for the rest of the
-   section. Tied to the finger, a hurried flick crossed the whole spread in a frame or two
-   and the cards appeared to jump. The gap between the two thresholds stops the deck
-   flapping when someone rests right on the line.
-   The move is blended here, frame by frame, rather than with a CSS transition: the line
-   keeps travelling with the scroll while it gathers, and a transition chasing that moving
-   target lagged behind the finger and then snapped into place when it was switched off. */
-const SPREAD_AT = .4;
-const GATHER_AT = .32;
-const SPREAD_MS = 820;
-let deckSpread = false;
-let spreadBlend = 0; /* 0 = line, 1 = field */
-let spreadFrom = 0;
-let spreadStart = 0;
-let spreadFrame = 0;
-
-function easeSpread(t) {
-  return 1 - Math.pow(1 - t, 4);
-}
-
-function stepSpread(now) {
-  const t = reduced ? 1 : clamp((now - spreadStart) / SPREAD_MS);
-  spreadBlend = mix(spreadFrom, deckSpread ? 1 : 0, easeSpread(t));
-  spreadFrame = t < 1 ? requestAnimationFrame(stepSpread) : 0;
-  lastRegionKey = '';
-  renderRegions();
-}
-
-function layoutRegionCards(progress) {
+/* The sixteen regions sit in their field from the start. They used to travel past in a line
+   and spread out as the visitor scrolled; that was a long wait on every return visit, so the
+   section is now one screen and only the lift, open and stack moves remain. */
+function layoutRegionCards() {
   const { mobile, columns, rows, cardWidth, gapX, gapY } = regionMetrics();
-  const lineGap = cardWidth * 1.08;
-  const spread = deckSpread ? progress > GATHER_AT : progress >= SPREAD_AT;
-  if (spread !== deckSpread) {
-    deckSpread = spread;
-    spreadFrom = spreadBlend;
-    spreadStart = performance.now();
-    if (reduced) spreadBlend = spread ? 1 : 0;
-    else if (!spreadFrame) spreadFrame = requestAnimationFrame(stepSpread);
-  }
-  const blend = spreadBlend;
-  const sweep = mix(innerWidth * .92, -innerWidth * .52, clamp(progress / .55));
   regionRail.style.setProperty('--card-w', `${cardWidth.toFixed(1)}px`);
 
   regionCards.forEach((card, index) => {
     const column = index % columns;
     const row = Math.floor(index / columns);
-    const x = mix((index - 7.5) * lineGap + sweep, (column - (columns - 1) / 2) * gapX, blend);
-    const y = mix(Math.sin(index * 1.7) * 24, (row - (rows - 1) / 2) * gapY + (mobile ? 34 : 56), blend);
-    const r = mix((index % 2 ? 1 : -1) * 6, ((index * 7) % 9) - 4, blend);
+    const x = (column - (columns - 1) / 2) * gapX;
+    const y = (row - (rows - 1) / 2) * gapY + (mobile ? 34 : 56);
+    const r = ((index * 7) % 9) - 4;
     card.style.setProperty('--x', x.toFixed(1));
     card.style.setProperty('--y', y.toFixed(1));
     card.style.setProperty('--r', r.toFixed(2));
@@ -702,16 +663,16 @@ function renderRegions() {
     else layoutRegionStack(selectedRegion);
   }
   else {
-    const progress = clamp(-regionSection.getBoundingClientRect().top / regionTravel);
-    /* Before and after the section the deck is parked: skip rewriting 16 cards per frame. */
-    const key = `${progress.toFixed(4)}|${innerWidth}x${stageHeight}`;
+    /* The field only depends on the stage's size, so it is laid out again on resize alone. */
+    const key = `${innerWidth}x${stageHeight}`;
     if (key === lastRegionKey) return;
     lastRegionKey = key;
-    layoutRegionCards(progress);
+    layoutRegionCards();
   }
 }
 addEventListener('scroll', () => {
-  if (!regionFrameRequested) {
+  /* Scrolling matters only while a preview is open, to close it once the section has gone. */
+  if (selectedRegion !== null && !regionFrameRequested) {
     requestAnimationFrame(renderRegions);
     regionFrameRequested = true;
   }

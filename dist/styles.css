@@ -300,7 +300,9 @@ img, video { display: block; max-width: 100%; }
 }
 
 /* Postcard atlas — restored as the primary regional interaction. */
-.regions { height: 340svh; padding: 0; background: var(--ink); color: var(--white); scroll-margin-top: 0; }
+/* One screen tall. The stage stays sticky only so app.js can line it up with the viewport
+   when a preview opens; with nothing to scroll through it never travels. */
+.regions { height: 100svh; padding: 0; background: var(--ink); color: var(--white); scroll-margin-top: 0; }
 .regions-sticky { position: sticky; top: 0; height: 100svh; overflow: hidden; }
 .regions-title { position: absolute; z-index: 8; top: 90px; left: clamp(20px, 4vw, 64px); right: clamp(20px, 4vw, 64px); display: flex; justify-content: space-between; align-items: flex-start; transition: opacity .4s, transform .5s var(--ease); }
 .regions-title > div > p { margin: 0 0 13px; color: var(--yellow); font-size: .61rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
@@ -478,7 +480,6 @@ img, video { display: block; max-width: 100%; }
 }
 
 @media (max-width: 680px) {
-  .regions { height: 320svh; }
   .regions-title { top: 82px; }
   .regions-title h2 { font-size: 17vw; }
   /* The deck fills the screen on phones, so the title stays compact and the
@@ -524,7 +525,6 @@ img, video { display: block; max-width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .regions { height: 1250px; }
   .regions-sticky { position: relative; }
 }
 

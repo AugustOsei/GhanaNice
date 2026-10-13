@@ -119,25 +119,25 @@ regions?.forEach((region, index) => {
 
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=36',
+    'styles.css?v=37',
     'data.js?v=6',
-    'app.js?v=29',
+    'app.js?v=30',
     'tip-form.js?v=5',
     'footer.js?v=2',
     'id="hero-video"',
     'id="region-reader" role="dialog"',
   ],
   'dist/region.html': [
-    'styles.css?v=36',
+    'styles.css?v=37',
     'data.js?v=6',
     'region.js?v=10',
     'tip-form.js?v=5',
     'footer.js?v=2',
   ],
-  'dist/credits.html': ['styles.css?v=36'],
-  'dist/404.html': ['styles.css?v=36'],
+  'dist/credits.html': ['styles.css?v=37'],
+  'dist/404.html': ['styles.css?v=37'],
   'dist/travel-directory.html': [
-    'styles.css?v=36',
+    'styles.css?v=37',
     'travel-directory.css?v=16',
     'config.js?v=5',
     'travel-directory-data.js?v=4',
