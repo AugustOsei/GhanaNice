@@ -34,9 +34,13 @@ A people-powered guide to good places across Ghana's 16 regions, "for locals and
 
 ## Open items (as of 2026-09-21)
 - Share tags use absolute `https://www.ghananice.com/og-image.jpg`. The home page has a canonical link. `robots.txt` and `sitemap.xml` (home + 16 `region.html?r=` URLs) are in `dist/`. Submit the sitemap in Google Search Console.
-- The n8n tip pipeline is active. See `docs/tip-pipeline.md`. The "found it nice" counts on the landing wall are placeholders.
+- The n8n tip pipeline is active. See `docs/tip-pipeline.md`. "Found it nice" buttons show no number (hidden 2026-10-14 until there are enough real votes; votes are still browser-only and `niceCount` stays in the tip data).
 - Most-visited ranks 6–10 have no published 2025 figures yet (only the top five were reported). Replace when the full GTA 2025 report is online.
 - 9 places still lack photos: Arts Centre, Assin Manso, Fort San Antonio (Axim), Bunso, Daboya, Nandom, Nkwanta, Fuller Falls, Kenyasi. Ahafo, Oti, Bono and Western North galleries are thin (3–5 photos).
-- `dist/assets/real/independence-arch-storm.jpg` is no longer used.
 - Photos total ~57 MB (1600px + 800px WebP). Pages load the 800px versions, and the lightbox loads 1600px.
 - Planned next: full code/behaviour/performance audit and an SEO audit. **Main SEO gap:** `region.html` renders from `?r=` with JS. `region.js` sets title, description, canonical and og tags per region as a stopgap, but the 16 regions should become real static pages (e.g. `/regions/volta/`) with their own head tags and content in the HTML, plus redirects from `region.html?r=`, updated internal links and sitemap, and structured data (TouristDestination / Place).
+
+## Planned features (agreed 2026-10-14, after the open items above are cleared)
+1. **Travel directory**: done (`travel-directory.html`).
+2. **History of Ghana**: an immersive, scroll-led story page. Not photos or photorealism. The look is illustrated and layered, like paper-cut scenes (parallax layers of cut-paper shapes and textures) that move, assemble and change as the reader scrolls, with short captions telling the story. Rough eras: early peoples and states (Bono, Dagbon, Mamprugu), Asante, coast trade and the forts/castles and the slave trade, colonial Gold Coast, the road to independence (6 March 1957), the republic today. Illustrations may be stylised but must stay historically accurate: no invented events, landmarks or symbols. Cite sources. Needs a reduced-motion version (static scenes plus text) and must read fully with a screen reader.
+3. **Cultural calendar**: national holidays and key festivals and events through the year, month by month, each linked to its region (e.g. Homowo, Aboakyere, Hogbetsotso, Damba, Kundum, Chale Wote, PANAFEST / Emancipation Day). Mark dates that move each year (lunar, traditional-council set) as approximate and say who sets them.

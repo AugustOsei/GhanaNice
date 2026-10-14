@@ -259,9 +259,9 @@ function tipTile(tip, pending) {
   }
   const nice = el('button', 'nice-button');
   nice.type = 'button';
-  nice.dataset.count = String(tip.niceCount || (pending ? 1 : 0));
+  /* tip.niceCount is kept in the data but not shown until there are enough real votes. */
   nice.setAttribute('aria-pressed', String(!!pending));
-  nice.append(document.createTextNode(pending ? '♥ ' : '♡ '), el('b', null, nice.dataset.count), document.createTextNode(' found it nice'));
+  nice.textContent = pending ? '♥ Found it nice' : '♡ Found it nice';
   wireNice(nice);
   tile.append(nice);
   return tile;
@@ -284,10 +284,8 @@ function renderWall() {
 function wireNice(button) {
   button.addEventListener('click', () => {
     const pressed = button.getAttribute('aria-pressed') === 'true';
-    const base = Number(button.dataset.count || 0);
     button.setAttribute('aria-pressed', String(!pressed));
-    button.firstChild.textContent = pressed ? '♡ ' : '♥ ';
-    button.querySelector('b').textContent = String(base + (pressed ? 0 : 1));
+    button.textContent = pressed ? '♡ Found it nice' : '♥ Found it nice';
   });
 }
 

@@ -121,7 +121,7 @@ const htmlExpectations = {
   'dist/index.html': [
     'styles.css?v=37',
     'data.js?v=6',
-    'app.js?v=30',
+    'app.js?v=31',
     'tip-form.js?v=5',
     'footer.js?v=2',
     'id="hero-video"',
@@ -130,7 +130,7 @@ const htmlExpectations = {
   'dist/region.html': [
     'styles.css?v=37',
     'data.js?v=6',
-    'region.js?v=10',
+    'region.js?v=11',
     'tip-form.js?v=5',
     'footer.js?v=2',
   ],

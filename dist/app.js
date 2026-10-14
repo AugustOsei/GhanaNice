@@ -684,14 +684,13 @@ addEventListener('resize', () => {
 measureRegionStage();
 renderRegions();
 
-/* Prototype niceness meter. Votes remain local to this preview. */
+/* "Found it nice" toggle. Votes stay in this browser, and no count is shown until there are
+   enough real votes to be worth showing. */
 function wireNiceButton(button) {
   button.addEventListener('click', () => {
     const pressed = button.getAttribute('aria-pressed') === 'true';
-    const baseCount = Number(button.dataset.count || 0);
     button.setAttribute('aria-pressed', String(!pressed));
-    button.firstChild.textContent = pressed ? '♡ ' : '♥ ';
-    button.querySelector('b').textContent = String(baseCount + (pressed ? 0 : 1));
+    button.textContent = pressed ? '♡ Found it nice' : '♥ Found it nice';
   });
 }
 document.querySelectorAll('.nice-button').forEach(wireNiceButton);
@@ -703,9 +702,8 @@ document.addEventListener('ghananice:tip', event => {
   const niceButton = document.createElement('button');
   niceButton.className = 'nice-button';
   niceButton.type = 'button';
-  niceButton.dataset.count = '1';
   niceButton.setAttribute('aria-pressed', 'true');
-  niceButton.append(document.createTextNode('♥ '), Object.assign(document.createElement('b'), { textContent: '1' }), document.createTextNode(' found it nice'));
+  niceButton.textContent = '♥ Found it nice';
   wireNiceButton(niceButton);
   tile.append(niceButton);
   communityWall.prepend(tile);
