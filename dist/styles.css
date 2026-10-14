@@ -756,3 +756,25 @@ body.has-lightbox { overflow: hidden; }
   .directory-teaser-needs strong { font-size: 1.3rem; }
   .directory-teaser-needs small { margin-top: 0; }
 }
+
+/* Partner rail — one fixed-height line at every partner count. The cells fill the row when
+   they fit, then become a native horizontal scroller rather than growing the page vertically. */
+.partners { padding: 26px clamp(20px, 4vw, 64px) 30px; background: #f1ecdf; border-top: 1px solid var(--line); }
+.partners-label { margin: 0 0 14px; color: var(--red); font-size: .61rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.partner-row { display: flex; margin: 0; padding: 0; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x proximity; scrollbar-width: none; list-style: none; border: 1px solid var(--ink); background: var(--ink); }
+.partner-row::-webkit-scrollbar { display: none; }
+.partner-row li { display: flex; flex: 1 0 180px; min-width: 0; height: 78px; align-items: center; justify-content: center; overflow: hidden; scroll-snap-align: start; border-right: 1px solid var(--ink); background: var(--white); }
+.partner-row li:last-child { border-right: 0; }
+.partner-logo-frame, .partner-row a { display: flex; width: 100%; height: 100%; align-items: center; justify-content: center; padding: 12px; }
+.partner-row img { display: block; width: auto; height: auto; object-fit: contain; }
+.partner-row .partner-logo-venture, .partner-row .partner-logo-servabot { width: min(100%, 145px); max-height: 52px; }
+.partner-row .partner-logo-servabot { transform: scale(1.2); }
+.partner-row .partner-logo-symbol, .partner-row .partner-logo-colourfro { width: auto; height: 52px; max-width: 100%; }
+@media (max-width: 680px) {
+  .partners { padding: 22px 0 24px; }
+  .partners-label { margin-bottom: 12px; padding: 0 18px; }
+  .partner-row { margin-left: 18px; margin-right: 18px; }
+  .partner-row li { flex: 0 0 min(68vw, 240px); height: 72px; }
+  .partner-row .partner-logo-venture, .partner-row .partner-logo-servabot { width: min(100%, 132px); max-height: 48px; }
+  .partner-row .partner-logo-symbol, .partner-row .partner-logo-colourfro { height: 48px; }
+}
