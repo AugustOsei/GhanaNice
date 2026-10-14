@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "4173", "--directory", "dist"],
       "port": 4173
+    },
+    {
+      "name": "motion-studio",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "motion", "run", "studio", "--", "--port", "3000", "--no-open"],
+      "port": 3000
     }
   ]
 }

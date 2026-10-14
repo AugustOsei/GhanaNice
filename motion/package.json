@@ -1,0 +1,20 @@
+{
+  "name": "ghananice-motion",
+  "private": true,
+  "description": "GhanaNice announcement motion graphic (Remotion).",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "still": "remotion still src/index.ts",
+    "render": "remotion render src/index.ts GhanaNice out/ghananice.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.535",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.535"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.12",
+    "typescript": "5.9.3"
+  }
+}
