@@ -4,6 +4,16 @@
   "installCommand": "",
   "buildCommand": "node tools/smoke.mjs",
   "outputDirectory": "dist",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/region.html",
+      "has": [{ "type": "query", "key": "r", "value": "(?<slug>[a-z-]+)" }],
+      "destination": "/regions/:slug/",
+      "permanent": true
+    },
+    { "source": "/region.html", "destination": "/#regions", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -99,7 +99,7 @@ Don't auto-publish. It's a public page and anyone can post the form. Two simple 
 - an email to you with Approve / Reject links pointing at a second n8n webhook.
 
 When a row becomes `published`, optionally send the submitter an "it's live" email with a link
-to `region.html?r=<slug>`.
+to `/regions/<slug>/`.
 
 ## 4. Directory — `directoryEndpoint`
 

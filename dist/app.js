@@ -594,7 +594,7 @@ function openRegion(index, trigger) {
     sideImage.removeAttribute('src');
   }
   sideFigure.parentElement.classList.toggle('is-single', !region.side);
-  readerLink.href = `region.html?r=${region.slug}`;
+  readerLink.href = `/regions/${region.slug}/`;
   readerPhotoLinks.forEach(link => { link.href = readerLink.href; });
   document.querySelector('#reader-link-label').textContent = `Explore ${region.name}`;
   const places = region.visit?.length || 0;

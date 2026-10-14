@@ -274,7 +274,7 @@ window.GhanaTips = {
   async directory(slug) {
     const endpoint = this.config().directoryEndpoint;
     if (!endpoint) {
-      const response = await fetchWithTimeout('data/listings.json', { cache: 'no-cache' }, 12000);
+      const response = await fetchWithTimeout('/data/listings.json', { cache: 'no-cache' }, 12000);
       if (!response.ok) return [];
       const body = await response.json();
       return (body.listings || []).filter(item => item.regionSlug === slug);

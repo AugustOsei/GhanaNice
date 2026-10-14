@@ -3,17 +3,17 @@
 A people-powered guide to good places across Ghana's 16 regions, "for locals and visitors alike". Owner: Augustine Osei (credited in the footer; writes The August Dispatch).
 
 ## Stack and layout
-- Plain static site: HTML, CSS and vanilla JS. No framework, no build. **Everything deployed lives in `dist/`.**
+- Plain static site: HTML, CSS and vanilla JS. No framework. **Everything deployed lives in `dist/`.** The only generated pages are committed: the region pages and sitemap (`node tools/build_regions.mjs`) and `credits.html`.
 - Live at **https://www.ghananice.com** (apex `ghananice.com` 308-redirects to www). Deployed on Vercel from `main` (auto-deploys on push). `vercel.json` sets `outputDirectory: "dist"`. Without it Vercel served the repo root and returned 404.
 - Local preview: `.claude/launch.json` → `python3 -m http.server 4173 --directory dist`.
-- Cache-busting is manual: bump `?v=N` on the `<link>` / `<script>` tags in `index.html`, `region.html` and `travel-directory.html` (and `credits.html`/`404.html` for CSS) when changing CSS or JS, and the matching pins in `tools/smoke.mjs`, which Vercel runs as the build. `vercel.json` caches CSS/JS for a day and `/assets/` for 30 days, so give a changed photo a new filename rather than overwriting it.
+- Cache-busting is manual: bump `?v=N` on the `<link>` / `<script>` tags in `index.html`, `tools/region-template.html` (then rebuild the region pages) and `travel-directory.html` (and `credits.html`/`404.html` for CSS) when changing CSS or JS, and the matching pins in `tools/smoke.mjs`, which Vercel runs as the build. `vercel.json` caches CSS/JS for a day and `/assets/` for 30 days, so give a changed photo a new filename rather than overwriting it.
 - Photos in `assets/real/` have `-400/-800/-1200.webp` copies made by `tools/media/resize_local.py` (cards, tiles, heroes). Pages use the copies; the lightbox and CREDITS.md use the originals. Re-run it after adding a photo there.
 - `dist/credits.html` is generated from `assets/CREDITS.md` by `tools/media/build_credits.py`. Re-run after editing the credits.
 
 | File | What it is |
 |---|---|
 | `dist/index.html` + `app.js` | Landing page: masked-map hero reel → video, region card field (one screen, lift/two-tap; no longer scroll-driven), 2025 most-visited flip cards, community wall, tip form |
-| `dist/region.html` + `region.js` | One template for all regions (`?r=<slug>`): hero, facts, photo mosaic + lightbox, place cards with links, community wall (approved tips, including businesses), tip form |
+| `dist/regions/<slug>/index.html` + `region.js` | The 16 region pages, **generated** by `tools/build_regions.mjs` from `tools/region-template.html`, `data.js` and `media.js` (also writes `dist/sitemap.xml`). Hero, facts, photo mosaic, place cards, head tags and TouristDestination structured data are in the HTML; `region.js` adds the lightbox, the community wall (approved tips from `data/listings.json`) and nav colour. Re-run the builder after editing the data or template: `tools/smoke.mjs` fails on a stale page. Paths in these pages are root-relative. `vercel.json` 301s `region.html?r=<slug>` here and sets `trailingSlash: true` |
 | `dist/data.js` | `GHANA_REGIONS` (copy, places) and `GhanaTips` (tip storage and submission) |
 | `dist/media.js` | **Generated** by `tools/media/build_media.py`. Don't hand-edit |
 | `dist/travel-directory.html` + `travel-directory.js` + `travel-directory.css` | Travel directory: rope-drawing hero, category cards + Category/Region filters, featured profiles, all services, "list your service" form |
@@ -33,24 +33,16 @@ A people-powered guide to good places across Ghana's 16 regions, "for locals and
 - Respect `prefers-reduced-motion`. Keep keyboard and screen-reader paths working.
 
 ## Open items (the one working list, updated 2026-10-14; work top to bottom)
-Done 2026-10-14: placeholder "found it nice" counts hidden (votes are still browser-only; `niceCount` stays in the tip data); unused `independence-arch-storm.jpg` removed; code/behaviour/performance audit run (its findings are items 1–5 and 9 below).
+Done 2026-10-14: placeholder "found it nice" counts hidden (votes are still browser-only; `niceCount` stays in the tip data); unused `independence-arch-storm.jpg` removed; code/behaviour/performance audit run, and its quick fixes made (directory listing clicks no longer change the filter, the home page only downloads the hero landmark it lands on, community wall reworded, "Leave a tip" footer link, cleanups); the 16 regions turned into static pages at `/regions/<slug>/` (see the file table).
 
-**Quick fixes from the audit**
-1. Travel directory bug: clicking anywhere on a listing (including Profile, Link, Share) changes the category filter and scrolls up. `travel-directory.js:192` selects `[data-category]`, which also matches the listings; it should only match the three `.need-card`s.
-2. Home always downloads `independence-arch-illustrated-1200.webp` (172 KB), even when the hero lands on Cape Coast or Larabanga: it is hard-coded as the video poster, the final reel image and the `.hero-window` CSS background. Set it from `app.js` only.
-3. Home community wall copy says "Places people say are nice… Tap the heart when you agree", but the 7 tiles are picked by us and hearts aren't saved. Reword (proposed: "Places we think are nice. Got one we're missing? Put us on.").
-4. Footer "How tips work" just links to the form. Rename to "Leave a tip".
-5. Cleanups: unused search code in `travel-directory.js`; the hero's `aria-label` sits on a plain div (screen readers skip it), so give it `role="img"`.
-
-**Bigger work**
-6. SEO, static region pages. `region.html` renders from `?r=` with JS (a wrong slug is a 200 page that redirects with JS). `region.js` sets title, description, canonical and og tags per region as a stopgap. The 16 regions should become real static pages (e.g. `/regions/volta/`) with their own head tags and content in the HTML, plus redirects from `region.html?r=`, updated internal links and sitemap, and structured data (TouristDestination / Place).
-7. Submit the sitemap in Google Search Console (August; after item 6). `robots.txt` and `sitemap.xml` are in `dist/`; share tags use absolute `https://www.ghananice.com/og-image.jpg`.
-8. Photos: 9 places still lack one (Arts Centre, Assin Manso, Fort San Antonio (Axim), Bunso, Daboya, Nandom, Nkwanta, Fuller Falls, Kenyasi). The Ahafo, Oti, Bono and Western North galleries are thin (3–5 photos).
-9. Performance: phones download ~3 MB on a first home visit, 1.2 MB of it the hero loop video (make smaller phone encodes). The travel-directory pencil grain reseeds ~6×/s and the footer water runs at full frame rate while visible (slow both).
+**Next**
+1. Submit `https://www.ghananice.com/sitemap.xml` in Google Search Console (August). It lists the home page, the travel directory and the 16 `/regions/<slug>/` pages.
+2. Photos: 9 places still lack one (Arts Centre, Assin Manso, Fort San Antonio (Axim), Bunso, Daboya, Nandom, Nkwanta, Fuller Falls, Kenyasi). The Ahafo, Oti, Bono and Western North galleries are thin (3–5 photos).
+3. Performance: phones download ~3 MB on a first home visit, 1.2 MB of it the hero loop video (make smaller phone encodes). The travel-directory pencil grain reseeds ~6×/s and the footer water runs at full frame rate while visible (slow both).
 
 **Waiting on others**
-10. Most-visited ranks 6–10 have no published 2025 figures (only the top five were reported). Replace when the full GTA 2025 report is online.
-11. Manhyia Palace Museum's official site (linked on the Ashanti page) returned a server error on 2026-10-14. Recheck; swap to Wikipedia if it stays down.
+4. Most-visited ranks 6–10 have no published 2025 figures (only the top five were reported). Replace when the full GTA 2025 report is online.
+5. Manhyia Palace Museum's official site (linked on the Ashanti page) returned a server error on 2026-10-14. Recheck; swap to Wikipedia if it stays down.
 
 Reference: the n8n tip pipeline is active (`docs/tip-pipeline.md`). Photos total ~57 MB (1600px + 800px WebP); pages load 800px, the lightbox 1600px.
 

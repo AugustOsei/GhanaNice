@@ -98,7 +98,7 @@ const rowNumber = Number((range.match(/![A-Z]+(\d+)/) || [])[1]) || null;
 const hello = firstName ? `Hi ${esc(firstName)},` : 'Hello,';
 const wrap = body => `<div style="font-family:Georgia,serif;font-size:16px;line-height:1.55;color:#11110f;max-width:520px">${body}<p style="margin-top:28px">August<br><span style="font-family:Arial,sans-serif;font-size:12px;color:#666">GhanaNice · <a href="${settings.site}">ghananice.com</a></span></p></div>`;
 const thanksHtml = wrap(`<p>${hello}</p><p>Thank you for putting us on to <b>${esc(placeName)}</b>. We’ll look it up and check it, and it’ll go on the ${esc(REGIONS[region] || 'right')} region page once it has. We’ll email you when it’s live.</p><p>Good places are better when they’re shared.</p>`);
-const liveHtml = wrap(`<p>${hello}</p><p><b>${esc(placeName)}</b> is now on GhanaNice${firstName ? ', with your name on it' : ''}. Thank you for sharing it.</p><p><a href="${region ? `${settings.site}/region.html?r=${region}#community` : settings.site}">See it on the ${esc(REGIONS[region] || '')} page</a></p><p>Know somewhere else? Send it our way any time.</p>`);
+const liveHtml = wrap(`<p>${hello}</p><p><b>${esc(placeName)}</b> is now on GhanaNice${firstName ? ', with your name on it' : ''}. Thank you for sharing it.</p><p><a href="${region ? `${settings.site}/regions/${region}/#community` : settings.site}">See it on the ${esc(REGIONS[region] || '')} page</a></p><p>Know somewhere else? Send it our way any time.</p>`);
 
 const subjectTag = ai?.spam ? '[Likely spam] ' : isTest ? '[test] ' : '';
 return [{
@@ -110,7 +110,7 @@ return [{
     hasPhotos: photoKeys.length > 0, photoList: photoKeys.join(','),
     subjectDetails: `${subjectTag}New tip: ${listing.place}`,
     subjectApproval: `${subjectTag}Approve “${listing.place}” for GhanaNice?`,
-    regionUrl: region ? `${settings.site}/region.html?r=${region}#community` : settings.site
+    regionUrl: region ? `${settings.site}/regions/${region}/#community` : settings.site
   },
   binary: read.binary
 }];

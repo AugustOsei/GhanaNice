@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -19,7 +20,7 @@ function checkLocalReferences(relativePath, html) {
   const references = [...html.matchAll(/(?:src|href)=["']([^"']*)["']/g)].map((match) => match[1]);
 
   references.forEach((reference) => {
-    if (!reference || /^(?:#|https?:|mailto:|tel:|data:)/.test(reference)) return;
+    if (!reference || reference.includes('{{') || /^(?:#|https?:|mailto:|tel:|data:)/.test(reference)) return;
     const localPath = reference.split(/[?#]/)[0];
     if (!localPath || localPath.startsWith('/')) return;
     check(
@@ -120,19 +121,19 @@ regions?.forEach((region, index) => {
 const htmlExpectations = {
   'dist/index.html': [
     'styles.css?v=38',
-    'data.js?v=6',
-    'app.js?v=31',
+    'data.js?v=7',
+    'app.js?v=32',
     'tip-form.js?v=5',
-    'footer.js?v=2',
+    'footer.js?v=3',
     'id="hero-video"',
     'id="region-reader" role="dialog"',
   ],
-  'dist/region.html': [
-    'styles.css?v=38',
-    'data.js?v=6',
-    'region.js?v=11',
-    'tip-form.js?v=5',
-    'footer.js?v=2',
+  'tools/region-template.html': [
+    '/styles.css?v=38',
+    '/data.js?v=7',
+    '/region.js?v=12',
+    '/tip-form.js?v=5',
+    '/footer.js?v=3',
   ],
   'dist/credits.html': ['styles.css?v=38'],
   'dist/404.html': ['styles.css?v=38'],
@@ -142,7 +143,7 @@ const htmlExpectations = {
     'config.js?v=5',
     'travel-directory-data.js?v=4',
     'travel-directory.js?v=18',
-    'footer.js?v=2',
+    'footer.js?v=3',
     'id="featured-count"',
     'id="featured-page"',
     'id="featured-prev"',
@@ -165,6 +166,24 @@ Object.entries(htmlExpectations).forEach(([file, expectations]) => {
   const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
   check(duplicates.length === 0, `${file} has duplicate IDs: ${[...new Set(duplicates)].join(', ')}`);
 });
+
+/* The static region pages must match data.js, media.js and the template. */
+regions?.forEach((region) => {
+  const file = `dist/regions/${region.slug}/index.html`;
+  if (!fs.existsSync(path.join(root, file))) return check(false, `${file} is missing`);
+  const html = read(file);
+  check(html.includes(`<link rel="canonical" href="https://www.ghananice.com/regions/${region.slug}/">`), `${file} has the wrong canonical link`);
+  check(html.includes('application/ld+json'), `${file} has no structured data`);
+  [...html.matchAll(/(?:src|href)="(\/[^"#?]*)/g)].forEach(([, reference]) => {
+    const local = reference.endsWith('/') ? `${reference}index.html` : reference;
+    check(fs.existsSync(path.join(dist, local)), `${file} references missing file: ${reference}`);
+  });
+});
+try {
+  execFileSync(process.execPath, [path.join(root, 'tools/build_regions.mjs'), '--check'], { stdio: 'pipe' });
+} catch (error) {
+  failures.push(String(error.stderr || error.message).trim());
+}
 
 if (failures.length) {
   console.error(`Smoke checks failed (${failures.length}):`);

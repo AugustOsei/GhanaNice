@@ -147,8 +147,8 @@
     loaded = true;
     const wide = Math.max(innerWidth, innerHeight) * Math.min(devicePixelRatio || 1, 2) > 1400;
     Promise.all([
-      load(wide ? 'assets/footer/volta-engraving.webp' : 'assets/footer/volta-engraving-1200.webp'),
-      load('assets/footer/volta-water-mask.png')
+      load(wide ? '/assets/footer/volta-engraving.webp' : '/assets/footer/volta-engraving-1200.webp'),
+      load('/assets/footer/volta-water-mask.png')
     ]).then(([image, mask]) => {
       imageSize = [image.naturalWidth, image.naturalHeight];
       texture(0, image);
