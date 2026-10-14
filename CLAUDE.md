@@ -33,16 +33,15 @@ A people-powered guide to good places across Ghana's 16 regions, "for locals and
 - Respect `prefers-reduced-motion`. Keep keyboard and screen-reader paths working.
 
 ## Open items (the one working list, updated 2026-10-14; work top to bottom)
-Done 2026-10-14: placeholder "found it nice" counts hidden (votes are still browser-only; `niceCount` stays in the tip data); unused `independence-arch-storm.jpg` removed; code/behaviour/performance audit run, and its quick fixes made (directory listing clicks no longer change the filter, the home page only downloads the hero landmark it lands on, community wall reworded, "Leave a tip" footer link, cleanups); the 16 regions turned into static pages at `/regions/<slug>/` (see the file table).
+Done 2026-10-14: placeholder "found it nice" counts hidden (votes are still browser-only; `niceCount` stays in the tip data); unused `independence-arch-storm.jpg` removed; code/behaviour/performance audit run, and its quick fixes made (directory listing clicks no longer change the filter, the home page only downloads the hero landmark it lands on, community wall reworded, "Leave a tip" footer link, cleanups); the 16 regions turned into static pages at `/regions/<slug>/` (see the file table); `https://www.ghananice.com/sitemap.xml` submitted in Google Search Console (Domain property, so it needs the full URL) and read successfully.
 
 **Next**
-1. Submit `https://www.ghananice.com/sitemap.xml` in Google Search Console (August). It lists the home page, the travel directory and the 16 `/regions/<slug>/` pages.
-2. Photos: 9 places still lack one (Arts Centre, Assin Manso, Fort San Antonio (Axim), Bunso, Daboya, Nandom, Nkwanta, Fuller Falls, Kenyasi). The Ahafo, Oti, Bono and Western North galleries are thin (3–5 photos).
-3. Performance: phones download ~3 MB on a first home visit, 1.2 MB of it the hero loop video (make smaller phone encodes). The travel-directory pencil grain reseeds ~6×/s and the footer water runs at full frame rate while visible (slow both).
+1. Photos: 9 places still lack one (Arts Centre, Assin Manso, Fort San Antonio (Axim), Bunso, Daboya, Nandom, Nkwanta, Fuller Falls, Kenyasi). The Ahafo, Oti, Bono and Western North galleries are thin (3–5 photos).
+2. Performance: phones download ~3 MB on a first home visit, 1.2 MB of it the hero loop video (make smaller phone encodes). The travel-directory pencil grain reseeds ~6×/s and the footer water runs at full frame rate while visible (slow both).
 
 **Waiting on others**
-4. Most-visited ranks 6–10 have no published 2025 figures (only the top five were reported). Replace when the full GTA 2025 report is online.
-5. Manhyia Palace Museum's official site (linked on the Ashanti page) returned a server error on 2026-10-14. Recheck; swap to Wikipedia if it stays down.
+3. Most-visited ranks 6–10 have no published 2025 figures (only the top five were reported). Replace when the full GTA 2025 report is online.
+4. Manhyia Palace Museum's official site (linked on the Ashanti page) returned a server error on 2026-10-14. Recheck; swap to Wikipedia if it stays down.
 
 Reference: the n8n tip pipeline is active (`docs/tip-pipeline.md`). Photos total ~57 MB (1600px + 800px WebP); pages load 800px, the lightbox 1600px.
 
