@@ -47,9 +47,9 @@ img, video { display: block; max-width: 100%; }
 /* The map starts small, expands to the full screen, then carries the brand statement. */
 .hero { position: relative; height: 190svh; background: var(--paper); }
 .hero-stage { position: sticky; top: 0; height: 100svh; overflow: hidden; --mask-size: min(20.3vw, 301px); --copy-opacity: 0; --copy-y: 30px; }
-/* The Arch is the no-JavaScript fallback. JavaScript swaps this background for the chosen
-   destination poster, so a dropped video layer never flashes a flat navy block. */
-.hero-window { position: absolute; inset: 0; overflow: hidden; background: #173b4e url('assets/real/independence-arch-illustrated-1200.webp') center / cover; mask: url('assets/maps/ghana-mask.svg') center / var(--mask-size) auto no-repeat; -webkit-mask: url('assets/maps/ghana-mask.svg') center / var(--mask-size) auto no-repeat; }
+/* JavaScript sets this background to the chosen destination's poster, so a dropped video
+   layer never flashes a flat navy block. No image here: it would download on every visit. */
+.hero-window { position: absolute; inset: 0; overflow: hidden; background: #173b4e center / cover; mask: url('assets/maps/ghana-mask.svg') center / var(--mask-size) auto no-repeat; -webkit-mask: url('assets/maps/ghana-mask.svg') center / var(--mask-size) auto no-repeat; }
 .hero-window.is-mask-refreshing { mask-size: calc(var(--mask-size) + .1px) auto; -webkit-mask-size: calc(var(--mask-size) + .1px) auto; }
 .hero-window.is-unmasked { mask: none; -webkit-mask: none; }
 .hero-window video, .map-scene { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }

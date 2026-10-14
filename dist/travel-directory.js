@@ -34,12 +34,8 @@ const categoryNames = {
   stay: 'places to stay',
 };
 
-function searchText(service) {
-  return [service.name, service.categoryLabel, service.base, service.coverage, service.description, ...service.goodFor].join(' ').toLowerCase();
-}
-
 function dataAttributes(service) {
-  return `data-category="${escapeHTML(service.category)}" data-regions="${escapeHTML(service.regions.join(' '))}" data-search="${escapeHTML(searchText(service))}"`;
+  return `data-category="${escapeHTML(service.category)}" data-regions="${escapeHTML(service.regions.join(' '))}"`;
 }
 
 function tagsMarkup(service) {
@@ -189,28 +185,27 @@ const status = document.querySelector('#directory-status');
 const emptyState = document.querySelector('#directory-empty');
 const primeSection = document.querySelector('.prime-listings');
 const allSection = document.querySelector('.all-listings');
-const needButtons = [...document.querySelectorAll('[data-category]')];
+/* Only the three category cards: the listings carry data-category too, for filtering. */
+const needButtons = [...document.querySelectorAll('.need-card[data-category]')];
 let activeCategory = 'all';
 
-function matchesFilters(element, query, region) {
+function matchesFilters(element, region) {
   const matchesCategory = activeCategory === 'all' || element.dataset.category === activeCategory;
   const regions = element.dataset.regions.split(' ');
   const matchesRegion = !region || regions.includes('all') || regions.includes(region);
-  const matchesSearch = !query || element.dataset.search.includes(query);
-  return matchesCategory && matchesRegion && matchesSearch;
+  return matchesCategory && matchesRegion;
 }
 
 function applyFilters() {
-  const query = '';
   const region = regionSelect?.value || '';
   let visibleServices = 0;
 
   serviceRows.forEach(row => {
-    const show = matchesFilters(row, query, region);
+    const show = matchesFilters(row, region);
     row.hidden = !show;
     if (show) visibleServices += 1;
   });
-  matchingFeaturedCards = primeCards.filter(card => matchesFilters(card, query, region));
+  matchingFeaturedCards = primeCards.filter(card => matchesFilters(card, region));
   featuredPage = 0;
   renderFeaturedPage();
 
