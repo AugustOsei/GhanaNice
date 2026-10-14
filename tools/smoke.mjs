@@ -120,7 +120,7 @@ regions?.forEach((region, index) => {
 
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=44',
+    'styles.css?v=45',
     'data.js?v=7',
     'app.js?v=32',
     'tip-form.js?v=5',
@@ -129,16 +129,16 @@ const htmlExpectations = {
     'id="region-reader" role="dialog"',
   ],
   'tools/region-template.html': [
-    '/styles.css?v=44',
+    '/styles.css?v=45',
     '/data.js?v=7',
     '/region.js?v=12',
     '/tip-form.js?v=5',
     '/footer.js?v=3',
   ],
-  'dist/credits.html': ['styles.css?v=44'],
-  'dist/404.html': ['styles.css?v=44'],
+  'dist/credits.html': ['styles.css?v=45'],
+  'dist/404.html': ['styles.css?v=45'],
   'dist/travel-directory.html': [
-    'styles.css?v=44',
+    'styles.css?v=45',
     'travel-directory.css?v=16',
     'config.js?v=5',
     'travel-directory-data.js?v=4',
