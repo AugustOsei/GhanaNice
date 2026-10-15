@@ -51,9 +51,9 @@ page = f'''<!doctype html>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="canonical" href="https://www.ghananice.com/credits.html">
-  <link rel="stylesheet" href="styles.css?v=47">
-  <!-- Google Analytics, loaded only after the visitor agrees (consent.js). -->
-  <script src="/consent.js?v=1"></script>
+  <link rel="stylesheet" href="styles.css?v=49">
+  <!-- Google Analytics (analytics.js); a browser can turn it off on /privacy/. -->
+  <script src="/analytics.js?v=1"></script>
 </head>
 <body class="doc-page">
   <nav class="nav" aria-label="Primary navigation">

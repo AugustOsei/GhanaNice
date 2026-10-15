@@ -118,17 +118,18 @@ regions?.forEach((region, index) => {
   });
 });
 
-/* Analytics must only load through consent.js (see /privacy/): no page carries the tag itself. */
-const consentPages = ['dist/index.html', 'dist/travel-directory.html', 'dist/credits.html', 'dist/404.html', 'tools/region-template.html', 'tools/page-template.html'];
-consentPages.forEach((file) => {
+/* Analytics loads through analytics.js, which honours the privacy page's opt-out: no page
+   carries the tag itself. */
+const analyticsPages = ['dist/index.html', 'dist/travel-directory.html', 'dist/credits.html', 'dist/404.html', 'tools/region-template.html', 'tools/page-template.html'];
+analyticsPages.forEach((file) => {
   const html = read(file);
-  check(html.includes('/consent.js?v=1'), `${file} does not load consent.js`);
-  check(!html.includes('googletagmanager.com/gtag'), `${file} loads Google Analytics without consent`);
+  check(html.includes('/analytics.js?v=1'), `${file} does not load analytics.js`);
+  check(!html.includes('googletagmanager.com/gtag'), `${file} loads Google Analytics directly, bypassing the opt-out`);
 });
 
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=47',
+    'styles.css?v=49',
     'data.js?v=7',
     'app.js?v=32',
     'tip-form.js?v=5',
@@ -137,16 +138,16 @@ const htmlExpectations = {
     'id="region-reader" role="dialog"',
   ],
   'tools/region-template.html': [
-    '/styles.css?v=47',
+    '/styles.css?v=49',
     '/data.js?v=7',
     '/region.js?v=12',
     '/tip-form.js?v=5',
     '/footer.js?v=3',
   ],
-  'dist/credits.html': ['styles.css?v=47'],
-  'dist/404.html': ['styles.css?v=47'],
+  'dist/credits.html': ['styles.css?v=49'],
+  'dist/404.html': ['styles.css?v=49'],
   'dist/travel-directory.html': [
-    'styles.css?v=47',
+    'styles.css?v=49',
     'travel-directory.css?v=16',
     'config.js?v=5',
     'travel-directory-data.js?v=4',

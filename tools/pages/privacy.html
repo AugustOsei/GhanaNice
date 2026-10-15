@@ -10,8 +10,8 @@
     <h2>What we collect, and why</h2>
     <p><strong>When you share a place (the tip form):</strong> what you found, its name and where it is (or a Google Maps link), what makes it nice, up to three photos, and your name and email. We use these to look the place up, check it, decide whether to publish it, and email you about it. Your photos are shrunk in your browser before they’re sent, which also removes their location data.</p>
     <p><strong>When you list a travel service:</strong> your business name, what you offer, where you’re based and work, your website or social media page, a description, your name, your email, and your phone number if you give it. We use these to check the business and contact you about the listing.</p>
-    <p><strong>When you visit:</strong> if you say yes to analytics, Google Analytics records how the site is used (pages visited, roughly where visitors are, the device and browser) using cookies. If you say no, analytics doesn’t run at all. Our host, Vercel, keeps short-lived technical logs, as every web host does, to keep the site working and secure.</p>
-    <p><strong>In your browser:</strong> the site keeps a copy of the tips you’ve sent in your own browser (without your email), so you can see them marked “Waiting for review”, and remembers your cookie choice. These stay on your device.</p>
+    <p><strong>When you visit:</strong> Google Analytics records how the site is used (pages visited, roughly where visitors are, the device and browser) using cookies. You can turn it off below. Our host, Vercel, keeps short-lived technical logs, as every web host does, to keep the site working and secure.</p>
+    <p><strong>In your browser:</strong> the site keeps a copy of the tips you’ve sent in your own browser (without your email), so you can see them marked “Waiting for review”, and remembers if you’ve turned analytics off. These stay on your device.</p>
 
     <h2>What gets published</h2>
     <p>If we publish your tip, the site shows the place, its area and region, what you said about it, your first name (if you gave one), the photos you agreed we could show, and public details about the place from Google Maps (its address link, website, phone and rating). For a travel service, we publish the business name, category, location, coverage, description and website. Your email and phone number are never published.</p>
@@ -19,7 +19,7 @@
     <h2>Who helps us run it</h2>
     <p>Submissions are handled by an automation server we run ourselves (n8n, hosted with Hetzner) and pass through a few services along the way:</p>
     <ul class="info-list">
-      <li><strong>Google</strong>: Gmail sends and receives the emails about your submission, a private Google Sheet keeps the review log, Google Maps finds the place you named, and Google Analytics measures visits (only if you agree).</li>
+      <li><strong>Google</strong>: Gmail sends and receives the emails about your submission, a private Google Sheet keeps the review log, Google Maps finds the place you named, and Google Analytics measures visits.</li>
       <li><strong>Anthropic (Claude)</strong>: an AI model reads a tip to help spot spam and sort it into the right category. A person still makes every decision.</li>
       <li><strong>GitHub and Vercel</strong>: approved listings are published to the site’s code on GitHub, and Vercel hosts the site.</li>
     </ul>
@@ -30,8 +30,8 @@
 
     <h2>Your choices</h2>
     <ul class="info-list">
-      <li>Analytics only runs if you agree, and you can change your mind at any time with <button class="info-link-button" type="button" data-cookie-settings>Cookie settings</button>, also in the footer.</li>
+      <li>Analytics is on by default. You can switch it off for this browser at any time, or block cookies in your browser’s settings.<br><button class="info-link-button" type="button" data-analytics-toggle>Turn off analytics</button> <span data-analytics-status aria-live="polite"></span></li>
       <li>You can share a place without a name; an email is needed so we can follow up.</li>
-      <li>Email <a href="mailto:theteam@augustwheel.com">theteam@augustwheel.com</a> to access, correct or delete your information.</li>
+      <li>Email <a class="info-inline" href="mailto:theteam@augustwheel.com">theteam@augustwheel.com</a> to access, correct or delete your information.</li>
     </ul>
     <p>If this policy changes, we’ll update this page and its date.</p>
