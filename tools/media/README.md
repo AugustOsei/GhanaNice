@@ -14,7 +14,8 @@ Setup: `python3 -m venv venv && ./venv/bin/pip install pillow numpy scipy`
 | `captions.json` | Hand-written caption per Commons file (overrides the Commons description) |
 | `visitghana.txt` | Visit Ghana (tourism authority) pages checked to load, per place |
 | `mv.json` | Credits for the most-visited flip-card photos (`dist/assets/photos/mv-*.webp`) |
-| `build_media.py` | Writes `dist/media.js` from the files above. Deterministic |
+| `fetch.py` | Downloads picked Commons files into `dist/assets/photos/` (1600px + 800px WebP) and records their credit in `manifest.json` |
+| `build_media.py` | Writes `dist/media.js` from the files above. Deterministic. Also writes `credits_rows.md`: copy any new rows into `dist/assets/CREDITS.md`, then delete it |
 | `engrave.py` | Turns a photo into the blue line engraving and water mask used by the footer |
 
 ## Rules we kept

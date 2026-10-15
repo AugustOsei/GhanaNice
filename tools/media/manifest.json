@@ -38,7 +38,15 @@
   "ahafo|Mim": "Mim lake1.jpg",
   "western-north|Sefwi Wiawso": "Goaso to Kumasi.jpg",
   "western-north|Cocoa country": "20151118-OSEC-UNK-2935 (23904959686).jpg",
-  "upper-west|Wechiau Community Hippo Sanctuary": "The Wechiau Hippopotamus Sanctuary.jpg"
+  "upper-west|Wechiau Community Hippo Sanctuary": "The Wechiau Hippopotamus Sanctuary.jpg",
+  "greater-accra|Arts Centre for National Culture": "Woven baskets and bags market stall Ghana.jpg",
+  "central|Assin Manso Ancestral Slave River": "Memorial to the captives marched to the coast at Assim Manso, Ghana.jpg",
+  "western|Fort San Antonio, Axim": "Fort Saint Anthony in Axim, Western Region, Ghana.jpg",
+  "eastern|Bunso Arboretum": "Bunso Canopy walkway.jpg",
+  "savannah|Daboya": "Daboya No. 1 white volta.jpg",
+  "upper-west|Nandom": "Culture & Tradition.jpg",
+  "oti|Nkwanta": "Kyabobo Waterfalls 01.jpg",
+  "bono-east|Fuller Falls": "FullerFall.jpg"
  },
  "gallery": {
   "greater-accra": [
@@ -2594,6 +2602,118 @@
    "size": [
     1600,
     1064
+   ]
+  },
+  "Woven baskets and bags market stall Ghana.jpg": {
+   "artist": "Uduak123",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File:Woven_baskets_and_bags_market_stall_Ghana.jpg",
+   "w": 864,
+   "h": 1152,
+   "desc": "Exterior and interior view of a market stall selling handwoven baskets, bags, and other woven goods. Accra Arts Centre (Centre for National Culture), Accra, Ghana",
+   "slug": "woven-baskets-and-bags-market-stall-ghana",
+   "size": [
+    864,
+    1152
+   ]
+  },
+  "Memorial to the captives marched to the coast at Assim Manso, Ghana.jpg": {
+   "artist": "Caupolicaningles",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Memorial_to_the_captives_marched_to_the_coast_at_Assim_Manso,_Ghana.jpg",
+   "w": 2560,
+   "h": 1440,
+   "desc": "The site of Assim Manso and the memorial to the last bath taken by captives marched to the coast.",
+   "slug": "memorial-to-the-captives-marched-to-the-coast-at-assim-manso-ghana",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  "Fort Saint Anthony in Axim, Western Region, Ghana.jpg": {
+   "artist": "Jesuraj Alakassery",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Fort_Saint_Anthony_in_Axim,_Western_Region,_Ghana.jpg",
+   "w": 4032,
+   "h": 3024,
+   "desc": "The history of Fort St. Anthony, located in Axim in the Western Region of Ghana, partly illustrates the motive for the construction of heavily fortified forts on natural elevations \u2013 especially on a rocky one that juts out into the sea. In 1503, the Portuguese had built a trade post in Axim, near the edge of the River Ankobra, but they had to abandon it due to insistent attacks by the local people. They then constructed, in 1515, a massive triangular fort on a small promontory closer to the River Ankobra. Named \u2018Santo Antonio\u2019, it was the second Portuguese fort built on the Gold Coast, after St. George\u2019s Castle (Elmina Castle). To enhance its defence on the landward side, a three-metre deep rock-cut trench was constructed. The effective defensive capability of Fort St. Anthony was revealed by its ability to withstand attacks for over four years, even after the fall of Elmina to the Dutch in 1637. Having no rival in the surrounding gold-rich lands of the Ankobra and Tano River valleys enhanced the economic viability of the fort; gold traders from Adanse and Denkyira frequently visited the fort. However, between 1670 and 1720, with the construction of rival forts in the bays east of Axim, Portuguese trade monopoly was ruined. By the 1720s, St. Anthony had become a Dutch fort. The fort is reported to have amassed \u2018more gold at Axim than anywhere else together\u2019 , especially after the dissolution of the Brandenburg Company and the death of John Conny (see Fort Gross Fredericksburg). The area was also an important source of timber and cotton for Dutch plantations. The fort was ceded to Britain in 1872.",
+   "slug": "fort-saint-anthony-in-axim-western-region-ghana",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Bunso Canopy walkway.jpg": {
+   "artist": "Roland Darko",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bunso_Canopy_walkway.jpg",
+   "w": 2592,
+   "h": 1936,
+   "desc": "This is an image from",
+   "slug": "bunso-canopy-walkway",
+   "size": [
+    1600,
+    1195
+   ]
+  },
+  "Daboya No. 1 white volta.jpg": {
+   "artist": "Hasslaebetch",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Daboya_No._1_white_volta.jpg",
+   "w": 4160,
+   "h": 3120,
+   "desc": "White volta",
+   "slug": "daboya-no-1-white-volta",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Culture & Tradition.jpg": {
+   "artist": "Just Arts",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Culture_%26_Tradition.jpg",
+   "w": 4160,
+   "h": 3120,
+   "desc": "The people of Nandom are playing Xylophone and singing their cultural songs at a funeral ground in accordance with their Culture and Tradition",
+   "slug": "culture-tradition",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  "Kyabobo Waterfalls 01.jpg": {
+   "artist": "Tahiru Rajab",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Kyabobo_Waterfalls_01.jpg",
+   "w": 4000,
+   "h": 5334,
+   "desc": "Kyabobo Waterfalls Located at Odormi Within Nkwanta South Municipality in the Oti Region",
+   "slug": "kyabobo-waterfalls-01",
+   "size": [
+    1600,
+    2133
+   ]
+  },
+  "FullerFall.jpg": {
+   "artist": "Stephen Acheampong",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:FullerFall.jpg",
+   "w": 2448,
+   "h": 3264,
+   "desc": "This is an image from",
+   "slug": "fullerfall",
+   "size": [
+    1600,
+    2133
    ]
   }
  },

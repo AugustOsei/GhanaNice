@@ -60,7 +60,8 @@ window.GHANA_REGIONS = [
       { name: 'Mole National Park', note: "Ghana's largest park: elephants, antelope and walking safaris.", image: 'assets/real/regions/savannah-mole.jpg' },
       { name: 'Larabanga Mosque', note: 'Sudanese-style mud and stick architecture, among the oldest in the country.', image: 'assets/real/larabanga-mosque.jpg' },
       { name: 'Mognori Eco Village', note: 'Canoe safaris and village stays on the edge of Mole.' },
-      { name: 'Salaga', note: 'A town carrying a heavy history as a trading and slave-market centre.' }
+      { name: 'Salaga', note: 'A town carrying a heavy history as a trading and slave-market centre.' },
+      { name: 'Daboya', note: 'Known for smock weaving and for salt.' }
     ]
   },
   {
@@ -117,8 +118,7 @@ window.GHANA_REGIONS = [
     visit: [
       { name: 'Central Mosque, Tamale', note: 'The landmark at the centre of the city.', image: 'assets/real/regions/northern-tamale-mosque.jpg' },
       { name: 'Tamale Central Market', note: 'Smocks, shea butter and northern produce.' },
-      { name: 'Gbewaa Palace, Yendi', note: 'The seat of the Dagbon kingdom.' },
-      { name: 'Daboya', note: 'Known for smock weaving and for salt.' }
+      { name: 'Gbewaa Palace, Yendi', note: 'The seat of the Dagbon kingdom.' }
     ]
   },
   {

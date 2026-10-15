@@ -57,7 +57,7 @@ One photograph per region, each depicting a named place inside that region. Wher
 
 ## Region galleries and place photos
 
-Picked by hand from Wikimedia Commons in September 2026: each photo was checked to show a named place inside the region it appears under. Images were resized and converted to WebP; nothing else was changed. The same credits appear on every region page next to the photo, with links to the licence and the source file.
+Picked by hand from Wikimedia Commons in September 2026, with more added in October 2026: each photo was checked to show a named place inside the region it appears under. Images were resized and converted to WebP; nothing else was changed. The same credits appear on every region page next to the photo, with links to the licence and the source file.
 
 | Asset | Subject (region) | Creator | Source | License |
 |---|---|---|---|---|
@@ -230,6 +230,14 @@ Picked by hand from Wikimedia Commons in September 2026: each photo was checked 
 | `photos/mv-bunso.webp` | Bunso Canopy walkway (most visited) | Roland Darko | https://commons.wikimedia.org/wiki/File:Bunso_Canopy_walkway.jpg | CC BY-SA 4.0 |
 | `photos/mv-manhyia.webp` | Manhyia Palace Museum (Kumasi, Ghana 2017) (most visited) | Dan Sloan | https://commons.wikimedia.org/wiki/File:Manhyia_Palace_Museum_(Kumasi,_Ghana_2017).jpg | CC BY-SA 2.0 |
 | `photos/mv-nkrumah.webp` | Front View of Kwame Nkrumah's Mausoleum and Memorial in Accra Ghana, May 2008 (most visited) | Emkamau | https://commons.wikimedia.org/wiki/File:Front_View_of_Kwame_Nkrumah%27s_Mausoleum_and_Memorial_in_Accra_Ghana,_May_2008.jpg | CC BY-SA 4.0 |
+| `photos/woven-baskets-and-bags-market-stall-ghana.webp` | Baskets and bags at the Arts Centre, Accra (greater-accra) | Uduak123 | https://commons.wikimedia.org/wiki/File:Woven_baskets_and_bags_market_stall_Ghana.jpg | CC0 |
+| `photos/memorial-to-the-captives-marched-to-the-coast-at-assim-manso-ghana.webp` | The Last Bath memorial at Assin Manso (central) | Caupolicaningles | https://commons.wikimedia.org/wiki/File:Memorial_to_the_captives_marched_to_the_coast_at_Assim_Manso,_Ghana.jpg | CC BY-SA 4.0 |
+| `photos/daboya-no-1-white-volta.webp` | Canoes on the White Volta at Daboya (savannah) | Hasslaebetch | https://commons.wikimedia.org/wiki/File:Daboya_No._1_white_volta.jpg | CC BY-SA 4.0 |
+| `photos/fort-saint-anthony-in-axim-western-region-ghana.webp` | Fort St. Anthony on its rock at Axim (western) | Jesuraj Alakassery | https://commons.wikimedia.org/wiki/File:Fort_Saint_Anthony_in_Axim,_Western_Region,_Ghana.jpg | CC BY-SA 4.0 |
+| `photos/bunso-canopy-walkway.webp` | The canopy walkway at Bunso (eastern) | Roland Darko | https://commons.wikimedia.org/wiki/File:Bunso_Canopy_walkway.jpg | CC BY-SA 4.0 |
+| `photos/culture-tradition.webp` | Xylophone players at a funeral in Nandom (upper-west) | Just Arts | https://commons.wikimedia.org/wiki/File:Culture_%26_Tradition.jpg | CC BY-SA 4.0 |
+| `photos/kyabobo-waterfalls-01.webp` | A waterfall at Odormi, near Nkwanta (oti) | Tahiru Rajab | https://commons.wikimedia.org/wiki/File:Kyabobo_Waterfalls_01.jpg | CC BY-SA 4.0 |
+| `photos/fullerfall.webp` | Fuller Falls, near Kintampo (bono-east) | Stephen Acheampong | https://commons.wikimedia.org/wiki/File:FullerFall.jpg | CC BY-SA 4.0 |
 
 Creative Commons license text: https://creativecommons.org/licenses/
 

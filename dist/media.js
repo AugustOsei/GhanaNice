@@ -1794,6 +1794,94 @@ window.GHANA_MEDIA = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Ankasa_Conservation_1.jpg"
+  },
+  "woven-baskets-and-bags-market-stall-ghana": {
+   "src": "assets/photos/woven-baskets-and-bags-market-stall-ghana.webp",
+   "small": "assets/photos/woven-baskets-and-bags-market-stall-ghana-800.webp",
+   "w": 864,
+   "h": 1152,
+   "caption": "Baskets and bags at the Arts Centre, Accra",
+   "author": "Uduak123",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "source": "https://commons.wikimedia.org/wiki/File:Woven_baskets_and_bags_market_stall_Ghana.jpg"
+  },
+  "memorial-to-the-captives-marched-to-the-coast-at-assim-manso-ghana": {
+   "src": "assets/photos/memorial-to-the-captives-marched-to-the-coast-at-assim-manso-ghana.webp",
+   "small": "assets/photos/memorial-to-the-captives-marched-to-the-coast-at-assim-manso-ghana-800.webp",
+   "w": 1600,
+   "h": 900,
+   "caption": "The Last Bath memorial at Assin Manso",
+   "author": "Caupolicaningles",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Memorial_to_the_captives_marched_to_the_coast_at_Assim_Manso,_Ghana.jpg"
+  },
+  "fort-saint-anthony-in-axim-western-region-ghana": {
+   "src": "assets/photos/fort-saint-anthony-in-axim-western-region-ghana.webp",
+   "small": "assets/photos/fort-saint-anthony-in-axim-western-region-ghana-800.webp",
+   "w": 1600,
+   "h": 1200,
+   "caption": "Fort St. Anthony on its rock at Axim",
+   "author": "Jesuraj Alakassery",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Fort_Saint_Anthony_in_Axim,_Western_Region,_Ghana.jpg"
+  },
+  "bunso-canopy-walkway": {
+   "src": "assets/photos/bunso-canopy-walkway.webp",
+   "small": "assets/photos/bunso-canopy-walkway-800.webp",
+   "w": 1600,
+   "h": 1195,
+   "caption": "The canopy walkway at Bunso",
+   "author": "Roland Darko",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bunso_Canopy_walkway.jpg"
+  },
+  "daboya-no-1-white-volta": {
+   "src": "assets/photos/daboya-no-1-white-volta.webp",
+   "small": "assets/photos/daboya-no-1-white-volta-800.webp",
+   "w": 1600,
+   "h": 1200,
+   "caption": "Canoes on the White Volta at Daboya",
+   "author": "Hasslaebetch",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Daboya_No._1_white_volta.jpg"
+  },
+  "culture-tradition": {
+   "src": "assets/photos/culture-tradition.webp",
+   "small": "assets/photos/culture-tradition-800.webp",
+   "w": 1600,
+   "h": 1200,
+   "caption": "Xylophone players at a funeral in Nandom",
+   "author": "Just Arts",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Culture_%26_Tradition.jpg"
+  },
+  "kyabobo-waterfalls-01": {
+   "src": "assets/photos/kyabobo-waterfalls-01.webp",
+   "small": "assets/photos/kyabobo-waterfalls-01-800.webp",
+   "w": 1600,
+   "h": 2133,
+   "caption": "A waterfall at Odormi, near Nkwanta",
+   "author": "Tahiru Rajab",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Kyabobo_Waterfalls_01.jpg"
+  },
+  "fullerfall": {
+   "src": "assets/photos/fullerfall.webp",
+   "small": "assets/photos/fullerfall-800.webp",
+   "w": 1600,
+   "h": 2133,
+   "caption": "Fuller Falls, near Kintampo",
+   "author": "Stephen Acheampong",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:FullerFall.jpg"
   }
  },
  "regions": {
@@ -1816,7 +1904,8 @@ window.GHANA_MEDIA = {
    "ghana-accra",
    "street-outside-makola-market-accra-ghana",
    "solnedgang-pa-labadi-beach",
-   "audience-watching-live-band-music-at-kona-bar"
+   "audience-watching-live-band-music-at-kona-bar",
+   "woven-baskets-and-bags-market-stall-ghana"
   ],
   "central": [
    "a-daytime-view-of-cape-coast-castle",
@@ -1831,7 +1920,8 @@ window.GHANA_MEDIA = {
    "boats-at-elmina-port",
    "canopy-walk-of-kakum-national-park-2",
    "elmina-castle-ghana",
-   "scenery-at-hans-cottage-botel-near-cape-coast-ghana-47378352"
+   "scenery-at-hans-cottage-botel-near-cape-coast-ghana-47378352",
+   "memorial-to-the-captives-marched-to-the-coast-at-assim-manso-ghana"
   ],
   "volta": [
    "a-glimpse-at-the-fall-wli",
@@ -1857,7 +1947,8 @@ window.GHANA_MEDIA = {
    "larabanga-mosque05",
    "banda-nkwanta-mosque-3",
    "mognori-eco-village-1",
-   "salaga-slave-tree-panoramio"
+   "salaga-slave-tree-panoramio",
+   "daboya-no-1-white-volta"
   ],
   "western": [
    "a-house-built-on-water",
@@ -1873,7 +1964,8 @@ window.GHANA_MEDIA = {
    "busua-beach-on-rainy-day-01",
    "residential-houses-in-secondi-takoradi-2",
    "dsc01739-15318781703",
-   "ankasa-conservation-1"
+   "ankasa-conservation-1",
+   "fort-saint-anthony-in-axim-western-region-ghana"
   ],
   "ashanti": [
    "view-over-kejetia-market-largest-in-west-africa-kumasi-ghana",
@@ -1905,7 +1997,8 @@ window.GHANA_MEDIA = {
    "ghana-aburi-botanical-gardens-1",
    "aburi-garden-2",
    "boti-falls-eastern-region",
-   "umbrella-rock-at-boti-falls-2"
+   "umbrella-rock-at-boti-falls-2",
+   "bunso-canopy-walkway"
   ],
   "northern": [
    "tamale-central-mosque",
@@ -1942,7 +2035,8 @@ window.GHANA_MEDIA = {
    "a-woman-from-wa",
    "black-pots-from-the-upper-west-region-of-ghana",
    "the-wechiau-hippopotamus-sanctuary",
-   "gwollu-slave-trade-defence-wall-in-upper-east-region-of-ghan"
+   "gwollu-slave-trade-defence-wall-in-upper-east-region-of-ghan",
+   "culture-tradition"
   ],
   "north-east": [
    "nalerigu-dam",
@@ -1959,7 +2053,8 @@ window.GHANA_MEDIA = {
    "vehicles-and-people-awaiting-the-arrival-of-the-ferry-to-tra",
    "small-waterfall-at-kyabobo-national-park",
    "beautiful-mountain-in-kyabobo",
-   "a-path-through-the-kyabobo-hills"
+   "a-path-through-the-kyabobo-hills",
+   "kyabobo-waterfalls-01"
   ],
   "bono": [
    "koczkodan-liberyjski",
@@ -1978,7 +2073,8 @@ window.GHANA_MEDIA = {
    "presbyterian-church-in-1960-ghana",
    "canopy-walkway-of-kintampo-waterfalls",
    "volta-lake-at-yeji",
-   "rocks-in-buoyem"
+   "rocks-in-buoyem",
+   "fullerfall"
   ],
   "ahafo": [
    "baobabentrepreneur-20",
@@ -2036,6 +2132,7 @@ window.GHANA_MEDIA = {
    "wiki": "https://en.wikipedia.org/wiki/Buoyem"
   },
   "bono-east|Fuller Falls": {
+   "photo": "fullerfall",
    "guide": "https://visitghana.com/fuller-falls/"
   },
   "bono-east|Kintampo Waterfalls": {
@@ -2057,6 +2154,7 @@ window.GHANA_MEDIA = {
    "wiki": "https://en.wikipedia.org/wiki/Sunyani"
   },
   "central|Assin Manso Ancestral Slave River": {
+   "photo": "memorial-to-the-captives-marched-to-the-coast-at-assim-manso-ghana",
    "wiki": "https://en.wikipedia.org/wiki/Assin_Manso_Slave_River_Site",
    "guide": "https://visitghana.com/assin-manso-slave-river/"
   },
@@ -2090,11 +2188,15 @@ window.GHANA_MEDIA = {
    "guide": "https://visitghana.com/boti-falls/"
   },
   "eastern|Bunso Arboretum": {
+   "photo": "bunso-canopy-walkway",
    "wiki": "https://en.wikipedia.org/wiki/Bunso_Eco_Park",
    "guide": "https://visitghana.com/bunso-eco-park/"
   },
   "eastern|Umbrella Rock": {
    "photo": "umbrella-rock-at-boti-falls-2"
+  },
+  "greater-accra|Arts Centre for National Culture": {
+   "photo": "woven-baskets-and-bags-market-stall-ghana"
   },
   "greater-accra|Jamestown": {
    "photo": "james-town-beach",
@@ -2146,7 +2248,12 @@ window.GHANA_MEDIA = {
    "wiki": "https://en.wikipedia.org/wiki/Dambai"
   },
   "oti|Nkwanta": {
+   "photo": "kyabobo-waterfalls-01",
    "wiki": "https://en.wikipedia.org/wiki/Nkwanta"
+  },
+  "savannah|Daboya": {
+   "photo": "daboya-no-1-white-volta",
+   "wiki": "https://en.wikipedia.org/wiki/Daboya%2C_Ghana"
   },
   "savannah|Larabanga Mosque": {
    "wiki": "https://en.wikipedia.org/wiki/Larabanga_Mosque",
@@ -2182,6 +2289,7 @@ window.GHANA_MEDIA = {
    "wiki": "https://en.wikipedia.org/wiki/Gwollu"
   },
   "upper-west|Nandom": {
+   "photo": "culture-tradition",
    "wiki": "https://en.wikipedia.org/wiki/Nandom"
   },
   "upper-west|Wa Naa's Palace": {
@@ -2234,6 +2342,7 @@ window.GHANA_MEDIA = {
    "wiki": "https://en.wikipedia.org/wiki/Cape_Three_Points"
   },
   "western|Fort San Antonio, Axim": {
+   "photo": "fort-saint-anthony-in-axim-western-region-ghana",
    "wiki": "https://en.wikipedia.org/wiki/Fort_Saint_Anthony",
    "guide": "https://visitghana.com/fort-st-anthony/"
   },
@@ -2296,6 +2405,56 @@ window.GHANA_MEDIA = {
    "source": "https://commons.wikimedia.org/wiki/File:Seamstress_taking_measurements_in_Alajo,_Accra.jpg",
    "w": 1200,
    "h": 1600
+  },
+  "assets/real/hero-cape-coast-castle-*": {
+   "caption": "Cape Coast Castle, Central Region; generated atmosphere and motion based on a real photograph",
+   "author": "Kwameghana (Bright Kwame Ayisi); GhanaNice visual treatment",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:A_daytime_view_of_Cape_Coast_Castle.jpg"
+  },
+  "assets/real/hero-larabanga-mosque-*": {
+   "caption": "Larabanga Mosque, Savannah Region; generated atmosphere and motion based on a real photograph",
+   "author": "ZSM; GhanaNice visual treatment",
+   "license": "CC BY-SA 4.0 (adaptation shared under the same licence)",
+   "licenseUrl": "",
+   "source": "https://commons.wikimedia.org/wiki/File:Larabanga_Mosque,_Ghana.jpg"
+  },
+  "assets/real/stc-coach-featured.jpg": {
+   "caption": "An Intercity STC coach at the STC yard in Accra",
+   "author": "Masssly",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:STC_coach.jpg",
+   "w": 4128,
+   "h": 3096
+  },
+  "assets/real/stc-yard-featured.jpg": {
+   "caption": "Passengers boarding coaches at the Intercity STC yard in Accra",
+   "author": "Blaise Daniel Korley Ahumah",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:ISTC_TRANSPORT_YARD_by_Blaise_Daniel_Korley_Ahumah.jpg",
+   "w": 2268,
+   "h": 4032
+  },
+  "assets/real/zaina-pool-chairs-featured.jpg": {
+   "caption": "Poolside chairs at Zaina Lodge in Mole National Park",
+   "author": "Danieljatuat",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:Poolside_chairs_at_Zaina_Lodge_in_Mole_National_Park.jpg",
+   "w": 1133,
+   "h": 1700
+  },
+  "assets/real/zaina-table-chair-featured.jpg": {
+   "caption": "A table and chair at Zaina Lodge in Mole National Park",
+   "author": "Danieljatuat",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:A_table_and_chair_at_Zaina_Lodge_in_Mole_National_Park.jpg",
+   "w": 1133,
+   "h": 1700
   },
   "assets/real/regions/western-nzulezo.jpg": {
    "caption": "Nzulezu stilt village, Western Region",

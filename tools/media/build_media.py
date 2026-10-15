@@ -44,7 +44,7 @@ WIKI = {
     'northern|Gbewaa Palace, Yendi': 'Gbewaa Palace',
     'upper-east|Paga Crocodile Pond': 'Paga Crocodile Pond', 'upper-east|Tongo Hills and Tengzug': 'Tongo Hills',
     "upper-west|Wa Naa's Palace": "Wa Naa's Palace", 'upper-west|Wechiau Community Hippo Sanctuary': 'Wechiau Community Hippo Sanctuary',
-    'upper-west|Gwollu Defence Wall': 'Gwollu', 'upper-west|Nandom': 'Nandom',
+    'upper-west|Gwollu Defence Wall': 'Gwollu', 'upper-west|Nandom': 'Nandom', 'savannah|Daboya': 'Daboya, Ghana',
     'north-east|Nalerigu': 'Nalerigu', 'north-east|Naa Jaringa Wall, Gambaga': 'Gambaga', 'north-east|Nakpanduri': 'Nakpanduri',
     'oti|Lake Volta at Dambai': 'Dambai', 'oti|Kyabobo National Park': 'Kyabobo National Park', 'oti|Nkwanta': 'Nkwanta',
     'bono|Boabeng-Fiema Monkey Sanctuary': 'Boabeng-Fiema Monkey Sanctuary', 'bono|Sunyani': 'Sunyani', 'bono|Bui National Park': 'Bui National Park',
