@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { PAGES } from './build_pages.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
@@ -149,7 +150,7 @@ function render(region, index) {
 }
 
 function sitemap() {
-  const pages = [`${SITE}/`, `${SITE}/travel-directory.html`, ...regions.map(r => regionUrl(r.slug))];
+  const pages = [`${SITE}/`, `${SITE}/travel-directory.html`, ...regions.map(r => regionUrl(r.slug)), ...PAGES.map(p => SITE + p.path)];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(loc => `  <url><loc>${loc}</loc></url>`).join('\n')}

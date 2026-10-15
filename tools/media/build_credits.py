@@ -51,15 +51,9 @@ page = f'''<!doctype html>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="canonical" href="https://www.ghananice.com/credits.html">
-  <link rel="stylesheet" href="styles.css?v=45">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-07N1MXC0Q9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){{dataLayer.push(arguments);}}
-    gtag('js', new Date());
-    gtag('config', 'G-07N1MXC0Q9');
-  </script>
+  <link rel="stylesheet" href="styles.css?v=47">
+  <!-- Google Analytics, loaded only after the visitor agrees (consent.js). -->
+  <script src="/consent.js?v=1"></script>
 </head>
 <body class="doc-page">
   <nav class="nav" aria-label="Primary navigation">

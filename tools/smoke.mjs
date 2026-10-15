@@ -118,9 +118,17 @@ regions?.forEach((region, index) => {
   });
 });
 
+/* Analytics must only load through consent.js (see /privacy/): no page carries the tag itself. */
+const consentPages = ['dist/index.html', 'dist/travel-directory.html', 'dist/credits.html', 'dist/404.html', 'tools/region-template.html', 'tools/page-template.html'];
+consentPages.forEach((file) => {
+  const html = read(file);
+  check(html.includes('/consent.js?v=1'), `${file} does not load consent.js`);
+  check(!html.includes('googletagmanager.com/gtag'), `${file} loads Google Analytics without consent`);
+});
+
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=45',
+    'styles.css?v=47',
     'data.js?v=7',
     'app.js?v=32',
     'tip-form.js?v=5',
@@ -129,16 +137,16 @@ const htmlExpectations = {
     'id="region-reader" role="dialog"',
   ],
   'tools/region-template.html': [
-    '/styles.css?v=45',
+    '/styles.css?v=47',
     '/data.js?v=7',
     '/region.js?v=12',
     '/tip-form.js?v=5',
     '/footer.js?v=3',
   ],
-  'dist/credits.html': ['styles.css?v=45'],
-  'dist/404.html': ['styles.css?v=45'],
+  'dist/credits.html': ['styles.css?v=47'],
+  'dist/404.html': ['styles.css?v=47'],
   'dist/travel-directory.html': [
-    'styles.css?v=45',
+    'styles.css?v=47',
     'travel-directory.css?v=16',
     'config.js?v=5',
     'travel-directory-data.js?v=4',
@@ -179,11 +187,22 @@ regions?.forEach((region) => {
     check(fs.existsSync(path.join(dist, local)), `${file} references missing file: ${reference}`);
   });
 });
-try {
-  execFileSync(process.execPath, [path.join(root, 'tools/build_regions.mjs'), '--check'], { stdio: 'pipe' });
-} catch (error) {
-  failures.push(String(error.stderr || error.message).trim());
-}
+/* The plain pages (About, Contact, Privacy) must match their sources too. */
+['about', 'contact', 'privacy'].forEach((name) => {
+  const file = `dist/${name}/index.html`;
+  if (!fs.existsSync(path.join(root, file))) return check(false, `${file} is missing`);
+  [...read(file).matchAll(/(?:src|href)="(\/[^"#?]*)/g)].forEach(([, reference]) => {
+    const local = reference.endsWith('/') ? `${reference}index.html` : reference;
+    check(fs.existsSync(path.join(dist, local)), `${file} references missing file: ${reference}`);
+  });
+});
+['build_regions.mjs', 'build_pages.mjs'].forEach((builder) => {
+  try {
+    execFileSync(process.execPath, [path.join(root, 'tools', builder), '--check'], { stdio: 'pipe' });
+  } catch (error) {
+    failures.push(String(error.stderr || error.message).trim());
+  }
+});
 
 if (failures.length) {
   console.error(`Smoke checks failed (${failures.length}):`);
