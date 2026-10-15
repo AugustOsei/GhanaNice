@@ -47,7 +47,7 @@ One photograph per region, each depicting a named place inside that region. Wher
 | `real/regions/north-east-nalerigu.jpg` | An old church at Nalerigu, North East Region | Shahadusadik | https://commons.wikimedia.org/wiki/File:An_old_church_at_Nalerigu.jpg | CC BY-SA 4.0 |
 | `real/regions/oti-lake-volta.jpg` | A boat on Lake Volta | Celestinesucess | https://commons.wikimedia.org/wiki/File:Boat_on_the_Lake_Volta.jpg | CC BY-SA 4.0 |
 | `real/regions/bono-sunyani-cocoa-house.jpg` | Cocoa House, Sunyani, Bono Region | Gyanford | https://commons.wikimedia.org/wiki/File:Cocoa_House_in_Sunyani.jpg | CC BY-SA 4.0 |
-| `real/regions/bono-boabeng-fiema.jpg` | Boabeng-Fiema Monkey Sanctuary, Bono Region | Malibu xoxo | https://commons.wikimedia.org/wiki/File:Boabeng_Fiema_monkey_sanctuary.jpg | CC BY-SA 4.0 |
+| `real/regions/bono-east-boabeng-fiema.jpg` | Boabeng-Fiema Monkey Sanctuary, Bono East Region | Malibu xoxo | https://commons.wikimedia.org/wiki/File:Boabeng_Fiema_monkey_sanctuary.jpg | CC BY-SA 4.0 |
 | `real/regions/bono-east-kintampo.jpg` | Kintampo Waterfalls, Bono East Region | Cdilalo47 | https://commons.wikimedia.org/wiki/File:Kintampo_Waterfalls_in_Ghana_03.jpg | CC0 |
 | `real/regions/bono-east-techiman.jpg` | Holy Family roundabout, Techiman, Bono East Region | Muniruwoods | https://commons.wikimedia.org/wiki/File:Techiman_Hollyfamily_Roundabout.jpg | CC BY-SA 4.0 |
 | `real/regions/ahafo-goaso.jpg` | Goaso roundabout, Ahafo Region | Emmanuel Yeboah Asiama | https://commons.wikimedia.org/wiki/File:Goaso_Ahafo_Regional_capital_Round_About.jpg | CC BY-SA 4.0 |
@@ -80,6 +80,7 @@ Picked by hand from Wikimedia Commons in September 2026, with more added in Octo
 | `photos/street-outside-makola-market-accra-ghana.webp` | The streets around Makola Market (greater-accra) | Benggriff | https://commons.wikimedia.org/wiki/File:Street_Outside_Makola_Market,_Accra,_Ghana.JPG | CC BY-SA 3.0 |
 | `photos/solnedgang-pa-labadi-beach.webp` | Sunset on Labadi Beach (greater-accra) | Stig Nygaard from Copenhagen, Denmark | https://commons.wikimedia.org/wiki/File:Solnedgang_p%C3%A5_Labadi_beach.jpg | CC BY 2.0 |
 | `photos/audience-watching-live-band-music-at-kona-bar.webp` | Live music at a bar in Osu (greater-accra) | Warmglow | https://commons.wikimedia.org/wiki/File:Audience_watching_live_band_music_at_kona_bar.jpg | CC BY-SA 4.0 |
+| `photos/woven-baskets-and-bags-market-stall-ghana.webp` | Baskets and bags at the Arts Centre, Accra (greater-accra) | Uduak123 | https://commons.wikimedia.org/wiki/File:Woven_baskets_and_bags_market_stall_Ghana.jpg | CC0 |
 | `photos/a-daytime-view-of-cape-coast-castle.webp` | Cape Coast Castle by day (central) | Kwameghana(Bright Kwame Ayisi) | https://commons.wikimedia.org/wiki/File:A_daytime_view_of_Cape_Coast_Castle.jpg | CC BY 4.0 |
 | `photos/cape-coast-castle-cape-coast-ghana.webp` | Cape Coast Castle's cannons facing the sea (central) | Rjruiziii | https://commons.wikimedia.org/wiki/File:Cape_Coast_Castle,_Cape_Coast,_Ghana.JPG | CC BY-SA 3.0 |
 | `photos/canopy-walk-of-kakum-national-park-1.webp` | The canopy walkway at Kakum (central) | Jones Anlimah | https://commons.wikimedia.org/wiki/File:Canopy_walk_of_kakum_national_park_(1).jpg | CC BY-SA 4.0 |
@@ -93,6 +94,7 @@ Picked by hand from Wikimedia Commons in September 2026, with more added in Octo
 | `photos/canopy-walk-of-kakum-national-park-2.webp` | Crossing Kakum's canopy walkway (central) | Jones Anlimah | https://commons.wikimedia.org/wiki/File:Canopy_walk_of_kakum_national_park_(2).jpg | CC BY-SA 4.0 |
 | `photos/elmina-castle-ghana.webp` | Elmina Castle (central) | Damien Halleux Radermecker | https://commons.wikimedia.org/wiki/File:Elmina_Castle_-_Ghana.jpg | CC BY-SA 2.0 |
 | `photos/scenery-at-hans-cottage-botel-near-cape-coast-ghana-47378352.webp` | The lake at Hans Cottage Botel (central) | Adam Jones from Kelowna, BC, Canada | https://commons.wikimedia.org/wiki/File:Scenery_at_Hans_Cottage_Botel_-_Near_Cape_Coast_-_Ghana_(4737835257).jpg | CC BY-SA 2.0 |
+| `photos/memorial-to-the-captives-marched-to-the-coast-at-assim-manso-ghana.webp` | The Last Bath memorial at Assin Manso (central) | Caupolicaningles | https://commons.wikimedia.org/wiki/File:Memorial_to_the_captives_marched_to_the_coast_at_Assim_Manso,_Ghana.jpg | CC BY-SA 4.0 |
 | `photos/a-glimpse-at-the-fall-wli.webp` | Wli Falls (volta) | Blaq dynamite | https://commons.wikimedia.org/wiki/File:A_glimpse_at_the_Fall_(Wli).jpg | CC BY-SA 4.0 |
 | `photos/amedzofe-mt-gemi.webp` | Amedzofe at the foot of Mount Gemi (volta) | Kradolferp | https://commons.wikimedia.org/wiki/File:Amedzofe_%26_Mt_Gemi.jpg | CC BY-SA 4.0 |
 | `photos/a-view-from-the-summit.webp` | The view from the summit of Mount Afadja (volta) | Blaq dynamite | https://commons.wikimedia.org/wiki/File:A_view_from_the_summit.jpg | CC BY-SA 4.0 |
@@ -115,6 +117,7 @@ Picked by hand from Wikimedia Commons in September 2026, with more added in Octo
 | `photos/banda-nkwanta-mosque-3.webp` | The mosque at Banda Nkwanta from above (savannah) | Goldenwabbit | https://commons.wikimedia.org/wiki/File:Banda_Nkwanta_Mosque_3.jpg | CC BY-SA 4.0 |
 | `photos/mognori-eco-village-1.webp` | Canoeing at Mognori Eco Village (savannah) | Shahadusadik | https://commons.wikimedia.org/wiki/File:Mognori_eco_village_1.jpg | CC BY-SA 4.0 |
 | `photos/salaga-slave-tree-panoramio.webp` | The slave market tree at Salaga (savannah) | Gonzo Gooner | https://commons.wikimedia.org/wiki/File:Salaga_Slave_Tree_-_panoramio.jpg | CC BY 3.0 |
+| `photos/daboya-no-1-white-volta.webp` | Canoes on the White Volta at Daboya (savannah) | Hasslaebetch | https://commons.wikimedia.org/wiki/File:Daboya_No._1_white_volta.jpg | CC BY-SA 4.0 |
 | `photos/a-house-built-on-water.webp` | A house on stilts at Nzulezu (western) | Kwameghana | https://commons.wikimedia.org/wiki/File:A_house_built_on_water.jpg | CC BY-SA 4.0 |
 | `photos/a-far-view-of-bamboo-houses-on-water.webp` | Nzulezu's houses on the water (western) | Kwameghana | https://commons.wikimedia.org/wiki/File:A_far_view_of_bamboo_houses_on_water.jpg | CC BY-SA 4.0 |
 | `photos/surfers-surfing-at-busua-beach-in-western-region-ghana.webp` | Surfing at Busua (western) | Michal Vogt | https://commons.wikimedia.org/wiki/File:Surfers_Surfing_at_Busua_Beach_in_Western_region,_Ghana.jpg | CC BY-SA 2.0 |
@@ -129,6 +132,7 @@ Picked by hand from Wikimedia Commons in September 2026, with more added in Octo
 | `photos/residential-houses-in-secondi-takoradi-2.webp` | Houses in Sekondi-Takoradi (western) | Kwameghana | https://commons.wikimedia.org/wiki/File:Residential_houses_in_Secondi_Takoradi_%CC%A0_2.jpg | CC BY-SA 4.0 |
 | `photos/dsc01739-15318781703.webp` | The lighthouse at Cape Three Points (western) | Tini Maier | https://commons.wikimedia.org/wiki/File:DSC01739_(15318781703).jpg | CC BY 2.0 |
 | `photos/ankasa-conservation-1.webp` | Ankasa's rainforest from above (western) | SAgbley | https://commons.wikimedia.org/wiki/File:Ankasa_Conservation_1.jpg | CC BY-SA 4.0 |
+| `photos/fort-saint-anthony-in-axim-western-region-ghana.webp` | Fort St. Anthony on its rock at Axim (western) | Jesuraj Alakassery | https://commons.wikimedia.org/wiki/File:Fort_Saint_Anthony_in_Axim,_Western_Region,_Ghana.jpg | CC BY-SA 4.0 |
 | `photos/view-over-kejetia-market-largest-in-west-africa-kumasi-ghana.webp` | Kejetia, one of West Africa's largest markets (ashanti) | Adam Jones from Kelowna, BC, Canada | https://commons.wikimedia.org/wiki/File:View_over_Kejetia_Market_-_Largest_in_West_Africa_-_Kumasi_-_Ghana_-_01_(4755555789).jpg | CC BY-SA 2.0 |
 | `photos/kronum-kumasi-2018-11-08-130246.webp` | Kumasi rooftops at Kronum (ashanti) | Maven Egote | https://commons.wikimedia.org/wiki/File:Kronum_Kumasi_2018-11-08_(130246).jpg | CC BY-SA 4.0 |
 | `photos/image-of-2024-bonwire-kente-festival-13.webp` | The 2024 Bonwire Kente Festival (ashanti) | Baah Badu Kurfass 1 | https://commons.wikimedia.org/wiki/File:Image_of_2024_Bonwire_Kente_Festival_13.jpg | CC BY-SA 4.0 |
@@ -157,6 +161,7 @@ Picked by hand from Wikimedia Commons in September 2026, with more added in Octo
 | `photos/aburi-garden-2.webp` | The avenue of palms at Aburi Botanical Gardens (eastern) | Lionel Scheepmans | https://commons.wikimedia.org/wiki/File:Aburi_garden_2.jpg | CC BY-SA 4.0 |
 | `photos/boti-falls-eastern-region.webp` | Boti Falls (eastern) | magwanwagwan | https://commons.wikimedia.org/wiki/File:Boti_Falls,_Eastern_Region.JPG | CC BY-SA 3.0 |
 | `photos/umbrella-rock-at-boti-falls-2.webp` | Umbrella Rock, near Boti Falls (eastern) | Nkansahrexford | https://commons.wikimedia.org/wiki/File:Umbrella_Rock_at_Boti_Falls_2.jpg | CC BY-SA 4.0 |
+| `photos/bunso-canopy-walkway.webp` | The canopy walkway at Bunso (eastern) | Roland Darko | https://commons.wikimedia.org/wiki/File:Bunso_Canopy_walkway.jpg | CC BY-SA 4.0 |
 | `photos/tamale-central-mosque.webp` | Tamale Central Mosque (northern) | Samaru Samaru | https://commons.wikimedia.org/wiki/File:Tamale_central_Mosque.jpg | CC BY-SA 4.0 |
 | `photos/market-in-tamale-northern-ghana.webp` | Market day in Tamale (northern) | Ibn Shiraz | https://commons.wikimedia.org/wiki/File:Market_in_Tamale_Northern_Ghana.jpg | CC BY-SA 4.0 |
 | `photos/road-tamale.webp` | A tree-lined road in Tamale (northern) | ARC - The Alliance of Religions and Conservation | https://commons.wikimedia.org/wiki/File:Road,_Tamale.jpg | CC BY 2.0 |
@@ -188,6 +193,7 @@ Picked by hand from Wikimedia Commons in September 2026, with more added in Octo
 | `photos/black-pots-from-the-upper-west-region-of-ghana.webp` | Fire-blackened pots made in the Upper West (upper-west) | Alhassan Mohammed Awal | https://commons.wikimedia.org/wiki/File:Black_pots_from_the_Upper_West_Region_of_Ghana.jpg | CC BY-SA 4.0 |
 | `photos/the-wechiau-hippopotamus-sanctuary.webp` | A hippo in the Black Volta at Wechiau (upper-west) | Kradolferp | https://commons.wikimedia.org/wiki/File:The_Wechiau_Hippopotamus_Sanctuary.jpg | CC BY-SA 4.0 |
 | `photos/gwollu-slave-trade-defence-wall-in-upper-east-region-of-ghan.webp` | The Gwollu defence wall (upper-west) | Sir Amugi | https://commons.wikimedia.org/wiki/File:Gwollu_Slave_Trade_Defence_Wall_in_Upper_East_Region_of_Ghana_01.jpg | CC BY-SA 4.0 |
+| `photos/culture-tradition.webp` | Xylophone players at a funeral in Nandom (upper-west) | Just Arts | https://commons.wikimedia.org/wiki/File:Culture_%26_Tradition.jpg | CC BY-SA 4.0 |
 | `photos/nalerigu-dam.webp` | The dam at Nalerigu (north-east) | Wumbeidoo | https://commons.wikimedia.org/wiki/File:Nalerigu_dam.jpg | CC BY-SA 4.0 |
 | `photos/a-peak-from-behind-the-gambaga-witches-camp.webp` | Hills above Gambaga (north-east) | Salifu Memunatu | https://commons.wikimedia.org/wiki/File:A_peak_from_behind_the_Gambaga_witches_camp.jpg | CC BY-SA 4.0 |
 | `photos/nakpanduri-village-center.webp` | Nakpanduri village centre (north-east) | Hugues , c.hug | https://commons.wikimedia.org/wiki/File:Nakpanduri_village_center.jpg | CC BY-SA 2.0 |
@@ -200,11 +206,24 @@ Picked by hand from Wikimedia Commons in September 2026, with more added in Octo
 | `photos/vehicles-and-people-awaiting-the-arrival-of-the-ferry-to-tra.webp` | Waiting for the ferry at Dambai (oti) | Mykojo | https://commons.wikimedia.org/wiki/File:Vehicles_and_people_awaiting_the_arrival_of_the_ferry_to_travel_across_river_Oti_at_Dambai.jpg | CC BY-SA 4.0 |
 | `photos/small-waterfall-at-kyabobo-national-park.webp` | A waterfall in Kyabobo National Park (oti) | Sean Moran | https://commons.wikimedia.org/wiki/File:Small_Waterfall_at_Kyabobo_National_Park.jpg | CC BY-SA 3.0 |
 | `photos/beautiful-mountain-in-kyabobo.webp` | Forested hills in Kyabobo National Park (oti) | Suglo20 | https://commons.wikimedia.org/wiki/File:Beautiful_mountain_in_kyabobo.jpg | CC BY-SA 4.0 |
+| `photos/dusty-roads-kete-krachi.webp` | A trotro on the road to Kete Krachi (oti) | Veennema | https://commons.wikimedia.org/wiki/File:Dusty_Roads_Kete_Krachi.JPG | CC BY-SA 3.0 |
+| `photos/ferry-carrying-passengers-at-kete-krachi-in-ghana.webp` | The Volta Lake ferry at Kete Krachi (oti) | Engr Winnamzua | https://commons.wikimedia.org/wiki/File:Ferry_carrying_passengers_at_Kete-Krachi_in_Ghana.jpg | CC BY-SA 4.0 |
+| `photos/ndewura-jakpa-ferry-at-oti-river.webp` | The Ndewura Jakpa ferry on the Oti River (oti) | Isibrahy | https://commons.wikimedia.org/wiki/File:Ndewura_Jakpa_Ferry_at_Oti_River.jpg | CC BY-SA 4.0 |
+| `photos/kyabobo-falls.webp` | Kyabobo Falls (oti) | Kradolferp | https://commons.wikimedia.org/wiki/File:Kyabobo_Falls.jpg | CC BY-SA 4.0 |
+| `photos/bushbuck-in-the-kyabobo-national-park.webp` | A bushbuck in Kyabobo National Park (oti) | Suglo20 | https://commons.wikimedia.org/wiki/File:Bushbuck_in_the_Kyabobo_national_park.jpg | CC BY-SA 4.0 |
+| `photos/violet-backed-starling.webp` | A violet-backed starling in Kyabobo National Park (oti) | Kradolferp | https://commons.wikimedia.org/wiki/File:Violet-backed_starling.jpg | CC BY-SA 4.0 |
 | `photos/a-path-through-the-kyabobo-hills.webp` | A path through the Kyabobo hills (oti) | Suglo20 | https://commons.wikimedia.org/wiki/File:A_Path_Through_the_kyabobo_Hills.jpg | CC BY-SA 4.0 |
-| `photos/koczkodan-liberyjski.webp` | A mona monkey at Boabeng-Fiema (bono) | Nero2022 | https://commons.wikimedia.org/wiki/File:Koczkodan_liberyjski.jpg | CC BY-SA 4.0 |
+| `photos/kyabobo-waterfalls-01.webp` | A waterfall at Odormi, near Nkwanta (oti) | Tahiru Rajab | https://commons.wikimedia.org/wiki/File:Kyabobo_Waterfalls_01.jpg | CC BY-SA 4.0 |
 | `photos/sunyani-township.webp` | Sunyani town centre (bono) | Gyanford | https://commons.wikimedia.org/wiki/File:Sunyani_Township.jpg | CC BY-SA 4.0 |
 | `photos/a-mountain-at-the-shore-of-bui-reservoir.webp` | A peak on the shore of the Bui reservoir (bono) | Knowledge and philosophy | https://commons.wikimedia.org/wiki/File:A_mountain_at_the_shore_of_Bui_reservoir.jpg | CC BY-SA 4.0 |
-| `photos/adult-black-and-white-colobus-monkeys.webp` | Black-and-white colobus monkeys at Boabeng-Fiema (bono) | MUDA7533 | https://commons.wikimedia.org/wiki/File:ADULT_BLACK_AND_WHITE_COLOBUS_MONKEYS.jpg | CC BY-SA 4.0 |
+| `photos/hippopotamuses-in-bui-lake-july-2025.webp` | Hippos in Bui Lake (bono) | Knowledge and philosophy | https://commons.wikimedia.org/wiki/File:Hippopotamuses_in_Bui_Lake_July_2025.jpg | CC BY-SA 4.0 |
+| `photos/cormorant-at-bui-lake.webp` | A cormorant on Bui Lake (bono) | Knowledge and philosophy | https://commons.wikimedia.org/wiki/File:Cormorant_at_Bui_lake.jpg | CC BY-SA 4.0 |
+| `photos/mountains-at-bui-national-park.webp` | The hills at Bui National Park (bono) | Knowledge and philosophy | https://commons.wikimedia.org/wiki/File:Mountains_at_Bui_National_Park.jpg | CC BY-SA 4.0 |
+| `photos/bui-dam-nov-2013.webp` | Bui Dam on the Black Volta (bono) | Wtshymanski | https://commons.wikimedia.org/wiki/File:Bui_Dam_Nov_2013.JPG | CC BY-SA 3.0 |
+| `photos/wenchi-waterfall.webp` | Nkyeraa waterfall near Wenchi (bono) | Isaac Sowah Badu | https://commons.wikimedia.org/wiki/File:Wenchi_Waterfall.jpg | CC BY-SA 4.0 |
+| `photos/st-anselms-anglican-cathedral-sunyani.webp` | St Anselm's Anglican Cathedral, Sunyani (bono) | Noahalorwu | https://commons.wikimedia.org/wiki/File:St_Anselms_Anglican_Cathedral_Sunyani.jpg | CC BY-SA 4.0 |
+| `photos/dormaa-ahenkro.webp` | The main street in Dormaa Ahenkro (bono) | jbdodane | https://commons.wikimedia.org/wiki/File:Dormaa_Ahenkro.jpg | CC BY 2.0 |
+| `photos/banda-traditional-council-banda-ahenkro-ghana-2019.webp` | The Banda Traditional Council at Banda-Ahenkro (bono) | Somecabbage | https://commons.wikimedia.org/wiki/File:Banda_Traditional_Council._Banda-Ahenkro,_Ghana,_2019.jpg | CC BY-SA 4.0 |
 | `photos/mountain-beside-bui-lake.webp` | A mountain beside Bui Lake (bono) | Knowledge and philosophy | https://commons.wikimedia.org/wiki/File:Mountain_beside_Bui_Lake.jpg | CC BY-SA 4.0 |
 | `photos/a-landscape-view-of-the-famous-kintampo-waterfall-in-ghana1.webp` | The third stage of Kintampo Waterfalls (bono-east) | Treysam | https://commons.wikimedia.org/wiki/File:A_landscape_view_of_the_famous_Kintampo_waterfall_in_Ghana1.jpg | CC BY-SA 4.0 |
 | `photos/top-view-of-kintampo-waterfalls.webp` | Kintampo Waterfalls from above (bono-east) | Knowledge and philosophy | https://commons.wikimedia.org/wiki/File:Top_view_of_Kintampo_waterfalls.jpg | CC BY-SA 4.0 |
@@ -215,29 +234,29 @@ Picked by hand from Wikimedia Commons in September 2026, with more added in Octo
 | `photos/presbyterian-church-in-1960-ghana.webp` | A 1960 Presbyterian church on the Techiman road (bono-east) | Amuzujoe | https://commons.wikimedia.org/wiki/File:Presbyterian_Church_in_1960_Ghana.jpg | CC BY-SA 4.0 |
 | `photos/canopy-walkway-of-kintampo-waterfalls.webp` | The canopy walkway at Kintampo Waterfalls (bono-east) | Knowledge and philosophy | https://commons.wikimedia.org/wiki/File:Canopy_walkway_of_Kintampo_Waterfalls.jpg | CC BY-SA 4.0 |
 | `photos/volta-lake-at-yeji.webp` | Lake Volta at Yeji (bono-east) | Shellback Richan | https://commons.wikimedia.org/wiki/File:Volta_Lake_at_Yeji.jpg | CC BY-SA 4.0 |
+| `photos/koczkodan-liberyjski.webp` | A mona monkey at Boabeng-Fiema (bono-east) | Nero2022 | https://commons.wikimedia.org/wiki/File:Koczkodan_liberyjski.jpg | CC BY-SA 4.0 |
+| `photos/adult-black-and-white-colobus-monkeys.webp` | Black-and-white colobus monkeys at Boabeng-Fiema (bono-east) | MUDA7533 | https://commons.wikimedia.org/wiki/File:ADULT_BLACK_AND_WHITE_COLOBUS_MONKEYS.jpg | CC BY-SA 4.0 |
 | `photos/rocks-in-buoyem.webp` | Rock formations at Buoyem (bono-east) | Muniruwoods | https://commons.wikimedia.org/wiki/File:Rocks_in_Buoyem.jpg | CC BY-SA 4.0 |
+| `photos/fullerfall.webp` | Fuller Falls, near Kintampo (bono-east) | Stephen Acheampong | https://commons.wikimedia.org/wiki/File:FullerFall.jpg | CC BY-SA 4.0 |
 | `photos/baobabentrepreneur-20.webp` | Mim Cashew & Agricultural Products (ahafo) | Yayasark | https://commons.wikimedia.org/wiki/File:Baobabentrepreneur_(20).jpg | CC BY-SA 4.0 |
 | `photos/goaso-ahafo-regional-capital-round-about.webp` | Goaso, the regional capital (ahafo) | Emmanuel Yeboah Asiama | https://commons.wikimedia.org/wiki/File:Goaso_Ahafo_Regional_capital_Round_About.jpg | CC BY-SA 4.0 |
+| `photos/mim-bourso.webp` | The rock at Mim Bour (ahafo) | Boadu Emma | https://commons.wikimedia.org/wiki/File:Mim_Bourso.jpg | CC BY-SA 4.0 |
+| `photos/mim-mountains-mim-bour.webp` | Visitors on top of Mim Bour (ahafo) | Yayasark | https://commons.wikimedia.org/wiki/File:Mim_mountains_(%E2%80%9CMim-_Bour).jpg | CC BY-SA 4.0 |
+| `photos/mim-ahafo-skyline.webp` | A street in Mim (ahafo) | Boadu Emma | https://commons.wikimedia.org/wiki/File:Mim_Ahafo_skyline.jpg | CC BY-SA 4.0 |
 | `photos/mim-lake1.webp` | Mim Lake (ahafo) | Boadu Emma | https://commons.wikimedia.org/wiki/File:Mim_lake1.jpg | CC BY-SA 4.0 |
 | `photos/bia-national-park.webp` | Bia National Park (western-north) | AmarAfshin | https://commons.wikimedia.org/wiki/File:Bia_National_Park.jpg | CC BY-SA 4.0 |
 | `photos/bia-national-park-and-a-rice-farm.webp` | Bia National Park beside a rice farm (western-north) | AmarAfshin | https://commons.wikimedia.org/wiki/File:Bia_National_Park,_and_a_rice_farm.jpg | CC BY-SA 4.0 |
 | `photos/molly-ann-matteson-ghana-photo.webp` | Evening in a Sefwi village (western-north) | Molly Ann Matteosn | https://commons.wikimedia.org/wiki/File:Molly_Ann_Matteson_Ghana_Photo.jpg | CC BY-SA 4.0 |
-| `photos/goaso-to-kumasi.webp` | The road near Wiawso (western-north) | Fredfok | https://commons.wikimedia.org/wiki/File:Goaso_to_Kumasi.jpg | CC BY-SA 4.0 |
-| `photos/20151118-osec-unk-2935-23904959686.webp` | Ripe cocoa pods, Ghana (western-north) | USDAgov | https://commons.wikimedia.org/wiki/File:20151118-OSEC-UNK-2935_(23904959686).jpg | Public domain |
+| `photos/afao-hills-bibiani.webp` | Forest on the Afao Hills, Bibiani (western-north) | Ebd.alex | https://commons.wikimedia.org/wiki/File:Afao_Hills,_Bibiani.jpg | CC BY-SA 4.0 |
+| `photos/trees-in-bia-forest.webp` | A giant tree in Bia Forest (western-north) | Akiwumi | https://commons.wikimedia.org/wiki/File:Trees_in_Bia_Forest.JPG | CC BY-SA 3.0 |
+| `photos/umbrella-canopy-tree.webp` | Umbrella trees in Bia Forest (western-north) | Akiwumi | https://commons.wikimedia.org/wiki/File:Umbrella_canopy_tree.jpg | CC BY-SA 3.0 |
+| `photos/bia-national-park-ecosystem.webp` | A pond in Bia National Park (western-north) | AmarAfshin | https://commons.wikimedia.org/wiki/File:Bia_National_Park_Ecosystem.jpg | CC BY-SA 4.0 |
 | `photos/mv-kumasi-zoo.webp` | A picture of a camel at the kumasi zoo (most visited) | David Nii Quaye | https://commons.wikimedia.org/wiki/File:A_picture_of_a_camel_at_the_kumasi_zoo.jpg | CC BY-SA 4.0 |
 | `photos/mv-accra-zoo.webp` | A lion in an enclosure at the Achimota Zoo (most visited) | Mawuenam Abla Senunyeme | https://commons.wikimedia.org/wiki/File:A_lion_in_an_enclosure_at_the_Achimota_Zoo.jpg | CC BY-SA 4.0 |
 | `photos/mv-shai-hills.webp` | Shai Hills, Shai-Osudoku (P1100106) (most visited) | Matti Blume | https://commons.wikimedia.org/wiki/File:Shai_Hills,_Shai-Osudoku_(P1100106).jpg | CC BY-SA 4.0 |
 | `photos/mv-bunso.webp` | Bunso Canopy walkway (most visited) | Roland Darko | https://commons.wikimedia.org/wiki/File:Bunso_Canopy_walkway.jpg | CC BY-SA 4.0 |
 | `photos/mv-manhyia.webp` | Manhyia Palace Museum (Kumasi, Ghana 2017) (most visited) | Dan Sloan | https://commons.wikimedia.org/wiki/File:Manhyia_Palace_Museum_(Kumasi,_Ghana_2017).jpg | CC BY-SA 2.0 |
 | `photos/mv-nkrumah.webp` | Front View of Kwame Nkrumah's Mausoleum and Memorial in Accra Ghana, May 2008 (most visited) | Emkamau | https://commons.wikimedia.org/wiki/File:Front_View_of_Kwame_Nkrumah%27s_Mausoleum_and_Memorial_in_Accra_Ghana,_May_2008.jpg | CC BY-SA 4.0 |
-| `photos/woven-baskets-and-bags-market-stall-ghana.webp` | Baskets and bags at the Arts Centre, Accra (greater-accra) | Uduak123 | https://commons.wikimedia.org/wiki/File:Woven_baskets_and_bags_market_stall_Ghana.jpg | CC0 |
-| `photos/memorial-to-the-captives-marched-to-the-coast-at-assim-manso-ghana.webp` | The Last Bath memorial at Assin Manso (central) | Caupolicaningles | https://commons.wikimedia.org/wiki/File:Memorial_to_the_captives_marched_to_the_coast_at_Assim_Manso,_Ghana.jpg | CC BY-SA 4.0 |
-| `photos/daboya-no-1-white-volta.webp` | Canoes on the White Volta at Daboya (savannah) | Hasslaebetch | https://commons.wikimedia.org/wiki/File:Daboya_No._1_white_volta.jpg | CC BY-SA 4.0 |
-| `photos/fort-saint-anthony-in-axim-western-region-ghana.webp` | Fort St. Anthony on its rock at Axim (western) | Jesuraj Alakassery | https://commons.wikimedia.org/wiki/File:Fort_Saint_Anthony_in_Axim,_Western_Region,_Ghana.jpg | CC BY-SA 4.0 |
-| `photos/bunso-canopy-walkway.webp` | The canopy walkway at Bunso (eastern) | Roland Darko | https://commons.wikimedia.org/wiki/File:Bunso_Canopy_walkway.jpg | CC BY-SA 4.0 |
-| `photos/culture-tradition.webp` | Xylophone players at a funeral in Nandom (upper-west) | Just Arts | https://commons.wikimedia.org/wiki/File:Culture_%26_Tradition.jpg | CC BY-SA 4.0 |
-| `photos/kyabobo-waterfalls-01.webp` | A waterfall at Odormi, near Nkwanta (oti) | Tahiru Rajab | https://commons.wikimedia.org/wiki/File:Kyabobo_Waterfalls_01.jpg | CC BY-SA 4.0 |
-| `photos/fullerfall.webp` | Fuller Falls, near Kintampo (bono-east) | Stephen Acheampong | https://commons.wikimedia.org/wiki/File:FullerFall.jpg | CC BY-SA 4.0 |
 
 Creative Commons license text: https://creativecommons.org/licenses/
 

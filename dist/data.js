@@ -181,9 +181,7 @@ window.GHANA_REGIONS = [
     fact: 'Sunyani is the regional capital.',
     intro: 'Tree-lined streets, farm country and early markets make Bono a region best explored at an unhurried pace.',
     image: 'assets/real/regions/bono-sunyani-cocoa-house.jpg', shot: 'Cocoa House and the street beside it, Sunyani',
-    side: 'assets/real/regions/bono-boabeng-fiema.jpg', shot2: 'A mona monkey at the Boabeng-Fiema sanctuary',
     visit: [
-      { name: 'Boabeng-Fiema Monkey Sanctuary', note: 'Mona and colobus monkeys protected by the villages around them.', image: 'assets/real/regions/bono-boabeng-fiema.jpg' },
       { name: 'Sunyani', note: 'A green regional capital with a steady pace.', image: 'assets/real/regions/bono-sunyani-cocoa-house.jpg' },
       { name: 'Bui National Park', note: 'Forest, the Black Volta and hippos.' }
     ]
@@ -199,7 +197,8 @@ window.GHANA_REGIONS = [
       { name: 'Kintampo Waterfalls', note: 'Steps down through forest to the falls.', image: 'assets/real/regions/bono-east-kintampo.jpg' },
       { name: 'Techiman Market', note: 'One of the biggest produce markets in the country.', image: 'assets/real/regions/bono-east-techiman.jpg' },
       { name: 'Fuller Falls', note: 'A quieter waterfall near Kintampo.' },
-      { name: 'Buoyem Caves', note: 'Bat caves and rock formations.' }
+      { name: 'Buoyem Caves', note: 'Bat caves and rock formations.' },
+      { name: 'Boabeng-Fiema Monkey Sanctuary', note: 'Mona and colobus monkeys protected by the villages around them.', image: 'assets/real/regions/bono-east-boabeng-fiema.jpg' }
     ]
   },
   {

@@ -130,7 +130,7 @@ analyticsPages.forEach((file) => {
 const htmlExpectations = {
   'dist/index.html': [
     'styles.css?v=49',
-    'data.js?v=8',
+    'data.js?v=9',
     'app.js?v=32',
     'tip-form.js?v=5',
     'footer.js?v=3',
@@ -139,7 +139,7 @@ const htmlExpectations = {
   ],
   'tools/region-template.html': [
     '/styles.css?v=49',
-    '/data.js?v=8',
+    '/data.js?v=9',
     '/region.js?v=12',
     '/tip-form.js?v=5',
     '/footer.js?v=3',

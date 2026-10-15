@@ -2,17 +2,6 @@
    author, licence and source page, and region pages show them. */
 window.GHANA_MEDIA = {
  "photos": {
-  "20151118-osec-unk-2935-23904959686": {
-   "src": "assets/photos/20151118-osec-unk-2935-23904959686.webp",
-   "small": "assets/photos/20151118-osec-unk-2935-23904959686-800.webp",
-   "w": 1600,
-   "h": 1067,
-   "caption": "Ripe cocoa pods, Ghana",
-   "author": "USDAgov",
-   "license": "Public domain",
-   "licenseUrl": "",
-   "source": "https://commons.wikimedia.org/wiki/File:20151118-OSEC-UNK-2935_(23904959686).jpg"
-  },
   "a-dried-tree-in-the-savanna-lands-in-northern-ghana": {
    "src": "assets/photos/a-dried-tree-in-the-savanna-lands-in-northern-ghana.webp",
    "small": "assets/photos/a-dried-tree-in-the-savanna-lands-in-northern-ghana-800.webp",
@@ -837,17 +826,6 @@ window.GHANA_MEDIA = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Goaso_Ahafo_Regional_capital_Round_About.jpg"
-  },
-  "goaso-to-kumasi": {
-   "src": "assets/photos/goaso-to-kumasi.webp",
-   "small": "assets/photos/goaso-to-kumasi-800.webp",
-   "w": 1600,
-   "h": 1200,
-   "caption": "The road near Wiawso",
-   "author": "Fredfok",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Goaso_to_Kumasi.jpg"
   },
   "gwollu-slave-trade-defence-wall-in-upper-east-region-of-ghan": {
    "src": "assets/photos/gwollu-slave-trade-defence-wall-in-upper-east-region-of-ghan.webp",
@@ -1882,6 +1860,237 @@ window.GHANA_MEDIA = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:FullerFall.jpg"
+  },
+  "mim-bourso": {
+   "src": "assets/photos/mim-bourso.webp",
+   "small": "assets/photos/mim-bourso-800.webp",
+   "w": 1600,
+   "h": 1067,
+   "caption": "The rock at Mim Bour",
+   "author": "Boadu Emma",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Mim_Bourso.jpg"
+  },
+  "mim-mountains-mim-bour": {
+   "src": "assets/photos/mim-mountains-mim-bour.webp",
+   "small": "assets/photos/mim-mountains-mim-bour-800.webp",
+   "w": 1600,
+   "h": 1071,
+   "caption": "Visitors on top of Mim Bour",
+   "author": "Yayasark",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Mim_mountains_(%E2%80%9CMim-_Bour).jpg"
+  },
+  "mim-ahafo-skyline": {
+   "src": "assets/photos/mim-ahafo-skyline.webp",
+   "small": "assets/photos/mim-ahafo-skyline-800.webp",
+   "w": 1600,
+   "h": 3644,
+   "caption": "A street in Mim",
+   "author": "Boadu Emma",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Mim_Ahafo_skyline.jpg"
+  },
+  "afao-hills-bibiani": {
+   "src": "assets/photos/afao-hills-bibiani.webp",
+   "small": "assets/photos/afao-hills-bibiani-800.webp",
+   "w": 1600,
+   "h": 2133,
+   "caption": "Forest on the Afao Hills, Bibiani",
+   "author": "Ebd.alex",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Afao_Hills,_Bibiani.jpg"
+  },
+  "trees-in-bia-forest": {
+   "src": "assets/photos/trees-in-bia-forest.webp",
+   "small": "assets/photos/trees-in-bia-forest-800.webp",
+   "w": 1600,
+   "h": 2133,
+   "caption": "A giant tree in Bia Forest",
+   "author": "Akiwumi",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Trees_in_Bia_Forest.JPG"
+  },
+  "umbrella-canopy-tree": {
+   "src": "assets/photos/umbrella-canopy-tree.webp",
+   "small": "assets/photos/umbrella-canopy-tree-800.webp",
+   "w": 1600,
+   "h": 1200,
+   "caption": "Umbrella trees in Bia Forest",
+   "author": "Akiwumi",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Umbrella_canopy_tree.jpg"
+  },
+  "bia-national-park-ecosystem": {
+   "src": "assets/photos/bia-national-park-ecosystem.webp",
+   "small": "assets/photos/bia-national-park-ecosystem-800.webp",
+   "w": 1600,
+   "h": 2133,
+   "caption": "A pond in Bia National Park",
+   "author": "AmarAfshin",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bia_National_Park_Ecosystem.jpg"
+  },
+  "hippopotamuses-in-bui-lake-july-2025": {
+   "src": "assets/photos/hippopotamuses-in-bui-lake-july-2025.webp",
+   "small": "assets/photos/hippopotamuses-in-bui-lake-july-2025-800.webp",
+   "w": 1600,
+   "h": 1067,
+   "caption": "Hippos in Bui Lake",
+   "author": "Knowledge and philosophy",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Hippopotamuses_in_Bui_Lake_July_2025.jpg"
+  },
+  "cormorant-at-bui-lake": {
+   "src": "assets/photos/cormorant-at-bui-lake.webp",
+   "small": "assets/photos/cormorant-at-bui-lake-800.webp",
+   "w": 1600,
+   "h": 1067,
+   "caption": "A cormorant on Bui Lake",
+   "author": "Knowledge and philosophy",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Cormorant_at_Bui_lake.jpg"
+  },
+  "mountains-at-bui-national-park": {
+   "src": "assets/photos/mountains-at-bui-national-park.webp",
+   "small": "assets/photos/mountains-at-bui-national-park-800.webp",
+   "w": 1600,
+   "h": 1067,
+   "caption": "The hills at Bui National Park",
+   "author": "Knowledge and philosophy",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Mountains_at_Bui_National_Park.jpg"
+  },
+  "bui-dam-nov-2013": {
+   "src": "assets/photos/bui-dam-nov-2013.webp",
+   "small": "assets/photos/bui-dam-nov-2013-800.webp",
+   "w": 1600,
+   "h": 1200,
+   "caption": "Bui Dam on the Black Volta",
+   "author": "Wtshymanski",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bui_Dam_Nov_2013.JPG"
+  },
+  "wenchi-waterfall": {
+   "src": "assets/photos/wenchi-waterfall.webp",
+   "small": "assets/photos/wenchi-waterfall-800.webp",
+   "w": 1600,
+   "h": 2133,
+   "caption": "Nkyeraa waterfall near Wenchi",
+   "author": "Isaac Sowah Badu",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Wenchi_Waterfall.jpg"
+  },
+  "st-anselms-anglican-cathedral-sunyani": {
+   "src": "assets/photos/st-anselms-anglican-cathedral-sunyani.webp",
+   "small": "assets/photos/st-anselms-anglican-cathedral-sunyani-800.webp",
+   "w": 1600,
+   "h": 900,
+   "caption": "St Anselm's Anglican Cathedral, Sunyani",
+   "author": "Noahalorwu",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:St_Anselms_Anglican_Cathedral_Sunyani.jpg"
+  },
+  "dormaa-ahenkro": {
+   "src": "assets/photos/dormaa-ahenkro.webp",
+   "small": "assets/photos/dormaa-ahenkro-800.webp",
+   "w": 1600,
+   "h": 1060,
+   "caption": "The main street in Dormaa Ahenkro",
+   "author": "jbdodane",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Dormaa_Ahenkro.jpg"
+  },
+  "banda-traditional-council-banda-ahenkro-ghana-2019": {
+   "src": "assets/photos/banda-traditional-council-banda-ahenkro-ghana-2019.webp",
+   "small": "assets/photos/banda-traditional-council-banda-ahenkro-ghana-2019-800.webp",
+   "w": 1600,
+   "h": 1200,
+   "caption": "The Banda Traditional Council at Banda-Ahenkro",
+   "author": "Somecabbage",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Banda_Traditional_Council._Banda-Ahenkro,_Ghana,_2019.jpg"
+  },
+  "dusty-roads-kete-krachi": {
+   "src": "assets/photos/dusty-roads-kete-krachi.webp",
+   "small": "assets/photos/dusty-roads-kete-krachi-800.webp",
+   "w": 1600,
+   "h": 1198,
+   "caption": "A trotro on the road to Kete Krachi",
+   "author": "Veennema",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Dusty_Roads_Kete_Krachi.JPG"
+  },
+  "ferry-carrying-passengers-at-kete-krachi-in-ghana": {
+   "src": "assets/photos/ferry-carrying-passengers-at-kete-krachi-in-ghana.webp",
+   "small": "assets/photos/ferry-carrying-passengers-at-kete-krachi-in-ghana-800.webp",
+   "w": 1600,
+   "h": 1200,
+   "caption": "The Volta Lake ferry at Kete Krachi",
+   "author": "Engr Winnamzua",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ferry_carrying_passengers_at_Kete-Krachi_in_Ghana.jpg"
+  },
+  "ndewura-jakpa-ferry-at-oti-river": {
+   "src": "assets/photos/ndewura-jakpa-ferry-at-oti-river.webp",
+   "small": "assets/photos/ndewura-jakpa-ferry-at-oti-river-800.webp",
+   "w": 1600,
+   "h": 2133,
+   "caption": "The Ndewura Jakpa ferry on the Oti River",
+   "author": "Isibrahy",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Ndewura_Jakpa_Ferry_at_Oti_River.jpg"
+  },
+  "kyabobo-falls": {
+   "src": "assets/photos/kyabobo-falls.webp",
+   "small": "assets/photos/kyabobo-falls-800.webp",
+   "w": 1600,
+   "h": 1068,
+   "caption": "Kyabobo Falls",
+   "author": "Kradolferp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Kyabobo_Falls.jpg"
+  },
+  "bushbuck-in-the-kyabobo-national-park": {
+   "src": "assets/photos/bushbuck-in-the-kyabobo-national-park.webp",
+   "small": "assets/photos/bushbuck-in-the-kyabobo-national-park-800.webp",
+   "w": 1600,
+   "h": 1067,
+   "caption": "A bushbuck in Kyabobo National Park",
+   "author": "Suglo20",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Bushbuck_in_the_Kyabobo_national_park.jpg"
+  },
+  "violet-backed-starling": {
+   "src": "assets/photos/violet-backed-starling.webp",
+   "small": "assets/photos/violet-backed-starling-800.webp",
+   "w": 1600,
+   "h": 1359,
+   "caption": "A violet-backed starling in Kyabobo National Park",
+   "author": "Kradolferp",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Violet-backed_starling.jpg"
   }
  },
  "regions": {
@@ -2053,14 +2262,26 @@ window.GHANA_MEDIA = {
    "vehicles-and-people-awaiting-the-arrival-of-the-ferry-to-tra",
    "small-waterfall-at-kyabobo-national-park",
    "beautiful-mountain-in-kyabobo",
+   "dusty-roads-kete-krachi",
+   "ferry-carrying-passengers-at-kete-krachi-in-ghana",
+   "ndewura-jakpa-ferry-at-oti-river",
+   "kyabobo-falls",
+   "bushbuck-in-the-kyabobo-national-park",
+   "violet-backed-starling",
    "a-path-through-the-kyabobo-hills",
    "kyabobo-waterfalls-01"
   ],
   "bono": [
-   "koczkodan-liberyjski",
    "sunyani-township",
    "a-mountain-at-the-shore-of-bui-reservoir",
-   "adult-black-and-white-colobus-monkeys",
+   "hippopotamuses-in-bui-lake-july-2025",
+   "cormorant-at-bui-lake",
+   "mountains-at-bui-national-park",
+   "bui-dam-nov-2013",
+   "wenchi-waterfall",
+   "st-anselms-anglican-cathedral-sunyani",
+   "dormaa-ahenkro",
+   "banda-traditional-council-banda-ahenkro-ghana-2019",
    "mountain-beside-bui-lake"
   ],
   "bono-east": [
@@ -2073,20 +2294,27 @@ window.GHANA_MEDIA = {
    "presbyterian-church-in-1960-ghana",
    "canopy-walkway-of-kintampo-waterfalls",
    "volta-lake-at-yeji",
+   "koczkodan-liberyjski",
+   "adult-black-and-white-colobus-monkeys",
    "rocks-in-buoyem",
    "fullerfall"
   ],
   "ahafo": [
    "baobabentrepreneur-20",
    "goaso-ahafo-regional-capital-round-about",
+   "mim-bourso",
+   "mim-mountains-mim-bour",
+   "mim-ahafo-skyline",
    "mim-lake1"
   ],
   "western-north": [
    "bia-national-park",
    "bia-national-park-and-a-rice-farm",
    "molly-ann-matteson-ghana-photo",
-   "goaso-to-kumasi",
-   "20151118-osec-unk-2935-23904959686"
+   "afao-hills-bibiani",
+   "trees-in-bia-forest",
+   "umbrella-canopy-tree",
+   "bia-national-park-ecosystem"
   ]
  },
  "places": {
@@ -2127,6 +2355,10 @@ window.GHANA_MEDIA = {
    "wiki": "https://en.wikipedia.org/wiki/Kwame_Nkrumah_University_of_Science_and_Technology",
    "site": "https://www.knust.edu.gh/"
   },
+  "bono-east|Boabeng-Fiema Monkey Sanctuary": {
+   "wiki": "https://en.wikipedia.org/wiki/Boabeng-Fiema_Monkey_Sanctuary",
+   "site": "https://www.boabengfms.org/"
+  },
   "bono-east|Buoyem Caves": {
    "photo": "rocks-in-buoyem",
    "wiki": "https://en.wikipedia.org/wiki/Buoyem"
@@ -2141,10 +2373,6 @@ window.GHANA_MEDIA = {
   },
   "bono-east|Techiman Market": {
    "wiki": "https://en.wikipedia.org/wiki/Techiman"
-  },
-  "bono|Boabeng-Fiema Monkey Sanctuary": {
-   "wiki": "https://en.wikipedia.org/wiki/Boabeng-Fiema_Monkey_Sanctuary",
-   "site": "https://www.boabengfms.org/"
   },
   "bono|Bui National Park": {
    "photo": "mountain-beside-bui-lake",
@@ -2323,12 +2551,6 @@ window.GHANA_MEDIA = {
   "western-north|Bia National Park": {
    "wiki": "https://en.wikipedia.org/wiki/Bia_National_Park",
    "guide": "https://visitghana.com/bia-national-park/"
-  },
-  "western-north|Cocoa country": {
-   "photo": "20151118-osec-unk-2935-23904959686"
-  },
-  "western-north|Sefwi Wiawso": {
-   "photo": "goaso-to-kumasi"
   },
   "western|Ankasa Conservation Area": {
    "photo": "ankasa-conservation-1",
@@ -2573,8 +2795,8 @@ window.GHANA_MEDIA = {
    "w": 1400,
    "h": 742
   },
-  "assets/real/regions/bono-boabeng-fiema.jpg": {
-   "caption": "Boabeng-Fiema Monkey Sanctuary, Bono Region",
+  "assets/real/regions/bono-east-boabeng-fiema.jpg": {
+   "caption": "Boabeng-Fiema Monkey Sanctuary, Bono East Region",
    "author": "Malibu xoxo",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",

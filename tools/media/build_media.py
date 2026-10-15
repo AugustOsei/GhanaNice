@@ -47,7 +47,7 @@ WIKI = {
     'upper-west|Gwollu Defence Wall': 'Gwollu', 'upper-west|Nandom': 'Nandom', 'savannah|Daboya': 'Daboya, Ghana',
     'north-east|Nalerigu': 'Nalerigu', 'north-east|Naa Jaringa Wall, Gambaga': 'Gambaga', 'north-east|Nakpanduri': 'Nakpanduri',
     'oti|Lake Volta at Dambai': 'Dambai', 'oti|Kyabobo National Park': 'Kyabobo National Park', 'oti|Nkwanta': 'Nkwanta',
-    'bono|Boabeng-Fiema Monkey Sanctuary': 'Boabeng-Fiema Monkey Sanctuary', 'bono|Sunyani': 'Sunyani', 'bono|Bui National Park': 'Bui National Park',
+    'bono-east|Boabeng-Fiema Monkey Sanctuary': 'Boabeng-Fiema Monkey Sanctuary', 'bono|Sunyani': 'Sunyani', 'bono|Bui National Park': 'Bui National Park',
     'bono-east|Kintampo Waterfalls': 'Kintampo waterfalls', 'bono-east|Techiman Market': 'Techiman', 'bono-east|Buoyem Caves': 'Buoyem',
     'ahafo|Goaso': 'Goaso', 'ahafo|Mim': 'Mim, Ahafo', 'ahafo|Kenyasi': 'Kenyasi', 'western-north|Bia National Park': 'Bia National Park',
 }
@@ -58,7 +58,7 @@ for line in open('visitghana.txt'):
 SITES = {
     'ashanti|Manhyia Palace Museum': 'https://manhyiapalacemuseum.org/',
     'ashanti|The Great Hall, KNUST': 'https://www.knust.edu.gh/',
-    'bono|Boabeng-Fiema Monkey Sanctuary': 'https://www.boabengfms.org/',
+    'bono-east|Boabeng-Fiema Monkey Sanctuary': 'https://www.boabengfms.org/',
     'savannah|Mole National Park': 'https://www.molenationalpark.org/',
 }
 

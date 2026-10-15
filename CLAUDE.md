@@ -38,7 +38,7 @@ A people-powered guide to good places across Ghana's 16 regions, "for locals and
 Done 2026-10-14: placeholder "found it nice" counts hidden (votes are still browser-only; `niceCount` stays in the tip data); unused `independence-arch-storm.jpg` removed; code/behaviour/performance audit run, and its quick fixes made (directory listing clicks no longer change the filter, the home page only downloads the hero landmark it lands on, community wall reworded, "Leave a tip" footer link, cleanups); the 16 regions turned into static pages at `/regions/<slug>/` (see the file table); `https://www.ghananice.com/sitemap.xml` submitted in Google Search Console (Domain property, so it needs the full URL) and read successfully.
 
 **Next**
-1. Photos: only Kenyasi (Ahafo) lacks one: Commons has nothing of the town beyond water points (2026-10-15). The Ahafo, Oti, Bono and Western North galleries are thin (3–5 photos). Add photos with `tools/media/fetch.py`, map them in `manifest.json` and `captions.json`, run `build_media.py`, add the CREDITS.md rows, rebuild the region pages.
+1. Photos: Kenyasi (Ahafo), Sefwi Wiawso and "Cocoa country" (Western North) have no card photo; Commons has nothing verifiable for them (2026-10-15). Thinnest galleries now: Ahafo and Western North (8 tiles each). Add photos with `tools/media/fetch.py`, map them in `manifest.json` and `captions.json`, run `build_media.py`, add the CREDITS.md rows, rebuild the region pages.
 2. Performance: phones download ~3 MB on a first home visit, 1.2 MB of it the hero loop video (make smaller phone encodes). The travel-directory pencil grain reseeds ~6×/s and the footer water runs at full frame rate while visible (slow both).
 
 **Waiting on others**
