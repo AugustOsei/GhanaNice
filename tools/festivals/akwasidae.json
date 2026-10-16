@@ -1,0 +1,142 @@
+{
+  "slug": "akwasidae",
+  "name": "Akwasidae",
+  "kind": "trad",
+  "recurring": {
+    "anchor": "2026-02-01",
+    "days": 42
+  },
+  "region": "Ashanti",
+  "card": {
+    "short": "Every 6 weeks",
+    "when": "Every six weeks, on a Sunday",
+    "place": "Manhyia Palace, Kumasi",
+    "keeper": "The Asantehene and the Asante",
+    "sum": "The Asantehene sits in state at Manhyia and receives chiefs and visitors, every six weeks."
+  },
+  "metaTitle": "Akwasidae at Manhyia Palace, Kumasi: Dates and What to Expect",
+  "metaDescription": "Akwasidae is the Asante festival held every six weeks on a Sunday, when the Asantehene sits in state at Manhyia Palace in Kumasi. How the cycle works, what happens and how to go.",
+  "ogTitle": "Akwasidae: the Asantehene sits in state",
+  "subtitle": "The Asantehene sits in state, every six weeks",
+  "answer": "Akwasidae is the Asante festival that comes round every six weeks on a Sunday, following the 42-day Akan calendar. On the day the Asantehene, the king of Asante, sits in state at Manhyia Palace in Kumasi, receiving chiefs and visitors amid drumming, horn-blowing and dancing, after rites for the ancestors. It is one of the most accessible royal ceremonies in Ghana.",
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 675,
+    "alt": "Asante chiefs in kente and gold seated in state at Akwasidae in Kumasi",
+    "caption": "Chiefs in state at Akwasidae",
+    "author": "Paul5263",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ashanti_chief,_Kumasi,_Ghana.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "Every six weeks (42 days), on a Sunday"
+    ],
+    [
+      "Where",
+      "Manhyia Palace, Kumasi, Ashanti Region"
+    ],
+    [
+      "Kept by",
+      "The Asantehene and the Asante"
+    ],
+    [
+      "Biggest",
+      "Adae Kese, the last Akwasidae of the year"
+    ]
+  ],
+  "schema": {
+    "description": "Asante festival every six weeks when the Asantehene sits in state at Manhyia Palace.",
+    "location": "Manhyia Palace, Kumasi",
+    "locality": "Kumasi",
+    "organizer": "Manhyia Palace"
+  },
+  "sections": [
+    {
+      "id": "when",
+      "title": "When is Akwasidae?",
+      "html": "<p>The Akan calendar runs in cycles of six weeks, and Akwasidae falls on a Sunday at the end of each, so there are eight or nine a year.[[1,2]] In 2026 they fell on 1 February, 15 March, 26 April, 7 June, 19 July, 30 August, 11 October and 22 November; the next is on 3 January 2027.[[3]]</p>\n<p>The last Akwasidae of the Asante year is Adae Kese, the biggest, with offerings of food and gifts to people in need.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "html": "<p>Before the public ceremony the Asantehene performs rites for the ancestors, including a visit to the royal mausoleum at Bantama.[[4]] Then he sits in state at Manhyia, carried in a palanquin with drummers, dancers and horn-blowers, and chiefs, dignitaries and visitors come forward to greet him.[[4]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Manhyia Palace is in Kumasi; the Manhyia Palace Museum is on the same grounds.",
+        "<b>Visitors:</b> it is a formal royal occasion, but visitors are welcome. Dress respectfully and follow the palace officials.",
+        "<b>Photos:</b> ask before photographing the Asantehene or the rites.",
+        "<b>Check first:</b> confirm the date locally; an Akwasidae near Christmas may be moved or cancelled.",
+        "<b>While you’re there:</b> Kejetia market and the Kente villages of Bonwire and Adanwomase are close. See the <a href=\"/regions/ashanti/\">Ashanti region</a> page."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Akwasidae?",
+      "a": "An Asante festival held every six weeks on a Sunday, when the Asantehene sits in state at Manhyia Palace in Kumasi to receive chiefs and visitors."
+    },
+    {
+      "q": "How often is Akwasidae held?",
+      "a": "Every 42 days, at the end of each six-week cycle of the Akan calendar, always on a Sunday."
+    },
+    {
+      "q": "Can tourists attend Akwasidae?",
+      "a": "Yes. It is a formal royal occasion, but visitors are welcome if they dress and behave respectfully."
+    },
+    {
+      "q": "What is Adae Kese?",
+      "a": "The last and biggest Akwasidae of the Asante year."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Akwasidae Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Akwasidae_Festival"
+    },
+    {
+      "cite": "“Asanteman welcomes Akwasidae”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/entertainment/showbiz-news/asanteman-welcomes-akwasidae.html"
+    },
+    {
+      "cite": "“Festivals of Ghana” (Akwasidae dates)",
+      "site": "Easy Track Ghana",
+      "url": "https://www.easytrackghana.com/cultural-overview-ghana-festivals.php"
+    },
+    {
+      "cite": "“The rich traditions of the Akwasidae festival”",
+      "site": "Ghana Remembers",
+      "url": "https://ghanaremembers.com/stories/culture/the-rich-traditions-of-the-akwasidae-festival.html"
+    }
+  ],
+  "photos": [
+    {
+      "file": "asantehene.webp",
+      "w": 800,
+      "h": 1200,
+      "alt": "Otumfuo Osei Tutu II, the Asantehene, in kente during Akwasidae",
+      "caption": "The Asantehene at Akwasidae, July 2017",
+      "author": "Alfred Weidinger",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Asantehene_Otumfuo_Nana_Osei_Tutu_II,_Kumasi,_Ghana_(35899809070).jpg"
+    },
+    {
+      "file": "manhyia.webp",
+      "w": 640,
+      "h": 480,
+      "alt": "People gathered at the gate of Manhyia Palace for Akwasidae",
+      "caption": "At Manhyia Palace",
+      "author": "Zack Agon",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Akwasidae_Celebration_in_Manhyia_Palace.jpg"
+    }
+  ],
+  "checked": "2026-10-16"
+}

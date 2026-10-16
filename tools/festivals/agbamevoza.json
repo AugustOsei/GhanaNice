@@ -1,0 +1,134 @@
+{
+  "slug": "agbamevoza",
+  "name": "Agbamevoza",
+  "kind": "trad",
+  "month": 7,
+  "region": "Volta",
+  "card": {
+    "short": "Aug–Sep",
+    "when": "Usually late August or early September, over a week",
+    "place": "Agotime-Kpetoe",
+    "keeper": "The Agotime",
+    "sum": "The Kente festival of Agotime: weaving contests and chiefs in their finest cloth."
+  },
+  "metaTitle": "Agbamevoza: the Kente Festival of Agotime-Kpetoe",
+  "metaDescription": "Agbamevoza is the Kente festival of the Agotime people at Kpetoe near Ho in the Volta Region: a week of weaving contests and a durbar in the finest kente. Dates and tips.",
+  "ogTitle": "Agbamevoza: the Agotime Kente festival",
+  "subtitle": "The Agotime festival of kente",
+  "answer": "Agbamevoza, the Kente festival, is held by the chiefs and people of the Agotime Traditional Area at Kpetoe, east of Ho in the Volta Region. Over a week in late August or early September there are kente weaving competitions for speed and design, and the festival ends with a grand durbar where chiefs and people wear their finest kente.",
+  "sticky": {
+    "title": "Bring cash",
+    "text": "Kpetoe is a weaving town: the cloth on sale here comes straight off the looms."
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 1000,
+    "h": 667,
+    "alt": "Chiefs and elders in bright kente seated at the Agbamevoza durbar",
+    "caption": "Chiefs in kente at the durbar",
+    "author": "JY midey",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kpetoee.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "Usually late August or early September, over a week"
+    ],
+    [
+      "Where",
+      "Agotime-Kpetoe, Volta Region"
+    ],
+    [
+      "Kept by",
+      "The Agotime, led by the Konor of Agotime"
+    ],
+    [
+      "Name",
+      "Agbamevo means “loom cloth” in Ewe"
+    ]
+  ],
+  "schema": {
+    "description": "Kente festival of the Agotime people at Kpetoe, with weaving contests and a durbar.",
+    "location": "Agotime-Kpetoe",
+    "locality": "Kpetoe",
+    "organizer": "Agotime Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "What Agbamevoza celebrates",
+      "html": "<p><i>Agbamevo</i> means “loom cloth” in Ewe. The Agotime say they brought kente weaving to the area, and Kpetoe is one of the biggest weaving centres in Ghana; the festival was started in 1995 to celebrate and promote the craft.[[1,3]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "html": "<p>The week includes weaving competitions for the fastest weavers and the most inventive designs, exhibitions and a Miss Kente pageant, and it ends with a durbar of chiefs and people in kente.[[1,3]] The 20th edition, in 2015, ran from 6 to 13 September with the durbar on Saturday 12 September; around 7,000 guests were expected.[[2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Kpetoe is about 20 minutes east of Ho, near the Togo border.",
+        "<b>Buying kente:</b> you can visit weavers and buy directly. Ask before photographing people at their looms.",
+        "<b>Dates:</b> the week sometimes starts in the last week of August and the dates can be set late. Check before travelling.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Agbamevoza?",
+      "a": "The Kente festival of the Agotime people at Kpetoe in the Volta Region, with weaving competitions and a durbar in kente."
+    },
+    {
+      "q": "When is the Kente festival at Kpetoe?",
+      "a": "Usually over a week in late August or early September."
+    },
+    {
+      "q": "What does Agbamevo mean?",
+      "a": "Loom cloth, in Ewe."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Agbamevo Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Agbamevo_Festival"
+    },
+    {
+      "cite": "“Kente Festival launched at Agotime Kpetoe”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/news/general-news/kente-festival-launched-at-agotime-kpetoe.html",
+      "date": "18 August 2015"
+    },
+    {
+      "cite": "“Agbamevoza: Agotime Traditional Area Kente Festival”",
+      "site": "African Craft",
+      "url": "https://africancraft.com/article.php?id=agotime"
+    }
+  ],
+  "photos": [
+    {
+      "file": "women.webp",
+      "w": 1000,
+      "h": 667,
+      "alt": "Women in kente walking at the Agbamevoza festival",
+      "caption": "Kente on parade",
+      "author": "JY midey",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Agbamekevor1.jpg"
+    },
+    {
+      "file": "chief.webp",
+      "w": 667,
+      "h": 1000,
+      "alt": "A chief in kente with attendants at Kpetoe",
+      "caption": "A chief in kente at Kpetoe",
+      "author": "JY midey",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kpetoe3.jpg"
+    }
+  ],
+  "checked": "2026-10-16"
+}

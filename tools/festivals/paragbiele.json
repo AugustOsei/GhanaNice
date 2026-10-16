@@ -1,0 +1,83 @@
+{
+  "slug": "paragbiele",
+  "name": "Paragbiele",
+  "kind": "trad",
+  "month": 0,
+  "region": "Upper West",
+  "card": {
+    "short": "Jan–Feb",
+    "when": "Late January into February",
+    "place": "Tumu",
+    "keeper": "The chiefs and people of Tumu",
+    "sum": "Tumu’s harvest thanksgiving, with farm produce on show, a durbar of chiefs, drumming and dance."
+  },
+  "metaTitle": "Paragbiele Festival in Tumu: Upper West Harvest Thanksgiving",
+  "metaDescription": "Paragbiele is the harvest thanksgiving of the chiefs and people of Tumu in the Upper West Region, held in January and February. What we know and how to go.",
+  "ogTitle": "Paragbiele: Tumu’s harvest thanksgiving",
+  "subtitle": "Tumu’s thanksgiving for the harvest",
+  "answer": "Paragbiele (also written Paragbeile) is a harvest thanksgiving festival of the chiefs and people of Tumu in the Upper West Region. It is held around the turn of January and February, after the harvest, with farm produce on display, a durbar of chiefs, drumming and dancing, and food and drink shared with visitors.",
+  "facts": [
+    [
+      "When",
+      "Late January into February"
+    ],
+    [
+      "Where",
+      "Tumu, Upper West Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of the Tumu Traditional Area"
+    ],
+    [
+      "Date set by",
+      "The Tumu Traditional Council"
+    ]
+  ],
+  "schema": {
+    "description": "Harvest thanksgiving festival of the chiefs and people of Tumu.",
+    "location": "Tumu",
+    "locality": "Tumu",
+    "organizer": "Tumu Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What we know",
+      "html": "<p>Paragbiele gives thanks for the harvest at the end of the farming season. Visitors are welcomed to share food and drink, people dress in their traditional clothes, and the chiefs hold a durbar with drumming and dancing.[[1,2]] Travel listings put it in the last week of January and the first week of February, though some years it falls later in February.[[1,2]]</p>\n<p class=\"note\">Little has been written about Paragbiele beyond these outlines, and most of what is online repeats the same few lines. If you know the festival, <a href=\"/contact/\">tell us</a> what it means and how it runs, and we’ll add it here.</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Tumu is in the north of the Upper West Region, near the Burkina Faso border.",
+        "<b>When:</b> January and February are dry-season months in the north: hot by day, cool at night, and dusty with the harmattan.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is the Paragbiele festival?",
+      "a": "Usually in the last week of January and the first week of February, after the harvest. The Tumu Traditional Council sets the dates."
+    },
+    {
+      "q": "Where is Paragbiele celebrated?",
+      "a": "In Tumu, in Ghana’s Upper West Region."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Paragbeile Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Paragbeile_Festival"
+    },
+    {
+      "cite": "“Festivals of Ghana”",
+      "site": "Easy Track Ghana",
+      "url": "https://www.easytrackghana.com/cultural-overview-ghana-festivals.php"
+    }
+  ],
+  "checked": "2026-10-16"
+}

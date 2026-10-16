@@ -1,0 +1,98 @@
+{
+  "slug": "godigbeza",
+  "name": "Godigbeza",
+  "kind": "trad",
+  "month": 9,
+  "region": "Volta",
+  "card": {
+    "short": "Oct–Nov",
+    "when": "October or November",
+    "place": "Aflao",
+    "keeper": "The chiefs and people of Aflao",
+    "sum": "Aflao’s festival of liberation, remembering the escape from King Agorkoli’s rule at Notsie, with a grand durbar."
+  },
+  "metaTitle": "Godigbeza (Godigbe Festival) in Aflao",
+  "metaDescription": "Godigbeza, the Godigbe festival of Aflao in the Volta Region, remembers the escape from King Agorkoli of Notsie. When it is held, what happens and how to go.",
+  "ogTitle": "Godigbeza: Aflao’s festival of liberation",
+  "subtitle": "Aflao’s festival of liberation",
+  "answer": "Godigbeza, the Godigbe festival, is held by the chiefs and people of Aflao on the Volta coast at the Togo border. It remembers their ancestors’ escape from the harsh rule of King Agorkoli at Notsie, in present-day Togo, and reaches its height with a grand durbar of chiefs, usually in October or November.",
+  "facts": [
+    [
+      "When",
+      "October or November"
+    ],
+    [
+      "Where",
+      "Aflao, Volta Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of the Aflao Traditional Area"
+    ],
+    [
+      "Name",
+      "Godigbe means liberation; za means festival"
+    ]
+  ],
+  "schema": {
+    "description": "Festival of Aflao remembering the escape from King Agorkoli of Notsie.",
+    "location": "Aflao",
+    "locality": "Aflao"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "What Godigbeza remembers",
+      "html": "<p>Like other Ewe festivals, Godigbeza keeps alive the story of the migration from Notsie and the escape from King Agorkoli’s cruel rule.[[1]] Its name joins <i>godigbe</i>, liberation, with <i>za</i>, festival.[[2]]</p>\n<p>According to the National Commission on Culture, the festival was established on 1 April 1967 by Togbui Adzonugaga Amemaka Fiti IV. It began by remembering the landing of the forefathers at the beach and was first observed inside family homes and clan houses before becoming a public festival.[[2]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "html": "<p>The festival builds over several days to a grand durbar of the chiefs and people of Aflao.[[1,3]] In 2022, when it returned after a pause for COVID-19, the programme included an inter-school tournament, a roots tour retracing the route through Notsie, a churches’ Bible quiz, a health walk, a football match between chiefs and security services and the Miss Godigbe pageant, before the durbar at Victoria Park on Saturday 26 November.[[3]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Aflao is the border town at the eastern end of Ghana’s coast, opposite Lomé.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask.",
+        "<b>Related:</b> the Anlo remember the same escape at <a href=\"/festivals/hogbetsotso/\">Hogbetsotso</a> in November."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Godigbe festival?",
+      "a": "The festival of the chiefs and people of Aflao, remembering their ancestors’ escape from King Agorkoli’s rule at Notsie."
+    },
+    {
+      "q": "When is Godigbeza celebrated?",
+      "a": "Usually in October or November. In 2022 its grand durbar was on 26 November."
+    },
+    {
+      "q": "What does Godigbe mean?",
+      "a": "Godigbe means liberation, and za means festival."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Godigbe festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Godigbe_festival"
+    },
+    {
+      "cite": "“Volta Region”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=15830"
+    },
+    {
+      "cite": "“Aflao Godigbe Festival returns after two years”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/?p=242032",
+      "date": "22 November 2022"
+    }
+  ],
+  "cutout": "drum",
+  "checked": "2026-10-16"
+}

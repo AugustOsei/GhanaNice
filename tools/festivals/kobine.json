@@ -1,0 +1,82 @@
+{
+  "slug": "kobine",
+  "name": "Kobine",
+  "kind": "trad",
+  "month": 8,
+  "region": "Upper West",
+  "card": {
+    "short": "Sep–Oct",
+    "when": "September or October, over four days",
+    "place": "Lawra",
+    "keeper": "The Dagaaba of Lawra",
+    "sum": "Lawra’s harvest festival, famous for its dance competition to kuor drums and ankle bells."
+  },
+  "metaTitle": "Kobine Festival in Lawra, Upper West",
+  "metaDescription": "Kobine is the harvest festival and dance of Lawra in the Upper West Region, held in September or October: four days of homecoming, processions and a dance competition.",
+  "ogTitle": "Kobine: Lawra’s harvest dance",
+  "subtitle": "Lawra’s harvest dance",
+  "answer": "Kobine is a harvest festival and dance unique to Lawra in the Upper West Region, held in September or October to mark the end of a good harvest. Over four days people come home, chiefs and elders process through the town, and dance groups compete to the beat of kuor drums, ankle bells ringing.",
+  "facts": [
+    [
+      "When",
+      "September or October, over four days"
+    ],
+    [
+      "Where",
+      "Lawra, Upper West Region"
+    ],
+    [
+      "Kept by",
+      "The Dagaaba of the Lawra Traditional Area"
+    ],
+    [
+      "Highlight",
+      "The Kobine dance competition"
+    ]
+  ],
+  "schema": {
+    "description": "Harvest festival and dance competition of Lawra.",
+    "location": "Lawra",
+    "locality": "Lawra"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>Kobine thanks the ancestors and gods for the harvest and brings people living elsewhere back to Lawra.[[1,2]] It lasts four days: the first mostly for visiting family, the next two public celebrations. Chiefs and elders process through the town with young men dressed as hunters, there are speeches, and then the dance competition.[[2]]</p>\n<p>Dancers move to the <i>kuor</i>, a gourd drum, and the <i>dalar</i>, a small drum made from the neck of a clay pot. Men dance bare-chested in decorated skirts, women in blouses, and everyone wears ankle bells.[[2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Lawra is in the far north-west of Ghana, near the Black Volta and the Burkina Faso border; Wa is the nearest city.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is the Kobine festival?",
+      "a": "In September or October, after the harvest, over four days."
+    },
+    {
+      "q": "Where is Kobine celebrated?",
+      "a": "In Lawra, in Ghana’s Upper West Region."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Kobine Festival”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/kobine-festival-september/"
+    },
+    {
+      "cite": "“Kobine”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kobine"
+    }
+  ],
+  "cutout": "drum",
+  "checked": "2026-10-16"
+}

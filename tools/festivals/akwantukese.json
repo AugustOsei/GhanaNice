@@ -1,0 +1,94 @@
+{
+  "slug": "akwantukese",
+  "name": "Akwantukese",
+  "kind": "trad",
+  "month": 10,
+  "region": "Eastern",
+  "card": {
+    "short": "Nov–Dec",
+    "when": "November or December, over a month",
+    "place": "Koforidua",
+    "keeper": "New Juaben",
+    "sum": "New Juaben remembers its great migration from Juaben in Ashanti, with a procession and durbar in Koforidua."
+  },
+  "metaTitle": "Akwantukese Festival of New Juaben in Koforidua",
+  "metaDescription": "Akwantukese is the New Juaben festival in Koforidua, remembering the great migration from Juaben in Ashanti. When it is held, what happens and how to go.",
+  "ogTitle": "Akwantukese: New Juaben’s great journey",
+  "subtitle": "New Juaben’s great journey",
+  "answer": "Akwantukese, “the great journey”, is the festival of the New Juaben Traditional Area, centred on Koforidua in the Eastern Region. It remembers the migration of the Juaben people and their allies from their homes in Asante to found New Juaben in the 1870s, and it runs for about a month to a procession and grand durbar in Koforidua, usually in November or December.",
+  "facts": [
+    [
+      "When",
+      "November or December, over about a month"
+    ],
+    [
+      "Where",
+      "Koforidua, Eastern Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of the New Juaben Traditional Area"
+    ],
+    [
+      "Since",
+      "Instituted in the 1990s by Daasebre Oti Boateng"
+    ]
+  ],
+  "schema": {
+    "description": "Festival of New Juaben remembering the migration from Juaben in Ashanti.",
+    "location": "Koforidua",
+    "locality": "Koforidua",
+    "organizer": "New Juaben Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "The great journey",
+      "html": "<p>The festival marks the great migration of the Juaben people and their allies from their ancestral homes in Asante to settle in the Eastern Region and found New Juaben, with Koforidua at its centre. The 2013 festival marked 135 years since that journey.[[2]]</p>\n<p>Akwantukese was instituted by Daasebre Professor Oti Boateng, Omanhene of New Juaben, in the 1990s, to strengthen unity, encourage self-help development and teach the young the area’s origins.[[1,3]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "html": "<p>The festival runs for about a month and ends with a procession of chiefs and people through the main streets of Koforidua and a grand durbar. In 2013 the durbar was on 14 December at Jackson Park.[[2]] In 2019 it was on 23 November.[[1]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Koforidua is the capital of the Eastern Region, about 90 minutes north of Accra.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What does Akwantukese mean?",
+      "a": "The great journey, remembering the migration of the Juaben people from Asante to found New Juaben."
+    },
+    {
+      "q": "When is Akwantukese?",
+      "a": "Usually in November or December, ending with a grand durbar in Koforidua."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Akwantukese Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Akwantukese_Festival"
+    },
+    {
+      "cite": "“New Juaben marks Akwantukese Saturday”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/news/general-news/new-juaben-marks-akwantukese-saturday.html",
+      "date": "13 December 2013"
+    },
+    {
+      "cite": "“New Juaben prepares for Akwantukese festival”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/features/features/new-juaben-prepares-for-akwantukese-festival.html"
+    }
+  ],
+  "cutout": "umbrella",
+  "checked": "2026-10-16"
+}

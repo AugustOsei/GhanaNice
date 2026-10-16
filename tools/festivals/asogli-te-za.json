@@ -1,0 +1,95 @@
+{
+  "slug": "asogli-te-za",
+  "name": "Asogli Te Za",
+  "kind": "trad",
+  "month": 8,
+  "region": "Volta",
+  "card": {
+    "short": "Sep",
+    "when": "September",
+    "place": "Ho",
+    "keeper": "The Asogli State",
+    "sum": "The yam festival of the Asogli State at Ho, honouring the hunter said to have found the first yam."
+  },
+  "metaTitle": "Asogli Te Za: the Yam Festival of Ho",
+  "metaDescription": "Asogli Te Za is the yam festival of the Asogli State at Ho in the Volta Region, held each September: the legend of the hunter, the new yam and the grand durbar.",
+  "ogTitle": "Asogli Te Za: the yam festival of Ho",
+  "subtitle": "Ho’s festival of the new yam",
+  "answer": "Asogli Te Za, the Asogli yam festival, is held each September by the Asogli State in and around Ho, the Volta regional capital. It gives thanks for the yam harvest and honours the hunter who, by legend, found the first yam, with the hailing of the new yam, a procession at sundown and a grand durbar.",
+  "facts": [
+    [
+      "When",
+      "September"
+    ],
+    [
+      "Where",
+      "Ho and the Asogli State, Volta Region"
+    ],
+    [
+      "Kept by",
+      "The Asogli State, led by its paramount chief, Togbe Afede XIV"
+    ],
+    [
+      "Name",
+      "Te Za means yam festival"
+    ]
+  ],
+  "schema": {
+    "description": "Yam festival of the Asogli State at Ho.",
+    "location": "Ho",
+    "locality": "Ho"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "The legend of the yam",
+      "html": "<p>The story goes that during a famine a hunter found yam in the forest and buried part of it in the soil. When he came back it had sprouted and grown, and so yam farming began.[[1]] The tradition is linked to the Ewe migration from Notsie in present-day Togo.[[1]]</p>\n<p>The festival had lapsed for more than a decade when Togbe Afede XIV revived it in 2004, as the Asogli Yam Festival; in 2018 it took back the name Te Za.[[1,2]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "html": "<p>Highlights include the hailing of the new yam and a ceremony at sundown that brings the whole community out in a street-filling procession, ending in a grand durbar.[[3]] It is a time to thank God, the gods and the ancestors for a good harvest.[[1]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Ho is the capital of the Volta Region, about three hours from Accra.",
+        "<b>Combine it:</b> Kpetoe’s kente weavers and the hills of the Volta are close. See the <a href=\"/regions/volta/\">Volta region</a> page.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Asogli Te Za?",
+      "a": "The yam festival of the Asogli State at Ho in Ghana’s Volta Region, held each September."
+    },
+    {
+      "q": "Why was the Asogli Yam Festival renamed?",
+      "a": "In 2018 the festival took back its traditional name, Te Za, meaning yam festival."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Asogli Te Za”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Asogli_Te_Za"
+    },
+    {
+      "cite": "“Asogli Yam Festival changed to Asogli Te Za”",
+      "site": "Modern Ghana",
+      "url": "https://www.modernghana.com/news/853334/asogli-yam-festival-changed-to-asogli-te.html",
+      "date": "May 2018"
+    },
+    {
+      "cite": "“Togbe Afede to mark 20 years of reign”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/2023/06/togbe-afede-to-mark-20-years-of-reign/",
+      "date": "June 2023"
+    }
+  ],
+  "cutout": "yam",
+  "checked": "2026-10-16"
+}

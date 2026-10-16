@@ -1,0 +1,112 @@
+{
+  "slug": "kpledjoo",
+  "name": "Kpledjoo",
+  "kind": "trad",
+  "month": 2,
+  "region": "Greater Accra",
+  "card": {
+    "short": "Mar–Apr",
+    "when": "Usually late March or early April",
+    "place": "Tema",
+    "keeper": "The Ga of Tema",
+    "sum": "Tema’s festival at the Sakumo lagoon: two days of rites, processions and prayers for fish and food."
+  },
+  "metaTitle": "Kpledjoo Festival in Tema: The Sakumo Lagoon Festival",
+  "metaDescription": "Kpledjoo (Kplejoo) is the festival of the Ga of Tema, held in late March or early April at the Sakumo lagoon before Homowo. The two days, the rites and how to go.",
+  "ogTitle": "Kpledjoo: Tema’s lagoon festival",
+  "subtitle": "Tema’s festival of the Sakumo lagoon",
+  "answer": "Kpledjoo (also written Kplejoo) is the festival of the Ga people of Tema, held in late March or early April. Over two days the Sakumo priest and the paramount chief of Tema lead rites for the gods of the land, the stools are cleansed and prayers are said for plenty of food and fish. It is the forerunner of Tema’s Homowo later in the year.",
+  "facts": [
+    [
+      "When",
+      "Usually late March or early April, over two days"
+    ],
+    [
+      "Where",
+      "Tema, around the Sakumo lagoon"
+    ],
+    [
+      "Kept by",
+      "The Ga of Tema"
+    ],
+    [
+      "Date set by",
+      "The Tema Traditional Council"
+    ]
+  ],
+  "schema": {
+    "description": "Two-day festival of the Ga of Tema at the Sakumo lagoon, forerunner of Homowo.",
+    "location": "Sakumo lagoon, Tema",
+    "locality": "Tema",
+    "organizer": "Tema Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "days",
+      "title": "The two days",
+      "days": [
+        {
+          "label": "Before",
+          "title": "The lagoon rests",
+          "html": "Fishing and crab trapping in the Sakumo lagoon are banned for months beforehand, so the lagoon can recover.[[3]]"
+        },
+        {
+          "label": "Day one",
+          "title": "Sakumo Kplee",
+          "html": "Led by the Sakumo Wulomo, the lagoon priest, with a carnival-like procession of drumming, dancing and flags.[[1]]"
+        },
+        {
+          "label": "Day two",
+          "title": "Tsaade Kplee",
+          "html": "Overseen by the paramount chief of Tema, who also acts as priest. Priests and priestesses worship the gods of the land, cleanse the stools and pray for food and fish.[[1]]"
+        }
+      ]
+    },
+    {
+      "id": "when",
+      "title": "When is Kpledjoo?",
+      "html": "<p>Usually in late March or the first week of April.[[3]] The Tema Traditional Council launches the season each year; in 2023 its programme ran from late March to mid-May, leading on towards Homowo in August.[[2]] Kpledjoo is described as the forerunner of Tema’s Homowo.[[1]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Tema is east of Accra; the festival centres on the old town and the Sakumo lagoon.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask.",
+        "<b>Later in the year:</b> Tema keeps its own <a href=\"/festivals/homowo/\">Homowo</a> in the summer."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is Kpledjoo?",
+      "a": "Usually in late March or early April, over two days. The Tema Traditional Council sets the dates."
+    },
+    {
+      "q": "What is Kpledjoo?",
+      "a": "The festival of the Ga of Tema at the Sakumo lagoon, with rites for the gods of the land and prayers for food and fish. It leads on to Tema’s Homowo."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Tema marks Kplejoo festival”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/entertainment/showbiz-news/tema-marks-kplejoo-festival.html",
+      "date": "13 April 2017"
+    },
+    {
+      "cite": "“Tema Traditional Council launches 2023 Kplejoo”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/?p=267328",
+      "date": "2023"
+    },
+    {
+      "cite": "“Kpledjoo Festival”",
+      "site": "Visit Ghana",
+      "url": "https://visitghana.com/event/kpledjoo-festival-2026/"
+    }
+  ],
+  "cutout": "bowl",
+  "checked": "2026-10-16"
+}

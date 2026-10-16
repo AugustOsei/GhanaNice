@@ -1,0 +1,80 @@
+{
+  "slug": "fofie",
+  "name": "Fofie",
+  "kind": "trad",
+  "month": 9,
+  "region": "Bono East",
+  "card": {
+    "short": "Oct",
+    "when": "October",
+    "place": "Techiman, and Nchiraa near Wenchi",
+    "keeper": "The Bono of Techiman",
+    "sum": "A yam festival of thanks for the harvest, ending in a durbar of chiefs carried through the streets."
+  },
+  "metaTitle": "Fofie Yam Festival in Techiman",
+  "metaDescription": "Fofie is a yam festival held in October in Techiman and at Nchiraa near Wenchi in the Bono East Region: thanks for the harvest and a durbar of chiefs. What we know and tips.",
+  "ogTitle": "Fofie: the yam festival of Techiman",
+  "subtitle": "Thanks for the yam harvest",
+  "answer": "Fofie is a yam festival held in October in the Bono East Region. In Techiman it is known as Fofie Kesee and gives thanks to God and the ancestors for a good yam harvest, the area’s main staple, ending in a durbar with the paramount chief carried in a palanquin through the streets. It is also kept at Nchiraa, near Wenchi.",
+  "facts": [
+    [
+      "When",
+      "October"
+    ],
+    [
+      "Where",
+      "Techiman, and Nchiraa near Wenchi, Bono East Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of the Techiman Traditional Area"
+    ]
+  ],
+  "schema": {
+    "description": "Yam festival held in October in Techiman and Nchiraa.",
+    "location": "Techiman",
+    "locality": "Techiman",
+    "organizer": "Techiman Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What we know",
+      "html": "<p>The yam festival honours and thanks God and the ancestors for a high yam yield, the main staple of the area. In Techiman the chiefs, with the paramount chief in a palanquin, parade through the main streets to a durbar.[[2]] The chiefs and people of Nchiraa near Wenchi also celebrate Fofie each October.[[1]]</p>\n<p class=\"note\">We haven’t found a clear account of how Fofie began, or whether the Techiman and Nchiraa celebrations share one history. If you know, <a href=\"/contact/\">tell us</a>.</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Techiman is a busy market town on the road north from Kumasi.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask.",
+        "<b>Also in Techiman:</b> <a href=\"/festivals/apoo/\">Apoo</a>, the festival of speaking out."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is the Fofie festival?",
+      "a": "In October each year."
+    },
+    {
+      "q": "Where is Fofie celebrated?",
+      "a": "In Techiman, as Fofie Kesee, and at Nchiraa near Wenchi, in the Bono East Region."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Fofie Yam Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fofie_Yam_Festival"
+    },
+    {
+      "cite": "“Veep urges Techiman to sustain peace, unity”",
+      "site": "Graphic Online",
+      "url": "https://graphiconline.com/news/general-news/veep-urges-techiman-to-sustain-peace-unity.html"
+    }
+  ],
+  "cutout": "yam",
+  "checked": "2026-10-16"
+}

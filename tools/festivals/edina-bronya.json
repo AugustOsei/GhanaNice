@@ -1,0 +1,112 @@
+{
+  "slug": "edina-bronya",
+  "name": "Edina Bronya",
+  "kind": "trad",
+  "month": 0,
+  "region": "Central",
+  "card": {
+    "short": "Early Jan",
+    "when": "Usually the first Thursday of January",
+    "place": "Elmina",
+    "keeper": "The Edina (Elmina) Traditional Area",
+    "sum": "Elmina’s own “Christmas”, born of its Dutch years, with rites at the Benya Lagoon and chiefs in palanquins.",
+    "more": "Bronya is the local word for Christmas; families come home for it."
+  },
+  "metaTitle": "Edina Bronya: Elmina’s Christmas Festival in January",
+  "metaDescription": "Edina Bronya is Elmina’s own Christmas, held on the first Thursday of January: its Dutch roots, the rites at the Benya Lagoon and how to go.",
+  "ogTitle": "Edina Bronya: Elmina’s Christmas in January",
+  "subtitle": "Elmina’s own Christmas, held in January",
+  "answer": "Edina Bronya is the “Elmina Christmas”, a festival of the chiefs and people of Elmina in the Central Region. It is held each year around the first Thursday of January and dates from Elmina’s long years of trade with the Dutch: chiefs perform rites at the Benya Lagoon, ride through the town in palanquins and the town celebrates.",
+  "facts": [
+    [
+      "When",
+      "Usually the first Thursday of January"
+    ],
+    [
+      "Where",
+      "Elmina, around the Benya Lagoon and the castle"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of the Edina (Elmina) Traditional Area"
+    ],
+    [
+      "Date set by",
+      "The Edina Traditional Council"
+    ]
+  ],
+  "schema": {
+    "description": "Annual festival of Elmina, known as the Elmina Christmas, held in early January.",
+    "location": "Elmina",
+    "locality": "Elmina",
+    "organizer": "Edina Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "What Edina Bronya means",
+      "html": "<p><i>Bronya</i> is the local word for Christmas, so Edina Bronya is simply “Elmina Christmas”. It began as a mark of friendship between the people of Elmina and the Dutch, who ran Elmina Castle for more than two centuries, and it was held at the time of a Dutch festival said to fall on the first Thursday of January.[[1,2]]</p>\n<p>One account of the name traces it to the Fante phrase <i>bor na ya</i>, “swim and take”: the Dutch would throw a prize into the Benya Lagoon, and whoever swam out and reached it first could keep it.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "days": [
+        {
+          "label": "The night before",
+          "title": "A salute at midnight",
+          "html": "By some accounts the paramount chief fires a traditional gun at midnight from Fort St. Jago, the hill fort above the town, to open the festival.[[2]]"
+        },
+        {
+          "label": "The day",
+          "title": "Rites at the lagoon",
+          "html": "The paramount chief of the Edina Traditional Area leads the chiefs in rituals at the Benya Lagoon, where crowds gather to hear the addresses.[[1]]"
+        },
+        {
+          "label": "The day",
+          "title": "Palanquins, musketry and a regatta",
+          "html": "Chiefs in full regalia are carried through the crowded streets in palanquins, musketeers fire salutes and there is a regatta on the water.[[1]] Some accounts also describe sheep being sacrificed in front of the castle.[[2]]"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Elmina is on the coast west of Cape Coast. The lagoon, the castle and Fort St. Jago are all within walking distance of each other.",
+        "<b>When:</b> come for the Thursday and be at the Benya Lagoon in the morning for the rites, then follow the procession through town.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>While you’re there:</b> Elmina Castle and Fort St. Jago are open to visitors. See the <a href=\"/regions/central/\">Central region</a> page."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Edina Bronya?",
+      "a": "Edina Bronya, “Elmina Christmas”, is the annual festival of the chiefs and people of Elmina in Ghana’s Central Region, rooted in the town’s long relationship with the Dutch."
+    },
+    {
+      "q": "When is Edina Bronya celebrated?",
+      "a": "Around the first Thursday of January each year. The Edina Traditional Council sets the exact days."
+    },
+    {
+      "q": "What happens at Edina Bronya?",
+      "a": "The paramount chief leads rituals at the Benya Lagoon, chiefs are carried through the town in palanquins, musketeers fire salutes and there is a regatta."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "Shirley Asiedu Addo, “Elmina celebrates ‘Edina Bronya’”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/news/general-news/elmina-celebrates-edina-bronya.html",
+      "date": "7 January 2014"
+    },
+    {
+      "cite": "“Edina Bronya Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Edina_Bronya_Festival"
+    }
+  ],
+  "cutout": "umbrella",
+  "checked": "2026-10-16"
+}

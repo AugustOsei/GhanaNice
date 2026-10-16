@@ -1,0 +1,167 @@
+{
+  "slug": "bakatue",
+  "name": "Bakatue",
+  "kind": "trad",
+  "month": 6,
+  "region": "Central",
+  "card": {
+    "short": "Early Jul",
+    "when": "The first Tuesday of July, with a durbar that Saturday",
+    "place": "Elmina",
+    "keeper": "The Edina (Elmina) Traditional Area",
+    "sum": "Elmina opens the Benya lagoon: the chief casts a net three times, then come the regatta and a durbar at the castle."
+  },
+  "metaTitle": "Bakatue: Opening of the Benya Lagoon in Elmina",
+  "metaDescription": "Bakatue, “the opening of the lagoon”, is Elmina’s July festival: six sacred weeks end with the chief casting a net into the Benya lagoon, a regatta and a durbar at the castle.",
+  "ogTitle": "Bakatue: Elmina opens its lagoon",
+  "subtitle": "Elmina opens its lagoon",
+  "answer": "Bakatue, Fante for “the opening of the lagoon”, is the July festival of Elmina in the Central Region. After six sacred weeks with fishing banned in the Benya lagoon, the paramount chief casts a ceremonial net into the water three times on the first Tuesday of July, the ban is lifted, and there is a regatta. A grand durbar at Elmina Castle follows on the Saturday.",
+  "sticky": {
+    "title": "First Tuesday of July",
+    "text": "Be at the Benya lagoon for the net casting, then come back on Saturday for the durbar."
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 800,
+    "alt": "Rowers in a painted boat race on the Benya lagoon at Bakatue",
+    "caption": "The regatta on the Benya lagoon",
+    "author": "US Embassy in Ghana / USAID",
+    "license": "public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Elmina_Bakatue_2016_004_B002.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "The first Tuesday of July; durbar on the Saturday"
+    ],
+    [
+      "Where",
+      "The Benya lagoon and Elmina Castle, Elmina"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of the Edina Traditional Area, led by the Edinamanhen"
+    ],
+    [
+      "Before it",
+      "Six sacred weeks with fishing in the lagoon banned"
+    ]
+  ],
+  "schema": {
+    "description": "Elmina’s July festival opening the Benya lagoon, with a ritual net casting and regatta.",
+    "location": "Benya lagoon, Elmina",
+    "locality": "Elmina",
+    "organizer": "Edina Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "days",
+      "title": "The sacred weeks and the opening",
+      "days": [
+        {
+          "label": "Early June",
+          "title": "Six sacred weeks begin",
+          "html": "Fishing in the lagoon and noise-making are banned. Fresh farm produce may not be sold in Elmina and fish only at the landing beaches; the bereaved may not wail, and anyone who dies is buried the same day.[[2]]"
+        },
+        {
+          "label": "Three weeks before",
+          "title": "A fast for the gods",
+          "html": "A holy wooden platter is turned over to begin a three-week fast for the gods, and priests and priestesses hold sacred drumming and dancing, the Dombo ceremonies.[[2]]"
+        },
+        {
+          "label": "First Tuesday of July",
+          "title": "The net is cast",
+          "html": "Chiefs, queen mothers and priests process from the palace to the lagoon. The Edinamanhen offers mashed yam, herbs and eggs to break the gods’ fast, then casts his net three times; each cast brings in fish, and the last is met with gunfire, music and dance.[[2]] The ban is lifted and a regatta follows, with women’s groups out on the water in canoes.[[1,2]]"
+        },
+        {
+          "label": "Saturday",
+          "title": "The durbar",
+          "html": "The festival closes with a grand durbar on the forecourt of Elmina Castle.[[2]]"
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "title": "What Bakatue remembers",
+      "html": "<p>Bakatue marks the founding of Elmina. One telling has the founder, Kwa Amankwa, finding water at the stream he named <i>Be-enya</i>, and meeting a deity there who stayed for eight days; the festival honours that meeting.[[3]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> the Benya lagoon runs behind Elmina Castle; the net casting is on its banks.",
+        "<b>Two days to see:</b> the Tuesday for the rites and regatta, the Saturday for the durbar.",
+        "<b>During the sacred weeks:</b> respect the bans in town, especially on noise.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask.",
+        "<b>In January:</b> Elmina also keeps <a href=\"/festivals/edina-bronya/\">Edina Bronya</a>."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What does Bakatue mean?",
+      "a": "It is Fante for “the opening of the lagoon”, the Benya lagoon at Elmina."
+    },
+    {
+      "q": "When is Bakatue?",
+      "a": "On the first Tuesday of July, after six sacred weeks, with a grand durbar at Elmina Castle that Saturday."
+    },
+    {
+      "q": "What happens at Bakatue?",
+      "a": "The paramount chief casts a ceremonial net into the lagoon three times to lift the fishing ban, followed by a regatta and a durbar."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "Shirley Asiedu-Addo, “Lifting of ban on fishing in Benya Lagoon heralds Bakatue”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/news/general-news/lifting-of-ban-on-fishing-in-benya-lagoon-heralds-bakatue.html",
+      "date": "6 July 2023"
+    },
+    {
+      "cite": "Prince Acquah, “Bakatue rituals revive Elmina with culture, tourism and tradition”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/2026/07/bakatue-rituals-revive-elmina-with-culture-tourism-and-tradition/",
+      "date": "9 July 2026"
+    },
+    {
+      "cite": "“Edina celebrates Bakatue”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/news/general-news/edina-celebrates-bakatue.html"
+    }
+  ],
+  "photos": [
+    {
+      "file": "canoe.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "Women in white headwraps in a canoe on the lagoon at Bakatue",
+      "caption": "Women out on the lagoon",
+      "author": "US Embassy in Ghana / USAID",
+      "license": "public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Elmina_Bakatue_2016_003_B002.jpg"
+    },
+    {
+      "file": "masquerade.webp",
+      "w": 640,
+      "h": 481,
+      "alt": "A masquerader in a costume and animal mask at Bakatue",
+      "caption": "A masquerade in the street",
+      "author": "NanaReagan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Masquerade_match_during_Bakatue_Festival_2015_Coverage.jpg"
+    },
+    {
+      "file": "women.webp",
+      "w": 640,
+      "h": 359,
+      "alt": "Women in kente walking in procession through Elmina at Bakatue",
+      "caption": "The procession through town",
+      "author": "NanaReagan",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Picture_from_Bakatue_Festival_2015_Coverage.jpg"
+    }
+  ],
+  "checked": "2026-10-16"
+}

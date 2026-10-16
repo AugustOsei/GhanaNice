@@ -1,0 +1,129 @@
+{
+  "slug": "hogbetsotso",
+  "name": "Hogbetsotso",
+  "kind": "trad",
+  "month": 10,
+  "region": "Volta",
+  "card": {
+    "short": "1st Sat Nov",
+    "when": "Usually the first Saturday of November",
+    "place": "Anloga",
+    "keeper": "The Anlo",
+    "sum": "The Anlo remember their escape from King Agorkoli at Notsie, walking backwards to hide their tracks."
+  },
+  "metaTitle": "Hogbetsotso: the Anlo Festival of the Exodus from Notsie",
+  "metaDescription": "Hogbetsotso is the Anlo Ewe festival of the exodus from Notsie, held in Anloga on the first Saturday of November: the story of the wall, walking backwards, and the grand durbar.",
+  "ogTitle": "Hogbetsotso: the Anlo exodus from Notsie",
+  "subtitle": "The Anlo festival of the great escape",
+  "answer": "Hogbetsotso is the festival of the Anlo Ewe people of the Volta Region, held at Anloga, their traditional capital, usually on the first Saturday of November. It remembers their ancestors’ escape from the cruel King Agorkoli at Notsie, in present-day Togo, when they broke through the town wall and walked out backwards so their footprints would mislead his soldiers.",
+  "sticky": {
+    "title": "Early November",
+    "text": "Anloga fills up for the durbar. Come the day before."
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 1000,
+    "h": 667,
+    "alt": "Anlo men in white carrying offerings on their heads at Hogbetsotso",
+    "caption": "Carrying offerings at Hogbetsotso",
+    "author": "JY midey",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hogb1.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "Usually the first Saturday of November"
+    ],
+    [
+      "Where",
+      "Anloga, Volta Region"
+    ],
+    [
+      "Kept by",
+      "The Anlo state, led by the Awoamefia"
+    ],
+    [
+      "Name",
+      "From Ewe: to move, day, and crossing over"
+    ]
+  ],
+  "schema": {
+    "description": "Anlo Ewe festival remembering the exodus from Notsie, held at Anloga.",
+    "location": "Anloga",
+    "locality": "Anloga"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "The escape from Notsie",
+      "html": "<p>At Notsie the Ewe lived under Togbi Agorkoli, who made his people build a great wall round the town and executed anyone who tried to leave. When he ordered them to make rope from clay, Togbi Tegli outwitted him by asking for a sample to copy.[[1]]</p>\n<p>The people planned their escape. Women poured water on one stretch of the wall night after night to soften it, and an all-night session of drumming and dancing kept the king at ease. In the dark Tegli pierced the wet wall with a dagger, and the people walked out backwards, so their tracks looked as though they were coming in, not leaving.[[1,2]]</p>\n<p>The name is usually explained from three Ewe words: <i>ho</i>, to move, <i>gbe</i>, day, and <i>tsotso</i>, crossing over.[[2]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "days": [
+        {
+          "label": "Before",
+          "title": "Making peace",
+          "html": "The people settle disputes and share food in rites of reconciliation, <i>nugbuidodo</i> and <i>hanu dudu</i>, so the festival begins in harmony.[[1]] Stools are purified and the town is cleaned.[[2]]"
+        },
+        {
+          "label": "Saturday",
+          "title": "The grand durbar",
+          "html": "Chiefs and people gather at Anloga for a grand durbar, presided over by the Awoamefia, the ruler of the Anlo state. Cultural troupes re-enact the exodus in dance and procession.[[1,2]]"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Anloga is on the strip between the sea and the Keta lagoon, about three hours east of Accra.",
+        "<b>Stay nearby:</b> Keta and Anloga are small; book ahead for the festival weekend.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask.",
+        "<b>Related:</b> Aflao remembers the same escape at <a href=\"/festivals/godigbeza/\">Godigbeza</a>."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Hogbetsotso?",
+      "a": "The festival of the Anlo Ewe people, remembering their ancestors’ escape from King Agorkoli’s rule at Notsie, in present-day Togo."
+    },
+    {
+      "q": "When is Hogbetsotso celebrated?",
+      "a": "Usually on the first Saturday of November, with the grand durbar at Anloga."
+    },
+    {
+      "q": "Why did the Anlo walk backwards?",
+      "a": "So their footprints would look as if they were entering Notsie, misleading the king’s soldiers."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "Alberto Mario Noretti, “Hogbetsotso Za: exodus of the Anlo people from Notsie”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/features/features/hogbetsotso-za-exodus-of-the-anlo-people-from-notsie.html",
+      "date": "11 November 2022"
+    },
+    {
+      "cite": "“Hogbetsotso festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hogbetsotso_festival"
+    }
+  ],
+  "photos": [
+    {
+      "file": "chiefs.webp",
+      "w": 1000,
+      "h": 667,
+      "alt": "Anlo chiefs seated in kente at the Hogbetsotso durbar",
+      "caption": "Chiefs at the durbar",
+      "author": "JY midey",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hogbe1.jpg"
+    }
+  ],
+  "checked": "2026-10-16"
+}

@@ -1,0 +1,162 @@
+{
+  "slug": "aboakyer",
+  "name": "Aboakyer",
+  "kind": "trad",
+  "month": 4,
+  "region": "Central",
+  "card": {
+    "short": "1st wknd May",
+    "when": "Usually the first weekend of May",
+    "place": "Winneba",
+    "keeper": "The Effutu of Winneba",
+    "sum": "Two Asafo companies race to catch a live bushbuck with sticks and bare hands, an offering to the god Penkye Otu."
+  },
+  "metaTitle": "Aboakyer: the Deer Hunt Festival of Winneba",
+  "metaDescription": "Aboakyer is the deer hunt festival of the Effutu of Winneba, held in early May: two Asafo companies race to catch a live bushbuck for the god Penkye Otu. Story, days and tips.",
+  "ogTitle": "Aboakyer: Winneba’s deer hunt",
+  "subtitle": "Winneba’s race to catch a live bushbuck",
+  "answer": "Aboakyer is the deer hunt festival of the Effutu people of Winneba in the Central Region. On a Saturday at the start of May, two Asafo companies, the Tuafo and the Dentsefo, race into the bush to catch a live bushbuck with sticks, clubs and their hands. The first to bring it to the paramount chief wins, and the animal is offered to the god Penkye Otu.",
+  "sticky": {
+    "title": "Early May",
+    "text": "Be in Winneba on the Saturday morning: the hunters set out at dawn."
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 800,
+    "alt": "Hunters hold a live bushbuck above the crowd at Aboakyer in Winneba",
+    "caption": "The catch, carried in triumph",
+    "author": "Fquasie",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aboakyer_festival_Ghana.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "A week ending on the first Saturday of May (or the last of April)"
+    ],
+    [
+      "Where",
+      "Winneba, Central Region"
+    ],
+    [
+      "Kept by",
+      "The Effutu people, led by the Effutu Omanhen"
+    ],
+    [
+      "The hunters",
+      "Tuafo No. 1 and Dentsefo No. 2 Asafo companies"
+    ]
+  ],
+  "schema": {
+    "description": "Deer hunt festival of the Effutu of Winneba, in which two Asafo companies race to catch a live bushbuck.",
+    "location": "Winneba",
+    "locality": "Winneba",
+    "organizer": "Effutu Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "The story behind the hunt",
+      "html": "<p>Aboakyer remembers the migration of the Effutu, the Simpa people, south to Winneba, and grew from sacrifices to their god Otu for a good harvest and protection from evil.[[1]]</p>\n<p>By tradition the priest first demanded a young member of the royal family each year. The people appealed and were allowed a wild cat instead, caught alive, but so many hunters died trying that they appealed again, and Penkye Otu, named after the place where they settled, accepted a young deer.[[1]] That is the animal the Asafo companies still hunt.</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "days": [
+        {
+          "label": "The week before",
+          "title": "Clean-up, health walk and the gods on parade",
+          "html": "In 2024 the festival opened a week ahead with clean-up exercises, a health walk and a parade of the gods through Winneba’s main streets.[[2]]"
+        },
+        {
+          "label": "Saturday dawn",
+          "title": "The hunt",
+          "html": "The Tuafo No. 1 and Dentsefo No. 2 Asafo companies head for their own hunting grounds at dawn, carrying sticks and clubs and singing war songs.[[1]]"
+        },
+        {
+          "label": "Saturday",
+          "title": "The catch",
+          "html": "The first company to bring a live bushbuck to the Omanhen wins. Coming back empty-handed is a bad omen, so each hopes the other succeeds too. When word of a catch reaches town, the streets erupt.[[1]] In 2024 the Dentsefo brought in the first bushbuck and the Tuafo followed.[[2]]"
+        },
+        {
+          "label": "Saturday afternoon",
+          "title": "The durbar",
+          "html": "Chiefs and people gather for a durbar. The Omanhen steps on the bushbuck three times, a sign that Penkye Otu accepts it, before the rites continue.[[1,2]]"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Winneba is on the coast road between Accra and Cape Coast, about an hour or two from Accra.",
+        "<b>When:</b> the hunt is on the Saturday; the durbar is in the afternoon. Come early to see the companies set off.",
+        "<b>Keep clear:</b> the companies move fast and in force when they return with a catch. Watch from the side of the road.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask.",
+        "<b>Back in January:</b> Winneba also hosts the <a href=\"/festivals/winneba-masquerade/\">Winneba Masquerade</a> on New Year’s Day."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Aboakyer festival?",
+      "a": "The deer hunt festival of the Effutu people of Winneba, in which two Asafo companies race to catch a live bushbuck for the god Penkye Otu."
+    },
+    {
+      "q": "When is Aboakyer?",
+      "a": "It runs for about a week and peaks on a Saturday at the start of May. In 2024 it opened on 27 April."
+    },
+    {
+      "q": "Who are the Tuafo and Dentsefo?",
+      "a": "The two Asafo (warrior) companies of Winneba, No. 1 and No. 2, who compete in the hunt."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "Douglas Anane-Frimpong, “Aboakyir: Deer Hunt Festival”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/features/features/aboakyir-deer-hunt-festival.html",
+      "date": "7 May 2022"
+    },
+    {
+      "cite": "“Effutu Traditional Area celebrates Aboakyer in splendour”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/2024/05/effutu-traditional-area-celebrates-aboakyer-in-splendour/",
+      "date": "5 May 2024"
+    }
+  ],
+  "photos": [
+    {
+      "file": "procession.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "Chiefs and queen mothers under umbrellas in the Aboakyer procession",
+      "caption": "Chiefs and queen mothers in procession",
+      "author": "Fquasie",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aboakyer_festival_in_Winneba_11.jpg"
+    },
+    {
+      "file": "asafo.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "Members of an Asafo company wearing leaves at Aboakyer",
+      "caption": "An Asafo company in leaves",
+      "author": "Fquasie",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aboakyer_festival_in_Winneba_6.jpg"
+    },
+    {
+      "file": "kente.webp",
+      "w": 800,
+      "h": 1200,
+      "alt": "A woman in kente at the Aboakyer festival in Winneba",
+      "caption": "Dressed for the durbar",
+      "author": "Fquasie",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aboakyer_festival_in_Winneba_2.jpg"
+    }
+  ],
+  "checked": "2026-10-16"
+}

@@ -1,0 +1,161 @@
+{
+  "slug": "fetu",
+  "name": "Fetu Afahye",
+  "kind": "trad",
+  "month": 8,
+  "region": "Central",
+  "card": {
+    "short": "1st Sat Sep",
+    "when": "The first week of September, peaking on the first Saturday",
+    "place": "Cape Coast",
+    "keeper": "The Oguaa Traditional Area",
+    "sum": "Cape Coast’s week of cleansing and thanksgiving, with Asafo companies, state umbrellas and a grand procession."
+  },
+  "metaTitle": "Fetu Afahye: Cape Coast’s Festival in September",
+  "metaDescription": "Fetu Afahye is the festival of Oguaa (Cape Coast), held in the first week of September: rites at the Fosu lagoon, seven Asafo companies and a carnival-like procession. Story and tips.",
+  "ogTitle": "Fetu Afahye: Cape Coast in September",
+  "subtitle": "Cape Coast’s week of cleansing and thanksgiving",
+  "answer": "Fetu Afahye is the festival of the chiefs and people of Oguaa, Cape Coast, in the Central Region. It is held over the first week of September and peaks on the first Saturday with a carnival-like procession of chiefs under state umbrellas and the town’s seven Asafo companies. It began as a cleansing after a plague and remains a thanksgiving that brings families home.",
+  "sticky": {
+    "title": "First Saturday of September",
+    "text": "Find a spot on the procession route through the old town early."
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 799,
+    "alt": "Red and gold state umbrellas over a chief in a palanquin at Fetu Afahye",
+    "caption": "State umbrellas over the procession",
+    "author": "Bright Kwame Ayisi",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Oguaa_Fetu_Afahye_2025_02.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "The first week of September; procession on the first Saturday"
+    ],
+    [
+      "Where",
+      "Cape Coast (Oguaa), Central Region"
+    ],
+    [
+      "Kept by",
+      "The Oguaa Traditional Area, led by the Omanhen"
+    ],
+    [
+      "The Asafo",
+      "Seven companies, including Bentsir, Nkum and Anaafo"
+    ]
+  ],
+  "schema": {
+    "description": "Annual festival of Oguaa (Cape Coast) in the first week of September.",
+    "location": "Cape Coast",
+    "locality": "Cape Coast",
+    "organizer": "Oguaa Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "Where Fetu Afahye comes from",
+      "html": "<p>Tradition tells of a plague that struck Cape Coast; the people prayed to their gods for deliverance and began the festival in thanksgiving and as protection against another outbreak. The name is often traced to <i>efin tu</i>, “doing away with dirt”.[[3]]</p>\n<p>During the colonial period the festival was banned for a time, and it was nicknamed “Black Christmas”.[[3]] Today it is a week to remember the ancestors and to bring families home from across Ghana and abroad.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "days": [
+        {
+          "label": "Late August",
+          "title": "The Fosu lagoon opens",
+          "html": "After a month-long ban, chiefs and people lift the ban on fishing in the Fosu lagoon with rites. In 2022 three of the seven Asafo companies, Bentsir, Nkum and Anaafo, held a canoe regatta, and the Omanhen’s net was cast three times to foretell the year’s harvest.[[1]]"
+        },
+        {
+          "label": "The week",
+          "title": "Purification",
+          "html": "Chiefs, queen mothers and priests process through the town, stopping at shrines for purification rites.[[1]]"
+        },
+        {
+          "label": "First Saturday",
+          "title": "The grand procession",
+          "html": "The climax: chiefs in palanquins under state umbrellas, Asafo companies with their flags, drumming, dancing and musket fire through the streets of Cape Coast.[[2,3]]"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> the procession winds through the old town near Cape Coast Castle.",
+        "<b>Book early:</b> Cape Coast fills up for the festival weekend.",
+        "<b>Musketry:</b> guns are fired during the procession. Keep a distance and protect children’s ears.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask.",
+        "<b>While you’re there:</b> Cape Coast Castle, Kakum National Park and Elmina are close. See the <a href=\"/regions/central/\">Central region</a> page."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is Fetu Afahye?",
+      "a": "Over the first week of September each year, with the grand procession on the first Saturday."
+    },
+    {
+      "q": "What does Fetu Afahye celebrate?",
+      "a": "It began as a cleansing and thanksgiving after a plague in Cape Coast, and today remembers the ancestors and brings families home."
+    },
+    {
+      "q": "How many Asafo companies does Cape Coast have?",
+      "a": "Seven, including Bentsir, Nkum and Anaafo."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Oguaa Traditional Council holds canoe regatta to begin celebration of Fetu Afahye”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/?p=226138",
+      "date": "31 August 2022"
+    },
+    {
+      "cite": "“Fetu Afahye”",
+      "site": "Visit Ghana",
+      "url": "https://visitghana.com/fetu-afahye/"
+    },
+    {
+      "cite": "“Oguaa Fetu Afahye: Black Christmas”",
+      "site": "Asafo Flags",
+      "url": "https://www.asafoflags.com/post/oguaa-fetu-afahye-black-christmas"
+    }
+  ],
+  "photos": [
+    {
+      "file": "umbrella.webp",
+      "w": 1200,
+      "h": 799,
+      "alt": "A young participant carried under a red umbrella in the Fetu Afahye procession",
+      "caption": "A young participant in the procession",
+      "author": "Kofiarkohbaidoo",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Young_participant_in_the_Oguaa_Fetu_Afahye_festival_procession_in_Cape_Coast.jpg"
+    },
+    {
+      "file": "flag.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "A girl in a raffia skirt waves an Asafo company flag in the street",
+      "caption": "Waving an Asafo company flag",
+      "author": "Fiifiabban",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Flag_Bearer.jpg"
+    },
+    {
+      "file": "face.webp",
+      "w": 799,
+      "h": 1200,
+      "alt": "A festival participant with white face paint at Fetu Afahye",
+      "caption": "White face paint for the festival",
+      "author": "Kofiarkohbaidoo",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ortrait_of_a_festival_participant_with_white_face_paint_at_Oguaa_Fetu_Afahye.jpg"
+    }
+  ],
+  "checked": "2026-10-16"
+}

@@ -1,0 +1,150 @@
+{
+  "slug": "damba",
+  "name": "Damba",
+  "kind": "trad",
+  "month": 7,
+  "region": "Northern",
+  "card": {
+    "short": "Lunar",
+    "when": "The month of Damba, the third lunar month (about late August in 2026)",
+    "place": "Yendi, Tamale and the north",
+    "keeper": "Dagbon, Mamprugu, Gonja and Wa",
+    "sum": "Drumming, smocks and chiefs on horseback, in the month that marks the Prophet’s birth."
+  },
+  "metaTitle": "Damba Festival in Yendi and Tamale",
+  "metaDescription": "Damba is the great festival of Dagbon and its neighbours, held in the third lunar month: chiefs on horseback, smocks and drumming at Yendi and Tamale. Stages, dates and tips.",
+  "ogTitle": "Damba: chiefs on horseback in Dagbon",
+  "subtitle": "Chiefs on horseback, in the month of the Prophet",
+  "answer": "Damba is the biggest festival of Dagbon in the Northern Region, also kept by Mamprugu, Gonja and Wa. It falls in the month of Damba, the third month of the lunar year (Rabi al-Awwal), which marks the birth and naming of the Prophet Muhammad, though today it mostly celebrates chieftaincy: chiefs in smocks ride decorated horses to drumming and dancing before the Ya-Naa at Yendi.",
+  "hero": {
+    "file": "hero.webp",
+    "w": 900,
+    "h": 1200,
+    "alt": "Chiefs in striped smocks and white caps greeting each other at Damba",
+    "caption": "Chiefs in smocks at Damba",
+    "author": "Bash222",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Image_of_Damba_festival_F.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "The month of Damba, the third lunar month; moves about 11 days earlier each year"
+    ],
+    [
+      "Where",
+      "Yendi (the Gbewaa Palace), Tamale and towns across the north"
+    ],
+    [
+      "Kept by",
+      "Dagbon, led by the Ya-Naa, and Mamprugu, Gonja and Wa"
+    ],
+    [
+      "The stages",
+      "Somo Damba, Naa Damba, and the Bielkulsi climax"
+    ]
+  ],
+  "schema": {
+    "description": "Festival of Dagbon in the third lunar month with chiefs on horseback.",
+    "location": "Gbewaa Palace, Yendi",
+    "locality": "Yendi"
+  },
+  "sections": [
+    {
+      "id": "when",
+      "title": "When is Damba?",
+      "html": "<p>Damba follows the lunar calendar: it falls in the Dagomba month of Damba, which matches Rabi al-Awwal, the third month of the Islamic year, so it comes about eleven days earlier each year.[[2,3]] In 2019 the Yendi celebration was in mid-November; in 2026 the month began in mid-August.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "The three stages",
+      "days": [
+        {
+          "label": "Day 10",
+          "title": "Somo Damba",
+          "html": "The festival opens with the Somo Damba.[[1]]"
+        },
+        {
+          "label": "Day 17",
+          "title": "Naa Damba",
+          "html": "The chiefs’ Damba, with sub-chiefs riding decorated horses with their retinues, drumming and dancing.[[1]]"
+        },
+        {
+          "label": "Day 18",
+          "title": "Bielkulsi",
+          "html": "The climax, at the Gbewaa Palace durbar grounds in Yendi, presided over by the Ya-Naa, the overlord of Dagbon.[[1]]"
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "title": "What Damba means",
+      "html": "<p>Damba began as a marking of the Prophet Muhammad’s birth and naming, and has grown into a celebration of chieftaincy and Dagbon’s history.[[2,3]] Dagbon sources credit its beginnings to the reign of Naa Zanjina, though it may be older.[[3]]</p>\n<p>A chieftaincy dispute kept Damba from being held in Yendi for seventeen years; it returned in November 2019 after a new Ya-Naa was enskinned.[[1]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Tamale is the easiest base; Yendi is about two hours east, with the main durbar at the Gbewaa Palace.",
+        "<b>Horses:</b> riders and their retinues move fast through the crowd. Keep to the edges.",
+        "<b>Dress:</b> smocks (batakari) are everywhere. Modest dress is respectful in Yendi and Tamale.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is the Damba festival?",
+      "a": "In the month of Damba, the third month of the lunar year (Rabi al-Awwal). It moves about eleven days earlier each year; in 2026 it fell in late August and early September."
+    },
+    {
+      "q": "What does Damba celebrate?",
+      "a": "It began as a marking of the Prophet Muhammad’s birth and naming and now mainly celebrates chieftaincy in Dagbon and its neighbours."
+    },
+    {
+      "q": "Where is the main Damba festival?",
+      "a": "At the Gbewaa Palace in Yendi, seat of the Ya-Naa, with celebrations in Tamale and across the north."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Dagbon marks Damba festival after 17-year break”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/news/general-news/ghana-news-dagbon-marks-damba-festival-after-17-year-break.html",
+      "date": "18 November 2019"
+    },
+    {
+      "cite": "“Damba Festival: Northern Ghana’s largest cultural celebration”",
+      "site": "Ghana Remembers",
+      "url": "https://ghanaremembers.com/stories/culture/damba-festival-northern-ghanas-largest-cultural-celebration.html"
+    },
+    {
+      "cite": "“Damba Festival: history, rituals and how Dagbon celebrates”",
+      "site": "Dagbon Kingdom",
+      "url": "https://dagbonkingdom.com/damba-festival/"
+    }
+  ],
+  "photos": [
+    {
+      "file": "durbar.webp",
+      "w": 900,
+      "h": 1200,
+      "alt": "A seated elder in yellow surrounded by a crowd at Damba",
+      "caption": "At the durbar",
+      "author": "Bash222",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Image_of_Damba_festival_B.jpg"
+    },
+    {
+      "file": "elders.webp",
+      "w": 900,
+      "h": 1200,
+      "alt": "Elders in smocks seated under a canopy at Damba",
+      "caption": "Elders under the canopy",
+      "author": "Bash222",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Image_of_Damba_festival_U.jpg"
+    }
+  ],
+  "checked": "2026-10-16"
+}

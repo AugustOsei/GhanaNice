@@ -1,0 +1,131 @@
+{
+  "slug": "odwira",
+  "name": "Odwira",
+  "kind": "trad",
+  "month": 8,
+  "region": "Eastern",
+  "card": {
+    "short": "Sep–Oct",
+    "when": "September or October, over a week",
+    "place": "Akropong, Aburi, Larteh and Mamfe",
+    "keeper": "The Akuapem",
+    "sum": "Akuapem’s week of purification and the new yam, remembering the 1826 victory at Katamanso."
+  },
+  "metaTitle": "Odwira Festival of the Akuapem in Akropong",
+  "metaDescription": "Odwira is the Akuapem festival of purification and the new yam, held each September or October in Akropong. Its link to the 1826 battle of Katamanso, the rites and how to go.",
+  "ogTitle": "Odwira: Akuapem’s festival of purification",
+  "subtitle": "Akuapem’s festival of purification and the new yam",
+  "answer": "Odwira is the festival of the Akuapem people of the Eastern Region, centred on Akropong and also kept in Aburi, Larteh and Mamfe. Held over a week in September or October, it is a festival of purification and renewal and of thanksgiving for the new yam, and Akuapem tradition links its founding to the defeat of the Asante army at Katamanso in 1826.",
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 800,
+    "alt": "A woman in white carries food for the gods under red umbrellas at Odwira",
+    "caption": "Carrying food for the gods on Odwira Thursday",
+    "author": "Duncanoff",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nsuorem_Rituals_During_Odwira_Festival.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "September or October, over a week"
+    ],
+    [
+      "Where",
+      "Akropong-Akuapem, Aburi, Larteh and Mamfe, Eastern Region"
+    ],
+    [
+      "Kept by",
+      "The Akuapem, led by the Okuapehene"
+    ],
+    [
+      "Since",
+      "Akuapem tradition dates it to 1826"
+    ]
+  ],
+  "schema": {
+    "description": "Akuapem festival of purification and the new yam, held in Akropong.",
+    "location": "Akropong-Akuapem",
+    "locality": "Akropong"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "Odwira and Katamanso",
+      "html": "<p>On 7 August 1826, near Dodowa, a coalition that included Akuapem and Akyem forces defeated the Asante army at the battle of Katamanso. Akuapem tradition credits the 19th Okuapehene, Nana Addo Dankwa I, with founding the Odwira festival that year.[[1,2]]</p>\n<p>Historians add some context: the Akuapem state was already established in the 18th century, and the victory helped consolidate it; Asante had its own Odwira tradition before Akuapem’s.[[1]] In 2026 Akuapem marked 200 years of its Odwira from 21 September.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "html": "<p>The Odwira week includes preparation, a period of mourning, path clearing, new-yam rites, the purification of the stools, remembrance of the ancestors, public processions and ceremonial gatherings.[[1]] Thanksgiving for the harvest is shown above all in “giving food to the ancestors”.[[3]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Akropong is on the Akuapem ridge, about an hour north of Accra past Aburi.",
+        "<b>Combine it:</b> Aburi Botanical Gardens are on the way. See the <a href=\"/regions/eastern/\">Eastern region</a> page.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is the Odwira festival?",
+      "a": "Over a week in September or October each year, centred on Akropong."
+    },
+    {
+      "q": "What does Odwira celebrate?",
+      "a": "Purification and renewal, and thanksgiving for the new yam. Akuapem tradition links its founding to the 1826 victory at Katamanso."
+    },
+    {
+      "q": "Where is Odwira celebrated?",
+      "a": "In Akropong-Akuapem, Aburi, Larteh and Mamfe in the Eastern Region."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "Christiana Afua Nyarko, “Odwira at 200: what history confirms, what tradition says”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/2026/09/odwira-at-200-what-history-confirms-what-tradition-says/",
+      "date": "20 September 2026"
+    },
+    {
+      "cite": "“Akatamanso War: the victory that gave Akuapem’s Odwira a memory, meaning and identity”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/2026/09/akatamanso-war-the-victory-that-gave-akuapems-odwira-a-memory-meaning-and-identity/",
+      "date": "September 2026"
+    },
+    {
+      "cite": "“Odwira festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Odwira_festival"
+    }
+  ],
+  "photos": [
+    {
+      "file": "ritual.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "A procession under red umbrellas during the Odwira rituals",
+      "caption": "Odwira rituals",
+      "author": "Duncanoff",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Akuapem_Odwira_Festival_-_Ritual.jpg"
+    },
+    {
+      "file": "omanhene.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "Oseadeeyo Kwasi Akuffo III, Omanhene of the Akuapem Traditional Area",
+      "caption": "Oseadeeyo Kwasi Akuffo III, Okuapehene",
+      "author": "Duncanoff",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Omanhene_of_the_Akuapem_Traditional_Area_-_Oseadeeyo_Kwasi_Akuffo_III.jpg"
+    }
+  ],
+  "cutout": "yam",
+  "checked": "2026-10-16"
+}

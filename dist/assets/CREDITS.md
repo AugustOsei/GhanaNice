@@ -260,6 +260,72 @@ Picked by hand from Wikimedia Commons in September 2026, with more added in Octo
 
 Creative Commons license text: https://creativecommons.org/licenses/
 
+## Festival photos
+
+The photos on the festivals list and festival pages (`/festivals/`), all from Wikimedia Commons. Each festival's own JSON in `tools/festivals/` holds the same credit and is shown under the photo.
+
+| Asset | Subject | Creator | Source | License |
+|---|---|---|---|---|
+| `festivals/aboakyer/img/hero.webp` | Hunters hold a live bushbuck above the crowd at Aboakyer in Winneba (Aboakyer, Central) | Fquasie | https://commons.wikimedia.org/wiki/File:Aboakyer_festival_Ghana.jpg | CC BY-SA 4.0 |
+| `festivals/aboakyer/img/procession.webp` | Chiefs and queen mothers under umbrellas in the Aboakyer procession (Aboakyer, Central) | Fquasie | https://commons.wikimedia.org/wiki/File:Aboakyer_festival_in_Winneba_11.jpg | CC BY-SA 4.0 |
+| `festivals/aboakyer/img/asafo.webp` | Members of an Asafo company wearing leaves at Aboakyer (Aboakyer, Central) | Fquasie | https://commons.wikimedia.org/wiki/File:Aboakyer_festival_in_Winneba_6.jpg | CC BY-SA 4.0 |
+| `festivals/aboakyer/img/kente.webp` | A woman in kente at the Aboakyer festival in Winneba (Aboakyer, Central) | Fquasie | https://commons.wikimedia.org/wiki/File:Aboakyer_festival_in_Winneba_2.jpg | CC BY-SA 4.0 |
+| `festivals/agbamevoza/img/hero.webp` | Chiefs and elders in bright kente seated at the Agbamevoza durbar (Agbamevoza, Volta) | JY midey | https://commons.wikimedia.org/wiki/File:Kpetoee.jpg | CC BY-SA 4.0 |
+| `festivals/agbamevoza/img/women.webp` | Women in kente walking at the Agbamevoza festival (Agbamevoza, Volta) | JY midey | https://commons.wikimedia.org/wiki/File:Agbamekevor1.jpg | CC BY-SA 4.0 |
+| `festivals/agbamevoza/img/chief.webp` | A chief in kente with attendants at Kpetoe (Agbamevoza, Volta) | JY midey | https://commons.wikimedia.org/wiki/File:Kpetoe3.jpg | CC BY-SA 4.0 |
+| `festivals/akwasidae/img/hero.webp` | Asante chiefs in kente and gold seated in state at Akwasidae in Kumasi (Akwasidae, Ashanti) | Paul5263 | https://commons.wikimedia.org/wiki/File:Ashanti_chief,_Kumasi,_Ghana.jpg | CC BY-SA 4.0 |
+| `festivals/akwasidae/img/asantehene.webp` | Otumfuo Osei Tutu II, the Asantehene, in kente during Akwasidae (Akwasidae, Ashanti) | Alfred Weidinger | https://commons.wikimedia.org/wiki/File:Asantehene_Otumfuo_Nana_Osei_Tutu_II,_Kumasi,_Ghana_(35899809070).jpg | CC BY 2.0 |
+| `festivals/akwasidae/img/manhyia.webp` | People gathered at the gate of Manhyia Palace for Akwasidae (Akwasidae, Ashanti) | Zack Agon | https://commons.wikimedia.org/wiki/File:Akwasidae_Celebration_in_Manhyia_Palace.jpg | CC BY-SA 4.0 |
+| `festivals/bakatue/img/hero.webp` | Rowers in a painted boat race on the Benya lagoon at Bakatue (Bakatue, Central) | US Embassy in Ghana / USAID | https://commons.wikimedia.org/wiki/File:Elmina_Bakatue_2016_004_B002.jpg | Public domain |
+| `festivals/bakatue/img/canoe.webp` | Women in white headwraps in a canoe on the lagoon at Bakatue (Bakatue, Central) | US Embassy in Ghana / USAID | https://commons.wikimedia.org/wiki/File:Elmina_Bakatue_2016_003_B002.jpg | Public domain |
+| `festivals/bakatue/img/masquerade.webp` | A masquerader in a costume and animal mask at Bakatue (Bakatue, Central) | NanaReagan | https://commons.wikimedia.org/wiki/File:Masquerade_match_during_Bakatue_Festival_2015_Coverage.jpg | CC BY-SA 4.0 |
+| `festivals/bakatue/img/women.webp` | Women in kente walking in procession through Elmina at Bakatue (Bakatue, Central) | NanaReagan | https://commons.wikimedia.org/wiki/File:Picture_from_Bakatue_Festival_2015_Coverage.jpg | CC BY-SA 4.0 |
+| `festivals/bugum/img/hero.webp` | A man watches flames rise from a bundle of grass torches at night in Tamale (Bugum, Northern) | Shahadusadik | https://commons.wikimedia.org/wiki/File:Fire_festival3.jpg | CC BY-SA 4.0 |
+| `festivals/bugum/img/crowd.webp` | Young people raise sticks and torches at the fire festival in Tamale (Bugum, Northern) | Shahadusadik | https://commons.wikimedia.org/wiki/File:Fire_festival5.jpg | CC BY-SA 4.0 |
+| `festivals/bugum/img/street.webp` | A street at night with torches carried through the crowd (Bugum, Northern) | Shahadusadik | https://commons.wikimedia.org/wiki/File:Fire_festival1.jpg | CC BY-SA 4.0 |
+| `festivals/chale-wote/img/hero.webp` | The words Chale Wote painted in orange on a street in Accra (Chale Wote, Greater Accra) | Fquasie | https://commons.wikimedia.org/wiki/File:Chale_Wote_Street_Art_Festival_10.jpg | CC BY-SA 4.0 |
+| `festivals/chale-wote/img/mural.webp` | An artist paints a large portrait mural at Chale Wote (Chale Wote, Greater Accra) | Agbleyjill | https://commons.wikimedia.org/wiki/File:Chale_Wote_61.jpg | CC BY-SA 4.0 |
+| `festivals/chale-wote/img/bikes.webp` | A crowd watches a street bicycle skills display at Chale Wote (Chale Wote, Greater Accra) | Noahalorwu | https://commons.wikimedia.org/wiki/File:Street_Bicycle_Skills_Display_at_Chale_Wote_Street_Art_Festival.jpg | CC BY-SA 4.0 |
+| `festivals/chale-wote/img/street.webp` | A decorated installation on a street at Chale Wote (Chale Wote, Greater Accra) | Agbleyjill | https://commons.wikimedia.org/wiki/File:Chale_Wote_64.jpg | CC BY-SA 4.0 |
+| `festivals/damba/img/hero.webp` | Chiefs in striped smocks and white caps greeting each other at Damba (Damba, Northern) | Bash222 | https://commons.wikimedia.org/wiki/File:Image_of_Damba_festival_F.jpg | CC BY-SA 4.0 |
+| `festivals/damba/img/durbar.webp` | A seated elder in yellow surrounded by a crowd at Damba (Damba, Northern) | Bash222 | https://commons.wikimedia.org/wiki/File:Image_of_Damba_festival_B.jpg | CC BY-SA 4.0 |
+| `festivals/damba/img/elders.webp` | Elders in smocks seated under a canopy at Damba (Damba, Northern) | Bash222 | https://commons.wikimedia.org/wiki/File:Image_of_Damba_festival_U.jpg | CC BY-SA 4.0 |
+| `festivals/fetu/img/hero.webp` | Red and gold state umbrellas over a chief in a palanquin at Fetu Afahye (Fetu Afahye, Central) | Bright Kwame Ayisi | https://commons.wikimedia.org/wiki/File:Oguaa_Fetu_Afahye_2025_02.jpg | CC BY-SA 4.0 |
+| `festivals/fetu/img/umbrella.webp` | A young participant carried under a red umbrella in the Fetu Afahye procession (Fetu Afahye, Central) | Kofiarkohbaidoo | https://commons.wikimedia.org/wiki/File:Young_participant_in_the_Oguaa_Fetu_Afahye_festival_procession_in_Cape_Coast.jpg | CC BY-SA 4.0 |
+| `festivals/fetu/img/flag.webp` | A girl in a raffia skirt waves an Asafo company flag in the street (Fetu Afahye, Central) | Fiifiabban | https://commons.wikimedia.org/wiki/File:The_Flag_Bearer.jpg | CC BY-SA 4.0 |
+| `festivals/fetu/img/face.webp` | A festival participant with white face paint at Fetu Afahye (Fetu Afahye, Central) | Kofiarkohbaidoo | https://commons.wikimedia.org/wiki/File:Ortrait_of_a_festival_participant_with_white_face_paint_at_Oguaa_Fetu_Afahye.jpg | CC BY-SA 4.0 |
+| `festivals/fiok/img/hero.webp` | Young Builsa warriors in horned headdresses with traditional weapons at Fiok (Fiok, Upper East) | Christian Yakubu | https://commons.wikimedia.org/wiki/File:Fiok_11.jpg | CC BY-SA 4.0 |
+| `festivals/fiok/img/warriors.webp` | A line of Builsa warriors in headdresses dancing at Fiok (Fiok, Upper East) | Christian Yakubu | https://commons.wikimedia.org/wiki/File:Fiok_5.jpg | CC BY-SA 4.0 |
+| `festivals/fiok/img/horns.webp` | A warrior in a tall horned headdress and leather tunic at Fiok (Fiok, Upper East) | Christian Yakubu | https://commons.wikimedia.org/wiki/File:Fiok_8.jpg | CC BY-SA 4.0 |
+| `festivals/fiok/img/robe.webp` | A chief in a blue and yellow robe seated at Fiok (Fiok, Upper East) | Christian Yakubu | https://commons.wikimedia.org/wiki/File:Fiok_12.jpg | CC BY-SA 4.0 |
+| `festivals/hogbetsotso/img/hero.webp` | Anlo men in white carrying offerings on their heads at Hogbetsotso (Hogbetsotso, Volta) | JY midey | https://commons.wikimedia.org/wiki/File:Hogb1.jpg | CC BY-SA 4.0 |
+| `festivals/hogbetsotso/img/chiefs.webp` | Anlo chiefs seated in kente at the Hogbetsotso durbar (Hogbetsotso, Volta) | JY midey | https://commons.wikimedia.org/wiki/File:Hogbe1.jpg | CC BY-SA 4.0 |
+| `festivals/homowo/img/teshie-ban.webp` | Ga priests and elders in white, wearing leaves, at the ceremony that opens the ban on noise-making in Teshie (Homowo, Greater Accra) | Agbleyjill | https://commons.wikimedia.org/wiki/File:Teshie_Homowo_61.jpg | CC BY-SA 4.0 |
+| `festivals/homowo/img/accra-1900.webp` | A crowded street in Accra during Homowo, around 1900 (Homowo, Greater Accra) | Unknown | https://commons.wikimedia.org/wiki/File:Accra_Homowo_um1900_300dpi.jpg | Public domain |
+| `festivals/homowo/img/ban-ritual.webp` | A chief’s linguist holds a gold-topped staff during the Teshie Homowo ritual on the ban on drumming (Homowo, Greater Accra) | Jwale2 | https://commons.wikimedia.org/wiki/File:Homowo_Festival_0101_04.jpg | CC BY-SA 4.0 |
+| `festivals/homowo/img/regalia.webp` | A Ga woman in white traditional dress and beads, seated on a stool, at Homowo (Homowo, Greater Accra) | Niiarmahktagoe | https://commons.wikimedia.org/wiki/File:Image_from_Homowo_Festival_in_Ghana.jpg | CC BY-SA 4.0 |
+| `festivals/homowo/img/youth-2.webp` | Young people celebrating Homowo in the street (Homowo, Greater Accra) | Jwale2 | https://commons.wikimedia.org/wiki/File:Homowo_Festival_50.jpg | CC BY-SA 4.0 |
+| `festivals/kundum/img/hero.webp` | Dancers and a crowd at the Kundum festival (Kundum, Western) | Assilidjoe | https://commons.wikimedia.org/wiki/File:Kundum_Festival_Dance.jpg | CC BY-SA 4.0 |
+| `festivals/kundum/img/crowd.webp` | A crowd gathered at the Kundum festival at Akwidaa (Kundum, Western) | Assilidjoe | https://commons.wikimedia.org/wiki/File:Kundum_Festival.jpg | CC BY-SA 4.0 |
+| `festivals/kwahu/img/hero.webp` | Two paragliders over the green Kwahu ridge (Kwahu Easter, Eastern) | Alhassan Sumaila | https://commons.wikimedia.org/wiki/File:Paragliding_at_Kwahu.jpg | CC BY-SA 4.0 |
+| `festivals/kwahu/img/cliff.webp` | The steep cliffs of the Kwahu ridge above green forest (Kwahu Easter, Eastern) | Akiwumi | https://commons.wikimedia.org/wiki/File:Kwahu_cliff.JPG | CC BY-SA 3.0 |
+| `festivals/ngmayem/img/hero.webp` | The chief of Odumase-Krobo seated on a palanquin under a red umbrella at Ngmayem (Ngmayem, Eastern) | Fquasie | https://commons.wikimedia.org/wiki/File:Ngmayem_Festival_in_Ghana.jpg | CC BY-SA 4.0 |
+| `festivals/ngmayem/img/umbrellas.webp` | Young men lead the chief under red umbrellas to the Ngmayem grounds (Ngmayem, Eastern) | Fquasie | https://commons.wikimedia.org/wiki/File:Ngmayem_Festival_6.jpg | CC BY-SA 4.0 |
+| `festivals/ngmayem/img/feathers.webp` | A boy in a feathered headdress and white face paint seated in a palanquin (Ngmayem, Eastern) | Fquasie | https://commons.wikimedia.org/wiki/File:Ngmayem_Festival_7.jpg | CC BY-SA 4.0 |
+| `festivals/ngmayem/img/women.webp` | Young women in kente and beads at the Ngmayem festival (Ngmayem, Eastern) | Fquasie | https://commons.wikimedia.org/wiki/File:Krobo_Ngmayem_Festival.jpg | CC BY-SA 4.0 |
+| `festivals/odwira/img/hero.webp` | A woman in white carries food for the gods under red umbrellas at Odwira (Odwira, Eastern) | Duncanoff | https://commons.wikimedia.org/wiki/File:Nsuorem_Rituals_During_Odwira_Festival.jpg | CC BY-SA 4.0 |
+| `festivals/odwira/img/ritual.webp` | A procession under red umbrellas during the Odwira rituals (Odwira, Eastern) | Duncanoff | https://commons.wikimedia.org/wiki/File:Akuapem_Odwira_Festival_-_Ritual.jpg | CC BY-SA 4.0 |
+| `festivals/odwira/img/omanhene.webp` | Oseadeeyo Kwasi Akuffo III, Omanhene of the Akuapem Traditional Area (Odwira, Eastern) | Duncanoff | https://commons.wikimedia.org/wiki/File:The_Omanhene_of_the_Akuapem_Traditional_Area_-_Oseadeeyo_Kwasi_Akuffo_III.jpg | CC BY-SA 4.0 |
+| `festivals/ohum/img/hero.webp` | Men in smocks carrying leaves and sticks in an Ohum procession (Ohum, Eastern) | Robertjamal12 | https://commons.wikimedia.org/wiki/File:Celebrating_Ohum_Festival_1.jpg | CC BY-SA 4.0 |
+| `festivals/ohum/img/crowd.webp` | A crowd celebrating Ohum in front of a two-storey building (Ohum, Eastern) | Robertjamal12 | https://commons.wikimedia.org/wiki/File:Celebrating_Ohum_Festival_5.jpg | CC BY-SA 4.0 |
+| `festivals/winneba-masquerade/img/hero.webp` | A masquerader in a white mask and costume at the Winneba Masquerade (Winneba Masquerade, Central) | Joy Agyepong | https://commons.wikimedia.org/wiki/File:Winneba_Masquerade_01.jpg | CC BY-SA 4.0 |
+| `festivals/winneba-masquerade/img/parade.webp` | Masquerade clubs in bright costumes on the parade ground at Winneba (Winneba Masquerade, Central) | Joy Agyepong | https://commons.wikimedia.org/wiki/File:Winneba_Masquerade_09.jpg | CC BY-SA 4.0 |
+| `festivals/winneba-masquerade/img/stilts.webp` | A masquerader on tall stilts at the Winneba Masquerade (Winneba Masquerade, Central) | Joy Agyepong | https://commons.wikimedia.org/wiki/File:Winneba_Masquerade_05.jpg | CC BY-SA 4.0 |
+| `festivals/winneba-masquerade/img/costume.webp` | A masquerader in a feathered red, green and yellow costume (Winneba Masquerade, Central) | Benorbit01 | https://commons.wikimedia.org/wiki/File:Winneba_masquerade_festival_2022.jpg | CC BY-SA 4.0 |
+| `festivals/img/fiok.webp` | Smaller copy of the Fiok hero photo, for the festivals page header | Christian Yakubu | https://commons.wikimedia.org/wiki/File:Fiok_11.jpg | CC BY-SA 4.0 |
+| `festivals/img/fetu.webp` | Smaller copy of the Fetu Afahye hero photo, for the festivals page header | Bright Kwame Ayisi | https://commons.wikimedia.org/wiki/File:Oguaa_Fetu_Afahye_2025_02.jpg | CC BY-SA 4.0 |
+| `festivals/img/agbamevoza.webp` | Smaller copy of the Agbamevoza hero photo, for the festivals page header | JY midey | https://commons.wikimedia.org/wiki/File:Kpetoee.jpg | CC BY-SA 4.0 |
+
 ## Site icons and share image
 
 | Asset | Subject | Creator | Source | License |

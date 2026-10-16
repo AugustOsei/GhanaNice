@@ -3,10 +3,10 @@
 A people-powered guide to good places across Ghana's 16 regions, "for locals and visitors alike". Owner: Augustine Osei (credited in the footer; writes The August Dispatch).
 
 ## Stack and layout
-- Plain static site: HTML, CSS and vanilla JS. No framework. **Everything deployed lives in `dist/`.** The only generated pages are committed: the region pages and sitemap (`node tools/build_regions.mjs`), the About/Contact/Privacy pages (`node tools/build_pages.mjs`) and `credits.html`.
+- Plain static site: HTML, CSS and vanilla JS. No framework. **Everything deployed lives in `dist/`.** The only generated pages are committed: the region pages and sitemap (`node tools/build_regions.mjs`), the About/Contact/Privacy pages (`node tools/build_pages.mjs`), the festival pages (`node tools/build_festivals.mjs`) and `credits.html`.
 - Live at **https://www.ghananice.com** (apex `ghananice.com` 308-redirects to www). Deployed on Vercel from `main` (auto-deploys on push). `vercel.json` sets `outputDirectory: "dist"`. Without it Vercel served the repo root and returned 404.
 - Local preview: `.claude/launch.json` → `python3 -m http.server 4173 --directory dist`.
-- Cache-busting is manual: bump `?v=N` on the `<link>` / `<script>` tags in `index.html`, `tools/region-template.html` and `tools/page-template.html` (then rebuild those pages) and `travel-directory.html` (and `credits.html`/`404.html` for CSS) when changing CSS or JS, and the matching pins in `tools/smoke.mjs`, which Vercel runs as the build. `vercel.json` caches CSS/JS for a day and `/assets/` for 30 days, so give a changed photo a new filename rather than overwriting it.
+- Cache-busting is manual: bump `?v=N` on the `<link>` / `<script>` tags in `index.html`, `tools/region-template.html`, `tools/page-template.html` and the two festival templates (then rebuild those pages) and `travel-directory.html` (and `credits.html`/`404.html` for CSS) when changing CSS or JS, and the matching pins in `tools/smoke.mjs`, which Vercel runs as the build. `vercel.json` caches CSS/JS for a day and `/assets/` for 30 days, so give a changed photo a new filename rather than overwriting it.
 - Photos in `assets/real/` have `-400/-800/-1200.webp` copies made by `tools/media/resize_local.py` (cards, tiles, heroes). Pages use the copies; the lightbox and CREDITS.md use the originals. Re-run it after adding a photo there.
 - `dist/credits.html` is generated from `assets/CREDITS.md` by `tools/media/build_credits.py`. Re-run after editing the credits.
 
@@ -20,6 +20,7 @@ A people-powered guide to good places across Ghana's 16 regions, "for locals and
 | `dist/media.js` | **Generated** by `tools/media/build_media.py`. Don't hand-edit |
 | `dist/travel-directory.html` + `travel-directory.js` + `travel-directory.css` | Travel directory: rope-drawing hero, category cards + Category/Region filters, featured profiles, all services, "list your service" form |
 | `dist/travel-directory-data.js` | The curated starting listings (`GHANA_TRAVEL_SERVICES`) |
+| `dist/festivals/` | Festivals list (`/festivals/`) and one page per festival (`/festivals/<slug>/`), **generated** by `tools/build_festivals.mjs` from `tools/festivals/<slug>.json` (copy, dates, sources, photo credits) with `tools/festivals-template.html` (list) and `tools/festival-template.html` (pages). Shared styles in `festival.css`; photos in `<slug>/img/` and the list header's in `img/` (smaller copies of three hero photos), all Wikimedia Commons and in CREDITS.md. `build_regions.mjs` adds the pages to the sitemap; `tools/smoke.mjs` fails on a stale page. The list page's only script works out the "Coming up" dates and the next Akwasidae from today |
 | `dist/data/service-submissions.json` | Approved submitted listings. **Written by the n8n service workflow** through commits on `main` |
 | `dist/config.js` | `tipEndpoint` / `directoryEndpoint` / `serviceSubmissionEndpoint` for n8n (blank = preview mode, drafts stay in the browser) |
 | `dist/footer.js` | WebGL water animation over the engraved Volta footer |
@@ -34,7 +35,8 @@ A people-powered guide to good places across Ghana's 16 regions, "for locals and
 - The cards look like postcards but the copy calls them regions.
 - Respect `prefers-reduced-motion`. Keep keyboard and screen-reader paths working.
 
-## Open items (the one working list, updated 2026-10-14; work top to bottom)
+## Open items (the one working list, updated 2026-10-16; work top to bottom)
+Done 2026-10-16: festivals section live at `/festivals/` (33 festival pages; in the nav, footer, sitemap and credits). This covers planned feature 3, the cultural calendar, for festivals; national holidays are not on it yet.
 Done 2026-10-14: placeholder "found it nice" counts hidden (votes are still browser-only; `niceCount` stays in the tip data); unused `independence-arch-storm.jpg` removed; code/behaviour/performance audit run, and its quick fixes made (directory listing clicks no longer change the filter, the home page only downloads the hero landmark it lands on, community wall reworded, "Leave a tip" footer link, cleanups); the 16 regions turned into static pages at `/regions/<slug>/` (see the file table); `https://www.ghananice.com/sitemap.xml` submitted in Google Search Console (Domain property, so it needs the full URL) and read successfully.
 
 **Next**
@@ -44,6 +46,9 @@ Done 2026-10-14: placeholder "found it nice" counts hidden (votes are still brow
 **Waiting on others**
 3. Most-visited ranks 6–10 have no published 2025 figures (only the top five were reported). Replace when the full GTA 2025 report is online.
 4. Manhyia Palace Museum's official site (linked on the Ashanti page) returned a server error on 2026-10-14. Recheck; swap to Wikipedia if it stays down.
+
+**Every year**
+5. Festival dates: the Ngmayem page has a time-sensitive sticky note ("25 Oct – 2 Nov 2026 … about to start") and 2026 dates in its title, card and facts (`tools/festivals/ngmayem.json`); refresh them each year once the Manya Krobo announce them, or drop the sticky after the festival. Other pages give "in 2026" approximations for lunar festivals (Damba, Bugum) and 2026 notes (Apoo, Akwasidae anchor): recheck yearly and update `checked`. Rebuild with `node tools/build_festivals.mjs`.
 
 Reference: the n8n tip pipeline is active (`docs/tip-pipeline.md`). Photos total ~57 MB (1600px + 800px WebP); pages load 800px, the lightbox 1600px.
 

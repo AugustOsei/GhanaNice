@@ -1,0 +1,79 @@
+{
+  "slug": "jintigi",
+  "name": "Jintigi",
+  "kind": "trad",
+  "month": 3,
+  "region": "Savannah",
+  "card": {
+    "short": "Apr",
+    "when": "Usually April",
+    "place": "Damongo and the Gonja towns",
+    "keeper": "The chiefs and people of Gonja",
+    "sum": "The Gonja fire festival: torches carried at night to the edge of town, and readings for the year ahead."
+  },
+  "metaTitle": "Jintigi: The Gonja Fire Festival in the Savannah Region",
+  "metaDescription": "Jintigi is the fire festival of the Gonja people of the Savannah Region, centred on Damongo: night torch processions and readings for the year ahead.",
+  "ogTitle": "Jintigi: the Gonja fire festival",
+  "subtitle": "The Gonja fire festival",
+  "answer": "Jintigi is the fire festival of the chiefs and people of Gonja in the Savannah Region, centred on Damongo, the Gonja capital. At night people carry burning torches through the towns and villages and out into the bush, and the Qur’an is recited to foretell the coming year. It is usually held in April.",
+  "facts": [
+    [
+      "When",
+      "Usually April"
+    ],
+    [
+      "Where",
+      "Damongo and towns across Gonjaland, Savannah Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of the Gonja Traditional Area"
+    ]
+  ],
+  "schema": {
+    "description": "Fire festival of the Gonja people with night torch processions.",
+    "location": "Damongo",
+    "locality": "Damongo"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>After dark, torch processions go to the outskirts of the towns and villages of Gonjaland and into the bush, and the Qur’an is recited to forecast the year ahead.[[1]]</p>\n<p>The most common story behind the torches is the search for the lost son of an ancient king, carried out by torchlight at night.[[1,2]] The Dagomba keep a fire festival of their own, <a href=\"/festivals/bugum/\">Bugum</a>.</p>\n<p class=\"note\">Published accounts of Jintigi are short and sometimes conflict. If you know the festival, <a href=\"/contact/\">tell us</a> more and we’ll add it.</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Damongo is the Gonja capital and the gateway to Mole National Park.",
+        "<b>At night:</b> the processions move fast and carry open flames. Stand back, and keep children close.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Jintigi festival?",
+      "a": "The fire festival of the Gonja people of the Savannah Region, with night torch processions and readings for the year ahead."
+    },
+    {
+      "q": "When is Jintigi?",
+      "a": "It is usually held in April."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Jintigi Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jintigi_Festival"
+    },
+    {
+      "cite": "“Jintigi Festival: honouring Gonja heritage through fire and unity”",
+      "site": "Ghana Remembers",
+      "url": "https://ghanaremembers.com/stories/events/jintigi-festival-honouring-gonja-heritage-through-fire-and-unity.html"
+    }
+  ],
+  "cutout": "torch",
+  "checked": "2026-10-16"
+}

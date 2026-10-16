@@ -1,0 +1,133 @@
+{
+  "slug": "bugum",
+  "name": "Bugum",
+  "kind": "trad",
+  "month": 5,
+  "region": "Northern",
+  "card": {
+    "short": "Lunar",
+    "when": "The ninth day of Bugum Goli, the first lunar month (about late June in 2026)",
+    "place": "Yendi, Tamale and Dagbon",
+    "keeper": "The Dagomba",
+    "sum": "The Dagomba new-year fire festival: torches carried through the streets and out of town at night."
+  },
+  "metaTitle": "Bugum (Buɣim Chuɣu): the Dagomba Fire Festival",
+  "metaDescription": "Bugum, the fire festival, marks the Dagomba new year in Yendi, Tamale and across Dagbon: torches carried through the streets at night. When it falls, its story and tips.",
+  "ogTitle": "Bugum: the Dagomba fire festival",
+  "subtitle": "The Dagomba new year, by torchlight",
+  "answer": "Bugum, or Buɣim Chuɣu, is the fire festival of the Dagomba people of the Northern Region and marks their new year. On the ninth day of Bugum Goli, the first month of the Dagomba lunar calendar, people carry burning torches through the streets of Yendi, Tamale and towns across Dagbon and out into the fields. Because the calendar is lunar, the date moves earlier each year.",
+  "sticky": {
+    "title": "After dark",
+    "text": "The torches come out at night. Stand back from the flames."
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 800,
+    "alt": "A man watches flames rise from a bundle of grass torches at night in Tamale",
+    "caption": "Torches lit in Tamale",
+    "author": "Shahadusadik",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fire_festival3.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "The ninth day of Bugum Goli, the first Dagomba lunar month"
+    ],
+    [
+      "Where",
+      "Yendi, Tamale and towns across Dagbon, Northern Region"
+    ],
+    [
+      "Kept by",
+      "The Dagomba"
+    ],
+    [
+      "Date set by",
+      "The lunar calendar, announced by the chiefs"
+    ]
+  ],
+  "schema": {
+    "description": "Dagomba new-year fire festival with night torch processions.",
+    "location": "Yendi and Tamale",
+    "locality": "Yendi"
+  },
+  "sections": [
+    {
+      "id": "when",
+      "title": "When is Bugum?",
+      "html": "<p>Bugum falls on the ninth day of Bugum Goli, “the month of fire”, the first month of the Dagomba lunar year, which lines up with Muharram in the Islamic calendar.[[1,2]] A lunar year is about eleven days shorter than a calendar year, so Bugum comes round earlier each year: it fell in early July in 2025 and in late June in 2026.</p>"
+    },
+    {
+      "id": "story",
+      "title": "The story of the fire",
+      "html": "<p>The most common telling is the search for a king’s lost son, made at night by torchlight; in some versions the king is named as Naa Zoligu, an early Ya-Naa of Dagbon.[[1,2]] Another account links the torches to the night Noah’s ark came to rest. The names in the oldest story are no longer certain.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "html": "<p>As night falls, people light torches of dried grass and carry them through the streets and out of town, many dressed as warriors, with drumming and dancing.[[1,2]] The biggest celebration is in Yendi, the seat of the Ya-Naa, but Tamale and towns across the north light up too.[[1]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Tamale is the easiest base, with flights from Accra; Yendi, the traditional capital, is about two hours east.",
+        "<b>Fire safety:</b> the torches are big and the crowds move fast. Wear closed shoes and cotton, not synthetics, and keep back from the flames.",
+        "<b>When:</b> work out the date from the lunar calendar and confirm locally nearer the time.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Bugum festival?",
+      "a": "The fire festival of the Dagomba people of northern Ghana, marking their new year with torches carried through the streets at night."
+    },
+    {
+      "q": "When is the fire festival in Tamale?",
+      "a": "On the ninth day of Bugum Goli, the first month of the Dagomba lunar year. It moves about eleven days earlier each year; in 2026 it fell in late June."
+    },
+    {
+      "q": "Where is the biggest Bugum celebration?",
+      "a": "In Yendi, the traditional capital of Dagbon, with large celebrations in Tamale too."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Bugum Chugu”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bugum_Chugu"
+    },
+    {
+      "cite": "“Bugum Festival: history of the fire festival and how it is celebrated”",
+      "site": "Dagbon Kingdom",
+      "url": "https://dagbonkingdom.com/bugum-festival-among-dagomba-people/"
+    }
+  ],
+  "photos": [
+    {
+      "file": "crowd.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "Young people raise sticks and torches at the fire festival in Tamale",
+      "caption": "The crowd in Tamale",
+      "author": "Shahadusadik",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fire_festival5.jpg"
+    },
+    {
+      "file": "street.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "A street at night with torches carried through the crowd",
+      "caption": "Torches in the street",
+      "author": "Shahadusadik",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fire_festival1.jpg"
+    }
+  ],
+  "cutout": "torch",
+  "checked": "2026-10-16"
+}

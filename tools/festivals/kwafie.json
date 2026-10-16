@@ -1,0 +1,110 @@
+{
+  "slug": "kwafie",
+  "name": "Kwafie",
+  "kind": "trad",
+  "month": 11,
+  "region": "Bono",
+  "card": {
+    "short": "Nov–Dec",
+    "when": "November or December",
+    "place": "Dormaa Ahenkro, Berekum and Nsoatre",
+    "keeper": "The Bono of Dormaa and their neighbours",
+    "sum": "A festival of fire and of putting the town in order, ending in a grand durbar at Dormaa Ahenkro."
+  },
+  "metaTitle": "Kwafie Festival in Dormaa Ahenkro",
+  "metaDescription": "Kwafie is the festival of Dormaa Ahenkro, Berekum and Nsoatre in the Bono Region, held in November or December: the sacred fire, a torchlight procession and a grand durbar.",
+  "ogTitle": "Kwafie: Dormaa’s festival of fire",
+  "subtitle": "Dormaa’s festival of fire",
+  "answer": "Kwafie is a festival of Dormaa Ahenkro, Berekum and Nsoatre in the Bono Region, held in November or December. Tradition says it remembers the ancestors who brought fire to the area, and it opens with a torchlight procession and the lighting of a sacred fire. Its organisers also explain the name as putting your house and town in order to welcome visitors. It ends in a grand durbar.",
+  "facts": [
+    [
+      "When",
+      "November or December; Dormaa’s durbar is in December"
+    ],
+    [
+      "Where",
+      "Dormaa Ahenkro, Berekum and Nsoatre, Bono Region"
+    ],
+    [
+      "Kept by",
+      "The Dormaa Traditional Area, led by the Dormaahene"
+    ],
+    [
+      "How often",
+      "In Dormaa, every five years in recent decades"
+    ]
+  ],
+  "schema": {
+    "description": "Festival of fire of Dormaa Ahenkro, Berekum and Nsoatre.",
+    "location": "Dormaa Ahenkro",
+    "locality": "Dormaa Ahenkro",
+    "organizer": "Dormaa Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "What Kwafie means",
+      "html": "<p>Kwafie is said to remember the bringing of fire to the area by the ancestors when they migrated, and Dormaa’s bonfire stands for its claim to have brought fire.[[1]] The Dormaa Traditional Council also describes the word as meaning putting your house, neighbourhood and surroundings in order to welcome visitors, and landlords along the main streets are asked to repaint and tidy up.[[2]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "days": [
+        {
+          "label": "Opening evening",
+          "title": "Torchlight procession",
+          "html": "A torchlight procession goes from the palace to the house of the sacred stools, followed by libations to the ancestors.[[1]]"
+        },
+        {
+          "label": "Next morning",
+          "title": "Laying the logs",
+          "html": "The chief presides over the laying of logs, and the fire is lit from three logs.[[1]]"
+        },
+        {
+          "label": "Climax",
+          "title": "The grand durbar",
+          "html": "The week-long festival ends with a grand durbar; in Dormaa Ahenkro it is held at the Nana Agyemang Badu I Sports Stadium in December.[[2]]"
+        }
+      ]
+    },
+    {
+      "id": "when",
+      "title": "When is Kwafie?",
+      "html": "<p>It usually falls in November or December, and some years in January.[[1]] Dormaa has held it every five years since the current Dormaahene came to the throne; the 2024 celebration was the fourth, marking 25 years of his reign.[[2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Dormaa Ahenkro is in the west of the Bono Region, near the Côte d’Ivoire border; Berekum is to its east.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Kwafie festival?",
+      "a": "A festival of Dormaa Ahenkro, Berekum and Nsoatre in the Bono Region, remembering the bringing of fire and ending in a grand durbar."
+    },
+    {
+      "q": "When is Kwafie celebrated?",
+      "a": "Usually in November or December. In Dormaa it has been held every five years in recent decades, most recently in December 2024."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Kwafie Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kwafie_Festival"
+    },
+    {
+      "cite": "“Dormaa Traditional Council announces 2024 Kwafie Festival celebration”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/2024/05/dormaa-traditional-council-announces-2024-kwafie-festival-celebration/",
+      "date": "15 May 2024"
+    }
+  ],
+  "cutout": "torch",
+  "checked": "2026-10-16"
+}

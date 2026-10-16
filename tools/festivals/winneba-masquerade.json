@@ -1,0 +1,155 @@
+{
+  "slug": "winneba-masquerade",
+  "name": "Winneba Masquerade",
+  "kind": "event",
+  "month": 0,
+  "region": "Central",
+  "card": {
+    "short": "1 Jan",
+    "when": "1 January",
+    "place": "Winneba",
+    "keeper": "The Winneba Masquerade Federation and its five clubs",
+    "sum": "Five masquerade clubs in masks and costumes march and dance for the prize on New Year’s Day."
+  },
+  "metaTitle": "Winneba Masquerade Festival (Kaakaamotobi) on New Year’s Day",
+  "metaDescription": "The Winneba Masquerade, or Fancy Dress Festival, fills Winneba with masked dancers and brass bands every 1 January. Its history, the five clubs and how to go.",
+  "ogTitle": "The Winneba Masquerade: New Year’s Day in masks",
+  "subtitle": "Masks, brass bands and a contest on New Year’s Day",
+  "answer": "The Winneba Masquerade, known locally as <i>Kaakaamotobi</i> and often called the Fancy Dress Festival, is held in Winneba every 1 January. Five masquerade clubs parade in masks and elaborate costumes to brass band music and compete in a march past and dance contest, making it the first big festival of the year in Ghana.",
+  "sticky": {
+    "title": "New Year’s Day",
+    "text": "The clubs parade on 1 January every year: no waiting for a council announcement."
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 800,
+    "alt": "A masquerader in a white mask and costume at the Winneba Masquerade",
+    "caption": "A masquerader on parade",
+    "author": "Joy Agyepong",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Winneba_Masquerade_01.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "1 January, every year"
+    ],
+    [
+      "Where",
+      "Winneba, Central Region, usually at Advanced Park"
+    ],
+    [
+      "Who takes part",
+      "Five masquerade clubs, from Nobles No. 1 to Royals No. 5"
+    ],
+    [
+      "Organised by",
+      "The Winneba Masquerade Federation, with the Centre for National Culture and the Effutu Municipal Assembly"
+    ]
+  ],
+  "schema": {
+    "description": "Annual masquerade parade and competition in Winneba on New Year’s Day.",
+    "location": "Advanced Park, Winneba",
+    "locality": "Winneba",
+    "organizer": "Winneba Masquerade Federation"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "Where the masquerade comes from",
+      "html": "<p>Masquerading came to Ghana’s coastal towns through contact with European traders and colonisers, who brought masks and fancy dress to their celebrations. Winneba took it up and formed its own masquerade groups as far back as the 1930s.[[1,2]]</p>\n<p>In 1957 Kwame Nkrumah, Ghana’s first president, formalised the tradition and sponsored the first parade to celebrate independence. The festival has run every New Year’s Day since, for more than sixty years.[[1]]</p>"
+    },
+    {
+      "id": "clubs",
+      "title": "The five clubs",
+      "html": "<p>Five groups take part, each with its own colours, costumes and band: Nobles No. 1, Egyaa No. 2, Tumus No. 3, Red Cross No. 4 and Royals No. 5.[[1]] They spend months making masks moulded into faces that are meant to frighten, or to make the crowd laugh, and the name <i>Kaakaamotobi</i> comes from those moulded masks.[[1]]</p>\n<p>The masquerade was traditionally for men, and many still dress up as women in wigs, earrings and gowns. Women now take part too.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens on the day",
+      "days": [
+        {
+          "label": "Morning",
+          "title": "Into the streets",
+          "html": "The clubs come out in costume, with stilt walkers and brass bands, and parade through Winneba.[[1,2]]"
+        },
+        {
+          "label": "Afternoon",
+          "title": "March past and dance contest",
+          "html": "At the park, each group marches past and dances for the judges, and the best are rewarded.[[1]]"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Winneba is on the coast road between Accra and Cape Coast. The contest is usually at Advanced Park.",
+        "<b>When:</b> it’s on New Year’s Day. Roads out of Accra are busy after the night’s celebrations, so leave early.",
+        "<b>Photos:</b> the masqueraders love an audience, but ask before close-ups and give stilt walkers room.",
+        "<b>Also in Winneba:</b> come back in May for <a href=\"/festivals/aboakyer/\">Aboakyer</a>, the deer hunt."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is the Winneba Masquerade?",
+      "a": "Every year on 1 January, New Year’s Day."
+    },
+    {
+      "q": "What is Kaakaamotobi?",
+      "a": "It is the local name for the Winneba Masquerade, from the moulded masks the masqueraders wear."
+    },
+    {
+      "q": "How many masquerade clubs are there in Winneba?",
+      "a": "Five: Nobles No. 1, Egyaa No. 2, Tumus No. 3, Red Cross No. 4 and Royals No. 5."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "Douglas Anane-Frimpong, “‘Kaakaamotobi’: Fancy Dress and Masqueraders Festival”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/news/general-news/kaakaamotobi-fancy-dress-and-masqueraders-festival.html",
+      "date": "8 January 2022"
+    },
+    {
+      "cite": "“Fancy Dress Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fancy_Dress_Festival"
+    }
+  ],
+  "photos": [
+    {
+      "file": "parade.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "Masquerade clubs in bright costumes on the parade ground at Winneba",
+      "caption": "The clubs on the parade ground",
+      "author": "Joy Agyepong",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Winneba_Masquerade_09.jpg"
+    },
+    {
+      "file": "stilts.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "A masquerader on tall stilts at the Winneba Masquerade",
+      "caption": "On stilts above the crowd",
+      "author": "Joy Agyepong",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Winneba_Masquerade_05.jpg"
+    },
+    {
+      "file": "costume.webp",
+      "w": 643,
+      "h": 1200,
+      "alt": "A masquerader in a feathered red, green and yellow costume",
+      "caption": "Costume, Winneba 2022",
+      "author": "Benorbit01",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Winneba_masquerade_festival_2022.jpg"
+    }
+  ],
+  "checked": "2026-10-16"
+}

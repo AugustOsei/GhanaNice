@@ -1,4 +1,5 @@
-/* Writes the 16 static region pages, dist/regions/<slug>/index.html, and dist/sitemap.xml.
+/* Writes the 16 static region pages, dist/regions/<slug>/index.html, and dist/sitemap.xml
+   (which also lists the plain pages and the festival pages).
 
    data.js (copy, places) and media.js (photos, credits, links) stay the source of truth, and
    tools/region-template.html holds the page. Everything a reader or a search engine needs is in
@@ -149,8 +150,14 @@ function render(region, index) {
     });
 }
 
+/* Festival pages (tools/build_festivals.mjs): the list, plus every festival with its own page. */
+const festivalUrls = fs.readdirSync(path.join(root, 'tools/festivals')).filter(f => f.endsWith('.json')).sort()
+  .map(f => JSON.parse(fs.readFileSync(path.join(root, 'tools/festivals', f), 'utf8')))
+  .filter(f => Array.isArray(f.sections) && f.sections.length > 0)
+  .map(f => `${SITE}/festivals/${f.slug}/`);
+
 function sitemap() {
-  const pages = [`${SITE}/`, `${SITE}/travel-directory.html`, ...regions.map(r => regionUrl(r.slug)), ...PAGES.map(p => SITE + p.path)];
+  const pages = [`${SITE}/`, `${SITE}/travel-directory.html`, ...regions.map(r => regionUrl(r.slug)), ...PAGES.map(p => SITE + p.path), `${SITE}/festivals/`, ...festivalUrls];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(loc => `  <url><loc>${loc}</loc></url>`).join('\n')}

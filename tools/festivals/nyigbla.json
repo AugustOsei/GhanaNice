@@ -1,0 +1,82 @@
+{
+  "slug": "nyigbla",
+  "name": "Nyigbla",
+  "kind": "trad",
+  "month": 1,
+  "region": "Volta",
+  "card": {
+    "short": "Feb",
+    "when": "Usually the third weekend of February",
+    "place": "Afife, near Akatsi",
+    "keeper": "The chiefs and people of Afife",
+    "sum": "A week of thanksgiving at Afife that remembers the Anlo-Ewe migration, ending in war dances and bonfires."
+  },
+  "metaTitle": "Nyigbla Festival in Afife: Volta Thanksgiving in February",
+  "metaDescription": "Nyigbla is the February thanksgiving festival of Afife in the Volta Region, remembering the Anlo-Ewe migration with war dances and bonfires. What we know and how to go.",
+  "ogTitle": "Nyigbla: Afife’s thanksgiving in February",
+  "subtitle": "Afife’s week of thanksgiving",
+  "answer": "Nyigbla is the festival of the chiefs and people of Afife, near Akatsi in the Volta Region. It is a week-long thanksgiving in February that also remembers the Anlo-Ewe migration to the area, and it reaches its height on the third weekend of the month with a procession of chiefs, war dances, songs and bonfires.",
+  "facts": [
+    [
+      "When",
+      "February, climaxing on the third weekend"
+    ],
+    [
+      "Where",
+      "Afife, near Akatsi, Volta Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of Afife"
+    ],
+    [
+      "Date set by",
+      "The Afife traditional authorities"
+    ]
+  ],
+  "schema": {
+    "description": "Week-long thanksgiving festival of Afife remembering the Anlo-Ewe migration.",
+    "location": "Afife",
+    "locality": "Afife"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What we know",
+      "html": "<p>Nyigbla is a thanksgiving that also commemorates the migration of the Anlo-Ewe to their present home.[[1,2]] It runs for about a week and climaxes on the third weekend of February, when the chiefs process with their people and there are war dances, songs and bonfire jumping. Food and drink are shared, and everyone turns out in traditional dress.[[1,2]]</p>\n<p class=\"note\">Most published descriptions of Nyigbla repeat the same short summary, so this page stays brief. If you know the festival, <a href=\"/contact/\">tell us</a> more and we’ll add it.</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Afife is in the south of the Volta Region, near Akatsi and the Keta lagoon.",
+        "<b>When:</b> aim for the third weekend of February for the procession and war dances.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is the Nyigbla festival?",
+      "a": "In February, for about a week, with the climax on the third weekend."
+    },
+    {
+      "q": "What does Nyigbla celebrate?",
+      "a": "It is a thanksgiving that also remembers the Anlo-Ewe migration to the area around Afife."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Nyigbla Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nyigbla_Festival"
+    },
+    {
+      "cite": "“Festivals of Ghana”",
+      "site": "Easy Track Ghana",
+      "url": "https://www.easytrackghana.com/cultural-overview-ghana-festivals.php"
+    }
+  ],
+  "checked": "2026-10-16"
+}

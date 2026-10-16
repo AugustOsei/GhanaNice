@@ -1,0 +1,136 @@
+{
+  "slug": "ohum",
+  "name": "Ohum",
+  "kind": "trad",
+  "month": 5,
+  "region": "Eastern",
+  "card": {
+    "short": "Jun–Jul",
+    "when": "A Tuesday or Wednesday in June or July, and again in September or October",
+    "place": "Kyebi and the Akyem towns",
+    "keeper": "The Akyem Abuakwa",
+    "sum": "Akyem thanksgiving for the yam harvest and the Birim river, held twice a year after two weeks of silence."
+  },
+  "metaTitle": "Ohum Festival of the Akyem: Thanksgiving for Yam and the Birim",
+  "metaDescription": "Ohum is the thanksgiving festival of the Akyem people of the Eastern Region, held twice a year after a two-week ban on noise. What it marks, the rituals at Tafo and how to go.",
+  "ogTitle": "Ohum: the Akyem thanksgiving",
+  "subtitle": "Akyem thanksgiving, after two weeks of silence",
+  "answer": "Ohum is a thanksgiving festival of the Akyem people of the Eastern Region, also kept by some Akuapem towns. It is held twice a year, as Ohumkan in June or July and Ohumkyire in September or October, after a two-week ban on noise. People give thanks for the yam harvest and the Birim river and renew their allegiance to the Okyenhene and his chiefs.",
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 675,
+    "alt": "Men in smocks carrying leaves and sticks in an Ohum procession",
+    "caption": "Celebrating Ohum",
+    "author": "Robertjamal12",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Celebrating_Ohum_Festival_1.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "Ohumkan in June or July; Ohumkyire in September or October; on a Tuesday or Wednesday"
+    ],
+    [
+      "Where",
+      "Kyebi, Tafo and towns of Akyem Abuakwa, Eastern Region"
+    ],
+    [
+      "Kept by",
+      "The Akyem Abuakwa, led by the Okyenhene; Tafo are the custodians of Ohum"
+    ],
+    [
+      "Before it",
+      "A two-week ban on noise-making"
+    ]
+  ],
+  "schema": {
+    "description": "Thanksgiving festival of the Akyem for the yam harvest and the Birim river, held twice a year.",
+    "location": "Kyebi and Tafo",
+    "locality": "Kyebi"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "What Ohum marks",
+      "html": "<p>Ohum gives thanks for the yam harvest and asks for favour in the year ahead; the Akyem also give thanks for the Birim river, and people renew their pledges to the Okyenhene, his chiefs and elders.[[1]]</p>\n<p>The festival remembers the arrival of the founding chief, Okuru Banni I, and his people from the Birim river, honours the river god believed to protect the people of Tafo, who are the custodians of Ohum, and marks the eating of the new yam.[[1]]</p>\n<p class=\"note\">Little scholarly writing exists on Ohum, and a study at KNUST found that participation has been declining.[[2]] If you know the festival, <a href=\"/contact/\">tell us</a> more.</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "days": [
+        {
+          "label": "Two weeks before",
+          "title": "The quiet",
+          "html": "A ban on noise-making, including drumming, comes into force.[[1,3]] In some years it has led to disputes with churches that want to keep drumming in their services.[[3]]"
+        },
+        {
+          "label": "Ohum day",
+          "title": "The shrine at old Tafo",
+          "html": "The priest and traditional leaders lead a procession to the Gyempremo shrine in old Tafo for rituals and offerings. Legend says anyone who trips and falls on the way back will not live to see the next year.[[1]]"
+        },
+        {
+          "label": "After",
+          "title": "Durbar and feasting",
+          "html": "A durbar follows with drumming, dancing and yam dishes, and dignitaries pay their respects to the Okyenhene.[[1]]"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Kyebi (Kibi) is the Akyem Abuakwa capital in the Eastern Region, about two hours north-west of Accra.",
+        "<b>The quiet weeks:</b> during the ban, keep music down and don’t drum in Akyem towns.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is the Ohum festival?",
+      "a": "Twice a year, on a Tuesday or Wednesday: Ohumkan in June or July and Ohumkyire in September or October."
+    },
+    {
+      "q": "Who celebrates Ohum?",
+      "a": "The Akyem people of the Eastern Region, led by the Okyenhene in Kyebi, with the people of Tafo as custodians. Some Akuapem towns also keep Ohum."
+    },
+    {
+      "q": "Why is there a noise ban before Ohum?",
+      "a": "A two-week ban on noise-making, including drumming, comes before the festival as part of its rites."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Ohum Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ohum_Festival"
+    },
+    {
+      "cite": "“Ohum Festival: A Reflection of Akyem Abuakwa Culture” (thesis)",
+      "site": "KNUST",
+      "url": "https://ir.knust.edu.gh/handle/123456789/284"
+    },
+    {
+      "cite": "Peter J. Leithart, “Battle of Rites”",
+      "site": "First Things",
+      "url": "https://firstthings.com/battle-of-rites",
+      "date": "2007"
+    }
+  ],
+  "photos": [
+    {
+      "file": "crowd.webp",
+      "w": 1200,
+      "h": 900,
+      "alt": "A crowd celebrating Ohum in front of a two-storey building",
+      "caption": "Crowds out for Ohum",
+      "author": "Robertjamal12",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Celebrating_Ohum_Festival_5.jpg"
+    }
+  ],
+  "cutout": "yam",
+  "checked": "2026-10-16"
+}

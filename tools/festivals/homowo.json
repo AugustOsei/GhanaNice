@@ -1,0 +1,75 @@
+{
+  "slug": "homowo",
+  "name": "Homowo",
+  "kind": "trad",
+  "month": 7,
+  "region": "Greater Accra",
+  "card": {
+    "short": "Aug–Sep",
+    "when": "August into September, each Ga town in turn",
+    "place": "Accra and the Ga coast",
+    "keeper": "The Ga",
+    "sum": "“Hooting at hunger”: kpokpoi is shared and sprinkled for the ancestors."
+  },
+  "metaTitle": "Homowo Festival: Meaning, When It Is and What Happens",
+  "metaDescription": "Homowo is the harvest festival of the Ga people of Accra, held each August. What “hooting at hunger” means, the ban on drumming, kpokpoi, the order of days and how to go.",
+  "ogTitle": "Homowo: the Ga festival that hoots at hunger",
+  "subtitle": "The Ga festival that hoots at hunger",
+  "answer": "Homowo is the harvest festival of the Ga people of Accra. It remembers a famine in their history and gives thanks for the food that ended it. It is held every year, usually in August: the main day is a Saturday, when chiefs and families sprinkle <i>kpokpoi</i> for the ancestors and share it with everyone who comes.",
+  "sticky": { "title": "Coming in August?", "text": "Be in James Town early on the Saturday morning for the sprinkling." },
+  "hero": { "file": "teshie-ban.webp", "w": 1280, "h": 852, "alt": "Ga priests and elders in white, wearing leaves, at the ceremony that opens the ban on noise-making in Teshie", "caption": "Teshie: the ceremony that starts the quiet weeks before Homowo", "author": "Agbleyjill", "license": "CC BY-SA 4.0", "source": "https://commons.wikimedia.org/wiki/File:Teshie_Homowo_61.jpg" },
+  "facts": [
+    ["When", "Usually August; the main day is a Saturday"],
+    ["Where", "Ga Mashie (James Town and Ussher Town), Accra, and the other Ga towns"],
+    ["Kept by", "The Ga people, led by the Ga Mantse and the Ga Traditional Council"],
+    ["Date set by", "The Ga Traditional Council, with each Ga town setting its own days"],
+    ["Eat", "Kpokpoi with palm nut soup and smoked fish"]
+  ],
+  "schema": { "description": "Annual harvest festival of the Ga people, remembering a famine in their history. Its main day falls on a Saturday, usually in August.", "location": "Ga Mashie (James Town and Ussher Town)", "locality": "Accra", "organizer": "Ga Traditional Council" },
+  "sections": [
+    { "id": "when", "title": "When is Homowo?", "html": "<p>Homowo comes round every year, usually in August, though some Ga towns hold theirs in July or September. There is no fixed date: the Ga Traditional Council and the chiefs of each town set the days close to the time.[[7,8]]</p>\n<p>In Ga Mashie, the old heart of Accra, the main day has fallen on a Saturday in mid-August in recent years:</p>\n<table class=\"dates\"><thead><tr><th scope=\"col\">Year</th><th scope=\"col\">Main day in Ga Mashie</th></tr></thead><tbody>\n<tr><td>2022</td><td>Saturday 13 August[[3]]</td></tr>\n<tr><td>2023</td><td>The Soobii homecoming was not held while the Ga State mourned its queen mother, Naa Dedei Omaedru III[[2]]</td></tr>\n<tr><td>2024</td><td>Saturday 10 August[[1]]</td></tr>\n<tr><td>2025</td><td>Saturday 16 August[[6]]</td></tr>\n</tbody></table>\n<p>La, Osu, Teshie, Nungua, Tema, Kpone, Prampram and Ningo each keep their own Homowo and announce their own dates, so the festival moves along the coast through the season.[[4,5]]</p>\n<p class=\"note\">Planning a trip? The Ga Traditional Council announces each year’s dates in the national press, starting with the ban on drumming in spring. We’ll add the next dates here when they are announced.</p>" },
+    { "id": "story", "title": "What Homowo means", "html": "<p><i>Homowo</i> is Ga for “hooting at hunger”: <i>homo</i> is hunger and <i>wo</i> is to hoot or jeer.[[1,7]] Ga oral history tells of a famine that struck the people during their migration to the coast and their settlement in what is now Accra. When the rains returned and the harvest came in, they celebrated by mocking the hunger that had nearly beaten them.[[8]]</p>\n<p>The story has been passed down by word of mouth rather than written records, so the details differ from telling to telling. What every account agrees on is the heart of the festival: a thanksgiving for food, shared with the living and the dead.[[1]]</p>" },
+    { "id": "days", "title": "What happens, day by day", "days": [
+      { "label": "Spring", "title": "Planting and the quiet weeks", "html": "The season opens with priests planting the crop.[[8]] The Ga Traditional Council then bans drumming and noise-making for about a month so the crop can grow in quiet. In 2025 it ran from 12 May to 12 June in Ga Mashie: clapping, tambourines and other instruments were banned, churches and mosques kept to their own premises with no loudspeakers outside, and funerals waited until 20 June.[[4]]" },
+      { "label": "Thursday", "title": "Soobii: the homecoming", "html": "Soobii means “Thursday people”. Ga from the farming villages west of the city walk in procession from Nkponor, by Agbogbloshie, to Bukom in the old town, carrying corn, palm fruit and palm oil to show what they have grown, dancing to <i>tsotswaa</i> music.[[2]]" },
+      { "label": "Friday", "title": "The twins’ festival", "html": "Twins are dressed up and celebrated across the seven clans of Ga Mashie, in a small festival of their own called <i>Haadzii ayele yeli</i>.[[3]]" },
+      { "label": "Saturday", "title": "Homowo: the sprinkling", "html": "Kpokpoi is cooked from the early morning. Chiefs, priests (<i>wulomei</i>) and the heads of family houses sprinkle it in their own areas, and the Ga Mantse makes the final round through the 21 houses of the Ga stool.[[1]] Then come the feasting, a durbar of the king and chiefs, and food shared with friends, neighbours and anyone in need.[[3]]" },
+      { "label": "A week later", "title": "Remembering the kings", "html": "The Ga Mantse visits the royal mausoleum at Tesano, sprinkles kpokpoi on the tombs of past rulers and prays for the Ga clans, then goes on foot to the Paramount Stool House.[[6]]" }
+    ] },
+    { "id": "kpokpoi", "title": "Kpokpoi, the Homowo dish", "html": "<p>Kpokpoi, also called <i>kpekple</i>, is corn meal steamed and mixed with palm oil, often with okra. It is eaten with palm nut soup and smoked fish, especially <i>tsile</i>.[[1,8]] Sprinkling it on the ground is how the Ga share the harvest with their ancestors, whose goodwill they believe brings the next good harvest.[[1]]</p>\n<p>It is a dish for sharing: on the Saturday, households send food and drink to friends, neighbours and people in need.[[3]]</p>" },
+    { "id": "go", "title": "Good to know if you go", "tips": [
+      "<b>Where:</b> the main celebrations are in Ga Mashie: James Town and Ussher Town, around High Street, Bukom and the clan houses. The Jamestown Lighthouse is a good landmark.",
+      "<b>When:</b> come early on the Saturday morning for the sprinkling, and stay for the durbar. Thursday’s Soobii procession is worth seeing too.",
+      "<b>Respect the rites:</b> the sprinkling and libations are sacred. Don’t walk in front of chiefs or priests, and ask before photographing them or anyone taking part.",
+      "<b>Crowds:</b> the streets get packed. Keep phones and bags close, carry water and wear shoes you can walk in.",
+      "<b>The quiet weeks:</b> if you are in Accra in May or June, expect no drumming and no loud events in Ga areas while the ban is on.",
+      "<b>Where to stay:</b> central Accra and Osu are close by. See the <a href=\"/travel-directory.html\">travel directory</a> for places to stay and guides."
+    ] }
+  ],
+  "faq": [
+    { "q": "What does Homowo mean?", "a": "Homowo is Ga for “hooting at hunger”: homo means hunger and wo means to hoot or jeer. The festival remembers a famine the Ga lived through and celebrates the harvest that ended it." },
+    { "q": "When is Homowo celebrated?", "a": "Every year, usually in August. In Ga Mashie (central Accra) the main day is a Saturday: 13 August 2022, 10 August 2024 and 16 August 2025. Other Ga towns such as La, Teshie, Nungua and Tema hold their own Homowo on different dates." },
+    { "q": "Who celebrates Homowo?", "a": "The Ga people of the Greater Accra Region, led by the Ga Mantse (the Ga king), the chiefs of the Ga towns and their priests, with Ga families coming home from elsewhere." },
+    { "q": "What is kpokpoi?", "a": "Kpokpoi, also called kpekple, is steamed corn meal mixed with palm oil and eaten with palm nut soup and smoked fish. It is the Homowo dish, and chiefs and heads of families sprinkle it on the ground for the ancestors." },
+    { "q": "Why is drumming banned before Homowo?", "a": "So the newly planted crop can grow in quiet. The Ga Traditional Council bans drumming and noise-making for about a month; in 2025 it ran from 12 May to 12 June in Ga Mashie, and other Ga towns set their own dates." },
+    { "q": "Can visitors attend Homowo?", "a": "Yes. The processions, the kpokpoi sprinkling in the streets and the durbar are public. Go early on the Saturday morning, expect crowds, and ask before photographing priests and rites." }
+  ],
+  "sources": [
+    { "cite": "Vincent Amenuveve, “Reason for kpokpoi sprinkling during Homowo”", "site": "Graphic Online", "url": "https://www.graphic.com.gh/news/general-news/ghana-news-reason-for-kpokpoi-sprinkling-during-homowo.html", "date": "16 August 2024" },
+    { "cite": "“SooBii homecoming heralds Homowo”", "site": "Graphic Online", "url": "https://www.graphic.com.gh/news/general-news/ghana-news-soobiihomecoming-heralds-homowo.html", "date": "August 2024" },
+    { "cite": "“Homowo of food, friends and more”", "site": "Ghana News Agency", "url": "https://gna.org.gh/2022/08/homowo-of-food-friends-and-more/", "date": "13 August 2022" },
+    { "cite": "“Ga Traditional Council sets May 12 to June 12 for annual ban on drumming and noise-making”", "site": "Graphic Online", "url": "https://www.graphic.com.gh/news/general-news/ga-traditional-council-sets-may-12-to-june-12-for-annual-ban-on-drumming-and-noise-making.html", "date": "2025" },
+    { "cite": "“2025 Homowo: Ga Traditional Council bans drumming and noise making from May 12 to June 12”", "site": "Modern Ghana", "url": "https://www.modernghana.com/news/1397069/2025-homowo-ga-traditional-council-bans-drumming.html", "date": "2025" },
+    { "cite": "Beatrice Laryea, “2025 Homowo: Ga Mantse visits ancestral burial grounds”", "site": "Graphic Online", "url": "https://www.graphic.com.gh/news/general-news/ghana-news-2025-homowo-ga-mantse-visits-ancestral-burial-grounds-intercedes-for-protection-blessings.html", "date": "25 August 2025" },
+    { "cite": "“Homowo Festival”", "site": "National Commission on Culture", "url": "https://ghanaculture.gov.gh/homowo-festival-august-september/" },
+    { "cite": "“Homowo”, and the works it cites (A. A. Ammah, <i>Ga Homowo</i>, 1968; A. K. Opoku, <i>Festivals of Ghana</i>, 1970)", "site": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Homowo" }
+  ],
+  "photos": [
+    { "file": "accra-1900.webp", "w": 1200, "h": 908, "alt": "A crowded street in Accra during Homowo, around 1900", "caption": "Accra at Homowo, around 1900", "author": "Unknown", "license": "public domain", "source": "https://commons.wikimedia.org/wiki/File:Accra_Homowo_um1900_300dpi.jpg" },
+    { "file": "ban-ritual.webp", "w": 900, "h": 1200, "alt": "A chief’s linguist holds a gold-topped staff during the Teshie Homowo ritual on the ban on drumming", "caption": "Teshie: the ritual for the ban on drumming", "author": "Jwale2", "license": "CC BY-SA 4.0", "source": "https://commons.wikimedia.org/wiki/File:Homowo_Festival_0101_04.jpg" },
+    { "file": "regalia.webp", "w": 580, "h": 1080, "alt": "A Ga woman in white traditional dress and beads, seated on a stool, at Homowo", "caption": "Dressed for Homowo", "author": "Niiarmahktagoe", "license": "CC BY-SA 4.0", "source": "https://commons.wikimedia.org/wiki/File:Image_from_Homowo_Festival_in_Ghana.jpg" },
+    { "file": "youth-2.webp", "w": 1200, "h": 900, "alt": "Young people celebrating Homowo in the street", "caption": "Young people out for Homowo", "author": "Jwale2", "license": "CC BY-SA 4.0", "source": "https://commons.wikimedia.org/wiki/File:Homowo_Festival_50.jpg" }
+  ],
+  "cutout": "bowl",
+  "checked": "2026-10-16"
+}

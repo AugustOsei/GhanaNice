@@ -1,0 +1,155 @@
+{
+  "slug": "ngmayem",
+  "name": "Ngmayem",
+  "kind": "trad",
+  "month": 9,
+  "region": "Eastern",
+  "card": {
+    "short": "Late Oct",
+    "when": "The last week of October (25 Oct–2 Nov in 2026)",
+    "place": "Odumase-Krobo",
+    "keeper": "The Manya Krobo",
+    "sum": "The Krobo millet festival and new year, with a pilgrimage to Krobo Mountain and a grand durbar."
+  },
+  "metaTitle": "Ngmayem Festival of the Manya Krobo (2026 Dates)",
+  "metaDescription": "Ngmayem, the Manya Krobo millet festival at Odumase-Krobo, marks the Krobo new year. The 133rd edition runs 25 October to 2 November 2026. History, programme and tips.",
+  "ogTitle": "Ngmayem: the Krobo millet festival",
+  "subtitle": "The Krobo millet festival and new year",
+  "answer": "Ngmayem, “the eating of millet”, is the harvest festival of the Manya Krobo people at Odumase-Krobo in the Eastern Region and marks the start of the Krobo new year. It is held at the end of October: the 133rd edition runs from Sunday 25 October to Monday 2 November 2026, with a pilgrimage to Krobo Mountain and a grand durbar.",
+  "sticky": {
+    "title": "25 Oct – 2 Nov 2026",
+    "text": "This year’s Ngmayem is about to start. The grand durbar is the big day."
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 800,
+    "alt": "The chief of Odumase-Krobo seated on a palanquin under a red umbrella at Ngmayem",
+    "caption": "The chief of Odumase-Krobo on his palanquin",
+    "author": "Fquasie",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ngmayem_Festival_in_Ghana.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "The last week of October; 25 October to 2 November in 2026"
+    ],
+    [
+      "Where",
+      "Odumase-Krobo, Eastern Region"
+    ],
+    [
+      "Kept by",
+      "The Manya Krobo, led by the Konor"
+    ],
+    [
+      "Since",
+      "1893 as Hieyemi; renamed Ngmayem in 1944"
+    ]
+  ],
+  "schema": {
+    "description": "Millet harvest festival and new year of the Manya Krobo at Odumase-Krobo.",
+    "location": "Odumase-Krobo",
+    "locality": "Odumase-Krobo",
+    "organizer": "Manya Krobo Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "What Ngmayem means",
+      "html": "<p><i>Ngmayem</i> means “the eating of millet”, from the Dangme <i>ngma</i>, millet, and <i>yemi</i>, to eat. It celebrates the harvest and the Krobo farming tradition and marks the start of the Krobo new year.[[1,2]]</p>\n<p>It was first instituted in 1893 as Hieyemi by the Konor Sir Emmanuel Mate-Kole; his successor renamed it Ngmayem in 1944.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens in 2026",
+      "days": [
+        {
+          "label": "From 25 October",
+          "title": "Opening events",
+          "html": "Yokama, a celebration of ideal womanhood, and a mock durbar by basic school pupils.[[1]]"
+        },
+        {
+          "label": "The week",
+          "title": "To the mausoleum and the mountain",
+          "html": "Akleme, a procession to the royal mausoleum, and Klowem Yami, a pilgrimage up Krobo Mountain, the old Krobo homeland, with hiking and music.[[1]]"
+        },
+        {
+          "label": "Climax",
+          "title": "The grand durbar",
+          "html": "A grand durbar of chiefs, queen mothers, guests and citizens, alongside the Miss Ngmayem pageant, closing with a thanksgiving service on 2 November.[[1]]"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Odumase-Krobo is in the Eastern Region near Somanya, about two hours north-east of Accra.",
+        "<b>Krobo Mountain:</b> the pilgrimage involves a hike. Wear good shoes and carry water.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask.",
+        "<b>Krobo beads:</b> the area is famous for its glass beads. The Thursday bead market in Agomanya is nearby."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is Ngmayem 2026?",
+      "a": "From Sunday 25 October to Monday 2 November 2026, the 133rd edition."
+    },
+    {
+      "q": "What does Ngmayem mean?",
+      "a": "The eating of millet, in Dangme. It celebrates the harvest and marks the Krobo new year."
+    },
+    {
+      "q": "Where is Ngmayem celebrated?",
+      "a": "At Odumase-Krobo, seat of the Manya Krobo, in Ghana’s Eastern Region."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Manya Krobo Ngmayem festival turns 133”",
+      "site": "MyJoyOnline",
+      "url": "https://www.myjoyonline.com/photos-manya-krobo-ngmayem-festival-turns-133/",
+      "date": "31 August 2026"
+    },
+    {
+      "cite": "“Ngmayem”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ngmayem"
+    }
+  ],
+  "photos": [
+    {
+      "file": "umbrellas.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "Young men lead the chief under red umbrellas to the Ngmayem grounds",
+      "caption": "Leading the chief to the grounds",
+      "author": "Fquasie",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ngmayem_Festival_6.jpg"
+    },
+    {
+      "file": "feathers.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "A boy in a feathered headdress and white face paint seated in a palanquin",
+      "caption": "In the chief’s palanquin",
+      "author": "Fquasie",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ngmayem_Festival_7.jpg"
+    },
+    {
+      "file": "women.webp",
+      "w": 1200,
+      "h": 800,
+      "alt": "Young women in kente and beads at the Ngmayem festival",
+      "caption": "In kente and Krobo beads",
+      "author": "Fquasie",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Krobo_Ngmayem_Festival.jpg"
+    }
+  ],
+  "checked": "2026-10-16"
+}

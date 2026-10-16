@@ -1,0 +1,114 @@
+{
+  "slug": "kundum",
+  "name": "Kundum",
+  "kind": "trad",
+  "month": 6,
+  "region": "Western",
+  "card": {
+    "short": "Jul–Nov",
+    "when": "July to November, one town after another",
+    "place": "The coast from Sekondi to Axim",
+    "keeper": "The Ahanta and Nzema",
+    "sum": "The harvest festival of the Ahanta and Nzema, moving from town to town along the western coast."
+  },
+  "metaTitle": "Kundum Festival of the Ahanta and Nzema",
+  "metaDescription": "Kundum is the harvest festival of the Ahanta and Nzema of the Western Region, moving town to town from July to November with drumming and dance. History, timing and tips.",
+  "ogTitle": "Kundum: the western coast’s harvest festival",
+  "subtitle": "The harvest festival that moves along the coast",
+  "answer": "Kundum is the harvest festival of the Ahanta and Nzema peoples of the Western Region. It gives thanks for food, honours the ancestors and drives out evil, and it moves along the coast from town to town between July and November, so if you miss it in one place you can catch it in the next.",
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 675,
+    "alt": "Dancers and a crowd at the Kundum festival",
+    "caption": "The Kundum dance",
+    "author": "Assilidjoe",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kundum_Festival_Dance.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "July to November, each town in turn"
+    ],
+    [
+      "Where",
+      "Ahanta and Nzema towns from Sekondi to Axim and beyond, Western Region"
+    ],
+    [
+      "Kept by",
+      "The Ahanta and Nzema"
+    ],
+    [
+      "Also called",
+      "Abisa, among the Nzema"
+    ]
+  ],
+  "schema": {
+    "description": "Harvest festival of the Ahanta and Nzema, held town by town along the western coast.",
+    "location": "Axim",
+    "locality": "Axim"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "Where Kundum comes from",
+      "html": "<p>Kundum is both a harvest thanksgiving and a religious festival: people thank God for food, remember their ancestors and ask for protection, and cleanse the community for the year ahead.[[1,2]] One of the earliest written records of it comes from the Dutch trader Willem Bosman on the Gold Coast around 1700.[[1]]</p>\n<p>Oral tradition gives two beginnings. In one, a hunter saw dwarves dancing in a circle in the forest and brought their dance home; in the other, Kundum began at Ahanta Aboade, where the ripening of a palm tree’s fruit marked the start of the season.[[1,2]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "How it runs",
+      "html": "<p>Each town fixes its own start, so the festival travels along the coast. It lasts about four weeks in each town; for the first three most of the drumming and dancing happens at night on the edge of town, after drummers pour libation at the shrines, and the last week brings the main celebrations.[[1]] Among the Nzema it is called Abisa; from Atuabo to Dixcove in Ahanta, Kundum.[[1]] Axim is often called its heart.[[1]]</p>\n<p>In 2019, for example, Lower Dixcove held it in July and August, Axim in the second week of September and Busua from October into November.[[2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Busua, Dixcove and Axim are on the coast west of Takoradi, with beaches and places to stay.",
+        "<b>Catch it somewhere:</b> because towns take turns, ask locally which town is celebrating that week.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Kundum festival?",
+      "a": "The harvest festival of the Ahanta and Nzema of Ghana’s Western Region, giving thanks for food and driving out evil."
+    },
+    {
+      "q": "When is Kundum?",
+      "a": "Between July and November. Each town sets its own weeks, so the festival moves along the coast."
+    },
+    {
+      "q": "Where is Kundum celebrated?",
+      "a": "In Ahanta and Nzema towns on the western coast, including Axim, Busua, Dixcove and Sekondi."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Kundum Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kundum_Festival"
+    },
+    {
+      "cite": "“Kundum Festival”",
+      "site": "Visit Ghana",
+      "url": "https://visitghana.com/kundum/"
+    }
+  ],
+  "photos": [
+    {
+      "file": "crowd.webp",
+      "w": 1200,
+      "h": 675,
+      "alt": "A crowd gathered at the Kundum festival at Akwidaa",
+      "caption": "Kundum at Akwidaa, Ahanta West",
+      "author": "Assilidjoe",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kundum_Festival.jpg"
+    }
+  ],
+  "cutout": "drum",
+  "checked": "2026-10-16"
+}

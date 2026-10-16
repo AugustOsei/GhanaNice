@@ -120,7 +120,7 @@ regions?.forEach((region, index) => {
 
 /* Analytics loads through analytics.js, which honours the privacy page's opt-out: no page
    carries the tag itself. */
-const analyticsPages = ['dist/index.html', 'dist/travel-directory.html', 'dist/credits.html', 'dist/404.html', 'tools/region-template.html', 'tools/page-template.html'];
+const analyticsPages = ['dist/index.html', 'dist/travel-directory.html', 'dist/credits.html', 'dist/404.html', 'tools/region-template.html', 'tools/page-template.html', 'tools/festivals-template.html', 'tools/festival-template.html'];
 analyticsPages.forEach((file) => {
   const html = read(file);
   check(html.includes('/analytics.js?v=1'), `${file} does not load analytics.js`);
@@ -129,7 +129,7 @@ analyticsPages.forEach((file) => {
 
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=49',
+    'styles.css?v=50',
     'data.js?v=9',
     'app.js?v=32',
     'tip-form.js?v=5',
@@ -138,16 +138,16 @@ const htmlExpectations = {
     'id="region-reader" role="dialog"',
   ],
   'tools/region-template.html': [
-    '/styles.css?v=49',
+    '/styles.css?v=50',
     '/data.js?v=9',
     '/region.js?v=12',
     '/tip-form.js?v=5',
     '/footer.js?v=3',
   ],
-  'dist/credits.html': ['styles.css?v=49'],
-  'dist/404.html': ['styles.css?v=49'],
+  'dist/credits.html': ['styles.css?v=50'],
+  'dist/404.html': ['styles.css?v=50'],
   'dist/travel-directory.html': [
-    'styles.css?v=49',
+    'styles.css?v=50',
     'travel-directory.css?v=16',
     'config.js?v=5',
     'travel-directory-data.js?v=4',
@@ -197,7 +197,38 @@ regions?.forEach((region) => {
     check(fs.existsSync(path.join(dist, local)), `${file} references missing file: ${reference}`);
   });
 });
-['build_regions.mjs', 'build_pages.mjs'].forEach((builder) => {
+/* The festivals list and festival pages (tools/build_festivals.mjs): live, indexable, linked from
+   every nav, and with no broken local links or photos. */
+const festivalData = fs.readdirSync(path.join(root, 'tools/festivals')).filter((f) => f.endsWith('.json'))
+  .map((f) => JSON.parse(read(`tools/festivals/${f}`)));
+const sitemapXml = read('dist/sitemap.xml');
+const festivalPages = [['festivals/', 'dist/festivals/index.html'],
+  ...festivalData.filter((f) => f.sections?.length).map((f) => [`festivals/${f.slug}/`, `dist/festivals/${f.slug}/index.html`])];
+festivalPages.forEach(([urlPath, file]) => {
+  if (!fs.existsSync(path.join(root, file))) return check(false, `${file} is missing`);
+  const html = read(file);
+  const url = `https://www.ghananice.com/${urlPath}`;
+  check(html.includes(`<link rel="canonical" href="${url}">`), `${file} has the wrong canonical link`);
+  check(html.includes('/analytics.js?v=1'), `${file} does not load analytics.js`);
+  check(!html.includes('googletagmanager.com/gtag'), `${file} loads Google Analytics directly, bypassing the opt-out`);
+  check(!html.includes('noindex') && !html.includes('/prototypes/'), `${file} still carries prototype settings`);
+  check(sitemapXml.includes(`<loc>${url}</loc>`), `sitemap.xml does not list ${url}`);
+  const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  check(ld.length > 0, `${file} has no structured data`);
+  ld.forEach(([, json]) => { try { JSON.parse(json); } catch (error) { failures.push(`${file} has invalid JSON-LD: ${error.message}`); } });
+  [...html.matchAll(/(?:src|href)="([^"]*)"/g)].forEach(([, reference]) => {
+    if (!reference || /^(?:#|https?:|mailto:|tel:|data:)/.test(reference)) return;
+    const local = reference.split(/[?#]/)[0];
+    if (!local) return;
+    const resolved = local.startsWith('/') ? path.join(dist, local) : path.resolve(path.dirname(path.join(root, file)), local);
+    check(fs.existsSync(local.endsWith('/') ? path.join(resolved, 'index.html') : resolved), `${file} references missing file: ${reference}`);
+  });
+});
+['dist/index.html', 'dist/travel-directory.html', 'tools/region-template.html', 'tools/page-template.html'].forEach((file) => {
+  check((read(file).match(/href="\/festivals\/"/g) || []).length >= 2, `${file} does not link to /festivals/ in the nav and footer`);
+});
+
+['build_regions.mjs', 'build_pages.mjs', 'build_festivals.mjs'].forEach((builder) => {
   try {
     execFileSync(process.execPath, [path.join(root, 'tools', builder), '--check'], { stdio: 'pipe' });
   } catch (error) {
@@ -211,4 +242,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Smoke checks passed: ${regions.length} regions, ${scriptFiles.length} scripts.`);
+console.log(`Smoke checks passed: ${regions.length} regions, ${festivalPages.length - 1} festival pages, ${scriptFiles.length} scripts.`);

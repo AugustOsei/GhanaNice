@@ -1,0 +1,90 @@
+{
+  "slug": "asafotufiam",
+  "name": "Asafotufiam",
+  "kind": "trad",
+  "month": 6,
+  "region": "Greater Accra",
+  "card": {
+    "short": "Late Jul–Aug",
+    "when": "Late July or early August, with the durbar on a Saturday",
+    "place": "Ada",
+    "keeper": "The Dangme of Ada",
+    "sum": "Ada’s warriors’ festival: Asafo companies re-enact old battles, with musketry and a durbar of chiefs in palanquins."
+  },
+  "metaTitle": "Asafotufiam: the Ada Warriors’ Festival",
+  "metaDescription": "Asafotufiam (Asafotufiami) is the warriors’ festival of Ada in the Greater Accra Region, held in early August: battle re-enactments, musketry and a grand durbar. History and tips.",
+  "ogTitle": "Asafotufiam: Ada’s warriors’ festival",
+  "subtitle": "Ada’s warriors’ festival",
+  "answer": "Asafotufiam (also written Asafotufiami) is the warriors’ festival of the Ada people at the mouth of the Volta, in the Greater Accra Region. Held around the end of July and the first week of August, it honours the battles won by Ada’s ancestors and those who fell in them, with Asafo companies in battle dress, musket fire and a grand durbar of chiefs carried in palanquins.",
+  "facts": [
+    [
+      "When",
+      "Late July or the first week of August; durbar on the Saturday"
+    ],
+    [
+      "Where",
+      "Ada, Greater Accra Region"
+    ],
+    [
+      "Kept by",
+      "The people of the Ada Traditional Area, led by the paramount chief of Ada"
+    ],
+    [
+      "Date set by",
+      "The Ada Traditional Council"
+    ]
+  ],
+  "schema": {
+    "description": "Warriors’ festival of Ada with battle re-enactments and a grand durbar.",
+    "location": "Ada",
+    "locality": "Ada",
+    "organizer": "Ada Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "What Asafotufiam honours",
+      "html": "<p>The festival commemorates the victories of Ada’s ancestors in battle and honours those who died fighting. Warriors in battle dress re-enact the old events and stage mock battles, and it also opens the harvest season with purification rites.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "The grand durbar",
+      "html": "<p>The climax is the Saturday durbar. In 2024 chiefs in full regalia and palanquins and queens carried shoulder-high arrived at the grounds to singing and musket fire; women’s groups led brass bands, and the Asafo companies pledged loyalty to the paramount chief. That year the festival ran into the first week of August.[[2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Ada sits where the Volta meets the sea, about two hours east of Accra.",
+        "<b>Musketry:</b> the guns are loud. Keep a distance and protect children’s ears.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Asafotufiam festival?",
+      "a": "The warriors’ festival of the Ada people, honouring their ancestors’ victories in battle with re-enactments, musketry and a grand durbar."
+    },
+    {
+      "q": "When is Asafotufiam?",
+      "a": "Around the end of July and the first week of August, with the grand durbar on a Saturday. In 2024 the durbar was on 3 August."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Asafotu”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Asafotu"
+    },
+    {
+      "cite": "“Vibrant culture display characterises Asafotufiami grand durbar”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/2024/08/vibrant-culture-display-characterises-asafotufiami-grand-durbar/",
+      "date": "3 August 2024"
+    }
+  ],
+  "cutout": "drum",
+  "checked": "2026-10-16"
+}

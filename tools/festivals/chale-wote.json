@@ -1,0 +1,139 @@
+{
+  "slug": "chale-wote",
+  "name": "Chale Wote",
+  "kind": "event",
+  "month": 7,
+  "region": "Greater Accra",
+  "card": {
+    "short": "Aug",
+    "when": "Usually August, over about a week",
+    "place": "James Town and Osu, Accra",
+    "keeper": "Accra [dot] Alt",
+    "sum": "Accra’s street art festival: murals, performance, music and film in the streets of James Town and beyond."
+  },
+  "metaTitle": "Chale Wote Street Art Festival in Accra",
+  "metaDescription": "Chale Wote is Accra’s street art festival, held each August since 2011: murals, performance, music, film and street boxing in James Town and beyond. History, dates and tips.",
+  "ogTitle": "Chale Wote: Accra’s street art festival",
+  "subtitle": "Accra’s streets become a gallery",
+  "answer": "Chale Wote is a street art festival in Accra, run by the arts collective Accra [dot] Alt since 2011. Usually over about a week in August, it fills the streets of James Town and, more recently, Osu with murals, graffiti, performance, music, film, installations and street boxing. It is free and open to everyone.",
+  "sticky": {
+    "title": "August in Accra",
+    "text": "It’s free and runs over several days. Come in the afternoon and stay late."
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 800,
+    "alt": "The words Chale Wote painted in orange on a street in Accra",
+    "caption": "The festival’s name on the street",
+    "author": "Fquasie",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chale_Wote_Street_Art_Festival_10.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "Usually August, over about a week"
+    ],
+    [
+      "Where",
+      "James Town (High Street) and Osu, Accra"
+    ],
+    [
+      "Run by",
+      "Accra [dot] Alt"
+    ],
+    [
+      "Entry",
+      "Free"
+    ]
+  ],
+  "schema": {
+    "description": "Annual street art festival in Accra run by Accra [dot] Alt since 2011.",
+    "location": "James Town, Accra",
+    "locality": "Accra",
+    "organizer": "Accra [dot] Alt"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "What Chale Wote is",
+      "html": "<p>Chale Wote began in 2011, organised by Accra [dot] Alt. Its name is Ga for “friend, let’s go”, and also the name of the everyday flip-flop.[[1]] The early editions ran along High Street in James Town; since then it has spread to venues and neighbourhoods across the city, and the 2023 edition was in Osu.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "html": "<p>Expect street painting and murals, photography, theatre, spoken word, installations, live music and performance, film screenings, street boxing and a procession of cultures.[[1]] Each edition has its own theme: in 2025 it ran from 19 to 24 August under the theme “The Orbs Beneath the Nile Lead to Kongo”.[[2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> check the year’s programme: James Town and Osu are the usual hubs, a short ride apart.",
+        "<b>When:</b> afternoons and evenings are busiest. It’s hot, so carry water and wear comfortable shoes.",
+        "<b>Photos:</b> artists and performers usually welcome cameras, but ask before close-ups of people.",
+        "<b>Also in August:</b> <a href=\"/festivals/homowo/\">Homowo</a> is celebrated in James Town in the same month."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Chale Wote?",
+      "a": "A free street art festival in Accra, held each year since 2011, with murals, performance, music, film and more."
+    },
+    {
+      "q": "When is the Chale Wote festival?",
+      "a": "Usually in August, over about a week. In 2025 it ran from 19 to 24 August."
+    },
+    {
+      "q": "What does Chale Wote mean?",
+      "a": "It is Ga for “friend, let’s go”, and also the name of the everyday flip-flop."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Chale Wote Street Art Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chale_Wote_Street_Art_Festival"
+    },
+    {
+      "cite": "“Chale Wote 2025: remembering, reclaiming and reimagining Africa through art”",
+      "site": "Modern Ghana",
+      "url": "https://www.modernghana.com/lifestyle/16741/chale-wote-2025-remembering-reclaiming-and-reima.html",
+      "date": "August 2025"
+    }
+  ],
+  "photos": [
+    {
+      "file": "mural.webp",
+      "w": 1200,
+      "h": 900,
+      "alt": "An artist paints a large portrait mural at Chale Wote",
+      "caption": "A mural in progress",
+      "author": "Agbleyjill",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chale_Wote_61.jpg"
+    },
+    {
+      "file": "bikes.webp",
+      "w": 1200,
+      "h": 795,
+      "alt": "A crowd watches a street bicycle skills display at Chale Wote",
+      "caption": "Bicycle stunts in the street",
+      "author": "Noahalorwu",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Street_Bicycle_Skills_Display_at_Chale_Wote_Street_Art_Festival.jpg"
+    },
+    {
+      "file": "street.webp",
+      "w": 1200,
+      "h": 900,
+      "alt": "A decorated installation on a street at Chale Wote",
+      "caption": "Installations along the road",
+      "author": "Agbleyjill",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chale_Wote_64.jpg"
+    }
+  ],
+  "checked": "2026-10-16"
+}

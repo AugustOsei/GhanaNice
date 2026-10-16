@@ -1,0 +1,85 @@
+{
+  "slug": "fao",
+  "name": "Fao",
+  "kind": "trad",
+  "month": 0,
+  "region": "Upper East",
+  "card": {
+    "short": "Dec–Jan",
+    "when": "Around the turn of the year, usually December or January",
+    "place": "Navrongo",
+    "keeper": "The Kassena-Nankana of Navrongo",
+    "sum": "Navrongo’s thanksgiving at the end of the farming season, with a durbar, drumming and war dances."
+  },
+  "metaTitle": "Fao Festival in Navrongo, Upper East",
+  "metaDescription": "Fao is the harvest thanksgiving of the Kassena-Nankana of Navrongo in the Upper East Region, held around December and January: a durbar, drumming and war dances.",
+  "ogTitle": "Fao: Navrongo’s harvest thanksgiving",
+  "subtitle": "Navrongo’s thanks for the season",
+  "answer": "Fao is the harvest festival of the Kassena-Nankana people of Navrongo in the Upper East Region. Held at the end of the farming season, usually around December and January, it thanks the gods and ancestors for the rains, the harvest and their protection, with a durbar of chiefs, drumming, dancing and war dances.",
+  "facts": [
+    [
+      "When",
+      "Around December and January"
+    ],
+    [
+      "Where",
+      "Navrongo and Kassena-Nankana towns, Upper East Region"
+    ],
+    [
+      "Kept by",
+      "The Kassena-Nankana of Navrongo"
+    ]
+  ],
+  "schema": {
+    "description": "Harvest thanksgiving festival of the Kassena-Nankana of Navrongo.",
+    "location": "Navrongo",
+    "locality": "Navrongo"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>Fao marks the end of the farming season, giving thanks to the gods and ancestors for good rains, a good harvest and their protection.[[1,2]] Chiefs and people gather at the durbar grounds, the paramount chief arriving last, with drumming and dancing and a war dance by warriors in charms and amulets.[[2]] It is also a time for people from the area to come home and talk about its development.[[3]]</p>\n<p>The National Commission on Culture lists Fao in January; in 2023 Navrongo celebrated it on 29 December, after a gap of some years.[[1,2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Navrongo is in the Upper East Region near the Burkina Faso border, close to the Paga crocodile ponds.",
+        "<b>Weather:</b> December and January are harmattan months: dry, dusty and cool at night.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is the Fao festival?",
+      "a": "At the end of the farming season, usually around December and January. In 2023 Navrongo held it on 29 December."
+    },
+    {
+      "q": "Where is Fao celebrated?",
+      "a": "In Navrongo and Kassena-Nankana towns in Ghana’s Upper East Region."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Fao Festival”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=16685"
+    },
+    {
+      "cite": "Theophilus Nabare, “How sons and daughters of Kassena-Nankana in Navrongo celebrated Fao festival”",
+      "site": "Graphic Online",
+      "url": "https://graphic.com.gh/features/opinion/how-sons-and-daughters-of-kassena-nankana-in-navrongo-celebrated-fao-festival.html",
+      "date": "8 January 2024"
+    },
+    {
+      "cite": "“Fao festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fao_festival"
+    }
+  ],
+  "cutout": "drum",
+  "checked": "2026-10-16"
+}

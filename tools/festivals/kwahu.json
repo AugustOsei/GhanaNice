@@ -1,0 +1,132 @@
+{
+  "slug": "kwahu",
+  "name": "Kwahu Easter",
+  "kind": "event",
+  "month": 3,
+  "region": "Eastern",
+  "card": {
+    "short": "Easter",
+    "when": "Easter weekend (March or April)",
+    "place": "Kwahu ridge: Atibie, Mpraeso, Abetifi",
+    "keeper": "Kwahu towns, with the Ghana Tourism Authority",
+    "sum": "Ghana’s biggest homecoming: Easter on the Kwahu ridge, with paragliding off the Odweanoma mountain."
+  },
+  "metaTitle": "Kwahu Easter and the Paragliding Festival at Atibie",
+  "metaDescription": "Every Easter, Kwahu people come home to the Kwahu ridge for a long weekend of parades, music and paragliding off the Odweanoma mountain at Atibie. History and tips.",
+  "ogTitle": "Kwahu Easter: homecoming and paragliding",
+  "subtitle": "Easter homecoming on the Kwahu ridge",
+  "answer": "Kwahu Easter is the Easter homecoming of the Kwahu people of the Eastern Region. Every Easter weekend, Kwahu living in Accra, Kumasi and abroad return to the towns on the Kwahu ridge, joined by visitors from across Ghana. Since 2005 the long weekend has included paragliding off the Odweanoma mountain at Atibie, run by the Ghana Tourism Authority.",
+  "sticky": {
+    "title": "Planning Easter?",
+    "text": "Rooms on the ridge fill up early. Book weeks ahead."
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 652,
+    "h": 834,
+    "alt": "Two paragliders over the green Kwahu ridge",
+    "caption": "Paragliders over the Odweanoma mountain",
+    "author": "Alhassan Sumaila",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Paragliding_at_Kwahu.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "Easter weekend, Good Friday to Easter Monday"
+    ],
+    [
+      "Where",
+      "The Kwahu ridge, Eastern Region; paragliding at Atibie"
+    ],
+    [
+      "Who",
+      "Kwahu people coming home, and visitors"
+    ],
+    [
+      "Paragliding run by",
+      "The Ghana Tourism Authority"
+    ]
+  ],
+  "schema": {
+    "description": "Easter homecoming on the Kwahu ridge with the Kwahu Easter Paragliding Festival.",
+    "location": "Odweanoma mountain, Atibie",
+    "locality": "Atibie",
+    "organizer": "Ghana Tourism Authority"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "Why Easter means Kwahu",
+      "html": "<p>The Kwahu celebration grew out of the Akan festival <i>Okwahu Afahye</i>, which used to peak in December. Many Kwahu are traders who moved to Accra and Kumasi, and December was their busiest season, so by oral history the Kwahu Traditional Council moved the homecoming to the Easter break.[[1]] It has been missed only in 2020, during the COVID-19 pandemic.[[1]]</p>"
+    },
+    {
+      "id": "paragliding",
+      "title": "Paragliding at Atibie",
+      "html": "<p>Paragliding was added in 2005, taking off from the Odweanoma mountain at Atibie, and the Ghana Tourism Authority has run it each Easter since, with breaks in 2009 and during the pandemic.[[1,3]] Visitors fly tandem with trained pilots; in 2023 the festival recorded 166 flights over four days.[[2]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens over the weekend",
+      "html": "<p>Alongside the paragliding there are street carnivals, highlife concerts, a health walk and sports, and a great deal of visiting between families.[[1]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> the Kwahu ridge rises above Nkawkaw on the Accra–Kumasi road; Atibie, Mpraeso and Abetifi are on top.",
+        "<b>Book early:</b> rooms on the ridge fill up weeks ahead of Easter, and some visitors stay in Nkawkaw below.",
+        "<b>Traffic:</b> the road up the ridge is slow on Thursday and Friday before Easter. Travel early.",
+        "<b>Flying:</b> tandem flights are popular; register with the organisers at the take-off site and expect to wait for good wind.",
+        "<b>Where to stay:</b> see the <a href=\"/travel-directory.html\">travel directory</a> and the <a href=\"/regions/eastern/\">Eastern region</a> page."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When is Kwahu Easter?",
+      "a": "Over the Easter weekend each year, from Good Friday to Easter Monday. Easter falls in March or April."
+    },
+    {
+      "q": "Where is the Kwahu paragliding?",
+      "a": "At Atibie, taking off from the Odweanoma mountain on the Kwahu ridge in the Eastern Region."
+    },
+    {
+      "q": "When did paragliding start at Kwahu?",
+      "a": "In 2005. The Ghana Tourism Authority runs it every Easter."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "Raphael Ghartey, “Why Easter celebrations in Ghana is synonymous with Kwahu”",
+      "site": "3News",
+      "url": "https://3news.com/featured/why-easter-celebrations-in-ghana-is-synonymous-with-kwahu/",
+      "date": "1 April 2024"
+    },
+    {
+      "cite": "“Kwahu Easter 2023: Paragliding records 166 flights in 4 days”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/news/general-news/kwahu-easter-2023-paragliding-records-166-flights-in-4-days.html",
+      "date": "2023"
+    },
+    {
+      "cite": "“Ministry of Tourism launches 2023 Kwahu Easter paragliding festival”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/?p=270910",
+      "date": "2023"
+    }
+  ],
+  "photos": [
+    {
+      "file": "cliff.webp",
+      "w": 1200,
+      "h": 900,
+      "alt": "The steep cliffs of the Kwahu ridge above green forest",
+      "caption": "The Kwahu cliffs used for paragliding",
+      "author": "Akiwumi",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kwahu_cliff.JPG"
+    }
+  ],
+  "checked": "2026-10-16"
+}

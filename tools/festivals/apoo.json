@@ -1,0 +1,99 @@
+{
+  "slug": "apoo",
+  "name": "Apoo",
+  "kind": "trad",
+  "month": 2,
+  "region": "Bono East",
+  "card": {
+    "short": "Mar–Apr",
+    "when": "Usually March or April; dates vary",
+    "place": "Techiman and Wenchi",
+    "keeper": "The Bono of Techiman and Wenchi",
+    "sum": "A week when people may sing out their grievances against chiefs and leaders, to cleanse the town."
+  },
+  "metaTitle": "Apoo Festival in Techiman and Wenchi: The Festival of Speaking Out",
+  "metaDescription": "Apoo is the Bono festival of Techiman and Wenchi where people sing out their grievances, even against chiefs, to cleanse the community. Its story, timing and how to go.",
+  "ogTitle": "Apoo: the Bono festival of speaking out",
+  "subtitle": "The Bono festival of speaking out",
+  "answer": "Apoo is a festival of the Bono people of Techiman and Wenchi in the Bono East Region. For about a week people may sing and shout out their grievances, even against chiefs and leaders, without blame. The aim is to cast out social evils and cleanse the community, and to call leaders to account.",
+  "facts": [
+    [
+      "When",
+      "Usually March or April, for about a week"
+    ],
+    [
+      "Where",
+      "Techiman and Wenchi, Bono East Region"
+    ],
+    [
+      "Kept by",
+      "The Bono of Techiman and Wenchi"
+    ],
+    [
+      "Date set by",
+      "The Techiman and Wenchi Traditional Councils"
+    ]
+  ],
+  "schema": {
+    "description": "Bono festival of Techiman and Wenchi in which grievances are sung out to cleanse the community.",
+    "location": "Techiman",
+    "locality": "Techiman",
+    "organizer": "Techiman Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "What Apoo means",
+      "html": "<p>The name comes from the root <i>po</i>, “to reject” or “cast out”: the festival is meant to purify the community of social evils and bring families together.[[2]]</p>\n<p>Oral tradition ties it to Nana Kwakye Ameyaw, a ruler under whom people could not speak their minds. The gods are said to have set aside days when anyone could complain in public and could not be punished for what they said, whatever their rank.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "html": "<p>During the Apoo procession people exchange insults, proverbs and songs, and retell the history of the Bono kingdom, often aimed at the Asante, who conquered it.[[1]] The Techiman Traditional Council describes the “insults” as poetic grievances directed at chiefs and leaders, meant to keep them accountable.[[2]]</p>\n<p>There are rites for the royal ancestors and prayers for a good harvest, alongside drumming and cultural events.[[2]]</p>"
+    },
+    {
+      "id": "when",
+      "title": "When is Apoo?",
+      "html": "<p>Sources disagree: Apoo is usually described as a week in March or April, though some listings put it later in the year.[[1]] Techiman launched its 2026 festival in January, the first since the COVID-19 pandemic.[[2]] Check with the Techiman Traditional Council for the current year’s dates.</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Techiman is a market town on the main road north from Kumasi; Wenchi is to its west.",
+        "<b>Listen, don’t join in:</b> the songs and “insults” belong to the community and its history. Enjoy them as a visitor.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Apoo festival?",
+      "a": "A Bono festival of Techiman and Wenchi in which people sing out their grievances, even against chiefs, to cleanse the community of social evils."
+    },
+    {
+      "q": "What does Apoo mean?",
+      "a": "It comes from the root po, meaning to reject or cast out."
+    },
+    {
+      "q": "When is Apoo celebrated?",
+      "a": "Usually for about a week in March or April, though dates vary. The Techiman Traditional Council announces them."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Apoo festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Apoo_festival"
+    },
+    {
+      "cite": "“2026 Apoo Festival launched in Techiman”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/news/general-news/ghana-news-2026-apoo-festival-launched-in-techiman.html",
+      "date": "26 January 2026"
+    }
+  ],
+  "cutout": "drum",
+  "checked": "2026-10-16"
+}

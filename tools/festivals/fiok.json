@@ -1,0 +1,142 @@
+{
+  "slug": "fiok",
+  "name": "Fiok",
+  "kind": "trad",
+  "month": 11,
+  "region": "Upper East",
+  "card": {
+    "short": "Dec",
+    "when": "December (21 December in 2024)",
+    "place": "Sandema",
+    "keeper": "The Builsa",
+    "sum": "The Builsa remember their victory over the slave raider Babatu, with warriors in horned headdresses."
+  },
+  "metaTitle": "Fiok Festival of the Builsa in Sandema",
+  "metaDescription": "Fiok (Feok) is the Builsa festival at Sandema in the Upper East Region, held each December to remember the victory over the slave raider Babatu, with war dances in horned headdresses.",
+  "ogTitle": "Fiok: the Builsa festival of resistance",
+  "subtitle": "The Builsa festival of resistance",
+  "answer": "Fiok, also written Feok, is the festival of the Builsa people at Sandema in the Upper East Region, held every December. It remembers the Builsa victory over the slave raider Babatu at the end of the 19th century: warriors in horned headdresses, armed with bows, axes, shields and spears, re-enact the fighting in war dances.",
+  "sticky": {
+    "title": "December",
+    "text": "In 2024 the durbar was on 21 December. Check this year’s date."
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 800,
+    "alt": "Young Builsa warriors in horned headdresses with traditional weapons at Fiok",
+    "caption": "Warriors in horned headdresses",
+    "author": "Christian Yakubu",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fiok_11.jpg"
+  },
+  "facts": [
+    [
+      "When",
+      "December; 21 December in 2024"
+    ],
+    [
+      "Where",
+      "Sandema, Upper East Region"
+    ],
+    [
+      "Kept by",
+      "The Builsa, led by the Sandemnab"
+    ],
+    [
+      "Remembers",
+      "The victory over the slave raider Babatu"
+    ]
+  ],
+  "schema": {
+    "description": "Builsa festival at Sandema remembering the victory over the slave raider Babatu.",
+    "location": "Sandema",
+    "locality": "Sandema"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "Babatu and the battle of Sandema",
+      "html": "<p>Babatu was a Zarma warlord who led slave raids across what is now northern Ghana in the late 19th century. The Builsa defeated his forces at the battle of Sandema, and Fiok remembers that stand.[[1,2]]</p>\n<p>The festival is said to have begun as household thanksgivings for good crops before it became a public celebration, and it is seen as a source of Builsa identity and solidarity.[[3]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "What happens",
+      "html": "<p>The festival opens with libations to the ancestors for peace and prosperity.[[3]] Then dancers armed with bows and arrows, short axes, shields and spears, many in horned headdresses, re-enact the resistance and Babatu’s defeat.[[1,2]] The 2024 edition was held at Sandema on 21 December, under the theme of peace as a tool for development.[[2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Sandema is the Builsa capital, west of Navrongo and Bolgatanga.",
+        "<b>Weather:</b> December is harmattan season in the north: dry, dusty and cool at night.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Fiok festival?",
+      "a": "The festival of the Builsa people at Sandema, remembering their victory over the slave raider Babatu with war dances."
+    },
+    {
+      "q": "When is Fiok?",
+      "a": "Every December. In 2024 it was held on 21 December."
+    },
+    {
+      "q": "Who was Babatu?",
+      "a": "A Zarma warlord who led slave raids across northern Ghana in the late 19th century and was defeated by the Builsa at Sandema."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Fiok festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fiok_festival"
+    },
+    {
+      "cite": "“Feok Festival”",
+      "site": "Visit Ghana",
+      "url": "https://visitghana.com/feok-festival/"
+    },
+    {
+      "cite": "“Fiok Festival: celebrating Builsa heritage, historic victory and traditional unity”",
+      "site": "Ghana Remembers",
+      "url": "https://ghanaremembers.com/stories/culture/fiok-festival-celebrating-builsa-heritage-historic-victory-and-traditional-unity-in-ghanas-upper-east-region.html"
+    }
+  ],
+  "photos": [
+    {
+      "file": "warriors.webp",
+      "w": 800,
+      "h": 1200,
+      "alt": "A line of Builsa warriors in headdresses dancing at Fiok",
+      "caption": "The war dance",
+      "author": "Christian Yakubu",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fiok_5.jpg"
+    },
+    {
+      "file": "horns.webp",
+      "w": 800,
+      "h": 1200,
+      "alt": "A warrior in a tall horned headdress and leather tunic at Fiok",
+      "caption": "A horned headdress",
+      "author": "Christian Yakubu",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fiok_8.jpg"
+    },
+    {
+      "file": "robe.webp",
+      "w": 800,
+      "h": 1200,
+      "alt": "A chief in a blue and yellow robe seated at Fiok",
+      "caption": "A chief in state",
+      "author": "Christian Yakubu",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fiok_12.jpg"
+    }
+  ],
+  "checked": "2026-10-16"
+}

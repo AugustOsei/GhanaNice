@@ -1,0 +1,82 @@
+{
+  "slug": "sasadu",
+  "name": "Sasadu",
+  "kind": "trad",
+  "month": 9,
+  "region": "Volta",
+  "card": {
+    "short": "Oct",
+    "when": "October, hosted by each town in turn",
+    "place": "Alavanyo, Akrofu, Saviefe and Sovie",
+    "keeper": "The four Sasadu communities",
+    "sum": "Four Volta towns of one origin renew their old friendship, taking turns to host a grand durbar."
+  },
+  "metaTitle": "Sasadu Festival of Alavanyo, Akrofu, Saviefe and Sovie",
+  "metaDescription": "Sasadu is the October festival of four Volta Region towns, Sovie, Alavanyo, Saviefe and Akrofu, who share an origin at Notsie and take turns to host it. What happens and how to go.",
+  "ogTitle": "Sasadu: four towns, one festival",
+  "subtitle": "Four towns, one festival",
+  "answer": "Sasadu is an October festival shared by four communities in the Hohoe area of the Volta Region: Sovie, Alavanyo, Saviefe and Akrofu. They trace their roots to Notsie, in present-day Togo, and the festival, hosted by each town in turn, renews the friendship between them with traditional rites and a grand durbar of chiefs.",
+  "facts": [
+    [
+      "When",
+      "October, rotating between the four towns"
+    ],
+    [
+      "Where",
+      "Sovie, Alavanyo, Saviefe and Akrofu, near Hohoe, Volta Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of the four communities"
+    ],
+    [
+      "Name",
+      "From Sovie, Alavanyo, Saviefe, Akrofu Development Union"
+    ]
+  ],
+  "schema": {
+    "description": "Shared festival of four Volta communities, Sovie, Alavanyo, Saviefe and Akrofu.",
+    "location": "Hohoe area",
+    "locality": "Hohoe"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What Sasadu celebrates",
+      "html": "<p>The name stands for the Sovie, Alavanyo, Saviefe, Akrofu Development Union, and the festival is a symbol of unity and peace between the four communities, who say they are of one stock that migrated from Notsie.[[1]] It is celebrated each October, with the towns taking turns to host, and its centre is a grand durbar of chiefs with traditional rites.[[1,2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> the four towns are near Hohoe in the Volta Region, in hill country close to the Wli waterfalls.",
+        "<b>Find the host:</b> ask which town is hosting that year before you travel.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Sasadu festival?",
+      "a": "An October festival shared by Sovie, Alavanyo, Saviefe and Akrofu in Ghana’s Volta Region, celebrating their common origin and friendship."
+    },
+    {
+      "q": "What does Sasadu stand for?",
+      "a": "Sovie, Alavanyo, Saviefe, Akrofu Development Union."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Sasadu Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sasadu_Festival"
+    },
+    {
+      "cite": "“Sasadu Festival: fostering unity and fraternity among Sasadu communities”",
+      "site": "Ghana Remembers",
+      "url": "https://ghanaremembers.com/stories/events/sasadu-festival-fostering-unity-and-fraternity-among-sasadu-communities-of-volta-region.html"
+    }
+  ],
+  "cutout": "drum",
+  "checked": "2026-10-16"
+}

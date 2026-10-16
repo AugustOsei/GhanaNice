@@ -1,0 +1,88 @@
+{
+  "slug": "yaa-asantewaa",
+  "name": "Yaa Asantewaa Festival",
+  "kind": "trad",
+  "month": 7,
+  "region": "Ashanti",
+  "card": {
+    "short": "Early Aug",
+    "when": "Usually early August",
+    "place": "Ejisu",
+    "keeper": "The Ejisu Traditional Area",
+    "sum": "Ejisu honours Nana Yaa Asantewaa, the queen mother who led the 1900 war against the British."
+  },
+  "metaTitle": "Yaa Asantewaa Festival in Ejisu",
+  "metaDescription": "The Yaa Asantewaa Festival in Ejisu, Ashanti Region, honours the queen mother who led the 1900 War of the Golden Stool. When it is held, what happens and how to go.",
+  "ogTitle": "The Yaa Asantewaa Festival in Ejisu",
+  "subtitle": "Ejisu honours its warrior queen mother",
+  "answer": "The Yaa Asantewaa Festival is held in Ejisu, near Kumasi in the Ashanti Region, usually in August. It honours Nana Yaa Asantewaa, the queen mother of Ejisu who led the Asante war of 1900 against the British, known as the War of the Golden Stool, with a durbar of chiefs presided over by the paramount chief of Ejisu.",
+  "facts": [
+    [
+      "When",
+      "Usually August, over several days"
+    ],
+    [
+      "Where",
+      "Ejisu, Ashanti Region"
+    ],
+    [
+      "Kept by",
+      "The Ejisu Traditional Area"
+    ],
+    [
+      "Honours",
+      "Nana Yaa Asantewaa (c. 1840–1921)"
+    ]
+  ],
+  "schema": {
+    "description": "Festival in Ejisu honouring Nana Yaa Asantewaa, leader of the 1900 War of the Golden Stool.",
+    "location": "Ejisu",
+    "locality": "Ejisu"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "Who Yaa Asantewaa was",
+      "html": "<p>Nana Yaa Asantewaa was queen mother of Ejisu. In 1900, when the British governor demanded the Golden Stool, the sacred stool of the Asante, she led the Asante resistance in what became known as the War of the Golden Stool. She was captured and exiled to the Seychelles, where she died in 1921.[[2]]</p>\n<p>The festival was founded by the royal house of Ejisu to honour her, with a durbar of chiefs in Ejisu presided over by the paramount chief.[[1]]</p>"
+    },
+    {
+      "id": "museum",
+      "title": "The museum",
+      "html": "<p>A museum dedicated to her opened at Kwaso in the Ejisu area on 3 August 2000, the centenary of the war. A fire in July 2004 destroyed many of its items, including her sandals and battle dress.[[2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Ejisu is about 20 km east of Kumasi on the Accra road.",
+        "<b>Combine it:</b> Manhyia Palace and the markets of Kumasi are close by. See the <a href=\"/regions/ashanti/\">Ashanti region</a> page.",
+        "<b>Check the dates:</b> the traditional council sets the days each year, often only weeks ahead. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Who was Yaa Asantewaa?",
+      "a": "The queen mother of Ejisu who led the Asante war against the British in 1900, the War of the Golden Stool."
+    },
+    {
+      "q": "When is the Yaa Asantewaa Festival?",
+      "a": "Usually in August, in Ejisu in the Ashanti Region."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Yaa Asantewaa Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yaa_Asantewaa_Festival"
+    },
+    {
+      "cite": "“Yaa Asantewaa”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yaa_Asantewaa"
+    }
+  ],
+  "cutout": "umbrella",
+  "checked": "2026-10-16"
+}
