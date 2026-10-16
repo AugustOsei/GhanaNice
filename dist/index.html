@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" as="image" href="assets/maps/ghana-mask.svg" crossorigin>
   <link rel="preload" as="image" href="assets/real/jamestown-lighthouse-800.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=53">
+  <link rel="stylesheet" href="styles.css?v=54">
   <!-- Google Analytics (analytics.js); a browser can turn it off on /privacy/. -->
   <script src="/analytics.js?v=1"></script>
 </head>
@@ -239,6 +239,8 @@
       })();
     </script>
     <!-- /festivals:home -->
+    <!-- Newsletter sign-up under the festivals (newsletter.js fills it in). -->
+    <section class="nl-band nl-home" aria-label="Newsletter sign-up" data-newsletter="home"></section>
     <!-- The way into the travel directory from the home page. Each tile opens the directory
          already filtered to that category. -->
     <section class="directory-teaser" aria-labelledby="directory-teaser-heading">
@@ -302,6 +304,7 @@
       <div class="footer-brand">
         <a class="wordmark footer-mark" href="#home">Ghana<span>Nice</span><i>★</i></a>
         <p>Good places are better when they’re shared.</p>
+        <div class="footer-newsletter" data-newsletter="footer"></div>
         <div class="footer-social">
           <p class="footer-social-label">Follow GhanaNice</p>
           <ul class="footer-social-list">
@@ -326,10 +329,11 @@
     </div>
   </footer>
 
-  <script src="config.js?v=5"></script>
+  <script src="config.js?v=6"></script>
   <script src="data.js?v=9"></script>
   <script src="app.js?v=32" defer></script>
   <script src="tip-form.js?v=5" defer></script>
   <script src="footer.js?v=3" defer></script>
+  <script src="newsletter.js?v=1" defer></script>
 </body>
 </html>

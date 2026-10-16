@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy — GhanaNice</title>
-  <meta name="description" content="What GhanaNice collects when you share a place, list a service or visit, who helps run it, what gets published, and how to ask us to see or delete your information.">
+  <meta name="description" content="What GhanaNice collects when you share a place, list a service, sign up for the newsletter or visit, who helps run it, what gets published, and how to ask us to see or delete your information.">
   <meta name="theme-color" content="#f1eee5">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -15,13 +15,13 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="GhanaNice">
   <meta property="og:title" content="Privacy — GhanaNice">
-  <meta property="og:description" content="What GhanaNice collects when you share a place, list a service or visit, who helps run it, what gets published, and how to ask us to see or delete your information.">
+  <meta property="og:description" content="What GhanaNice collects when you share a place, list a service, sign up for the newsletter or visit, who helps run it, what gets published, and how to ask us to see or delete your information.">
   <meta property="og:image" content="https://www.ghananice.com/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Ghana is nice. Central Accra from above.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/styles.css?v=53">
+  <link rel="stylesheet" href="/styles.css?v=54">
   <!-- Google Analytics (analytics.js); a browser can turn it off on /privacy/. -->
   <script src="/analytics.js?v=1"></script>
 </head>
@@ -43,7 +43,7 @@
   <main class="doc-main info-main" id="main">
     <p class="doc-eyebrow">Privacy</p>
     <h1>Privacy.</h1>
-    <p class="info-updated">Last updated 15 October 2026.</p>
+    <p class="info-updated">Last updated 16 October 2026.</p>
     <p class="info-lead">GhanaNice is an independent project by Augustine Osei, who is responsible for the information described here. Questions or requests: <a href="mailto:theteam@augustwheel.com">theteam@augustwheel.com</a>.</p>
 
     <h2>The short version</h2>
@@ -52,8 +52,9 @@
     <h2>What we collect, and why</h2>
     <p><strong>When you share a place (the tip form):</strong> what you found, its name and where it is (or a Google Maps link), what makes it nice, up to three photos, and your name and email. We use these to look the place up, check it, decide whether to publish it, and email you about it. Your photos are shrunk in your browser before they’re sent, which also removes their location data.</p>
     <p><strong>When you list a travel service:</strong> your business name, what you offer, where you’re based and work, your website or social media page, a description, your name, your email, and your phone number if you give it. We use these to check the business and contact you about the listing.</p>
+    <p><strong>When you sign up for the newsletter:</strong> your email address, which sign-up form you used (the footer, a festival page, the home page or the small card that slides in) and the page you were on, without any search or tracking parameters. We use these only to send you “What’s on in Ghana”, once a month, and to see which forms people use. See <a class="info-inline" href="#newsletter">The newsletter</a> below.</p>
     <p><strong>When you visit:</strong> Google Analytics records how the site is used (pages visited, roughly where visitors are, the device and browser) using cookies. You can turn it off below. Our host, Vercel, keeps short-lived technical logs, as every web host does, to keep the site working and secure.</p>
-    <p><strong>In your browser:</strong> the site keeps a copy of the tips you’ve sent in your own browser (without your email), so you can see them marked “Waiting for review”, and remembers if you’ve turned analytics off. These stay on your device.</p>
+    <p><strong>In your browser:</strong> the site keeps a copy of the tips you’ve sent in your own browser (without your email), so you can see them marked “Waiting for review”, remembers if you’ve turned analytics off, and remembers whether you’ve signed up for the newsletter or closed its sign-up card (so it doesn’t ask again for 60 days). It also counts the pages you view in a visit, so the card never appears on the first one. These stay on your device.</p>
 
     <h2>What gets published</h2>
     <p>If we publish your tip, the site shows the place, its area and region, what you said about it, your first name (if you gave one), the photos you agreed we could show, and public details about the place from Google Maps (its address link, website, phone and rating). For a travel service, we publish the business name, category, location, coverage, description and website. Your email and phone number are never published.</p>
@@ -63,9 +64,16 @@
     <ul class="info-list">
       <li><strong>Google</strong>: Gmail sends and receives the emails about your submission, a private Google Sheet keeps the review log, Google Maps finds the place you named, and Google Analytics measures visits.</li>
       <li><strong>Anthropic (Claude)</strong>: an AI model reads a tip to help spot spam and sort it into the right category. A person still makes every decision.</li>
+      <li><strong>MailerLite</strong>: keeps the newsletter list and sends the newsletter and its confirmation email.</li>
       <li><strong>GitHub and Vercel</strong>: approved listings are published to the site’s code on GitHub, and Vercel hosts the site.</li>
     </ul>
     <p>Each of these processes data under its own terms, and some are based outside Ghana.</p>
+
+    <h2 id="newsletter">The newsletter</h2>
+    <p class="info-updated">Added 16 October 2026.</p>
+    <p>“What’s on in Ghana” is one email a month: the festivals coming up, what’s new on GhanaNice and a tip from a reader. When you sign up, your address goes through our automation server to MailerLite (MailerLite UAB, based in Lithuania), which stores the list and sends the emails. Nothing is added to the list until you confirm: MailerLite first emails you a link, and if you don’t click it, you won’t get the newsletter.</p>
+    <p>MailerLite records whether you open an issue and which links you click, as most email services do; we use this only to see what readers find useful. We never sell or share the list, and we don’t use it for anything but the newsletter.</p>
+    <p>To stop it, use the unsubscribe link at the bottom of any issue, or email us and we’ll remove you. When you unsubscribe, MailerLite keeps your address marked as unsubscribed so you aren’t emailed again; ask us if you’d like it deleted completely.</p>
 
     <h2>How long we keep it</h2>
     <p>We keep submissions and the review log while the site runs, so we can answer questions about a listing and avoid duplicates. Analytics data is kept for no longer than 14 months. Ask us at any time to see, correct or delete what we hold about you, or to take down something you shared.</p>
@@ -74,6 +82,7 @@
     <ul class="info-list">
       <li>Analytics is on by default. You can switch it off for this browser at any time, or block cookies in your browser’s settings.<br><button class="info-link-button" type="button" data-analytics-toggle>Turn off analytics</button> <span data-analytics-status aria-live="polite"></span></li>
       <li>You can share a place without a name; an email is needed so we can follow up.</li>
+      <li>The newsletter is optional. Every issue has an unsubscribe link.</li>
       <li>Email <a class="info-inline" href="mailto:theteam@augustwheel.com">theteam@augustwheel.com</a> to access, correct or delete your information.</li>
     </ul>
     <p>If this policy changes, we’ll update this page and its date.</p>
@@ -88,6 +97,7 @@
       <div class="footer-brand">
         <a class="wordmark footer-mark" href="/">Ghana<span>Nice</span><i>★</i></a>
         <p>Good places are better when they’re shared.</p>
+        <div class="footer-newsletter" data-newsletter="footer"></div>
         <div class="footer-social">
           <p class="footer-social-label">Follow GhanaNice</p>
           <ul class="footer-social-list">
@@ -112,7 +122,9 @@
     </div>
   </footer>
 
+  <script src="/config.js?v=6"></script>
   <script src="/page.js?v=1" defer></script>
   <script src="/footer.js?v=3" defer></script>
+  <script src="/newsletter.js?v=1" defer></script>
 </body>
 </html>

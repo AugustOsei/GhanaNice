@@ -17,7 +17,7 @@
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/styles.css?v=53">
+  <link rel="stylesheet" href="/styles.css?v=54">
   <link rel="stylesheet" href="/festivals/festival.css?v=1">
   <!-- Google Analytics (analytics.js); a browser can turn it off on /privacy/. -->
   <script src="/analytics.js?v=1"></script>
@@ -209,6 +209,8 @@
         <a class="back" href="/festivals/">← All festivals and cultural events</a>
       </div>
     </section>
+
+    <section class="nl-band" aria-label="Newsletter sign-up" data-newsletter="festival"></section>
   </main>
 
   <footer class="site-footer">
@@ -220,6 +222,7 @@
       <div class="footer-brand">
         <a class="wordmark footer-mark" href="/">Ghana<span>Nice</span><i>★</i></a>
         <p>Good places are better when they’re shared.</p>
+        <div class="footer-newsletter" data-newsletter="footer"></div>
         <div class="footer-social">
           <p class="footer-social-label">Follow GhanaNice</p>
           <ul class="footer-social-list">
@@ -251,7 +254,9 @@
       <feMerge><feMergeNode in="edge"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </svg>
+  <script src="/config.js?v=6"></script>
   <script src="/page.js?v=1" defer></script>
   <script src="/footer.js?v=3" defer></script>
+  <script src="/newsletter.js?v=1" defer></script>
 </body>
 </html>

@@ -1,0 +1,414 @@
+{
+ "name": "GhanaNice — Newsletter signup",
+ "nodes": [
+  {
+   "id": "gnn-1",
+   "name": "Sign-up from the site",
+   "type": "n8n-nodes-base.webhook",
+   "typeVersion": 2,
+   "position": [
+    0,
+    0
+   ],
+   "parameters": {
+    "httpMethod": "POST",
+    "path": "ghananice-newsletter",
+    "responseMode": "responseNode",
+    "options": {
+     "allowedOrigins": "https://www.ghananice.com,https://ghananice.com,http://localhost:4173,http://127.0.0.1:4173"
+    }
+   },
+   "webhookId": "3b8e64c1-6f0a-4c58-9d21-2000000000b1"
+  },
+  {
+   "id": "gnn-2",
+   "name": "Read sign-up",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    240,
+    0
+   ],
+   "parameters": {
+    "jsCode": "// Validate a newsletter sign-up from the site's own forms. A filled honeypot is a bot: it gets\n// a harmless \"ok\" and nothing is stored. Only the email, the form it came from and the page\n// path go any further.\nconst GROUP_ID = '201520530803656462'; // MailerLite group \"GhanaNice newsletter\"\nconst SOURCES = ['footer', 'festival', 'home', 'popup'];\n\nconst raw = $input.first().json.body && typeof $input.first().json.body === 'object' ? $input.first().json.body : {};\nconst text = (value, max) => String(value ?? '').replace(/\\s+/g, ' ').trim().slice(0, max);\nif (text(raw.website, 100)) return [{ json: { verdict: 'drop' } }];\n\nconst email = text(raw.email, 180).toLowerCase();\nif (!/^[^\\s@]+@[^\\s@.]+(\\.[^\\s@.]+)*\\.[a-z]{2,}$/i.test(email)) {\n  return [{ json: { verdict: 'reject', reason: 'email' } }];\n}\nconst source = SOURCES.includes(raw.source) ? raw.source : 'footer';\n/* A path on ghananice.com only: never a query string, which could carry personal data. */\nlet page = text(raw.page, 200);\npage = /^\\/[\\w\\-./]*$/.test(page) ? page : '';\n\nreturn [{ json: {\n  verdict: 'ok',\n  subscriber: { email, groups: [GROUP_ID], fields: { signup_source: source, signup_page: page } }\n} }];\n"
+   }
+  },
+  {
+   "id": "gnn-3",
+   "name": "Which answer?",
+   "type": "n8n-nodes-base.switch",
+   "typeVersion": 3.2,
+   "position": [
+    480,
+    0
+   ],
+   "parameters": {
+    "rules": {
+     "values": [
+      {
+       "conditions": {
+        "options": {
+         "caseSensitive": true,
+         "typeValidation": "strict",
+         "version": 2
+        },
+        "conditions": [
+         {
+          "id": "vok",
+          "leftValue": "={{ $json.verdict }}",
+          "rightValue": "ok",
+          "operator": {
+           "type": "string",
+           "operation": "equals"
+          }
+         }
+        ],
+        "combinator": "and"
+       },
+       "renameOutput": true,
+       "outputKey": "ok"
+      },
+      {
+       "conditions": {
+        "options": {
+         "caseSensitive": true,
+         "typeValidation": "strict",
+         "version": 2
+        },
+        "conditions": [
+         {
+          "id": "vdrop",
+          "leftValue": "={{ $json.verdict }}",
+          "rightValue": "drop",
+          "operator": {
+           "type": "string",
+           "operation": "equals"
+          }
+         }
+        ],
+        "combinator": "and"
+       },
+       "renameOutput": true,
+       "outputKey": "drop"
+      },
+      {
+       "conditions": {
+        "options": {
+         "caseSensitive": true,
+         "typeValidation": "strict",
+         "version": 2
+        },
+        "conditions": [
+         {
+          "id": "vreject",
+          "leftValue": "={{ $json.verdict }}",
+          "rightValue": "reject",
+          "operator": {
+           "type": "string",
+           "operation": "equals"
+          }
+         }
+        ],
+        "combinator": "and"
+       },
+       "renameOutput": true,
+       "outputKey": "reject"
+      }
+     ]
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "gnn-4",
+   "name": "Look up subscriber",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    720,
+    -180
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "=https://connect.mailerlite.com/api/subscribers/{{ encodeURIComponent($json.subscriber.email) }}",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Accept",
+       "value": "application/json"
+      }
+     ]
+    },
+    "options": {
+     "response": {
+      "response": {
+       "fullResponse": true,
+       "neverError": true
+      }
+     },
+     "timeout": 15000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "vEgYGJjIR8OPKcnM",
+     "name": "GhanaNice — MailerLite"
+    }
+   },
+   "onError": "continueErrorOutput"
+  },
+  {
+   "id": "gnn-5",
+   "name": "Choose status",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    960,
+    -180
+   ],
+   "parameters": {
+    "jsCode": "const signup = $('Read sign-up').first().json.subscriber;\nconst found = $json.statusCode === 200 ? ($json.body?.data?.status || '') : '';\nconst keep = ['active', 'bounced', 'junk'].includes(found);\nreturn [{ json: { subscriber: keep ? signup : { ...signup, status: 'unconfirmed' } } }];"
+   }
+  },
+  {
+   "id": "gnn-6",
+   "name": "Add to MailerLite",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1200,
+    -180
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://connect.mailerlite.com/api/subscribers",
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Accept",
+       "value": "application/json"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json.subscriber) }}",
+    "options": {
+     "response": {
+      "response": {
+       "fullResponse": true,
+       "neverError": true
+      }
+     },
+     "timeout": 15000
+    }
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "vEgYGJjIR8OPKcnM",
+     "name": "GhanaNice — MailerLite"
+    }
+   },
+   "onError": "continueErrorOutput"
+  },
+  {
+   "id": "gnn-7",
+   "name": "Read MailerLite answer",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1440,
+    -180
+   ],
+   "parameters": {
+    "jsCode": "const code = Number($json.statusCode || 0);\nif (code === 200 || code === 201) return [{ json: { status: 200, body: { ok: true } } }];\nif (code === 422) return [{ json: { status: 400, body: { ok: false, error: 'email' } } }];\nreturn [{ json: { status: 502, body: { ok: false, error: 'server' } } }];"
+   }
+  },
+  {
+   "id": "gnn-8",
+   "name": "Answer",
+   "type": "n8n-nodes-base.respondToWebhook",
+   "typeVersion": 1.1,
+   "position": [
+    1680,
+    -180
+   ],
+   "parameters": {
+    "respondWith": "json",
+    "responseBody": "={{ JSON.stringify($json.body) }}",
+    "options": {
+     "responseCode": "={{ $json.status }}"
+    }
+   }
+  },
+  {
+   "id": "gnn-9",
+   "name": "Answer: unreachable",
+   "type": "n8n-nodes-base.respondToWebhook",
+   "typeVersion": 1.1,
+   "position": [
+    960,
+    -360
+   ],
+   "parameters": {
+    "respondWith": "json",
+    "responseBody": "={ \"ok\": false, \"error\": \"server\" }",
+    "options": {
+     "responseCode": 502
+    }
+   }
+  },
+  {
+   "id": "gnn-10",
+   "name": "Answer: ignored",
+   "type": "n8n-nodes-base.respondToWebhook",
+   "typeVersion": 1.1,
+   "position": [
+    720,
+    0
+   ],
+   "parameters": {
+    "respondWith": "json",
+    "responseBody": "={ \"ok\": true }",
+    "options": {
+     "responseCode": 200
+    }
+   }
+  },
+  {
+   "id": "gnn-11",
+   "name": "Answer: bad email",
+   "type": "n8n-nodes-base.respondToWebhook",
+   "typeVersion": 1.1,
+   "position": [
+    720,
+    180
+   ],
+   "parameters": {
+    "respondWith": "json",
+    "responseBody": "={ \"ok\": false, \"error\": \"email\" }",
+    "options": {
+     "responseCode": 400
+    }
+   }
+  }
+ ],
+ "connections": {
+  "Sign-up from the site": {
+   "main": [
+    [
+     {
+      "node": "Read sign-up",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Read sign-up": {
+   "main": [
+    [
+     {
+      "node": "Which answer?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Which answer?": {
+   "main": [
+    [
+     {
+      "node": "Look up subscriber",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Answer: ignored",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Answer: bad email",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Look up subscriber": {
+   "main": [
+    [
+     {
+      "node": "Choose status",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Answer: unreachable",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Choose status": {
+   "main": [
+    [
+     {
+      "node": "Add to MailerLite",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Add to MailerLite": {
+   "main": [
+    [
+     {
+      "node": "Read MailerLite answer",
+      "type": "main",
+      "index": 0
+     }
+    ],
+    [
+     {
+      "node": "Answer: unreachable",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Read MailerLite answer": {
+   "main": [
+    [
+     {
+      "node": "Answer",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "settings": {
+  "executionOrder": "v1",
+  "saveDataErrorExecution": "all",
+  "saveDataSuccessExecution": "none"
+ }
+}

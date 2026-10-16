@@ -8,6 +8,9 @@ window.GHANANICE_CONFIG = {
   directoryEndpoint: '',
   /* Business directory intake, POST JSON. Blank = drafts stay in the visitor's browser. */
   serviceSubmissionEndpoint: 'https://n8n.augustwheel.com/webhook/ghananice-service',
+  /* Newsletter sign-up (newsletter.js), POST JSON {email, source, page}: n8n adds the address to
+     MailerLite, which emails a confirmation link. Blank = preview mode: nothing is sent or stored. */
+  newsletterEndpoint: 'https://n8n.augustwheel.com/webhook/ghananice-newsletter',
   /* Browser key for Google place suggestions in the tip form. Restrict it in Google Cloud to
      the Places API (New) and to ghananice.com. Blank = a plain name + town form. */
   placesKey: '',

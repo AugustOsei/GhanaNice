@@ -127,9 +127,30 @@ analyticsPages.forEach((file) => {
   check(!html.includes('googletagmanager.com/gtag'), `${file} loads Google Analytics directly, bypassing the opt-out`);
 });
 
+/* The newsletter sign-up (newsletter.js) sits in every footer, and config.js gives it its endpoint.
+   Festival pages and the home page also carry their own sign-up band. */
+const footerPages = [];
+(function walk(dir) {
+  fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) return walk(full);
+    if (entry.name.endsWith('.html') && fs.readFileSync(full, 'utf8').includes('class="site-footer"')) footerPages.push(path.relative(root, full));
+  });
+})(dist);
+check(footerPages.length >= 60, `Expected the footer on at least 60 pages, found ${footerPages.length}`);
+footerPages.forEach((file) => {
+  const html = read(file);
+  check(html.includes('data-newsletter="footer"'), `${file} has no newsletter form in its footer`);
+  check(/src="\/?newsletter\.js\?v=1"/.test(html), `${file} does not load newsletter.js?v=1`);
+  check(/src="\/?config\.js\?v=6"/.test(html), `${file} does not load config.js?v=6 (the newsletter endpoint)`);
+  if (file.startsWith('dist/festivals/')) check(html.includes('data-newsletter="festival"'), `${file} has no festival newsletter band`);
+});
+check(read('dist/index.html').includes('data-newsletter="home"'), 'dist/index.html has no newsletter band under the festivals');
+check(/newsletterEndpoint:/.test(read('dist/config.js')), 'config.js has no newsletterEndpoint');
+
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=53',
+    'styles.css?v=54',
     'data.js?v=9',
     'app.js?v=32',
     'tip-form.js?v=5',
@@ -138,18 +159,18 @@ const htmlExpectations = {
     'id="region-reader" role="dialog"',
   ],
   'tools/region-template.html': [
-    '/styles.css?v=53',
+    '/styles.css?v=54',
     '/data.js?v=9',
     '/region.js?v=12',
     '/tip-form.js?v=5',
     '/footer.js?v=3',
   ],
-  'dist/credits.html': ['styles.css?v=53'],
-  'dist/404.html': ['styles.css?v=53'],
+  'dist/credits.html': ['styles.css?v=54'],
+  'dist/404.html': ['styles.css?v=54'],
   'dist/travel-directory.html': [
-    'styles.css?v=53',
+    'styles.css?v=54',
     'travel-directory.css?v=16',
-    'config.js?v=5',
+    'config.js?v=6',
     'travel-directory-data.js?v=4',
     'travel-directory.js?v=18',
     'footer.js?v=3',
