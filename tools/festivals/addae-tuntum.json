@@ -1,0 +1,83 @@
+{
+  "slug": "addae-tuntum",
+  "name": "Addae Tuntum",
+  "kind": "trad",
+  "month": 0,
+  "region": "Ahafo",
+  "card": {
+    "short": "Jan",
+    "when": "Usually January, sometimes December",
+    "place": "Kukuom",
+    "keeper": "The chiefs and people of Kukuom",
+    "sum": "Kukuom remembers the Ebirimoro war with the Sefwi, and renews its loyalty to its chief."
+  },
+  "metaTitle": "Addae Tuntum Festival of Kukuom, Ahafo Region",
+  "metaDescription": "Addae Tuntum is the festival of the chiefs and people of Kukuom in the Ahafo Region, remembering the 18th-century Ebirimoro war. Usually January.",
+  "ogTitle": "Addae Tuntum: the Kukuom festival",
+  "subtitle": "Kukuom remembers the Ebirimoro war",
+  "answer": "Addae Tuntum, also called Akwasidae Tuntum, is the festival of the chiefs and people of Kukuom in the Asunafo area of the Ahafo Region. It remembers the Ebirimoro war between the Sefwi and the Ahafo in the 18th century, and the people renew their loyalty to their chief, with a durbar, drumming and dancing. It is usually held in January.",
+  "facts": [
+    [
+      "When",
+      "Usually January, sometimes December"
+    ],
+    [
+      "Where",
+      "Kukuom, Asunafo, Ahafo Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of Kukuom"
+    ],
+    [
+      "Also called",
+      "Akwasidae Tuntum"
+    ]
+  ],
+  "schema": {
+    "description": "Festival of Kukuom remembering the Ebirimoro war.",
+    "location": "Kukuom",
+    "locality": "Kukuom"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>Kukuom keeps Addae Tuntum.[[2]] It remembers the Ebirimoro war, fought between the Sefwi and the Ahafo in the 18th century, and it is when the people reaffirm their commitment to their chief. There is a durbar of chiefs, people wear traditional dress, there is drumming and dancing, and visitors are welcomed to share food and drink.[[1]]</p>\n<p class=\"note\">Published accounts of Addae Tuntum are short. If you know the festival, <a href=\"/contact/\">tell us</a> more and we’ll add it.</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Kukuom is in the Asunafo area of the Ahafo Region. See the <a href=\"/regions/ahafo/\">Ahafo</a> page for places nearby.",
+        "<b>Check the dates:</b> the traditional council sets them each year. Local radio carries the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Addae Tuntum festival?",
+      "a": "The festival of the chiefs and people of Kukuom in the Ahafo Region, remembering the 18th-century Ebirimoro war between the Sefwi and the Ahafo."
+    },
+    {
+      "q": "When is Addae Tuntum?",
+      "a": "Usually in January, sometimes in December."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Addae Tuntum Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Addae_Tuntum_Festival"
+    },
+    {
+      "cite": "Emmanuel Adu-Gyamerah, “Brong Ahafo Region still feeding the nation”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/features/features/brong-ahafo-region-still-feeding-the-nation.html",
+      "date": "8 March 2017"
+    }
+  ],
+  "cutout": "drum",
+  "checked": "2026-10-16"
+}

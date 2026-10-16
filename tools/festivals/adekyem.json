@@ -1,0 +1,96 @@
+{
+  "slug": "adekyem",
+  "name": "Adekyem",
+  "kind": "trad",
+  "month": 10,
+  "region": "Ahafo",
+  "card": {
+    "short": "Nov",
+    "when": "Every two years, usually November or December",
+    "place": "Bechem",
+    "keeper": "The chiefs and people of the Bechem Traditional Area",
+    "sum": "Bechem’s festival every two years: its history and culture on show, and funds raised for education and development."
+  },
+  "metaTitle": "Adekyem Festival of Bechem, Ahafo Region",
+  "metaDescription": "Adekyem is the festival of Bechem in the Ahafo Region, held every two years in November or December. It celebrates the town’s history and raises funds for education.",
+  "ogTitle": "Adekyem: the Bechem festival",
+  "subtitle": "Bechem’s festival, every two years",
+  "answer": "Adekyem is the festival of the chiefs and people of the Bechem Traditional Area in the Ahafo Region, held every two years, usually in November or December. Adekyem is an old Akan name for Bechem, “the place where things are shared out”. The festival celebrates the town’s history and culture and raises money for education and development, ending with a grand durbar.",
+  "facts": [
+    [
+      "When",
+      "Every two years, usually November or December"
+    ],
+    [
+      "Where",
+      "Bechem, Tano South, Ahafo Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of the Bechem Traditional Area"
+    ],
+    [
+      "First held",
+      "November 2011"
+    ]
+  ],
+  "schema": {
+    "description": "Festival of Bechem held every two years, raising funds for education and development.",
+    "location": "Bechem",
+    "locality": "Bechem",
+    "organizer": "Bechem Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "The name",
+      "html": "<p>Adekyem is an Akan name for Bechem, meaning a place where things are shared out: it is said to be where the spoils of the Asante wars were divided.[[1]]</p>"
+    },
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>The chiefs of the Bechem Traditional Area started the festival to celebrate the area’s history, heritage and way of life, and to raise money for development. The first, in November 2011, set up an education fund for students who had won places at senior high school but could not pay.[[2]] It is organised by the traditional council with the district assembly, with a strong focus on education.[[3]]</p>\n<p>It ends with a grand durbar of chiefs at Bechem. At the 2013 durbar the paramount chief called on the government for roads and other infrastructure to open up the area, and invited investors to set up there.[[2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Bechem is the capital of Tano South. See the <a href=\"/regions/ahafo/\">Ahafo</a> page for places nearby.",
+        "<b>Every two years:</b> check whether this is a festival year before you plan around it. The traditional council announces the dates.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Adekyem festival?",
+      "a": "The festival of the Bechem Traditional Area in the Ahafo Region, held every two years to celebrate the town’s history and raise funds for education and development."
+    },
+    {
+      "q": "When is Adekyem?",
+      "a": "Every two years, usually in November or December."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Adekyem Festival | December”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=16702",
+      "date": "28 March 2025"
+    },
+    {
+      "cite": "Samuel Duodu, “Bechem climaxes Adekyem Festival”",
+      "site": "Graphic Online",
+      "url": "https://graphic.com.gh/news/general-news/bechem-climaxes-adekyem-festival.html",
+      "date": "3 December 2013"
+    },
+    {
+      "cite": "“Adekyem Festival: a biennial celebration of culture and community in Bechem”",
+      "site": "Ghana Remembers",
+      "url": "https://ghanaremembers.com/stories/culture/adekyem-festival-a-biennial-celebration-of-culture-and-community-in-bechem.html",
+      "date": "12 November 2025"
+    }
+  ],
+  "cutout": "umbrella",
+  "checked": "2026-10-16"
+}
