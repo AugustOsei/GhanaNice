@@ -345,7 +345,31 @@
     .band-text a { display: inline-block; margin-top: 1.4vw; padding: 1vw 2.2vw; border-radius: 99px; background: var(--ink); color: var(--yellow); font-family: Arial, Helvetica, sans-serif; font-size: 1vw; font-weight: 800; letter-spacing: .12em; }
 
     /* ================= THE FESTIVALS ================= */
+    /* The count on the band, as split-flap tiles: each tile flips through the digits to the number */
+    .band-text { display: flex; align-items: center; justify-content: center; gap: 2.2vw; }
+    .band-text .label { text-align: left; }
+    .flaps { display: flex; gap: .5vw; font-size: 8vw; line-height: 1; letter-spacing: 0; }
+    .flap { position: relative; width: .74em; height: 1.12em; perspective: 3em; border-radius: .09em; box-shadow: 0 .05em .1em rgba(17,17,15,.35); }
+    .flap b { position: absolute; inset: 0; display: grid; place-items: center; border-radius: inherit; background: #1d1c19; color: #f1eee5; font-weight: 900; backface-visibility: hidden; }
+    .flap .t, .flap .ft { clip-path: inset(0 0 50% 0); background: #252420; }
+    .flap .b, .flap .fb { clip-path: inset(50% 0 0 0); }
+    .flap .ft, .flap .fb { visibility: hidden; }
+    .flap.go .ft { visibility: visible; animation: flap-top var(--half, 90ms) ease-in forwards; }
+    .flap.go .fb { visibility: visible; animation: flap-bottom var(--half, 90ms) ease-out var(--half, 90ms) both; }
+    @keyframes flap-top { from { transform: rotateX(0); } to { transform: rotateX(90deg); } }
+    @keyframes flap-bottom { from { transform: rotateX(-90deg); } to { transform: rotateX(0); } }
+    /* The hinge: a dark seam across the middle and a pin either side */
+    .flap::after { content: ''; position: absolute; z-index: 2; left: 0; right: 0; top: calc(50% - .012em); height: .024em; background: rgba(0,0,0,.75); }
+    .flap i { position: absolute; z-index: 3; top: calc(50% - .07em); width: .06em; height: .14em; border-radius: .02em; background: linear-gradient(#c9c6bc, #8d8a80); }
+    .flap i:first-of-type { left: -.02em; } .flap i:last-of-type { right: -.02em; }
+
     .list { position: relative; z-index: 5; background: var(--paper); }
+    .list-note { margin: 34px 0 0; font-family: var(--hand); font-style: italic; font-size: 1.05rem; }
+    .list-note a, .suggest a:not(.suggest-btn) { border-bottom: 1px solid; }
+    .suggest { margin: 80px 0 0; padding: clamp(24px, 4vw, 44px); border-radius: 4px; background: var(--yellow); }
+    .suggest h2 { margin: 0 0 14px; font-family: var(--display); font-weight: 900; font-size: clamp(1.9rem, 3.6vw, 3rem); line-height: .9; letter-spacing: -.06em; }
+    .suggest p { max-width: 640px; margin: 0 0 12px; font-family: var(--hand); font-size: 1.08rem; line-height: 1.5; }
+    .suggest-btn { display: inline-block; margin-top: 10px; padding: 13px 20px; border-radius: 99px; background: var(--ink); color: var(--yellow); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
     .list-in { max-width: 1320px; margin: 0 auto; padding: 10px clamp(16px, 4vw, 48px) 100px; }
     .month-h { display: flex; align-items: baseline; gap: 12px; margin: 46px 0 18px; font-family: var(--display); font-weight: 400; font-size: clamp(2.2rem, 4.4vw, 3.6rem); line-height: .9; text-transform: uppercase; scroll-margin-top: 150px; }
     .month-h span { font-family: var(--hand); font-size: 1.1rem; text-transform: none; }
@@ -374,7 +398,7 @@
 
     /* Phones: the board becomes a taller, narrower collage */
     @media (max-width: 760px) {
-      .board { height: calc(292vw + 76px); }
+      .board { height: calc(302vw + 76px); }
       .panel { left: 6vw; top: 104vw; width: 100vw; height: 70vw; }
       .panel-strip { left: 2vw; top: 98vw; width: 12vw; height: 56vw; }
       .lilac-scrap { left: 48vw; top: 96vw; width: 60vw; height: 16vw; }
@@ -402,8 +426,7 @@
       .c-drum { left: 72vw; top: -4vw; width: 22vw; }
       .c-umbrella { left: 68vw; top: 62vw; width: 24vw; }
       .c-cocoa { left: 6vw; top: 204vw; width: 18vw; }
-      .c-bowl { left: 4vw; top: 236vw; width: 26vw; }
-      .c-torch { display: none; }
+      .c-bowl, .c-torch { display: none; }
       .band { top: 256vw; height: 60vw; }
       .band-text { top: 262vw; font-size: 9vw; }
       .band-text a { font-size: 3vw; padding: 2.6vw 5vw; margin-top: 3vw; }
@@ -424,6 +447,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       .layer { transform: rotate(var(--r, 0deg)); }
+      .flap.go .ft, .flap.go .fb { animation: none; visibility: hidden; }
       .fx-pull, .card, .card-img img { transition: none; }
     }
     /* House type: the site's heavy, tight Arial for headlines and Georgia italic for the human notes */
@@ -444,7 +468,9 @@
       .sticky h2 { font-size: 7vw; }
       .sticky li { font-size: 3.4vw; }
       .hand { font-size: 3.7vw; }
-      .band-text { font-size: 8.4vw; }
+      .band-text { font-size: 8.4vw; flex-direction: column; gap: 3vw; }
+      .band-text .label { text-align: center; }
+      .flaps { font-size: 13vw; gap: 1.2vw; }
     }
   </style>
 </head>
@@ -471,7 +497,7 @@
       <div class="layer panel" data-speed="0" aria-hidden="true"></div>
 
       <h1 class="layer headline" id="page-title" data-speed="0"><span aria-hidden="true">Festivals</span><span class="sr-only">Festivals and cultural events in Ghana</span>
-        <small>A directory of 33 traditional festivals and cultural events across 12 of Ghana’s 16 regions, January to December. For each one: where it happens, when it usually falls, who keeps it and what to expect.</small></h1>
+        <small>A growing list of 33 traditional festivals and cultural events across 12 of Ghana’s 16 regions, January to December. For each one: where it happens, when it usually falls, who keeps it and what to expect.</small></h1>
 
       <div class="layer sticky" data-speed=".1" data-spin="-2">
         <h2>To do this year</h2>
@@ -500,7 +526,7 @@
 
 
       <div class="layer band" data-speed="0" aria-hidden="true"></div>
-      <p class="layer band-text" data-speed="0">A list of festivals<br>and cultural events</p>
+      <p class="layer band-text" data-speed="0"><span class="flaps" aria-hidden="true"><span class="flap" data-digit="3"><b class="t">3</b><b class="b">3</b><b class="ft">3</b><b class="fb">3</b><i></i><i></i></span><span class="flap" data-digit="3"><b class="t">3</b><b class="b">3</b><b class="ft">3</b><b class="fb">3</b><i></i><i></i></span></span><span class="sr-only">33</span> <span class="label">festivals and<br>cultural events listed</span></p>
 
       </div>
       <div class="pull-rail">
@@ -513,6 +539,7 @@
 
     <section class="list" id="festivals" aria-label="Festivals by month">
       <div class="list-in">
+        <p class="list-note">A growing list, not a complete one: most towns and traditional areas keep a festival of their own. Know one we haven’t listed? <a href="#suggest">Tell us about it</a>.</p>
         <div id="list">
         <h2 class="month-h" id="m-0">January <span>4 listed</span></h2><ul class="cards">
         <li><article class="card k-trad" id="f-edina-bronya"><div class="card-body">
@@ -739,6 +766,12 @@
         </div></article></li>
         </ul>
         </div>
+        <section class="suggest" id="suggest" aria-labelledby="h-suggest">
+          <h2 id="h-suggest">Know a festival we haven’t listed?</h2>
+          <p>Tell us its name, the town, roughly when it falls and who keeps it. A link to a news report or a photo you took helps.</p>
+          <p>We check every suggestion against published sources before we add it, so it may take a little while to appear.</p>
+          <a class="suggest-btn" href="mailto:theteam@augustwheel.com?subject=Festival%20suggestion">Suggest a festival</a>
+        </section>
         <p class="credits">Photos from Wikimedia Commons: Winneba Masquerade by <a href="https://commons.wikimedia.org/wiki/File:Winneba_Masquerade_01.jpg" target="_blank" rel="noopener">Joy Agyepong</a> (CC BY-SA 4.0), Kwahu Easter by <a href="https://commons.wikimedia.org/wiki/File:Paragliding_at_Kwahu.jpg" target="_blank" rel="noopener">Alhassan Sumaila</a> (CC BY-SA 4.0), Aboakyer by <a href="https://commons.wikimedia.org/wiki/File:Aboakyer_festival_Ghana.jpg" target="_blank" rel="noopener">Fquasie</a> (CC BY-SA 4.0), Bugum by <a href="https://commons.wikimedia.org/wiki/File:Fire_festival3.jpg" target="_blank" rel="noopener">Shahadusadik</a> (CC BY-SA 4.0), Ohum by <a href="https://commons.wikimedia.org/wiki/File:Celebrating_Ohum_Festival_1.jpg" target="_blank" rel="noopener">Robertjamal12</a> (CC BY-SA 4.0), Bakatue by <a href="https://commons.wikimedia.org/wiki/File:Elmina_Bakatue_2016_004_B002.jpg" target="_blank" rel="noopener">US Embassy in Ghana / USAID</a> (public domain), Kundum by <a href="https://commons.wikimedia.org/wiki/File:Kundum_Festival_Dance.jpg" target="_blank" rel="noopener">Assilidjoe</a> (CC BY-SA 4.0), Agbamevoza by <a href="https://commons.wikimedia.org/wiki/File:Kpetoee.jpg" target="_blank" rel="noopener">JY midey</a> (CC BY-SA 4.0), Chale Wote by <a href="https://commons.wikimedia.org/wiki/File:Chale_Wote_Street_Art_Festival_10.jpg" target="_blank" rel="noopener">Fquasie</a> (CC BY-SA 4.0), Damba by <a href="https://commons.wikimedia.org/wiki/File:Image_of_Damba_festival_F.jpg" target="_blank" rel="noopener">Bash222</a> (CC BY-SA 4.0), Homowo by <a href="https://commons.wikimedia.org/wiki/File:Teshie_Homowo_61.jpg" target="_blank" rel="noopener">Agbleyjill</a> (CC BY-SA 4.0), Fetu Afahye by <a href="https://commons.wikimedia.org/wiki/File:Oguaa_Fetu_Afahye_2025_02.jpg" target="_blank" rel="noopener">Bright Kwame Ayisi</a> (CC BY-SA 4.0), Odwira by <a href="https://commons.wikimedia.org/wiki/File:Nsuorem_Rituals_During_Odwira_Festival.jpg" target="_blank" rel="noopener">Duncanoff</a> (CC BY-SA 4.0), Ngmayem by <a href="https://commons.wikimedia.org/wiki/File:Ngmayem_Festival_in_Ghana.jpg" target="_blank" rel="noopener">Fquasie</a> (CC BY-SA 4.0), Hogbetsotso by <a href="https://commons.wikimedia.org/wiki/File:Hogb1.jpg" target="_blank" rel="noopener">JY midey</a> (CC BY-SA 4.0), Fiok by <a href="https://commons.wikimedia.org/wiki/File:Fiok_11.jpg" target="_blank" rel="noopener">Christian Yakubu</a> (CC BY-SA 4.0), Akwasidae by <a href="https://commons.wikimedia.org/wiki/File:Ashanti_chief,_Kumasi,_Ghana.jpg" target="_blank" rel="noopener">Paul5263</a> (CC BY-SA 4.0). Full credits on the <a href="/credits.html">photo credits</a> page.</p>
       </div>
     </section>
@@ -826,6 +859,36 @@
     const esc = (v) => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     $('#pull-list').innerHTML = (nextAk ? `<li><span>${nextAk.getDate()} ${MONTHS[nextAk.getMonth()].slice(0, 3)}</span><div><b>Akwasidae</b>Manhyia Palace, Kumasi</div></li>` : '')
       + upcoming.map(f => `<li><span>${esc(f.short)}</span><div><b>${esc(f.name)}</b>${esc(f.place)}</div></li>`).join('');
+    /* ---------- The count spins when the band comes into view, then settles (once) ---------- */
+    const flaps = [...document.querySelectorAll('.flap')];
+    const show = (el, v) => el.querySelectorAll('b').forEach(b => { b.textContent = v; });
+    if (!reduce && 'IntersectionObserver' in window && flaps.length) {
+      flaps.forEach(f => show(f, 0));
+      /* A full round of digits and on to the number: quick at first, slowing as it settles */
+      const flipTo = (f, target, rounds) => {
+        const seq = [];
+        for (let d = 1; d <= rounds * 10 + target; d++) seq.push(d % 10);
+        let v = 0, i = 0;
+        const step = () => {
+          if (i === seq.length) return;
+          const next = seq[i], half = Math.round(18 + 62 * Math.pow(i / Math.max(1, seq.length - 1), 2.4));
+          const [t, b, ft, fb] = ['.t', '.b', '.ft', '.fb'].map(c => f.querySelector(c));
+          t.textContent = next; ft.textContent = v; fb.textContent = next; b.textContent = v;
+          f.style.setProperty('--half', half + 'ms');
+          f.classList.remove('go'); void f.offsetWidth; f.classList.add('go');
+          v = next; i++;
+          setTimeout(() => { b.textContent = v; f.classList.remove('go'); step(); }, half * 2 + 8);
+        };
+        step();
+      };
+      const io = new IntersectionObserver((entries) => {
+        if (!entries.some(e => e.isIntersecting)) return;
+        io.disconnect();
+        flaps.forEach((f, i) => flipTo(f, +f.dataset.digit, i + 1));
+      }, { threshold: .6 });
+      io.observe($('.flaps'));
+    }
+
     const pull = $('#pull'), pullBtn = $('#pull-btn');
     pullBtn.addEventListener('click', () => { const open = !pull.classList.contains('is-open'); pull.classList.toggle('is-open', open); pullBtn.setAttribute('aria-expanded', String(open)); pullBtn.textContent = open ? 'PUSH ME' : 'PULL ME'; });
   })();

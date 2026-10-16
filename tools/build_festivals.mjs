@@ -207,7 +207,9 @@ function listPage() {
   return fill(template, {
     url: listUrl, description: esc(description), ogImage: `${listUrl}img/fetu.webp`,
     jsonld: JSON.stringify(ld, null, 2).replace(/^/gm, '  ').replace(/<\//g, '<\\/'),
-    count: festivals.length, regionCount: new Set(festivals.map((f) => f.region).filter(Boolean)).size,
+    count: festivals.length,
+    flaps: String(festivals.length).split('').map((d) => `<span class="flap" data-digit="${d}"><b class="t">${d}</b><b class="b">${d}</b><b class="ft">${d}</b><b class="fb">${d}</b><i></i><i></i></span>`).join(''),
+    regionCount: new Set(festivals.map((f) => f.region).filter(Boolean)).size,
     base: BASE, robots: PROTOTYPE ? '  <meta name="robots" content="noindex">\n' : '', footer, list: list.trimEnd(),
     credits: `Photos from Wikimedia Commons: ${photos.join(', ')}. Full credits on the <a href="/credits.html">photo credits</a> page.`,
     data: JSON.stringify({ upcoming, akwasidae: ak ? { anchor: ak.recurring.anchor, every: ak.recurring.days, slug: ak.slug } : null }).replace(/<\//g, '<\\/'),
