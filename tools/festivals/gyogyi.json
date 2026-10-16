@@ -1,0 +1,89 @@
+{
+  "slug": "gyogyi",
+  "name": "Gyogyi",
+  "kind": "trad",
+  "month": 8,
+  "region": "Oti",
+  "card": {
+    "short": "Sep",
+    "when": "Usually September (the season runs August to November)",
+    "place": "The Akyode towns around Keri and Nkwanta",
+    "keeper": "The Akyode, with the chief priest of the Brukum stool",
+    "sum": "The Akyode yam festival: the stool blesses the new yam, chiefs swear to the chief priest, and the night is for dancing."
+  },
+  "metaTitle": "Gyogyi: The Akyode Yam Festival of Nkwanta South, Oti Region",
+  "metaDescription": "Gyogyi (Gyogyibele) is the yam festival of the Akyode people of Nkwanta South in the Oti Region: the Brukum stool blesses the new yam, oaths, feasting and dancing. Usually September.",
+  "ogTitle": "Gyogyi: the Akyode yam festival",
+  "subtitle": "The Akyode yam festival",
+  "answer": "Gyogyi, also called Gyogyibele, is the yam festival of the Akyode people of Nkwanta South in the Oti Region. Eating new yam is taboo until the chief priest of the Brukum stool has blessed it; then the stool is cleansed, the villages dance through the night, and the chiefs swear their oaths at the durbar. In 2023 it was held in September.",
+  "facts": [
+    [
+      "When",
+      "Usually September; sources give August to November"
+    ],
+    [
+      "Where",
+      "The Akyode towns of Nkwanta South, including Keri"
+    ],
+    [
+      "Kept by",
+      "The Akyode, with the chief priest of the Brukum stool"
+    ],
+    [
+      "Also called",
+      "Gyogyibele"
+    ]
+  ],
+  "schema": {
+    "description": "Yam festival of the Akyode people of Nkwanta South.",
+    "location": "Keri",
+    "locality": "Keri"
+  },
+  "sections": [
+    {
+      "id": "why",
+      "title": "Why the yam waits",
+      "html": "<p>By tradition the chief priest of the Brukum stool blesses the wild yam and turns it into the large tubers people farm, so nobody may eat new yam until he has blessed it.[[1]] The festival renews the blessing of the stool and the ancestors. It is also a time to settle disputes and give to the elderly, widows, orphans and others in need.[[1]]</p>"
+    },
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>On a day called Gekpaga the stool is cleansed and the festival date is announced, and the villages dance through the night. The next day a mashed yam dish, <i>gyofanya</i>, is carried to the durbar ground. The overall chief priest, the Gebunonowura, pours libation and offers it to the ancestors, then the divisional chiefs and sub-chiefs swear their oaths to him. Music and dancing run into the next day, and homage is paid at the ancestral shrines in the groves.[[1]]</p>\n<p>A day is set aside for the rites that welcome the new yam, followed by feasting. In 2023 the people of Keri held the festival in September, with awards for the best pupils in each class.[[2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> the Akyode towns, Keri among them, are in Nkwanta South Municipality. See the <a href=\"/regions/oti/\">Oti</a> page for places nearby.",
+        "<b>Food:</b> konkonte and yam fufu are festival dishes.",
+        "<b>Check the dates:</b> the traditional council sets them each year. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Gyogyi festival?",
+      "a": "The yam festival of the Akyode people of Nkwanta South in the Oti Region, also called Gyogyibele."
+    },
+    {
+      "q": "When is Gyogyi?",
+      "a": "Usually September; sources give a season from August to November."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Oti Region: the tradition and cultural heritage of Oti Region”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=516"
+    },
+    {
+      "cite": "Patience Tawiah, “Let us protect the cultural heritage and values of Akyode – Regent of Keri”",
+      "site": "Ghana News Agency",
+      "url": "https://gna.org.gh/2023/09/let-us-protect-the-cultural-heritage-and-values-of-akyode-regent-of-keri/",
+      "date": "21 September 2023"
+    }
+  ],
+  "cutout": "yam",
+  "checked": "2026-10-16"
+}

@@ -1,0 +1,83 @@
+{
+  "slug": "gidifon",
+  "name": "Gidifon",
+  "kind": "trad",
+  "month": 7,
+  "region": "Oti",
+  "card": {
+    "short": "Aug",
+    "when": "August to September",
+    "place": "The Adele towns around Tutukpene",
+    "keeper": "The Adele, with their chief priests",
+    "sum": "The Adele new yam festival: offerings of mashed yam on the mountain, then yam fufu and dancing at home."
+  },
+  "metaTitle": "Gidifon: The Adele New Yam Festival, Oti Region",
+  "metaDescription": "Gidifon is the new yam festival of the Adele people of Nkwanta South in the Oti Region: offerings to the ancestors, yam fufu, charity and dancing. August to September.",
+  "ogTitle": "Gidifon: the Adele new yam festival",
+  "subtitle": "The Adele new yam festival",
+  "answer": "Gidifon, which means “new yam”, is the yam festival of the Adele people of the Nkwanta South area in the Oti Region. Nobody in Adele land eats new yam until its rites are done. The chief priests take offerings of mashed yam to the ancestors, then each town feasts, gives to those in need and dances. It is held between August and September.",
+  "facts": [
+    [
+      "When",
+      "August to September"
+    ],
+    [
+      "Where",
+      "The Adele towns of Nkwanta South; the paramount seat is Tutukpene"
+    ],
+    [
+      "Kept by",
+      "The Adele and their chief priests"
+    ],
+    [
+      "Means",
+      "New yam"
+    ]
+  ],
+  "schema": {
+    "description": "New yam festival of the Adele people.",
+    "location": "Tutukpene",
+    "locality": "Tutukpene"
+  },
+  "sections": [
+    {
+      "id": "why",
+      "title": "Why the yam waits",
+      "html": "<p>New crops are believed to carry a power that belongs to the Efuroko stool and the ancestors, so eating new yam before the rites is taboo, and tradition holds that it brings calamity on anyone in Adele land, stranger or not.[[1]] The festival renews the blessing of the stool and the ancestors and gives thanks. It is also a time to deal with community matters and to give to orphans, the elderly, widows and others in need.[[1]]</p>"
+    },
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>The chief priests meet at Dadiase to set the date. They gather yams and climb to the shrine at Dikpogo, on a mountaintop, to honour the ancestors with a mashed yam called <i>ego</i> or <i>aposie</i>, in two colours: white for the living and red for the ancestors.[[1]]</p>\n<p>Back home they repeat the rite: they prepare aposie, pour libation, slaughter animals and make yam fufu, and the aposie is spread to every corner of the town. In the evening come the dances, among them ogyege, atrikpe and didutebye.[[1]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> the Adele towns are in the Nkwanta South area; the paramount seat is Tutukpene. See the <a href=\"/regions/oti/\">Oti</a> page for places nearby.",
+        "<b>New yam:</b> don’t eat new yam in Adele land before the rites are done.",
+        "<b>Check the dates:</b> the traditional council sets them each year. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Gidifon festival?",
+      "a": "The new yam festival of the Adele people of the Oti Region. Gidifon means new yam."
+    },
+    {
+      "q": "When is Gidifon?",
+      "a": "Between August and September."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Oti Region: the tradition and cultural heritage of Oti Region”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=516"
+    }
+  ],
+  "cutout": "yam",
+  "checked": "2026-10-16"
+}

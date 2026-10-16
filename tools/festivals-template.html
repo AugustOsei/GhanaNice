@@ -120,14 +120,9 @@
     .flap i:first-of-type { left: -.02em; } .flap i:last-of-type { right: -.02em; }
 
     .list { position: relative; z-index: 5; background: var(--paper); }
-    /* Coming up: worked out from today's date by the script below; hidden without it */
-    .coming { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px; margin: 22px 0 0; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .coming h2 { margin: 0; font-family: var(--display); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-    .coming ol { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 0; padding: 0; list-style: none; }
-    .coming li { display: flex; align-items: baseline; gap: 8px; font-size: .86rem; line-height: 1.3; }
-    .coming li span { font-family: var(--hand); color: var(--red); }
-    .coming a { border-bottom: 1px solid transparent; } .coming a:hover { border-color: currentColor; }
-    .coming li small { color: rgba(17,17,15,.65); font-size: .78rem; }
+    /* This month: the script tags today's month heading and adds a jump to it in the note */
+    .month-h .now { align-self: center; padding: 5px 10px 4px; border-radius: 99px; background: var(--ink); color: var(--yellow); font-family: Arial, Helvetica, sans-serif; font-size: .62rem; font-style: normal; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .list-note .now-link { display: block; margin-top: 6px; }
     .list-note { margin: 34px 0 0; font-family: var(--hand); font-style: italic; font-size: 1.05rem; }
     .list-note a, .suggest a:not(.suggest-btn) { border-bottom: 1px solid; }
     .suggest { margin: 80px 0 0; padding: clamp(24px, 4vw, 44px); border-radius: 4px; background: var(--yellow); }
@@ -218,8 +213,8 @@
     .sticky h2 { font-size: 2.6vw; letter-spacing: -.05em; text-transform: none; line-height: .95; }
     .month-h { letter-spacing: -.06em; text-transform: none; font-size: clamp(2.2rem, 4.6vw, 3.8rem); line-height: .85; }
     .band-text { font-size: 5vw; line-height: .88; letter-spacing: -.065em; text-transform: none; }
-    .hand, .sticky li, .print figcaption span, .month-h span, .coming li span { font-style: italic; }
-    .month-h span { font-size: 1rem; letter-spacing: 0; color: rgba(17,17,15,.65); }
+    .hand, .sticky li, .print figcaption span, .month-h span:not(.now) { font-style: italic; }
+    .month-h span:not(.now) { font-size: 1rem; letter-spacing: 0; color: rgba(17,17,15,.65); }
     .hand { font-size: 1.3vw; }
     .sticky li { font-size: 1.2vw; }
     @media (max-width: 760px) {
@@ -292,8 +287,7 @@
 
     <section class="list" id="festivals" aria-label="Festivals by month">
       <div class="list-in">
-        <p class="list-note">A growing list, not a complete one: most towns and traditional areas keep a festival of their own. Know one we haven’t listed? <a href="#suggest">Tell us about it</a>.</p>
-        <section class="coming" id="coming" aria-labelledby="h-coming" hidden><h2 id="h-coming">Coming up</h2><ol id="coming-list"></ol></section>
+        <p class="list-note" id="list-note">A growing list, not a complete one: most towns and traditional areas keep a festival of their own. Know one we haven’t listed? <a href="#suggest">Tell us about it</a>.</p>
         <div id="list">
 {{list}}
         </div>
@@ -346,7 +340,7 @@
       move();
     }
 
-    /* ---------- Dates worked out from today: the next Akwasidae, and what's on from this month ---------- */
+    /* ---------- Dates worked out from today: the next Akwasidae, and this month's heading ---------- */
     let nextAk = null;
     if (DATA.akwasidae) {
       const [y, m, d] = DATA.akwasidae.anchor.split('-').map(Number), start = new Date(y, m - 1, d).getTime();
@@ -354,13 +348,15 @@
       const when = document.querySelector(`#f-${DATA.akwasidae.slug} .facts li span`);
       if (when && nextAk) when.textContent = `Every six weeks; next on ${nextAk.getDate()} ${MONTHS[nextAk.getMonth()]}`;
     }
-    const upcoming = [];
-    for (let k = 0; k < 12 && upcoming.length < 3; k++) DATA.upcoming.filter(f => f.m === (M + k) % 12).forEach(f => upcoming.length < 3 && upcoming.push(f));
-    const esc = (v) => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-    const item = (when, slug, name, place) => `<li><span>${esc(when)}</span><a href="#f-${esc(slug)}"><b>${esc(name)}</b></a><small>${esc(place)}</small></li>`;
-    $('#coming-list').innerHTML = (nextAk ? item(`${nextAk.getDate()} ${MONTHS[nextAk.getMonth()].slice(0, 3)}`, DATA.akwasidae.slug, 'Akwasidae', 'Manhyia Palace, Kumasi') : '')
-      + upcoming.map(f => item(f.short, f.slug, f.name, f.place)).join('');
-    $('#coming').hidden = false;
+    const monthH = document.getElementById(`m-${M}`);
+    if (monthH) {
+      const tag = document.createElement('span');
+      tag.className = 'now'; tag.textContent = 'This month';
+      monthH.append(tag);
+      const jump = document.createElement('a');
+      jump.className = 'now-link'; jump.href = `#m-${M}`; jump.textContent = `It’s ${MONTHS[M]}: see what’s on this month ↓`;
+      $('#list-note').append(jump);
+    }
     /* ---------- The count spins when the band comes into view, then settles (once) ---------- */
     const flaps = [...document.querySelectorAll('.flap')];
     const show = (el, v) => el.querySelectorAll('b').forEach(b => { b.textContent = v; });

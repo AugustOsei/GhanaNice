@@ -1,0 +1,76 @@
+{
+  "slug": "ovazu",
+  "name": "Ovazu",
+  "kind": "trad",
+  "month": 10,
+  "region": "Oti",
+  "card": {
+    "short": "Nov",
+    "when": "At the fonio harvest, October to December",
+    "place": "The Akposo towns, Biakoye District",
+    "keeper": "The Akposo",
+    "sum": "The Akposo thanksgiving for the fonio harvest, to God and the seven principal Akposo gods."
+  },
+  "metaTitle": "Ovazu: The Akposo Fonio Harvest Festival, Oti Region",
+  "metaDescription": "Ovazu is the main harvest festival of the Akposo people of the Oti Region, giving thanks for the fonio crop. Held at the harvest, between October and December.",
+  "ogTitle": "Ovazu: the Akposo harvest festival",
+  "subtitle": "The Akposo harvest thanksgiving",
+  "answer": "Ovazu is the main harvest festival of the Akposo people of the Biakoye District in the Oti Region. It gives thanks for the fonio crop, called <i>ova</i>, to Uwolowu, the Almighty God, and to the seven principal Akposo gods. It is held at the harvest, between October and December.",
+  "facts": [
+    [
+      "When",
+      "At the fonio harvest, October to December"
+    ],
+    [
+      "Where",
+      "Akposo towns of the Biakoye District, including Akposokubi, Kabo, Oklabe, Alifi, Obeve and Okanease"
+    ],
+    [
+      "Kept by",
+      "The Akposo"
+    ],
+    [
+      "The crop",
+      "Fonio (ova)"
+    ]
+  ],
+  "schema": {
+    "description": "Akposo harvest festival giving thanks for the fonio crop.",
+    "location": "Akposo towns, Biakoye District"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What it is",
+      "html": "<p>Ovazu gives thanks for the fonio harvest, a small grain the Akposo call <i>ova</i>, to Uwolowu (Ayanuva), the Almighty God, and to the seven principal Akposo gods, the greatest of them Wetu.[[1]] It is kept in Akposokubi, Akposo Kabo, Oklabe, Alifi, Obeve (Asukawkaw), Okanease and Akloklowa.[[1]]</p>\n<p>The Akposo also keep a yam festival by clan and family, and smaller festivals for lesser gods; each of the seven gods has its own days of worship.[[1]]</p><p class=\"note\">Published accounts of Ovazu are short. If you know the festival, <a href=\"/contact/\">tell us</a> more and we’ll add it.</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> the Akposo towns are in the Biakoye District. See the <a href=\"/regions/oti/\">Oti</a> page for places nearby.",
+        "<b>Check the dates:</b> the traditional council sets them each year. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Ovazu festival?",
+      "a": "The main harvest festival of the Akposo people of the Oti Region, giving thanks for the fonio crop."
+    },
+    {
+      "q": "When is Ovazu?",
+      "a": "At the fonio harvest, between October and December."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Oti Region: the tradition and cultural heritage of Oti Region”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=516"
+    }
+  ],
+  "cutout": "bowl",
+  "checked": "2026-10-16"
+}

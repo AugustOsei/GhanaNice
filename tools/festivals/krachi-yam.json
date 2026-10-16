@@ -1,0 +1,80 @@
+{
+  "slug": "krachi-yam",
+  "name": "Krachi Yam Festival",
+  "kind": "trad",
+  "month": 8,
+  "region": "Oti",
+  "card": {
+    "short": "Sep",
+    "when": "September",
+    "place": "Kete Krachi",
+    "keeper": "The Krachi, led by the Krachiwura",
+    "sum": "Krachi and its yam-growing neighbours give thanks for the harvest, with masquerades and yam pounded in the open."
+  },
+  "metaTitle": "Krachi Yam Festival at Kete Krachi, Oti Region",
+  "metaDescription": "The Krachi Yam Festival brings Kete Krachi and its yam-growing neighbours together in September: a week of events, masquerades, open yam pounding and a durbar led by the Krachiwura.",
+  "ogTitle": "The Krachi Yam Festival",
+  "subtitle": "Thanks for the yam harvest",
+  "answer": "The Krachi Yam Festival is held each September at Kete Krachi in the Oti Region to welcome the new yam and give thanks for the harvest. It runs for a week of cultural and social events and ends with a durbar led by the Krachiwura, with masquerades and yam pounded in the open as a sign of a good harvest.",
+  "facts": [
+    [
+      "When",
+      "September; lasts a week"
+    ],
+    [
+      "Where",
+      "Kete Krachi, Krachi West, Oti Region"
+    ],
+    [
+      "Kept by",
+      "The Krachi, led by the Krachiwura"
+    ]
+  ],
+  "schema": {
+    "description": "Annual yam festival of the Krachi at Kete Krachi.",
+    "location": "Kete Krachi",
+    "locality": "Kete Krachi",
+    "organizer": "Krachi Traditional Council"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>The festival welcomes the new yam with a week of cultural and social events, ending in a durbar of chiefs and people led by the Krachiwura, Nana Mprah Besemuna III.[[1]] At the 2015 durbar there were masquerades and an open pounding of yam as a sign of a bumper harvest.[[2]]</p>\n<p>The Krachiwura has said the festival was set up to bring the Krachi and their yam-growing neighbours together to thank God for the harvest, alongside the older Nanaba festival rather than in place of it.[[2]]</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Kete Krachi is the capital of Krachi West. See the <a href=\"/regions/oti/\">Oti</a> page for places nearby.",
+        "<b>Check the dates:</b> the traditional council sets them each year. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Krachi Yam Festival?",
+      "a": "The annual yam festival of the Krachi at Kete Krachi in the Oti Region, ending with a durbar led by the Krachiwura."
+    },
+    {
+      "q": "When is the Krachi Yam Festival?",
+      "a": "In September."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Oti Region: the tradition and cultural heritage of Oti Region”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=516"
+    },
+    {
+      "cite": "Sebastian Syme, “Release land for infrastructure projects”",
+      "site": "Graphic Online",
+      "url": "https://www.graphic.com.gh/news/general-news/release-land-for-infrastructure-projects.html",
+      "date": "28 September 2015"
+    }
+  ],
+  "cutout": "yam",
+  "checked": "2026-10-16"
+}

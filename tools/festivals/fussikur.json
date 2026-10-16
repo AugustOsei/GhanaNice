@@ -1,0 +1,109 @@
+{
+  "slug": "fussikur",
+  "name": "Fussikur",
+  "kind": "trad",
+  "month": 1,
+  "region": "Oti",
+  "card": {
+    "short": "Feb",
+    "when": "Between February and March",
+    "place": "Bowiri Amanforo",
+    "keeper": "The chiefs and people of Bowiri",
+    "sum": "Bowiri remembers its journey from Moree: a week of rites, a climb to the old settlement and a grand durbar."
+  },
+  "metaTitle": "Fussikur: The Bowiri Migration Festival in the Oti Region",
+  "metaDescription": "Fussikur is the week-long festival of the Bowiri people of the Oti Region, remembering their migration from Moree. Held between February and March.",
+  "ogTitle": "Fussikur: the Bowiri festival",
+  "subtitle": "Bowiri remembers its journey",
+  "answer": "Fussikur is the festival of the Bowiri people of the Biakoye District in the Oti Region. It remembers their migration from their ancestral home at Moree, in today’s Central Region, to Bowiri Amanforo. It runs for a week between February and March, and ends with a grand durbar of chiefs and people.",
+  "facts": [
+    [
+      "When",
+      "Between February and March; lasts a week"
+    ],
+    [
+      "Where",
+      "Bowiri Amanforo, Biakoye District, Oti Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of Bowiri"
+    ],
+    [
+      "Also spelled",
+      "Fusikor"
+    ]
+  ],
+  "schema": {
+    "description": "Week-long festival of the Bowiri people remembering their migration from Moree.",
+    "location": "Bowiri Amanforo",
+    "locality": "Bowiri Amanforo"
+  },
+  "sections": [
+    {
+      "id": "days",
+      "title": "The week",
+      "days": [
+        {
+          "label": "First Friday",
+          "title": "Confinement",
+          "html": "Chiefs, queen mothers and priests go into confinement.[[1]]"
+        },
+        {
+          "label": "Tuesday",
+          "title": "Wailing",
+          "html": "A day of wailing for the dead.[[1]]"
+        },
+        {
+          "label": "Wednesday",
+          "title": "Sharing",
+          "html": "Traditional goods are shared out.[[1]]"
+        },
+        {
+          "label": "Thursday",
+          "title": "The old settlement",
+          "html": "A trip to the old settlement and the shrines on Mount Fortorkpa.[[1]]"
+        },
+        {
+          "label": "Second Friday",
+          "title": "The stools",
+          "html": "The black stools are cleansed and purified.[[1]]"
+        },
+        {
+          "label": "Saturday",
+          "title": "Grand durbar",
+          "html": "Each town and clan carries its divisional chief through the main streets in a palanquin, led by Asafo companies with drums, songs, dancing and musketry; the Omanhene’s palanquin comes last. The senior priest pours libation and opens the durbar, the chiefs and queen mothers pay homage to the Omanhene, and he gives his address to the state. Asafo companies dance to show the bravery of the Bowiri.[[1]]"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Bowiri is in the Biakoye District. See the <a href=\"/regions/oti/\">Oti</a> page for places nearby.",
+        "<b>Also in Bowiri:</b> <a href=\"/festivals/hyirebo/\">Hyirebo</a>, the festival of peace, in April.",
+        "<b>Check the dates:</b> the traditional council sets them each year. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Fussikur festival?",
+      "a": "The week-long festival of the Bowiri people of the Oti Region, remembering their migration from Moree to Bowiri Amanforo."
+    },
+    {
+      "q": "When is Fussikur?",
+      "a": "Between February and March each year."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Oti Region: the tradition and cultural heritage of Oti Region”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=516"
+    }
+  ],
+  "cutout": "drum",
+  "checked": "2026-10-16"
+}

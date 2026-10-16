@@ -192,7 +192,6 @@ function listPage() {
     const p = hasPage(f) && f.hero ? f.hero : f.card.thumb;
     return p ? `${esc(f.name)} by <a href="${esc(p.source)}" target="_blank" rel="noopener">${esc(p.author)}</a> (${esc(p.license)})` : null;
   }).filter(Boolean);
-  const upcoming = festivals.filter((f) => !f.recurring).map((f) => ({ slug: f.slug, name: f.name, place: f.card.place, short: f.card.short, m: f.month }));
   const ak = festivals.find((f) => f.recurring);
   const description = `${festivals.length} traditional festivals and cultural events across Ghana, January to December: where each happens, when it usually falls and who keeps it.`;
   const listUrl = `${SITE}${BASE}`;
@@ -212,7 +211,7 @@ function listPage() {
     regionSpan: ((n) => n === 16 ? 'all 16 of Ghana’s regions' : `${n} of Ghana’s 16 regions`)(new Set(festivals.map((f) => f.region).filter(Boolean)).size),
     base: BASE, robots: PROTOTYPE ? '  <meta name="robots" content="noindex">\n' : '', footer, list: list.trimEnd(),
     credits: `Photos from Wikimedia Commons: ${photos.join(', ')}. Full credits on the <a href="/credits.html">photo credits</a> page.`,
-    data: JSON.stringify({ upcoming, akwasidae: ak ? { anchor: ak.recurring.anchor, every: ak.recurring.days, slug: ak.slug } : null }).replace(/<\//g, '<\\/'),
+    data: JSON.stringify({ akwasidae: ak ? { anchor: ak.recurring.anchor, every: ak.recurring.days, slug: ak.slug } : null }).replace(/<\//g, '<\\/'),
   });
 }
 

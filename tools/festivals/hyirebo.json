@@ -1,0 +1,119 @@
+{
+  "slug": "hyirebo",
+  "name": "Hyirebo",
+  "kind": "trad",
+  "month": 3,
+  "region": "Oti",
+  "card": {
+    "short": "Apr",
+    "when": "The first week of April",
+    "place": "Bowiri Amanforo",
+    "keeper": "The chiefs and people of Bowiri Amanforo",
+    "sum": "A week of peace that closes the Bowiri year: river bathing at dawn, white clay and a durbar."
+  },
+  "metaTitle": "Hyirebo (Boriwiman): The Bowiri Festival of Peace, Oti Region",
+  "metaDescription": "Hyirebo, or the Boriwiman festival, is the week of peace that closes the year at Bowiri Amanforo in the Oti Region: wailing, feasting, white clay and a durbar. First week of April.",
+  "ogTitle": "Hyirebo: the Bowiri festival of peace",
+  "subtitle": "The festival of peace",
+  "answer": "Hyirebo, also called the Boriwiman festival, is the state festival of Bowiri Amanforo in the Biakoye District of the Oti Region. It celebrates peace and the sanctification of the state, and closes the traditional year. It is held in the first week of April.",
+  "facts": [
+    [
+      "When",
+      "The first week of April"
+    ],
+    [
+      "Where",
+      "Bowiri Amanforo, Biakoye District, Oti Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of Bowiri Amanforo"
+    ],
+    [
+      "Also called",
+      "Boriwiman festival"
+    ]
+  ],
+  "schema": {
+    "description": "Festival of peace that closes the traditional year at Bowiri Amanforo.",
+    "location": "Bowiri Amanforo",
+    "locality": "Bowiri Amanforo"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "Why Hyirebo",
+      "html": "<p>The ancestors left an existing Mmowere state to found a new one, and named the land Mmowere Amanforo, “the new state of Mmowere”. They set up Hyirebo to proclaim it, and it has been kept ever since, for peace, unity and the progress of the state.[[1]]</p>"
+    },
+    {
+      "id": "days",
+      "title": "The week",
+      "days": [
+        {
+          "label": "Sunday",
+          "title": "Homecoming",
+          "html": "People who live away come home.[[1]]"
+        },
+        {
+          "label": "Monday",
+          "title": "Work together",
+          "html": "Meetings and communal labour in every town.[[1]]"
+        },
+        {
+          "label": "Tuesday",
+          "title": "Great taboo day",
+          "html": "No heavy farm work; only family and clan meetings.[[1]]"
+        },
+        {
+          "label": "Wednesday",
+          "title": "Wailing",
+          "html": "Morning rites in every clan and wailing for fallen heroes and loved ones.[[1]]"
+        },
+        {
+          "label": "Thursday",
+          "title": "Feasting",
+          "html": "Families feast, and animals are slaughtered.[[1]]"
+        },
+        {
+          "label": "Friday",
+          "title": "White clay and the durbar",
+          "html": "At dawn families bathe in the river, women and children first, then smear white clay on their bodies. Clan and town processions come to the durbar ground with drums and festival songs, for speeches, an appeal for development funds and dancing until evening.[[1]]"
+        },
+        {
+          "label": "Sunday",
+          "title": "Thanksgiving",
+          "html": "An interdenominational thanksgiving service.[[1]]"
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Bowiri is in the Biakoye District. See the <a href=\"/regions/oti/\">Oti</a> page for places nearby.",
+        "<b>Also in Bowiri:</b> <a href=\"/festivals/fussikur/\">Fussikur</a>, the migration festival, between February and March.",
+        "<b>Check the dates:</b> the traditional council sets them each year. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Hyirebo festival?",
+      "a": "The festival of peace of Bowiri Amanforo in the Oti Region, which closes the traditional year."
+    },
+    {
+      "q": "When is Hyirebo?",
+      "a": "In the first week of April."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Oti Region: the tradition and cultural heritage of Oti Region”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=516"
+    }
+  ],
+  "cutout": "bowl",
+  "checked": "2026-10-16"
+}

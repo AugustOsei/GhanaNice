@@ -1,0 +1,87 @@
+{
+  "slug": "frikooso",
+  "name": "Frikooso Afahye",
+  "kind": "trad",
+  "month": 9,
+  "region": "Oti",
+  "card": {
+    "short": "Oct",
+    "when": "October",
+    "place": "Tapa Abotoase and the Tapa towns",
+    "keeper": "The chiefs and people of the Tapa Traditional Area",
+    "sum": "Tapa remembers the battle at Frikooso hill, where its people and their allies turned back an Asante army."
+  },
+  "metaTitle": "Frikooso Afahye: The Tapa Festival of the Oti Region",
+  "metaDescription": "Frikooso Afahye is the festival of the Tapa people of the Oti Region, remembering the battle at Frikooso hill near Tapa Abotoase and their ancestors’ sacrifice. Usually October.",
+  "ogTitle": "Frikooso Afahye: the Tapa festival",
+  "subtitle": "Tapa remembers Frikooso hill",
+  "answer": "Frikooso Afahye is the festival of the Akan-speaking Tapa people of the Biakoye District in the Oti Region, kept with their neighbours. It remembers the bravery and sacrifice of their ancestors at the battle of Frikooso, a low hill near Tapa Abotoase, the traditional capital. It is listed for October.",
+  "facts": [
+    [
+      "When",
+      "October"
+    ],
+    [
+      "Where",
+      "Tapa Abotoase and the Tapa towns, Biakoye District, Oti Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of the Tapa Traditional Area"
+    ],
+    [
+      "Also spelled",
+      "Frikoso Afahye"
+    ]
+  ],
+  "schema": {
+    "description": "Festival of the Tapa people remembering the battle of Frikooso.",
+    "location": "Tapa Abotoase",
+    "locality": "Tapa Abotoase"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "The story",
+      "html": "<p>As the Tapa tell it, an Asante army first came against them and was driven back with stones rolled down from their mountain. A larger army returned. The deciding battle was fought at Frikooso, a low hill about three kilometres north of Tapa Abotoase, by Tapa with Worawora, Buem, Bowiri, Asato and other allies. It was the bloodiest in Tapa history, and the allies won.[[1]]</p>\n<p>The festival honours the ancestors who fought and died for the land and its freedom.[[1]] The name Tapa itself comes from the flat-topped mountain where they first settled.[[1]]</p>"
+    },
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>Tapa Abotoase, the traditional capital, is known for the festival.[[2]] Published accounts do not describe its programme.</p><p class=\"note\">Published accounts of Frikooso Afahye are short. If you know the festival, <a href=\"/contact/\">tell us</a> more and we’ll add it.</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Tapa Abotoase is the traditional capital of the Tapa area, in the Biakoye District. See the <a href=\"/regions/oti/\">Oti</a> page for places nearby.",
+        "<b>Check the dates:</b> the traditional council sets them each year. Local radio and the national press carry the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Frikooso Afahye?",
+      "a": "The festival of the Tapa people of the Oti Region, remembering their ancestors’ victory at the battle of Frikooso hill."
+    },
+    {
+      "q": "When is Frikooso Afahye?",
+      "a": "It is listed for October."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Oti Region: the tradition and cultural heritage of Oti Region”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=516"
+    },
+    {
+      "cite": "“Tapa Abotoase”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tapa_Abotoase"
+    }
+  ],
+  "cutout": "umbrella",
+  "checked": "2026-10-16"
+}
