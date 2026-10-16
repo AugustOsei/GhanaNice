@@ -84,8 +84,8 @@ img, video { display: block; max-width: 100%; }
 /* Shared editorial headings */
 .section-heading { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 4vw; align-items: end; }
 .section-number { align-self: start; margin: 8px 0 0; font-size: .65rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-.section-heading h2, .share-copy h2 { margin: 0; font-size: clamp(4.2rem, 8.2vw, 9rem); line-height: .78; letter-spacing: -.085em; }
-.section-heading h2 em, .share-copy h2 em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; color: var(--red); }
+.section-heading h2, .share-copy h2, .home-fest h2 { margin: 0; font-size: clamp(4.2rem, 8.2vw, 9rem); line-height: .78; letter-spacing: -.085em; }
+.section-heading h2 em, .share-copy h2 em, .home-fest h2 em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; color: var(--red); }
 .section-deck { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.02rem; line-height: 1.45; }
 
 /* Region browser — calm, legible, and directly clickable. */
@@ -822,3 +822,80 @@ body.has-lightbox { overflow: hidden; }
 .info-main .partner-row a, .info-main .partners-cta a { border-bottom: 0; }
 .info-main .partners-cta a { text-decoration: underline; }
 .info-link-button { border: 0; border-bottom: 1px solid; padding: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+
+/* ==========================================================================
+   Region festivals: a plain list of the festivals filed under the region,
+   linked to their pages on /festivals/ (built by tools/build_regions.mjs).
+   ========================================================================== */
+.region-festivals { margin: 0; padding: 0; list-style: none; border-bottom: 1px solid var(--line); }
+.region-festival { display: grid; grid-template-columns: minmax(110px, .5fr) 2fr 1.2fr; gap: 28px; align-items: baseline; padding: 24px 0 26px; border-top: 1px solid var(--line); }
+.region-festival-month { color: var(--red); font-size: .62rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.region-festival h3 { margin: 0; font-size: clamp(1.35rem, 2.2vw, 2rem); line-height: 1; letter-spacing: -.05em; }
+.region-festival h3 a { border-bottom: 2px solid transparent; transition: border-color .2s; }
+.region-festival h3 a:hover, .region-festival h3 a:focus-visible { border-bottom-color: var(--yellow); }
+.region-festival div p { margin: 10px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: .98rem; line-height: 1.45; }
+.region-festival-when { margin: 0; font-size: .86rem; line-height: 1.45; }
+.region-festival-when span { display: block; margin-top: 4px; color: #55554f; }
+.region-festivals-all { margin: 28px 0 0; font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.region-festivals-all a { border-bottom: 2px solid var(--yellow); }
+
+@media (max-width: 980px) {
+  .region-festival { grid-template-columns: 1fr; gap: 10px; }
+}
+
+/* Home page festivals: a small version of the /festivals/ board (green paper, taped prints and
+   cut-outs that drift on scroll) that invites people in. Written by tools/build_festivals.mjs
+   between the festivals:home markers in index.html; its inline script sets --py and --pr. */
+.home-fest { position: relative; isolation: isolate; overflow: hidden; overflow: clip; display: flex; align-items: center; min-height: clamp(560px, 50vw, 780px); padding: clamp(80px, 9vw, 140px) clamp(20px, 4vw, 64px);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    radial-gradient(40vw 30vw at 20% 18%, rgba(255,255,255,.07), transparent 70%), radial-gradient(50vw 40vw at 80% 60%, rgba(0,0,0,.14), transparent 70%), #145c41; background-size: 200px, auto, auto; }
+.home-fest-paper { position: relative; z-index: 2; width: min(580px, 48vw); margin-left: 17vw; padding: clamp(28px, 3vw, 46px); background: var(--paper); box-shadow: -18px 24px 40px -20px rgba(0,0,0,.45); transform: rotate(-1deg);
+  clip-path: polygon(0 1.2%, 6% .4%, 13% 1.4%, 21% .2%, 30% 1.1%, 41% .3%, 52% 1.3%, 63% .2%, 74% 1%, 86% .1%, 100% .8%, 100% 100%, 0 100%); }
+.home-fest-kicker { margin: 0 0 12px; color: var(--red); font-size: .61rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.home-fest-intro { max-width: 46ch; margin: 18px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.05rem; line-height: 1.5; }
+.home-fest-cta { display: inline-block; margin-top: 24px; padding: 15px 22px; border-radius: 99px; background: var(--ink); color: var(--yellow); font-size: .66rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; transition: background .2s, color .2s; }
+.home-fest-cta:hover, .home-fest-cta:focus-visible { background: var(--red); color: var(--white); }
+.home-fest-cta:focus-visible { outline-color: var(--ink); }
+.home-fest-now { margin: 18px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: .92rem; line-height: 1.5; color: #4a4943; }
+.home-fest-now a { color: var(--ink); border-bottom: 1px solid; }
+.hf-layer { position: absolute; transform: translate3d(0, var(--py, 0px), 0) rotate(calc(var(--r, 0deg) + var(--pr, 0deg))); }
+.hf-print { z-index: 1; margin: 0; padding: 8px 8px 0; background: #fbf9f3; box-shadow: 0 2px 2px rgba(0,0,0,.12), 0 34px 50px -24px rgba(0,0,0,.6); }
+.hf-print img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: #d9d4c4; }
+.hf-print figcaption { display: flex; justify-content: space-between; gap: 10px; padding: 8px 2px 10px; font-family: Georgia, 'Times New Roman', serif; font-size: .82rem; line-height: 1.15; }
+.hf-print figcaption small { align-self: end; color: rgba(17,17,15,.6); font-family: Arial, Helvetica, sans-serif; font-size: .58rem; white-space: nowrap; }
+.hf-tape { position: absolute; z-index: 2; top: -12px; left: 32%; width: 36%; height: 26px; background: rgba(241, 238, 229, .7); box-shadow: 0 1px 2px rgba(0,0,0,.1); transform: rotate(-4deg);
+  clip-path: polygon(0 10%, 3% 0, 7% 9%, 11% 0, 100% 0, 97% 14%, 100% 30%, 97% 48%, 100% 66%, 97% 84%, 100% 100%, 0 100%, 3% 80%, 0 60%, 3% 40%, 0 22%); }
+.hf-fiok { right: 2vw; top: 7%; width: clamp(230px, 27vw, 420px); --r: 5deg; }
+.hf-kente { right: 12vw; bottom: 4%; width: clamp(210px, 22vw, 350px); --r: -7deg; }
+.hf-kente .hf-tape { left: 12%; transform: rotate(6deg); }
+.hf-fetu { left: 1.5vw; bottom: 8%; width: clamp(170px, 15vw, 260px); --r: -11deg; }
+.hf-fetu .hf-tape { left: 50%; transform: rotate(9deg); }
+.hf-fetu figcaption { flex-direction: column; gap: 3px; }
+.hf-fetu figcaption small { align-self: start; }
+.hf-cutout { z-index: 3; pointer-events: none; filter: drop-shadow(0 14px 12px rgba(0,0,0,.35)); }
+.hf-cutout svg { display: block; width: 100%; height: auto; overflow: visible; }
+.hf-drum { left: 5vw; top: 7%; width: clamp(80px, 9vw, 140px); --r: 12deg; }
+.hf-umbrella { right: 31vw; top: 5%; width: clamp(70px, 8vw, 124px); --r: -10deg; }
+.hf-torch { left: 9vw; top: 42%; width: clamp(50px, 5.5vw, 86px); --r: 14deg; }
+.hf-yam { right: 3vw; bottom: 6%; width: clamp(80px, 9vw, 140px); --r: -8deg; }
+@media (max-width: 1100px) {
+  .home-fest-paper { margin-left: 6vw; width: min(560px, 56vw); }
+  .hf-fetu, .hf-torch { display: none; }
+  .hf-drum { left: 2vw; top: 3%; }
+  .hf-kente { right: 4vw; }
+}
+@media (max-width: 680px) {
+  .home-fest { display: block; min-height: 0; padding: 250px 16px 240px; }
+  .home-fest-paper { width: auto; margin: 0; padding: 26px 22px 28px; transform: rotate(-.6deg); }
+  .home-fest h2 { font-size: 16vw; }
+  .hf-fiok { top: 20px; right: -10vw; width: 58vw; }
+  .hf-kente { right: -6vw; bottom: 28px; width: 66vw; }
+  .hf-print figcaption { flex-direction: column; gap: 3px; font-size: .74rem; }
+  .hf-print figcaption small { align-self: start; }
+  .hf-drum { left: 6vw; top: 30px; width: 22vw; }
+  .hf-umbrella { display: none; }
+  .hf-yam { left: 5vw; right: auto; bottom: 100px; width: 22vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-fest-cta { transition: none; }
+}

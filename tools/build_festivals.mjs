@@ -2,8 +2,9 @@
 
    Each JSON file is one festival or cultural event: its card on the list page, and (when it has
    "sections") its own page built from tools/festival-template.html. The list page comes from
-   tools/festivals-template.html. Everything a reader or a search engine needs is in the HTML; the
-   only script on the list page works out the "Coming up" dates from today's date.
+   tools/festivals-template.html, and the festivals section of the home page (dist/index.html,
+   between its festivals:home markers) from the same data. Everything a reader or a search engine needs
+   is in the HTML; the scripts only add motion and the parts that depend on today's date.
 
    The pages live under BASE. PROTOTYPE adds noindex (for a trial copy elsewhere); tools/build_regions.mjs
    puts the live pages in the sitemap and tools/smoke.mjs runs this with --check.
@@ -215,8 +216,90 @@ function listPage() {
   });
 }
 
+/* ---------- The home page section ---------- */
+/* dist/index.html is written by hand; this fills in only the block between the two markers: a
+   small version of the /festivals/ board that invites people in. It reads fully without
+   JavaScript; the inline script drifts the photos and cut-outs while the section is on screen
+   (not with reduced motion) and adds a quiet line naming this month's festivals. The photos are
+   the list header's copies in dist/festivals/img/ (credited in CREDITS.md), lazy-loaded. */
+const HOME_START = '<!-- festivals:home (written by tools/build_festivals.mjs) -->';
+const HOME_END = '<!-- /festivals:home -->';
+const HOME_PRINTS = [
+  ['fiok', 'hf-fiok', -0.08, 3],
+  ['fetu', 'hf-fetu', 0.06, -2],
+  ['agbamevoza', 'hf-kente', -0.05, 2],
+];
+const HOME_CUTOUTS = [['drum', 'hf-drum', -0.22, 8], ['umbrella', 'hf-umbrella', -0.16, -6], ['torch', 'hf-torch', 0.14, 6], ['yam', 'hf-yam', 0.2, -5]];
+const homeLink = (f) => hasPage(f) ? `${BASE}${f.slug}/` : `${BASE}#f-${f.slug}`;
+function homeBlock() {
+  const regions = new Set(festivals.map((f) => f.region).filter(Boolean)).size;
+  const span = regions === 16 ? 'all 16 regions' : `${regions} of Ghana’s 16 regions`;
+  /* This month's line: festivals with a this-year note first, then the better-sourced ones. */
+  const rank = (f) => (f.sticky ? 100 : 0) + (f.sources || []).length;
+  const months = MONTHS.map((_, m) => festivals.filter((f) => f.month === m).sort((a, b) => rank(b) - rank(a)).map((f) => [f.name, homeLink(f)]));
+  const prints = HOME_PRINTS.map(([slug, cls, speed, spin]) => {
+    const f = festivals.find((x) => x.slug === slug);
+    if (!f?.hero || !fs.existsSync(path.join(out, 'img', `${slug}.webp`))) return '';
+    return `<figure class="hf-layer hf-print ${cls}" data-speed="${speed}" data-spin="${spin}"><span class="hf-tape" aria-hidden="true"></span><img src="${BASE}img/${slug}.webp" alt="${esc(f.hero.alt)}" width="900" height="600" loading="lazy" decoding="async"><figcaption><span>${esc(f.name)} · ${esc(f.card.place)}</span><small>${esc(f.hero.author)} · ${esc(f.hero.license)}</small></figcaption></figure>`;
+  }).filter(Boolean);
+  const cutouts = HOME_CUTOUTS.map(([name, cls, speed, spin]) => `<div class="hf-layer hf-cutout ${cls}" data-speed="${speed}" data-spin="${spin}" aria-hidden="true"><svg viewBox="0 0 200 200"><g filter="url(#hf-cut)">${CUTOUTS[name]}</g></svg></div>`);
+  return `${HOME_START}
+    <!-- Festivals: a small version of the /festivals/ board, inviting people in. -->
+    <section class="home-fest" id="festivals" aria-labelledby="home-fest-heading">
+      <div class="home-fest-paper">
+        <p class="home-fest-kicker">Festivals and cultural events</p>
+        <h2 id="home-fest-heading">Festivals,<br><em>all year.</em></h2>
+        <p class="home-fest-intro">Yam harvests, fire festivals, regattas and durbars of chiefs under state umbrellas. We keep a growing list of ${festivals.length} traditional festivals and cultural events across ${span}, month by month: where each one happens, when it usually falls and who keeps it.</p>
+        <a class="home-fest-cta" href="${BASE}">See the festivals →</a>
+        <p class="home-fest-now" data-home-fest-now hidden></p>
+      </div>
+      ${prints.join('\n      ')}
+      ${cutouts.join('\n      ')}
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="hf-cut" x="-15%" y="-15%" width="130%" height="130%"><feMorphology in="SourceAlpha" operator="dilate" radius="6" result="grow"/><feFlood flood-color="#fbf9f3"/><feComposite in2="grow" operator="in" result="edge"/><feMerge><feMergeNode in="edge"/><feMergeNode in="SourceGraphic"/></feMerge></filter></svg>
+    </section>
+    <script type="application/json" id="home-fest-data">${JSON.stringify({ months }).replace(/<\//g, '<\\/')}</script>
+    <script>
+      (function () {
+        var section = document.getElementById('festivals');
+        var MONTHS = ${JSON.stringify(MONTHS)};
+        var m = new Date().getMonth(), list = JSON.parse(document.getElementById('home-fest-data').textContent).months[m];
+        var esc = function (v) { return String(v).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+        if (list.length) {
+          var names = list.slice(0, 3).map(function (f) { return '<a href="' + esc(f[1]) + '">' + esc(f[0]) + '</a>'; });
+          var more = list.length - names.length;
+          var now = section.querySelector('[data-home-fest-now]');
+          now.innerHTML = 'This ' + MONTHS[m] + ': ' + (more ? names.join(', ') + ' and <a href="${BASE}#m-' + m + '">' + more + ' more</a>' : names.length > 1 ? names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1] : names[0]) + '.';
+          now.hidden = false;
+        }
+        /* The photos and cut-outs drift at their own speeds while the section is on screen. */
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var layers = [].slice.call(section.querySelectorAll('[data-speed]')), raf = 0;
+        var move = function () {
+          raf = 0;
+          var r = section.getBoundingClientRect();
+          if (r.top > innerHeight || r.bottom < 0) return;
+          var y = innerHeight / 2 - (r.top + r.height / 2);
+          layers.forEach(function (l) {
+            l.style.setProperty('--py', (y * l.dataset.speed).toFixed(1) + 'px');
+            l.style.setProperty('--pr', (y / 1000 * l.dataset.spin).toFixed(2) + 'deg');
+          });
+        };
+        addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(move); }, { passive: true });
+        move();
+      })();
+    </script>
+    ${HOME_END}`;
+}
+const homeFile = path.join(root, 'dist/index.html');
+const homeHtml = (() => {
+  const current = fs.readFileSync(homeFile, 'utf8');
+  const a = current.indexOf(HOME_START), b = current.indexOf(HOME_END);
+  if (a < 0 || b < a) throw new Error('dist/index.html has no festivals:home markers');
+  return current.slice(0, a) + homeBlock() + current.slice(b + HOME_END.length);
+})();
+
 /* ---------- Write (or check) ---------- */
-const pages = [[path.join(out, 'index.html'), listPage()], ...festivals.filter(hasPage).map((f) => [path.join(out, f.slug, 'index.html'), festivalPage(f)])];
+const pages = [[path.join(out, 'index.html'), listPage()], ...festivals.filter(hasPage).map((f) => [path.join(out, f.slug, 'index.html'), festivalPage(f)]), [homeFile, homeHtml]];
 let stale = 0;
 for (const [file, html] of pages) {
   const current = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : null;
@@ -226,4 +309,4 @@ for (const [file, html] of pages) {
   fs.writeFileSync(file, html);
 }
 if (checkOnly && stale) process.exit(1);
-console.log(`${checkOnly ? 'Checked' : 'Wrote'} the festivals list and ${pages.length - 1} festival pages (${festivals.length} festivals in all).`);
+console.log(`${checkOnly ? 'Checked' : 'Wrote'} the festivals list, the home page section and ${pages.length - 2} festival pages (${festivals.length} festivals in all).`);

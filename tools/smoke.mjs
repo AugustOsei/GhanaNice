@@ -129,7 +129,7 @@ analyticsPages.forEach((file) => {
 
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=50',
+    'styles.css?v=53',
     'data.js?v=9',
     'app.js?v=32',
     'tip-form.js?v=5',
@@ -138,16 +138,16 @@ const htmlExpectations = {
     'id="region-reader" role="dialog"',
   ],
   'tools/region-template.html': [
-    '/styles.css?v=50',
+    '/styles.css?v=53',
     '/data.js?v=9',
     '/region.js?v=12',
     '/tip-form.js?v=5',
     '/footer.js?v=3',
   ],
-  'dist/credits.html': ['styles.css?v=50'],
-  'dist/404.html': ['styles.css?v=50'],
+  'dist/credits.html': ['styles.css?v=53'],
+  'dist/404.html': ['styles.css?v=53'],
   'dist/travel-directory.html': [
-    'styles.css?v=50',
+    'styles.css?v=53',
     'travel-directory.css?v=16',
     'config.js?v=5',
     'travel-directory-data.js?v=4',
@@ -177,6 +177,8 @@ Object.entries(htmlExpectations).forEach(([file, expectations]) => {
 });
 
 /* The static region pages must match data.js, media.js and the template. */
+const festivalData = fs.readdirSync(path.join(root, 'tools/festivals')).filter((f) => f.endsWith('.json'))
+  .map((f) => JSON.parse(read(`tools/festivals/${f}`)));
 regions?.forEach((region) => {
   const file = `dist/regions/${region.slug}/index.html`;
   if (!fs.existsSync(path.join(root, file))) return check(false, `${file} is missing`);
@@ -187,6 +189,11 @@ regions?.forEach((region) => {
     const local = reference.endsWith('/') ? `${reference}index.html` : reference;
     check(fs.existsSync(path.join(dist, local)), `${file} references missing file: ${reference}`);
   });
+  /* Each region page lists every festival filed under it, linked to its page. */
+  const filed = festivalData.filter((f) => f.region === region.name && f.sections?.length);
+  check(filed.length > 0, `${region.name} has no festivals`);
+  filed.forEach((f) => check(html.includes(`<a href="/festivals/${f.slug}/">`), `${file} does not link its festival ${f.name}`));
+  check(html.includes('href="/festivals/">All festivals and cultural events'), `${file} does not link to all festivals`);
 });
 /* The plain pages (About, Contact, Privacy) must match their sources too. */
 ['about', 'contact', 'privacy'].forEach((name) => {
@@ -199,8 +206,6 @@ regions?.forEach((region) => {
 });
 /* The festivals list and festival pages (tools/build_festivals.mjs): live, indexable, linked from
    every nav, and with no broken local links or photos. */
-const festivalData = fs.readdirSync(path.join(root, 'tools/festivals')).filter((f) => f.endsWith('.json'))
-  .map((f) => JSON.parse(read(`tools/festivals/${f}`)));
 const sitemapXml = read('dist/sitemap.xml');
 const festivalPages = [['festivals/', 'dist/festivals/index.html'],
   ...festivalData.filter((f) => f.sections?.length).map((f) => [`festivals/${f.slug}/`, `dist/festivals/${f.slug}/index.html`])];

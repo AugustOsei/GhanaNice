@@ -22,7 +22,7 @@
   <meta property="og:image" content="{{ogImage}}">
   <meta property="og:image:alt" content="{{ogImageAlt}}">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/styles.css?v=50">
+  <link rel="stylesheet" href="/styles.css?v=53">
   <script type="application/ld+json">{{jsonLd}}</script>
   <!-- Google Analytics (analytics.js); a browser can turn it off on /privacy/. -->
   <script src="/analytics.js?v=1"></script>
@@ -100,6 +100,17 @@
       <ul class="visit-list" id="visit-list">
 {{visitItems}}
       </ul>
+    </section>
+
+    <section class="region-block" id="festivals" aria-labelledby="festivals-heading">
+      <div class="region-block-head">
+        <h2 id="festivals-heading">Festivals in<br><em>{{name}}.</em></h2>
+        <p>Festivals and cultural events kept here, in calendar order. Many dates move from year to year, so each festival’s page has what we know about when.</p>
+      </div>
+      <ul class="region-festivals">
+{{festivalItems}}
+      </ul>
+      <p class="region-festivals-all"><a href="/festivals/">All festivals and cultural events →</a></p>
     </section>
 
     <section class="region-block" id="community" aria-labelledby="community-heading">

@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" as="image" href="assets/maps/ghana-mask.svg" crossorigin>
   <link rel="preload" as="image" href="assets/real/jamestown-lighthouse-800.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=50">
+  <link rel="stylesheet" href="styles.css?v=53">
   <!-- Google Analytics (analytics.js); a browser can turn it off on /privacy/. -->
   <script src="/analytics.js?v=1"></script>
 </head>
@@ -188,6 +188,57 @@
       </ol>
       <p class="visit-source">Visits, not unique visitors. Together the ten drew 1,377,588 visits, 77% of all domestic tourism visits. The published summary gives figures for the top five only; 6–10 are shown in rank order. Source: Ghana Tourism Authority, 2025 Tourism Report, as reported by <a href="https://www.graphic.com.gh/news/general-news/ghana-news-1-31-million-international-tourists-visit-ghana-in-2025-tourism-generates-4-34bn.html" target="_blank" rel="noopener">Graphic Online ↗</a> and <a href="https://thechronicle.com.gh/top-10-most-visited-tourist-sites-in-ghana-in-2025/" target="_blank" rel="noopener">The Chronicle ↗</a></p>
     </section>
+    <!-- festivals:home (written by tools/build_festivals.mjs) -->
+    <!-- Festivals: a small version of the /festivals/ board, inviting people in. -->
+    <section class="home-fest" id="festivals" aria-labelledby="home-fest-heading">
+      <div class="home-fest-paper">
+        <p class="home-fest-kicker">Festivals and cultural events</p>
+        <h2 id="home-fest-heading">Festivals,<br><em>all year.</em></h2>
+        <p class="home-fest-intro">Yam harvests, fire festivals, regattas and durbars of chiefs under state umbrellas. We keep a growing list of 46 traditional festivals and cultural events across all 16 regions, month by month: where each one happens, when it usually falls and who keeps it.</p>
+        <a class="home-fest-cta" href="/festivals/">See the festivals →</a>
+        <p class="home-fest-now" data-home-fest-now hidden></p>
+      </div>
+      <figure class="hf-layer hf-print hf-fiok" data-speed="-0.08" data-spin="3"><span class="hf-tape" aria-hidden="true"></span><img src="/festivals/img/fiok.webp" alt="Young Builsa warriors in horned headdresses with traditional weapons at Fiok" width="900" height="600" loading="lazy" decoding="async"><figcaption><span>Fiok · Sandema</span><small>Christian Yakubu · CC BY-SA 4.0</small></figcaption></figure>
+      <figure class="hf-layer hf-print hf-fetu" data-speed="0.06" data-spin="-2"><span class="hf-tape" aria-hidden="true"></span><img src="/festivals/img/fetu.webp" alt="Red and gold state umbrellas over a chief in a palanquin at Fetu Afahye" width="900" height="600" loading="lazy" decoding="async"><figcaption><span>Fetu Afahye · Cape Coast</span><small>Bright Kwame Ayisi · CC BY-SA 4.0</small></figcaption></figure>
+      <figure class="hf-layer hf-print hf-kente" data-speed="-0.05" data-spin="2"><span class="hf-tape" aria-hidden="true"></span><img src="/festivals/img/agbamevoza.webp" alt="Chiefs and elders in bright kente seated at the Agbamevoza durbar" width="900" height="600" loading="lazy" decoding="async"><figcaption><span>Agbamevoza · Agotime-Kpetoe</span><small>JY midey · CC BY-SA 4.0</small></figcaption></figure>
+      <div class="hf-layer hf-cutout hf-drum" data-speed="-0.22" data-spin="8" aria-hidden="true"><svg viewBox="0 0 200 200"><g filter="url(#hf-cut)"><path d="M64 62 L136 62 L124 186 L76 186Z" fill="#9c5a2c"/><path d="M66 82 L134 82 L133 92 L67 92Z M72 150 L128 150 L127 160 L73 160Z" fill="#df4a32"/><ellipse cx="100" cy="62" rx="36" ry="10" fill="#efe2c4"/><path d="M70 94 L82 148 L94 94 L106 148 L118 94 L130 148" fill="none" stroke="#3b2414" stroke-width="3"/><path d="M164 14 L116 60 M36 14 L84 60" stroke="#6b4423" stroke-width="7" stroke-linecap="round"/></g></svg></div>
+      <div class="hf-layer hf-cutout hf-umbrella" data-speed="-0.16" data-spin="-6" aria-hidden="true"><svg viewBox="0 0 200 200"><g filter="url(#hf-cut)"><path d="M100 43 L100 194" stroke="#5a3a1e" stroke-width="6" stroke-linecap="round"/><path d="M38 104 Q100 16 164 104Z" fill="#df4a32"/><path d="M38 104 q7 13 14 0 q7 13 14 0 q7 13 14 0 q7 13 14 0 q7 13 14 0 q7 13 14 0 q7 13 14 0 q7 13 14 0 q7 13 14 0Z" fill="#f5c842"/><path d="M58 80 Q100 40 144 80" stroke="#f5c842" stroke-width="6" fill="none"/><circle cx="100" cy="36" r="8" fill="#f5c842"/></g></svg></div>
+      <div class="hf-layer hf-cutout hf-torch" data-speed="0.14" data-spin="6" aria-hidden="true"><svg viewBox="0 0 200 200"><g filter="url(#hf-cut)"><path d="M94 192 L101 112 L115 112 L107 192Z" fill="#8a5a33"/><path d="M108 114 C76 94 92 62 102 38 C107 60 118 56 117 32 C138 60 140 98 108 114Z" fill="#f08a24"/><path d="M108 106 C95 94 101 78 107 66 C112 80 123 86 108 106Z" fill="#f5c842"/></g></svg></div>
+      <div class="hf-layer hf-cutout hf-yam" data-speed="0.2" data-spin="-5" aria-hidden="true"><svg viewBox="0 0 200 200"><g filter="url(#hf-cut)"><path d="M70 92 C72 70 110 62 146 66 C168 68 172 82 162 92 C148 102 108 104 84 102 C76 101 70 98 70 92Z" fill="#7a4b26"/><path d="M34 128 C34 98 86 86 138 90 C170 92 182 110 168 126 C150 142 80 146 50 142 C40 140 34 134 34 128Z" fill="#8f5a2e"/><ellipse cx="40" cy="128" rx="8" ry="15" fill="#f3ead2"/><path d="M150 70 C160 50 176 44 188 50 C178 58 168 66 150 70Z" fill="#5c8a3a"/></g></svg></div>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="hf-cut" x="-15%" y="-15%" width="130%" height="130%"><feMorphology in="SourceAlpha" operator="dilate" radius="6" result="grow"/><feFlood flood-color="#fbf9f3"/><feComposite in2="grow" operator="in" result="edge"/><feMerge><feMergeNode in="edge"/><feMergeNode in="SourceGraphic"/></feMerge></filter></svg>
+    </section>
+    <script type="application/json" id="home-fest-data">{"months":[[["Winneba Masquerade","/festivals/winneba-masquerade/"],["Fao","/festivals/fao/"],["Addae Tuntum","/festivals/addae-tuntum/"],["Edina Bronya","/festivals/edina-bronya/"],["Paragbiele","/festivals/paragbiele/"]],[["Nyigbla","/festivals/nyigbla/"],["Fussikur","/festivals/fussikur/"]],[["Kpledjoo","/festivals/kpledjoo/"],["Apoo","/festivals/apoo/"]],[["Kwahu Easter","/festivals/kwahu/"],["Jintigi","/festivals/jintigi/"],["Hyirebo","/festivals/hyirebo/"]],[["Aboakyer","/festivals/aboakyer/"]],[["Bugum","/festivals/bugum/"],["Ohum","/festivals/ohum/"]],[["Bakatue","/festivals/bakatue/"],["Asafotufiam","/festivals/asafotufiam/"],["Kundum","/festivals/kundum/"]],[["Homowo","/festivals/homowo/"],["Agbamevoza","/festivals/agbamevoza/"],["Chale Wote","/festivals/chale-wote/"],["Damba","/festivals/damba/"],["Damba in Nalerigu","/festivals/damba-nalerigu/"],["Yaa Asantewaa Festival","/festivals/yaa-asantewaa/"],["Gidifon","/festivals/gidifon/"]],[["Fetu Afahye","/festivals/fetu/"],["Asogli Te Za","/festivals/asogli-te-za/"],["Odwira","/festivals/odwira/"],["Adikanfo","/festivals/adikanfo/"],["Gyogyi","/festivals/gyogyi/"],["Kobine","/festivals/kobine/"],["Krachi Yam Festival","/festivals/krachi-yam/"]],[["Ngmayem","/festivals/ngmayem/"],["Eluo","/festivals/eluo/"],["Godigbeza","/festivals/godigbeza/"],["Fofie","/festivals/fofie/"],["Frikooso Afahye","/festivals/frikooso/"],["Sasadu","/festivals/sasadu/"],["Buem Lilu","/festivals/buem-lilu/"]],[["Hogbetsotso","/festivals/hogbetsotso/"],["Adekyem","/festivals/adekyem/"],["Akwantukese","/festivals/akwantukese/"],["Ovazu","/festivals/ovazu/"]],[["Fiok","/festivals/fiok/"],["Kwafie","/festivals/kwafie/"]]]}</script>
+    <script>
+      (function () {
+        var section = document.getElementById('festivals');
+        var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        var m = new Date().getMonth(), list = JSON.parse(document.getElementById('home-fest-data').textContent).months[m];
+        var esc = function (v) { return String(v).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+        if (list.length) {
+          var names = list.slice(0, 3).map(function (f) { return '<a href="' + esc(f[1]) + '">' + esc(f[0]) + '</a>'; });
+          var more = list.length - names.length;
+          var now = section.querySelector('[data-home-fest-now]');
+          now.innerHTML = 'This ' + MONTHS[m] + ': ' + (more ? names.join(', ') + ' and <a href="/festivals/#m-' + m + '">' + more + ' more</a>' : names.length > 1 ? names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1] : names[0]) + '.';
+          now.hidden = false;
+        }
+        /* The photos and cut-outs drift at their own speeds while the section is on screen. */
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var layers = [].slice.call(section.querySelectorAll('[data-speed]')), raf = 0;
+        var move = function () {
+          raf = 0;
+          var r = section.getBoundingClientRect();
+          if (r.top > innerHeight || r.bottom < 0) return;
+          var y = innerHeight / 2 - (r.top + r.height / 2);
+          layers.forEach(function (l) {
+            l.style.setProperty('--py', (y * l.dataset.speed).toFixed(1) + 'px');
+            l.style.setProperty('--pr', (y / 1000 * l.dataset.spin).toFixed(2) + 'deg');
+          });
+        };
+        addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(move); }, { passive: true });
+        move();
+      })();
+    </script>
+    <!-- /festivals:home -->
     <!-- The way into the travel directory from the home page. Each tile opens the directory
          already filtered to that category. -->
     <section class="directory-teaser" aria-labelledby="directory-teaser-heading">

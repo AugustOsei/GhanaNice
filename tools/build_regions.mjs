@@ -26,6 +26,11 @@ function load(file, key) {
 const regions = load('data.js', 'GHANA_REGIONS');
 const media = load('media.js', 'GHANA_MEDIA');
 const template = fs.readFileSync(path.join(root, 'tools/region-template.html'), 'utf8');
+/* The festivals (tools/build_festivals.mjs): each region page lists the ones filed under it, and
+   the sitemap lists every festival with its own page. */
+const festivals = fs.readdirSync(path.join(root, 'tools/festivals')).filter(f => f.endsWith('.json')).sort()
+  .map(f => JSON.parse(fs.readFileSync(path.join(root, 'tools/festivals', f), 'utf8')))
+  .filter(f => Array.isArray(f.sections) && f.sections.length > 0);
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 /* The photos in assets/real/ ship with smaller WebP copies (tools/media/resize_local.py). */
@@ -73,6 +78,14 @@ function visitItem(region, item) {
     .filter(([key]) => info[key])
     .map(([key, label]) => `<a href="${esc(info[key])}" target="_blank" rel="noopener">${label} ↗</a>`);
   return `        <li class="visit-item${photo ? ' has-image' : ''}">${figure}<div class="visit-body"><h3>${esc(item.name)}</h3><p>${esc(item.note)}</p>${links.length ? `<p class="visit-links">${links.join('')}</p>` : ''}</div></li>`;
+}
+
+/* In calendar order, as on /festivals/: dated festivals by month, the every-six-weeks ones last. */
+function festivalItems(region) {
+  return festivals.filter(f => f.region === region.name)
+    .sort((a, b) => (a.recurring ? 12 : a.month) - (b.recurring ? 12 : b.month) || a.name.localeCompare(b.name))
+    .map(f => `        <li class="region-festival"><span class="region-festival-month">${esc(f.card.short)}</span><div><h3><a href="/festivals/${esc(f.slug)}/">${esc(f.name)}</a></h3><p>${esc(f.card.sum)}</p></div><p class="region-festival-when">${esc(f.card.when)}<span>${esc(f.card.place)}</span></p></li>`)
+    .join('\n');
 }
 
 function render(region, index) {
@@ -139,6 +152,7 @@ function render(region, index) {
     galleryCredits: gallery.map(photo => `          <li><span>${esc(photo.caption)}. </span>${creditLine(photo, '')}</li>`).join('\n'),
     galleryData: json(galleryData),
     visitItems: region.visit.map(item => visitItem(region, item)).join('\n'),
+    festivalItems: festivalItems(region),
     nextLinks: next.map(r => `<a href="/regions/${r.slug}/">${esc(r.name)}</a>`).join(''),
   };
   return template
@@ -150,11 +164,7 @@ function render(region, index) {
     });
 }
 
-/* Festival pages (tools/build_festivals.mjs): the list, plus every festival with its own page. */
-const festivalUrls = fs.readdirSync(path.join(root, 'tools/festivals')).filter(f => f.endsWith('.json')).sort()
-  .map(f => JSON.parse(fs.readFileSync(path.join(root, 'tools/festivals', f), 'utf8')))
-  .filter(f => Array.isArray(f.sections) && f.sections.length > 0)
-  .map(f => `${SITE}/festivals/${f.slug}/`);
+const festivalUrls = festivals.map(f => `${SITE}/festivals/${f.slug}/`);
 
 function sitemap() {
   const pages = [`${SITE}/`, `${SITE}/travel-directory.html`, ...regions.map(r => regionUrl(r.slug)), ...PAGES.map(p => SITE + p.path), `${SITE}/festivals/`, ...festivalUrls];
