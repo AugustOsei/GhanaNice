@@ -1,0 +1,105 @@
+{
+  "slug": "damba-nalerigu",
+  "name": "Damba in Nalerigu",
+  "kind": "trad",
+  "month": 7,
+  "region": "North East",
+  "card": {
+    "short": "Lunar",
+    "when": "The lunar month of Damba (about late August in 2026); the Mamprusi calendar sets the day",
+    "place": "The Nayiri’s palace, Nalerigu",
+    "keeper": "Mamprugu, led by the Nayiri",
+    "sum": "Mamprugu’s great gathering: chiefs from across the kingdom, dances through the night and the Nayiri at sunrise."
+  },
+  "metaTitle": "Damba in Nalerigu: The Mamprugu Festival at the Nayiri’s Palace",
+  "metaDescription": "Damba is the biggest event of the year in Nalerigu, North East Region: chiefs of Mamprugu gather at the Nayiri’s palace for three days of dances and drumming.",
+  "ogTitle": "Damba in Nalerigu",
+  "subtitle": "Mamprugu comes together",
+  "answer": "Damba is the biggest event of the year in Nalerigu, capital of the North East Region and seat of the Nayiri, overlord of Mamprugu. Chiefs from across the kingdom gather at his palace for three days of dances and royal drumming, and the Nayiri comes out at sunrise after a night of dancing. It falls in the lunar month of Damba, so it moves each year.",
+  "facts": [
+    [
+      "When",
+      "The lunar month of Damba; the Mamprusi ritual calendar sets the day"
+    ],
+    [
+      "Where",
+      "The Nayiri’s palace, Nalerigu, North East Region"
+    ],
+    [
+      "Kept by",
+      "Mamprugu, led by the Nayiri"
+    ],
+    [
+      "Lasts",
+      "Three days"
+    ]
+  ],
+  "schema": {
+    "description": "Damba festival of Mamprugu at the Nayiri's palace in Nalerigu.",
+    "location": "Nayiri Palace, Nalerigu",
+    "locality": "Nalerigu",
+    "organizer": "Mamprugu Traditional Council"
+  },
+  "hero": {
+    "file": "hero.webp",
+    "w": 1200,
+    "h": 900,
+    "alt": "The Nayiri Palace in Nalerigu: a pink arcade with carved blue pillars under a sign reading Nayiri Palace",
+    "caption": "The Nayiri’s palace, where Damba gathers",
+    "author": "Shahadusadik",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nayiri_Palace_in_Nalerigu.jpg"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>“Damba”, or “Damma” in Mampruli, is said to mean “that we will come together”, and chiefs from all over Mamprugu do: a three-day reunion at the palace of the Nayiri.[[2]] The palace is the seat of the overlord of Mamprugu and the centre of the celebrations.[[3]]</p>\n<p>As described for the 2015 festival: on the first day the peoples of the area, among them Mamprusi, Bimoba and Frafra, perform their own dances. On the second, the senior royal drummer and his drummers sing the line of chiefs and their fathers, from the founder of Mamprugu to the Nayiri of today. On the third, people dance through the night until the Nayiri comes out with his entourage at sunrise; the chiefs are drawn out to dance one by one, and after about two hours he returns to the palace.[[2]]</p>"
+    },
+    {
+      "id": "when",
+      "title": "When is Damba?",
+      "html": "<p>Damba is kept in the lunar month of Damba, which marks the birth and naming of the Prophet Muhammad, though today it is mostly a celebration of chieftaincy.[[1]] In Nalerigu the day follows the Mamprusi ritual calendar, so it is hard to know far ahead; the 2015 festival ran from 1 to 3 January.[[2]] Because the lunar year is shorter, it comes about eleven days earlier each year.</p>\n<p>Damba is also kept by Dagbon at Yendi and Tamale, and in Gonja and Wa: see <a href=\"/festivals/damba/\">Damba</a>.</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Nalerigu is the capital of the North East Region, east of Walewale. See the <a href=\"/regions/north-east/\">North East</a> page for places nearby.",
+        "<b>The palace:</b> entry is by arrangement through a local representative, and it is customary to bring a gift of kola.[[3]]",
+        "<b>Check the dates:</b> they are announced close to the day. Ask locally or follow local radio.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Damba in Nalerigu?",
+      "a": "The great annual gathering of Mamprugu at the Nayiri’s palace in Nalerigu: three days of dances and royal drumming, with chiefs from across the kingdom."
+    },
+    {
+      "q": "When is Damba in Nalerigu?",
+      "a": "In the lunar month of Damba, on a day set by the Mamprusi ritual calendar. It moves about eleven days earlier each year."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Damba Festival | July – August”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=16691",
+      "date": "28 March 2025"
+    },
+    {
+      "cite": "“Videos from Nalerigu’s 2015 Damba Festival”",
+      "site": "Baptist Medical Centre, Nalerigu",
+      "url": "https://baptistmedicalcenter.org/news/videos-nalerigus-2015-damba-festival/"
+    },
+    {
+      "cite": "“Nayiri Palace: the cultural heart of Mamprugu in Nalerigu”",
+      "site": "Ghana Remembers",
+      "url": "https://ghanaremembers.com/stories/culture/nayiri-palace-the-cultural-heart-of-mamprugu-in-nalerigu.html",
+      "date": "12 November 2025"
+    }
+  ],
+  "checked": "2026-10-16"
+}

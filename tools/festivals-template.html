@@ -95,20 +95,6 @@
     .c-bowl { left: 33vw; top: 103vw; width: 12vw; --r: -8deg; }
     .c-torch { left: 89vw; top: 62vw; width: 8vw; --r: 14deg; z-index: 3; }
 
-    /* "Pull me": a tab that stays at the top while you scroll the board */
-    .pull-rail { position: absolute; z-index: 20; top: 0; right: 3vw; bottom: 0; width: min(300px, 80vw); pointer-events: none; }
-    .fx-pull { position: sticky; top: 0; pointer-events: auto; transform: translateY(calc(-100% + 150px)); transition: transform .7s cubic-bezier(.3,1.45,.4,1); }
-    .fx-pull.is-open { transform: translateY(76px); }
-    .fx-pull-card { padding: 22px 20px 14px; background: #fff; box-shadow: 0 18px 34px -16px rgba(0,0,0,.45); }
-    .fx-pull-card h2 { margin: 0 0 8px; font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1; text-transform: uppercase; }
-    .fx-pull-card ol { margin: 0; padding: 0; list-style: none; }
-    .fx-pull-card li { display: grid; grid-template-columns: 58px 1fr; gap: 10px; padding: 9px 0; border-top: 1px solid var(--line); font-size: .8rem; line-height: 1.25; }
-    .fx-pull-card li b { display: block; font-size: .95rem; }
-    .fx-pull-card li span { font-family: var(--hand); color: var(--red); font-size: .95rem; line-height: 1.1; }
-    .fx-pull button { position: relative; display: block; width: 132px; margin: 0 0 0 auto; padding: 24px 0 30px; border: 0; background: var(--paper); color: var(--ink); font-family: var(--display); font-size: 1.3rem; letter-spacing: .03em; cursor: pointer; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%); }
-    .fx-pull button::before { content: ''; position: absolute; left: 12px; right: 12px; top: 11px; height: 3px; background: radial-gradient(circle, var(--ink) 1.2px, transparent 1.6px) 0 0 / 7px 3px repeat-x; }
-    .fx-pull button:focus-visible { outline: 3px solid var(--ink); outline-offset: -6px; }
-
     /* The yellow band that hands over to the list */
     .band { left: -10vw; top: 118vw; width: 120vw; height: 40vw; border-radius: 50% 50% 0 0 / 30% 30% 0 0; background: var(--yellow); z-index: 4; }
     .band-text { left: 0; right: 0; top: 124vw; z-index: 5; margin: 0; text-align: center; font-family: var(--display); font-weight: 400; font-size: 5.6vw; line-height: .9; color: var(--ink); text-transform: uppercase; }
@@ -134,6 +120,14 @@
     .flap i:first-of-type { left: -.02em; } .flap i:last-of-type { right: -.02em; }
 
     .list { position: relative; z-index: 5; background: var(--paper); }
+    /* Coming up: worked out from today's date by the script below; hidden without it */
+    .coming { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px; margin: 22px 0 0; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .coming h2 { margin: 0; font-family: var(--display); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .coming ol { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 0; padding: 0; list-style: none; }
+    .coming li { display: flex; align-items: baseline; gap: 8px; font-size: .86rem; line-height: 1.3; }
+    .coming li span { font-family: var(--hand); color: var(--red); }
+    .coming a { border-bottom: 1px solid transparent; } .coming a:hover { border-color: currentColor; }
+    .coming li small { color: rgba(17,17,15,.65); font-size: .78rem; }
     .list-note { margin: 34px 0 0; font-family: var(--hand); font-style: italic; font-size: 1.05rem; }
     .list-note a, .suggest a:not(.suggest-btn) { border-bottom: 1px solid; }
     .suggest { margin: 80px 0 0; padding: clamp(24px, 4vw, 44px); border-radius: 4px; background: var(--yellow); }
@@ -200,9 +194,6 @@
       .band { top: 256vw; height: 60vw; }
       .band-text { top: 262vw; font-size: 9vw; }
       .band-text a { font-size: 3vw; padding: 2.6vw 5vw; margin-top: 3vw; }
-      .pull-rail { right: 4vw; }
-      .fx-pull { transform: translateY(calc(-100% + 128px)); }
-      .fx-pull button { width: 108px; font-size: 1.05rem; padding: 18px 0 24px; }
       .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
       .card { border-top-width: 4px; }
       .card-body { padding: 10px 10px 12px; }
@@ -218,18 +209,16 @@
     @media (prefers-reduced-motion: reduce) {
       .layer { transform: rotate(var(--r, 0deg)); }
       .flap.go .ft, .flap.go .fb { animation: none; visibility: hidden; }
-      .fx-pull, .card, .card-img img { transition: none; }
+      .card, .card-img img { transition: none; }
     }
     /* House type: the site's heavy, tight Arial for headlines and Georgia italic for the human notes */
-    .headline, .sticky h2, .month-h, .band-text, .fx-pull-card h2, .fx-pull button { font-weight: 900; }
+    .headline, .sticky h2, .month-h, .band-text { font-weight: 900; }
     .headline { font-size: 7.6vw; line-height: .8; letter-spacing: -.075em; }
     .headline small { letter-spacing: 0; font-weight: 400; }
     .sticky h2 { font-size: 2.6vw; letter-spacing: -.05em; text-transform: none; line-height: .95; }
     .month-h { letter-spacing: -.06em; text-transform: none; font-size: clamp(2.2rem, 4.6vw, 3.8rem); line-height: .85; }
     .band-text { font-size: 5vw; line-height: .88; letter-spacing: -.065em; text-transform: none; }
-    .fx-pull-card h2 { letter-spacing: -.04em; text-transform: none; }
-    .fx-pull button { font-size: .78rem; letter-spacing: .12em; }
-    .hand, .sticky li, .print figcaption span, .month-h span, .fx-pull-card li span { font-style: italic; }
+    .hand, .sticky li, .print figcaption span, .month-h span, .coming li span { font-style: italic; }
     .month-h span { font-size: 1rem; letter-spacing: 0; color: rgba(17,17,15,.65); }
     .hand { font-size: 1.3vw; }
     .sticky li { font-size: 1.2vw; }
@@ -267,7 +256,7 @@
       <div class="layer panel" data-speed="0" aria-hidden="true"></div>
 
       <h1 class="layer headline" id="page-title" data-speed="0"><span aria-hidden="true">Festivals</span><span class="sr-only">Festivals and cultural events in Ghana</span>
-        <small>A growing list of {{count}} traditional festivals and cultural events across {{regionCount}} of Ghana’s 16 regions, January to December. For each one: where it happens, when it usually falls, who keeps it and what to expect.</small></h1>
+        <small>A growing list of {{count}} traditional festivals and cultural events across {{regionSpan}}, January to December. For each one: where it happens, when it usually falls, who keeps it and what to expect.</small></h1>
 
       <div class="layer sticky" data-speed=".1" data-spin="-2">
         <h2>To do this year</h2>
@@ -299,17 +288,12 @@
       <p class="layer band-text" data-speed="0"><span class="flaps" aria-hidden="true">{{flaps}}</span><span class="sr-only">{{count}}</span> <span class="label">festivals and<br>cultural events listed</span></p>
 
       </div>
-      <div class="pull-rail">
-        <div class="fx-pull" id="pull">
-          <div class="fx-pull-card"><h2>Coming up</h2><ol id="pull-list"></ol></div>
-          <button type="button" id="pull-btn" aria-expanded="false" aria-controls="pull-list">PULL ME</button>
-        </div>
-      </div>
     </section>
 
     <section class="list" id="festivals" aria-label="Festivals by month">
       <div class="list-in">
         <p class="list-note">A growing list, not a complete one: most towns and traditional areas keep a festival of their own. Know one we haven’t listed? <a href="#suggest">Tell us about it</a>.</p>
+        <section class="coming" id="coming" aria-labelledby="h-coming" hidden><h2 id="h-coming">Coming up</h2><ol id="coming-list"></ol></section>
         <div id="list">
 {{list}}
         </div>
@@ -373,8 +357,10 @@
     const upcoming = [];
     for (let k = 0; k < 12 && upcoming.length < 3; k++) DATA.upcoming.filter(f => f.m === (M + k) % 12).forEach(f => upcoming.length < 3 && upcoming.push(f));
     const esc = (v) => String(v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-    $('#pull-list').innerHTML = (nextAk ? `<li><span>${nextAk.getDate()} ${MONTHS[nextAk.getMonth()].slice(0, 3)}</span><div><b>Akwasidae</b>Manhyia Palace, Kumasi</div></li>` : '')
-      + upcoming.map(f => `<li><span>${esc(f.short)}</span><div><b>${esc(f.name)}</b>${esc(f.place)}</div></li>`).join('');
+    const item = (when, slug, name, place) => `<li><span>${esc(when)}</span><a href="#f-${esc(slug)}"><b>${esc(name)}</b></a><small>${esc(place)}</small></li>`;
+    $('#coming-list').innerHTML = (nextAk ? item(`${nextAk.getDate()} ${MONTHS[nextAk.getMonth()].slice(0, 3)}`, DATA.akwasidae.slug, 'Akwasidae', 'Manhyia Palace, Kumasi') : '')
+      + upcoming.map(f => item(f.short, f.slug, f.name, f.place)).join('');
+    $('#coming').hidden = false;
     /* ---------- The count spins when the band comes into view, then settles (once) ---------- */
     const flaps = [...document.querySelectorAll('.flap')];
     const show = (el, v) => el.querySelectorAll('b').forEach(b => { b.textContent = v; });
@@ -405,8 +391,6 @@
       io.observe($('.flaps'));
     }
 
-    const pull = $('#pull'), pullBtn = $('#pull-btn');
-    pullBtn.addEventListener('click', () => { const open = !pull.classList.contains('is-open'); pull.classList.toggle('is-open', open); pullBtn.setAttribute('aria-expanded', String(open)); pullBtn.textContent = open ? 'PUSH ME' : 'PULL ME'; });
   })();
   </script>
   <script src="/page.js?v=1" defer></script>

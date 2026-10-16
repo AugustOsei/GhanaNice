@@ -1,0 +1,82 @@
+{
+  "slug": "buem-lilu",
+  "name": "Buem Lilu",
+  "kind": "trad",
+  "month": 9,
+  "region": "Oti",
+  "card": {
+    "short": "Oct",
+    "when": "Usually the second week of October; the Buem Traditional Council sets the date",
+    "place": "Bodada and the Buem towns",
+    "keeper": "The Buem people, led by the Omanhene at Bodada",
+    "sum": "The Buem yam festival: three weeks of rites in the towns, then a grand durbar at Bodada."
+  },
+  "metaTitle": "Buem Lilu: The Buem Yam Festival at Bodada, Oti Region",
+  "metaDescription": "Buem Lilu is the yam festival of the Buem people of the Jasikan area, Oti Region: three weeks of rites that end in a grand durbar at Bodada, usually in October.",
+  "ogTitle": "Buem Lilu: the Buem yam festival",
+  "subtitle": "The Buem yam festival",
+  "answer": "Buem Lilu is the yam festival of the Buem people of the Jasikan area in the Oti Region. Over about three weeks, families, shrines and chiefs keep their own rites, and it ends with a grand gathering at Bodada, the Omanhene’s town, where the divisional chiefs renew their oath of allegiance. It is usually held in the second week of October.",
+  "facts": [
+    [
+      "When",
+      "Usually the second week of October; the Buem Traditional Council sets the date early in the year"
+    ],
+    [
+      "Where",
+      "Bodada and towns across Buem, Jasikan District, Oti Region"
+    ],
+    [
+      "Kept by",
+      "The Buem people, led by the Omanhene"
+    ],
+    [
+      "Lasts",
+      "About three weeks"
+    ]
+  ],
+  "schema": {
+    "description": "Yam festival of the Buem people, ending with a grand durbar at Bodada.",
+    "location": "Bodada",
+    "locality": "Bodada"
+  },
+  "sections": [
+    {
+      "id": "story",
+      "title": "Why yam",
+      "html": "<p>Yam was the first crop the Buem grew after they settled under their first leader, King Aburam I, and it became their staple food. The festival is held in its honour every year.[[1]]</p>\n<p>It is a time to thank the gods of the land, honour the ancestors, and remember the unity the Buem found under King Aburam, whose broom is its symbol. It also reminds people of their duty to the community and raises support for self-help projects.[[1]]</p>"
+    },
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>The celebrations come in layers over about three weeks. First come people born in odd positions in their families, including twins and third, fifth and seventh children; then the priests and shrines; then each traditional ruler in his own town.[[1]]</p>\n<p>It all leads to the grand festival at Bodada, the Omanhene’s town, where the chiefs and their people gather. At the grand durbar, usually on a Saturday, the divisional chiefs renew their oath of allegiance to the Omanhene with a live ram and drinks. There are speeches, and the festival closes with drumming and dancing.[[1]]</p>\n<p class=\"note\">Published accounts of Buem Lilu are short. If you know the festival, <a href=\"/contact/\">tell us</a> more and we’ll add it.</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Bodada is in the Jasikan District of the Oti Region. See the <a href=\"/regions/oti/\">Oti</a> page for places nearby.",
+        "<b>Check the dates:</b> the date is not fixed. The Buem Traditional Council sets it early each year.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Buem Lilu festival?",
+      "a": "The yam festival of the Buem people of the Jasikan area in the Oti Region, ending with a grand durbar at Bodada."
+    },
+    {
+      "q": "When is Buem Lilu?",
+      "a": "Usually in the second week of October, but the Buem Traditional Council sets the date each year."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Oti Region: the tradition and cultural heritage of Oti Region”",
+      "site": "National Commission on Culture",
+      "url": "https://ghanaculture.gov.gh/?p=516"
+    }
+  ],
+  "cutout": "yam",
+  "checked": "2026-10-16"
+}

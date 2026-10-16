@@ -1,0 +1,88 @@
+{
+  "slug": "adikanfo",
+  "name": "Adikanfo",
+  "kind": "trad",
+  "month": 8,
+  "region": "Ahafo",
+  "card": {
+    "short": "Sep",
+    "when": "Usually September",
+    "place": "Hwidiem",
+    "keeper": "The chiefs and people of Hwidiem",
+    "sum": "Hwidiem remembers its migration from Denkyira Ntomu, with a durbar of chiefs, drumming and dancing."
+  },
+  "metaTitle": "Adikanfo Festival of Hwidiem in the Ahafo Region",
+  "metaDescription": "Adikanfo is the festival of the chiefs and people of Hwidiem in the Ahafo Region, remembering their migration from Denkyira Ntomu. Usually in September.",
+  "ogTitle": "Adikanfo: the Hwidiem festival",
+  "subtitle": "Hwidiem remembers its journey",
+  "answer": "Adikanfo is the annual festival of the chiefs and people of Hwidiem in the Ahafo Region. It remembers the migration of their ancestors from Denkyira Ntomu to Hwidiem, with a durbar of chiefs, drumming and dancing, and offerings to the gods and ancestors. It is usually held in September.",
+  "facts": [
+    [
+      "When",
+      "Usually September; some sources say March or April"
+    ],
+    [
+      "Where",
+      "Hwidiem, Asutifi South, Ahafo Region"
+    ],
+    [
+      "Kept by",
+      "The chiefs and people of Hwidiem"
+    ],
+    [
+      "Remembers",
+      "The migration from Denkyira Ntomu"
+    ]
+  ],
+  "schema": {
+    "description": "Festival of Hwidiem remembering the migration from Denkyira Ntomu.",
+    "location": "Hwidiem",
+    "locality": "Hwidiem"
+  },
+  "sections": [
+    {
+      "id": "what",
+      "title": "What happens",
+      "html": "<p>Adikanfo remembers how the people of Hwidiem came from Denkyira Ntomu to the town they live in now.[[1,2]] The highlight is a durbar of chiefs, with drumming and dancing; animals are sacrificed to the gods and ancestors, people wear traditional dress, and visitors are welcomed to share food and drink.[[1,2]]</p>\n<p class=\"note\">Published accounts of Adikanfo are short and sometimes conflict. If you know the festival, <a href=\"/contact/\">tell us</a> more and we’ll add it.</p>"
+    },
+    {
+      "id": "when",
+      "title": "When is Adikanfo?",
+      "html": "<p>It is usually held in September, though some sources put it in March or April.[[1,2]] The chiefs set the days each year.</p>"
+    },
+    {
+      "id": "go",
+      "title": "Good to know if you go",
+      "tips": [
+        "<b>Where:</b> Hwidiem is the capital of the Asutifi South District. See the <a href=\"/regions/ahafo/\">Ahafo</a> page for places nearby.",
+        "<b>Check the dates:</b> the traditional council sets them each year. Local radio carries the announcement.",
+        "<b>Respect the rites:</b> some rituals are sacred and not for cameras. Ask before photographing chiefs, priests or anyone taking part, and follow what the ushers ask."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the Adikanfo festival?",
+      "a": "The annual festival of the chiefs and people of Hwidiem in the Ahafo Region, remembering their migration from Denkyira Ntomu."
+    },
+    {
+      "q": "When is Adikanfo?",
+      "a": "Usually in September, though some sources say March or April."
+    }
+  ],
+  "sources": [
+    {
+      "cite": "“Adikanfo Festival”",
+      "site": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Adikanfo_Festival"
+    },
+    {
+      "cite": "“Adikanfo Festival: a historic annual celebration in Ahafo Region”",
+      "site": "Ghana Remembers",
+      "url": "https://ghanaremembers.com/stories/events/adikanfo-festival-a-historic-annual-celebration-in-ahafo-region.html",
+      "date": "12 November 2025"
+    }
+  ],
+  "cutout": "drum",
+  "checked": "2026-10-16"
+}
