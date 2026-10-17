@@ -9,3 +9,6 @@
 - `../trace/larabanga.json`: the Larabanga line drawing, traced by `../tools/trace.py` from the Larabanga photo above.
   `larabanga-overlay.jpg` shows the trace over the photo.
 - The Ghana outline is the site's own `dist/assets/maps/ghana-mask.svg` (Natural Earth).
+- `../public/festivals/`: the festival pages' own photos (credited in `dist/assets/CREDITS.md` and on screen):
+  Aboakyer, Chale Wote and Ngmayem by Fquasie, Hogbetsotso by JY midey; on the board (`board/`), Fetu Afahye by
+  Bright Kwame Ayisi and Agbamevoza by JY midey. All CC BY-SA 4.0.

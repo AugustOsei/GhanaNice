@@ -29,3 +29,13 @@ crashes when the project path contains a space ("Ghana Nice").
 - `SOURCES.md`: where every image comes from, and the photo credits for the post caption.
 
 Only wording already on the site appears on screen.
+
+## Festivals and newsletter clip
+
+`src/festivals/`: a 26-second clip (composition `Festivals`, 1080×1350, 30 fps, silent) for the
+festivals section and the "What's on in Ghana" newsletter. The split-flap count turns to 46, the
+festivals board assembles and its "To do this year" list is ticked, the month tiles flip through
+Aboakyer, Chale Wote, Ngmayem and Hogbetsotso, and the newsletter card's drums play under the
+sign-up. `npm run render:festivals` writes `out/ghananice-festivals.mp4`. The pieces in
+`parts.tsx` redraw the board's (`dist/festivals/index.html`) and the card's (`dist/newsletter.js`).
+Months are said as "usually", like the site; no exact dates.

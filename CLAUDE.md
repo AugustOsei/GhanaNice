@@ -53,6 +53,8 @@ Done 2026-10-14: placeholder "found it nice" counts hidden (votes are still brow
 **Every year**
 5. Festival dates: the Ngmayem page has a time-sensitive sticky note ("25 Oct – 2 Nov 2026 … about to start") and 2026 dates in its title, card and facts (`tools/festivals/ngmayem.json`); refresh them each year once the Manya Krobo announce them, or drop the sticky after the festival. Eluo gives the 2023 dates (the last ones published). Other pages give "in 2026" approximations for lunar festivals (Damba, Damba in Nalerigu, Bugum) and 2026 notes (Apoo, Akwasidae anchor): recheck yearly and update `checked`. Rebuild with `node tools/build_festivals.mjs`.
 
+Promo clips: `motion/` (Remotion; `npm --prefix motion run studio`). How to make one: the project skill `.claude/skills/ghananice-promo/SKILL.md`. Clips so far: the announcement film and the festivals + newsletter clip (2026-10-17).
+
 Reference: the n8n tip pipeline is active (`docs/tip-pipeline.md`). Photos total ~57 MB (1600px + 800px WebP); pages load 800px, the lightbox 1600px.
 
 ## Planned features (agreed 2026-10-14, after the open items above are cleared)

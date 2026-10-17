@@ -5,7 +5,8 @@
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "still": "remotion still src/index.ts",
-    "render": "remotion render src/index.ts GhanaNice out/ghananice.mp4"
+    "render": "remotion render src/index.ts GhanaNice out/ghananice.mp4",
+    "render:festivals": "remotion render src/index.ts Festivals out/ghananice-festivals.mp4"
   },
   "dependencies": {
     "@remotion/cli": "4.0.535",
