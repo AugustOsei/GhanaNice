@@ -1,0 +1,908 @@
+{
+ "name": "GhanaNice — Newsletter issue",
+ "nodes": [
+  {
+   "id": "gni-1",
+   "name": "Every 24th",
+   "type": "n8n-nodes-base.scheduleTrigger",
+   "typeVersion": 1.2,
+   "position": [
+    0,
+    0
+   ],
+   "parameters": {
+    "rule": {
+     "interval": [
+      {
+       "field": "cronExpression",
+       "expression": "0 9 24 * *"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "gni-2",
+   "name": "Site data",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    240,
+    0
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "=https://www.ghananice.com/data/newsletter-source.json?t={{ $now.toMillis() }}",
+    "options": {}
+   }
+  },
+  {
+   "id": "gni-3",
+   "name": "Tips",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    480,
+    0
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "=https://www.ghananice.com/data/listings.json?t={{ $now.toMillis() }}",
+    "options": {
+     "response": {
+      "response": {
+       "neverError": true
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "gni-4",
+   "name": "Services",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    720,
+    0
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "=https://www.ghananice.com/data/service-submissions.json?t={{ $now.toMillis() }}",
+    "options": {
+     "response": {
+      "response": {
+       "neverError": true
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "gni-5",
+   "name": "Past issues",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    960,
+    0
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "=https://www.ghananice.com/data/newsletter-issues.json?t={{ $now.toMillis() }}",
+    "options": {
+     "response": {
+      "response": {
+       "neverError": true
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "gni-6",
+   "name": "Gather issue",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1200,
+    0
+   ],
+   "parameters": {
+    "jsCode": "/* Renders the monthly newsletter, \"What's on in Ghana\", from one issue's data\n   (tools/newsletter/<yyyy-mm>.json). Shared by two callers, so both always produce the same\n   bytes:\n   - tools/build_newsletter.mjs, which writes /newsletter/ and the issue pages (and is run with\n     --check by tools/smoke.mjs);\n   - the n8n issue workflow (n8n/build_newsletter_issue_workflow.py pastes this file into its Code\n     nodes), which drafts the email and, once August has sent it, commits the issue page.\n   Plain script, no imports: it defines one global, GhanaNiceNewsletter. All issue text is plain\n   text and is escaped here; URLs are root-relative site paths. */\nvar GhanaNiceNewsletter = (function () {\n  var SITE = 'https://www.ghananice.com';\n  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];\n  function esc(value) {\n    return String(value == null ? '' : value).replace(/[&<>\"']/g, function (c) {\n      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', \"'\": '&#39;' }[c];\n    });\n  }\n  function monthName(month) {\n    var parts = month.split('-');\n    return MONTHS[Number(parts[1]) - 1] + ' ' + parts[0];\n  }\n  function issuePath(month) { return '/newsletter/' + month + '/'; }\n  function absolute(url) { return /^https?:/.test(url) ? url : SITE + url; }\n\n  /* The plain-page template (tools/page-template.html), filled the way tools/build_pages.mjs fills it. */\n  function fill(template, meta, content) {\n    return template.replace(/<!-- Template for[\\s\\S]*?-->\\n/, '').replace(/\\{\\{(\\w+)\\}\\}/g, function (match, key) {\n      if (key === 'content') return content;\n      if (key === 'url') return esc(SITE + meta.path);\n      if (key in meta) return esc(meta[key]);\n      throw new Error('page-template.html: no value for ' + match);\n    });\n  }\n\n  function itemHtml(item) {\n    var title = item.url ? '<a href=\"' + esc(item.url) + '\">' + esc(item.title) + '</a>' : esc(item.title);\n    return '        <li class=\"nl-item\">' +\n      (item.meta ? '<span class=\"nl-item-meta\">' + esc(item.meta) + '</span>' : '') +\n      '<h3>' + title + '</h3>' +\n      (item.text ? '<p>' + esc(item.text) + '</p>' : '') + '</li>';\n  }\n  function sectionHtml(section) {\n    var body = section.items && section.items.length\n      ? '      <ul class=\"nl-items\">\\n' + section.items.map(itemHtml).join('\\n') + '\\n      </ul>'\n      : '      <p>' + esc(section.empty || '') + '</p>';\n    return '    <section class=\"nl-section\" aria-labelledby=\"nl-' + esc(section.id) + '\">\\n' +\n      '      <h2 id=\"nl-' + esc(section.id) + '\">' + esc(section.title) + '</h2>\\n' + body +\n      (section.note ? '\\n      <p class=\"nl-section-note\">' + esc(section.note) + '</p>' : '') + '\\n    </section>';\n  }\n\n  function issuePage(issue, template) {\n    var name = monthName(issue.month);\n    var content = [\n      '    <p class=\"doc-eyebrow\"><a href=\"/newsletter/\">What’s on in Ghana</a></p>',\n      '    <h1>' + esc(name) + '. <em>' + esc(issue.headline || 'What’s on in Ghana this month.') + '</em></h1>',\n      '    <p class=\"info-updated\">Sent ' + esc(issue.sentOn || name) + '</p>',\n      '    <p class=\"info-lead\">' + esc(issue.intro) + '</p>',\n      issue.sections.map(sectionHtml).join('\\n\\n'),\n      '    <p class=\"nl-more\"><a href=\"/newsletter/\">← All issues</a></p>',\n      '    <section class=\"nl-band nl-page-band\" aria-label=\"Newsletter sign-up\" data-newsletter=\"newsletter\"></section>'\n    ].join('\\n');\n    return fill(template, {\n      path: issuePath(issue.month),\n      title: 'What’s on in Ghana: ' + name + ' · GhanaNice',\n      description: issue.preheader || issue.intro\n    }, content);\n  }\n\n  /* What the archive needs to know about each issue, kept in dist/data/newsletter-issues.json so\n     the workflow can rebuild the archive (and avoid repeating a place or tip) without the\n     full issue files. */\n  function summary(issue) {\n    return { month: issue.month, title: monthName(issue.month), url: issuePath(issue.month), headline: issue.headline || '', intro: issue.intro, used: issue.used || {} };\n  }\n\n  function archivePage(summaries, template) {\n    var list = summaries.length\n      ? '    <ul class=\"info-list nl-archive\">\\n' + summaries.map(function (s) {\n          return '      <li><a class=\"info-inline\" href=\"' + esc(s.url) + '\"><strong>' + esc(s.title) + '</strong></a>' +\n            (s.headline ? ' · ' + esc(s.headline) : '') + '</li>';\n        }).join('\\n') + '\\n    </ul>'\n      : '    <p>No issues yet. Sign up above and the first one comes straight to you.</p>';\n    var content = [\n      '    <p class=\"doc-eyebrow\">Newsletter</p>',\n      '    <h1>What’s on in Ghana. <em>One email a month.</em></h1>',\n      '    <p class=\"info-lead\">Near the end of each month: the festivals coming up next month, what’s new on GhanaNice, one place worth the trip and a tip from a reader. Every issue is also published here.</p>',\n      '    <section class=\"nl-band nl-page-band\" aria-label=\"Newsletter sign-up\" data-newsletter=\"newsletter\"></section>',\n      '    <h2>Past issues</h2>',\n      list\n    ].join('\\n');\n    return fill(template, {\n      path: '/newsletter/',\n      title: 'What’s on in Ghana: the GhanaNice newsletter',\n      description: 'A monthly email from GhanaNice: next month’s festivals, new places, one place worth the trip and a tip from a reader. Read past issues here.'\n    }, content);\n  }\n\n  /* The sitemap entries for the newsletter, in the order tools/build_regions.mjs writes them. */\n  function sitemapUrls(summaries) {\n    return [SITE + '/newsletter/'].concat(summaries.slice().sort(function (a, b) { return a.month < b.month ? -1 : 1; })\n      .map(function (s) { return SITE + s.url; }));\n  }\n\n  /* The issue as email, laid out to paste into MailerLite's editor: plain HTML with inline\n     styles and absolute links. */\n  function emailHtml(issue) {\n    var font = 'font-family:Arial,Helvetica,sans-serif;';\n    var serif = 'font-family:Georgia,\\'Times New Roman\\',serif;';\n    var out = ['<div style=\"max-width:620px;' + serif + 'color:#11110f;font-size:16px;line-height:1.5\">',\n      '<p style=\"' + font + 'font-size:11px;font-weight:bold;letter-spacing:.12em;text-transform:uppercase;color:#df4a32;margin:0 0 8px\">What’s on in Ghana · ' + esc(monthName(issue.month)) + '</p>',\n      '<h1 style=\"' + font + 'font-size:30px;line-height:1.05;margin:0 0 14px\">' + esc(issue.headline || 'What’s on in Ghana this month.') + '</h1>',\n      '<p style=\"margin:0 0 22px\">' + esc(issue.intro) + '</p>'];\n    issue.sections.forEach(function (section) {\n      out.push('<h2 style=\"' + font + 'font-size:20px;margin:28px 0 10px;padding-top:14px;border-top:2px solid #11110f\">' + esc(section.title) + '</h2>');\n      if (!section.items || !section.items.length) out.push('<p style=\"margin:0 0 12px\">' + esc(section.empty || '') + '</p>');\n      (section.items || []).forEach(function (item) {\n        out.push('<p style=\"margin:0 0 14px\">' +\n          (item.meta ? '<span style=\"' + font + 'font-size:11px;font-weight:bold;letter-spacing:.08em;text-transform:uppercase;color:#5c5b55\">' + esc(item.meta) + '</span><br>' : '') +\n          '<strong style=\"' + font + 'font-size:17px\">' + (item.url ? '<a href=\"' + esc(absolute(item.url)) + '\" style=\"color:#11110f\">' + esc(item.title) + '</a>' : esc(item.title)) + '</strong>' +\n          (item.text ? '<br>' + esc(item.text) : '') + '</p>');\n      });\n      if (section.note) out.push('<p style=\"margin:0 0 12px;font-size:14px;color:#5c5b55\">' + esc(section.note) + '</p>');\n    });\n    out.push('<p style=\"margin:28px 0 0;padding-top:14px;border-top:2px solid #11110f\">Know a festival or a place we should add? Reply to this email, or <a href=\"' + SITE + '/#tip\" style=\"color:#11110f\">share it on GhanaNice</a>.</p>');\n    out.push('<p style=\"margin:10px 0 0;font-size:14px;color:#5c5b55\">Read this issue on the site: <a href=\"' + SITE + issuePath(issue.month) + '\" style=\"color:#5c5b55\">' + SITE.replace('https://', '') + issuePath(issue.month) + '</a></p>');\n    out.push('</div>');\n    return out.join('\\n');\n  }\n\n  return { SITE: SITE, MONTHS: MONTHS, esc: esc, monthName: monthName, issuePath: issuePath, issuePage: issuePage, archivePage: archivePage, summary: summary, sitemapUrls: sitemapUrls, emailHtml: emailHtml };\n})();\n\n// Gather the facts for next month's issue from what is already published on the site, and ask\n// Claude for the short connecting copy only: every name, date and link below comes from the data.\n// GhanaNiceNewsletter (tools/newsletter-render.js) is pasted in above this by the builder.\nconst DAY = 864e5;\nconst R = GhanaNiceNewsletter;\n\n/* The test webhook posts the site's data in its body; the schedule fetches it from the site. */\nlet posted = null;\ntry { posted = $('Run now').first().json.body; } catch { posted = null; }\nconst pick = (name, key) => posted ? posted[key] : $(name).first().json;\nconst source = pick('Site data', 'source');\nconst tipsFile = pick('Tips', 'tips') || {};\nconst servicesFile = pick('Services', 'services') || {};\nconst pastFile = pick('Past issues', 'issues') || {};\n\nconst now = posted?.now ? new Date(posted.now) : new Date();\nconst next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + 1, 1));\nconst monthIndex = next.getUTCMonth();\nconst month = `${next.getUTCFullYear()}-${String(monthIndex + 1).padStart(2, '0')}`;\nconst monthName = R.MONTHS[monthIndex];\nconst since = new Date(now.getTime() - 35 * DAY);\nconst past = pastFile.issues || [];\nconst usedPlaces = new Set(past.map(i => i.used?.place).filter(Boolean));\nconst usedTips = new Set(past.map(i => i.used?.tipId).filter(Boolean));\nconst regionName = Object.fromEntries(source.places.map(p => [p.regionSlug, p.region]));\n\n/* Festivals that fall next month, and the Akwasidae Sundays (every 42 days from its anchor). */\nconst festivals = source.festivals.filter(f => !f.recurring && f.month === monthIndex)\n  .map(f => ({ slug: f.slug, name: f.name, region: f.region, when: f.when, place: f.place, keeper: f.keeper, sum: f.sum, dateSetBy: f.dateSetBy, kind: f.kind }));\nconst akwasidae = source.festivals.filter(f => f.recurring).map(f => {\n  const [y, m, d] = f.recurring.anchor.split('-').map(Number);\n  const dates = [];\n  for (let t = Date.UTC(y, m - 1, d); t < Date.UTC(next.getUTCFullYear(), monthIndex + 1, 1); t += f.recurring.days * DAY) {\n    const date = new Date(t);\n    if (date.getUTCMonth() === monthIndex && date.getUTCFullYear() === next.getUTCFullYear()) dates.push(`Sunday ${date.getUTCDate()} ${monthName}`);\n  }\n  return { slug: f.slug, name: f.name, region: f.region, place: f.place, sum: f.sum, dates };\n}).filter(f => f.dates.length);\n\n/* What was added in the last five weeks. */\nconst recent = value => value && new Date(value) >= since;\nconst newFestivals = source.festivals.filter(f => recent(f.added)).map(f => f.name);\nconst newTips = (tipsFile.listings || []).filter(t => recent(t.publishedAt))\n  .map(t => ({ id: t.id, place: t.place, area: t.area, regionSlug: t.regionSlug, region: regionName[t.regionSlug] || '', category: t.category || '', note: t.note || '' }));\n/* A published service carries the day it was checked (\"16 Oct 2026\"), which is when it went up. */\nconst newServices = (servicesFile.services || []).filter(s => recent(s.checked))\n  .map(s => ({ name: s.name, category: s.categoryLabel || s.category, base: s.base || '', description: s.description || '' }));\n\n/* One place worth the trip: a different one each month, never one used before. */\nconst fresh = source.places.filter(p => !usedPlaces.has(p.key));\nconst pool = fresh.length ? fresh : source.places;\nconst place = pool[((next.getUTCFullYear() * 12 + monthIndex) * 7) % pool.length];\n\n/* A tip from a reader: the newest approved tip with something to say, not used before. */\nconst tip = (tipsFile.listings || []).filter(t => (t.note || '').trim().length >= 20 && !usedTips.has(t.id))\n  .sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)))[0] || null;\nconst tipFacts = tip && { id: tip.id, place: tip.place, area: tip.area, regionSlug: tip.regionSlug, region: regionName[tip.regionSlug] || '', note: tip.note, by: tip.submitterName || '' };\n\n/* The featured tip isn't listed again under New on GhanaNice. */\nconst newTipsShown = tipFacts ? newTips.filter(t => t.id !== tipFacts.id) : newTips;\nconst facts = { month, monthName, year: next.getUTCFullYear(), festivals, akwasidae, newFestivals, newTips: newTipsShown, newServices, place, tip: tipFacts };\n\nconst system = `You write \"What's on in Ghana\", GhanaNice's monthly email (ghananice.com, a people-powered guide to good places across Ghana's 16 regions, for locals and visitors alike). Voice: plain, warm, specific and accurate. Concrete nouns, short sentences, no hype, no exclamation marks, no clichés (\"vibrant\", \"rich tapestry\", \"hidden gem\", \"immerse\", \"journey\"). British spelling.\nUse ONLY the facts you are given. Never add a date, place, custom, number or claim that is not in the facts. Festival dates move from year to year, so never state an exact date for a festival unless it appears in the facts.\nReply with one JSON object and nothing else.`;\nconst ask = `Facts for the ${monthName} ${facts.year} issue:\n${JSON.stringify(facts, null, 1)}\n\nReturn JSON with exactly these keys:\n- \"subject\": email subject, at most 60 characters, naming one or two of next month's festivals if there are any.\n- \"preheader\": one sentence, at most 100 characters.\n- \"headline\": a short line for the top of the issue, at most 70 characters, ending with a full stop.\n- \"intro\": two or three sentences opening the issue.\n- \"festivals\": an object mapping each festival slug (including Akwasidae's, if listed) to one sentence (at most 28 words) on what happens or why to go, drawn from its facts.\n- \"newFestivals\": one sentence about the festivals added this month, or \"\" if newFestivals is empty.\n- \"place\": one or two sentences on why the place is worth the trip, drawn from its note.`;\n\nreturn [{ json: {\n  facts, month,\n  claudeRequest: { model: 'claude-opus-5-5', max_tokens: 8000, system, messages: [{ role: 'user', content: ask }] }\n} }];\n"
+   }
+  },
+  {
+   "id": "gni-7",
+   "name": "Claude drafts",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1440,
+    0
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.anthropic.com/v1/messages",
+    "options": {
+     "response": {
+      "response": {
+       "neverError": true
+      }
+     },
+     "timeout": 180000
+    },
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "anthropicApi",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "anthropic-version",
+       "value": "2023-06-01"
+      },
+      {
+       "name": "anthropic-beta",
+       "value": "server-side-fallback-2026-07-01"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json.claudeRequest) }}"
+   },
+   "credentials": {
+    "anthropicApi": {
+     "id": "Ba67ZCNmLxMpnerv",
+     "name": "Anthropic account"
+    }
+   }
+  },
+  {
+   "id": "gni-8",
+   "name": "Assemble issue",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    1680,
+    0
+   ],
+   "parameters": {
+    "jsCode": "/* Renders the monthly newsletter, \"What's on in Ghana\", from one issue's data\n   (tools/newsletter/<yyyy-mm>.json). Shared by two callers, so both always produce the same\n   bytes:\n   - tools/build_newsletter.mjs, which writes /newsletter/ and the issue pages (and is run with\n     --check by tools/smoke.mjs);\n   - the n8n issue workflow (n8n/build_newsletter_issue_workflow.py pastes this file into its Code\n     nodes), which drafts the email and, once August has sent it, commits the issue page.\n   Plain script, no imports: it defines one global, GhanaNiceNewsletter. All issue text is plain\n   text and is escaped here; URLs are root-relative site paths. */\nvar GhanaNiceNewsletter = (function () {\n  var SITE = 'https://www.ghananice.com';\n  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];\n  function esc(value) {\n    return String(value == null ? '' : value).replace(/[&<>\"']/g, function (c) {\n      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', \"'\": '&#39;' }[c];\n    });\n  }\n  function monthName(month) {\n    var parts = month.split('-');\n    return MONTHS[Number(parts[1]) - 1] + ' ' + parts[0];\n  }\n  function issuePath(month) { return '/newsletter/' + month + '/'; }\n  function absolute(url) { return /^https?:/.test(url) ? url : SITE + url; }\n\n  /* The plain-page template (tools/page-template.html), filled the way tools/build_pages.mjs fills it. */\n  function fill(template, meta, content) {\n    return template.replace(/<!-- Template for[\\s\\S]*?-->\\n/, '').replace(/\\{\\{(\\w+)\\}\\}/g, function (match, key) {\n      if (key === 'content') return content;\n      if (key === 'url') return esc(SITE + meta.path);\n      if (key in meta) return esc(meta[key]);\n      throw new Error('page-template.html: no value for ' + match);\n    });\n  }\n\n  function itemHtml(item) {\n    var title = item.url ? '<a href=\"' + esc(item.url) + '\">' + esc(item.title) + '</a>' : esc(item.title);\n    return '        <li class=\"nl-item\">' +\n      (item.meta ? '<span class=\"nl-item-meta\">' + esc(item.meta) + '</span>' : '') +\n      '<h3>' + title + '</h3>' +\n      (item.text ? '<p>' + esc(item.text) + '</p>' : '') + '</li>';\n  }\n  function sectionHtml(section) {\n    var body = section.items && section.items.length\n      ? '      <ul class=\"nl-items\">\\n' + section.items.map(itemHtml).join('\\n') + '\\n      </ul>'\n      : '      <p>' + esc(section.empty || '') + '</p>';\n    return '    <section class=\"nl-section\" aria-labelledby=\"nl-' + esc(section.id) + '\">\\n' +\n      '      <h2 id=\"nl-' + esc(section.id) + '\">' + esc(section.title) + '</h2>\\n' + body +\n      (section.note ? '\\n      <p class=\"nl-section-note\">' + esc(section.note) + '</p>' : '') + '\\n    </section>';\n  }\n\n  function issuePage(issue, template) {\n    var name = monthName(issue.month);\n    var content = [\n      '    <p class=\"doc-eyebrow\"><a href=\"/newsletter/\">What’s on in Ghana</a></p>',\n      '    <h1>' + esc(name) + '. <em>' + esc(issue.headline || 'What’s on in Ghana this month.') + '</em></h1>',\n      '    <p class=\"info-updated\">Sent ' + esc(issue.sentOn || name) + '</p>',\n      '    <p class=\"info-lead\">' + esc(issue.intro) + '</p>',\n      issue.sections.map(sectionHtml).join('\\n\\n'),\n      '    <p class=\"nl-more\"><a href=\"/newsletter/\">← All issues</a></p>',\n      '    <section class=\"nl-band nl-page-band\" aria-label=\"Newsletter sign-up\" data-newsletter=\"newsletter\"></section>'\n    ].join('\\n');\n    return fill(template, {\n      path: issuePath(issue.month),\n      title: 'What’s on in Ghana: ' + name + ' · GhanaNice',\n      description: issue.preheader || issue.intro\n    }, content);\n  }\n\n  /* What the archive needs to know about each issue, kept in dist/data/newsletter-issues.json so\n     the workflow can rebuild the archive (and avoid repeating a place or tip) without the\n     full issue files. */\n  function summary(issue) {\n    return { month: issue.month, title: monthName(issue.month), url: issuePath(issue.month), headline: issue.headline || '', intro: issue.intro, used: issue.used || {} };\n  }\n\n  function archivePage(summaries, template) {\n    var list = summaries.length\n      ? '    <ul class=\"info-list nl-archive\">\\n' + summaries.map(function (s) {\n          return '      <li><a class=\"info-inline\" href=\"' + esc(s.url) + '\"><strong>' + esc(s.title) + '</strong></a>' +\n            (s.headline ? ' · ' + esc(s.headline) : '') + '</li>';\n        }).join('\\n') + '\\n    </ul>'\n      : '    <p>No issues yet. Sign up above and the first one comes straight to you.</p>';\n    var content = [\n      '    <p class=\"doc-eyebrow\">Newsletter</p>',\n      '    <h1>What’s on in Ghana. <em>One email a month.</em></h1>',\n      '    <p class=\"info-lead\">Near the end of each month: the festivals coming up next month, what’s new on GhanaNice, one place worth the trip and a tip from a reader. Every issue is also published here.</p>',\n      '    <section class=\"nl-band nl-page-band\" aria-label=\"Newsletter sign-up\" data-newsletter=\"newsletter\"></section>',\n      '    <h2>Past issues</h2>',\n      list\n    ].join('\\n');\n    return fill(template, {\n      path: '/newsletter/',\n      title: 'What’s on in Ghana: the GhanaNice newsletter',\n      description: 'A monthly email from GhanaNice: next month’s festivals, new places, one place worth the trip and a tip from a reader. Read past issues here.'\n    }, content);\n  }\n\n  /* The sitemap entries for the newsletter, in the order tools/build_regions.mjs writes them. */\n  function sitemapUrls(summaries) {\n    return [SITE + '/newsletter/'].concat(summaries.slice().sort(function (a, b) { return a.month < b.month ? -1 : 1; })\n      .map(function (s) { return SITE + s.url; }));\n  }\n\n  /* The issue as email, laid out to paste into MailerLite's editor: plain HTML with inline\n     styles and absolute links. */\n  function emailHtml(issue) {\n    var font = 'font-family:Arial,Helvetica,sans-serif;';\n    var serif = 'font-family:Georgia,\\'Times New Roman\\',serif;';\n    var out = ['<div style=\"max-width:620px;' + serif + 'color:#11110f;font-size:16px;line-height:1.5\">',\n      '<p style=\"' + font + 'font-size:11px;font-weight:bold;letter-spacing:.12em;text-transform:uppercase;color:#df4a32;margin:0 0 8px\">What’s on in Ghana · ' + esc(monthName(issue.month)) + '</p>',\n      '<h1 style=\"' + font + 'font-size:30px;line-height:1.05;margin:0 0 14px\">' + esc(issue.headline || 'What’s on in Ghana this month.') + '</h1>',\n      '<p style=\"margin:0 0 22px\">' + esc(issue.intro) + '</p>'];\n    issue.sections.forEach(function (section) {\n      out.push('<h2 style=\"' + font + 'font-size:20px;margin:28px 0 10px;padding-top:14px;border-top:2px solid #11110f\">' + esc(section.title) + '</h2>');\n      if (!section.items || !section.items.length) out.push('<p style=\"margin:0 0 12px\">' + esc(section.empty || '') + '</p>');\n      (section.items || []).forEach(function (item) {\n        out.push('<p style=\"margin:0 0 14px\">' +\n          (item.meta ? '<span style=\"' + font + 'font-size:11px;font-weight:bold;letter-spacing:.08em;text-transform:uppercase;color:#5c5b55\">' + esc(item.meta) + '</span><br>' : '') +\n          '<strong style=\"' + font + 'font-size:17px\">' + (item.url ? '<a href=\"' + esc(absolute(item.url)) + '\" style=\"color:#11110f\">' + esc(item.title) + '</a>' : esc(item.title)) + '</strong>' +\n          (item.text ? '<br>' + esc(item.text) : '') + '</p>');\n      });\n      if (section.note) out.push('<p style=\"margin:0 0 12px;font-size:14px;color:#5c5b55\">' + esc(section.note) + '</p>');\n    });\n    out.push('<p style=\"margin:28px 0 0;padding-top:14px;border-top:2px solid #11110f\">Know a festival or a place we should add? Reply to this email, or <a href=\"' + SITE + '/#tip\" style=\"color:#11110f\">share it on GhanaNice</a>.</p>');\n    out.push('<p style=\"margin:10px 0 0;font-size:14px;color:#5c5b55\">Read this issue on the site: <a href=\"' + SITE + issuePath(issue.month) + '\" style=\"color:#5c5b55\">' + SITE.replace('https://', '') + issuePath(issue.month) + '</a></p>');\n    out.push('</div>');\n    return out.join('\\n');\n  }\n\n  return { SITE: SITE, MONTHS: MONTHS, esc: esc, monthName: monthName, issuePath: issuePath, issuePage: issuePage, archivePage: archivePage, summary: summary, sitemapUrls: sitemapUrls, emailHtml: emailHtml };\n})();\n\n// Put the issue together: the facts from \"Gather issue\" with Claude's short copy laid over them.\n// If Claude's reply is missing or unreadable, the data's own wording is used, so an issue is\n// always drafted. Produces the issue (as stored in tools/newsletter/<yyyy-mm>.json), the\n// paste-ready email for August and the MailerLite draft campaign.\n// GhanaNiceNewsletter (tools/newsletter-render.js) is pasted in above this by the builder.\nconst R = GhanaNiceNewsletter;\nconst GROUP_ID = '201520530803656462';\nconst SENDER = { from: 'hello@ghananice.com', from_name: 'GhanaNice' };\nconst REVIEW_TO = 'augustministry@gmail.com';\nconst { facts, month } = $('Gather issue').first().json;\n\nlet ai = {};\nlet aiProblem = '';\nconst reply = $input.first().json;\nconst block = (reply.content || []).find(b => b.type === 'text');\ntry {\n  const text = (block?.text || '').replace(/^```(?:json)?\\s*|\\s*```$/g, '');\n  ai = JSON.parse(text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1));\n} catch {\n  aiProblem = reply.error ? `Claude returned an error (${reply.error.message || reply.error.type}).` : 'Claude’s reply could not be read.';\n}\nconst line = (value, max) => typeof value === 'string' && value.trim() ? value.trim().slice(0, max) : '';\nconst name = `${facts.monthName} ${facts.year}`;\n\nconst festivalItems = [\n  ...facts.festivals.map(f => ({\n    meta: `${f.region} · ${f.when}`,\n    title: f.name,\n    url: `/festivals/${f.slug}/`,\n    text: [line(ai.festivals?.[f.slug], 260) || f.sum, f.dateSetBy ? `Dates set by ${f.dateSetBy.replace(/\\.$/, '')}.` : ''].filter(Boolean).join(' ')\n  })),\n  ...facts.akwasidae.map(f => ({\n    meta: `${f.region} · ${f.dates.join(' and ')}`,\n    title: f.name,\n    url: `/festivals/${f.slug}/`,\n    text: `${line(ai.festivals?.[f.slug], 260) || f.sum} The dates follow the 42-day Akan calendar; check with Manhyia Palace before you travel.`\n  }))\n];\n\nconst newItems = [];\nif (facts.newFestivals.length > 4) {\n  newItems.push({ meta: 'Festivals', title: `${facts.newFestivals.length} festivals and cultural events`, url: '/festivals/',\n    text: line(ai.newFestivals, 300) || `A month-by-month list of festivals across all 16 regions, from ${facts.newFestivals.slice(0, 3).join(', ')} and more.` });\n} else {\n  facts.newFestivals.forEach(n => newItems.push({ meta: 'Festivals', title: n, url: '/festivals/', text: '' }));\n}\nfacts.newTips.forEach(t => newItems.push({\n  meta: [t.category, t.area].filter(Boolean).join(' · '), title: t.place, url: t.regionSlug ? `/regions/${t.regionSlug}/` : '/', text: t.note || ''\n}));\nfacts.newServices.forEach(s => newItems.push({\n  meta: `Travel directory · ${s.category}`, title: s.name, url: '/travel-directory.html', text: s.description.slice(0, 220)\n}));\n\nconst place = facts.place;\nconst tip = facts.tip;\nconst issue = {\n  month,\n  subject: line(ai.subject, 90) || `What’s on in Ghana: ${name}`,\n  preheader: line(ai.preheader, 140) || `Festivals in ${facts.monthName}, what’s new on GhanaNice and a tip from a reader.`,\n  headline: line(ai.headline, 100) || 'What’s on in Ghana this month.',\n  intro: line(ai.intro, 600) || `Here is what’s coming up across Ghana in ${facts.monthName}, what we added to GhanaNice this month, one place worth the trip and a tip from a reader.`,\n  sections: [\n    { id: 'festivals', title: `Festivals in ${facts.monthName}`, items: festivalItems,\n      empty: `None of the festivals on our list falls in ${facts.monthName}. See the whole year on ghananice.com/festivals.`,\n      note: festivalItems.length ? 'Most festival dates are set each year by the chiefs and traditional councils who keep them, so treat these as approximate and check the festival page close to the time.' : '' },\n    { id: 'new', title: 'New on GhanaNice', items: newItems,\n      empty: 'Nothing new went up this month. Know a place we should add? Share it on GhanaNice.' },\n    { id: 'place', title: 'One place worth the trip', items: [{\n      meta: `${place.region} Region`, title: place.name, url: `/regions/${place.regionSlug}/`, text: line(ai.place, 400) || place.note }] },\n    { id: 'tip', title: 'A tip from a reader', items: tip ? [{\n      meta: [tip.region, tip.area].filter(Boolean).join(' · '), title: tip.place, url: tip.regionSlug ? `/regions/${tip.regionSlug}/` : '/',\n      text: `“${tip.note}”${tip.by ? ` – ${tip.by}` : ''}` }] : [],\n      empty: 'No new reader tips this month. Been somewhere good? Share it on GhanaNice and it could be here next month.' }\n  ],\n  used: { place: place.key, tipId: tip ? tip.id : '' }\n};\n\nconst campaign = {\n  name: `What’s on in Ghana – ${name}`,\n  type: 'regular',\n  emails: [{ subject: issue.subject, ...SENDER }],\n  groups: [GROUP_ID]\n};\n\nreturn [{ json: { issue, campaign, aiProblem, name, reviewTo: REVIEW_TO, email: R.emailHtml(issue) } }];\n"
+   }
+  },
+  {
+   "id": "gni-9",
+   "name": "Create MailerLite draft",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    1920,
+    0
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://connect.mailerlite.com/api/campaigns",
+    "options": {
+     "response": {
+      "response": {
+       "neverError": true,
+       "fullResponse": true
+      }
+     },
+     "timeout": 30000
+    },
+    "authentication": "genericCredentialType",
+    "genericAuthType": "httpHeaderAuth",
+    "sendHeaders": true,
+    "headerParameters": {
+     "parameters": [
+      {
+       "name": "Accept",
+       "value": "application/json"
+      }
+     ]
+    },
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify($json.campaign) }}"
+   },
+   "credentials": {
+    "httpHeaderAuth": {
+     "id": "vEgYGJjIR8OPKcnM",
+     "name": "GhanaNice — MailerLite"
+    }
+   }
+  },
+  {
+   "id": "gni-10",
+   "name": "Prepare emails",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    2160,
+    0
+   ],
+   "parameters": {
+    "jsCode": "\nconst a = $('Assemble issue').first().json;\nconst res = $input.first().json;\nconst ok = res.statusCode >= 200 && res.statusCode < 300 && res.body?.data?.id;\nconst esc = v => String(v ?? '').replace(/[&<>\"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;' }[c]));\nconst problems = [\n  a.aiProblem ? `${a.aiProblem} The issue below uses the site’s own wording instead; read it through.` : '',\n  ok ? '' : `MailerLite didn’t create the draft (${res.statusCode || 'no answer'}: ${esc(JSON.stringify(res.body || res.error || '').slice(0, 300))}). Create it by hand: Campaigns → Create campaign → Regular, subject below, sender hello@ghananice.com, group “GhanaNice newsletter”.`\n].filter(Boolean);\nconst box = 'font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;background:#f1eee5;border:1px solid #11110f;padding:16px 18px;margin:0 0 28px;max-width:620px';\nconst html = `<div style=\"${box}\">\n<p style=\"margin:0 0 10px\"><b>The ${esc(a.name)} issue is drafted.</b></p>\n${problems.map(p => `<p style=\"margin:0 0 10px;color:#b3261e\"><b>Check:</b> ${p}</p>`).join('\\n')}\n<ol style=\"margin:0 0 10px;padding-left:20px\">\n<li>In MailerLite, open <b>Campaigns → Drafts → “What’s on in Ghana – ${esc(a.name)}”</b>${ok ? '' : ' (once you’ve created it)'}. Subject, sender (hello@ghananice.com) and the GhanaNice newsletter group are already set.</li>\n<li>Choose the design (the first time, pick a simple layout; after that, duplicate last month’s and swap the text), then paste the issue below. Check every link opens.</li>\n<li>Preview text: <i>${esc(a.issue.preheader)}</i></li>\n<li>Schedule it for the last days of the month, e.g. the 28th at 9:00.</li>\n<li>After it has gone out, open the second email, “Publish the ${esc(a.name)} issue on the site?”, and click <b>Sent: publish it</b>.</li>\n</ol>\n<p style=\"margin:0\">Subject: <b>${esc(a.issue.subject)}</b></p>\n</div>\n${a.email}`;\nreturn [{ json: {\n  campaignId: ok ? res.body.data.id : '',\n  draftSubject: `Newsletter: the ${a.name} issue is ready to paste`,\n  draftHtml: html,\n  askSubject: `Publish the ${a.name} issue on the site?`,\n  askText: `When the ${a.name} issue has gone out from MailerLite, click “Sent: publish it” and it goes on ghananice.com/newsletter/${a.issue.month}/ with the archive and sitemap. If you’re skipping this month, click “Don’t publish”. This request expires after 30 days.`\n} }];\n"
+   }
+  },
+  {
+   "id": "gni-11",
+   "name": "Email August the issue",
+   "type": "n8n-nodes-base.gmail",
+   "typeVersion": 2.1,
+   "position": [
+    2400,
+    0
+   ],
+   "parameters": {
+    "sendTo": "={{ $('Assemble issue').first().json.reviewTo }}",
+    "subject": "={{ $('Prepare emails').first().json.draftSubject }}",
+    "emailType": "html",
+    "message": "={{ $('Prepare emails').first().json.draftHtml }}",
+    "options": {
+     "appendAttribution": false,
+     "senderName": "GhanaNice"
+    }
+   },
+   "credentials": {
+    "gmailOAuth2": {
+     "id": "XSli9zjeTSRhQNLt",
+     "name": "Gmail account"
+    }
+   },
+   "onError": "continueRegularOutput"
+  },
+  {
+   "id": "gni-12",
+   "name": "Ask August when it is sent",
+   "type": "n8n-nodes-base.gmail",
+   "typeVersion": 2.1,
+   "position": [
+    2640,
+    0
+   ],
+   "parameters": {
+    "operation": "sendAndWait",
+    "sendTo": "={{ $('Assemble issue').first().json.reviewTo }}",
+    "subject": "={{ $('Prepare emails').first().json.askSubject }}",
+    "message": "={{ $('Prepare emails').first().json.askText }}",
+    "approvalOptions": {
+     "values": {
+      "approvalType": "double",
+      "approveLabel": "Sent: publish it",
+      "disapproveLabel": "Don’t publish"
+     }
+    },
+    "options": {
+     "limitWaitTime": {
+      "values": {
+       "limitType": "afterTimeInterval",
+       "resumeAmount": 30,
+       "resumeUnit": "days"
+      }
+     }
+    }
+   },
+   "credentials": {
+    "gmailOAuth2": {
+     "id": "XSli9zjeTSRhQNLt",
+     "name": "Gmail account"
+    }
+   },
+   "webhookId": "9c2d7e41-5b3a-4f86-b0d4-3000000000c1"
+  },
+  {
+   "id": "gni-13",
+   "name": "Sent?",
+   "type": "n8n-nodes-base.if",
+   "typeVersion": 2.2,
+   "position": [
+    2880,
+    0
+   ],
+   "parameters": {
+    "conditions": {
+     "options": {
+      "caseSensitive": true,
+      "leftValue": "",
+      "typeValidation": "loose",
+      "version": 2
+     },
+     "conditions": [
+      {
+       "id": "c12",
+       "leftValue": "={{ $json.data?.approved === true }}",
+       "rightValue": "",
+       "operator": {
+        "type": "boolean",
+        "operation": "true",
+        "singleValue": true
+       }
+      }
+     ],
+     "combinator": "and"
+    },
+    "options": {}
+   }
+  },
+  {
+   "id": "gni-14",
+   "name": "Git ref",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    3120,
+    -180
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/git/ref/heads/main",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gni-15",
+   "name": "Git commit",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    3360,
+    -180
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "=https://api.github.com/repos/AugustOsei/GhanaNice/git/commits/{{ $json.object.sha }}",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gni-16",
+   "name": "Page template",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    3600,
+    -180
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/contents/tools/page-template.html",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendQuery": true,
+    "queryParameters": {
+     "parameters": [
+      {
+       "name": "ref",
+       "value": "main"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gni-17",
+   "name": "Issue list",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    3840,
+    -180
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/contents/dist/data/newsletter-issues.json",
+    "options": {
+     "response": {
+      "response": {
+       "neverError": true
+      }
+     }
+    },
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendQuery": true,
+    "queryParameters": {
+     "parameters": [
+      {
+       "name": "ref",
+       "value": "main"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gni-18",
+   "name": "Sitemap",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    4080,
+    -180
+   ],
+   "parameters": {
+    "method": "GET",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/contents/dist/sitemap.xml",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendQuery": true,
+    "queryParameters": {
+     "parameters": [
+      {
+       "name": "ref",
+       "value": "main"
+      }
+     ]
+    }
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gni-19",
+   "name": "Publish issue",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    4320,
+    -180
+   ],
+   "parameters": {
+    "jsCode": "/* Renders the monthly newsletter, \"What's on in Ghana\", from one issue's data\n   (tools/newsletter/<yyyy-mm>.json). Shared by two callers, so both always produce the same\n   bytes:\n   - tools/build_newsletter.mjs, which writes /newsletter/ and the issue pages (and is run with\n     --check by tools/smoke.mjs);\n   - the n8n issue workflow (n8n/build_newsletter_issue_workflow.py pastes this file into its Code\n     nodes), which drafts the email and, once August has sent it, commits the issue page.\n   Plain script, no imports: it defines one global, GhanaNiceNewsletter. All issue text is plain\n   text and is escaped here; URLs are root-relative site paths. */\nvar GhanaNiceNewsletter = (function () {\n  var SITE = 'https://www.ghananice.com';\n  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];\n  function esc(value) {\n    return String(value == null ? '' : value).replace(/[&<>\"']/g, function (c) {\n      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', \"'\": '&#39;' }[c];\n    });\n  }\n  function monthName(month) {\n    var parts = month.split('-');\n    return MONTHS[Number(parts[1]) - 1] + ' ' + parts[0];\n  }\n  function issuePath(month) { return '/newsletter/' + month + '/'; }\n  function absolute(url) { return /^https?:/.test(url) ? url : SITE + url; }\n\n  /* The plain-page template (tools/page-template.html), filled the way tools/build_pages.mjs fills it. */\n  function fill(template, meta, content) {\n    return template.replace(/<!-- Template for[\\s\\S]*?-->\\n/, '').replace(/\\{\\{(\\w+)\\}\\}/g, function (match, key) {\n      if (key === 'content') return content;\n      if (key === 'url') return esc(SITE + meta.path);\n      if (key in meta) return esc(meta[key]);\n      throw new Error('page-template.html: no value for ' + match);\n    });\n  }\n\n  function itemHtml(item) {\n    var title = item.url ? '<a href=\"' + esc(item.url) + '\">' + esc(item.title) + '</a>' : esc(item.title);\n    return '        <li class=\"nl-item\">' +\n      (item.meta ? '<span class=\"nl-item-meta\">' + esc(item.meta) + '</span>' : '') +\n      '<h3>' + title + '</h3>' +\n      (item.text ? '<p>' + esc(item.text) + '</p>' : '') + '</li>';\n  }\n  function sectionHtml(section) {\n    var body = section.items && section.items.length\n      ? '      <ul class=\"nl-items\">\\n' + section.items.map(itemHtml).join('\\n') + '\\n      </ul>'\n      : '      <p>' + esc(section.empty || '') + '</p>';\n    return '    <section class=\"nl-section\" aria-labelledby=\"nl-' + esc(section.id) + '\">\\n' +\n      '      <h2 id=\"nl-' + esc(section.id) + '\">' + esc(section.title) + '</h2>\\n' + body +\n      (section.note ? '\\n      <p class=\"nl-section-note\">' + esc(section.note) + '</p>' : '') + '\\n    </section>';\n  }\n\n  function issuePage(issue, template) {\n    var name = monthName(issue.month);\n    var content = [\n      '    <p class=\"doc-eyebrow\"><a href=\"/newsletter/\">What’s on in Ghana</a></p>',\n      '    <h1>' + esc(name) + '. <em>' + esc(issue.headline || 'What’s on in Ghana this month.') + '</em></h1>',\n      '    <p class=\"info-updated\">Sent ' + esc(issue.sentOn || name) + '</p>',\n      '    <p class=\"info-lead\">' + esc(issue.intro) + '</p>',\n      issue.sections.map(sectionHtml).join('\\n\\n'),\n      '    <p class=\"nl-more\"><a href=\"/newsletter/\">← All issues</a></p>',\n      '    <section class=\"nl-band nl-page-band\" aria-label=\"Newsletter sign-up\" data-newsletter=\"newsletter\"></section>'\n    ].join('\\n');\n    return fill(template, {\n      path: issuePath(issue.month),\n      title: 'What’s on in Ghana: ' + name + ' · GhanaNice',\n      description: issue.preheader || issue.intro\n    }, content);\n  }\n\n  /* What the archive needs to know about each issue, kept in dist/data/newsletter-issues.json so\n     the workflow can rebuild the archive (and avoid repeating a place or tip) without the\n     full issue files. */\n  function summary(issue) {\n    return { month: issue.month, title: monthName(issue.month), url: issuePath(issue.month), headline: issue.headline || '', intro: issue.intro, used: issue.used || {} };\n  }\n\n  function archivePage(summaries, template) {\n    var list = summaries.length\n      ? '    <ul class=\"info-list nl-archive\">\\n' + summaries.map(function (s) {\n          return '      <li><a class=\"info-inline\" href=\"' + esc(s.url) + '\"><strong>' + esc(s.title) + '</strong></a>' +\n            (s.headline ? ' · ' + esc(s.headline) : '') + '</li>';\n        }).join('\\n') + '\\n    </ul>'\n      : '    <p>No issues yet. Sign up above and the first one comes straight to you.</p>';\n    var content = [\n      '    <p class=\"doc-eyebrow\">Newsletter</p>',\n      '    <h1>What’s on in Ghana. <em>One email a month.</em></h1>',\n      '    <p class=\"info-lead\">Near the end of each month: the festivals coming up next month, what’s new on GhanaNice, one place worth the trip and a tip from a reader. Every issue is also published here.</p>',\n      '    <section class=\"nl-band nl-page-band\" aria-label=\"Newsletter sign-up\" data-newsletter=\"newsletter\"></section>',\n      '    <h2>Past issues</h2>',\n      list\n    ].join('\\n');\n    return fill(template, {\n      path: '/newsletter/',\n      title: 'What’s on in Ghana: the GhanaNice newsletter',\n      description: 'A monthly email from GhanaNice: next month’s festivals, new places, one place worth the trip and a tip from a reader. Read past issues here.'\n    }, content);\n  }\n\n  /* The sitemap entries for the newsletter, in the order tools/build_regions.mjs writes them. */\n  function sitemapUrls(summaries) {\n    return [SITE + '/newsletter/'].concat(summaries.slice().sort(function (a, b) { return a.month < b.month ? -1 : 1; })\n      .map(function (s) { return SITE + s.url; }));\n  }\n\n  /* The issue as email, laid out to paste into MailerLite's editor: plain HTML with inline\n     styles and absolute links. */\n  function emailHtml(issue) {\n    var font = 'font-family:Arial,Helvetica,sans-serif;';\n    var serif = 'font-family:Georgia,\\'Times New Roman\\',serif;';\n    var out = ['<div style=\"max-width:620px;' + serif + 'color:#11110f;font-size:16px;line-height:1.5\">',\n      '<p style=\"' + font + 'font-size:11px;font-weight:bold;letter-spacing:.12em;text-transform:uppercase;color:#df4a32;margin:0 0 8px\">What’s on in Ghana · ' + esc(monthName(issue.month)) + '</p>',\n      '<h1 style=\"' + font + 'font-size:30px;line-height:1.05;margin:0 0 14px\">' + esc(issue.headline || 'What’s on in Ghana this month.') + '</h1>',\n      '<p style=\"margin:0 0 22px\">' + esc(issue.intro) + '</p>'];\n    issue.sections.forEach(function (section) {\n      out.push('<h2 style=\"' + font + 'font-size:20px;margin:28px 0 10px;padding-top:14px;border-top:2px solid #11110f\">' + esc(section.title) + '</h2>');\n      if (!section.items || !section.items.length) out.push('<p style=\"margin:0 0 12px\">' + esc(section.empty || '') + '</p>');\n      (section.items || []).forEach(function (item) {\n        out.push('<p style=\"margin:0 0 14px\">' +\n          (item.meta ? '<span style=\"' + font + 'font-size:11px;font-weight:bold;letter-spacing:.08em;text-transform:uppercase;color:#5c5b55\">' + esc(item.meta) + '</span><br>' : '') +\n          '<strong style=\"' + font + 'font-size:17px\">' + (item.url ? '<a href=\"' + esc(absolute(item.url)) + '\" style=\"color:#11110f\">' + esc(item.title) + '</a>' : esc(item.title)) + '</strong>' +\n          (item.text ? '<br>' + esc(item.text) : '') + '</p>');\n      });\n      if (section.note) out.push('<p style=\"margin:0 0 12px;font-size:14px;color:#5c5b55\">' + esc(section.note) + '</p>');\n    });\n    out.push('<p style=\"margin:28px 0 0;padding-top:14px;border-top:2px solid #11110f\">Know a festival or a place we should add? Reply to this email, or <a href=\"' + SITE + '/#tip\" style=\"color:#11110f\">share it on GhanaNice</a>.</p>');\n    out.push('<p style=\"margin:10px 0 0;font-size:14px;color:#5c5b55\">Read this issue on the site: <a href=\"' + SITE + issuePath(issue.month) + '\" style=\"color:#5c5b55\">' + SITE.replace('https://', '') + issuePath(issue.month) + '</a></p>');\n    out.push('</div>');\n    return out.join('\\n');\n  }\n\n  return { SITE: SITE, MONTHS: MONTHS, esc: esc, monthName: monthName, issuePath: issuePath, issuePage: issuePage, archivePage: archivePage, summary: summary, sitemapUrls: sitemapUrls, emailHtml: emailHtml };\n})();\n\n// After August has sent the issue: the files for one commit that puts it on the site.\n// The same renderer as tools/build_newsletter.mjs, fed the same inputs (the plain-page template,\n// the issue list and the sitemap as they are on main now), so smoke's --check stays green.\n// GhanaNiceNewsletter (tools/newsletter-render.js) is pasted in above this by the builder.\nconst R = GhanaNiceNewsletter;\nconst head = $('Git ref').first().json.object?.sha;\nconst baseTree = $('Git commit').first().json.tree?.sha;\nif (!head || !baseTree) throw new Error('Could not read main from GitHub (check the GhanaNice — GitHub credential).');\nconst text = name => {\n  const file = $(name).first().json;\n  if (!file.content) throw new Error(`${name}: GitHub returned no file (${file.message || 'unknown error'}).`);\n  return Buffer.from(file.content, 'base64').toString('utf8');\n};\nconst template = text('Page template');\nconst sitemap = text('Sitemap');\nlet listed = [];\ntry { listed = JSON.parse(text('Issue list')).issues || []; } catch { listed = []; }\n\nconst sentOn = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Africa/Accra' }).format(new Date());\nconst issue = { ...$('Assemble issue').first().json.issue, sentOn };\nconst summaries = [R.summary(issue), ...listed.filter(s => s.month !== issue.month)].sort((a, b) => (a.month < b.month ? 1 : -1));\nconst json = value => JSON.stringify(value, null, 1) + '\\n';\n\nconst loc = `  <url><loc>${R.SITE}${R.issuePath(issue.month)}</loc></url>\\n`;\nconst newSitemap = sitemap.includes(loc) ? sitemap : sitemap.replace('</urlset>', `${loc}</urlset>`);\n\nconst files = [\n  [`tools/newsletter/${issue.month}.json`, json(issue)],\n  [`dist/newsletter/${issue.month}/index.html`, R.issuePage(issue, template)],\n  ['dist/newsletter/index.html', R.archivePage(summaries, template)],\n  ['dist/data/newsletter-issues.json', json({ issues: summaries })],\n  ['dist/sitemap.xml', newSitemap]\n];\nreturn files.map(([path, content]) => ({ json: {\n  path, content: Buffer.from(content, 'utf8').toString('base64'), head, baseTree,\n  message: `Newsletter: publish the ${R.monthName(issue.month)} issue\\n\\nSent from MailerLite and published by the n8n issue workflow.`,\n  url: `${R.SITE}${R.issuePath(issue.month)}`\n} }));\n"
+   }
+  },
+  {
+   "id": "gni-20",
+   "name": "Upload blobs",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    4560,
+    -180
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/git/blobs",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ content: $json.content, encoding: \"base64\" }) }}"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gni-21",
+   "name": "Make tree",
+   "type": "n8n-nodes-base.code",
+   "typeVersion": 2,
+   "position": [
+    4800,
+    -180
+   ],
+   "parameters": {
+    "jsCode": "\nconst files = $('Publish issue').all();\nconst tree = $input.all().map((blob, index) => {\n  if (!blob.json.sha) throw new Error(`GitHub did not store ${files[index].json.path}`);\n  return { path: files[index].json.path, mode: '100644', type: 'blob', sha: blob.json.sha };\n});\nconst first = files[0].json;\nreturn [{ json: { tree, baseTree: first.baseTree, head: first.head, message: first.message, url: first.url } }];\n"
+   }
+  },
+  {
+   "id": "gni-22",
+   "name": "Create tree",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    5040,
+    -180
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/git/trees",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ base_tree: $json.baseTree, tree: $json.tree }) }}"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gni-23",
+   "name": "Create commit",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    5280,
+    -180
+   ],
+   "parameters": {
+    "method": "POST",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/git/commits",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ message: $('Make tree').first().json.message, tree: $json.sha, parents: [$('Make tree').first().json.head] }) }}"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gni-24",
+   "name": "Move branch",
+   "type": "n8n-nodes-base.httpRequest",
+   "typeVersion": 4.2,
+   "position": [
+    5520,
+    -180
+   ],
+   "parameters": {
+    "method": "PATCH",
+    "url": "https://api.github.com/repos/AugustOsei/GhanaNice/git/refs/heads/main",
+    "options": {},
+    "authentication": "predefinedCredentialType",
+    "nodeCredentialType": "githubApi",
+    "sendBody": true,
+    "specifyBody": "json",
+    "jsonBody": "={{ JSON.stringify({ sha: $json.sha }) }}"
+   },
+   "credentials": {
+    "githubApi": {
+     "id": "bZLd6GbkA1nT5I0K",
+     "name": "GhanaNice — GitHub"
+    }
+   }
+  },
+  {
+   "id": "gni-25",
+   "name": "Tell August it is published",
+   "type": "n8n-nodes-base.gmail",
+   "typeVersion": 2.1,
+   "position": [
+    5760,
+    -180
+   ],
+   "parameters": {
+    "sendTo": "={{ $('Assemble issue').first().json.reviewTo }}",
+    "subject": "=Published: the {{ $('Assemble issue').first().json.name }} issue",
+    "emailType": "html",
+    "message": "=<p>The {{ $('Assemble issue').first().json.name }} issue is committed to main and will be at <a href=\"{{ $('Make tree').first().json.url }}\">{{ $('Make tree').first().json.url }}</a> once Vercel has deployed it (about a minute).</p>",
+    "options": {
+     "appendAttribution": false,
+     "senderName": "GhanaNice"
+    }
+   },
+   "credentials": {
+    "gmailOAuth2": {
+     "id": "XSli9zjeTSRhQNLt",
+     "name": "Gmail account"
+    }
+   },
+   "onError": "continueRegularOutput"
+  }
+ ],
+ "connections": {
+  "Every 24th": {
+   "main": [
+    [
+     {
+      "node": "Site data",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Site data": {
+   "main": [
+    [
+     {
+      "node": "Tips",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Tips": {
+   "main": [
+    [
+     {
+      "node": "Services",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Services": {
+   "main": [
+    [
+     {
+      "node": "Past issues",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Past issues": {
+   "main": [
+    [
+     {
+      "node": "Gather issue",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Gather issue": {
+   "main": [
+    [
+     {
+      "node": "Claude drafts",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Claude drafts": {
+   "main": [
+    [
+     {
+      "node": "Assemble issue",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Assemble issue": {
+   "main": [
+    [
+     {
+      "node": "Create MailerLite draft",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Create MailerLite draft": {
+   "main": [
+    [
+     {
+      "node": "Prepare emails",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Prepare emails": {
+   "main": [
+    [
+     {
+      "node": "Email August the issue",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Email August the issue": {
+   "main": [
+    [
+     {
+      "node": "Ask August when it is sent",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Ask August when it is sent": {
+   "main": [
+    [
+     {
+      "node": "Sent?",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Sent?": {
+   "main": [
+    [
+     {
+      "node": "Git ref",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Git ref": {
+   "main": [
+    [
+     {
+      "node": "Git commit",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Git commit": {
+   "main": [
+    [
+     {
+      "node": "Page template",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Page template": {
+   "main": [
+    [
+     {
+      "node": "Issue list",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Issue list": {
+   "main": [
+    [
+     {
+      "node": "Sitemap",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Sitemap": {
+   "main": [
+    [
+     {
+      "node": "Publish issue",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Publish issue": {
+   "main": [
+    [
+     {
+      "node": "Upload blobs",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Upload blobs": {
+   "main": [
+    [
+     {
+      "node": "Make tree",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Make tree": {
+   "main": [
+    [
+     {
+      "node": "Create tree",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Create tree": {
+   "main": [
+    [
+     {
+      "node": "Create commit",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Create commit": {
+   "main": [
+    [
+     {
+      "node": "Move branch",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  },
+  "Move branch": {
+   "main": [
+    [
+     {
+      "node": "Tell August it is published",
+      "type": "main",
+      "index": 0
+     }
+    ]
+   ]
+  }
+ },
+ "settings": {
+  "executionOrder": "v1",
+  "timezone": "Africa/Accra",
+  "saveDataErrorExecution": "all",
+  "saveDataSuccessExecution": "all"
+ }
+}

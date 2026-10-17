@@ -996,3 +996,20 @@ main[tabindex="-1"]:focus { outline: 0; }
   .nl-pop.is-open .nl-stick, .nl-pop.is-open .nl-skin, .nl-pop.is-open .nl-beat { animation: none; }
 }
 .nl-band:empty { display: none; }
+
+/* Newsletter archive and issue pages (/newsletter/, tools/build_newsletter.mjs). */
+.info-main .nl-section h2 { padding-top: 18px; border-top: 2px solid var(--ink); }
+.nl-items { max-width: 720px; margin: 0; padding: 0; list-style: none; }
+.nl-item { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.nl-item-meta { display: block; color: #5c5b55; font-size: .64rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.nl-item h3 { margin: 6px 0 4px; font-size: 1.3rem; letter-spacing: -.03em; }
+.info-main .nl-item h3 a { border-bottom: 0; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.info-main .nl-item p { margin: 0; }
+.info-main .nl-section-note { margin-top: 14px; color: #5c5b55; font-size: .92rem; }
+.info-main .nl-more { margin-top: 48px; font-family: Arial, Helvetica, sans-serif; font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.nl-page-band { margin: 56px 0 0; }
+.info-main .nl-page-band a { border-bottom: 0; }
+.doc-main .nl-band p { max-width: none; }
+.doc-main .nl-band .nl-title { font-family: Arial, Helvetica, sans-serif; font-size: clamp(1.9rem, 3.6vw, 3rem); line-height: .95; }
+.doc-main .nl-band .nl-note { font-family: Arial, Helvetica, sans-serif; font-size: .7rem; }
+.doc-main .nl-band .nl-status { font-family: Arial, Helvetica, sans-serif; font-size: .82rem; }

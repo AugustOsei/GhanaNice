@@ -141,16 +141,19 @@ check(footerPages.length >= 60, `Expected the footer on at least 60 pages, found
 footerPages.forEach((file) => {
   const html = read(file);
   check(html.includes('data-newsletter="footer"'), `${file} has no newsletter form in its footer`);
-  check(/src="\/?newsletter\.js\?v=1"/.test(html), `${file} does not load newsletter.js?v=1`);
+  check(/src="\/?newsletter\.js\?v=2"/.test(html), `${file} does not load newsletter.js?v=2`);
   check(/src="\/?config\.js\?v=6"/.test(html), `${file} does not load config.js?v=6 (the newsletter endpoint)`);
   if (file.startsWith('dist/festivals/')) check(html.includes('data-newsletter="festival"'), `${file} has no festival newsletter band`);
 });
 check(read('dist/index.html').includes('data-newsletter="home"'), 'dist/index.html has no newsletter band under the festivals');
 check(/newsletterEndpoint:/.test(read('dist/config.js')), 'config.js has no newsletterEndpoint');
+check(sitemapXmlEarly().includes('<loc>https://www.ghananice.com/newsletter/</loc>'), 'sitemap.xml does not list /newsletter/');
+check(/<loc>https:\/\/www\.ghananice\.com\/newsletter\/[^<]*<\/loc><\/url>\n<\/urlset>/.test(sitemapXmlEarly()), 'sitemap.xml must end with the newsletter entries (the issue workflow appends there)');
+function sitemapXmlEarly() { return read('dist/sitemap.xml'); }
 
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=54',
+    'styles.css?v=55',
     'data.js?v=9',
     'app.js?v=32',
     'tip-form.js?v=5',
@@ -159,16 +162,16 @@ const htmlExpectations = {
     'id="region-reader" role="dialog"',
   ],
   'tools/region-template.html': [
-    '/styles.css?v=54',
+    '/styles.css?v=55',
     '/data.js?v=9',
     '/region.js?v=12',
     '/tip-form.js?v=5',
     '/footer.js?v=3',
   ],
-  'dist/credits.html': ['styles.css?v=54'],
-  'dist/404.html': ['styles.css?v=54'],
+  'dist/credits.html': ['styles.css?v=55'],
+  'dist/404.html': ['styles.css?v=55'],
   'dist/travel-directory.html': [
-    'styles.css?v=54',
+    'styles.css?v=55',
     'travel-directory.css?v=16',
     'config.js?v=6',
     'travel-directory-data.js?v=4',
@@ -254,7 +257,7 @@ festivalPages.forEach(([urlPath, file]) => {
   check((read(file).match(/href="\/festivals\/"/g) || []).length >= 2, `${file} does not link to /festivals/ in the nav and footer`);
 });
 
-['build_regions.mjs', 'build_pages.mjs', 'build_festivals.mjs'].forEach((builder) => {
+['build_regions.mjs', 'build_pages.mjs', 'build_festivals.mjs', 'build_newsletter.mjs'].forEach((builder) => {
   try {
     execFileSync(process.execPath, [path.join(root, 'tools', builder), '--check'], { stdio: 'pipe' });
   } catch (error) {

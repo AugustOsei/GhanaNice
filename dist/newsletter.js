@@ -1,5 +1,5 @@
 /* The monthly newsletter sign-up, "What's on in Ghana", on every page.
-   Each page marks where a form goes with data-newsletter="footer | festival | home"; this script
+   Each page marks where a form goes with data-newsletter="footer | festival | home | newsletter"; this script
    fills them in and posts {email, source, page} as JSON to config.newsletterEndpoint (n8n, which
    adds the address to MailerLite; MailerLite sends the confirmation email). A blank endpoint is
    preview mode: nothing is sent or stored. See docs/newsletter-pipeline.md.
@@ -21,6 +21,11 @@
     home: {
       title: 'What’s on in Ghana, once a month',
       lead: 'Next month’s festivals, new places on GhanaNice and a tip from a reader. One email a month.',
+      button: 'Sign me up'
+    },
+    newsletter: {
+      title: 'Get the next issue',
+      lead: 'One email near the end of each month. We’ll ask you to confirm first.',
       button: 'Sign me up'
     },
     popup: {

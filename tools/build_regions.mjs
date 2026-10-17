@@ -12,6 +12,8 @@ import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 import { PAGES } from './build_pages.mjs';
+import { SUMMARIES as NEWSLETTER_ISSUES } from './build_newsletter.mjs';
+import { createRequire } from 'node:module';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
@@ -167,7 +169,9 @@ function render(region, index) {
 const festivalUrls = festivals.map(f => `${SITE}/festivals/${f.slug}/`);
 
 function sitemap() {
-  const pages = [`${SITE}/`, `${SITE}/travel-directory.html`, ...regions.map(r => regionUrl(r.slug)), ...PAGES.map(p => SITE + p.path), `${SITE}/festivals/`, ...festivalUrls];
+  const pages = [`${SITE}/`, `${SITE}/travel-directory.html`, ...regions.map(r => regionUrl(r.slug)), ...PAGES.map(p => SITE + p.path), `${SITE}/festivals/`, ...festivalUrls,
+    /* Last, so the n8n issue workflow can add a new issue just before </urlset>. */
+    ...createRequire(import.meta.url)('./newsletter-render.js').sitemapUrls(NEWSLETTER_ISSUES)];
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(loc => `  <url><loc>${loc}</loc></url>`).join('\n')}

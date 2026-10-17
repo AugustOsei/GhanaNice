@@ -65,11 +65,56 @@ most once per visit, never after signing up, and not for 60 days after it is clo
 (`localStorage` `ghananice:newsletter`). Esc or × closes it. On phones it is a short strip and
 the page gets matching bottom padding, so it never hides content. Reduced motion: no slide.
 
-## The monthly issue (phase 2)
+## The monthly issue (phase 2, live)
 
-Not built yet. Plan: an n8n workflow around the 24th gathers next month's festivals
-(`tools/festivals/*.json` from GitHub, Akwasidae every 42 days from its anchor), what was added in
-the last month, one place from `data.js` and an approved tip; drafts the issue with the Anthropic
-credential in the GhanaNice voice; creates a **draft** campaign in MailerLite for the group (never
-sends) and emails August to review, edit and schedule it there. Once sent, the issue is published
-on the site at `/newsletter/<yyyy-mm>/` with a `/newsletter/` archive.
+n8n workflow **"GhanaNice — Newsletter issue"**, built by `n8n/build_newsletter_issue_workflow.py`.
+
+```text
+24th of the month, 09:00 Accra
+  → read the site's data: /data/newsletter-source.json, /data/listings.json,
+    /data/service-submissions.json, /data/newsletter-issues.json
+  → Gather issue: next month's festivals (+ Akwasidae Sundays, every 42 days from its anchor),
+    what went up in the last 5 weeks, one place worth the trip, the newest unused reader tip
+  → Claude writes the short copy around those facts (subject, preheader, headline, intro,
+    one line per festival, the place)          ← if its reply is unusable, the data's own wording is used
+  → Assemble issue → MailerLite draft campaign (subject, hello@ghananice.com, the group; no body)
+  → email August the issue laid out to paste into the draft
+  → second email, "Publish the <month> issue on the site?" (waits up to 30 days)
+      Sent: publish it → one commit on main: tools/newsletter/<yyyy-mm>.json,
+                         dist/newsletter/<yyyy-mm>/index.html, dist/newsletter/index.html,
+                         dist/data/newsletter-issues.json, dist/sitemap.xml → email "Published"
+      Don't publish   → nothing
+```
+
+**Why the body is pasted by hand:** MailerLite's API only accepts email content on its paid
+Advanced plan. On the free plan the workflow creates the draft with subject, sender and group,
+and August pastes the issue into MailerLite's editor (the first time pick a simple layout; after
+that, duplicate last month's campaign and swap the text). Edits made in MailerLite don't flow back
+to the site page, which is published from the drafted issue; edit `tools/newsletter/<month>.json`
+and run `node tools/build_newsletter.mjs` if the site version should change.
+
+**Accuracy rules:** every name, date and link comes from the site's data; Claude only writes
+connecting copy and is told not to add facts or exact festival dates. Festival dates are shown as
+the festival page gives them ("Usually the first Saturday of November") with a note that dates
+are set each year by the chiefs and traditional councils. Akwasidae's Sundays are computed and
+carry "check with Manhyia Palace". More than four new festivals collapse into one item. A place or
+tip used in an earlier issue isn't used again (`used` in each issue). A tip needs at least 20
+characters of note to be featured.
+
+**Shared renderer:** `tools/newsletter-render.js` renders the issue page, the archive, the sitemap
+entries and the paste-ready email. `tools/build_newsletter.mjs` uses it to write the pages, and the
+builder pastes it into the workflow's Code nodes, so a page committed by n8n is byte-for-byte what
+the builder writes and smoke's `--check` passes. The newsletter URLs are the last entries in the
+sitemap, so the workflow appends a new issue just before `</urlset>`.
+
+**Site data the workflow reads:** `node tools/build_newsletter.mjs` writes
+`dist/data/newsletter-source.json` (festivals from `tools/festivals/*.json`, places from `data.js`)
+and `dist/data/newsletter-issues.json`. Re-run it after changing festivals, places or the page
+template (smoke fails if it is stale). New festivals need an `added` date (YYYY-MM-DD) for
+"New on GhanaNice".
+
+**Testing:** `python3 n8n/build_newsletter_issue_workflow.py --test` adds a "Run now" webhook that
+takes `{source, tips, services, issues}` in its body (the four files) and prints its URL; rebuild
+without `--test` afterwards. Delete the test draft in MailerLite and the waiting execution in n8n.
+
+**Depends on:** Vercel deploying pushes to `main` automatically (the publish step is a commit).

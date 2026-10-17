@@ -2,7 +2,7 @@
 // a harmless "ok" and nothing is stored. Only the email, the form it came from and the page
 // path go any further.
 const GROUP_ID = '201520530803656462'; // MailerLite group "GhanaNice newsletter"
-const SOURCES = ['footer', 'festival', 'home', 'popup'];
+const SOURCES = ['footer', 'festival', 'home', 'newsletter', 'popup'];
 
 const raw = $input.first().json.body && typeof $input.first().json.body === 'object' ? $input.first().json.body : {};
 const text = (value, max) => String(value ?? '').replace(/\s+/g, ' ').trim().slice(0, max);
