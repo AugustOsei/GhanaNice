@@ -3,6 +3,7 @@ import { AbsoluteFill, Easing, interpolate, Sequence, spring, useCurrentFrame, u
 import { C, SANS, SERIF } from '../brand';
 import { BOARD, clamp, Cutout, CutDefs, Drums, Flaps, grain, Print } from './parts';
 import { Intro, INTRO_LENGTH } from './Intro';
+import { Backdrop, Bleed, BleedContext, useBleed } from './bleed';
 
 /* "What's on in Ghana": a 26-second film (1080×1350, silent) for the festivals section and the
    monthly newsletter. A welcome to GhanaNice announces the new Festivals section; the split-flap counter turns to 46; the festivals board assembles and its
@@ -30,18 +31,27 @@ const TODO = ['watch the deer hunt at Winneba', 'eat kpokpoi at Homowo', 'see th
 
 const ease = Easing.bezier(0.6, 0, 0.2, 1);
 
-export const FestivalsFilm: React.FC = () => (
-  <AbsoluteFill style={{ background: C.ink }}>
+export const FestivalsFilm: React.FC = () => <Film bleed={{ above: 0, below: 0 }} />;
+/* 9:16 for Reels and TikTok: the same stage, kept clear of the apps' buttons and caption. */
+export const FestivalsVertical: React.FC = () => <Film bleed={{ above: 200, below: 370 }} />;
+
+const Film: React.FC<{ bleed: Bleed }> = ({ bleed }) => (
+  <AbsoluteFill style={{ background: C.ink, overflow: 'hidden' }}>
     <CutDefs />
-    <Sequence durationInFrames={INTRO_LENGTH}><Intro /></Sequence>
-    <Sequence from={INTRO_LENGTH}><Main /></Sequence>
+    <BleedContext.Provider value={bleed}>
+      <div style={{ position: 'absolute', left: 0, top: bleed.above, width: 1080, height: 1350 }}>
+        <Sequence durationInFrames={INTRO_LENGTH} layout="none"><Intro /></Sequence>
+        <Sequence from={INTRO_LENGTH} layout="none"><Main /></Sequence>
+      </div>
+    </BleedContext.Provider>
   </AbsoluteFill>
 );
 
 const Main: React.FC = () => {
   const frame = useCurrentFrame();
   return (
-    <AbsoluteFill style={{ background: grain(BOARD), fontFamily: SANS, color: C.ink, overflow: 'hidden' }}>
+    <AbsoluteFill style={{ fontFamily: SANS, color: C.ink }}>
+      <Backdrop background={grain(BOARD)} />
       {frame < BOARD_END + 20 && <Board frame={frame} />}
       {frame >= MONTHS_AT - 6 && frame < SIGNUP_AT + 24 && <Months frame={frame - MONTHS_AT} />}
       {frame < MONTHS_AT && <Count frame={frame} />}
@@ -54,15 +64,16 @@ const Main: React.FC = () => {
    the board, where it sits on the site. */
 const Count: React.FC<{ frame: number }> = ({ frame }) => {
   const { fps } = useVideoConfig();
+  const { above, below } = useBleed();
   const sink = interpolate(frame, [70, COUNT_END], [0, 1], { ...clamp, easing: ease });
   const leave = interpolate(frame, [BOARD_END - 14, BOARD_END + 2], [0, 1], { ...clamp, easing: Easing.in(Easing.cubic) });
-  const top = interpolate(sink, [0, 1], [-40, 1110]) + leave * 300;
+  const top = interpolate(sink, [0, 1], [-40 - above, 1110]) + leave * (300 + below);
   const line = spring({ frame: frame - 40, fps, config: { damping: 16, stiffness: 120 } });
   const units = Array.from({ length: 17 }, (_, i) => String(i % 10));
   return (
-    <div style={{ position: 'absolute', left: -120, width: 1320, top, height: 1500, zIndex: 5,
+    <div style={{ position: 'absolute', left: -120, width: 1320, top, height: 1500 + above + below, zIndex: 5,
       borderRadius: `${sink * 50}% ${sink * 50}% 0 0 / ${sink * 12}% ${sink * 12}% 0 0`, background: grain(C.yellow) }}>
-      <div style={{ position: 'absolute', left: 120, right: 120, top: interpolate(sink, [0, 1], [500, 46]),
+      <div style={{ position: 'absolute', left: 120, right: 120, top: interpolate(sink, [0, 1], [500 + above, 46]),
         display: 'flex', flexDirection: 'column', alignItems: 'center',
         transform: `scale(${interpolate(sink, [0, 1], [1, 0.62])})`, transformOrigin: '50% 0' }}>
         <div style={{ position: 'absolute', top: -360, fontSize: 30, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', opacity: 1 - sink }}>
@@ -197,14 +208,16 @@ const Months: React.FC<{ frame: number }> = ({ frame }) => {
    the sign-up in the site's words, and where to find it. */
 const SignUp: React.FC<{ frame: number }> = ({ frame }) => {
   const { fps } = useVideoConfig();
+  const { above, below } = useBleed();
   const rise = interpolate(frame, [0, 22], [0, 1], { ...clamp, easing: ease });
   const s = (at: number) => spring({ frame: frame - at, fps, config: { damping: 15, stiffness: 120 } });
   const typed = 'you@example.com'.slice(0, Math.max(0, Math.floor((frame - 50) / 1.6)));
   const press = interpolate(frame, [84, 88, 94], [0, 1, 0], clamp);
   const title = s(16), lead = s(28), form = s(40), url = s(104);
   return (
-    <AbsoluteFill style={{ transform: `translateY(${(1 - rise) * 1350}px)`, background: grain(C.paper), boxShadow: '0 -30px 60px rgba(0,0,0,.35)' }}>
-      <div style={{ position: 'absolute', left: 0, right: 0, top: 0, height: 520, background: grain(C.yellow), borderBottom: `3px solid ${C.ink}`, overflow: 'hidden' }}>
+    <AbsoluteFill style={{ transform: `translateY(${(1 - rise) * (1350 + above + below)}px)` }}>
+      <div style={{ position: 'absolute', left: 0, right: 0, top: -above, bottom: -below, background: grain(C.paper), boxShadow: '0 -30px 60px rgba(0,0,0,.35)' }} />
+      <div style={{ position: 'absolute', left: 0, right: 0, top: -above, height: 520 + above, background: grain(C.yellow), borderBottom: `3px solid ${C.ink}`, overflow: 'hidden' }}>
         <div style={{ position: 'absolute', left: 64, top: 70, fontSize: 30, fontWeight: 800, letterSpacing: '0.12em', textTransform: 'uppercase', opacity: title }}>The GhanaNice newsletter</div>
         <div style={{ position: 'absolute', right: 90, bottom: -3 }}><Drums t={frame - 18} height={610} /></div>
       </div>

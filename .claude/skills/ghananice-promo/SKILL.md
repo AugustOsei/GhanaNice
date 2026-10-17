@@ -43,6 +43,10 @@ feedback on the festivals clip, 2026-10-17). The shape that worked:
   the white cut edge, split-flap `Flaps`, the newsletter `Drums`, `grain()` paper texture) and
   `src/festivals/Intro.tsx` (the welcome); the yarn, pencil filter and star in `src/components/`.
 - Chain scenes with `<Sequence>`; each scene uses its own local frame.
+- **Several formats from one layout:** lay out on a 1080×1350 stage and make 9:16 by setting the
+  stage 200px down in a 1080×1920 frame, with backgrounds bleeding past it (`src/festivals/bleed.tsx`,
+  `Backdrop`, `useBleed`). That keeps everything clear of the Reels/TikTok buttons and caption
+  (about the top 200px and bottom 370px). Use a separate composition per format.
 
 ## 5. Check, then show
 - Quick draft: `npx remotion render src/index.ts <Id> out/<clip>/draft.mp4 --scale=0.5`, then a

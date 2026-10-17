@@ -39,3 +39,6 @@ Aboakyer, Chale Wote, Ngmayem and Hogbetsotso, and the newsletter card's drums p
 sign-up. `npm run render:festivals` writes `out/ghananice-festivals.mp4`. The pieces in
 `parts.tsx` redraw the board's (`dist/festivals/index.html`) and the card's (`dist/newsletter.js`).
 Months are said as "usually", like the site; no exact dates.
+`FestivalsVertical` is the 9:16 cut (1080×1920, `npm run render:festivals-vertical`): the same 1080×1350
+stage set 200px from the top, clear of the Reels/TikTok buttons and caption, with each scene's
+background bleeding to the edges (`src/festivals/bleed.tsx`).

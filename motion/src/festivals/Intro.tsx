@@ -2,6 +2,7 @@ import React from 'react';
 import { AbsoluteFill, Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
 import { C, SANS, SERIF } from '../brand';
 import { clamp, Cutout, grain, Print } from './parts';
+import { Backdrop, useBleed } from './bleed';
 
 /* The way in, for someone who has never seen the site: the home page's "Ghana is nice.", four
    postcards of real places from four regions, what GhanaNice is (the site's own description),
@@ -20,6 +21,7 @@ const CARDS = [
 export const Intro: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
+  const { above, below } = useBleed();
   const s = (at: number, damping = 15) => spring({ frame: frame - at, fps, config: { damping, stiffness: 120 } });
   const ghana = s(2), nice = s(10, 11), line = s(46), locals = s(62);
   /* Everything of the welcome slides up and away for the news. */
@@ -27,7 +29,8 @@ export const Intro: React.FC = () => {
   const tag = s(106, 11), title = s(112, 13), where = s(122);
   const wipe = interpolate(frame, [152, INTRO_LENGTH], [0, 1], { ...clamp, easing: ease });
   return (
-    <AbsoluteFill style={{ background: grain(C.ink), fontFamily: SANS, overflow: 'hidden' }}>
+    <AbsoluteFill style={{ fontFamily: SANS }}>
+      <Backdrop background={grain(C.ink)} />
       <div style={{ position: 'absolute', inset: 0, transform: `translateY(${-away * 1400}px)` }}>
         <div style={{ position: 'absolute', left: 64, top: 90, color: C.paper }}>
           <div style={{ fontSize: 150, fontWeight: 900, letterSpacing: '-0.08em', lineHeight: 1, opacity: ghana, transform: `translateY(${(1 - ghana) * 40}px)` }}>
@@ -62,7 +65,7 @@ export const Intro: React.FC = () => {
       <Cutout kind="drum" x={850} y={330} size={230} rotate={10 - (frame - 110) * 0.08} pop={s(114, 9)} />
       <Cutout kind="umbrella" x={860} y={960} size={260} rotate={-8 + (frame - 110) * 0.06} pop={s(120, 9)} />
       <Cutout kind="torch" x={220} y={1010} size={200} rotate={6 + (frame - 110) * 0.1} pop={s(126, 9)} />
-      <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: `${wipe * 100}%`, background: grain(C.yellow) }} />
+      <div style={{ position: 'absolute', left: 0, right: 0, bottom: -below, height: wipe * (1350 + above + below), background: grain(C.yellow) }} />
     </AbsoluteFill>
   );
 };
