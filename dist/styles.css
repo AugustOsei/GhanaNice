@@ -62,9 +62,12 @@ img, video { display: block; max-width: 100%; }
 .hero-window.is-sequencing { background-image: none; }
 .map-reel::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.17)); }
 /* A frame just larger than the outline (ghana-mask.svg is 69.27 × 100), centred like the mask. */
-.map-scene { position: absolute; inset: 0; margin: auto; width: calc(var(--mask-size) + 4px); height: calc(var(--mask-size) * 1.4436 + 4px); overflow: hidden; transform: translateY(-100%); will-change: transform; }
+/* Centred with explicit offsets: margin: auto left-aligns a box once it is wider than the
+   screen, which shifted the destination as the outline opened out. */
+.map-scene { --frame-w: calc(var(--mask-size) + 4px); --frame-h: calc(var(--mask-size) * 1.4436 + 4px); position: absolute; left: calc(50% - var(--frame-w) / 2); top: calc(50% - var(--frame-h) / 2); width: var(--frame-w); height: var(--frame-h); overflow: hidden; transform: translateY(-100%); will-change: transform; }
 /* The destination frame shows its photo at full-screen crop, so it matches the video exactly. */
-.map-scene-final img { inset: auto; left: calc(50% - var(--stage-w, 100vw) / 2); top: calc(50% - 50svh); width: var(--stage-w, 100vw); max-width: none; height: 100svh; }
+/* Scaled like the video, so the hand-off is exact. */
+.map-scene-final img { inset: auto; left: calc(50% - var(--stage-w, 100vw) / 2); top: calc(50% - 50svh); width: var(--stage-w, 100vw); max-width: none; height: 100svh; transform: scale(1.015); }
 .map-scene.is-active { transform: none; }
 .hero-window.is-settled .map-scene { will-change: auto; }
 .hero-shade { position: absolute; z-index: 4; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.03) 30%, rgba(0,0,0,.64)); pointer-events: none; }

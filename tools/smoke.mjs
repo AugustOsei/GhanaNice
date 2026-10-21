@@ -155,7 +155,7 @@ function sitemapXmlEarly() { return read('dist/sitemap.xml'); }
 
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=56',
+    'styles.css?v=57',
     'data.js?v=9',
     'app.js?v=33',
     'tip-form.js?v=5',
@@ -164,16 +164,16 @@ const htmlExpectations = {
     'id="region-reader" role="dialog"',
   ],
   'tools/region-template.html': [
-    '/styles.css?v=56',
+    '/styles.css?v=57',
     '/data.js?v=9',
     '/region.js?v=12',
     '/tip-form.js?v=5',
     '/footer.js?v=3',
   ],
-  'dist/credits.html': ['styles.css?v=56'],
-  'dist/404.html': ['styles.css?v=56'],
+  'dist/credits.html': ['styles.css?v=57'],
+  'dist/404.html': ['styles.css?v=57'],
   'dist/travel-directory.html': [
-    'styles.css?v=56',
+    'styles.css?v=57',
     'travel-directory.css?v=16',
     'config.js?v=6',
     'travel-directory-data.js?v=4',
