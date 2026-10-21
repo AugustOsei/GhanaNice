@@ -32,22 +32,21 @@ const heroWindow = document.querySelector('#hero-window');
 const heroVideo = document.querySelector('#hero-video');
 const heroDestinationCaption = document.querySelector('#hero-destination');
 const scenes = [...document.querySelectorAll('.map-scene')];
+const sceneImages = scenes.map(scene => scene.querySelector('img'));
 const sequenceCount = document.querySelector('#sequence-count');
 const sequenceName = document.querySelector('#sequence-name');
 const spinStatus = document.querySelector('#spin-status');
 const sequenceSkip = document.querySelector('#sequence-skip');
 const sequenceAnnouncement = document.querySelector('#sequence-announcement');
 
-/* Each page load settles on one of three landmark loops. Avoid the destination shown on the
-   previous load in this tab, so refreshing changes the ending instead of merely having a
-   chance to. If storage is unavailable, the equal random choice still works. */
+/* Each page load settles on one of three landmark loops. The inline script under the reel
+   picks one (and starts its poster downloading) as the page is parsed; its posters live there. */
 const heroDestinations = [
   {
     key: 'independence-arch',
     name: 'Independence Arch',
     place: 'Independence Arch in Accra',
     caption: 'Independence Arch · Accra',
-    poster: 'assets/real/independence-arch-illustrated-1200.webp',
     webm: 'assets/real/independence-arch-loop.webm',
     mp4: 'assets/real/independence-arch-loop.mp4',
   },
@@ -56,7 +55,6 @@ const heroDestinations = [
     name: 'Cape Coast Castle',
     place: 'Cape Coast Castle in the Central Region',
     caption: 'Cape Coast Castle · Central Region',
-    poster: 'assets/real/hero-cape-coast-castle-poster-v1.jpg',
     webm: 'assets/real/hero-cape-coast-castle-v1.webm',
     mp4: 'assets/real/hero-cape-coast-castle-v1.mp4',
   },
@@ -65,27 +63,39 @@ const heroDestinations = [
     name: 'Larabanga Mosque',
     place: 'Larabanga Mosque in the Savannah Region',
     caption: 'Larabanga Mosque · Savannah Region',
-    poster: 'assets/real/hero-larabanga-mosque-poster-v1.jpg',
     webm: 'assets/real/hero-larabanga-mosque-v1.webm',
     mp4: 'assets/real/hero-larabanga-mosque-v1.mp4',
   },
 ];
 
-function chooseHeroDestination() {
-  let previous = '';
-  try { previous = sessionStorage.getItem('ghanaNiceHeroDestination') || ''; } catch {}
-  const choices = heroDestinations.filter(destination => destination.key !== previous);
-  const destination = choices[Math.floor(Math.random() * choices.length)] || heroDestinations[0];
-  try { sessionStorage.setItem('ghanaNiceHeroDestination', destination.key); } catch {}
-  return destination;
-}
-
-const heroDestination = chooseHeroDestination();
-const finalScene = scenes.at(-1);
+const finalScene = sceneImages.at(-1);
+const heroDestination = {
+  ...(heroDestinations.find(destination => destination.key === finalScene?.dataset.key) || heroDestinations[0]),
+  poster: finalScene?.getAttribute('src') || '',
+};
+/* The inline script fetches the spin's photos only once the destination has loaded. */
+const posterReady = new Promise(resolve => {
+  if (!finalScene || finalScene.complete) return resolve();
+  finalScene.addEventListener('load', resolve, { once: true });
+  finalScene.addEventListener('error', resolve, { once: true });
+});
+/* Set by the inline script under the reel: reduced motion, Data Saver or a slow connection. */
+const reelOff = document.documentElement.classList.contains('reel-off');
+const saveData = Boolean(navigator.connection?.saveData);
 if (heroWindow && heroVideo && finalScene) {
   heroWindow.setAttribute('aria-label', `Scenes from across Ghana settling on ${heroDestination.place}`);
   heroWindow.style.backgroundImage = `url('${heroDestination.poster}')`;
   heroVideo.poster = heroDestination.poster;
+  if (heroDestinationCaption) heroDestinationCaption.textContent = heroDestination.caption;
+}
+
+/* The loop is 1–5 MB, so it is only fetched once the reel has landed, never alongside the
+   reel's photos. Data Saver keeps the still. */
+let heroVideoLoaded = false;
+function loadHeroVideo() {
+  if (heroVideoLoaded || !heroVideo || saveData) return false;
+  heroVideoLoaded = true;
+  heroVideo.preload = 'auto';
   heroVideo.replaceChildren(...[
     ['video/webm', heroDestination.webm],
     ['video/mp4', heroDestination.mp4],
@@ -96,15 +106,16 @@ if (heroWindow && heroVideo && finalScene) {
     return source;
   }));
   heroVideo.load();
-  finalScene.src = heroDestination.poster;
-  if (heroDestinationCaption) heroDestinationCaption.textContent = heroDestination.caption;
+  return true;
 }
 
 /* The chosen landmark appears exactly once, as the final scene. */
 const sceneNames = ['Jamestown', 'Wli Falls', 'Cape Coast', 'Made in Accra', 'Larabanga', 'Kakum', heroDestination.name];
 const FINAL_SCENE = sceneNames.length - 1;
-const spinOrder = [2, 5, 1, 4, 0, 3, 1, 5, 0, 4, 2, 3, 5, 0, 2, 4, FINAL_SCENE];
-const spinHolds = [72, 58, 50, 48, 50, 54, 60, 68, 78, 92, 112, 140, 180, 230, 300, 390, 520];
+/* Ten steps, none shorter than 130ms: every slide gets at least eight frames on a 60 Hz
+   screen, so the spin reads as motion rather than flicker. */
+const spinOrder = [2, 5, 1, 4, 3, 0, 5, 2, 4, FINAL_SCENE];
+const spinHolds = [160, 140, 130, 130, 140, 160, 200, 260, 350, 520];
 let reelAnimations = [];
 let sequenceFinished = false;
 
@@ -131,35 +142,39 @@ function revealVideo() {
 function finishSequence(skip = false) {
   if (sequenceFinished) return;
   sequenceFinished = true;
-  landOnFinalScene();
-  const settleTime = skip ? 140 : 460;
-  setTimeout(() => {
-    spinStatus.classList.add('is-hidden');
-    spinStatus.setAttribute('aria-hidden', 'true');
-    sequenceSkip.classList.add('is-hidden');
-    sequenceSkip.disabled = true;
-    sequenceAnnouncement.textContent = `Showing ${heroDestination.place}.`;
-    /* Reduced motion keeps the chosen landmark's poster instead of a looping video. */
-    if (!heroVideo || reduced) return revealVideo();
-    try { heroVideo.currentTime = 0; } catch {}
-    /* play() can remain pending while a browser waits for media data. Never let that keep
-       the reel stuck: the poster and window background are the same final frame. */
-    const fallback = setTimeout(revealVideo, 900);
-    try {
-      const playback = heroVideo.play();
-      if (playback?.then) playback.then(() => {
+  /* On a slow connection the first photo stays up until the destination has arrived,
+     rather than the outline going empty. */
+  posterReady.then(() => {
+    landOnFinalScene();
+    const settleTime = skip ? 140 : 460;
+    setTimeout(() => {
+      spinStatus.classList.add('is-hidden');
+      spinStatus.setAttribute('aria-hidden', 'true');
+      sequenceSkip.classList.add('is-hidden');
+      sequenceSkip.disabled = true;
+      sequenceAnnouncement.textContent = `Showing ${heroDestination.place}.`;
+      /* Reduced motion keeps the chosen landmark's poster instead of a looping video. */
+      if (!heroVideo || reduced || !loadHeroVideo()) return revealVideo();
+      try { heroVideo.currentTime = 0; } catch {}
+      /* play() can remain pending while a browser waits for media data. Never let that keep
+         the reel stuck: the poster and window background are the same final frame. */
+      const fallback = setTimeout(revealVideo, 900);
+      try {
+        const playback = heroVideo.play();
+        if (playback?.then) playback.then(() => {
+          clearTimeout(fallback);
+          revealVideo();
+        }, () => {
+          clearTimeout(fallback);
+          revealVideo();
+        });
+        else revealVideo();
+      } catch {
         clearTimeout(fallback);
         revealVideo();
-      }, () => {
-        clearTimeout(fallback);
-        revealVideo();
-      });
-      else revealVideo();
-    } catch {
-      clearTimeout(fallback);
-      revealVideo();
-    }
-  }, settleTime);
+      }
+    }, settleTime);
+  });
 }
 
 /* Pause the loop offscreen instead of relying on each browser's battery-saving policy. */
@@ -171,18 +186,19 @@ if (heroVideo && 'IntersectionObserver' in window) {
       heroVideo.pause();
       return;
     }
-    if (reduced || !sequenceFinished) return;
+    if (reduced || !sequenceFinished || !heroVideoLoaded) return;
     if (heroVideo.paused) heroVideo.play().catch(() => {});
   }).observe(heroWindow);
 }
 heroVideo?.addEventListener('canplay', () => {
-  if (!reduced && sequenceFinished && heroVisible && heroVideo.paused) heroVideo.play().catch(() => {});
+  if (!reduced && sequenceFinished && heroVisible && heroVideoLoaded && heroVideo.paused) heroVideo.play().catch(() => {});
 });
 
 /* The whole reel is one keyframe timeline per photo, all started together. Every step slides
    the incoming photo down from above while the outgoing one leaves below in lockstep, so
    the two always meet edge to edge. Photos return to the top while they are out of view. */
-const SLOT_EASE = 'cubic-bezier(.18,.72,.24,1)';
+/* Starts at about the speed of a slide with no hold, so back-to-back steps run on smoothly. */
+const SLOT_EASE = 'cubic-bezier(.33,.45,.3,1)';
 const spinStarts = spinHolds.map((hold, step) => spinHolds.slice(0, step).reduce((sum, value) => sum + value, 0));
 const spinTotal = spinStarts[spinStarts.length - 1] + spinHolds[spinHolds.length - 1];
 
@@ -193,7 +209,7 @@ function sceneKeyframes(scene) {
   spinOrder.forEach((incoming, step) => {
     const outgoing = step ? spinOrder[step - 1] : 0;
     const start = spinStarts[step];
-    const end = start + Math.min(spinHolds[step], Math.max(48, spinHolds[step] * .78));
+    const end = start + Math.min(spinHolds[step], Math.max(120, spinHolds[step] * .8));
     if (incoming === scene) {
       frames.push(at(start, -100, SLOT_EASE), at(end, 0));
       y = 0;
@@ -208,6 +224,11 @@ function sceneKeyframes(scene) {
 
 function playSequence() {
   if (sequenceFinished) return;
+  /* The status and skip button only appear once something is actually spinning. */
+  spinStatus.classList.remove('is-hidden');
+  spinStatus.removeAttribute('aria-hidden');
+  sequenceSkip.classList.remove('is-hidden');
+  sequenceSkip.disabled = false;
   reelAnimations = scenes.map((scene, index) => scene.animate(sceneKeyframes(index), { duration: spinTotal, fill: 'forwards' }));
   const clock = reelAnimations[0];
   clock.finished.then(() => finishSequence(), () => {});
@@ -224,14 +245,20 @@ function playSequence() {
 }
 
 /* Start only once every photo is downloaded and decoded, so no step lands on an empty or
-   half-decoded frame. A visitor on a very slow connection goes straight to the destination. */
-if (reduced || !scenes[0]?.animate) finishSequence(true);
+   half-decoded frame. The wait is counted from when the page began loading, not from when
+   this deferred script ran, so a slow visitor isn't left on a still photo and then skipped. */
+const REEL_DEADLINE = 3000;
+if (reduced || reelOff || !scenes[0]?.animate) finishSequence(true);
 else {
-  const decoded = Promise.all(scenes.map(scene => scene.decode().catch(() => {})));
-  const tooSlow = new Promise(resolve => setTimeout(resolve, 3000, 'slow'));
+  const decoded = posterReady.then(() => Promise.all(sceneImages.map(image => image.decode().catch(() => {}))));
+  const tooSlow = new Promise(resolve => setTimeout(resolve, Math.max(0, REEL_DEADLINE - performance.now()), 'slow'));
   Promise.race([decoded, tooSlow]).then(result => {
-    if (result === 'slow') finishSequence(true);
-    else requestAnimationFrame(() => requestAnimationFrame(playSequence));
+    if (result === 'slow') {
+      /* Too slow to spin: drop the photos still downloading so the destination arrives
+         sooner. */
+      sceneImages.slice(1, -1).forEach(image => { if (!image.complete) image.removeAttribute('src'); });
+      finishSequence(true);
+    } else requestAnimationFrame(() => requestAnimationFrame(playSequence));
   });
 }
 sequenceSkip?.addEventListener('click', () => finishSequence(true));
@@ -300,6 +327,7 @@ function paintHero(progress) {
      full-screen endpoint as the visitor scrolls. */
   const start = innerWidth < 680 ? innerWidth * .406 : Math.min(innerWidth * .203, 301);
   const cover = maskCoverSize();
+  heroStage.style.setProperty('--stage-w', `${heroStage.clientWidth}px`);
   /* Same pacing as before (full cover about three-quarters of the way in), but once the
      outline covers the screen the mask is removed rather than grown to 4–6000px. A mask
      that large exceeds the GPU texture limit on big retina displays, and Chrome then
@@ -343,7 +371,7 @@ function restoreHeroAfterPause() {
     cancelAnimationFrame(heroRefreshFrame);
     heroRefreshFrame = requestAnimationFrame(() => heroWindow.classList.remove('is-mask-refreshing'));
   }
-  if (!reduced && sequenceFinished && heroVisible && heroVideo?.paused) heroVideo.play().catch(() => {});
+  if (!reduced && sequenceFinished && heroVisible && heroVideoLoaded && heroVideo?.paused) heroVideo.play().catch(() => {});
 }
 
 document.addEventListener('visibilitychange', restoreHeroAfterPause);
@@ -368,6 +396,18 @@ addEventListener('focus', () => {
   if (Date.now() - heroOpenedAt > 4000) restoreHeroAfterPause();
 });
 document.addEventListener('resume', restoreHeroAfterPause);
+
+/* Let the community wall's photos load once the wall is within a couple of screens, so they
+   don't compete with the hero on a first visit. */
+const communityWall = document.querySelector('.community-wall');
+if (communityWall && 'IntersectionObserver' in window) {
+  const wallObserver = new IntersectionObserver(entries => {
+    if (!entries[0].isIntersecting) return;
+    document.documentElement.classList.remove('wall-waiting');
+    wallObserver.disconnect();
+  }, { rootMargin: '1500px 0px' });
+  wallObserver.observe(communityWall);
+} else document.documentElement.classList.remove('wall-waiting');
 
 /* The regions sit in a field of postcards, then stack vertically on selection. */
 const regionSection = document.querySelector('.regions');
@@ -696,7 +736,6 @@ function wireNiceButton(button) {
 document.querySelectorAll('.nice-button').forEach(wireNiceButton);
 
 /* A tip sent from the form (tip-form.js) goes straight onto the wall, marked as waiting. */
-const communityWall = document.querySelector('.community-wall');
 document.addEventListener('ghananice:tip', event => {
   const tile = window.GhanaTipTile(event.detail.tip);
   const niceButton = document.createElement('button');

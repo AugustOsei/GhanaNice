@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" as="image" href="assets/maps/ghana-mask.svg" crossorigin>
   <link rel="preload" as="image" href="assets/real/jamestown-lighthouse-800.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=55">
+  <link rel="stylesheet" href="styles.css?v=56">
   <!-- Google Analytics (analytics.js); a browser can turn it off on /privacy/. -->
   <script src="/analytics.js?v=1"></script>
 </head>
@@ -45,25 +45,61 @@
 
     <div class="hero-stage">
       <div class="hero-window is-sequencing" id="hero-window" role="img" aria-label="Scenes from across Ghana settling on Independence Arch in Accra">
-        <video id="hero-video" muted loop playsinline preload="metadata" aria-hidden="true">
+        <video id="hero-video" muted loop playsinline preload="none" aria-hidden="true">
         </video>
+        <!-- Each scene is a frame the size of the Ghana outline, so the reel only moves small
+             layers. The last one is cropped like the full-screen video it hands over to. -->
         <div class="map-reel" id="map-reel" aria-hidden="true">
-          <img class="map-scene is-active" src="assets/real/jamestown-lighthouse-800.webp" alt="" decoding="async" fetchpriority="high">
-          <img class="map-scene" src="assets/real/wli-falls-800.webp" alt="" decoding="async">
-          <img class="map-scene" src="assets/real/cape-coast-castle-800.webp" alt="" decoding="async">
-          <img class="map-scene" src="assets/real/accra-seamstress-800.webp" alt="" decoding="async">
-          <img class="map-scene" src="assets/real/larabanga-mosque-800.webp" alt="" decoding="async">
-          <img class="map-scene" src="assets/real/kakum-walkway-800.webp" alt="" decoding="async">
-          <img class="map-scene" alt="" decoding="async">
+          <div class="map-scene is-active"><img src="assets/real/jamestown-lighthouse-800.webp" alt="" decoding="async" fetchpriority="high"></div>
+          <div class="map-scene"><img data-src="assets/real/wli-falls-800.webp" alt="" decoding="async" fetchpriority="low"></div>
+          <div class="map-scene"><img data-src="assets/real/cape-coast-castle-800.webp" alt="" decoding="async" fetchpriority="low"></div>
+          <div class="map-scene"><img data-src="assets/real/accra-seamstress-800.webp" alt="" decoding="async" fetchpriority="low"></div>
+          <div class="map-scene"><img data-src="assets/real/larabanga-mosque-800.webp" alt="" decoding="async" fetchpriority="low"></div>
+          <div class="map-scene"><img data-src="assets/real/kakum-walkway-800.webp" alt="" decoding="async" fetchpriority="low"></div>
+          <div class="map-scene map-scene-final"><img alt="" decoding="async" fetchpriority="high" data-posters='{"independence-arch": "assets/real/independence-arch-illustrated-1200.webp", "cape-coast-castle": "assets/real/hero-cape-coast-castle-poster-v1.webp", "larabanga-mosque": "assets/real/hero-larabanga-mosque-poster-v1.webp"}'></div>
         </div>
         <div class="hero-shade" aria-hidden="true"></div>
       </div>
+      <script>
+        /* Pick the landmark the reel lands on (never the one this tab showed last) and fetch it
+           first: every visitor ends there. The spin's photos follow, unless the visitor will
+           never see the spin: reduced motion, Data Saver or a slow connection go straight to
+           the destination (app.js). */
+        (function () {
+          var final = document.querySelector('.map-scene-final img');
+          var posters = JSON.parse(final.dataset.posters), keys = Object.keys(posters), previous = '';
+          try { previous = sessionStorage.getItem('ghanaNiceHeroDestination') || ''; } catch (e) {}
+          var choices = keys.filter(function (key) { return key !== previous; });
+          var key = choices[Math.floor(Math.random() * choices.length)] || keys[0];
+          try { sessionStorage.setItem('ghanaNiceHeroDestination', key); } catch (e) {}
+          final.dataset.key = key;
+          final.src = posters[key];
 
-      <div class="spin-status" id="spin-status" aria-live="off">
+          var c = navigator.connection || {};
+          var still = matchMedia('(prefers-reduced-motion: reduce)').matches || c.saveData || /(^|-)(2g|3g)$/.test(c.effectiveType || '');
+          document.documentElement.classList.toggle('reel-off', !!still);
+          /* The community wall's photos are CSS backgrounds, which load at once wherever they
+             are; app.js lets them load as the wall comes near. */
+          document.documentElement.classList.add('wall-waiting');
+          if (still) return;
+          var fetchReel = function () {
+            /* Past app.js's 3s deadline the spin is skipped anyway. */
+            if (performance.now() > 3000) return;
+            document.querySelectorAll('.map-scene img[data-src]').forEach(function (img) { img.src = img.dataset.src; });
+          };
+          if (final.complete) fetchReel();
+          else {
+            final.addEventListener('load', fetchReel, { once: true });
+            final.addEventListener('error', fetchReel, { once: true });
+          }
+        })();
+      </script>
+
+      <div class="spin-status is-hidden" id="spin-status" aria-live="off" aria-hidden="true">
         <span>Spinning through Ghana</span><i></i><b id="sequence-name">Jamestown</b><em id="sequence-count">01 / 07</em>
       </div>
       <p class="sr-only" id="sequence-announcement" aria-live="polite"></p>
-      <button class="sequence-skip" id="sequence-skip" type="button">Skip the spin</button>
+      <button class="sequence-skip is-hidden" id="sequence-skip" type="button" disabled>Skip the spin</button>
 
       <div class="hero-intro">
         <h1><span>Ghana is</span><strong>nice.</strong></h1>
@@ -331,7 +367,7 @@
 
   <script src="config.js?v=6"></script>
   <script src="data.js?v=9"></script>
-  <script src="app.js?v=32" defer></script>
+  <script src="app.js?v=33" defer></script>
   <script src="tip-form.js?v=5" defer></script>
   <script src="footer.js?v=3" defer></script>
   <script src="newsletter.js?v=2" defer></script>

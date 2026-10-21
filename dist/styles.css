@@ -52,7 +52,7 @@ img, video { display: block; max-width: 100%; }
 .hero-window { position: absolute; inset: 0; overflow: hidden; background: #173b4e center / cover; mask: url('assets/maps/ghana-mask.svg') center / var(--mask-size) auto no-repeat; -webkit-mask: url('assets/maps/ghana-mask.svg') center / var(--mask-size) auto no-repeat; }
 .hero-window.is-mask-refreshing { mask-size: calc(var(--mask-size) + .1px) auto; -webkit-mask-size: calc(var(--mask-size) + .1px) auto; }
 .hero-window.is-unmasked { mask: none; -webkit-mask: none; }
-.hero-window video, .map-scene { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-window video, .map-scene img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero-window video { opacity: 1; transform: scale(1.015); }
 .hero-window.is-sequencing video { opacity: 0; }
 .map-reel { position: absolute; inset: 0; z-index: 2; overflow: hidden; opacity: 1; visibility: visible; transition: opacity .45s ease, visibility 0s; }
@@ -61,7 +61,10 @@ img, video { display: block; max-width: 100%; }
    one synchronised timeline, so the reel never waits on timers or the main thread. */
 .hero-window.is-sequencing { background-image: none; }
 .map-reel::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.17)); }
-.map-scene { transform: translateY(-100%); will-change: transform; }
+/* A frame just larger than the outline (ghana-mask.svg is 69.27 × 100), centred like the mask. */
+.map-scene { position: absolute; inset: 0; margin: auto; width: calc(var(--mask-size) + 4px); height: calc(var(--mask-size) * 1.4436 + 4px); overflow: hidden; transform: translateY(-100%); will-change: transform; }
+/* The destination frame shows its photo at full-screen crop, so it matches the video exactly. */
+.map-scene-final img { inset: auto; left: calc(50% - var(--stage-w, 100vw) / 2); top: calc(50% - 50svh); width: var(--stage-w, 100vw); max-width: none; height: 100svh; }
 .map-scene.is-active { transform: none; }
 .hero-window.is-settled .map-scene { will-change: auto; }
 .hero-shade { position: absolute; z-index: 4; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.03) 30%, rgba(0,0,0,.64)); pointer-events: none; }
@@ -170,6 +173,7 @@ img, video { display: block; max-width: 100%; }
 .place-tile span { font-size: .59rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
 .place-tile h3 { margin: auto 0 16px; max-width: 90%; font-size: clamp(1.55rem, 2.7vw, 3rem); line-height: .9; letter-spacing: -.06em; }
 .place-photo { color: var(--white); background: var(--image) center / cover; }
+.wall-waiting .community-wall .place-photo { background-image: none; }
 .place-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.73)); }
 .nice-button { align-self: flex-start; border: 1px solid currentColor; border-radius: 99px; background: rgba(255,255,255,.08); padding: 8px 11px; cursor: pointer; backdrop-filter: blur(8px); font-size: .59rem; text-transform: uppercase; letter-spacing: .06em; }
 .nice-button[aria-pressed='true'] { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }

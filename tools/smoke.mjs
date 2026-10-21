@@ -41,7 +41,9 @@ scriptFiles.forEach((file) => {
 });
 
 const appSource = read('dist/app.js');
-const heroAssets = [...appSource.matchAll(/^\s+(?:poster|webm|mp4): '([^']+)'/gm)].map((match) => match[1]);
+/* The loops are listed in app.js; their posters in index.html, where the reel picks one. */
+const heroPosters = JSON.parse(read('dist/index.html').match(/data-posters='([^']+)'/)?.[1] || '{}');
+const heroAssets = [...appSource.matchAll(/^\s+(?:webm|mp4): '([^']+)'/gm)].map((match) => match[1]).concat(Object.values(heroPosters));
 check(heroAssets.length === 9, `Expected 9 hero destination assets, found ${heroAssets.length}`);
 heroAssets.forEach((asset) => {
   check(fs.existsSync(path.join(dist, asset)), `Hero destination references missing asset: ${asset}`);
@@ -153,25 +155,25 @@ function sitemapXmlEarly() { return read('dist/sitemap.xml'); }
 
 const htmlExpectations = {
   'dist/index.html': [
-    'styles.css?v=55',
+    'styles.css?v=56',
     'data.js?v=9',
-    'app.js?v=32',
+    'app.js?v=33',
     'tip-form.js?v=5',
     'footer.js?v=3',
     'id="hero-video"',
     'id="region-reader" role="dialog"',
   ],
   'tools/region-template.html': [
-    '/styles.css?v=55',
+    '/styles.css?v=56',
     '/data.js?v=9',
     '/region.js?v=12',
     '/tip-form.js?v=5',
     '/footer.js?v=3',
   ],
-  'dist/credits.html': ['styles.css?v=55'],
-  'dist/404.html': ['styles.css?v=55'],
+  'dist/credits.html': ['styles.css?v=56'],
+  'dist/404.html': ['styles.css?v=56'],
   'dist/travel-directory.html': [
-    'styles.css?v=55',
+    'styles.css?v=56',
     'travel-directory.css?v=16',
     'config.js?v=6',
     'travel-directory-data.js?v=4',
