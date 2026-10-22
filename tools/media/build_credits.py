@@ -51,9 +51,11 @@ page = f'''<!doctype html>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="canonical" href="https://www.ghananice.com/credits.html">
-  <link rel="stylesheet" href="styles.css?v=55">
+  <link rel="stylesheet" href="styles.css?v=58">
   <!-- Google Analytics (analytics.js); a browser can turn it off on /privacy/. -->
   <script src="/analytics.js?v=1"></script>
+  <!-- Servadot chat assistant; what it collects is on /privacy/. -->
+  <script src="https://servadotapp.lovable.app/embed.js" data-assistant="23aebddcc78f79ac5617b5f17fba4251f0ba" async></script>
 </head>
 <body class="doc-page">
   <nav class="nav" aria-label="Primary navigation">

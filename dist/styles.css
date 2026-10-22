@@ -998,6 +998,9 @@ main[tabindex="-1"]:focus { outline: 0; }
   .nl-pop .nl-note { margin-top: 6px; font-size: .62rem; }
   body { padding-bottom: var(--nl-pop-space, 0px); }
 }
+/* The Servadot chat launcher (embed.js) is fixed in the same corner, 20px in and about 50px tall:
+   lift the card above it once it's on the page. */
+body:has(> [data-servadot-embed]) .nl-pop { bottom: 86px; }
 @media (prefers-reduced-motion: reduce) {
   .nl-pop { transform: none; transition: none; }
   .nl-pop.is-open .nl-stick, .nl-pop.is-open .nl-skin, .nl-pop.is-open .nl-beat { animation: none; }
