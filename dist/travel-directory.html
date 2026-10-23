@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Ghana is nice. Central Accra from above.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="styles.css?v=58">
-  <link rel="stylesheet" href="travel-directory.css?v=16">
+  <link rel="stylesheet" href="travel-directory.css?v=20">
   <!-- Google Analytics (analytics.js); a browser can turn it off on /privacy/. -->
   <script src="/analytics.js?v=1"></script>
   <!-- Servadot chat assistant; what it collects is on /privacy/. -->
@@ -34,12 +34,12 @@
   <header class="travel-hero" id="travel-home">
     <nav class="nav is-over-image" aria-label="Primary navigation">
       <a class="wordmark" href="index.html#home" aria-label="GhanaNice home">Ghana<span>Nice</span><i>★</i></a>
-      <p class="nav-place">For locals and visitors alike <span>05°33′N</span></p>
+      <p class="nav-place">For locals and visitors alike</p>
       <div class="nav-links" id="nav-links">
         <a href="index.html#regions">Explore regions</a>
         <a href="/festivals/">Festivals</a>
         <a href="#directory" aria-current="page">Travel directory</a>
-        <a class="nav-share" href="#list-your-service">List your service</a>
+        <a class="nav-share" href="/list-your-service/">List your service</a>
       </div>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><b class="sr-only">Menu</b></button>
     </nav>
@@ -70,7 +70,6 @@
       <p class="travel-intro">A checked starting list of tour guides, transport and places to stay across Ghana.</p>
       <div class="travel-hero-actions">
         <a class="button-solid" href="#directory">Browse all services</a>
-        <a class="button-text" href="#list-your-service">Add a service</a>
       </div>
     </div>
   </header>
@@ -136,7 +135,7 @@
 
     <section class="travel-directory" id="directory" aria-labelledby="directory-heading">
       <div class="directory-heading">
-        <div><p>Checked names and official links</p><h2 id="directory-heading">The directory.</h2></div>
+        <div><p>Browse by category or region</p><h2 id="directory-heading">The directory.</h2></div>
         <p>A useful start, not a complete list. Use the categories and region above to narrow it.</p>
       </div>
 
@@ -162,7 +161,7 @@
       </section>
 
       <section class="all-listings" aria-labelledby="all-services-heading">
-        <div class="listing-section-heading compact"><div><p>Every checked name</p><h3 id="all-services-heading">All services</h3></div><p>Every entry includes the practical details and a link to the provider’s own website or social media page.</p></div>
+        <div class="listing-section-heading"><div><h3 id="all-services-heading">All services</h3></div><p>A small starting collection of tours and local guides, ways to get around, and places to stay. We’re adding more as we check them. <a href="#directory-newsletter">Get our monthly note on what’s new</a></p></div>
         <div class="service-list" id="service-list"></div>
       </section>
 
@@ -179,47 +178,6 @@
       </div>
     </dialog>
 
-    <section class="directory-method" aria-labelledby="method-heading">
-      <h2 id="method-heading">What “checked” means</h2>
-      <p>Before a listing goes up, we find the provider’s own website or social media page and check that what they offer, where they are based and where they work match it.</p>
-      <p class="method-note">A listing is not a guarantee of service or safety. Confirm current services, prices and availability with the provider, and pay them directly through their official channels.</p>
-    </section>
-
-    <section class="service-submit" id="list-your-service" aria-labelledby="service-submit-heading">
-      <div class="service-submit-copy">
-        <p>Run a travel service in Ghana?</p>
-        <h2 id="service-submit-heading">Help people find <em>you.</em></h2>
-        <p>Tell us what you offer and where you work. Nothing is published automatically: GhanaNice checks every submission first.</p>
-        <div class="submit-steps" aria-label="How listing review works">
-          <span>Submit</span><i>→</i><span>We check</span><i>→</i><span>It goes live</span>
-        </div>
-      </div>
-
-      <form class="service-form" id="service-form">
-        <label><span>Business or service name</span><input name="businessName" required maxlength="100" autocomplete="organization"></label>
-        <label><span>What do you offer?</span><select name="category" required><option value="">Choose one</option><option value="tours">Tours &amp; local guides</option><option value="transport">Transport &amp; vehicle hire</option><option value="stay">Accommodation</option></select></label>
-        <label><span>Where are you based?</span><input name="baseLocation" required maxlength="100" placeholder="Town, region"></label>
-        <label><span>Primary region</span><select name="primaryRegion" required>
-          <option value="">Choose the main region</option><option value="greater-accra">Greater Accra</option><option value="central">Central</option><option value="volta">Volta</option><option value="savannah">Savannah</option><option value="western">Western</option><option value="ashanti">Ashanti</option><option value="eastern">Eastern</option><option value="northern">Northern</option><option value="upper-east">Upper East</option><option value="upper-west">Upper West</option><option value="north-east">North East</option><option value="oti">Oti</option><option value="bono">Bono</option><option value="bono-east">Bono East</option><option value="ahafo">Ahafo</option><option value="western-north">Western North</option>
-        </select></label>
-        <label><span>Website or one social media page <small>(Instagram or Facebook)</small></span><input name="website" type="url" required placeholder="https://"></label>
-        <label class="service-form-wide"><span>Where do you operate?</span><input name="coverage" required maxlength="180" placeholder="Regions, towns or nationwide"></label>
-        <label class="service-form-wide"><span>What should travellers know?</span><textarea name="description" required maxlength="600" rows="5" placeholder="Describe the service plainly: what you offer and who it is useful for."></textarea></label>
-        <fieldset class="listing-plan service-form-wide">
-          <legend>How would you like to be listed?</legend>
-          <label><input type="radio" name="listingType" value="standard" checked><span><strong>Standard listing</strong><small>Business details and an official link in the checked directory.</small></span></label>
-          <label class="featured-interest"><input type="radio" name="listingType" value="featured"><span><strong>I’m interested in featured placement</strong><small>A photo-led profile. We’ll contact you personally to discuss pricing, duration and image permissions before anything is agreed.</small></span></label>
-        </fieldset>
-        <label><span>Your name</span><input name="contactName" required maxlength="100" autocomplete="name"></label>
-        <label><span>Email for the review</span><input name="email" type="email" required maxlength="180" autocomplete="email"></label>
-        <label class="service-form-wide"><span>Phone or WhatsApp <small>(optional)</small></span><input name="phone" type="tel" maxlength="40" autocomplete="tel" placeholder="+233 …"></label>
-        <label class="form-trap" aria-hidden="true"><span>Fax number</span><input name="companyFax" tabindex="-1" autocomplete="off"></label>
-        <label class="service-consent service-form-wide"><input name="consent" type="checkbox" required><span>I run or represent this service and the information is accurate.</span></label>
-        <button type="submit" id="service-submit-button"><span>Send for review</span></button>
-        <p class="service-form-note" id="service-form-note">We check the business and its public information before publication. Featured interest starts a conversation; it is not a booking or payment.</p>
-        <p class="service-form-status" id="service-form-status" aria-live="polite"></p>
-      </form>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -231,7 +189,7 @@
       <div class="footer-brand">
         <a class="wordmark footer-mark" href="index.html#home">Ghana<span>Nice</span><i>★</i></a>
         <p>Good places are better when they’re shared.</p>
-        <div class="footer-newsletter" data-newsletter="footer"></div>
+        <div class="footer-newsletter" id="directory-newsletter" data-newsletter="footer"></div>
         <div class="footer-social">
           <p class="footer-social-label">Follow GhanaNice</p>
           <ul class="footer-social-list">
@@ -258,7 +216,7 @@
 
   <script src="config.js?v=6"></script>
   <script src="travel-directory-data.js?v=4"></script>
-  <script src="travel-directory.js?v=18" defer></script>
+  <script src="travel-directory.js?v=20" defer></script>
   <script src="footer.js?v=3" defer></script>
   <script src="newsletter.js?v=2" defer></script>
 </body>

@@ -1,4 +1,4 @@
-/* Writes the plain pages, dist/<name>/index.html (About, Contact, Privacy), from
+/* Writes the plain pages, dist/<name>/index.html, from
    tools/page-template.html and the content in tools/pages/*.html. Each content file starts with a
    comment holding its path, title and description as JSON.
 
@@ -22,12 +22,14 @@ export const PAGES = sources.map(file => {
   const head = source.match(/^<!--\s*(\{[\s\S]*?\})\s*-->\n/);
   if (!head) throw new Error(`tools/pages/${file} must start with a <!-- {json} --> header`);
   const meta = JSON.parse(head[1]);
-  const html = template.replace(/\{\{(\w+)\}\}/g, (match, key) => {
+  let html = template.replace(/\{\{(\w+)\}\}/g, (match, key) => {
     if (key === 'content') return source.slice(head[0].length).replace(/\n$/, '');
     if (key === 'url') return esc(SITE + meta.path);
     if (key in meta) return esc(meta[key]);
     throw new Error(`page-template.html: no value for ${match}`);
   });
+  if (meta.stylesheet) html = html.replace('  <!-- Google Analytics', `  <link rel="stylesheet" href="${esc(meta.stylesheet)}">\n  <!-- Google Analytics`);
+  if (meta.script) html = html.replace('</body>', `  <script src="${esc(meta.script)}" defer></script>\n</body>`);
   return { file: path.join(dist, meta.path, 'index.html'), html, path: meta.path };
 });
 

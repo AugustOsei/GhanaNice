@@ -89,12 +89,6 @@ function rowMarkup(service) {
     <div class="service-row-copy">
       <p>${escapeHTML(service.description)}</p>
       <ul class="service-tags" aria-label="Useful for">${tagsMarkup(service)}</ul>
-      <div class="service-row-actions">
-        <div class="service-row-links">
-          <a class="official-link" href="${officialUrl(service.website)}" target="_blank" rel="noopener">Link<span class="sr-only"> to ${escapeHTML(service.name)}</span></a>
-          <button class="share-button" type="button" data-share="${escapeHTML(service.id)}">Share<span class="sr-only"> ${escapeHTML(service.name)}</span></button>
-        </div>
-      </div>
     </div>
   </article>`;
 }
@@ -488,68 +482,6 @@ updateNav();
 
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
-
-/* Service submissions use a separate endpoint because place tips follow a different review
-   contract. With no endpoint configured, the form honestly saves a browser-only draft. */
-const serviceForm = document.querySelector('#service-form');
-const submitButton = document.querySelector('#service-submit-button');
-const formNote = document.querySelector('#service-form-note');
-const formStatus = document.querySelector('#service-form-status');
-const submissionEndpoint = window.GHANANICE_CONFIG?.serviceSubmissionEndpoint || '';
-
-if (!submissionEndpoint && submitButton && formNote) {
-  submitButton.querySelector('span').textContent = 'Save a draft';
-  formNote.textContent = 'Preview mode: this draft stays in this browser until the business-review pipeline is connected.';
-}
-
-serviceForm?.addEventListener('submit', async event => {
-  event.preventDefault();
-  if (!serviceForm.reportValidity()) return;
-
-  const values = new FormData(serviceForm);
-  const payload = {
-    id: crypto.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`,
-    submittedAt: new Date().toISOString(),
-    businessName: String(values.get('businessName') || '').trim(),
-    category: String(values.get('category') || '').trim(),
-    baseLocation: String(values.get('baseLocation') || '').trim(),
-    primaryRegion: String(values.get('primaryRegion') || '').trim(),
-    website: String(values.get('website') || '').trim(),
-    coverage: String(values.get('coverage') || '').trim(),
-    description: String(values.get('description') || '').trim(),
-    listingType: String(values.get('listingType') || 'standard'),
-    contactName: String(values.get('contactName') || '').trim(),
-    email: String(values.get('email') || '').trim(),
-    phone: String(values.get('phone') || '').trim(),
-    companyFax: String(values.get('companyFax') || '').trim(),
-    consent: values.get('consent') === 'on',
-    source: 'travel-directory.html',
-    pageUrl: location.href,
-  };
-
-  submitButton.disabled = true;
-  if (formStatus) formStatus.textContent = submissionEndpoint ? 'Sending your service for review…' : 'Saving your draft…';
-  try {
-    if (submissionEndpoint) {
-      const response = await fetch(submissionEndpoint, {
-        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload),
-      });
-      if (!response.ok) throw new Error(`Submission failed with ${response.status}`);
-      if (formStatus) formStatus.textContent = 'Thanks — your service is in the review queue. Nothing is published automatically.';
-      serviceForm.reset();
-    } else {
-      const storageKey = 'ghanaNiceTravelServiceDrafts';
-      const drafts = JSON.parse(localStorage.getItem(storageKey) || '[]');
-      drafts.push(payload);
-      localStorage.setItem(storageKey, JSON.stringify(drafts.slice(-10)));
-      if (formStatus) formStatus.textContent = 'Draft saved in this browser. Connect the review endpoint before launching submissions.';
-    }
-  } catch {
-    if (formStatus) formStatus.textContent = 'That did not go through. Keep the details here and try again later.';
-  } finally {
-    submitButton.disabled = false;
-  }
-});
 
 applyFilters();
 

@@ -5,7 +5,7 @@
 .travel-hero { position: relative; min-height: 560px; display: grid; grid-template-columns: 1fr; align-items: end; overflow: hidden; padding: 136px clamp(20px, 5vw, 80px) clamp(44px, 5vw, 68px); background: var(--ink); color: var(--white); }
 .travel-hero-grid { position: absolute; inset: 76px 0 0 52%; border-left: 1px solid rgba(255,255,255,.12); background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 52px 52px; mask-image: linear-gradient(135deg, #000, transparent 74%); }
 .travel-hero-copy { position: relative; z-index: 1; }
-.travel-kicker, .travel-section-head > div > p, .directory-heading > div > p, .listing-section-heading > div > p, .service-submit-copy > p:first-child { margin: 0; font-size: .62rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.travel-kicker, .travel-section-head > div > p, .directory-heading > div > p, .listing-section-heading > div > p { margin: 0; font-size: .62rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 .travel-kicker { display: flex; align-items: center; gap: 12px; margin-bottom: clamp(30px, 5vw, 62px); }
 .travel-kicker::before { content: ''; width: 34px; height: 3px; background: var(--red); }
 .travel-hero h1 { max-width: 900px; margin: 0; font-size: clamp(4.6rem, 9vw, 9.7rem); line-height: .79; letter-spacing: -.09em; }
@@ -35,7 +35,7 @@
 /* Illustrated category controls */
 .travel-needs { padding: clamp(48px, 6vw, 84px) clamp(20px, 5vw, 80px) clamp(52px, 6vw, 88px); }
 .travel-section-head { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(260px, .55fr); gap: 7vw; align-items: end; margin-bottom: clamp(26px, 3.4vw, 44px); }
-.travel-section-head h2, .directory-heading h2, .service-submit-copy h2 { margin: 12px 0 0; font-size: clamp(3.1rem, 6vw, 7rem); line-height: .88; letter-spacing: -.075em; }
+.travel-section-head h2, .directory-heading h2 { margin: 12px 0 0; font-size: clamp(3.1rem, 6vw, 7rem); line-height: .88; letter-spacing: -.075em; }
 .travel-section-head > p, .directory-heading > p { max-width: 480px; margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.02rem; line-height: 1.5; }
 .need-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--ink); background: var(--ink); gap: 1px; }
 .need-card { --card-bg: var(--paper); display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto auto auto; gap: 12px; border: 0; padding: clamp(20px, 2.2vw, 30px); background: var(--card-bg); color: var(--ink); text-align: left; cursor: pointer; transition: transform .24s var(--ease), background .24s, color .24s; }
@@ -69,6 +69,8 @@
 .listing-section-heading { display: grid; grid-template-columns: 1fr minmax(280px, .6fr); gap: 6vw; align-items: end; margin-bottom: 20px; color: var(--white); }
 .listing-section-heading h3 { margin: 8px 0 0; font-size: clamp(1.8rem, 2.6vw, 2.6rem); line-height: .95; letter-spacing: -.055em; }
 .listing-section-heading > p { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: .86rem; line-height: 1.45; }
+.listing-section-heading > p a { text-decoration: underline; text-underline-offset: 3px; }
+.listing-section-heading > p a:hover { color: var(--yellow); }
 .placement-note { max-width: 620px; margin: 22px 0 0; padding: 13px 0 0; border-top: 1px solid rgba(255,255,255,.55); color: var(--white); font-family: Georgia, 'Times New Roman', serif; font-size: .86rem; line-height: 1.45; }
 .placement-note strong { display: block; margin-bottom: 5px; font-family: Arial, Helvetica, sans-serif; font-size: .56rem; letter-spacing: .1em; text-transform: uppercase; }
 .featured-rail-bar[hidden] { display: none; }
@@ -102,11 +104,7 @@
 .profile-button:hover { color: var(--red); }
 .share-button { border: 0; border-bottom: 1px solid; padding: 0 0 3px; background: transparent; color: inherit; cursor: pointer; font: inherit; font-size: .57rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
 .share-button:hover { color: var(--red); }
-/* The official site is why someone opens a listing, so it is the one solid button in a row. */
-.official-link { display: inline-block; padding: 11px 14px; background: var(--ink); color: var(--white); font-size: .57rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
-.official-link:hover, .official-link:focus-visible { background: var(--red); }
 
-.listing-section-heading.compact { align-items: end; }
 .service-list { border: 2px solid var(--ink); background: var(--paper); box-shadow: 7px 7px 0 var(--ink); }
 .service-row { display: grid; grid-template-columns: minmax(210px, .72fr) minmax(320px, 1.28fr); gap: clamp(28px, 5vw, 76px); padding: 22px 24px 24px; border-bottom: 1px solid var(--ink); }
 .service-row:last-child { border-bottom: 0; }
@@ -117,8 +115,6 @@
 .service-row-heading p:last-child { color: #55554f; letter-spacing: 0; text-transform: none; }
 .service-row-copy > p { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: .94rem; line-height: 1.48; }
 .service-row-copy .service-tags { margin-top: 13px; }
-.service-row-actions { display: flex; justify-content: space-between; gap: 18px; align-items: center; margin-top: 17px; padding-top: 13px; border-top: 1px solid var(--line); }
-.service-row-links { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
 .directory-empty { margin-top: 24px; padding: 34px; border: 2px dashed var(--ink); background: var(--yellow); text-align: center; }
 .directory-empty p { margin: 0 0 18px; font-family: Georgia, 'Times New Roman', serif; font-size: 1.2rem; }
 .directory-empty button { border: 1px solid; padding: 10px 14px; background: transparent; cursor: pointer; font-size: .6rem; font-weight: 800; text-transform: uppercase; }
@@ -149,44 +145,6 @@
 .profile-actions .share-button { padding: 13px 0 5px; }
 
 @keyframes featured-enter { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-
-/* What "checked" means is a short note, not a section of its own: one line on the check and
-   one on its limits, in a slim band between the list and the form. */
-.directory-method { display: grid; grid-template-columns: minmax(150px, .32fr) 1fr 1fr; gap: clamp(20px, 4vw, 56px); align-items: start; padding: clamp(30px, 4vw, 46px) clamp(20px, 5vw, 80px); background: var(--yellow); scroll-margin-top: 76px; }
-.directory-method h2 { margin: 3px 0 0; font-size: .62rem; font-weight: 800; letter-spacing: .13em; line-height: 1.4; text-transform: uppercase; }
-.directory-method p { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: .95rem; line-height: 1.5; }
-.service-submit { display: grid; grid-template-columns: .75fr 1.25fr; background: #d9d0f6; }
-.service-submit-copy { padding: clamp(70px, 8vw, 120px) clamp(20px, 6vw, 90px); }
-.service-submit-copy h2 { margin-top: 30px; font-size: clamp(3.2rem, 5.7vw, 7rem); }
-.service-submit-copy h2 em { color: var(--red); font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
-.service-submit-copy > p:nth-of-type(2) { max-width: 440px; margin: 36px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.05rem; line-height: 1.5; }
-.submit-steps { display: flex; align-items: center; gap: 12px; margin-top: 40px; font-size: .55rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
-.submit-steps i { color: var(--red); font-style: normal; }
-.service-form { align-self: stretch; display: grid; grid-template-columns: 1fr 1fr; align-content: center; padding: clamp(46px, 7vw, 96px); background: var(--paper); }
-.service-form > label:not(.service-consent) { display: grid; align-content: start; gap: 10px; padding: 18px 14px 20px 0; border-bottom: 1px solid var(--line); }
-.service-form > label:nth-child(even):not(.service-consent), .service-form > label.service-form-wide { padding-left: 18px; border-left: 1px solid var(--line); }
-.service-form > label.service-form-wide { grid-column: 1 / -1; padding-left: 0; border-left: 0; }
-.service-form label > span { font-size: .57rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-.service-form input:not([type="checkbox"]), .service-form textarea, .service-form select { width: 100%; border: 0; outline: 0; background: transparent; padding: 5px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; resize: vertical; }
-.service-form label:focus-within:not(.service-consent) { box-shadow: inset 0 -2px var(--red); }
-.service-consent { grid-column: 1 / -1; display: flex; gap: 12px; align-items: flex-start; padding: 20px 0 0; }
-.service-consent input { flex: 0 0 auto; width: 18px; height: 18px; accent-color: var(--green); }
-.service-consent span { line-height: 1.45; }
-.listing-plan { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 22px 0 2px; border: 0; padding: 0; }
-.listing-plan legend { grid-column: 1 / -1; margin-bottom: 3px; padding: 0; font-size: .57rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-.listing-plan label { display: grid; grid-template-columns: auto 1fr; gap: 11px; align-items: start; border: 1px solid var(--ink); padding: 16px; cursor: pointer; }
-.listing-plan label:has(input:checked) { background: var(--yellow); box-shadow: 4px 4px 0 var(--ink); }
-.listing-plan .featured-interest:has(input:checked) { background: #d9d0f6; }
-.listing-plan input { width: 18px; height: 18px; margin: 0; accent-color: var(--ink); }
-.listing-plan strong, .listing-plan small { display: block; letter-spacing: 0; text-transform: none; }
-.listing-plan strong { font-size: .82rem; }
-.listing-plan small { margin-top: 6px; font-family: Georgia, 'Times New Roman', serif; font-size: .76rem; font-weight: 400; line-height: 1.4; }
-.form-trap { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
-.service-form > button { grid-column: 1 / -1; margin-top: 26px; border: 0; background: var(--ink); color: var(--white); padding: 18px; cursor: pointer; font-size: .65rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-.service-form > button:hover { background: var(--green); }
-.service-form > button:disabled { opacity: .6; cursor: progress; }
-.service-form-note, .service-form-status { grid-column: 1 / -1; margin: 12px 0 0; color: #55554f; font-size: .6rem; line-height: 1.45; }
-.service-form-status { color: var(--green); font-weight: 800; }
 
 @media (max-width: 1080px) {
   .service-row { grid-template-columns: minmax(180px, .65fr) minmax(250px, 1.35fr); gap: 28px; }
@@ -230,24 +188,15 @@
   .prime-card .category-tab { min-height: 20px; padding: 4px 5px 3px; font-size: .4rem; box-shadow: 1px 1px 0 var(--ink); }
   .prime-card-footer { gap: 7px; padding: 10px 9px; }
   .prime-card-footer button { font-size: .48rem; letter-spacing: .05em; }
-  .listing-section-heading.compact > p { display: none; }
   .service-row { grid-template-columns: 1fr; gap: 14px; padding: 18px 16px 19px; }
   .service-row-heading h4 { margin: 14px 0 7px; font-size: 1.55rem; }
   .service-row-copy > p { display: -webkit-box; overflow: hidden; font-size: .9rem; line-height: 1.42; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
   .service-row-copy .service-tags { display: none; }
-  .service-row-actions { margin-top: 13px; padding-top: 11px; }
   #featured-profile-content { grid-template-columns: 1fr; }
   .featured-profile { width: calc(100vw - 20px); max-height: calc(100svh - 20px); box-shadow: 7px 7px 0 var(--yellow); }
   .featured-profile-inner { padding: 58px 16px 32px; }
   .profile-gallery { gap: 5px; }
   .profile-copy h2 { font-size: clamp(3rem, 15vw, 5.2rem); }
-  .directory-method, .service-submit { grid-template-columns: 1fr; }
-  .directory-method { gap: 12px; }
-  .directory-method, .service-submit-copy, .service-form { padding-inline: 18px; }
-  .service-form { grid-template-columns: 1fr; }
-  .service-form > label:nth-child(even):not(.service-consent), .service-form > label.service-form-wide { grid-column: 1; padding-left: 0; border-left: 0; }
-  .listing-plan { grid-template-columns: 1fr; }
-  .submit-steps { flex-wrap: wrap; }
 }
 
 @media (prefers-reduced-motion: reduce) {

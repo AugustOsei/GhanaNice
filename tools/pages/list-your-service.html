@@ -1,0 +1,41 @@
+<!-- {"path": "/list-your-service/", "title": "List your service — GhanaNice", "description": "Run a travel service in Ghana? Send your details to GhanaNice for review and ask to be considered for the travel directory.", "stylesheet": "/service-form.css?v=1", "script": "/service-form.js?v=1"} -->
+    <div class="service-interest">
+      <a class="service-back" href="/travel-directory.html">← Back to the travel directory</a>
+      <p class="doc-eyebrow">For Ghana travel businesses</p>
+      <h1>List your service. <em>Tell us what you do.</em></h1>
+      <p class="info-lead">Run tours, help people get around, or offer a place to stay? Send us your details and we’ll get back to you about listing your service on GhanaNice.</p>
+      <p class="service-review-note">We read and check every request before anything goes live. We’ll email you about the next step.</p>
+
+      <section class="service-interest-panel" aria-labelledby="service-form-heading">
+        <div class="service-interest-heading">
+          <p>Start here</p>
+          <h2 id="service-form-heading">Your service, in your words.</h2>
+          <p>Tell us what you offer and where you work. Add your website or social page so we can learn more, and we’ll follow up by email.</p>
+        </div>
+
+        <form class="service-form" id="service-form">
+          <label><span>Business or service name</span><input name="businessName" required maxlength="100" autocomplete="organization"></label>
+          <label><span>What do you offer?</span><select name="category" required><option value="">Choose one</option><option value="tours">Tours &amp; local guides</option><option value="transport">Transport &amp; vehicle hire</option><option value="stay">Accommodation</option></select></label>
+          <label><span>Where are you based?</span><input name="baseLocation" required maxlength="100" placeholder="Town, region"></label>
+          <label><span>Primary region</span><select name="primaryRegion" required>
+            <option value="">Choose the main region</option><option value="greater-accra">Greater Accra</option><option value="central">Central</option><option value="volta">Volta</option><option value="savannah">Savannah</option><option value="western">Western</option><option value="ashanti">Ashanti</option><option value="eastern">Eastern</option><option value="northern">Northern</option><option value="upper-east">Upper East</option><option value="upper-west">Upper West</option><option value="north-east">North East</option><option value="oti">Oti</option><option value="bono">Bono</option><option value="bono-east">Bono East</option><option value="ahafo">Ahafo</option><option value="western-north">Western North</option>
+          </select></label>
+          <label class="service-form-wide"><span>Website or one social media page <small>(Instagram or Facebook)</small></span><input name="website" type="url" required placeholder="https://"></label>
+          <label class="service-form-wide"><span>Where do you operate?</span><input name="coverage" required maxlength="180" placeholder="Regions, towns or nationwide"></label>
+          <label class="service-form-wide"><span>What should travellers know?</span><textarea name="description" required maxlength="600" rows="5" placeholder="Describe what you offer and who it is useful for."></textarea></label>
+          <fieldset class="listing-plan service-form-wide">
+            <legend>How would you like to be listed?</legend>
+            <label><input type="radio" name="listingType" value="standard" checked><span><strong>Standard listing</strong><small>Business details in the checked directory.</small></span></label>
+            <label class="featured-interest"><input type="radio" name="listingType" value="featured"><span><strong>I’m interested in featured placement</strong><small>A photo profile. We’ll contact you about pricing, duration and image permissions before anything is agreed.</small></span></label>
+          </fieldset>
+          <label><span>Your name</span><input name="contactName" required maxlength="100" autocomplete="name"></label>
+          <label><span>Email for the review</span><input name="email" type="email" required maxlength="180" autocomplete="email"></label>
+          <label class="service-form-wide"><span>Phone or WhatsApp <small>(optional)</small></span><input name="phone" type="tel" maxlength="40" autocomplete="tel" placeholder="+233 …"></label>
+          <label class="form-trap" aria-hidden="true"><span>Fax number</span><input name="companyFax" tabindex="-1" autocomplete="off"></label>
+          <label class="service-consent service-form-wide"><input name="consent" type="checkbox" required><span>I run or represent this service and the information is accurate.</span></label>
+          <button type="submit" id="service-submit-button"><span>Send for review</span></button>
+          <p class="service-form-note" id="service-form-note">We’ll use your contact details only to review this request and get back to you. <a href="/privacy/">How we handle your information</a>.</p>
+          <p class="service-form-status" id="service-form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>

@@ -6,8 +6,9 @@ a relevant public authority, and every entry needs a current `checked` date.
 
 ## Listing standard
 
-- Use the provider's public trading name and an HTTPS link: its own website, or one Instagram or
-  Facebook page if it has no website. The page labels every such link simply “Link”.
+- Use the provider's public trading name and keep an HTTPS source link in the listing data: its
+  own website, or one Instagram or Facebook page if it has no website. “All services” shows names
+  as plain text; featured profiles may display the provider's link.
 - Describe only services the provider currently publishes.
 - Record the base and service regions without implying that the business has an office in
   every region it serves. Use `regions: ['all']` only for genuinely nationwide coverage.
@@ -18,7 +19,7 @@ a relevant public authority, and every entry needs a current `checked` date.
 ## Featured placement
 
 The directory has two display levels. Every approved provider appears in the compact “All services”
-index with its name, base, short description, category and official link visible. Coverage stays in
+index with its name, base, short description and category visible. Coverage stays in
 the source data for filtering and search, but it is not repeated as a separate visual column. Any
 number of businesses can also buy a richer featured profile; there is no one-per-category quota.
 
@@ -40,12 +41,12 @@ previews; Jolinaiko remains standard because its official gallery forbids reuse 
 
 ## Business submissions
 
-`dist/config.js` points `serviceSubmissionEndpoint` at the separate `ghananice-service` n8n
-webhook. It must not point to the place-tip webhook: business submissions have their own fields,
-review standard, emails and publishing path. When the endpoint is blank, the form calls itself a
-draft and saves up to ten drafts in that browser only.
+The listing form lives on `/list-your-service/`, linked from the travel directory menu.
+`dist/config.js` points `serviceSubmissionEndpoint` at the `ghananice-service` n8n workflow. It
+must not point to the place-tip webhook: business submissions have their own fields, review
+standard, emails and publishing path. With a blank endpoint, the form saves a browser-only draft.
 
-When connected, the form sends JSON:
+The form sends JSON:
 
 ```json
 {
@@ -63,11 +64,11 @@ When connected, the form sends JSON:
   "email": "ama@example.com",
   "phone": "+233 …",
   "consent": true,
-  "source": "travel-directory.html"
+  "source": "list-your-service"
 }
 ```
 
-The active workflow stores the submission in the `Services` sheet, thanks the sender, emails
+The existing workflow stores a submission in the `Services` sheet, thanks the sender, emails
 August an Approve/Reject decision, and publishes an approved **standard** listing to
 `dist/data/service-submissions.json`. The page reads that file alongside the curated starting
 entries. It never publishes at intake.

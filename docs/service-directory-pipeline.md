@@ -1,7 +1,8 @@
 # Travel-service submission pipeline (n8n)
 
-The active `GhanaNice — Travel services` workflow receives the form at
-`POST /webhook/ghananice-service`. It deliberately shares the broad shape of the place-tip flow—
+The public service form lives at `/list-your-service/` and sends requests to the existing
+`GhanaNice — Travel services` workflow at `POST /webhook/ghananice-service`.
+It deliberately shares the broad shape of the place-tip flow—
 receive, store, acknowledge, review, publish, notify—but keeps the business contract separate.
 
 ```text

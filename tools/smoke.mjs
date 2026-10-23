@@ -122,7 +122,7 @@ regions?.forEach((region, index) => {
 
 /* Analytics loads through analytics.js, which honours the privacy page's opt-out: no page
    carries the tag itself. */
-const analyticsPages = ['dist/index.html', 'dist/travel-directory.html', 'dist/credits.html', 'dist/404.html', 'tools/region-template.html', 'tools/page-template.html', 'tools/festivals-template.html', 'tools/festival-template.html'];
+const analyticsPages = ['dist/index.html', 'dist/travel-directory.html', 'dist/list-your-service/index.html', 'dist/credits.html', 'dist/404.html', 'tools/region-template.html', 'tools/page-template.html', 'tools/festivals-template.html', 'tools/festival-template.html'];
 analyticsPages.forEach((file) => {
   const html = read(file);
   check(html.includes('/analytics.js?v=1'), `${file} does not load analytics.js`);
@@ -150,6 +150,7 @@ footerPages.forEach((file) => {
 check(read('dist/index.html').includes('data-newsletter="home"'), 'dist/index.html has no newsletter band under the festivals');
 check(/newsletterEndpoint:/.test(read('dist/config.js')), 'config.js has no newsletterEndpoint');
 check(sitemapXmlEarly().includes('<loc>https://www.ghananice.com/newsletter/</loc>'), 'sitemap.xml does not list /newsletter/');
+check(sitemapXmlEarly().includes('<loc>https://www.ghananice.com/list-your-service/</loc>'), 'sitemap.xml does not list /list-your-service/');
 check(/<loc>https:\/\/www\.ghananice\.com\/newsletter\/[^<]*<\/loc><\/url>\n<\/urlset>/.test(sitemapXmlEarly()), 'sitemap.xml must end with the newsletter entries (the issue workflow appends there)');
 function sitemapXmlEarly() { return read('dist/sitemap.xml'); }
 
@@ -174,10 +175,10 @@ const htmlExpectations = {
   'dist/404.html': ['styles.css?v=58'],
   'dist/travel-directory.html': [
     'styles.css?v=58',
-    'travel-directory.css?v=16',
+    'travel-directory.css?v=20',
     'config.js?v=6',
     'travel-directory-data.js?v=4',
-    'travel-directory.js?v=18',
+    'travel-directory.js?v=20',
     'footer.js?v=3',
     'id="featured-count"',
     'id="featured-page"',
@@ -185,10 +186,15 @@ const htmlExpectations = {
     'id="featured-next"',
     'id="prime-grid"',
     'id="service-list"',
+    'href="/list-your-service/"',
+  ],
+  'dist/list-your-service/index.html': [
+    '/service-form.css?v=1',
+    '/service-form.js?v=1',
     'id="service-form"',
     'name="primaryRegion"',
     'name="listingType" value="featured"',
-    'Phone or WhatsApp',
+    'id="service-form-status"',
   ],
 };
 
