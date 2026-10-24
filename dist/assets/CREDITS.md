@@ -345,6 +345,7 @@ The hero of `/december/` is generated illustration, made for GhanaNice with Higg
 | `december/img/hero-cloth-wide.webp`, `december/img/hero-cloth-tall.webp` | Collage of West African fabrics, hibiscus, palm fronds, sunflowers and cowrie shells (wide and tall versions) | Generated for GhanaNice (Higgsfield, GPT Image 2.5) | generated in project conversation | Project use |
 | `december/img/hero-sun.webp` | A painted cut-paper sun | Generated for GhanaNice (Higgsfield, GPT Image 2.5) | generated in project conversation | Project use |
 | `december/img/fig-*.webp` | Six cut-out figures of fictional people dancing, drumming and laughing | Generated for GhanaNice (Higgsfield, GPT Image 2.5) | generated in project conversation | Project use |
+| `december/img/step-save.webp`, `step-list.webp`, `step-send.webp` | Three cut-out drawings for “Make your December plan”: a hand tapping a star on an event card, a notepad list of starred picks with a pencil, a phone and a calendar | Generated for GhanaNice (Higgsfield, GPT Image 2.5) | generated in project conversation | Project use |
 
 | Asset | Subject | Creator | Source | License |
 |---|---|---|---|---|
