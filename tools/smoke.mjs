@@ -122,7 +122,7 @@ regions?.forEach((region, index) => {
 
 /* Analytics loads through analytics.js, which honours the privacy page's opt-out: no page
    carries the tag itself. */
-const analyticsPages = ['dist/index.html', 'dist/travel-directory.html', 'dist/list-your-service/index.html', 'dist/credits.html', 'dist/404.html', 'tools/region-template.html', 'tools/page-template.html', 'tools/festivals-template.html', 'tools/festival-template.html'];
+const analyticsPages = ['dist/index.html', 'dist/travel-directory.html', 'dist/list-your-service/index.html', 'dist/credits.html', 'dist/404.html', 'tools/region-template.html', 'tools/page-template.html', 'tools/festivals-template.html', 'tools/festival-template.html', 'tools/december-template.html'];
 analyticsPages.forEach((file) => {
   const html = read(file);
   check(html.includes('/analytics.js?v=1'), `${file} does not load analytics.js`);
@@ -143,7 +143,7 @@ check(footerPages.length >= 60, `Expected the footer on at least 60 pages, found
 footerPages.forEach((file) => {
   const html = read(file);
   check(html.includes('data-newsletter="footer"'), `${file} has no newsletter form in its footer`);
-  check(/src="\/?newsletter\.js\?v=2"/.test(html), `${file} does not load newsletter.js?v=2`);
+  check(/src="\/?newsletter\.js\?v=4"/.test(html), `${file} does not load newsletter.js?v=4`);
   check(/src="\/?config\.js\?v=6"/.test(html), `${file} does not load config.js?v=6 (the newsletter endpoint)`);
   if (file.startsWith('dist/festivals/')) check(html.includes('data-newsletter="festival"'), `${file} has no festival newsletter band`);
 });
@@ -159,9 +159,9 @@ const htmlExpectations = {
     'styles.css?v=58',
     'data.js?v=9',
     'app.js?v=33',
-    'tip-form.js?v=5',
     'footer.js?v=3',
     'id="hero-video"',
+    'href="/share/"',
     'id="region-reader" role="dialog"',
   ],
   'tools/region-template.html': [
@@ -187,6 +187,14 @@ const htmlExpectations = {
     'id="prime-grid"',
     'id="service-list"',
     'href="/list-your-service/"',
+  ],
+  /* The share page: the tip form (data.js + tip-form.js), photos, listing, suggestions, newsletter. */
+  'dist/share/index.html': [
+    '/data.js?v=9',
+    '/tip-form.js?v=5',
+    'data-tip-form',
+    'id="photos"',
+    'data-newsletter="home"',
   ],
   'dist/list-your-service/index.html': [
     '/service-form.css?v=1',
@@ -240,7 +248,9 @@ regions?.forEach((region) => {
    every nav, and with no broken local links or photos. */
 const sitemapXml = read('dist/sitemap.xml');
 const festivalPages = [['festivals/', 'dist/festivals/index.html'],
-  ...festivalData.filter((f) => f.sections?.length).map((f) => [`festivals/${f.slug}/`, `dist/festivals/${f.slug}/index.html`])];
+  ...festivalData.filter((f) => f.sections?.length).map((f) => [`festivals/${f.slug}/`, `dist/festivals/${f.slug}/index.html`]),
+  /* The December in Ghana page (tools/build_december.mjs) gets the same checks. */
+  ['december/', 'dist/december/index.html']];
 festivalPages.forEach(([urlPath, file]) => {
   if (!fs.existsSync(path.join(root, file))) return check(false, `${file} is missing`);
   const html = read(file);
@@ -265,7 +275,7 @@ festivalPages.forEach(([urlPath, file]) => {
   check((read(file).match(/href="\/festivals\/"/g) || []).length >= 2, `${file} does not link to /festivals/ in the nav and footer`);
 });
 
-['build_regions.mjs', 'build_pages.mjs', 'build_festivals.mjs', 'build_newsletter.mjs'].forEach((builder) => {
+['build_regions.mjs', 'build_pages.mjs', 'build_festivals.mjs', 'build_december.mjs', 'build_newsletter.mjs'].forEach((builder) => {
   try {
     execFileSync(process.execPath, [path.join(root, 'tools', builder), '--check'], { stdio: 'pipe' });
   } catch (error) {
@@ -273,10 +283,23 @@ festivalPages.forEach(([urlPath, file]) => {
   }
 });
 
+check(read('dist/festivals/index.html').includes('href="/december/"'), 'dist/festivals/index.html does not link to /december/');
+/* The December page is in the nav and footer (for the season) and has a section on the home page. */
+['dist/index.html', 'dist/travel-directory.html', 'tools/region-template.html', 'tools/page-template.html'].forEach((file) => {
+  check((read(file).match(/href="\/december\/"/g) || []).length >= 2, `${file} does not link to /december/ in the nav and footer`);
+});
+['tools/festival-template.html', 'tools/festivals-template.html'].forEach((file) => check(read(file).includes('href="/december/"'), `${file} does not link to /december/ in the nav`));
+check(read('dist/index.html').includes('<section class="home-dec" id="december"'), 'dist/index.html has no December section');
+/* "Share a nice place" goes to /share/ (region pages keep their own form, so they point at it). */
+['dist/index.html', 'tools/page-template.html', 'tools/festival-template.html', 'tools/festivals-template.html', 'tools/december-template.html'].forEach((file) => {
+  check(read(file).includes('class="nav-share" href="/share/"'), `${file}: "Share a nice place" does not go to /share/`);
+});
+check(read('dist/sitemap.xml').includes('<loc>https://www.ghananice.com/share/</loc>'), 'sitemap.xml does not list /share/');
+
 if (failures.length) {
   console.error(`Smoke checks failed (${failures.length}):`);
   failures.forEach((failure) => console.error(`- ${failure}`));
   process.exit(1);
 }
 
-console.log(`Smoke checks passed: ${regions.length} regions, ${festivalPages.length - 1} festival pages, ${scriptFiles.length} scripts.`);
+console.log(`Smoke checks passed: ${regions.length} regions, ${festivalPages.length - 2} festival pages, the December page, ${scriptFiles.length} scripts.`);

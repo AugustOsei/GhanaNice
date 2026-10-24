@@ -1,0 +1,95 @@
+<!-- {"path": "/share/", "title": "Share a nice place — GhanaNice", "description": "Make GhanaNice nicer: share a good place in Ghana, send us your photos of a place, list your travel service, suggest a festival or event, or get the monthly newsletter.", "scripts": ["/data.js?v=9", "/tip-form.js?v=5"]} -->
+    <style>
+      /* The heading: "nicer." gets the weight, bigger than the first line, in red italic with a yellow marker stroke */
+      .share-main h1 { max-width: none; }
+      .share-main h1 em { display: inline-block; margin-top: .02em; padding: 0 .08em 0 .02em; font-size: 1.32em; font-weight: 700; line-height: .9; letter-spacing: -.045em; color: var(--red); background: linear-gradient(transparent 58%, var(--yellow) 58%, var(--yellow) 86%, transparent 86%); }
+      .share-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 0; padding: 0; list-style: none; }
+      .share-jump a { display: inline-block; padding: 9px 14px; border: 1.5px solid var(--ink); border-radius: 99px; font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+      .share-jump a:hover { background: var(--yellow); }
+      .share-main .tip-panel { margin: 44px calc(-1 * clamp(18px, 5vw, 64px)) 0; min-height: 0; }
+      .share-main .tip-copy h2 { margin: 60px 0 0; font-size: clamp(3.6rem, 7vw, 6.6rem); line-height: .78; letter-spacing: -.08em; }
+      .share-main .tip-note { margin: 18px 0 0; max-width: 28ch; font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; line-height: 1.45; text-transform: none; letter-spacing: 0; font-weight: 400; }
+      .share-block { margin-top: 72px; padding-top: 28px; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
+      .share-block h2 { margin-top: 0; }
+      .share-block .info-list li { padding: 12px 0; }
+      .share-cta { display: inline-block; margin-top: 18px; padding: 13px 20px; border-radius: 99px; background: var(--ink); color: var(--yellow); font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+      .share-cta:hover { background: var(--red); color: var(--paper); }
+      .share-hint { margin: 14px 0 0; font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: .92rem; color: rgba(17,17,15,.65); }
+      .share-two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 72px; }
+      .share-card { padding: 22px 22px 24px; background: #fff; border-top: 5px solid var(--kc, var(--ink)); scroll-margin-top: 90px; }
+      .share-card h2 { margin: 0 0 10px; font-size: clamp(1.5rem, 2.6vw, 2rem); }
+      .share-card p { margin: 0 0 10px; }
+      .share-card a.more-link { font-weight: 800; border-bottom: 1.5px solid; }
+      .share-news { margin-top: 72px; scroll-margin-top: 90px; }
+      .share-news h2 { margin-top: 0; }
+      .share-news ul { margin: 0 0 22px; padding-left: 1.1em; font-family: Georgia, 'Times New Roman', serif; font-size: 1.05rem; line-height: 1.6; }
+      @media (max-width: 760px) {
+        .share-two { grid-template-columns: 1fr; }
+        .share-main .tip-panel { grid-template-columns: 1fr; }
+        .share-main .tip-copy { border-right: 0; border-bottom: 1px solid rgba(17,17,15,.35); }
+        .share-main .tip-copy h2 { margin-top: 28px; font-size: 3.4rem; }
+      }
+    </style>
+    <div class="share-main">
+    <p class="doc-eyebrow">Join in</p>
+    <h1>Make GhanaNice <em>nicer.</em></h1>
+    <p class="info-lead">GhanaNice is a guide to good places across Ghana’s 16 regions, and every place, photo and tip you send makes it better. Run a tourism business? You can <a href="/list-your-service/">list it in our travel directory</a>. And if you only do one thing, <a href="#newsletter">get the newsletter</a>: one email a month with what’s new in Ghana and on GhanaNice.</p>
+    <ul class="share-jump" aria-label="On this page">
+      <li><a href="#tip">Share a place</a></li>
+      <li><a href="#photos">Send photos</a></li>
+      <li><a href="#list">List a service</a></li>
+      <li><a href="#suggest">Suggest an event</a></li>
+      <li><a href="#newsletter">Get the newsletter</a></li>
+    </ul>
+
+    <section class="tip-panel" id="tip" aria-labelledby="tip-heading">
+      <div class="tip-copy">
+        <p>You give us the lead.<br>We’ll do the digging.</p>
+        <div>
+          <h2 id="tip-heading">Share<br>a nice<br>place.</h2>
+          <p class="tip-note">A spot to eat, a view, a beach, a local business. We check every tip before it goes on its region’s page.</p>
+        </div>
+      </div>
+      <form class="tip-form" id="place-form" data-tip-form aria-labelledby="tip-heading"></form>
+    </section>
+
+    <section class="share-block" id="photos" aria-labelledby="photos-heading">
+      <h2 id="photos-heading">Got photos nicer than nice?</h2>
+      <p>Some regions still have few pictures, Ahafo and Western North most of all, and some places have none. If you’ve taken good photos of a real place in Ghana, send them and we’ll consider them for its region page.</p>
+      <ul class="info-list">
+        <li><strong>They must be yours.</strong> Only send photos you took yourself.</li>
+        <li><strong>Say where.</strong> Tell us the place and the town, so we can file it under the right region.</li>
+        <li><strong>You get the credit.</strong> We put your name (or the name you choose) under the photo and on our <a href="/credits.html">photo credits</a> page.</li>
+        <li><strong>What you agree to.</strong> Sending a photo means GhanaNice may show it on the site with your credit. You keep the copyright, and you can ask us to take it down at any time.</li>
+        <li><strong>People in the picture.</strong> If someone can be clearly recognised, make sure they’re happy to be shown.</li>
+      </ul>
+      <a class="share-cta" href="mailto:hello@ghananice.com?subject=Photos%20for%20GhanaNice">Email your photos</a>
+      <p class="share-hint">Big files? Send a Google Drive or WeTransfer link in the email instead.</p>
+    </section>
+
+    <div class="share-two">
+      <section class="share-card" id="list" aria-labelledby="list-heading" style="--kc: var(--green)">
+        <h2 id="list-heading">Run a travel service?</h2>
+        <p>Tour guides, drivers, transport and places to stay can ask to join the travel directory. We check every request before anything goes live.</p>
+        <a class="more-link" href="/list-your-service/">List your service →</a>
+      </section>
+      <section class="share-card" id="suggest" aria-labelledby="suggest-heading" style="--kc: var(--red)">
+        <h2 id="suggest-heading">Know an event we’ve missed?</h2>
+        <p>Tell us its name, the town, when it falls and who runs it. A link to a news report or the organiser helps. We check every suggestion before adding it.</p>
+        <p><a class="more-link" href="mailto:hello@ghananice.com?subject=Festival%20suggestion">Suggest a festival →</a></p>
+        <p><a class="more-link" href="mailto:hello@ghananice.com?subject=December%20event">Suggest a December event →</a></p>
+      </section>
+    </div>
+
+    <section class="share-news" id="newsletter" aria-labelledby="news-heading">
+      <h2 id="news-heading">The monthly newsletter</h2>
+      <p>We’re adding places, festivals, photos and new features every month. One email near the end of each month tells you what’s new, with:</p>
+      <ul>
+        <li>what’s on in Ghana next month, festivals and events;</li>
+        <li>the places and pages we’ve added;</li>
+        <li>one place worth the trip;</li>
+        <li>a tip from a reader, maybe yours.</li>
+      </ul>
+    </section>
+    <section class="nl-band" aria-label="Newsletter sign-up" data-newsletter="home"></section>
+    </div>

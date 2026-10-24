@@ -30,6 +30,8 @@ export const PAGES = sources.map(file => {
   });
   if (meta.stylesheet) html = html.replace('  <!-- Google Analytics', `  <link rel="stylesheet" href="${esc(meta.stylesheet)}">\n  <!-- Google Analytics`);
   if (meta.script) html = html.replace('</body>', `  <script src="${esc(meta.script)}" defer></script>\n</body>`);
+  /* "scripts": several, loaded in order (all deferred, which keeps their order). */
+  if (meta.scripts) html = html.replace('</body>', meta.scripts.map(src => `  <script src="${esc(src)}" defer></script>\n`).join('') + '</body>');
   return { file: path.join(dist, meta.path, 'index.html'), html, path: meta.path };
 });
 

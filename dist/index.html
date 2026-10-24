@@ -39,8 +39,9 @@
       <div class="nav-links" id="nav-links">
         <a href="#regions">Explore regions</a>
         <a href="/festivals/">Festivals</a>
+        <a href="/december/">December</a>
         <a href="travel-directory.html">Travel directory</a>
-        <a class="nav-share" href="#share">Share a nice place</a>
+        <a class="nav-share" href="/share/">Share a nice place</a>
       </div>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><b class="sr-only">Menu</b></button>
     </nav>
@@ -226,6 +227,45 @@
       </ol>
       <p class="visit-source">Visits, not unique visitors. Together the ten drew 1,377,588 visits, 77% of all domestic tourism visits. The published summary gives figures for the top five only; 6–10 are shown in rank order. Source: Ghana Tourism Authority, 2025 Tourism Report, as reported by <a href="https://www.graphic.com.gh/news/general-news/ghana-news-1-31-million-international-tourists-visit-ghana-in-2025-tourism-generates-4-34bn.html" target="_blank" rel="noopener">Graphic Online ↗</a> and <a href="https://thechronicle.com.gh/top-10-most-visited-tourist-sites-in-ghana-in-2025/" target="_blank" rel="noopener">The Chronicle ↗</a></p>
     </section>
+    <!-- december:home (written by tools/build_december.mjs) -->
+    <section class="home-dec" id="december" aria-labelledby="home-dec-heading">
+      <style>
+        .home-dec { position: relative; height: clamp(560px, 82vh, 760px); overflow: hidden; overflow: clip; isolation: isolate; background: #efe2c4; color: var(--ink); }
+        .home-dec-bg, .home-dec-bg img { position: absolute; inset: 0; width: 100%; height: 100%; }
+        .home-dec-bg img { object-fit: cover; object-position: 50% 40%; }
+        .home-dec-sun { position: absolute; z-index: 1; left: 50%; top: 2%; width: min(34vw, 46vh); height: auto; transform: translateX(-50%); }
+        .home-dec-copy { position: absolute; z-index: 3; left: 50%; top: 12%; width: min(60vw, 820px); transform: translateX(-50%); text-align: center; }
+        .home-dec h2 { margin: 0; font-size: clamp(3rem, 7.4vw, 7.6rem); font-weight: 900; letter-spacing: -.075em; line-height: .82; }
+        .home-dec h2 em { display: block; margin-top: .16em; font-family: Georgia, 'Times New Roman', serif; font-size: .34em; font-weight: 400; font-style: italic; letter-spacing: -.02em; color: #7d1a10; text-shadow: 0 0 10px rgba(255,248,225,.9); }
+        .home-dec-note { display: inline-block; max-width: 34ch; margin: 18px 0 0; padding: 14px 18px 16px; background: #fbf4e2; box-shadow: 0 18px 30px -18px rgba(0,0,0,.5); transform: rotate(-1.2deg); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(.98rem, 1.3vw, 1.12rem); line-height: 1.4; }
+        .home-dec-cta { display: inline-block; margin-top: 12px; border-radius: 99px; padding: 12px 20px; background: var(--ink); color: var(--yellow); font-family: Arial, Helvetica, sans-serif; font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+        .home-dec-cta:hover { background: var(--red); color: var(--paper); }
+        .home-dec-fig { position: absolute; z-index: 2; bottom: -1%; height: 46%; width: auto; filter: drop-shadow(0 12px 14px rgba(40,20,0,.28)); }
+        .home-dec-fig.f1 { left: 2%; } .home-dec-fig.f2 { left: 14%; height: 42%; } .home-dec-fig.f3 { right: 3%; }
+        @media (max-width: 760px) {
+          .home-dec { height: 720px; }
+          .home-dec-sun { top: 18%; width: 66vw; }
+          .home-dec-copy { top: 26%; width: 92vw; }
+          .home-dec h2 { font-size: 17vw; }
+          .home-dec-fig { height: 28%; } .home-dec-fig.f1 { left: -3%; } .home-dec-fig.f2 { left: 24%; height: 27%; } .home-dec-fig.f3 { right: 0; }
+        }
+      </style>
+      <picture class="home-dec-bg" aria-hidden="true">
+        <source media="(max-width: 760px)" srcset="/december/img/hero-cloth-tall.webp" width="820" height="1451">
+        <img src="/december/img/hero-cloth-wide.webp" alt="" width="1800" height="1018" loading="lazy" decoding="async">
+      </picture>
+      <img class="home-dec-sun" src="/december/img/hero-sun.webp" alt="" width="890" height="900" loading="lazy" decoding="async">
+      <img class="home-dec-fig f1" src="/december/img/fig-kente.webp" alt="" width="459" height="700" loading="lazy" decoding="async">
+      <img class="home-dec-fig f2" src="/december/img/fig-drummer.webp" alt="" width="408" height="700" loading="lazy" decoding="async">
+      <img class="home-dec-fig f3" src="/december/img/fig-dancer.webp" alt="" width="449" height="700" loading="lazy" decoding="async">
+      <div class="home-dec-copy">
+        <h2 id="home-dec-heading">December <em>in Ghana</em></h2>
+        <p class="home-dec-note">116 concerts, carnivals, festivals and markets across Ghana, 1 December to 5 January: dates, places and what to expect. Save the ones you like and send your plan to friends.</p><br>
+        <a class="home-dec-cta" href="/december/">See what’s on →</a>
+      </div>
+    </section>
+    <!-- /december:home -->
+
     <!-- festivals:home (written by tools/build_festivals.mjs) -->
     <!-- Festivals: a small version of the /festivals/ board, inviting people in. -->
     <section class="home-fest" id="festivals" aria-labelledby="home-fest-heading">
@@ -305,19 +345,24 @@
         <article class="place-tile place-photo" style="--image:url('assets/real/wli-falls-800.webp')"><span>Volta <i class="kind">Place</i></span><h3>Wli Falls</h3><button class="nice-button" type="button" aria-pressed="false">♡ Found it nice</button></article>
         <article class="place-tile place-photo" style="--image:url('assets/real/kakum-walkway-800.webp')"><span>Central <i class="kind">Place</i></span><h3>Kakum National Park</h3><button class="nice-button" type="button" aria-pressed="false">♡ Found it nice</button></article>
         <article class="place-tile place-photo" style="--image:url('assets/real/accra-seamstress-800.webp')"><span>Greater Accra <i class="kind is-business">Local business</i></span><h3>Made in Accra</h3><button class="nice-button" type="button" aria-pressed="false">♡ Found it nice</button></article>
-        <a class="place-tile place-tip-trigger" href="#tip"><span>Know somewhere good?</span><strong>Put us on ↘</strong></a>
+        <a class="place-tile place-tip-trigger" href="/share/"><span>Know somewhere good?</span><strong>Put us on ↘</strong></a>
         <article class="place-tile place-photo" style="--image:url('assets/real/larabanga-mosque-800.webp')"><span>Savannah <i class="kind">Place</i></span><h3>Larabanga Mosque</h3><button class="nice-button" type="button" aria-pressed="false">♡ Found it nice</button></article>
         <article class="place-tile place-photo" style="--image:url('assets/real/cape-coast-castle-800.webp')"><span>Central <i class="kind">Place</i></span><h3>Cape Coast Castle</h3><button class="nice-button" type="button" aria-pressed="false">♡ Found it nice</button></article>
         <article class="place-tile place-photo" style="--image:url('assets/photos/boti-falls-ghana-800.webp')"><span>Eastern <i class="kind">Place</i></span><h3>Boti Falls</h3><button class="nice-button" type="button" aria-pressed="false">♡ Found it nice</button></article>
         <article class="place-tile place-photo" style="--image:url('assets/real/jamestown-lighthouse-800.webp')"><span>Greater Accra <i class="kind">Place</i></span><h3>Jamestown</h3><button class="nice-button" type="button" aria-pressed="false">♡ Found it nice</button></article>
       </div>
 
-      <div class="tip-panel" id="tip">
-        <div class="tip-copy">
-          <p>You give us the lead.<br>We’ll do the digging.</p>
-          <h2>Leave<br>GhanaNice<br>a tip.</h2>
-        </div>
-        <form class="tip-form" id="place-form" data-tip-form aria-label="Leave GhanaNice a tip"></form>
+      <!-- The tip form lives on /share/ now; this keeps the invitation (and old #tip links) on the home page. -->
+      <div class="tip-invite" id="tip">
+        <style>
+          .tip-invite { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 32px; margin-top: 14px; padding: clamp(28px, 4vw, 48px) clamp(24px, 5vw, 64px); background: var(--yellow); color: var(--ink); scroll-margin-top: 76px; }
+          .tip-invite p { margin: 0; font-size: clamp(2rem, 4.4vw, 3.8rem); font-weight: 900; line-height: .9; letter-spacing: -.06em; }
+          .tip-invite p span { display: block; margin-top: 12px; font-family: Georgia, 'Times New Roman', serif; font-size: 1.05rem; font-weight: 400; line-height: 1.4; letter-spacing: 0; }
+          .tip-invite a { flex: none; padding: 15px 22px; border-radius: 99px; background: var(--ink); color: var(--yellow); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+          .tip-invite a:hover { background: var(--red); color: var(--paper); }
+        </style>
+        <p>Know somewhere good?<span>Tell us about it. We check every tip and credit you on its region’s page.</span></p>
+        <a href="/share/">Share a nice place →</a>
       </div>
     </section>
 
@@ -329,7 +374,7 @@
         <li><a class="partner-logo-frame" href="https://www.augustengine.com/" target="_blank" rel="noopener"><img class="partner-logo-symbol" src="assets/partners/partner-symbol.webp" width="2845" height="1556" loading="lazy" decoding="async" alt="August Engine logo"></a></li>
         <li><a class="partner-logo-frame" href="https://colourfro.com/" target="_blank" rel="noopener"><img class="partner-logo-colourfro" src="assets/partners/colourfro.png" width="447" height="447" loading="lazy" decoding="async" alt="Colourfro logo"></a></li>
       </ul>
-      <p class="partners-cta">Interested in partnering with GhanaNice? <a href="mailto:theteam@augustwheel.com?subject=Partnering%20with%20GhanaNice">Email theteam@augustwheel.com</a></p>
+      <p class="partners-cta">Interested in partnering with GhanaNice? <a href="mailto:hello@ghananice.com?subject=Partnering%20with%20GhanaNice">Email hello@ghananice.com</a></p>
     </section>
   </main>
 
@@ -355,7 +400,7 @@
         <p class="footer-maker">Made by <a href="https://www.linkedin.com/in/augustineosei/" target="_blank" rel="noopener">Augustine Osei</a>. Follow along as I build and write about AI on <a href="https://www.theaugustdispatch.com" target="_blank" rel="noopener">The August Dispatch ↗</a></p>
       </div>
       <nav class="footer-links" aria-label="Footer">
-        <div><h2>Explore</h2><ul><li><a href="#regions">All 16 regions</a></li><li><a href="#most-visited">Most visited</a></li><li><a href="/festivals/">Festivals</a></li><li><a href="travel-directory.html">Travel directory</a></li><li><a href="/newsletter/">Newsletter</a></li><li><a href="#tip">Share a place</a></li></ul></div>
+        <div><h2>Explore</h2><ul><li><a href="#regions">All 16 regions</a></li><li><a href="#most-visited">Most visited</a></li><li><a href="/festivals/">Festivals</a></li><li><a href="/december/">December in Ghana</a></li><li><a href="travel-directory.html">Travel directory</a></li><li><a href="/newsletter/">Newsletter</a></li><li><a href="/share/">Share a place</a></li></ul></div>
         <div><h2>The south</h2><ul><li><a href="/regions/greater-accra/">Greater Accra</a></li><li><a href="/regions/central/">Central</a></li><li><a href="/regions/western/">Western</a></li><li><a href="/regions/western-north/">Western North</a></li><li><a href="/regions/volta/">Volta</a></li><li><a href="/regions/eastern/">Eastern</a></li><li><a href="/regions/ashanti/">Ashanti</a></li><li><a href="/regions/ahafo/">Ahafo</a></li></ul></div>
         <div><h2>The middle &amp; north</h2><ul><li><a href="/regions/bono/">Bono</a></li><li><a href="/regions/bono-east/">Bono East</a></li><li><a href="/regions/oti/">Oti</a></li><li><a href="/regions/northern/">Northern</a></li><li><a href="/regions/savannah/">Savannah</a></li><li><a href="/regions/north-east/">North East</a></li><li><a href="/regions/upper-east/">Upper East</a></li><li><a href="/regions/upper-west/">Upper West</a></li></ul></div>
         <div><h2>About</h2><ul><li><a href="/about/">About GhanaNice</a></li><li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/credits.html">Photo credits</a></li></ul></div>
@@ -370,8 +415,7 @@
   <script src="config.js?v=6"></script>
   <script src="data.js?v=9"></script>
   <script src="app.js?v=33" defer></script>
-  <script src="tip-form.js?v=5" defer></script>
   <script src="footer.js?v=3" defer></script>
-  <script src="newsletter.js?v=2" defer></script>
+  <script src="newsletter.js?v=4" defer></script>
 </body>
 </html>

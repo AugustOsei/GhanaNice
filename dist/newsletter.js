@@ -1,4 +1,4 @@
-/* The monthly newsletter sign-up, "What's on in Ghana", on every page.
+/* The monthly newsletter sign-up ("Follow GhanaNice as it grows") on every page.
    Each page marks where a form goes with data-newsletter="footer | festival | home | newsletter"; this script
    fills them in and posts {email, source, page} as JSON to config.newsletterEndpoint (n8n, which
    adds the address to MailerLite; MailerLite sends the confirmation email). A blank endpoint is
@@ -12,15 +12,15 @@
   const KEY = 'ghananice:newsletter';
   const DAY = 864e5;
   const COPY = {
-    footer: { title: 'What’s on in Ghana, once a month', button: 'Sign up' },
+    footer: { title: 'Follow GhanaNice as it grows', button: 'Sign up' },
     festival: {
-      title: 'Get next month’s festivals in your inbox',
-      lead: 'Once a month: the festivals coming up, new places on GhanaNice and a tip from a reader.',
+      title: 'Follow GhanaNice as it grows',
+      lead: 'We’re building a guide to Ghana with the people who know it. Once a month, we’ll send you what’s new on the site, what’s on next month, a place worth the trip and a tip from a reader.',
       button: 'Sign me up'
     },
     home: {
-      title: 'What’s on in Ghana, once a month',
-      lead: 'Next month’s festivals, new places on GhanaNice and a tip from a reader. One email a month.',
+      title: 'Follow GhanaNice as it grows',
+      lead: 'We’re building a guide to Ghana with the people who know it. Once a month, we’ll send you what’s new on the site, what’s on next month, a place worth the trip and a tip from a reader.',
       button: 'Sign me up'
     },
     newsletter: {
@@ -29,8 +29,8 @@
       button: 'Sign me up'
     },
     popup: {
-      title: 'What’s on in Ghana, once a month',
-      lead: 'Festivals coming up and new places, in one email a month.',
+      title: 'Follow GhanaNice as it grows',
+      lead: 'Get one email a month with what’s new on GhanaNice and what’s on in Ghana.',
       button: 'Sign up'
     }
   };

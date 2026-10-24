@@ -1,0 +1,1708 @@
+{
+  "year": 2026,
+  "checked": "2026-10-23",
+  "source": {
+    "name": "December in GH",
+    "url": "https://decemberingh.com/all-events/"
+  },
+  "note": "Events from the December in GH listing, checked on the date above. Names, dates and venues are as listed there; kinds, regions and summaries are ours. Left out: seminars, networking evenings and conferences (First-Time Homebuyers, Connect the Dots, Diaspora Business Networking Mixer, Diaspora Roundtable, ICAD/MOGA, GUBA Diaspora Conversations, the Abibitumi Conference, The Families Conference) and the Girls Indoor Cycling Challenge (25-27 January). 'more' (the back of each card) is ours, written from the listing's descriptions as read on 23 Oct 2026; 'time' and 'entry' only where the listing states them. Cards do not link out: the listing is credited once, under the list. 'feature' marks the season's featured events: their photos are from Wikimedia Commons or Unsplash (credited on each photo and in dist/assets/CREDITS.md), of past editions, the performer or the venue, as each note says. Removed on 24 Oct 2026 until it can be confirmed: EʋeZã Heritage Night (listed for 19 Dec at Fort Prinzenstein, Keta), which no source other than the listing mentions.",
+  "events": [
+    {
+      "id": "december-to-rememberchristmas-in-wonderland",
+      "name": "December to Remember: Christmas in Wonderland",
+      "from": "2026-12-01",
+      "to": "2026-12-31",
+      "venue": "Zen Garden, Labone",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "A different live band every night of December, 8.30 pm to 12.30 am.",
+      "more": "Bands take turns on stage every night of December. Book a table by phone (numbers on the listing).",
+      "time": "8.30 pm to 12.30 am",
+      "entry": "GH₵100 per show"
+    },
+    {
+      "id": "books-bridges-and-bofrot",
+      "name": "Books, Bridges and Bofrot",
+      "from": "2026-12-01",
+      "to": "2026-12-20",
+      "venue": "Accra",
+      "region": "Greater Accra",
+      "kind": "other",
+      "sum": "A book drive for Ghanaian children: drop off books by African and diaspora authors.",
+      "more": "Run by the Howard University Alumni Association, Crescendo Foods and members of Delta Sigma Theta Sorority. Bring books by African and diaspora authors, in English, French or a Ghanaian language, for children aged 6 to 15; cookbooks go to Crescendo Foods."
+    },
+    {
+      "id": "back2north-k-w-n-n3-street-art-trade-festival-2026",
+      "name": "Back2North: Wɔ Nɔ Nɛ Street Art & Trade Festival",
+      "from": "2026-12-02",
+      "to": "2026-12-06",
+      "venue": "Swanlake, Palace Street, North Kaneshie",
+      "region": "Greater Accra",
+      "kind": "fest",
+      "sum": "North Kaneshie’s homecoming: murals painted across the neighbourhood, and a street market.",
+      "more": "Wɔ Nɔ Nɛ means “this is our own” in Ga. Artists paint North Kaneshie and the streets around it, and traders set up along the way: a homecoming for the neighbourhood."
+    },
+    {
+      "id": "walk-boldly-2026-hands-that-shape-ghana",
+      "name": "Walk Boldly: Hands That Shape Ghana",
+      "from": "2026-12-03",
+      "to": "2026-12-04",
+      "venue": "Ghana Climate Center of Excellence",
+      "region": "",
+      "kind": "arts",
+      "sum": "Two days celebrating Ghanaian artisans and heritage crafts.",
+      "more": "Two days of artisans, heritage and community, led by Arhin Sole Creations with Eclectic Love and Nunyola Impact Consulting."
+    },
+    {
+      "id": "rhythms-traditions-an-enchanted-night-with-the-national-dance-company",
+      "name": "Rhythms & Traditions: the National Dance Company",
+      "from": "2026-12-04",
+      "to": "2026-12-04",
+      "venue": "Folksplace, National Theatre",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "The Ghana Dance Ensemble performs traditional dances from the north, middle and south.",
+      "more": "Dances from the north, middle and south of Ghana, chosen and performed by the National Dance Company (the Ghana Dance Ensemble), with movement as a language of its own."
+    },
+    {
+      "id": "afroheels",
+      "name": "AfroHeels",
+      "from": "2026-12-04",
+      "to": "2026-12-04",
+      "venue": "Shipyard, Cape Coast–Takoradi Highway",
+      "region": "",
+      "kind": "other",
+      "sum": "An event celebrating Ghanaian fabrics, clothes, food, drumming and dance.",
+      "more": "A celebration of Ghana’s fabrics, clothes, food, drumming and dance. The listing gives few other details, so check before you travel."
+    },
+    {
+      "id": "ebien-exhibition",
+      "name": "Ebien",
+      "from": "2026-12-04",
+      "to": "2026-12-04",
+      "venue": "Gallerie Saok, Asylum Down",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "Gallerie Saok’s second-anniversary exhibition (“Ebien” means two).",
+      "more": "Gallerie Saok marks its second anniversary with a special exhibition: “Ebien” means two."
+    },
+    {
+      "id": "by-faith-guinea-fowl-bazaar",
+      "name": "By Faith Guinea Fowl Bazaar",
+      "from": "2026-12-04",
+      "to": "2026-12-05",
+      "venue": "Aliu Mahama Sports Stadium, Tamale",
+      "region": "Northern",
+      "kind": "food",
+      "sum": "The eighth edition of Tamale’s guinea fowl food and culture festival.",
+      "more": "The eighth edition of a food and culture festival built around northern Ghana’s guinea fowl, from the farm to the plate."
+    },
+    {
+      "id": "ghana-jamaica-homecoming-festival",
+      "name": "Ghana Jamaica Homecoming Festival",
+      "from": "2026-12-04",
+      "to": "2026-12-05",
+      "venue": "University of Ghana Sports Stadium",
+      "region": "Greater Accra",
+      "kind": "fest",
+      "sum": "Two days marking the historical and cultural ties between Ghana and Jamaica.",
+      "more": "Two days honouring the historical, cultural and spiritual links between Ghana and Jamaica, with people from both countries."
+    },
+    {
+      "id": "african-food-festival-2",
+      "name": "African Food Festival",
+      "from": "2026-12-04",
+      "to": "2026-12-04",
+      "venue": "Bunso Eco Enclave, near Bunso Eco Park",
+      "region": "Eastern",
+      "kind": "food",
+      "sum": "A day for farmers and African food, at Bunso.",
+      "more": "A day for farmers, for Africa’s food and for its many cultures. The organisers expect about 2,500 people."
+    },
+    {
+      "id": "africa-fitness-honors-expo",
+      "name": "Africa Fitness Honors & Expo",
+      "from": "2026-12-04",
+      "to": "2026-12-06",
+      "venue": "British Council, City Hotel and Laboma Beach",
+      "region": "Greater Accra",
+      "kind": "sport",
+      "sum": "Awards and an expo for fitness, bodybuilding, strength sport and wellness across Africa.",
+      "more": "A Pan-African event for fitness, wellness, bodybuilding, strength sport and healthy living, spread over three venues in Accra."
+    },
+    {
+      "id": "tema-food-bazaar",
+      "name": "Tema Food Bazaar",
+      "from": "2026-12-04",
+      "to": "2026-12-06",
+      "venue": "Site 14 Square, Community 1, Tema",
+      "region": "Greater Accra",
+      "kind": "food",
+      "sum": "Three days of food vendors, caterers, chefs and entertainment.",
+      "more": "Three days at Site 14 Square, Community 1: food vendors, caterers and chefs, with lifestyle stalls and entertainment."
+    },
+    {
+      "id": "tadifest-2",
+      "name": "TadiFest",
+      "from": "2026-12-04",
+      "to": "2026-12-25",
+      "venue": "Old John Sarbah Road, Takoradi",
+      "region": "Western",
+      "kind": "fest",
+      "sum": "Sekondi-Takoradi’s yuletide festival, ending in the Oil City Carnival of masquerades on Christmas Day.",
+      "more": "Organised by Empire 102.7 FM and running from 4 to 25 December. It ends with the Oil City Carnival on Christmas Day, a street parade of masquerade groups."
+    },
+    {
+      "id": "inspire-cape-coast",
+      "name": "Inspire Cape Coast",
+      "from": "2026-12-04",
+      "to": "2026-12-04",
+      "venue": "Ridge Royal Hotel, Cape Coast",
+      "region": "Central",
+      "kind": "arts",
+      "sum": "Talks and conversations on the future of Cape Coast.",
+      "more": "Talks and conversations about the future of Cape Coast and who gets to shape it, with creative thinkers and entrepreneurs."
+    },
+    {
+      "id": "made-in-ghana-fair-2",
+      "name": "Made in Ghana Fair",
+      "from": "2026-12-04",
+      "to": "2026-12-04",
+      "venue": "Kwame Nkrumah Memorial Park, Accra",
+      "region": "Greater Accra",
+      "kind": "food",
+      "sum": "Ghanaian makers selling food, drinks, clothes, fabrics and crafts.",
+      "feature": {
+        "town": "Accra",
+        "note": "Photos of the venue.",
+        "photos": [
+          {
+            "file": "img/nkrumah-statue.webp",
+            "w": 900,
+            "h": 600,
+            "alt": "The bronze statue of Kwame Nkrumah at the Memorial Park in Accra",
+            "caption": "Nkrumah’s statue in the park",
+            "author": "Fquasie",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Kwame_Nkrumah_Memorial_Park_%26_Mausoleum.jpg"
+          },
+          {
+            "file": "img/nkrumah-pools.webp",
+            "w": 900,
+            "h": 600,
+            "alt": "The long walkway and pools leading to the Nkrumah mausoleum",
+            "caption": "The pools and the mausoleum",
+            "author": "Fquasie",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Kwame_Nkrumah_Memorial_Park_%26_Mausoleum_4.jpg"
+          },
+          {
+            "file": "img/nkrumah-wall.webp",
+            "w": 900,
+            "h": 600,
+            "alt": "A carved white relief wall in the Kwame Nkrumah Memorial Park",
+            "caption": "The relief wall",
+            "author": "Fquasie",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Kwame_Nkrumah_Memorial_Park_%26_Mausoleum_6.jpg"
+          }
+        ]
+      },
+      "more": "Ghanaian makers show and sell food, drinks, clothing, accessories, fabrics and crafts."
+    },
+    {
+      "id": "eweza-musical-concert-emc",
+      "name": "EweZa Musical Concert",
+      "from": "2026-12-05",
+      "to": "2026-12-05",
+      "venue": "Ho (Jubilee Park or the HTU Auditorium, to be confirmed)",
+      "region": "Volta",
+      "kind": "music",
+      "sum": "A concert of the Volta Region’s music and musicians.",
+      "more": "A concert of the Volta Region’s music and new talent, back after last year’s edition. When we checked, the venue (Jubilee Park or the HTU Auditorium) was still being agreed."
+    },
+    {
+      "id": "dilemma-of-a-ghost",
+      "name": "Dilemma of a Ghost",
+      "from": "2026-12-05",
+      "to": "2026-12-05",
+      "venue": "Folksplace, National Theatre",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "Ama Ata Aidoo’s play about the African diaspora, by the National Drama Company (Abibigromma).",
+      "more": "Ama Ata Aidoo’s play about the gaps and emotions between Africa and its diaspora, staged by Abibigromma, the National Drama Company."
+    },
+    {
+      "id": "baptism",
+      "name": "Baptism",
+      "from": "2026-12-05",
+      "to": "2026-12-05",
+      "venue": "Enzo, Accra",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "A night of African electronic dance music: Afrohouse, Afrotech, Azonto, Amapiano and more.",
+      "more": "An Accra night of African electronic dance music: Afrohouse, Afrotech, Azonto, Asorkpor, Amapiano and Gqom."
+    },
+    {
+      "id": "america-after-dark-with-ben-crump",
+      "name": "America After Dark with Ben Crump",
+      "from": "2026-12-07",
+      "to": "2026-12-07",
+      "venue": "Conclave (to be confirmed)",
+      "region": "",
+      "kind": "arts",
+      "sum": "An evening on America with the civil rights lawyer Ben Crump.",
+      "more": "An evening exploring America through the eyes of the civil rights lawyer Ben Crump. The venue was still tentative when we checked."
+    },
+    {
+      "id": "royal-savannahfest-and-investment-expo",
+      "name": "Royal Savannahfest and Investment Expo",
+      "from": "2026-12-08",
+      "to": "2026-12-10",
+      "venue": "Jubilee Park, Tamale",
+      "region": "Northern",
+      "kind": "fest",
+      "sum": "Northern Ghana’s culture and heritage on show, led by its traditional authorities.",
+      "more": "Led by northern Ghana’s traditional authorities: the north’s culture and heritage on show, alongside investment opportunities for investors and the diaspora."
+    },
+    {
+      "id": "regal-film-festival-and-awards-reffa",
+      "name": "Regal Film Festival and Awards",
+      "from": "2026-12-08",
+      "to": "2026-12-12",
+      "venue": "La Palm Royal Beach Hotel and The Palms Convention Centre",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "Screenings and awards for African and international cinema.",
+      "more": "A yearly international film festival for African and global cinema, bringing filmmakers, producers, distributors and investors together for screenings and an awards night."
+    },
+    {
+      "id": "africa-basketball-festival-3",
+      "name": "Africa Basketball Festival",
+      "from": "2026-12-09",
+      "to": "2026-12-13",
+      "venue": "University of Ghana basketball court",
+      "region": "Greater Accra",
+      "kind": "sport",
+      "sum": "Teams from eight countries play, with music and fashion around the games.",
+      "more": "Teams from eight countries play tough games, with live music and fashion around the court.",
+      "feature": {
+        "town": "Legon",
+        "note": "A basketball court in Accra, not the festival’s court at the University of Ghana.",
+        "photos": [
+          {
+            "file": "img/basketball-court.webp",
+            "w": 600,
+            "h": 900,
+            "alt": "A basketball hoop on a court surrounded by coconut palms in Accra",
+            "caption": "A court among the palms, Accra",
+            "author": "Kingsley Hemans",
+            "license": "Unsplash License",
+            "source": "https://unsplash.com/photos/basketball-hoop-surrounded-by-palm-trees-6WfvcdkkSgE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "symphony-untamed-from-classical-roots-to-modern-beats",
+      "name": "Symphony Untamed",
+      "from": "2026-12-11",
+      "to": "2026-12-11",
+      "venue": "Folksplace, National Theatre",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "The National Symphony Orchestra mixes classical music with highlife and hiplife.",
+      "more": "The National Symphony Orchestra blends classical technique with highlife, hiplife, choral melodies and modern beats."
+    },
+    {
+      "id": "storyfest",
+      "name": "StoryFest",
+      "from": "2026-12-11",
+      "to": "2026-12-13",
+      "venue": "Accra City Hotel",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "A family festival of Ghanaian storytelling: books, theatre, food and fashion.",
+      "more": "A three-day family festival by AMPLE House: Ghanaian stories through books, theatre, food, fashion, art and heritage."
+    },
+    {
+      "id": "zadokeli-arts-festival",
+      "name": "Zadokeli Arts Festival",
+      "from": "2026-12-11",
+      "to": "2026-12-13",
+      "venue": "Ghana Academy of Arts and Sciences",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "Film, dance, drama, storytelling and exhibitions, this year on “Echoes of Remembrance”.",
+      "more": "Meraki Arts Africa’s yearly festival of film, dance, drama, storytelling and exhibitions. This year’s theme is “Echoes of Remembrance”."
+    },
+    {
+      "id": "crowned-nurtured",
+      "name": "Crowned & Nurtured",
+      "from": "2026-12-12",
+      "to": "2026-12-13",
+      "venue": "La Palm Royal Beach Hotel",
+      "region": "Greater Accra",
+      "kind": "other",
+      "sum": "Two days on African hair and beauty, with brands, makers and creatives.",
+      "more": "Two days on African hair, beauty and identity, with beauty and wellness brands, makers and creatives."
+    },
+    {
+      "id": "plantbased-vegan-market",
+      "name": "Plantbased Vegan Market",
+      "from": "2026-12-12",
+      "to": "2026-12-13",
+      "venue": "Venue to be confirmed",
+      "region": "",
+      "kind": "food",
+      "sum": "A market of plant-based food and wellness, with performances.",
+      "more": "Plant-based food and wellness from across the country, with exhibitions and performances. The venue was still to be confirmed when we checked."
+    },
+    {
+      "id": "abibifahodie-festival-2026",
+      "name": "Abibifahodie Festival",
+      "from": "2026-12-12",
+      "to": "2026-12-13",
+      "venue": "Abibitumi Headquarters, Akuapem Mampɔn",
+      "region": "Eastern",
+      "kind": "fest",
+      "sum": "A free community festival held alongside the Abibitumi Conference.",
+      "more": "The free, community side of the Abibitumi Conference on the Construction of Black Civilization, held over the same two days at Abibitumi Headquarters.",
+      "entry": "Free"
+    },
+    {
+      "id": "radio-television-personality-awards",
+      "name": "Radio & Television Personality Awards",
+      "from": "2026-12-12",
+      "to": "2026-12-12",
+      "venue": "La Palm Dome",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "Awards for the people and stations of Ghanaian radio and television.",
+      "more": "One of Ghana’s main media awards, for the people and organisations shaping Ghanaian radio and television."
+    },
+    {
+      "id": "gyakie-live-experience",
+      "name": "Gyakie Live Experience",
+      "from": "2026-12-12",
+      "to": "2026-12-12",
+      "venue": "Ghud Park, Accra Mall",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "Gyakie’s headline show, built around her new album.",
+      "more": "Billed as the only headline show of the season built around a female artist on her own terms, with the site turned into a world drawn from her new album."
+    },
+    {
+      "id": "made-in-ghana-fair-3",
+      "name": "Made in Ghana Fair",
+      "from": "2026-12-12",
+      "to": "2026-12-12",
+      "venue": "Place 100 Park, Independence Avenue, Ridge",
+      "region": "Greater Accra",
+      "kind": "food",
+      "sum": "Ghanaian makers selling food, drinks, clothes, fabrics and crafts.",
+      "more": "Ghanaian makers show and sell food, drinks, clothing, accessories, fabrics and crafts."
+    },
+    {
+      "id": "sunset-sweat",
+      "name": "Sunset Sweat",
+      "from": "2026-12-12",
+      "to": "2026-12-12",
+      "venue": "Republic Bar & Grill",
+      "region": "Greater Accra",
+      "kind": "sport",
+      "sum": "An Afrobeats workout and block party, hosted by Kukuwa Fitness.",
+      "more": "Hosted by Kukuwa Fitness and Republic Bar & Grill: an Afrobeats workout that turns into a block party for locals, the diaspora and visitors."
+    },
+    {
+      "id": "fufu-party-on-a-park-26",
+      "name": "Fufu Party on a Park",
+      "from": "2026-12-12",
+      "to": "2026-12-12",
+      "venue": "University of Ghana Sports Stadium",
+      "region": "Greater Accra",
+      "kind": "food",
+      "sum": "A day of fufu, food and music, in its second year.",
+      "more": "The second edition, now in a stadium: fufu, food, culture and music."
+    },
+    {
+      "id": "crimes-and-cuisine-a-crime-solving-dinner",
+      "name": "Crimes and Cuisine",
+      "from": "2026-12-12",
+      "to": "2026-12-12",
+      "venue": "Crescendo Foods, West Legon",
+      "region": "Greater Accra",
+      "kind": "food",
+      "sum": "A three-course mystery dinner where the guests solve the crime.",
+      "more": "A three-course meal with dessert and two drinks while the guests work out whodunnit.",
+      "time": "7 pm"
+    },
+    {
+      "id": "battor-hogbeza-2026",
+      "name": "Battor Hogbeza",
+      "from": "2026-12-12",
+      "to": "2026-12-12",
+      "venue": "RC Primary School Park, Battor",
+      "region": "Volta",
+      "kind": "trad",
+      "sum": "The grand durbar of chiefs and people of the Battor Traditional Area, the high point of a festival running 28 November to 16 December.",
+      "more": "The grand durbar of the chiefs and people of the Battor Traditional Area, the high point of Hogbeza. The festival itself runs from 28 November to 16 December."
+    },
+    {
+      "id": "shot-masters-december-cue-festival",
+      "name": "Shot Masters December Cue Festival",
+      "from": "2026-12-12",
+      "to": "2026-12-12",
+      "venue": "Indoor Multipurpose Arena, Borteyman Sports Complex",
+      "region": "Greater Accra",
+      "kind": "sport",
+      "sum": "A day of snooker and pool for players of every level.",
+      "more": "A whole day of snooker and pool at the Borteyman Sports Complex, open to players of every level."
+    },
+    {
+      "id": "dine-with-the-street",
+      "name": "Dine with the Street",
+      "from": "2026-12-12",
+      "to": "2026-12-12",
+      "venue": "Fijai Astroturf, Takoradi",
+      "region": "Western",
+      "kind": "other",
+      "sum": "A free charity festival for children aged 5 to 15, in its ninth year.",
+      "more": "A charity festival for children aged 5 to 15 by PM Entertainment Consult and PM Foundation, now in its ninth year. Everything at the event is free.",
+      "entry": "Free"
+    },
+    {
+      "id": "michelle-mckinney-hammond-presents-relevance-rocks-christmas",
+      "name": "Relevance Rocks Christmas",
+      "from": "2026-12-13",
+      "to": "2026-12-13",
+      "venue": "233 Jazz Bar and Grill, Accra",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "Michelle McKinney Hammond and Relevance tell the Christmas story in rock.",
+      "more": "Michelle McKinney Hammond and Relevance tell the Christmas story in rock."
+    },
+    {
+      "id": "artopiiafest-26",
+      "name": "ArtopiiaFest",
+      "from": "2026-12-13",
+      "to": "2026-12-13",
+      "venue": "Artopiia, 19 Jungle Road, East Legon",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "Art and tech from the creatives of Artopiia, on its anniversary.",
+      "more": "Artopiia, a creative space in East Legon, marks its anniversary with art and tech from its creatives."
+    },
+    {
+      "id": "bilivas-concert",
+      "name": "Bilivas Concert",
+      "from": "2026-12-13",
+      "to": "2026-12-13",
+      "venue": "Ghud Park, Accra Mall",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "GonaBoy’s headline concert.",
+      "more": "GonaBoy’s official headline concert, celebrating his music so far."
+    },
+    {
+      "id": "sankofa-african-tour-featuring-camden-stewart",
+      "name": "Sankofa African Tour: Camden Stewart",
+      "from": "2026-12-15",
+      "to": "2027-01-03",
+      "venue": "Several venues",
+      "region": "",
+      "kind": "music",
+      "sum": "The violinist Camden Stewart’s classical crossover tour of Ghana.",
+      "more": "The violinist Camden Stewart, Classic FM Rising Star 2026, brings his classical crossover tour to Ghana as a celebration of ancestry and homecoming. Venues are listed as ballrooms and open-air spaces."
+    },
+    {
+      "id": "accra-art-week-2",
+      "name": "Accra Art Week",
+      "from": "2026-12-17",
+      "to": "2026-12-22",
+      "venue": "Galleries across Accra",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "A week of exhibitions, talks, screenings, workshops and studio tours around the city.",
+      "more": "A week across the city: exhibitions, pop-ups, talks, performances, screenings, workshops and tours of galleries and studios.",
+      "feature": {
+        "town": "Accra",
+        "note": "From Afrogallonism, an art exhibition in Accra in 2023, not from Art Week itself.",
+        "photos": [
+          {
+            "file": "img/art-afrogallonism.webp",
+            "w": 900,
+            "h": 600,
+            "alt": "Performers with painted faces in white cloth and costumes standing before a wall of cut yellow gallons at the Afrogallonism exhibition in Accra",
+            "caption": "Afrogallonism, Accra, 2023",
+            "author": "Fquasie",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Afrogallonism_exhibition.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kiddafest",
+      "name": "KIDDAFEST",
+      "from": "2026-12-17",
+      "to": "2026-12-18",
+      "venue": "National Theatre",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "An arts festival for families and children aged 4 to 15, with schools performing.",
+      "more": "A yearly arts festival for families and children aged 4 to 15, with primary and junior high schools performing."
+    },
+    {
+      "id": "mataketeke-festival-of-arts-and-trade",
+      "name": "Mataketeke Festival of Arts and Trade",
+      "from": "2026-12-17",
+      "to": "2026-12-20",
+      "venue": "Mataheko Peace Clinic",
+      "region": "Greater Accra",
+      "kind": "fest",
+      "sum": "Young people show their crafts, services and talents.",
+      "more": "A festival for the creative arts and for young people in business, with a platform to show their crafts and services."
+    },
+    {
+      "id": "unmask360",
+      "name": "UNMASK360°",
+      "from": "2026-12-18",
+      "to": "2026-12-18",
+      "venue": "Amanfrom, Takoradi",
+      "region": "Western",
+      "kind": "fest",
+      "sum": "The masquerade clubs unveil their costumes ahead of the Takoradi Masquerade Festival.",
+      "feature": {
+        "town": "Takoradi",
+        "note": "Photos from the Takoradi Masquerade Festival, which UNMASK360 opens, on 26 December 2022.",
+        "photos": [
+          {
+            "file": "img/unmask-street.webp",
+            "w": 900,
+            "h": 600,
+            "alt": "A street in Takoradi packed with masqueraders in bright patchwork costumes",
+            "caption": "The masquerade on the streets of Takoradi",
+            "author": "Robertjamal12",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Takoradi_Masquerade_Festival.jpg"
+          },
+          {
+            "file": "img/unmask-masks.webp",
+            "w": 900,
+            "h": 600,
+            "alt": "Masqueraders in painted masks and patterned costumes holding flags",
+            "caption": "Masks and costumes",
+            "author": "Robertjamal12",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Takoradi_Masquerade_Festival_25.jpg"
+          },
+          {
+            "file": "img/unmask-pair.webp",
+            "w": 600,
+            "h": 900,
+            "alt": "Two masqueraders in colourful patchwork costumes smiling for the camera",
+            "caption": "Two masqueraders",
+            "author": "Robertjamal12",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Takoradi_Masquerade_Festival_1.jpg"
+          }
+        ]
+      },
+      "more": "The official opening of the Takoradi Masquerade Festival (Taadi Fancy). Its first edition brought together more than 40 masquerade clubs."
+    },
+    {
+      "id": "buluk-culture-to-the-world-builsa-feok-festival-2026-homecoming",
+      "name": "Builsa Feok Festival Homecoming",
+      "from": "2026-12-18",
+      "to": "2026-12-18",
+      "venue": "Sandema Durbar Ground",
+      "region": "Upper East",
+      "kind": "trad",
+      "sum": "The Builsa mark their victory over slave raiders, with a homecoming at Sandema.",
+      "feature": {
+        "town": "Sandema",
+        "note": "Feok is Fiok, the Builsa festival on our festivals page. Photos from Fiok in Sandema.",
+        "more": {
+          "url": "/festivals/fiok/",
+          "label": "Fiok on GhanaNice"
+        },
+        "photos": [
+          {
+            "file": "/festivals/fiok/img/hero.webp",
+            "w": 1200,
+            "h": 800,
+            "alt": "Young Builsa warriors in horned headdresses with traditional weapons at Fiok",
+            "caption": "Warriors in horned headdresses",
+            "author": "Christian Yakubu",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Fiok_11.jpg"
+          },
+          {
+            "file": "/festivals/fiok/img/warriors.webp",
+            "w": 800,
+            "h": 1200,
+            "alt": "A line of Builsa warriors in headdresses dancing at Fiok",
+            "caption": "The war dance",
+            "author": "Christian Yakubu",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Fiok_5.jpg"
+          },
+          {
+            "file": "/festivals/fiok/img/horns.webp",
+            "w": 800,
+            "h": 1200,
+            "alt": "A warrior in a tall horned headdress and leather tunic at Fiok",
+            "caption": "A horned headdress",
+            "author": "Christian Yakubu",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Fiok_8.jpg"
+          }
+        ]
+      },
+      "more": "Feok (Fiok) marks the Builsa victory over slave raiders. This year’s homecoming brings people back to Sandema for it."
+    },
+    {
+      "id": "the-revival-concert",
+      "name": "The Revival Concert",
+      "from": "2026-12-18",
+      "to": "2026-12-18",
+      "venue": "Ghud Park",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "Kweku Smoke’s yearly hip-hop and hiplife concert.",
+      "more": "Kweku Smoke’s yearly headline show, celebrating hip-hop, Afrobeats and young city culture."
+    },
+    {
+      "id": "fugu-experience",
+      "name": "Fugu Experience",
+      "from": "2026-12-18",
+      "to": "2026-12-20",
+      "venue": "Tamale",
+      "region": "Northern",
+      "kind": "fest",
+      "sum": "Culture, fashion and trade from the traditional areas of northern Ghana.",
+      "more": "Organised by Mo Tribe and ZGL Solutions, bringing northern Ghana’s traditional areas together for culture, tourism, fashion, trade and investment. The organisers’ own text gives 17 to 20 December."
+    },
+    {
+      "id": "explore-ghana-through-play",
+      "name": "Explore Ghana Through Play",
+      "from": "2026-12-19",
+      "to": "2027-01-02",
+      "venue": "Efua Sutherland Children’s Park (to be confirmed)",
+      "region": "Greater Accra",
+      "kind": "other",
+      "sum": "Ghana’s places, history and culture turned into games for families.",
+      "more": "Ghana’s places, culture, history and nature turned into games for families, through the holidays."
+    },
+    {
+      "id": "future-club-by-afrofuture",
+      "name": "Future Club by Afrofuture",
+      "from": "2026-12-19",
+      "to": "2027-01-03",
+      "venue": "Future Club, The Bee Village",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "Afrofuture’s club for the season: food, music and dancing.",
+      "more": "Afrofuture’s club for the season: in their words, not just a place to eat or dance but a place to belong."
+    },
+    {
+      "id": "rhythm-and-brunch",
+      "name": "Rhythm and Brunch",
+      "from": "2026-12-19",
+      "to": "2026-12-20",
+      "venue": "Accra Polo Court, Airport",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "A brunch party built around R&B.",
+      "more": "Started in Ghana in 2023 and built around R&B: music, food, fashion and hospitality over two days."
+    },
+    {
+      "id": "time-with-ananse-live-on-stage",
+      "name": "Time with Ananse, Live on Stage",
+      "from": "2026-12-19",
+      "to": "2026-12-19",
+      "venue": "Folksplace, National Theatre",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "Ananse stories told with animation, folk music and live performance.",
+      "more": "Classic Ananse stories told with cartoons, animation, folk music and live performance."
+    },
+    {
+      "id": "polo-beach-club-december-events",
+      "name": "Polo Beach Club December Parties",
+      "from": "2026-12-19",
+      "to": "2027-01-05",
+      "venue": "Polo Beach Club, Labadi",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "A run of beach parties through the holidays.",
+      "more": "A run of parties through the holidays, from the season opener on 20 December into the New Year.",
+      "feature": {
+        "town": "Labadi",
+        "note": "A photo of Labadi Beach from above, not of the parties.",
+        "photos": [
+          {
+            "file": "img/polo-labadi.webp",
+            "w": 506,
+            "h": 900,
+            "alt": "Labadi Beach from above: rows of umbrellas and chairs along the sand, with waves breaking",
+            "caption": "Labadi Beach from above",
+            "author": "Etornam Ahiator",
+            "license": "Unsplash License",
+            "source": "https://unsplash.com/photos/a-group-of-people-on-a-beach-B8eJrXwebxI"
+          }
+        ]
+      }
+    },
+    {
+      "id": "back-to-our-roots",
+      "name": "Back to Our Roots",
+      "from": "2026-12-19",
+      "to": "2026-12-19",
+      "venue": "Alliance Française, Accra",
+      "region": "Greater Accra",
+      "kind": "fest",
+      "sum": "Music, dance, food, fashion, art and traditional games.",
+      "more": "Music, dance, food, fashion, art and traditional games: a day to reconnect with Ghanaian culture."
+    },
+    {
+      "id": "360-laughs-rhythms",
+      "name": "360 Laughs & Rhythms",
+      "from": "2026-12-19",
+      "to": "2026-12-19",
+      "venue": "Dr Kofi Ohene-Konadu Auditorium, UPSA",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "A night of comedy and music.",
+      "more": "An official December in GH comedy night by 360 Bookings Afrika, for local and visiting audiences."
+    },
+    {
+      "id": "ghana-caribbean-heritage-and-cultural-exchange",
+      "name": "Ghana–Caribbean Heritage and Cultural Exchange",
+      "from": "2026-12-19",
+      "to": "2026-12-19",
+      "venue": "The Gold Coast Restaurant and Lounge, 32 Fifth Avenue Extension",
+      "region": "Greater Accra",
+      "kind": "fest",
+      "sum": "Food, music and traditions shared by Ghana and the Caribbean.",
+      "more": "The flavours, rhythms and traditions Ghana shares with the Caribbean."
+    },
+    {
+      "id": "a-night-in-koftown",
+      "name": "A Night in Koftown",
+      "from": "2026-12-19",
+      "to": "2026-12-19",
+      "venue": "Koforidua",
+      "region": "Eastern",
+      "kind": "music",
+      "sum": "An entertainment night celebrating Koforidua and the Eastern Region.",
+      "more": "A night of entertainment celebrating the culture, lifestyle and creativity of Koforidua and the Eastern Region."
+    },
+    {
+      "id": "ghana-food-festival-diaspora-experience-2026",
+      "name": "Ghana Food Festival: Diaspora Experience",
+      "from": "2026-12-19",
+      "to": "2026-12-19",
+      "venue": "Accra",
+      "region": "Greater Accra",
+      "kind": "food",
+      "sum": "Ghanaian and diaspora food businesses and cooks in one place.",
+      "more": "Ghanaian and diaspora food businesses, cooks and creatives in one place."
+    },
+    {
+      "id": "ghana-caribbean-summit-festival",
+      "name": "Ghana–Caribbean Summit & Festival",
+      "from": "2026-12-19",
+      "to": "2026-12-19",
+      "venue": "Chemu Park, Community 7, Tema",
+      "region": "Greater Accra",
+      "kind": "fest",
+      "sum": "Business and culture from Ghana and the Caribbean.",
+      "more": "Business and culture between Ghana and the Caribbean, with entrepreneurs and investors."
+    },
+    {
+      "id": "eco-kids-festival-2026",
+      "name": "Eco Kids Festival",
+      "from": "2026-12-19",
+      "to": "2026-12-19",
+      "venue": "Graceland Academy School, Iron City, Kasoa",
+      "region": "Central",
+      "kind": "other",
+      "sum": "An environmental and creative day for all ages.",
+      "more": "An environmental and creative day for all ages, inside the grounds of Graceland Academy School."
+    },
+    {
+      "id": "takoradi-graffiti-festival",
+      "name": "Takoradi Graffiti Festival",
+      "from": "2026-12-19",
+      "to": "2026-12-19",
+      "venue": "Market Circle, Takoradi",
+      "region": "Western",
+      "kind": "arts",
+      "sum": "Graffiti and street artists paint in the middle of Takoradi.",
+      "more": "Ghanaian and visiting artists celebrate graffiti, street art and city culture in the Western Region."
+    },
+    {
+      "id": "the-highlife-musical-theatre-part-1",
+      "name": "The Highlife Musical Theatre, Part 1",
+      "from": "2026-12-19",
+      "to": "2026-12-19",
+      "venue": "Bediako Conference Hall, GNAT Hall",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "The story of highlife told through music, dance and theatre.",
+      "more": "A stage show celebrating highlife through music, storytelling and dance."
+    },
+    {
+      "id": "the-convention",
+      "name": "The Convention",
+      "from": "2026-12-20",
+      "to": "2026-12-20",
+      "venue": "Underbridge Annex",
+      "region": "",
+      "kind": "music",
+      "sum": "Bisa Kdei’s highlife concert.",
+      "more": "Bisa Kdei’s live highlife show, celebrating his music so far."
+    },
+    {
+      "id": "zaama-disco",
+      "name": "Zaama Disco",
+      "from": "2026-12-20",
+      "to": "2026-12-20",
+      "venue": "University of Ghana Sports Stadium",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "One night at Legon, headlined by Black Sherif.",
+      "feature": {
+        "town": "Legon",
+        "note": "Black Sherif, who headlines, at the 3Music Awards in 2022.",
+        "photos": [
+          {
+            "file": "img/sherif-awards.webp",
+            "w": 900,
+            "h": 787,
+            "alt": "Black Sherif in a brown satin shirt at the 3Music Awards",
+            "caption": "Black Sherif at the 3Music Awards",
+            "author": "SabtiyaMbappe",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Black_Sherif_at_3Music_Awards_2022_(1).jpg"
+          },
+          {
+            "file": "img/sherif-portrait.webp",
+            "w": 720,
+            "h": 900,
+            "alt": "Black Sherif holding an award in front of a pink wall",
+            "caption": "With his award, 2022",
+            "author": "Owula kpakpo",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Black_Sherif_at_3_Music_Awards_22.jpg"
+          }
+        ]
+      },
+      "more": "Billed as Ghana’s December homecoming: one night at the University of Ghana stadium, headlined by Black Sherif."
+    },
+    {
+      "id": "betom-homecoming-festival-2026",
+      "name": "Betom Homecoming Festival",
+      "from": "2026-12-21",
+      "to": "2026-12-27",
+      "venue": "Betom, Koforidua",
+      "region": "Eastern",
+      "kind": "trad",
+      "sum": "Sons and daughters of Betom come home from around the world.",
+      "more": "Sons and daughters of Betom living around the world come home to reconnect with their roots."
+    },
+    {
+      "id": "accra-christmas-village",
+      "name": "Accra Christmas Village",
+      "from": "2026-12-21",
+      "to": "2026-12-27",
+      "venue": "Olympic Park, Legon (opposite the stadium)",
+      "region": "Greater Accra",
+      "kind": "fest",
+      "sum": "Seven days of Christmas for families.",
+      "more": "Seven days of Christmas for families, opposite the Legon stadium."
+    },
+    {
+      "id": "nsuo-ne-nsa-presents-libation-art-exhibition",
+      "name": "Libation",
+      "from": "2026-12-22",
+      "to": "2026-12-22",
+      "venue": "Jamestown Coffee, Osu",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "An interactive group exhibition on the custom of pouring a drink for the ancestors.",
+      "more": "A group exhibition by Nsuo ne Nsa and Jane Can Do, rooted in the custom of pouring a drink for the ancestors before drinking yourself."
+    },
+    {
+      "id": "nimo-live",
+      "name": "Nimo Live",
+      "from": "2026-12-23",
+      "to": "2026-12-23",
+      "venue": "Ghud Park, Accra Mall",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "A live music show built to bring listeners off their screens and into the room.",
+      "more": "A live music show built to bring listeners off their screens and into the room. The listing gives few other details."
+    },
+    {
+      "id": "samini-xperience-concert",
+      "name": "Samini Xperience",
+      "from": "2026-12-24",
+      "to": "2026-12-24",
+      "venue": "Dansoman",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "Samini’s yearly concert, free this year, in his own community.",
+      "more": "Samini’s yearly concert is free this year, with community activities beforehand as he gives back to Dansoman.",
+      "entry": "Free"
+    },
+    {
+      "id": "culturefest-gh-26",
+      "name": "Culturefest GH",
+      "from": "2026-12-24",
+      "to": "2026-12-26",
+      "venue": "W.E.B. Du Bois Centre, Cantonments",
+      "region": "Greater Accra",
+      "kind": "fest",
+      "sum": "Three days of culture at the Du Bois Centre.",
+      "more": "Endorsed for December in GH 2026 by the Ghana Tourism Authority and Black Star Experience: three days of culture at the W.E.B. Du Bois Centre."
+    },
+    {
+      "id": "russia-i-come-from-festival-2",
+      "name": "Russia I Come From Festival",
+      "from": "2026-12-24",
+      "to": "2027-01-01",
+      "venue": "Russia taxi rank, 1st PonPon Street, Ablekuma",
+      "region": "Greater Accra",
+      "kind": "fest",
+      "sum": "A street festival for the Russia community of Ablekuma Central.",
+      "more": "The Russia community of Gbortsui, Ablekuma Central, hosts a street festival over the holidays."
+    },
+    {
+      "id": "roverman-festival-of-plays-5",
+      "name": "Roverman Festival of Plays",
+      "from": "2026-12-24",
+      "to": "2027-01-04",
+      "venue": "National Theatre",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "A run of plays by Uncle Ebo Whyte.",
+      "feature": {
+        "town": "Accra",
+        "note": "Photos of the venue.",
+        "photos": [
+          {
+            "file": "img/theatre-front.webp",
+            "w": 900,
+            "h": 600,
+            "alt": "The white, sail-like roof of the National Theatre in Accra",
+            "caption": "The National Theatre, Accra",
+            "author": "Amuzujoe",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Ghana_National_Theatre.jpg"
+          },
+          {
+            "file": "img/theatre-street.webp",
+            "w": 900,
+            "h": 675,
+            "alt": "The National Theatre seen from the street, with cars and trees in front",
+            "caption": "The theatre from the road",
+            "author": "David Stanley from Nanaimo, Canada",
+            "license": "CC BY 2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Ghana_National_Theater_(21927550006).jpg"
+          }
+        ]
+      },
+      "more": "A run of plays by Uncle Ebo Whyte at the National Theatre over Christmas and the New Year."
+    },
+    {
+      "id": "visit-cape-coast-ii",
+      "name": "Visit Cape Coast Jam II",
+      "from": "2026-12-24",
+      "to": "2026-12-24",
+      "venue": "Bakado, Cape Coast",
+      "region": "Central",
+      "kind": "music",
+      "sum": "Music and entertainment on Christmas Eve.",
+      "more": "A Christmas Eve jam in Cape Coast, with music and entertainment."
+    },
+    {
+      "id": "bhim-festival",
+      "name": "BHIM Festival",
+      "from": "2026-12-24",
+      "to": "2026-12-24",
+      "venue": "University of Ghana Sports Stadium",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "Stonebwoy’s yearly music festival.",
+      "more": "Stonebwoy’s yearly music, culture and entertainment festival, which he founded and headlines."
+    },
+    {
+      "id": "westside-carnival-2",
+      "name": "Westside Carnival",
+      "from": "2026-12-24",
+      "to": "2027-01-01",
+      "venue": "Liberation Road, Takoradi",
+      "region": "Western",
+      "kind": "fest",
+      "sum": "Takoradi’s Christmas carnival, running since 2003.",
+      "more": "Founded in 2003 by Wilsad Support and listed by the Ghana Tourism Authority, it draws 250,000 to 300,000 people a year.",
+      "feature": {
+        "town": "Takoradi",
+        "note": "A photo from Takoradi’s Christmas masquerade in 2022, not from the carnival itself.",
+        "photos": [
+          {
+            "file": "img/westside-masquerade.webp",
+            "w": 900,
+            "h": 600,
+            "alt": "Masqueraders in bright patterned costumes and masks on a busy Takoradi street",
+            "caption": "Masqueraders in Takoradi, 26 December 2022",
+            "author": "Robertjamal12",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Takoradi_Masquerade_Festival_18.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "get-kojo-antwified-iv",
+      "name": "Get Kojo Antwified",
+      "from": "2026-12-24",
+      "to": "2026-12-24",
+      "venue": "UPSA Auditorium, Accra",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "Kojo Antwi’s Christmas Eve concert, held for more than 30 years.",
+      "more": "Kojo Antwi has organised and headlined this Christmas Eve concert for more than 30 years."
+    },
+    {
+      "id": "ghana-diaspora-all-star-game-2026",
+      "name": "Ghana Diaspora All-Star Game",
+      "from": "2026-12-24",
+      "to": "2026-12-24",
+      "venue": "Trust Sports Emporium, Accra",
+      "region": "Greater Accra",
+      "kind": "sport",
+      "sum": "A charity basketball game: Team Ghana against Team World.",
+      "more": "Pro Basketball Academy’s charity game: Team Ghana against Team World."
+    },
+    {
+      "id": "reggae-splash",
+      "name": "Reggae Splash",
+      "from": "2026-12-24",
+      "to": "2026-12-24",
+      "venue": "Accra",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "A reggae party on Christmas Eve.",
+      "more": "Reggae on Christmas Eve, hosted by Reggae Court Empire."
+    },
+    {
+      "id": "the-african-festival-2",
+      "name": "The African Festival",
+      "from": "2026-12-25",
+      "to": "2026-12-30",
+      "venue": "Labadi Beach Hotel",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "Theatre, art and music about the change Africa needs.",
+      "more": "Billed as Africa’s biggest cultural night: theatre, art and music about the change Africa needs."
+    },
+    {
+      "id": "ahontan-and-nooma-festival",
+      "name": "Ahontan and Nooma Festival",
+      "from": "2026-12-25",
+      "to": "2026-12-29",
+      "venue": "Akim Achiase",
+      "region": "Eastern",
+      "kind": "trad",
+      "sum": "Akim Achiase honours its river goddesses and deities.",
+      "more": "A yearly traditional festival honouring the river goddesses and deities of Akim Achiase."
+    },
+    {
+      "id": "detty-slam",
+      "name": "Detty Slam",
+      "from": "2026-12-25",
+      "to": "2026-12-25",
+      "venue": "Ghud Park, Accra Mall",
+      "region": "Greater Accra",
+      "kind": "sport",
+      "sum": "A basketball tournament by day, a party by night.",
+      "more": "A basketball tournament and music by day, building into a party by night."
+    },
+    {
+      "id": "tema-masqueraders-cultural-carnival-2",
+      "name": "Tema Masqueraders Cultural Carnival",
+      "from": "2026-12-25",
+      "to": "2026-12-25",
+      "venue": "Third Avenue, Vera Street, Community 4, Tema",
+      "region": "Greater Accra",
+      "kind": "fest",
+      "sum": "Masquerade parades through Tema on Christmas Day.",
+      "more": "Organised by Havilah Empire Ghana: masquerade parades that bring Tema’s communities together."
+    },
+    {
+      "id": "lapaz-streetfest",
+      "name": "Lapaz Streetfest",
+      "from": "2026-12-25",
+      "to": "2026-12-26",
+      "venue": "By the old Abrantie Nyamekye footbridge, Lapaz",
+      "region": "Greater Accra",
+      "kind": "fest",
+      "sum": "Music, food and fashion on the streets of Lapaz.",
+      "more": "Music, food, fashion, creative arts and local business on the streets of Lapaz."
+    },
+    {
+      "id": "clean-ghana-beach-festival",
+      "name": "Clean Ghana Beach Festival",
+      "from": "2026-12-26",
+      "to": "2026-12-26",
+      "venue": "Queens View Beach Club and Sakumono Beach",
+      "region": "Greater Accra",
+      "kind": "other",
+      "sum": "A beach clean-up and coconut tree planting, with music and dance.",
+      "more": "Cleaning the beach and planting coconut trees, with music and dance."
+    },
+    {
+      "id": "10th-little-havana-all-white-party-on-the-hills",
+      "name": "Little Havana All White Party on the Hills",
+      "from": "2026-12-26",
+      "to": "2026-12-26",
+      "venue": "Little Acre Hotel, Aburi",
+      "region": "Eastern",
+      "kind": "music",
+      "sum": "The tenth all-white party, up in Aburi.",
+      "more": "The tenth edition of the all-white party, at Little Acre Hotel in Aburi."
+    },
+    {
+      "id": "craft-and-heritage-expo-2026-northern-ghana-cultural-showcase",
+      "name": "Craft and Heritage Expo",
+      "from": "2026-12-26",
+      "to": "2026-12-27",
+      "venue": "Bolgatanga Craft Village",
+      "region": "Upper East",
+      "kind": "arts",
+      "sum": "Northern Ghana’s baskets, art and crafts, from the people who make them.",
+      "feature": {
+        "town": "Bolgatanga",
+        "note": "Photos of basket makers and sellers in Bolgatanga.",
+        "photos": [
+          {
+            "file": "img/bolga-craftsman.webp",
+            "w": 675,
+            "h": 900,
+            "alt": "A young craftsman stretching leather among woven baskets at the Bolgatanga craft market",
+            "caption": "At the Bolgatanga craft market",
+            "author": "Tahiru Rajab",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:A_Young_Ghanaian_Basketry_Craftman.jpg"
+          },
+          {
+            "file": "img/bolga-weaver.webp",
+            "w": 675,
+            "h": 900,
+            "alt": "A boy in Bolgatanga weaving a striped basket",
+            "caption": "Weaving a basket",
+            "author": "Alhassan Peter",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:B%C9%94liga_pi%C9%9B%27_wu%C9%A3ira.jpg"
+          },
+          {
+            "file": "img/bolga-baskets.webp",
+            "w": 600,
+            "h": 900,
+            "alt": "Piles of woven baskets for sale by the road in Bolgatanga",
+            "caption": "Baskets for sale by the road, 2010",
+            "author": "Adam Jones from Kelowna, BC, Canada",
+            "license": "CC BY-SA 2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Baskets_and_Vendors_at_Roadside_-_Bolgatanga_-_Ghana_(4776523805).jpg"
+          }
+        ]
+      },
+      "more": "An endorsed December in GH showcase of northern Ghanaian art, basketry and crafts, at the Bolgatanga Craft Village."
+    },
+    {
+      "id": "a-nite-of-1033-laughs-music",
+      "name": "A Nite of 1033 Laughs & Music",
+      "from": "2026-12-26",
+      "to": "2026-12-26",
+      "venue": "The Palms Convention Centre, La Palm Royal Beach Hotel",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "Boxing Day comedy and live music, more than 30 editions on.",
+      "more": "Ghana’s Boxing Day comedy and live music night, with more than 30 editions behind it."
+    },
+    {
+      "id": "kuliwa-yiri",
+      "name": "Kuliwa Yiri",
+      "from": "2026-12-26",
+      "to": "2026-12-27",
+      "venue": "First and Last Gardens",
+      "region": "",
+      "kind": "fest",
+      "sum": "A celebration of the culture of the Upper West Region.",
+      "more": "A festive-season celebration of the culture and heritage of the Upper West Region."
+    },
+    {
+      "id": "theatre-night",
+      "name": "Theatre Night",
+      "from": "2026-12-26",
+      "to": "2026-12-26",
+      "venue": "Centre for National Culture, Cape Coast",
+      "region": "Central",
+      "kind": "arts",
+      "sum": "Theatre in the open air.",
+      "more": "Inclusive, immersive theatre in an outdoor green space."
+    },
+    {
+      "id": "accrabynight",
+      "name": "Accra by Night",
+      "from": "2026-12-26",
+      "to": "2026-12-26",
+      "venue": "Accra Tourist Information Centre",
+      "region": "Greater Accra",
+      "kind": "other",
+      "sum": "A night tour of Accra on Auntie Dedei, the Ghana Tourism Authority’s double-decker bus.",
+      "more": "A guided night tour aboard Auntie Dedei, the GTA’s double-decker bus, with stories about the city after dark."
+    },
+    {
+      "id": "takoradi-old-skuul-retro-jamz",
+      "name": "Takoradi Old Skuul Retro Jamz",
+      "from": "2026-12-26",
+      "to": "2026-12-26",
+      "venue": "Arvo Hotel Street, Collins Avenue, Takoradi",
+      "region": "Western",
+      "kind": "music",
+      "sum": "Music of the 70s and 80s.",
+      "more": "A music night for the 70s and 80s."
+    },
+    {
+      "id": "the-official-diaspora-in-december-throwback-party",
+      "name": "Diaspora in December Throwback Party",
+      "from": "2026-12-26",
+      "to": "2026-12-26",
+      "venue": "Gold Coast Restaurant",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "Old-school music and line dancing, with three DJs and a band.",
+      "more": "Old-school music for the diaspora and locals, with three DJs, a band and vendors: the line-dance edition."
+    },
+    {
+      "id": "explosion-of-joy-2026",
+      "name": "Explosion of Joy",
+      "from": "2026-12-26",
+      "to": "2026-12-26",
+      "venue": "Destiny Arena, Kwabenya",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "Joyful Way Incorporated’s yearly gospel concert.",
+      "more": "The yearly gospel concert of Joyful Way Incorporated."
+    },
+    {
+      "id": "taste-and-canvas-2026",
+      "name": "Taste and Canvas",
+      "from": "2026-12-26",
+      "to": "2026-12-26",
+      "venue": "Page Se7en Hub, Ho",
+      "region": "Volta",
+      "kind": "food",
+      "sum": "Ghanaian food, art, music and storytelling.",
+      "more": "Ghanaian food, art, music and storytelling at Page Se7en Hub in Ho."
+    },
+    {
+      "id": "atale-fashion-party-ewg",
+      "name": "Atale Fashion Party",
+      "from": "2026-12-26",
+      "to": "2026-12-26",
+      "venue": "Treehouse Restaurant, West Light Industrial Area, Nyaniba",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "Designers and fashion lovers at a party.",
+      "more": "A fashion and lifestyle party for designers, creatives and people who love clothes."
+    },
+    {
+      "id": "detty-rave-2",
+      "name": "Detty Rave",
+      "from": "2026-12-27",
+      "to": "2026-12-27",
+      "venue": "A secret location in Accra",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "The eighth Detty Rave, this year at a place that isn’t announced.",
+      "more": "After seven editions at known venues, this year’s Detty Rave is somewhere in Accra that isn’t announced."
+    },
+    {
+      "id": "ghana-rocks",
+      "name": "Ghana Rocks",
+      "from": "2026-12-27",
+      "to": "2026-12-27",
+      "venue": "The Palms Convention Centre, La Palm Royal Beach Hotel",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "An intimate concert with big staging.",
+      "more": "An intimate concert with big staging, cinematic intros and immersive lighting."
+    },
+    {
+      "id": "airwaves-beach-festival-by-ewg",
+      "name": "Airwaves Beach Festival",
+      "from": "2026-12-27",
+      "to": "2026-12-27",
+      "venue": "Alora Beach Resort",
+      "region": "",
+      "kind": "music",
+      "sum": "A day of DJs, artists and dancers on the beach.",
+      "more": "A full day of DJs, artists, dancers and performers on the beach."
+    },
+    {
+      "id": "asanteman-global-expo",
+      "name": "Asanteman Global Expo",
+      "from": "2026-12-28",
+      "to": "2027-01-01",
+      "venue": "Centre for National Culture, Kumasi",
+      "region": "Ashanti",
+      "kind": "fest",
+      "sum": "Five days of culture, business, fashion and entertainment, planned for Kumasi.",
+      "more": "A five-day platform for culture, business, tourism, investment, fashion and entertainment, proposed for Kumasi over Christmas and the New Year."
+    },
+    {
+      "id": "students-music-festival",
+      "name": "Students Music Festival",
+      "from": "2026-12-28",
+      "to": "2026-12-28",
+      "venue": "Efua Sutherland Children’s Park",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "A free music festival for senior high school and university students.",
+      "more": "“The Jams Edition”, the third: free entertainment for senior high school and university students, by High School Hype TV.",
+      "entry": "Free"
+    },
+    {
+      "id": "afrofuture-2",
+      "name": "Afrofuture",
+      "from": "2026-12-28",
+      "to": "2026-12-28",
+      "venue": "El-Wak Sports Stadium",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "A festival of music and performance celebrating the culture of the diaspora.",
+      "feature": {
+        "town": "Accra",
+        "note": "Until 2023 the festival was called Afrochella; these photos are from 2019.",
+        "photos": [
+          {
+            "file": "img/afrofuture-kente.webp",
+            "w": 900,
+            "h": 514,
+            "alt": "Four women in matching kente outfits on the festival grounds at Afrochella",
+            "caption": "Kente on the festival grounds, 2019",
+            "author": "Fquasie",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Afrochella_Festival_2019_1.jpg"
+          },
+          {
+            "file": "img/afrofuture-throne.webp",
+            "w": 900,
+            "h": 508,
+            "alt": "A man seated on a large golden throne installation at Afrochella",
+            "caption": "The golden throne, 2019",
+            "author": "Fquasie",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Afrochella_Festival_2019_2.jpg"
+          },
+          {
+            "file": "img/afrofuture-lights.webp",
+            "w": 900,
+            "h": 508,
+            "alt": "Giant lit-up letters spelling Afrochella at night, with people taking photos",
+            "caption": "The letters at night, 2019",
+            "author": "Fquasie",
+            "license": "CC BY-SA 4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Afrochella_Festival_2019_3.jpg"
+          }
+        ]
+      },
+      "more": "A platform celebrating the culture and work of the diaspora through festivals and live performances. Until 2023 it was called Afrochella."
+    },
+    {
+      "id": "diner-en-blanc-accra",
+      "name": "Dîner en Blanc Accra",
+      "from": "2026-12-28",
+      "to": "2026-12-28",
+      "venue": "Accra",
+      "region": "Greater Accra",
+      "kind": "food",
+      "sum": "The all-white outdoor dinner party, in its second Accra edition.",
+      "more": "The second Accra edition of the all-white outdoor dinner."
+    },
+    {
+      "id": "soultrain-disco-2",
+      "name": "SoulTrain Disco",
+      "from": "2026-12-28",
+      "to": "2026-12-28",
+      "venue": "The Palms Convention Centre, La Palm Royal Beach Hotel",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "A throwback party, from the 80s to now.",
+      "more": "A throwback party: hits from the 80s, 90s and 2000s to now, back to back."
+    },
+    {
+      "id": "i-want-to-sue-god",
+      "name": "I Want to Sue God!",
+      "from": "2026-12-29",
+      "to": "2026-12-29",
+      "venue": "Radach Lodge and Conference Centre, Tamale",
+      "region": "Northern",
+      "kind": "arts",
+      "sum": "A comedy play about a prophecy, a lavish wedding and a mountain of debt.",
+      "more": "A comedy: a prophecy, a lavish wedding, a mountain of debt and one very angry husband."
+    },
+    {
+      "id": "teens-africa-festival-2",
+      "name": "Teens Africa Festival",
+      "from": "2026-12-29",
+      "to": "2026-12-29",
+      "venue": "National Theatre",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "Arts and culture by young people, for young people.",
+      "more": "Ghana’s culture, arts and creativity by young people for young people, with mentoring and a stage of their own."
+    },
+    {
+      "id": "greeks-in-ghana-day-party",
+      "name": "Greeks in Ghana Day Party",
+      "from": "2026-12-30",
+      "to": "2026-12-30",
+      "venue": "Alora Beach Resort",
+      "region": "",
+      "kind": "music",
+      "sum": "A day party for Divine Nine, HBCU and diaspora visitors.",
+      "more": "A day party for Divine Nine and HBCU alumni, their friends and the diaspora."
+    },
+    {
+      "id": "nye-new-years-eve-party-3",
+      "name": "New Year’s Eve at Rehab",
+      "from": "2026-12-31",
+      "to": "2026-12-31",
+      "venue": "Rehab Beach Club",
+      "region": "",
+      "kind": "music",
+      "sum": "Seeing in 2027 at the beach club.",
+      "more": "Seeing in 2027 at Rehab Beach Club."
+    },
+    {
+      "id": "pvo-x-afrofuture-nye",
+      "name": "PVO × Afrofuture New Year’s Eve",
+      "from": "2026-12-31",
+      "to": "2026-12-31",
+      "venue": "La Palm Royal Beach Hotel",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "Afrofuture and Positive Vibes Only see in the new year together.",
+      "more": "Afrofuture and Positive Vibes Only see in the new year with music."
+    },
+    {
+      "id": "white-on-jeans-official-new-years-rave",
+      "name": "White on Jeans",
+      "from": "2027-01-01",
+      "to": "2027-01-01",
+      "venue": "Jocom Hotel, Bolgatanga",
+      "region": "Upper East",
+      "kind": "music",
+      "sum": "The Upper East Region’s New Year rave.",
+      "more": "The Upper East Region’s official New Year rave: music, fashion and nightlife."
+    },
+    {
+      "id": "effia-carnival-2",
+      "name": "Effia Carnival",
+      "from": "2027-01-01",
+      "to": "2027-01-01",
+      "venue": "Effiakuma Police Park",
+      "region": "Western",
+      "kind": "fest",
+      "sum": "Masquerades, music and a street procession on New Year’s Day.",
+      "more": "Cultural displays, music, masquerades and a street procession for residents and visitors."
+    },
+    {
+      "id": "dumafest",
+      "name": "DumaFest",
+      "from": "2027-01-01",
+      "to": "2027-01-03",
+      "venue": "Dumasua, Sunyani",
+      "region": "Bono",
+      "kind": "fest",
+      "sum": "Three days of culture at Dumasua, on the theme “Our Culture, Our Identity”.",
+      "more": "The fourth DumaFest, on the theme “Our Culture, Our Identity”."
+    },
+    {
+      "id": "sovereign-dawn",
+      "name": "Sovereign Dawn",
+      "from": "2027-01-02",
+      "to": "2027-01-02",
+      "venue": "Base Camp Coconut Embassy, Kusum Royal Beach, Bortianor",
+      "region": "Greater Accra",
+      "kind": "other",
+      "sum": "A day restoring a river lagoon, to close the season.",
+      "more": "The season’s closing Impact Day: a day restoring a river lagoon to welcome the new year."
+    },
+    {
+      "id": "tropical-fiesta-5",
+      "name": "Tropical Fiesta",
+      "from": "2027-01-02",
+      "to": "2027-01-04",
+      "venue": "Treasure Island, Ada",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "D-Black’s weekend of music by the water.",
+      "more": "A weekend getaway of music and lifestyle, hosted by D-Black.",
+      "feature": {
+        "town": "Ada",
+        "note": "The Volta estuary, where the river meets the sea at Ada.",
+        "photos": [
+          {
+            "file": "img/ada-estuary.webp",
+            "w": 900,
+            "h": 719,
+            "alt": "A small covered boat on the green water of the Volta estuary, with a sandy shore",
+            "caption": "The Volta estuary",
+            "author": "Reginald Agyei",
+            "license": "Unsplash License",
+            "source": "https://unsplash.com/photos/a-boat-in-the-water-R_LChdsoQLs"
+          }
+        ]
+      }
+    },
+    {
+      "id": "theatre-in-a-bus",
+      "name": "Theatre in a Bus: Bus Stop Wahala",
+      "from": "2027-01-02",
+      "to": "2027-01-02",
+      "venue": "National Theatre bus stop",
+      "region": "Greater Accra",
+      "kind": "arts",
+      "sum": "A comedy played out on a bus, by Agape Arts Production.",
+      "more": "“Bus Stop Wahala” by Agape Arts Production, played out inside a bus. Wahala is West African slang for trouble."
+    },
+    {
+      "id": "free-the-youth-rave",
+      "name": "Free the Youth Rave",
+      "from": "2027-01-03",
+      "to": "2027-01-03",
+      "venue": "Ghud Park, Accra Mall",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "A rave for students, young professionals and the diaspora coming home.",
+      "more": "A rave for students, young professionals, creatives and the diaspora coming home."
+    },
+    {
+      "id": "blacout-2",
+      "name": "BlacOut",
+      "from": "2027-01-04",
+      "to": "2027-01-04",
+      "venue": "Enzo",
+      "region": "Greater Accra",
+      "kind": "music",
+      "sum": "Blacvolta’s end-of-year party.",
+      "more": "Blacvolta’s end-of-year party, for creatives and young professionals."
+    }
+  ],
+  "guide": {
+    "intro": [
+      "December is Ghana’s busiest month for things to do. Christmas, end-of-year concerts, street carnivals, food markets, plays and traditional festivals all fall in a few weeks, and many Ghanaians who live abroad come home for them, along with visitors from across the African diaspora.[[1]]",
+      "The government runs the season as December in GH, through the Ghana Tourism Authority. This year it runs from 1 December 2026 to 3 January 2027 under the theme “Ghana to the World”, with more than 150 events registered, over 100 of them in Accra.[[2,3]] Many people call it Detty December; the government prefers its own name.[[4]]",
+      "The season grew after Ghana’s 2019 Year of Return, which marked 400 years since enslaved Africans were first brought to North America.[[1]] Below are the events we’ve listed so far, in date order, with what to expect at each."
+    ],
+    "know": [
+      [
+        "Public holidays",
+        "Fri 4 Dec (Farmers’ Day), Fri 25 Dec (Christmas Day), Sat 26 Dec (Boxing Day) and Fri 1 Jan (New Year’s Day).[[5,6]]"
+      ],
+      [
+        "Weather",
+        "The harmattan, a dry and dusty north-easterly wind, can blow from November to March. Mornings can be hazy and cool.[[7]]"
+      ],
+      [
+        "Where",
+        "Most events are in Accra. This list also has events in Takoradi, Tamale, Ho, Koforidua, Bolgatanga, Sandema, Kumasi, Cape Coast and Sunyani."
+      ],
+      [
+        "Plan ahead",
+        "It is the busiest travel time of the year, so book flights and rooms early, and check an event’s details again shortly before you go."
+      ]
+    ],
+    "faq": [
+      {
+        "q": "What is Detty December?",
+        "a": "A popular name for the end-of-year party season in Ghana and Nigeria. “Detty” is pidgin for “dirty”, used here to mean carefree fun. The Ghanaian government does not use the name: its season is called December in GH.[[1,4]]"
+      },
+      {
+        "q": "When is December in GH 2026?",
+        "a": "From 1 December 2026 to 3 January 2027. The Ghana Tourism Authority launched this year’s calendar on 20 October 2026 at the Labadi Beach Hotel in Accra.[[2]]"
+      },
+      {
+        "q": "What’s on in Ghana in December?",
+        "a": "Concerts and parties, street carnivals and masquerades, food markets, plays, art weeks, sport, and traditional festivals such as Fiok in Sandema and Kwafie in the Bono Region. Our list on this page has 116 events in date order."
+      },
+      {
+        "q": "Is everything in Accra?",
+        "a": "No. Most events are in Accra, but this season’s list also has events in Takoradi, Tamale, Ho, Koforidua, Bolgatanga, Sandema, Kumasi, Cape Coast and Sunyani."
+      },
+      {
+        "q": "Which days are public holidays in December?",
+        "a": "In 2026: Friday 4 December (Farmers’ Day, always the first Friday of December), Friday 25 December (Christmas Day) and Saturday 26 December (Boxing Day). New Year’s Day, Friday 1 January 2027, is also a public holiday.[[5,6]]"
+      },
+      {
+        "q": "What is the weather like in December?",
+        "a": "It is harmattan season, when a dry, dusty wind can blow from November to March. Visibility can drop, especially early in the morning, and the dust can set off asthma, so carry water and something warm for early starts.[[7]]"
+      },
+      {
+        "q": "Do I need tickets?",
+        "a": "For most concerts and parties, yes. Some events are free, and our cards say so where the organisers do. For tickets and the latest details, use the December in GH listing credited at the end of this page."
+      }
+    ],
+    "sources": [
+      {
+        "cite": "“Detty December (Ghana)”",
+        "site": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Detty_December_(Ghana)",
+        "date": "read 24 October 2026"
+      },
+      {
+        "cite": "“December in Gh 2026 launched under theme ‘Ghana to the world’”",
+        "site": "GBC Ghana Online",
+        "url": "https://www.gbcghanaonline.com/entertainment/december-in-gh-2026-launched-under-theme-ghana-to-the-world/2026/",
+        "date": "22 October 2026"
+      },
+      {
+        "cite": "“GTA unveils December in GH 2026 calendar with 150 events”",
+        "site": "MyJoyOnline",
+        "url": "https://www.myjoyonline.com/gta-unveils-december-in-gh-2026-calendar-with-150-events/",
+        "date": "21 October 2026"
+      },
+      {
+        "cite": "“Ghana distances itself from ‘Detty December’ label despite tourism boom”",
+        "site": "Africanews",
+        "url": "https://www.africanews.com/2025/12/23/ghana-distances-itself-from-detty-december-label-despite-tourism-boom/",
+        "date": "23 December 2025"
+      },
+      {
+        "cite": "“Public Holidays in Ghana in 2026”",
+        "site": "Office Holidays",
+        "url": "https://www.officeholidays.com/countries/ghana/2026",
+        "date": "read 24 October 2026"
+      },
+      {
+        "cite": "“Public holidays in Ghana”",
+        "site": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Public_holidays_in_Ghana",
+        "date": "read 24 October 2026"
+      },
+      {
+        "cite": "“Obey GMet harmattan advice”",
+        "site": "Ghanaian Times",
+        "url": "https://ghanaiantimes.com.gh/obey-gmet-harmattan-advice/"
+      }
+    ]
+  }
+}

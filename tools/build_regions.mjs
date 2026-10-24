@@ -1,5 +1,5 @@
 /* Writes the 16 static region pages, dist/regions/<slug>/index.html, and dist/sitemap.xml
-   (which also lists the plain pages and the festival pages).
+   (which also lists the plain pages, the festival pages and /december/).
 
    data.js (copy, places) and media.js (photos, credits, links) stay the source of truth, and
    tools/region-template.html holds the page. Everything a reader or a search engine needs is in
@@ -169,7 +169,7 @@ function render(region, index) {
 const festivalUrls = festivals.map(f => `${SITE}/festivals/${f.slug}/`);
 
 function sitemap() {
-  const pages = [`${SITE}/`, `${SITE}/travel-directory.html`, ...regions.map(r => regionUrl(r.slug)), ...PAGES.map(p => SITE + p.path), `${SITE}/festivals/`, ...festivalUrls,
+  const pages = [`${SITE}/`, `${SITE}/travel-directory.html`, ...regions.map(r => regionUrl(r.slug)), ...PAGES.map(p => SITE + p.path), `${SITE}/festivals/`, ...festivalUrls, `${SITE}/december/`,
     /* Last, so the n8n issue workflow can add a new issue just before </urlset>. */
     ...createRequire(import.meta.url)('./newsletter-render.js').sitemapUrls(NEWSLETTER_ISSUES)];
   return `<?xml version="1.0" encoding="UTF-8"?>

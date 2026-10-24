@@ -333,3 +333,39 @@ The photos on the festivals list and festival pages (`/festivals/`), all from Wi
 |---|---|---|---|---|
 | `favicon.*`, `apple-touch-icon.png`, `icon-*.png` | GhanaNice star mark | GhanaNice | — | Project use |
 | `og-image.jpg` | "Ghana is nice." over central Accra (adaptation of `photos/a-drone-footage-of-accra-central-ghana.webp`) | Amanor kwaku; lettering by GhanaNice | https://commons.wikimedia.org/wiki/File:A_drone_footage_of_Accra_central,_Ghana.jpg | CC BY-SA 4.0 |
+
+## December in Ghana
+
+Photos on the featured cards of `/december/`: past editions, the performer, the venue or the place of each event, as the card says. Unsplash photos are used under the Unsplash License, which allows use without permission; we credit them anyway. The Builsa Feok card reuses the Fiok photos credited above.
+
+The hero of `/december/` is generated illustration, made for GhanaNice with Higgsfield (GPT Image 2.5) on 24 October 2026: a collage of West African fabrics in the spirit of kente, wax print, mud cloth and tie-dye (no named kente design, no real place), a painted sun, and cut-out figures of fictional people dancing (not portraits of anyone).
+
+| Asset | Subject | Creator | Source | License |
+|---|---|---|---|---|
+| `december/img/hero-cloth-wide.webp`, `december/img/hero-cloth-tall.webp` | Collage of West African fabrics, hibiscus, palm fronds, sunflowers and cowrie shells (wide and tall versions) | Generated for GhanaNice (Higgsfield, GPT Image 2.5) | generated in project conversation | Project use |
+| `december/img/hero-sun.webp` | A painted cut-paper sun | Generated for GhanaNice (Higgsfield, GPT Image 2.5) | generated in project conversation | Project use |
+| `december/img/fig-*.webp` | Six cut-out figures of fictional people dancing, drumming and laughing | Generated for GhanaNice (Higgsfield, GPT Image 2.5) | generated in project conversation | Project use |
+
+| Asset | Subject | Creator | Source | License |
+|---|---|---|---|---|
+| `december/img/nkrumah-statue.webp` | The bronze statue of Kwame Nkrumah at the Memorial Park in Accra (Made in Ghana Fair, December in Ghana page) | Fquasie | https://commons.wikimedia.org/wiki/File:Kwame_Nkrumah_Memorial_Park_%26_Mausoleum.jpg | CC BY-SA 4.0 |
+| `december/img/nkrumah-pools.webp` | The long walkway and pools leading to the Nkrumah mausoleum (Made in Ghana Fair, December in Ghana page) | Fquasie | https://commons.wikimedia.org/wiki/File:Kwame_Nkrumah_Memorial_Park_%26_Mausoleum_4.jpg | CC BY-SA 4.0 |
+| `december/img/nkrumah-wall.webp` | A carved white relief wall in the Kwame Nkrumah Memorial Park (Made in Ghana Fair, December in Ghana page) | Fquasie | https://commons.wikimedia.org/wiki/File:Kwame_Nkrumah_Memorial_Park_%26_Mausoleum_6.jpg | CC BY-SA 4.0 |
+| `december/img/unmask-street.webp` | A street in Takoradi packed with masqueraders in bright patchwork costumes (UNMASK360°, December in Ghana page) | Robertjamal12 | https://commons.wikimedia.org/wiki/File:Takoradi_Masquerade_Festival.jpg | CC BY-SA 4.0 |
+| `december/img/unmask-masks.webp` | Masqueraders in painted masks and patterned costumes holding flags (UNMASK360°, December in Ghana page) | Robertjamal12 | https://commons.wikimedia.org/wiki/File:Takoradi_Masquerade_Festival_25.jpg | CC BY-SA 4.0 |
+| `december/img/unmask-pair.webp` | Two masqueraders in colourful patchwork costumes smiling for the camera (UNMASK360°, December in Ghana page) | Robertjamal12 | https://commons.wikimedia.org/wiki/File:Takoradi_Masquerade_Festival_1.jpg | CC BY-SA 4.0 |
+| `december/img/sherif-awards.webp` | Black Sherif in a brown satin shirt at the 3Music Awards (Zaama Disco, December in Ghana page) | SabtiyaMbappe | https://commons.wikimedia.org/wiki/File:Black_Sherif_at_3Music_Awards_2022_(1).jpg | CC BY-SA 4.0 |
+| `december/img/sherif-portrait.webp` | Black Sherif holding an award in front of a pink wall (Zaama Disco, December in Ghana page) | Owula kpakpo | https://commons.wikimedia.org/wiki/File:Black_Sherif_at_3_Music_Awards_22.jpg | CC BY-SA 4.0 |
+| `december/img/theatre-front.webp` | The white, sail-like roof of the National Theatre in Accra (Roverman Festival of Plays, December in Ghana page) | Amuzujoe | https://commons.wikimedia.org/wiki/File:Ghana_National_Theatre.jpg | CC BY-SA 4.0 |
+| `december/img/theatre-street.webp` | The National Theatre seen from the street, with cars and trees in front (Roverman Festival of Plays, December in Ghana page) | David Stanley from Nanaimo, Canada | https://commons.wikimedia.org/wiki/File:Ghana_National_Theater_(21927550006).jpg | CC BY 2.0 |
+| `december/img/bolga-craftsman.webp` | A young craftsman stretching leather among woven baskets at the Bolgatanga craft market (Craft and Heritage Expo, December in Ghana page) | Tahiru Rajab | https://commons.wikimedia.org/wiki/File:A_Young_Ghanaian_Basketry_Craftman.jpg | CC BY-SA 4.0 |
+| `december/img/bolga-weaver.webp` | A boy in Bolgatanga weaving a striped basket (Craft and Heritage Expo, December in Ghana page) | Alhassan Peter | https://commons.wikimedia.org/wiki/File:B%C9%94liga_pi%C9%9B%27_wu%C9%A3ira.jpg | CC BY-SA 4.0 |
+| `december/img/bolga-baskets.webp` | Piles of woven baskets for sale by the road in Bolgatanga (Craft and Heritage Expo, December in Ghana page) | Adam Jones from Kelowna, BC, Canada | https://commons.wikimedia.org/wiki/File:Baskets_and_Vendors_at_Roadside_-_Bolgatanga_-_Ghana_(4776523805).jpg | CC BY-SA 2.0 |
+| `december/img/afrofuture-kente.webp` | Four women in matching kente outfits on the festival grounds at Afrochella (Afrofuture, December in Ghana page) | Fquasie | https://commons.wikimedia.org/wiki/File:Afrochella_Festival_2019_1.jpg | CC BY-SA 4.0 |
+| `december/img/afrofuture-throne.webp` | A man seated on a large golden throne installation at Afrochella (Afrofuture, December in Ghana page) | Fquasie | https://commons.wikimedia.org/wiki/File:Afrochella_Festival_2019_2.jpg | CC BY-SA 4.0 |
+| `december/img/afrofuture-lights.webp` | Giant lit-up letters spelling Afrochella at night, with people taking photos (Afrofuture, December in Ghana page) | Fquasie | https://commons.wikimedia.org/wiki/File:Afrochella_Festival_2019_3.jpg | CC BY-SA 4.0 |
+| `december/img/basketball-court.webp` | A basketball hoop on a court surrounded by coconut palms in Accra (Africa Basketball Festival, December in Ghana page) | Kingsley Hemans | https://unsplash.com/photos/basketball-hoop-surrounded-by-palm-trees-6WfvcdkkSgE | Unsplash License |
+| `december/img/art-afrogallonism.webp` | Performers with painted faces in white cloth and costumes standing before a wall of cut yellow gallons at the Afrogallonism exhibition in Accra (Accra Art Week, December in Ghana page) | Fquasie | https://commons.wikimedia.org/wiki/File:Afrogallonism_exhibition.jpg | CC BY-SA 4.0 |
+| `december/img/polo-labadi.webp` | Labadi Beach from above: rows of umbrellas and chairs along the sand, with waves breaking (Polo Beach Club December Parties, December in Ghana page) | Etornam Ahiator | https://unsplash.com/photos/a-group-of-people-on-a-beach-B8eJrXwebxI | Unsplash License |
+| `december/img/westside-masquerade.webp` | Masqueraders in bright patterned costumes and masks on a busy Takoradi street (Westside Carnival, December in Ghana page) | Robertjamal12 | https://commons.wikimedia.org/wiki/File:Takoradi_Masquerade_Festival_18.jpg | CC BY-SA 4.0 |
+| `december/img/ada-estuary.webp` | A small covered boat on the green water of the Volta estuary, with a sandy shore (Tropical Fiesta, December in Ghana page) | Reginald Agyei | https://unsplash.com/photos/a-boat-in-the-water-R_LChdsoQLs | Unsplash License |
