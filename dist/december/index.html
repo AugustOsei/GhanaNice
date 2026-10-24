@@ -2892,7 +2892,7 @@
     .source a { font-weight: 800; border-bottom: 1.5px solid; }
     /* ================= MY DECEMBER: save events, filter the list, keep and share a plan ================= */
     .card-body { position: relative; }
-    .plan [hidden], .filters[hidden], .f-panel[hidden] { display: none !important; }
+    .plan [hidden], .filters[hidden], .f-panel[hidden], .how[hidden], .plan-toast[hidden] { display: none !important; }
     .save { display: none; position: absolute; z-index: 2; top: 10px; right: 10px; width: 34px; height: 34px; place-items: center; padding: 0; border: 1.5px solid rgba(17,17,15,.22); border-radius: 50%; background: #fff; color: rgba(17,17,15,.55); font: inherit; font-size: 1.05rem; line-height: 1; cursor: pointer; transition: background .2s, border-color .2s, color .2s; }
     .js-plan .save { display: grid; }
     .js-plan .card .when { padding-right: 40px; }
@@ -2925,6 +2925,15 @@
     .f-empty { margin: 30px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
     .cards > li[hidden] { display: none; }
 
+    /* How to use it: one line above the list, a one-time nudge on the first star, a one-time note after the first save */
+    .how { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; padding: 10px 14px; background: #fff; border-left: 4px solid var(--yellow); font-size: .9rem; line-height: 1.4; }
+    .how-star { flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--yellow); font-size: .95rem; }
+    .save.is-hint { animation: hint 1.3s ease-in-out 3; border-color: var(--ink); color: var(--ink); }
+    @keyframes hint { 50% { box-shadow: 0 0 0 8px rgba(245,200,66,.6); } }
+    .save-tip { position: absolute; z-index: 3; top: 52px; right: 6px; padding: 6px 10px 5px; border-radius: 6px; background: var(--ink); color: var(--paper); font-size: .66rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; pointer-events: none; }
+    .save-tip::after { content: ''; position: absolute; top: -5px; right: 16px; border: 5px solid transparent; border-top: 0; border-bottom-color: var(--ink); }
+    .plan-toast { position: fixed; z-index: 111; left: 20px; bottom: 80px; max-width: 330px; padding: 12px 14px; border: 1.5px solid var(--ink); background: var(--paper); box-shadow: 4px 4px 0 var(--ink); font-size: .86rem; line-height: 1.4; }
+    .plan-toast b { display: block; margin-bottom: 2px; }
     .plan-bar { position: fixed; z-index: 110; left: 20px; bottom: 20px; }
     .plan-bar button { display: flex; align-items: center; gap: 8px; padding: 13px 18px; border: 0; border-radius: 99px; background: var(--ink); color: var(--paper); font: inherit; font-size: .74rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; box-shadow: 0 14px 24px -12px rgba(0,0,0,.55); }
     .plan-bar b { color: var(--yellow); }
@@ -2981,6 +2990,10 @@
       .save { top: 6px; right: 6px; width: 28px; height: 28px; font-size: .9rem; }
       /* Above the chat assistant's "Chat with Mama Ghana" pill (50px tall, 20px up, bottom right) */
       .plan-bar { left: 12px; right: 12px; bottom: calc(82px + var(--nl-pop-space, 0px)); }
+      .plan-toast { left: 12px; right: 12px; max-width: none; bottom: calc(140px + var(--nl-pop-space, 0px)); }
+      .how { font-size: .84rem; }
+      .save-tip { top: 40px; right: 2px; }
+      .save-tip::after { right: 12px; }
       .plan-bar button { width: 100%; justify-content: center; }
       .plan-list li { grid-template-columns: 1fr auto; }
       .plan-list .pl-when { grid-column: 1 / -1; }
@@ -3081,6 +3094,7 @@
           <p class="list-note">116 events in date order. Running an event we’ve missed? <a href="mailto:hello@ghananice.com?subject=December%20event">Tell us</a>.</p>
         </div>
         <p class="also"><b>Also in December</b><span><a href="/festivals/fiok/">Fiok</a> · Sandema, Upper East</span><span><a href="/festivals/kwafie/">Kwafie</a> · Dormaa Ahenkro, Berekum and Nsoatre, Bono</span><span><a href="/festivals/#m-11">More on the festivals page</a></span></p>
+        <p class="how" id="how" hidden><span class="how-star" aria-hidden="true">☆</span><span><b>Make a plan:</b> tap ☆ on any event to save it, then add your picks to your calendar or send them on WhatsApp or by email.</span></p>
         <div class="filters" id="filters" hidden>
           <div class="f-head">
             <button type="button" class="f-toggle" id="f-toggle" aria-expanded="false" aria-controls="f-panel">Filter events<span class="f-on" id="f-on"></span> <span class="f-caret" aria-hidden="true">▾</span></button>
@@ -4180,6 +4194,7 @@
   </main>
 
   <!-- My December: the saved-events bar and the plan (shown by the page's script) -->
+  <p class="plan-toast" id="plan-toast" role="status" hidden><b>Saved to your plan.</b>Keep picking, then tap “See my plan” to add them to your calendar or share them.</p>
   <div class="plan-bar" id="plan-bar" hidden><button type="button" id="plan-open"><span aria-hidden="true">★</span> <b id="plan-n">0</b> saved · See my plan</button></div>
   <dialog class="plan" id="plan" aria-labelledby="plan-title">
     <div class="plan-in">
@@ -4341,7 +4356,8 @@
     const toggle = (id) => {
       saved = saved.includes(id) ? saved.filter((x) => x !== id) : [...saved, id];
       write(saved); paintCards(); applyFilters();
-      if (saved.includes(id)) { pop(byId.get(id).querySelector('.save')); pop(bar); }
+      if (saved.includes(id)) { pop(byId.get(id).querySelector('.save')); pop(bar); firstSave(); }
+      endHint();
       if (plan.open && view === 'mine') renderPlan();
     };
     document.querySelector('.cards').addEventListener('click', (ev) => { const b = ev.target.closest('.save'); if (b) toggle(b.closest('.card').dataset.id); });
@@ -4453,6 +4469,40 @@
     fClear.addEventListener('click', clearFilters);
     document.getElementById('f-empty-clear').addEventListener('click', clearFilters);
 
+    /* The one-time nudges: the first star pulses with a "Save it" label the first time the list comes
+       into view, and the first save brings a short note about the plan. Each shows once per browser. */
+    const SEEN = `ghananice:december-${DATA.year}-tips`;
+    const seen = (() => { try { return JSON.parse(localStorage.getItem(SEEN) || '{}'); } catch (e) { return {}; } })();
+    const remember = (k) => { seen[k] = 1; try { localStorage.setItem(SEEN, JSON.stringify(seen)); } catch (e) {} };
+    let hintTimer = 0;
+    function endHint() {
+      clearTimeout(hintTimer);
+      document.querySelectorAll('.save.is-hint').forEach((b) => b.classList.remove('is-hint'));
+      document.querySelectorAll('.save-tip').forEach((t) => t.remove());
+    }
+    if (!seen.hint && !saved.length && 'IntersectionObserver' in window) {
+      const first = cards.find((c) => !c.parentElement.hidden);
+      const io = new IntersectionObserver(([e]) => {
+        if (!e.isIntersecting) return;
+        io.disconnect(); remember('hint');
+        const b = first.querySelector('.save');
+        if (!reduce) b.classList.add('is-hint');
+        b.insertAdjacentHTML('afterend', '<span class="save-tip" aria-hidden="true">Save it</span>');
+        hintTimer = setTimeout(endHint, 6000);
+      }, { threshold: .6 });
+      io.observe(first);
+    }
+    let toastTimer = 0;
+    function firstSave() {
+      if (seen.toast) return;
+      remember('toast');
+      const t = document.getElementById('plan-toast');
+      t.hidden = false;
+      toastTimer = setTimeout(() => { t.hidden = true; }, 7000);
+    }
+    document.getElementById('plan-open').addEventListener('click', () => { clearTimeout(toastTimer); document.getElementById('plan-toast').hidden = true; });
+
+    document.getElementById('how').hidden = false;
     document.documentElement.classList.add('js-plan');
     filters.hidden = false;
     paintCards();
