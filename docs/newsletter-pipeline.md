@@ -14,7 +14,8 @@ site form (newsletter.js) → POST JSON → n8n "GhanaNice — Newsletter signup
 
 - **Endpoint:** `POST https://n8n.augustwheel.com/webhook/ghananice-newsletter`, set as
   `newsletterEndpoint` in `dist/config.js`. Blank = preview mode: the forms say so and send nothing.
-- **Body:** `{ email, source, page, website }`. `source` is `footer | festival | home | popup`;
+- **Body:** `{ email, source, page, website }`. `source` is `footer | festival | home | popup`
+  (the `/share/` page uses `home`);
   `page` is `location.pathname` only (never a query string); `website` is the honeypot.
 - **Answers:** `200 {ok:true}` (also for a filled honeypot, which is silently dropped),
   `400 {ok:false,error:"email"}`, `502 {ok:false,error:"server"}`. CORS allows
@@ -30,6 +31,23 @@ site form (newsletter.js) → POST JSON → n8n "GhanaNice — Newsletter signup
 - **MailerLite IDs:** group `201520530803656462` ("GhanaNice newsletter"), n8n credential
   "GhanaNice — MailerLite" (header auth, created by the builder from `MAILERLITE_API_KEY` in
   `.env.local`).
+
+### Open issue (reported 2026-10-24, not yet investigated)
+
+People who sign up receive MailerLite's confirmation email but **can't confirm**: following it
+doesn't leave them confirmed. Things to check, roughly in order:
+
+- What the confirmation link does when clicked: an error page, a MailerLite page, or nothing
+  (test with a fresh address; note the exact link and what loads).
+- MailerLite → Subscribe settings: double opt-in for API and integrations, the confirmation
+  email, and whether a confirmation page or redirect is set.
+- Whether the subscriber's status in MailerLite changes after the click (unconfirmed → active).
+- Whether the n8n workflow sends the address again in a way that resets it (the status rule
+  above should keep active subscribers active; check an unconfirmed address that signs up twice).
+- Sending domain and authentication for hello@ghananice.com (a link rewritten or blocked by
+  the mail client or by tracking settings).
+
+Record what was found and fixed here, and update `/privacy/` if the flow changes.
 
 Rebuild and redeploy the workflow with:
 
